@@ -15,7 +15,7 @@ body {
   height: 100%;
   min-height: 100%;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #00100F;
   color: #2e2e2e;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -48,4 +48,24 @@ body.lock {
 .main {
   display: block;
   flex: 1 1 auto;
+}
+
+.container {
+  width: 84.75%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.a:before{
+  content: "";
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    background: #0b8c86;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    z-index: 0;
+    right: 10%;
+    bottom: 20%;
 }

@@ -1,11 +1,12 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import { App } from 'components';
+import { App } from "components";
 
-import './styles/index.css';
+import "swiper/css";
+import "./styles/index.css";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
   </StrictMode>,

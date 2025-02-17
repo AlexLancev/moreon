@@ -1,3 +1,5 @@
+import { Home_hero } from "./hero";
+
 export const Home_page = () => {
-  return null;
+  return <Home_hero />;
 };
