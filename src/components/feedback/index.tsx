@@ -10,7 +10,7 @@ export const Feedback = () => {
         </picture>
         <a
           href="https://yandex.ru/maps/org/fitnes_moreon/1731221367/?ll=37.527184%2C55.597246&z=16.82"
-          className="transition duration-300 hover:text-[rgb(255,255,255)]"
+          className="transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem]"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Открыть яндекс карты"
@@ -23,7 +23,7 @@ export const Feedback = () => {
         <PhoneOutlined style={{ fontSize: "17px" }} />
         <a
           href="tel:+74958590372"
-          className="transition duration-300 hover:text-[rgb(255,255,255)]"
+          className="transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem]"
           aria-label="Позвонить нам"
           title="Позвонить нам"
         >

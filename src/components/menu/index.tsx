@@ -37,14 +37,14 @@ export const Menu = () => {
             >
               <Link
                 to={to_link}
-                className="transition duration-300 hover:text-white"
+                className="transition duration-300 hover:text-white 2xl:text-[1.25rem]"
               >
                 {name_link}
               </Link>
               {sub_menu && (
                 <ul
                   className={classNames(
-                    "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-3 w-[320px] bg-[rgb(0,9,8)] rounded-lg p-5 transition duration-300 a",
+                    "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-3 w-[320px] 2xl:w-[450px] bg-[rgb(0,9,8)] rounded-lg p-5 transition duration-300 a",
                     {
                       "opacity-100 visible": activeMenu === to_link,
                       "opacity-0 invisible": activeMenu !== to_link,
@@ -56,7 +56,7 @@ export const Menu = () => {
                       <li key={subToLink}>
                         <Link
                           to={subToLink}
-                          className="transition duration-300 hover:text-white"
+                          className="transition duration-300 hover:text-white 2xl:text-[1.25rem]"
                         >
                           {subNameLink}
                         </Link>

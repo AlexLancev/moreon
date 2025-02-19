@@ -3,7 +3,7 @@ import { Menu, Feedback, Social, Logo } from "components";
 export const Header = () => {
   return (
     <header className="w-full m-auto">
-      <div className="flex items-center bg-[rgb(0,70,67)] min-h-10 py-2">
+      <div className="flex items-center bg-[rgb(0,70,67)] min-h-10 py-2 2xl:py-4">
         <div className="container">
           <div className="flex items-center gap-x-6 justify-end">
             <Feedback />
