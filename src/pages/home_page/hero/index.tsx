@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { RenderImage } from "components/render_images";
 
@@ -72,12 +72,11 @@ const data_action = [
 
 export const Home_hero = () => {
   return (
-    <div className="w-full  m-auto">
+    <section className="w-full m-auto">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
         loop
       >
@@ -104,7 +103,7 @@ export const Home_hero = () => {
               />
               <div className="container">
                 <div className="relative">
-                  <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[6rem] 2xl:-translate-y-[10rem]">
+                  <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[8rem] 2xl:-translate-y-[12rem]">
                     <Link
                       to="/"
                       className="py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
@@ -124,6 +123,6 @@ export const Home_hero = () => {
           ),
         )}
       </Swiper>
-    </div>
+    </section>
   );
 };
