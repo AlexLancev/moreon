@@ -169,15 +169,11 @@ h3 {
 }
 
 .types_services {
-  width: 100%;
-
+  
   & .swiper {
-    padding: 0 100px;
   }
   
   & .swiper-wrapper {
-    box-sizing: border-box;
-    margin: 0 auto;
-    max-width: 1080px;
+   
   }
 }
