@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { RenderImage } from "components/render_images";
+import { Render_image } from "components";
 
 const data_action = [
   {
@@ -92,7 +92,7 @@ export const Home_hero = () => {
             idx: number,
           ) => (
             <SwiperSlide key={idx} className="relative">
-              <RenderImage
+              <Render_image
                 data_image={{
                   url_xxxl_img_webp,
                   url_xxxl_img_jpg,

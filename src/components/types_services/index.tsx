@@ -31,7 +31,7 @@ const data = [
 
 export const Types_services = () => {
   return (
-    <div className="types_services">
+    <div>
       <Swiper
         modules={[Pagination]}
         spaceBetween={20}
@@ -41,14 +41,11 @@ export const Types_services = () => {
         {data?.map(({ head, description, to_link }, idx: number) => (
           <SwiperSlide
             key={head ?? idx}
-            className="relative p-7 bg-[#031817] flex flex-col overflow-hidden rounded-3xl text-sm min-h-[400px] before:w-full before:h-[120px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
+            className="relative p-7 bg-[#031817] flex flex-col overflow-hidden rounded-3xl text-sm min-h-[430px] before:w-full before:h-[120px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
           >
-            <h3 className="uppercase mb-auto text-sm flex-auto">{head}</h3>
-            <p className="mb-2 flex-auto">{description}</p>
-            <Link
-              to={to_link}
-              className="duration-300 mt-auto hover:text-white"
-            >
+            <h3 className="uppercase mb-20 text-xl">{head}</h3>
+            <p className="mb-2 flex-auto text-lg">{description}</p>
+            <Link to={to_link} className="duration-300 hover:text-white">
               Узнать подробнее
             </Link>
           </SwiperSlide>

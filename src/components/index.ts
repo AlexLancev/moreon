@@ -4,3 +4,6 @@ export { Menu } from "./menu";
 export { Feedback } from "./feedback";
 export { Social } from "./social";
 export { Logo } from "./logo";
+export { Stock_list } from "./stock_list";
+export { Types_services } from "./types_services";
+export { Render_image } from "./render_images";

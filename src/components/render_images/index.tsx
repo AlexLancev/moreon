@@ -6,7 +6,7 @@ type RenderImageType = {
   label: string;
 };
 
-export const RenderImage = ({
+export const Render_image = ({
   data_image: {
     url_xxxl_img_webp,
     url_xxxl_img_jpg,
