@@ -2,7 +2,7 @@ import { Types_services } from "components";
 
 export const Dream_body = () => {
   return (
-    <section className="py-20">
+    <section className="py-10">
       <div className="container">
         <h1 className="mb-10">
           Создай тело мечты вместе

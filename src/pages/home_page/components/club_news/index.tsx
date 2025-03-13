@@ -1,7 +1,14 @@
+import { News_list } from "components";
+
 export const Club_news = () => {
   return (
-    <section>
-      <div className="container"></div>
+    <section className="py-10">
+      <div className="container">
+        <h2 className="mb-10">
+          <span className="text-[rgb(51,176,170)]">Новости</span> фитнес клуба
+        </h2>
+        <News_list />
+      </div>
     </section>
   );
 };
