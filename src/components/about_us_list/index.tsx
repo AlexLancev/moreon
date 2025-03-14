@@ -1,5 +1,7 @@
-import { Pagination } from "swiper/modules";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import classNames from "classnames";
 
 const About_us_data = [
   {
@@ -83,23 +85,56 @@ const About_us_data = [
 ];
 
 export const About_us_list = () => {
-  const show_description = () => {};
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
+
+  const renderSlide = (startIndex: number, endIndex: number) => (
+    <SwiperSlide key={startIndex} className="flex flex-col gap-5">
+      {About_us_data.slice(startIndex, endIndex).map(
+        ({ title, description }, idx: number) => {
+          const currentIndex = startIndex + idx;
+          return (
+            <button
+              key={title || idx}
+              className={classNames("about_slide", {
+                "about_slide--active": visibleIndex === currentIndex,
+              })}
+              type="button"
+              onClick={() =>
+                setVisibleIndex(
+                  visibleIndex === currentIndex ? null : currentIndex,
+                )
+              }
+            >
+              <h3 className="text-base">{title}</h3>
+              <p
+                className={classNames("duration-300 transition-opacity", {
+                  ["activeClasses"]: visibleIndex === currentIndex,
+                  ["inactiveClasses"]: visibleIndex !== currentIndex,
+                })}
+              >
+                {description}
+              </p>
+            </button>
+          );
+        },
+      )}
+    </SwiperSlide>
+  );
+
+  const slides = [];
+  for (let i = 0; i < About_us_data.length; i += 4) {
+    slides.push(renderSlide(i, i + 4));
+  }
 
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={50}
+      spaceBetween={20}
       slidesPerView={2}
       pagination={{ clickable: true }}
     >
-      {About_us_data?.map(({ title, description }, idx) => (
-        <SwiperSlide key={idx}>
-          <button onClick={show_description} type="button">
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </button>
-        </SwiperSlide>
-      ))}
+      {slides}
     </Swiper>
   );
 };

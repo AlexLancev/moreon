@@ -171,3 +171,48 @@ h3 {
 .swiper {
   padding: 0 0 90px;
 }
+
+.head_decor {
+  color: #28b0a9;
+}
+
+.about_slide {
+  position: relative;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  text-align: left;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(181, 181, 181, 0.1) 100%);
+  
+  &.about_slide--active::before {
+    transform: rotate(180deg);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    transition: all 0.15s;
+    width: 15px;
+    height: 9px;
+    background-image: url("/images/list__blue.webp");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(181, 181, 181, 0.15) 100%);
+  }
+}
+
+.activeClasses {
+  padding-top: 16px;
+  height: auto 
+}
+
+.inactiveClasses {
+  visibility: hidden;
+  padding-top: 0;
+  opacity: 0;
+  height: 0;
+}
