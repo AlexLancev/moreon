@@ -6,7 +6,7 @@ export const Dream_body = () => {
       <div className="container">
         <h1 className="mb-10">
           Создай тело мечты вместе
-          <span className="text-[#33B0AA] ml-3">с Moreon Fitness</span>
+          <span className="head_decor"> с Moreon Fitness</span>
         </h1>
         <Types_services />
       </div>

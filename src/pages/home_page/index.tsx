@@ -4,6 +4,7 @@ import {
   Dream_body,
   Home_hero,
   Stock,
+  Video_reviews,
 } from "./components";
 
 export const Home_page = () => {
@@ -14,6 +15,7 @@ export const Home_page = () => {
       <Stock />
       <Club_news />
       <About_us />
+      <Video_reviews />
     </>
   );
 };

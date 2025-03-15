@@ -173,13 +173,14 @@ h3 {
 }
 
 .head_decor {
-  color: #28b0a9;
+  color: #33B0AA;
 }
 
 .about_slide {
   position: relative;
   width: 100%;
   padding: 16px 24px;
+  padding-right: 50px;
   border-radius: 16px;
   text-align: left;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(181, 181, 181, 0.1) 100%);
