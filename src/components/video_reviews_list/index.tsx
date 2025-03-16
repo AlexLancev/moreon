@@ -1,3 +1,5 @@
+import { PlayCircleOutlined } from "@ant-design/icons";
+import { useState } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -159,16 +161,56 @@ const Video_reviews_data = [
 ];
 
 export const Video_reviews_list = () => {
+  const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
+
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={50}
+      spaceBetween={20}
       slidesPerView={3}
       pagination={{ clickable: true }}
     >
-      {Video_reviews_data?.map((el, idx: number) => (
-        <SwiperSlide key={idx}></SwiperSlide>
-      ))}
+      {Video_reviews_data?.map(
+        (
+          {
+            description,
+            person_about_club,
+            preview_image: { jpg, webp },
+            link_to_video,
+          },
+          idx: number,
+        ) => (
+          <SwiperSlide key={idx}>
+            <button
+              type="button"
+              className="btn_review"
+              onClick={() =>
+                setIsVideoActive(isVideoActive === idx ? null : idx)
+              }
+            >
+              <picture>
+                <source srcSet={jpg} type="image/webp" />
+                <img
+                  className="block w-full"
+                  width={370}
+                  src={jpg}
+                  alt={description}
+                  aria-label={description}
+                  title={person_about_club}
+                />
+              </picture>
+              <PlayCircleOutlined className="play_icon" />
+            </button>
+            {isVideoActive === idx && (
+              <iframe
+                src={link_to_video}
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+                allowFullScreen
+              ></iframe>
+            )}
+          </SwiperSlide>
+        ),
+      )}
     </Swiper>
   );
 };
