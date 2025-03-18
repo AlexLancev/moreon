@@ -184,7 +184,7 @@ export const Video_reviews_list = () => {
             <button
               type="button"
               className="btn_review"
-              style={{display: `${isVideoActive === idx && 'none'}`}}
+              style={{ display: `${isVideoActive === idx ? "none" : "block"}` }}
               onClick={() =>
                 setIsVideoActive(isVideoActive === idx ? null : idx)
               }
