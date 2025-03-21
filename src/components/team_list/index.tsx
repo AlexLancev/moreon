@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const team_data = [
   {
     name: "Бобровник Ольга",
@@ -956,5 +960,17 @@ const team_data = [
 ];
 
 export const Team_list = () => {
-  return null;
+  const [type_occupation, set_type_occupation] = useState("martial_arts");
+  return (
+    <Swiper
+      modules={[Pagination]}
+      spaceBetween={50}
+      slidesPerView={3}
+      pagination={{ clickable: true }}
+    >
+      {team_data
+        ?.filter(({ type }) => type[type_occupation])
+        .map((el, idx: number) => <SwiperSlide key={idx}></SwiperSlide>)}
+    </Swiper>
+  );
 };

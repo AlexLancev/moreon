@@ -5,6 +5,7 @@ export const Team = () => {
     <section>
       <div className="container">
         <h2>Команда</h2>
+        <Tabs />
         <Team_list />
       </div>
     </section>
