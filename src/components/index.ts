@@ -11,3 +11,4 @@ export { News_list } from "./news_list";
 export { About_us_list } from "./about_us_list";
 export { Video_reviews_list } from "./video_reviews_list";
 export { Team_list } from "./team_list";
+export { Tabs } from "./tabs";

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { observer } from "mobx-react-lite";
+import Tabs_store from "stores/tabs_store";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -959,8 +960,15 @@ const team_data = [
   },
 ];
 
-export const Team_list = () => {
-  const [type_occupation, set_type_occupation] = useState("martial_arts");
+type Team_list_type = {
+  isActiveTab: "martial_arts" | "gym" | "group_training" | "pool";
+  change_tabs: (value: string) => string;
+};
+
+export const Team_list = ({ isActiveTab, change_tabs }: Team_list_type) => {
+
+  change_tabs("martial_arts");
+
   return (
     <Swiper
       modules={[Pagination]}
@@ -969,7 +977,7 @@ export const Team_list = () => {
       pagination={{ clickable: true }}
     >
       {team_data
-        ?.filter(({ type }) => type[type_occupation])
+        ?.filter(({ type }) => type[isActiveTab])
         .map((el, idx: number) => <SwiperSlide key={idx}></SwiperSlide>)}
     </Swiper>
   );
