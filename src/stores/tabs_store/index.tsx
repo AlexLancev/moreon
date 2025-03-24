@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
-class Tabs_store {
-  isActiveTab = '';
+export class Tabs_store {
+  isActiveTab = "";
 
   constructor() {
     makeAutoObservable(this);
@@ -12,4 +12,4 @@ class Tabs_store {
   };
 }
 
-export default Tabs_store;
+export const tabs_store = new Tabs_store();

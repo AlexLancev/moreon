@@ -1,5 +1,4 @@
-import { observer } from "mobx-react-lite";
-import Tabs_store from "stores/tabs_store";
+import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -960,25 +959,58 @@ const team_data = [
   },
 ];
 
+export type Tab_type = "martial_arts" | "gym" | "group_training" | "pool";
+
 type Team_list_type = {
-  isActiveTab: "martial_arts" | "gym" | "group_training" | "pool";
-  change_tabs: (value: string) => string;
+  isActiveTab: Tab_type;
 };
 
-export const Team_list = ({ isActiveTab, change_tabs }: Team_list_type) => {
+const a = (start, end) => {
+  
+}
 
-  change_tabs("martial_arts");
-
+export const Team_list = ({ isActiveTab }: Team_list_type) => {
   return (
     <Swiper
+      className="team_list"
       modules={[Pagination]}
-      spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={1}
       pagination={{ clickable: true }}
     >
       {team_data
         ?.filter(({ type }) => type[isActiveTab])
-        .map((el, idx: number) => <SwiperSlide key={idx}></SwiperSlide>)}
+        .map(
+          (
+            { name, url_images: { webp, jpg }, about_coach: { qualification } },
+            idx: number,
+          ) => (
+            <SwiperSlide
+              key={idx}
+              className="overflow-hidden rounded-3xl min-h-[348px]"
+            >
+              <Link
+                to="/"
+                className="relative after:w-full after:h-[120px] after:absolute after:bottom-[-5px] after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
+              >
+                <>
+                  <picture>
+                    <source srcSet={jpg} type="image/webp" />
+                    <img
+                      className="w-full h-full object-cover"
+                      width={300}
+                      src={jpg}
+                      alt={`На фото ${qualification}, ${name}`}
+                      aria-label={`На фото ${qualification}, ${name}`}
+                    />
+                  </picture>
+                  <strong className="absolute z-10 bottom-5 left-5 text-[#d6d6d6] text-lg">
+                    {name}
+                  </strong>
+                </>
+              </Link>
+            </SwiperSlide>
+          ),
+        )}
     </Swiper>
   );
 };

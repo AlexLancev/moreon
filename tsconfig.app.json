@@ -26,8 +26,8 @@
       "pages/*": [
         "pages/*"
       ],
-      "store/*": [
-        "store/*"
+      "stores/*": [
+        "stores/*"
       ],
       "styles/*": [
         "styles/*"
