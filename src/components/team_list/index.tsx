@@ -965,30 +965,24 @@ type Team_list_type = {
   isActiveTab: Tab_type;
 };
 
-const a = (start, end) => {
-  
-}
-
 export const Team_list = ({ isActiveTab }: Team_list_type) => {
-  return (
-    <Swiper
-      className="team_list"
-      modules={[Pagination]}
-      slidesPerView={1}
-      pagination={{ clickable: true }}
+  const a = team_data?.filter(({ type }) => type[isActiveTab]);
+
+  const renderSlide = (startIndex: number, endIndex: number) => (
+    <SwiperSlide
+      key={startIndex}
+      className="overflow-hidden rounded-3xl min-h-[348px]"
     >
-      {team_data
-        ?.filter(({ type }) => type[isActiveTab])
+      {a
+        .slice(startIndex, endIndex)
         .map(
           (
             { name, url_images: { webp, jpg }, about_coach: { qualification } },
             idx: number,
-          ) => (
-            <SwiperSlide
-              key={idx}
-              className="overflow-hidden rounded-3xl min-h-[348px]"
-            >
+          ) => {
+            return (
               <Link
+                key={idx}
                 to="/"
                 className="relative after:w-full after:h-[120px] after:absolute after:bottom-[-5px] after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
               >
@@ -1008,9 +1002,25 @@ export const Team_list = ({ isActiveTab }: Team_list_type) => {
                   </strong>
                 </>
               </Link>
-            </SwiperSlide>
-          ),
+            );
+          },
         )}
+    </SwiperSlide>
+  );
+
+  const slides: any = [];
+  for (let index = 0; index < a.length; index += 4) {
+    slides.push(renderSlide(index, index + 4));
+  }
+
+  return (
+    <Swiper
+      className="team_list"
+      modules={[Pagination]}
+      slidesPerView={2}
+      pagination={{ clickable: true }}
+    >
+      {slides}
     </Swiper>
   );
 };
