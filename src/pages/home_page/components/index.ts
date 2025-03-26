@@ -5,3 +5,4 @@ export { Stock } from "./stock";
 export { About_us } from "./about_us";
 export { Video_reviews } from "./video_reviews";
 export { Team } from "./team";
+export { Our_application } from "./our_application";

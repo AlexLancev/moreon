@@ -3,11 +3,11 @@ import { Tab_type } from "components/team_list";
 import { observer } from "mobx-react-lite";
 import { tabs_store } from "stores";
 
-const team_tab_list: Tab_type[] = [
-  "martial_arts",
-  "gym",
-  "group_training",
-  "pool",
+const team_tab_list = [
+  { key: "gym", category: "Тренажёрный зал" },
+  { key: "martial_arts", category: "Единоборства" },
+  { key: "group_training", category: "Групповые тренировки" },
+  { key: "pool", category: "Бассейн" },
 ];
 
 export const Team = observer(() => {
@@ -18,7 +18,7 @@ export const Team = observer(() => {
   return (
     <section>
       <div className="container">
-        <h2>Команда</h2>
+        <h2 className="mb-10">Команда</h2>
         <Tabs
           isActiveTab={isActiveTab as Tab_type}
           change_tabs={change_tabs}

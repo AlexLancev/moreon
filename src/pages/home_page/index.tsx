@@ -3,6 +3,7 @@ import {
   Club_news,
   Dream_body,
   Home_hero,
+  Our_application,
   Stock,
   Team,
   Video_reviews,
@@ -18,6 +19,7 @@ export const Home_page = () => {
       <About_us />
       <Video_reviews />
       <Team />
+      <Our_application />
     </>
   );
 };
