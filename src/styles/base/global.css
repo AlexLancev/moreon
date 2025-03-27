@@ -197,11 +197,11 @@ h3 {
   border-radius: 16px;
   text-align: left;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(181, 181, 181, 0.1) 100%);
-  
+
   &.about_slide--active::before {
     transform: rotate(180deg);
   }
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -221,7 +221,7 @@ h3 {
 
 .activeClasses {
   padding-top: 16px;
-  height: auto 
+  height: auto
 }
 
 .inactiveClasses {
@@ -277,7 +277,7 @@ h3 {
 }
 
 .tabs_label {
-  
+
   & span {
     background-color: rgb(42, 54, 53);
     padding: 10px 17px;
@@ -287,16 +287,65 @@ h3 {
     transition: background-color 0.3s;
     border: 1px solid transparent;
 
-      &:hover {
-        background-color: rgba(42, 54, 53, 0.5);
-        /* border: 1px solid rgb(42, 54, 53); */
-        cursor: pointer;
-      }
+    &:hover {
+      background-color: rgba(42, 54, 53, 0.5);
+      cursor: pointer;
+    }
   }
 
-  & input:checked + span {
+  & input:checked+span {
     background-color: rgba(42, 54, 53, 0.3);
     border: 1px solid rgb(42, 54, 53);
 
+  }
+}
+
+.freeze_decor {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(270deg, #00100F 0%, rgba(0, 0, 0, 0) 58.19%);
+  }
+}
+
+.fitness_club_decor {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #33B0AA;
+    opacity: 0.05;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.fitness_club_list {
+  position: relative;
+  padding: 40px;
+  border-radius: 24px;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(181, 181, 181, 0.2) 100%);
+    filter: blur(2px);
+    opacity: 0.7;
   }
 }

@@ -1,7 +1,7 @@
 export const Our_application = () => {
   return (
     <div className="container">
-      <section className="relative mt-10 pt-24 pb-44 bg-[url('/images/application/salefon.png')] bg-auto bg-no-repeat">
+      <section className="relative my-12 pt-24 pb-60 bg-[url('/images/application/salefon.png')] bg-auto bg-no-repeat">
         <picture>
           <source srcSet="/images/application/phons.webp" type="image/webp" />
           <img
@@ -12,7 +12,7 @@ export const Our_application = () => {
             aria-hidden
           />
         </picture>
-        <div className="w-full max-w-[525px] ml-auto pt-48">
+        <div className="w-full max-w-[525px] ml-auto pt-32">
           <h2 className="mb-3">
             Приложение <span className="head_decor">Moreon Fitness</span>
           </h2>

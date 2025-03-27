@@ -16,7 +16,7 @@ export const Team = observer(() => {
   if (!team_tab_list || team_tab_list.length === 0) return null;
 
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <h2 className="mb-10">Команда</h2>
         <Tabs

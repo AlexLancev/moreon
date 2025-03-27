@@ -2,7 +2,7 @@ import { News_list } from "components";
 
 export const Club_news = () => {
   return (
-    <section className="py-10">
+    <section className="py-12">
       <div className="container">
         <h2 className="mb-10">
           <span className="head_decor">Новости</span> фитнес клуба
