@@ -13,3 +13,4 @@ export { Video_reviews_list } from "./video_reviews_list";
 export { Team_list } from "./team_list";
 export { Tabs } from "./tabs";
 export { Contacts } from "./contacts";
+export { Gallery_list } from "./gallery_list";
