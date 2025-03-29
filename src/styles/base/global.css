@@ -349,3 +349,20 @@ h3 {
     opacity: 0.7;
   }
 }
+
+.performance {
+
+  & .performance_item {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    background-repeat: no-repeat;
+    background-position: 90% 0;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      background-position: 10% 0;
+    }
+  }
+}
