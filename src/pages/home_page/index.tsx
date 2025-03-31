@@ -1,4 +1,6 @@
-import { Contacts } from "components";
+import { Tabs_store } from "stores/tabs_store";
+
+import { Contacts, Team } from "components";
 
 import {
   About_us,
@@ -11,9 +13,10 @@ import {
   Our_application,
   Phyto_bar,
   Stock,
-  Team,
   Video_reviews,
 } from "./components";
+
+const team_tabs_store = new Tabs_store();
 
 export const Home_page = () => {
   return (
@@ -24,7 +27,7 @@ export const Home_page = () => {
       <Club_news />
       <About_us />
       <Video_reviews />
-      <Team />
+      <Team tabs_store={team_tabs_store} />
       <Our_application />
       <Freeze_card />
       <Phyto_bar />

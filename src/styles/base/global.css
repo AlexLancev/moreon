@@ -294,6 +294,7 @@ h3 {
   & input:checked + span {
     background-color: rgba(42, 54, 53, 0.3);
     border: 1px solid rgb(42, 54, 53);
+    cursor: default;
   }
 }
 

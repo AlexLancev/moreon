@@ -11,5 +11,3 @@ export class Tabs_store {
     this.isActiveTab = value;
   };
 }
-
-export const tabs_store = new Tabs_store();

@@ -5,7 +5,7 @@ export type Tab_list_type = {
   category: string;
 };
 
-type Tabs_type = {
+export type Tabs_type = {
   isActiveTab: string;
   change_tabs: (value: string) => void;
   tab_list: Tab_list_type[];
@@ -26,7 +26,6 @@ export const Tabs = ({ isActiveTab, change_tabs, tab_list }: Tabs_type) => {
             <input
               className="visually-hidden"
               type="radio"
-              name="tabs"
               value={key}
               onChange={() => change_tabs(key)}
               checked={isActiveTab === key}

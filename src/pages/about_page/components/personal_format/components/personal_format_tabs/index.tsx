@@ -3,7 +3,6 @@ import { useState } from "react";
 import { observer } from "mobx-react-lite";
 
 import { Tabs } from "components";
-import { tabs_store } from "stores";
 
 export type personal_format_data_key_type =
   | "gym"
@@ -12,8 +11,14 @@ export type personal_format_data_key_type =
   | "beauty_health"
   | "authors_programs";
 
+export type tabs_store_type = {
+  isActiveTab: string;
+  change_tabs: (value: string) => void;
+};
+
 type personal_format_tabs_type = {
   data_key: personal_format_data_key_type[];
+  tabs_store: tabs_store_type;
 };
 
 type tab_list_type = {
@@ -213,7 +218,7 @@ export const isEmptyObj = (object: object): boolean => {
 };
 
 export const Personal_format_tabs = observer(
-  ({ data_key }: personal_format_tabs_type) => {
+  ({ data_key, tabs_store }: personal_format_tabs_type) => {
     const { isActiveTab, change_tabs } = tabs_store;
     const [currentChangeTab, setCurrentChangeTab] =
       useState<personal_format_data_key_type>("gym");

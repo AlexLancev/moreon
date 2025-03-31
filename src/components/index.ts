@@ -15,3 +15,4 @@ export { Tabs } from "./tabs";
 export { Contacts } from "./contacts";
 export { Gallery_list } from "./gallery_list";
 export { Performance } from "./performance";
+export { Team } from "./team";

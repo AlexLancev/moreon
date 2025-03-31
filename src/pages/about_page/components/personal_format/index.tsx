@@ -11,7 +11,14 @@ const personal_format_data_key: personal_format_data_key_type[] = [
   "authors_programs",
 ];
 
-export const Personal_format = () => {
+export type tabs_store_type = {
+  tabs_store: {
+    isActiveTab: string;
+    change_tabs: (value: string) => void;
+  };
+};
+
+export const Personal_format = ({ tabs_store }: tabs_store_type) => {
   return (
     <section className="py-12">
       <div className="container">
@@ -19,7 +26,10 @@ export const Personal_format = () => {
           <span className="head_decor">Формат,</span> который подойдет именно
           Вам
         </h2>
-        <Personal_format_tabs data_key={personal_format_data_key} />
+        <Personal_format_tabs
+          tabs_store={tabs_store}
+          data_key={personal_format_data_key}
+        />
       </div>
     </section>
   );
