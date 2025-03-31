@@ -30,8 +30,15 @@ export const Menu = () => {
       <ul className="flex items-center gap-x-10 text-[rgba(255,255,255,0.8)] text-sm">
         {menu_data.map(({ to_link, name_link, sub_menu }) => (
           <li key={to_link} className="relative">
-            <div onMouseOver={() => handleMouseOver(to_link)} onMouseOut={handleMouseOut} onFocus={() => handleFocus(to_link)}>
-              <Link to={to_link} className="transition duration-300 hover:text-white 2xl:text-[1.25rem]">
+            <div
+              onMouseOver={() => handleMouseOver(to_link)}
+              onMouseOut={handleMouseOut}
+              onFocus={() => handleFocus(to_link)}
+            >
+              <Link
+                to={to_link}
+                className="transition duration-300 hover:text-white 2xl:text-[1.25rem]"
+              >
                 {name_link}
               </Link>
               {sub_menu && (
@@ -44,13 +51,18 @@ export const Menu = () => {
                     },
                   )}
                 >
-                  {sub_menu?.map(({ to_link: subToLink, name_link: subNameLink }) => (
-                    <li key={subToLink}>
-                      <Link to={subToLink} className="transition duration-300 hover:text-white 2xl:text-[1.25rem]">
-                        {subNameLink}
-                      </Link>
-                    </li>
-                  ))}
+                  {sub_menu?.map(
+                    ({ to_link: subToLink, name_link: subNameLink }) => (
+                      <li key={subToLink}>
+                        <Link
+                          to={subToLink}
+                          className="transition duration-300 hover:text-white 2xl:text-[1.25rem]"
+                        >
+                          {subNameLink}
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
               )}
             </div>

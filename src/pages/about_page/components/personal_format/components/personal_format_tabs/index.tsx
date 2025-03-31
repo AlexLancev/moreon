@@ -242,17 +242,16 @@ export const Personal_format_tabs = observer(
             const { key_name, category } = currentData;
 
             return (
-              <li key={idx}>
-                <label>
+              <li key={idx} className="w-[20%] text-center">
+                <label className="personal_tabs">
                   <input
                     className="visually-hidden"
                     type="radio"
-                    name="personal_tabs"
                     value={key_name}
                     onChange={() => setCurrentChangeTab(key_name)}
-                    checked={key_name === key}
+                    checked={currentChangeTab === key}
                   />
-                  <span className="block h-full py-5 px-8 bg-[rgba(255,255,255,4%)] rounded-t-3xl">
+                  <span className="block h-full py-5 px-8 rounded-t-3xl">
                     {category}
                   </span>
                 </label>
@@ -260,7 +259,7 @@ export const Personal_format_tabs = observer(
             );
           })}
         </ul>
-        <div className="px-10 py-14 bg-[rgba(255,255,255,4%)] rounded-3xl">
+        <div className="min-h-[260px] px-10 py-14 bg-[rgba(255,255,255,4%)] rounded-b-3xl">
           <Tabs
             isActiveTab={isActiveTab as personal_format_data_key_type}
             change_tabs={change_tabs}

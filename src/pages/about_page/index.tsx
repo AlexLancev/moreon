@@ -1,4 +1,10 @@
-import { Effective_training, Gallery, Personal_format, Stock } from "./components";
+import { Team } from "pages/home_page/components";
+import {
+  Effective_training,
+  Gallery,
+  Personal_format,
+  Stock,
+} from "./components";
 
 export const About_page = () => {
   return (
@@ -7,6 +13,7 @@ export const About_page = () => {
       <Effective_training />
       <Stock />
       <Personal_format />
+      <Team />
     </>
   );
 };

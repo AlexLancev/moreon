@@ -73,38 +73,55 @@ const data_action = [
 export const Home_hero = () => {
   return (
     <section className="w-full m-auto">
-      <Swiper modules={[Pagination, Autoplay]} spaceBetween={20} slidesPerView={1} pagination={{ clickable: true }} loop>
-        {data_action?.map(({ url_xxxl_img_webp, url_xxxl_img_jpg, url_xxl_img_webp, url_xxl_img_jpg, label }, idx: number) => (
-          <SwiperSlide key={idx} className="relative">
-            <Render_image
-              data_image={{
-                url_xxxl_img_webp,
-                url_xxxl_img_jpg,
-                url_xxl_img_webp,
-                url_xxl_img_jpg,
-                label,
-              }}
-            />
-            <div className="container">
-              <div className="relative">
-                <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[8rem] 2xl:-translate-y-[12rem]">
-                  <Link
-                    to="/"
-                    className="py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-                  >
-                    Узнать подробнее
-                  </Link>
-                  <button
-                    type="button"
-                    className="py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgba(255,255,255,0.2)] shadow-custom-shadows duration-300 hover:bg-[rgba(255,255,255,0.3)] hover:translate-y-[1px]"
-                  >
-                    Рассчитать стоимость
-                  </button>
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        loop
+      >
+        {data_action?.map(
+          (
+            {
+              url_xxxl_img_webp,
+              url_xxxl_img_jpg,
+              url_xxl_img_webp,
+              url_xxl_img_jpg,
+              label,
+            },
+            idx: number,
+          ) => (
+            <SwiperSlide key={idx} className="relative">
+              <Render_image
+                data_image={{
+                  url_xxxl_img_webp,
+                  url_xxxl_img_jpg,
+                  url_xxl_img_webp,
+                  url_xxl_img_jpg,
+                  label,
+                }}
+              />
+              <div className="container">
+                <div className="relative">
+                  <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[8rem] 2xl:-translate-y-[12rem]">
+                    <Link
+                      to="/"
+                      className="py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+                    >
+                      Узнать подробнее
+                    </Link>
+                    <button
+                      type="button"
+                      className="py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgba(255,255,255,0.2)] shadow-custom-shadows duration-300 hover:bg-[rgba(255,255,255,0.3)] hover:translate-y-[1px]"
+                    >
+                      Рассчитать стоимость
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ),
+        )}
       </Swiper>
     </section>
   );

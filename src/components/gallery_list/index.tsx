@@ -360,17 +360,23 @@ export const Gallery_list = () => {
   return (
     <>
       <ul className="grid grid-cols-3 place-items-center gap-4">
-        {gallery_list_data.slice(0, visibleShow).map(({ description, images_url: { jpg, webp } }, idx: number) => (
-          <li key={idx} className="h-full rounded-3xl overflow-hidden">
-            <button type="button" className="block h-full">
-              <span className="visually-hidden">{description}</span>
-              <picture>
-                <source srcSet={jpg} type="image/webp" />
-                <img className="h-full object-cover duration-700 hover:scale-[1.1]" src={jpg} alt={description} />
-              </picture>
-            </button>
-          </li>
-        ))}
+        {gallery_list_data
+          .slice(0, visibleShow)
+          .map(({ description, images_url: { jpg, webp } }, idx: number) => (
+            <li key={idx} className="h-full rounded-3xl overflow-hidden">
+              <button type="button" className="block h-full">
+                <span className="visually-hidden">{description}</span>
+                <picture>
+                  <source srcSet={jpg} type="image/webp" />
+                  <img
+                    className="h-full object-cover duration-700 hover:scale-[1.1]"
+                    src={jpg}
+                    alt={description}
+                  />
+                </picture>
+              </button>
+            </li>
+          ))}
       </ul>
       {gallery_list_data.length > visibleShow && (
         <button

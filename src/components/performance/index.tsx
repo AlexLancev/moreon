@@ -1,7 +1,11 @@
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-type performance_data_type = "spa" | "cafe_restaurant" | "reception" | "sales_department";
+type performance_data_type =
+  | "spa"
+  | "cafe_restaurant"
+  | "reception"
+  | "sales_department";
 
 type Performance_type = {
   data_key: string[];
@@ -123,7 +127,8 @@ const performance_data = {
   },
   sales_department: {
     title: "ОТДЕЛ ПРОДАЖ",
-    description: "По вопросам оформления карты и всем расценкам обращайтесь в отдел продаж.",
+    description:
+      "По вопросам оформления карты и всем расценкам обращайтесь в отдел продаж.",
     decor_title: "/images/performance/sales_department/title-by.webp",
     arr_images: [
       {
@@ -156,7 +161,13 @@ export const isEmptyObj = (object: object): boolean => {
 };
 
 export const Performance = ({ data_key, isVisibleBtn }: Performance_type) => {
-  if (!performance_data || isEmptyObj(performance_data) || !data_key || data_key.length === 0) return null;
+  if (
+    !performance_data ||
+    isEmptyObj(performance_data) ||
+    !data_key ||
+    data_key.length === 0
+  )
+    return null;
 
   return (
     <ul className="performance">
@@ -174,18 +185,35 @@ export const Performance = ({ data_key, isVisibleBtn }: Performance_type) => {
               backgroundImage: `url(${decor_title})`,
             }}
           >
-            <Swiper className="w-full max-w-[525px] mx-0" modules={[Pagination]} spaceBetween={10} slidesPerView={1} pagination={{ clickable: true }}>
-              {arr_images?.map(({ images_description, images_url: { jpg, webp } }) => (
-                <SwiperSlide className="rounded-3xl overflow-hidden">
-                  <picture>
-                    <source srcSet={jpg} type="image/webp" />
-                    <img className="w-full rounded-3xl" width={525} height={293} src={jpg} alt={images_description} aria-label={images_description} />
-                  </picture>
-                </SwiperSlide>
-              ))}
+            <Swiper
+              className="w-full max-w-[525px] mx-0"
+              modules={[Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+            >
+              {arr_images?.map(
+                ({ images_description, images_url: { jpg, webp } }) => (
+                  <SwiperSlide className="rounded-3xl overflow-hidden">
+                    <picture>
+                      <source srcSet={jpg} type="image/webp" />
+                      <img
+                        className="w-full rounded-3xl"
+                        width={525}
+                        height={293}
+                        src={jpg}
+                        alt={images_description}
+                        aria-label={images_description}
+                      />
+                    </picture>
+                  </SwiperSlide>
+                ),
+              )}
             </Swiper>
             <div className="w-full max-w-[525px] pt-8">
-              <h3 className="uppercase head_decor text-2xl font-bold mb-3">{title}</h3>
+              <h3 className="uppercase head_decor text-2xl font-bold mb-3">
+                {title}
+              </h3>
               <p className="text-lg">{description}</p>
               {isVisibleBtn && (
                 <button

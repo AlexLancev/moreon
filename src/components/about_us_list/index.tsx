@@ -11,15 +11,18 @@ const About_us_data = [
   },
   {
     title: "Спортивный бассейн 25 м",
-    description: "5 дорожек для плавания для индивидуальных и групповых тренировок, а также для свободного плавания.",
+    description:
+      "5 дорожек для плавания для индивидуальных и групповых тренировок, а также для свободного плавания.",
   },
   {
     title: "600+ тренажеров Matrix и Technogym",
-    description: "Включая узкопрофильные: тренажеры для армрестлинга, тренировки предплечий, армлифтинга, динамических нагрузок.",
+    description:
+      "Включая узкопрофильные: тренажеры для армрестлинга, тренировки предплечий, армлифтинга, динамических нагрузок.",
   },
   {
     title: "Зал для единоборств 500 м²",
-    description: "Оснащен рингом, октагоном, клеткой BJJ, 12-ю боксерскими снарядами.",
+    description:
+      "Оснащен рингом, октагоном, клеткой BJJ, 12-ю боксерскими снарядами.",
   },
   {
     title: "Зал функциональных тренировок 200 м²",
@@ -28,7 +31,8 @@ const About_us_data = [
   },
   {
     title: "6 залов для групповых программ",
-    description: "И более 40 программ тренировок по интересам в любое время, включая мировые Less Mills, Hot Iron",
+    description:
+      "И более 40 программ тренировок по интересам в любое время, включая мировые Less Mills, Hot Iron",
   },
   {
     title: "Студия Real Ryder",
@@ -37,7 +41,8 @@ const About_us_data = [
   },
   {
     title: "Высота потолков 35 м и панорамные окна",
-    description: "Продуманное пространство с панорамным видом на березовую рощу, удобное зонирование, комфортно и нет очередей.",
+    description:
+      "Продуманное пространство с панорамным видом на березовую рощу, удобное зонирование, комфортно и нет очередей.",
   },
   {
     title: "Приточная система вентиляции",
@@ -70,7 +75,8 @@ const About_us_data = [
   },
   {
     title: "Персональный менеджер",
-    description: "Обращаясь в наш фитнес, за вами закрепляется персональный менеджер, к которому можно обратиться за решением вопросов.",
+    description:
+      "Обращаясь в наш фитнес, за вами закрепляется персональный менеджер, к которому можно обратиться за решением вопросов.",
   },
   {
     title: "Уникальный дизайн",
@@ -84,29 +90,35 @@ export const About_us_list = () => {
 
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide key={startIndex} className="flex flex-col gap-5">
-      {About_us_data.slice(startIndex, endIndex).map(({ title, description }, idx: number) => {
-        const currentIndex = startIndex + idx;
-        return (
-          <button
-            key={title || idx}
-            className={classNames("about_slide", {
-              "about_slide--active": visibleIndex === currentIndex,
-            })}
-            type="button"
-            onClick={() => setVisibleIndex(visibleIndex === currentIndex ? null : currentIndex)}
-          >
-            <h3 className="text-base">{title}</h3>
-            <p
-              className={classNames("duration-300 transition-opacity", {
-                ["activeClasses"]: visibleIndex === currentIndex,
-                ["inactiveClasses"]: visibleIndex !== currentIndex,
+      {About_us_data.slice(startIndex, endIndex).map(
+        ({ title, description }, idx: number) => {
+          const currentIndex = startIndex + idx;
+          return (
+            <button
+              key={title || idx}
+              className={classNames("about_slide", {
+                "about_slide--active": visibleIndex === currentIndex,
               })}
+              type="button"
+              onClick={() =>
+                setVisibleIndex(
+                  visibleIndex === currentIndex ? null : currentIndex,
+                )
+              }
             >
-              {description}
-            </p>
-          </button>
-        );
-      })}
+              <h3 className="text-base">{title}</h3>
+              <p
+                className={classNames("duration-300 transition-opacity", {
+                  ["activeClasses"]: visibleIndex === currentIndex,
+                  ["inactiveClasses"]: visibleIndex !== currentIndex,
+                })}
+              >
+                {description}
+              </p>
+            </button>
+          );
+        },
+      )}
     </SwiperSlide>
   );
 
@@ -116,7 +128,12 @@ export const About_us_list = () => {
   }
 
   return (
-    <Swiper modules={[Pagination]} spaceBetween={20} slidesPerView={2} pagination={{ clickable: true }}>
+    <Swiper
+      modules={[Pagination]}
+      spaceBetween={20}
+      slidesPerView={2}
+      pagination={{ clickable: true }}
+    >
       {slides}
     </Swiper>
   );

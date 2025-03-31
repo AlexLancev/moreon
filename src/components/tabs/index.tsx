@@ -19,11 +19,18 @@ export const Tabs = ({ isActiveTab, change_tabs, tab_list }: Tabs_type) => {
   }, [change_tabs, tab_list]);
 
   return (
-    <ul className="flex items-center flex-wrap gap-2 mb-8">
+    <ul className="flex items-center flex-wrap gap-x-2 gap-y-6 mb-8">
       {tab_list?.map(({ key, category }, idx: number) => (
         <li key={idx}>
           <label className="tabs_label">
-            <input className="visually-hidden" type="radio" name="tabs" value={key} onChange={() => change_tabs(key)} checked={isActiveTab === key} />
+            <input
+              className="visually-hidden"
+              type="radio"
+              name="tabs"
+              value={key}
+              onChange={() => change_tabs(key)}
+              checked={isActiveTab === key}
+            />
             <span>{category}</span>
           </label>
         </li>
