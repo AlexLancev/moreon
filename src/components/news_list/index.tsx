@@ -5,8 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const news_data = [
   {
     to_link: "",
-    description:
-      "Персональные тренировки от 2490 руб. помогут вам стать лучшей версией себя!",
+    description: "Персональные тренировки от 2490 руб. помогут вам стать лучшей версией себя!",
     description_picture:
       "На изображении представлена реклама персональных тренировок в фитнес-центре 'Moreon Fitness'. В центре изображения находятся мужчина и женщина, одетые в спортивную одежду. Женщина держит гантели, а мужчина стоит рядом, помогая ей. На заднем плане виден интерьер фитнес-центра с различными тренажерами. В верхней части постера написано призыв: 'НАЧНИ МЕНЯТЬСЯ СЕГОДНЯ!', а ниже указано предложение: 'ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ от 2490'. Логотип 'moreon FITNESS' расположен в нижнем правом углу изображения. Фон подчеркивает активность и энергию, связанные с занятиями фитнесом.",
     url_images: {
@@ -46,8 +45,7 @@ const news_data = [
   },
   {
     to_link: "",
-    description:
-      "Выброси негативные эмоции на тренировках по боксу в Moreon Fitness!",
+    description: "Выброси негативные эмоции на тренировках по боксу в Moreon Fitness!",
     description_picture:
       "Студия бокса Moreon Fitness: два боксера в перчатках тренируются, один в синих шортах и перчатках, другой в черных. Расписание занятий: вторник в 20:00 и суббота в 13:00.",
     url_images: {
@@ -87,8 +85,7 @@ const news_data = [
   },
   {
     to_link: "",
-    description:
-      "Новые тренировки в единоборствах: джиу-джитсу для детей и mixfight для взрослых c Ольгой Бобровник!",
+    description: "Новые тренировки в единоборствах: джиу-джитсу для детей и mixfight для взрослых c Ольгой Бобровник!",
     description_picture:
       "На изображении представлены два человека, выполняющие техники джиу-джитсу. Один из них в белом кимоно и другой в синем, оба находятся в динамичной позиции, демонстрируя бросок или удержание. В верхней части изображения написано: 'НОВЫЕ Тренировки', а ниже указаны виды тренировок: 'ДЖИУ-ДЖИТСУ (для детей)' и 'MIXFIGHT (взрослые)'. В нижней части изображения находится логотип 'moreon FITNESS' и имя тренера - Бобровник Ольга. Фон изображения оформлен в темных тонах с абстрактными световыми элементами.",
     url_images: {
@@ -268,8 +265,7 @@ const news_data = [
   },
   {
     to_link: "",
-    description:
-      "Оформи карту и получи скидку -20% на меню кафе «Порт» и «Остров».",
+    description: "Оформи карту и получи скидку -20% на меню кафе «Порт» и «Остров».",
     description_picture:
       "На изображении представлена реклама карты скидок для посетителей фитнес-клуба 'moreon FITNESS'. В центре изображения находится карта с логотипом клуба и надписью '20% СКИДКА'. В верхней части текст: 'ОФОРМИ КАРТУ', а в нижней части указано: 'И ПОЛУЧИ СКИДКУ -20% НА МЕНЮ КАФЕ 'ПОРТ' И 'ОСТРОВ'. На заднем плане виден интерьер кафе с столами, стульями и барной стойкой.",
     url_images: {
@@ -301,41 +297,24 @@ const news_data = [
 
 export const News_list = () => {
   return (
-    <Swiper
-      modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={4}
-      pagination={{ clickable: true }}
-    >
-      {news_data?.map(
-        (
-          {
-            to_link,
-            description,
-            description_picture,
-            url_images: { webp, jpg },
-          },
-          idx: number,
-        ) => (
-          <SwiperSlide key={idx}>
-            <Link to={to_link}>
-              <picture>
-                <source srcSet={webp} type="image/webp" />
-                <img
-                  className="block w-full mb-3 rounded-3xl overflow-hidden"
-                  width={370}
-                  src={jpg}
-                  alt={description_picture}
-                  aria-label={description_picture}
-                />
-              </picture>
-              <h3 className="text-base text-[rgb(176,176,176)] px-1 text-center">
-                {description}
-              </h3>
-            </Link>
-          </SwiperSlide>
-        ),
-      )}
+    <Swiper modules={[Pagination]} spaceBetween={20} slidesPerView={4} pagination={{ clickable: true }}>
+      {news_data?.map(({ to_link, description, description_picture, url_images: { webp, jpg } }, idx: number) => (
+        <SwiperSlide key={idx}>
+          <Link to={to_link}>
+            <picture>
+              <source srcSet={webp} type="image/webp" />
+              <img
+                className="block w-full mb-3 rounded-3xl overflow-hidden"
+                width={370}
+                src={jpg}
+                alt={description_picture}
+                aria-label={description_picture}
+              />
+            </picture>
+            <h3 className="text-base text-[rgb(176,176,176)] px-1 text-center">{description}</h3>
+          </Link>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

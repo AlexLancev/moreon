@@ -168,7 +168,7 @@ h3 {
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 20px !important;
 
@@ -186,7 +186,7 @@ h3 {
 }
 
 .head_decor {
-  color: #33B0AA;
+  color: #33b0aa;
 }
 
 .about_slide {
@@ -203,7 +203,7 @@ h3 {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 25px;
     right: 25px;
@@ -221,7 +221,7 @@ h3 {
 
 .activeClasses {
   padding-top: 16px;
-  height: auto
+  height: auto;
 }
 
 .inactiveClasses {
@@ -243,11 +243,11 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 60px;
-  color: #33B0AA;
+  color: #33b0aa;
   z-index: 2;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -264,11 +264,10 @@ h3 {
 .btn_review:hover .play_icon::after {
   width: 180%;
   height: 180%;
-  background-color: rgba(255, 255, 255, 0.300);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .team_list {
-
   & .swiper-slide {
     display: flex;
     flex-direction: column;
@@ -277,7 +276,6 @@ h3 {
 }
 
 .tabs_label {
-
   & span {
     background-color: rgb(42, 54, 53);
     padding: 10px 17px;
@@ -293,10 +291,9 @@ h3 {
     }
   }
 
-  & input:checked+span {
+  & input:checked + span {
     background-color: rgba(42, 54, 53, 0.3);
     border: 1px solid rgb(42, 54, 53);
-
   }
 }
 
@@ -304,12 +301,12 @@ h3 {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(270deg, #00100F 0%, rgba(0, 0, 0, 0) 58.19%);
+    background-image: linear-gradient(270deg, #00100f 0%, rgba(0, 0, 0, 0) 58.19%);
   }
 }
 
@@ -317,13 +314,13 @@ h3 {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #33B0AA;
+    background-color: #33b0aa;
     opacity: 0.05;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
@@ -337,9 +334,9 @@ h3 {
   padding: 40px;
   border-radius: 24px;
   overflow: hidden;
-  
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     width: 100%;
@@ -351,7 +348,6 @@ h3 {
 }
 
 .performance {
-
   & .performance_item {
     display: flex;
     justify-content: center;

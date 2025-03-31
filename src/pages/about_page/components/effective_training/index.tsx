@@ -1,11 +1,6 @@
 import { Performance } from "components";
 
-const effective_training_data_key = [
-  "spa",
-  "cafe_restaurant",
-  "reception",
-  "sales_department",
-];
+const effective_training_data_key = ["spa", "cafe_restaurant", "reception", "sales_department"];
 
 export const Effective_training = () => {
   return (
@@ -16,13 +11,9 @@ export const Effective_training = () => {
           <span className="head_decor">эффективных тренировок</span>
         </h2>
         <strong className="block mb-10 text-lg">
-          Многофункциональный отдых включает в себя <br /> тренировки, отдых и
-          развлечения
+          Многофункциональный отдых включает в себя <br /> тренировки, отдых и развлечения
         </strong>
-        <Performance
-          data_key={effective_training_data_key}
-          isVisibleBtn={false}
-        />
+        <Performance data_key={effective_training_data_key} isVisibleBtn={false} />
       </div>
     </section>
   );

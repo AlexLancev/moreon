@@ -49,27 +49,17 @@ export const Other_directions = () => {
       <h2 className="visually-hidden">Наши другие направления</h2>
       <div className="container">
         <ul className="flex items-center justify-around gap-4">
-          {other_directions_data.map(
-            (
-              { to_link, descriptions, images_url: { png, webp } },
-              idx: number,
-            ) => (
-              <li key={idx}>
-                <a
-                  href={to_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={descriptions}
-                >
-                  <span className="visually-hidden">{descriptions}</span>
-                  <picture>
-                    <source srcSet={webp} type="image/webp" />
-                    <img src={png} alt="" aria-hidden />
-                  </picture>
-                </a>
-              </li>
-            ),
-          )}
+          {other_directions_data.map(({ to_link, descriptions, images_url: { png, webp } }, idx: number) => (
+            <li key={idx}>
+              <a href={to_link} target="_blank" rel="noopener noreferrer" title={descriptions}>
+                <span className="visually-hidden">{descriptions}</span>
+                <picture>
+                  <source srcSet={webp} type="image/webp" />
+                  <img src={png} alt="" aria-hidden />
+                </picture>
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

@@ -134,29 +134,17 @@ const Stock_data = [
 
 export const Stock_list = () => {
   return (
-    <Swiper
-      modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={3}
-      pagination={{ clickable: true }}
-    >
-      {Stock_data?.map(
-        ({ to_link, description, url_images: { jpg, webp } }, idx: number) => (
-          <SwiperSlide key={idx} className="rounded-3xl overflow-hidden">
-            <Link to={to_link}>
-              <picture>
-                <source srcSet={webp} type="image/webp" />
-                <img
-                  width={500}
-                  src={jpg}
-                  alt={description}
-                  aria-label={description}
-                />
-              </picture>
-            </Link>
-          </SwiperSlide>
-        ),
-      )}
+    <Swiper modules={[Pagination]} spaceBetween={20} slidesPerView={3} pagination={{ clickable: true }}>
+      {Stock_data?.map(({ to_link, description, url_images: { jpg, webp } }, idx: number) => (
+        <SwiperSlide key={idx} className="rounded-3xl overflow-hidden">
+          <Link to={to_link}>
+            <picture>
+              <source srcSet={webp} type="image/webp" />
+              <img width={500} src={jpg} alt={description} aria-label={description} />
+            </picture>
+          </Link>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

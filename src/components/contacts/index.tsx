@@ -14,13 +14,7 @@ export const isEmptyObj = (object: object): boolean => {
 };
 
 export const Contacts = () => {
-  if (
-    !contacts_data ||
-    isEmptyObj(contacts_data) ||
-    !current_contacts ||
-    current_contacts.length === 0
-  )
-    return null;
+  if (!contacts_data || isEmptyObj(contacts_data) || !current_contacts || current_contacts.length === 0) return null;
 
   return (
     <section>
@@ -31,11 +25,7 @@ export const Contacts = () => {
             {current_contacts.map((contact, idx: number) => (
               <li className="mb-3" key={idx}>
                 <span className="mr-2">{contacts_data[contact]?.name}:</span>
-                <a
-                  href={contacts_data[contact]?.link}
-                  target="_blahk"
-                  rel="noopener noreferrer"
-                >
+                <a href={contacts_data[contact]?.link} target="_blahk" rel="noopener noreferrer">
                   {contacts_data[contact]?.name === "Адрес" ? (
                     <address>
                       <strong>{contacts_data[contact]?.text}</strong>

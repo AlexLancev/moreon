@@ -12,8 +12,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_1.jpg",
       webp: "/images/video_reviews/result_review_1.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239671&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239671&hd=2&autoplay=1",
   },
   {
     description:
@@ -23,8 +22,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_2.jpg",
       webp: "/images/video_reviews/result_review_2.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456240157&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456240157&hd=2&autoplay=1",
   },
   {
     description:
@@ -34,8 +32,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_3.jpg",
       webp: "/images/video_reviews/result_review_3.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239665&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239665&hd=2&autoplay=1",
   },
   {
     description:
@@ -45,8 +42,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_4.jpg",
       webp: "/images/video_reviews/result_review_4.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239681&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239681&hd=2&autoplay=1",
   },
   {
     description:
@@ -56,8 +52,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_5.jpg",
       webp: "/images/video_reviews/result_review_5.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456240062&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456240062&hd=2&autoplay=1",
   },
   {
     description:
@@ -67,8 +62,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_6.jpg",
       webp: "/images/video_reviews/result_review_6.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456240018&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456240018&hd=2&autoplay=1",
   },
   {
     description:
@@ -78,8 +72,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_7.jpg",
       webp: "/images/video_reviews/result_review_7.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239913&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239913&hd=2&autoplay=1",
   },
   {
     description:
@@ -89,8 +82,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_8.jpg",
       webp: "/images/video_reviews/result_review_8.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239856&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239856&hd=2&autoplay=1",
   },
   {
     description:
@@ -100,8 +92,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_9.jpg",
       webp: "/images/video_reviews/result_review_9.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239713&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239713&hd=2&autoplay=1",
   },
   {
     description:
@@ -111,8 +102,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_10.jpg",
       webp: "/images/video_reviews/result_review_10.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239701&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239701&hd=2&autoplay=1",
   },
   {
     description:
@@ -122,8 +112,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_11.jpg",
       webp: "/images/video_reviews/result_review_11.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456239664&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456239664&hd=2&autoplay=1",
   },
   {
     description:
@@ -133,8 +122,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_12.jpg",
       webp: "/images/video_reviews/result_review_12.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456240243&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456240243&hd=2&autoplay=1",
   },
   {
     description:
@@ -144,8 +132,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_13.jpg",
       webp: "/images/video_reviews/result_review_13.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456240220&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456240220&hd=2&autoplay=1",
   },
   {
     description:
@@ -155,8 +142,7 @@ const Video_reviews_data = [
       jpg: "/images/video_reviews/result_review_14.jpg",
       webp: "/images/video_reviews/result_review_14.webp",
     },
-    link_to_video:
-      "https://vk.com/video_ext.php?oid=-72055975&id=456240222&hd=2&autoplay=1",
+    link_to_video: "https://vk.com/video_ext.php?oid=-72055975&id=456240222&hd=2&autoplay=1",
   },
 ];
 
@@ -164,58 +150,41 @@ export const Video_reviews_list = () => {
   const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
 
   return (
-    <Swiper
-      modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={4}
-      pagination={{ clickable: true }}
-    >
-      {Video_reviews_data?.map(
-        (
-          {
-            description,
-            person_about_club,
-            preview_image: { jpg, webp },
-            link_to_video,
-          },
-          idx: number,
-        ) => (
-          <SwiperSlide key={idx}>
-            <button
-              type="button"
-              className="btn_review"
-              style={{ display: `${isVideoActive === idx ? "none" : "block"}` }}
-              onClick={() =>
-                setIsVideoActive(isVideoActive === idx ? null : idx)
-              }
-            >
-              <picture>
-                <source srcSet={webp} type="image/webp" />
-                <img
-                  className="block w-full duration-700 hover:scale-[1.1]"
-                  width={320}
-                  height={570}
-                  src={jpg}
-                  alt={description}
-                  aria-label={description}
-                  title={person_about_club}
-                />
-              </picture>
-              <PlayCircleOutlined className="play_icon" />
-            </button>
-            {isVideoActive === idx && (
-              <iframe
-                src={link_to_video}
-                className="rounded-2xl overflow-hidden"
+    <Swiper modules={[Pagination]} spaceBetween={20} slidesPerView={4} pagination={{ clickable: true }}>
+      {Video_reviews_data?.map(({ description, person_about_club, preview_image: { jpg, webp }, link_to_video }, idx: number) => (
+        <SwiperSlide key={idx}>
+          <button
+            type="button"
+            className="btn_review"
+            style={{ display: `${isVideoActive === idx ? "none" : "block"}` }}
+            onClick={() => setIsVideoActive(isVideoActive === idx ? null : idx)}
+          >
+            <picture>
+              <source srcSet={webp} type="image/webp" />
+              <img
+                className="block w-full duration-700 hover:scale-[1.1]"
                 width={320}
                 height={570}
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
-                allowFullScreen
-              ></iframe>
-            )}
-          </SwiperSlide>
-        ),
-      )}
+                src={jpg}
+                alt={description}
+                aria-label={description}
+                title={person_about_club}
+              />
+            </picture>
+            <PlayCircleOutlined className="play_icon" />
+          </button>
+          {isVideoActive === idx && (
+            <iframe
+              src={link_to_video}
+              className="rounded-2xl overflow-hidden"
+              width={320}
+              height={570}
+              allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+              allowFullScreen
+            ></iframe>
+          )}
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

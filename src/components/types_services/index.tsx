@@ -32,12 +32,7 @@ const data = [
 export const Types_services = () => {
   return (
     <div>
-      <Swiper
-        modules={[Pagination]}
-        spaceBetween={20}
-        slidesPerView={3}
-        pagination={{ clickable: true }}
-      >
+      <Swiper modules={[Pagination]} spaceBetween={20} slidesPerView={3} pagination={{ clickable: true }}>
         {data?.map(({ head, description, to_link }, idx: number) => (
           <SwiperSlide
             key={head ?? idx}

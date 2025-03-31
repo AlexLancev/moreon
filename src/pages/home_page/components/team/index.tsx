@@ -1,5 +1,5 @@
 import { Tabs, Team_list } from "components";
-import { Tab_type } from "components/team_list";
+import { type Tab_type } from "components/team_list";
 import { observer } from "mobx-react-lite";
 import { tabs_store } from "stores";
 
@@ -19,11 +19,7 @@ export const Team = observer(() => {
     <section className="py-12">
       <div className="container">
         <h2 className="mb-10">Команда</h2>
-        <Tabs
-          isActiveTab={isActiveTab as Tab_type}
-          change_tabs={change_tabs}
-          tab_list={team_tab_list}
-        />
+        <Tabs isActiveTab={isActiveTab as Tab_type} change_tabs={change_tabs} tab_list={team_tab_list} />
         <Team_list isActiveTab={isActiveTab as Tab_type} />
       </div>
     </section>

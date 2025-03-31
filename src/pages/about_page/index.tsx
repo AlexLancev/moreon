@@ -1,4 +1,4 @@
-import { Effective_training, Gallery, Stock } from "./components";
+import { Effective_training, Gallery, Personal_format, Stock } from "./components";
 
 export const About_page = () => {
   return (
@@ -6,6 +6,7 @@ export const About_page = () => {
       <Gallery />
       <Effective_training />
       <Stock />
+      <Personal_format />
     </>
   );
 };

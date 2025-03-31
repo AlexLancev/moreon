@@ -25,29 +25,24 @@ const data_social = [
 export const Social = () => {
   return (
     <ul className="flex items-center gap-x-5">
-      {data_social?.map(
-        (
-          { label, url_externe, url_png_icon, url_webp_icon, url_svg_icon },
-          idx: number,
-        ) => (
-          <li key={idx}>
-            <a
-              className="opacity-80 transition duration-300 hover:opacity-100"
-              href={url_externe}
-              aria-label={label}
-              title={label}
-              target="_blanck"
-              rel="noopener noreferrer"
-            >
-              <picture>
-                <source width={17} srcSet={url_svg_icon} type="image/svg+xml" />
-                <source srcSet={url_webp_icon} type="image/webp" />
-                <img src={url_png_icon} alt={label} />
-              </picture>
-            </a>
-          </li>
-        ),
-      )}
+      {data_social?.map(({ label, url_externe, url_png_icon, url_webp_icon, url_svg_icon }, idx: number) => (
+        <li key={idx}>
+          <a
+            className="opacity-80 transition duration-300 hover:opacity-100"
+            href={url_externe}
+            aria-label={label}
+            title={label}
+            target="_blanck"
+            rel="noopener noreferrer"
+          >
+            <picture>
+              <source width={17} srcSet={url_svg_icon} type="image/svg+xml" />
+              <source srcSet={url_webp_icon} type="image/webp" />
+              <img src={url_png_icon} alt={label} />
+            </picture>
+          </a>
+        </li>
+      ))}
     </ul>
   );
 };
