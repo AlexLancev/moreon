@@ -16,3 +16,5 @@ export { Contacts } from "./contacts";
 export { Gallery_list } from "./gallery_list";
 export { Performance } from "./performance";
 export { Team } from "./team";
+export { Questions } from "./questions";
+export { Profitable_list } from "./profitable_list";
