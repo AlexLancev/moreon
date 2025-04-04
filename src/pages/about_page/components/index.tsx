@@ -6,3 +6,5 @@ export { Fitness_area } from "./fitness_area";
 export { Water_zone } from "./water_zone";
 export { About_questions } from "./about_questions";
 export { Profitable_visits } from "./profitable_visits";
+export { Every_card } from "./every_card";
+export { About_reviews } from "./about_reviews";

@@ -411,3 +411,34 @@ h3 {
     z-index: 1;
   }
 }
+
+@layer utilities {
+  .custom-scrollbar {
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(39, 39, 39) rgba(0, 0, 0, 0.18);
+
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgb(39, 39, 39);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 0, 0, 0.396);
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none !important;
+      appearance: none;
+    }
+  }
+}

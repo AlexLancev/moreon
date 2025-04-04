@@ -18,3 +18,5 @@ export { Performance } from "./performance";
 export { Team } from "./team";
 export { Questions } from "./questions";
 export { Profitable_list } from "./profitable_list";
+export { Every_card_list } from "./every_card_list";
+export { Reviews_list } from "./reviews_list";

@@ -4,7 +4,9 @@ import { Team } from "components";
 
 import {
   About_questions,
+  About_reviews,
   Effective_training,
+  Every_card,
   Fitness_area,
   Gallery,
   Personal_format,
@@ -30,6 +32,8 @@ export const About_page = () => {
       <Water_zone tabs_store={water_zone_tabs_store} />
       <About_questions />
       <Profitable_visits />
+      <Every_card />
+      <About_reviews />
     </>
   );
 };
