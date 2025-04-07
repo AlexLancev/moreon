@@ -106,7 +106,360 @@ const areas_study_data: areas_study_data_type = {
     },
     link_path: "",
   },
-};
+  stretching: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  pranayama_meditation: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  yoga_intensiv_90: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  pilates_allegro: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  healthy_back: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  pilates_mat: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  soft_balance: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  hatha_yoga: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  cross_training: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  abs_streth: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  les_mills_body_pump: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  hot_iron_1: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  hot_iron_2: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  les_mills_grit: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  thinner: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  les_mills_core: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  real_ryder: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  step: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  step_pro: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  pro_jumping: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  step_interval: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  infant_swimming: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  swimming_children: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  school_competitive_swimming: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  swimming_adults: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  aqua_aerobics: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  aqua_mom: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  work_apparatus: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  box: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  grappling: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  kickboxing: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  mma: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  latina: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  multidance: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  oriental: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  zumba: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  dance_mix: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  pranayama_meditation_1111111111111111111111: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  yoga_intensiv_90_11111111111111111111111: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  hatha_yoga_90_11111111111111111111111: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  infant_swimming_1111111111111111: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  childrens_swimming_1111111111111: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  martial_arts_children: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  children_center: {
+    direction: "",
+    images_url: {
+      jpg: "/images/areas_study/result_direction_.jpeg",
+      webp: "/images/areas_study/result_direction_.webp",
+    },
+    link_path: "",
+  },
+  // групповые тренировки
+} 
 
 export const Areas_study_list = () => {
   if (!areas_study_data) return null;
