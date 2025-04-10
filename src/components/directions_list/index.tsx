@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 type directions_data_type = {
   [key: string]: {
     direction: string;
+    description: "";
     images_url: {
       jpg: string;
       webp: string;
@@ -14,6 +15,7 @@ type directions_data_type = {
 const directions_data: directions_data_type = {
   mind_body: {
     direction: "Mind Body",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_1.jpeg",
       webp: "/images/directions/result_direction_1.webp",
@@ -22,6 +24,7 @@ const directions_data: directions_data_type = {
   },
   strength_functional_training: {
     direction: "Силовые и функциональные тренировки",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_2.jpeg",
       webp: "/images/directions/result_direction_2.webp",
@@ -30,6 +33,7 @@ const directions_data: directions_data_type = {
   },
   aerobics: {
     direction: "Кардиопрограммы и аэробика",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_3.jpeg",
       webp: "/images/directions/result_direction_3.webp",
@@ -38,6 +42,7 @@ const directions_data: directions_data_type = {
   },
   gym: {
     direction: "Тренажерный зал",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_4.jpeg",
       webp: "/images/directions/result_direction_4.webp",
@@ -46,6 +51,7 @@ const directions_data: directions_data_type = {
   },
   pool: {
     direction: "Водные программы",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_5.jpeg",
       webp: "/images/directions/result_direction_5.webp",
@@ -54,6 +60,7 @@ const directions_data: directions_data_type = {
   },
   martial_arts: {
     direction: "Единоборства",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_6.jpeg",
       webp: "/images/directions/result_direction_6.webp",
@@ -62,6 +69,7 @@ const directions_data: directions_data_type = {
   },
   dance: {
     direction: "Танцы",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_7.jpeg",
       webp: "/images/directions/result_direction_7.webp",
@@ -70,6 +78,7 @@ const directions_data: directions_data_type = {
   },
   personal_training: {
     direction: "Персональный тренинг",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_8.jpeg",
       webp: "/images/directions/result_direction_8.webp",
@@ -78,6 +87,7 @@ const directions_data: directions_data_type = {
   },
   yoga: {
     direction: "Йога",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_9.jpeg",
       webp: "/images/directions/result_direction_9.webp",
@@ -86,6 +96,7 @@ const directions_data: directions_data_type = {
   },
   test: {
     direction: "Фитнес-тестирование",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_10.jpeg",
       webp: "/images/directions/result_direction_10.webp",
@@ -94,6 +105,7 @@ const directions_data: directions_data_type = {
   },
   kids_fitnes: {
     direction: "Детский фитнес",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_11.jpeg",
       webp: "/images/directions/result_direction_11.webp",
@@ -102,6 +114,7 @@ const directions_data: directions_data_type = {
   },
   group_training: {
     direction: "Групповые программы",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_12.jpeg",
       webp: "/images/directions/result_direction_12.webp",
@@ -110,6 +123,7 @@ const directions_data: directions_data_type = {
   },
   stretching: {
     direction: "МФР+Stretching",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_13.jpeg",
       webp: "/images/directions/result_direction_13.webp",
@@ -118,6 +132,7 @@ const directions_data: directions_data_type = {
   },
   pranayama_meditation: {
     direction: "ПРАНАЯМА И МЕДИТАЦИЯ",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_14.jpeg",
       webp: "/images/directions/result_direction_14.webp",
@@ -126,6 +141,7 @@ const directions_data: directions_data_type = {
   },
   yoga_intensiv_90: {
     direction: "YOGA INTENSIV-90",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_15.jpeg",
       webp: "/images/directions/result_direction_15.webp",
@@ -134,6 +150,7 @@ const directions_data: directions_data_type = {
   },
   pilates_allegro: {
     direction: "PILATES ALLEGRO",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_16.jpeg",
       webp: "/images/directions/result_direction_16.webp",
@@ -142,6 +159,7 @@ const directions_data: directions_data_type = {
   },
   healthy_back: {
     direction: "Здоровая спина",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_17.jpeg",
       webp: "/images/directions/result_direction_17.webp",
@@ -150,6 +168,7 @@ const directions_data: directions_data_type = {
   },
   pilates_mat: {
     direction: "PILATES MAT",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_18.jpeg",
       webp: "/images/directions/result_direction_18.webp",
@@ -158,6 +177,7 @@ const directions_data: directions_data_type = {
   },
   soft_balance: {
     direction: "SOFT BALANCE",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_19.jpeg",
       webp: "/images/directions/result_direction_19.webp",
@@ -166,6 +186,7 @@ const directions_data: directions_data_type = {
   },
   hatha_yoga: {
     direction: "HATHA YOGA",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_20.jpeg",
       webp: "/images/directions/result_direction_20.webp",
@@ -174,6 +195,7 @@ const directions_data: directions_data_type = {
   },
   cross_training: {
     direction: "КроссТренинг",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_21.jpeg",
       webp: "/images/directions/result_direction_21.webp",
@@ -182,6 +204,7 @@ const directions_data: directions_data_type = {
   },
   abs_streth: {
     direction: "ABS+STRETH",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_22.jpeg",
       webp: "/images/directions/result_direction_22.webp",
@@ -190,6 +213,7 @@ const directions_data: directions_data_type = {
   },
   les_mills_body_pump: {
     direction: "LES MILLS BODY PUMP",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_23.jpeg",
       webp: "/images/directions/result_direction_23.webp",
@@ -198,6 +222,7 @@ const directions_data: directions_data_type = {
   },
   hot_iron_1: {
     direction: "HOT IRON 1",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_24.jpeg",
       webp: "/images/directions/result_direction_24.webp",
@@ -206,6 +231,7 @@ const directions_data: directions_data_type = {
   },
   hot_iron_2: {
     direction: "HOT IRON 2",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_25.jpeg",
       webp: "/images/directions/result_direction_25.webp",
@@ -214,6 +240,7 @@ const directions_data: directions_data_type = {
   },
   les_mills_grit: {
     direction: "LES MILLS GRIT",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_26.jpeg",
       webp: "/images/directions/result_direction_26.webp",
@@ -222,6 +249,7 @@ const directions_data: directions_data_type = {
   },
   thinner: {
     direction: "Похудей-ка",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_27.jpeg",
       webp: "/images/directions/result_direction_27.webp",
@@ -230,6 +258,7 @@ const directions_data: directions_data_type = {
   },
   les_mills_core: {
     direction: "LES MILLS CORE",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_28.jpeg",
       webp: "/images/directions/result_direction_28.webp",
@@ -238,6 +267,7 @@ const directions_data: directions_data_type = {
   },
   real_ryder: {
     direction: "REAL RYDER",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_29.jpeg",
       webp: "/images/directions/result_direction_29.webp",
@@ -246,6 +276,7 @@ const directions_data: directions_data_type = {
   },
   step: {
     direction: "STEP",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_30.jpeg",
       webp: "/images/directions/result_direction_30.webp",
@@ -254,6 +285,7 @@ const directions_data: directions_data_type = {
   },
   step_pro: {
     direction: "STEP PRO",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_31.jpeg",
       webp: "/images/directions/result_direction_31.webp",
@@ -262,6 +294,7 @@ const directions_data: directions_data_type = {
   },
   pro_jumping: {
     direction: "PRO JUMPING",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_32.jpeg",
       webp: "/images/directions/result_direction_32.webp",
@@ -270,6 +303,7 @@ const directions_data: directions_data_type = {
   },
   step_interval: {
     direction: "STEP-INTERVAL",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_33.jpeg",
       webp: "/images/directions/result_direction_33.webp",
@@ -278,6 +312,7 @@ const directions_data: directions_data_type = {
   },
   infant_swimming: {
     direction: "Грудничковое плавание",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_34.jpeg",
       webp: "/images/directions/result_direction_34.webp",
@@ -286,6 +321,7 @@ const directions_data: directions_data_type = {
   },
   swimming_children: {
     direction: "Плавание для детей",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_35.jpeg",
       webp: "/images/directions/result_direction_35.webp",
@@ -294,6 +330,7 @@ const directions_data: directions_data_type = {
   },
   school_competitive_swimming: {
     direction: "Школа спортивного плавания",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_36.jpeg",
       webp: "/images/directions/result_direction_36.webp",
@@ -302,6 +339,7 @@ const directions_data: directions_data_type = {
   },
   swimming_adults: {
     direction: "Плавание для взрослых",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_37.jpeg",
       webp: "/images/directions/result_direction_37.webp",
@@ -310,6 +348,7 @@ const directions_data: directions_data_type = {
   },
   aqua_aerobics: {
     direction: "Аквааэробика",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_38.jpeg",
       webp: "/images/directions/result_direction_38.webp",
@@ -318,6 +357,7 @@ const directions_data: directions_data_type = {
   },
   aqua_mom: {
     direction: "Aqua Mama",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_39.jpeg",
       webp: "/images/directions/result_direction_39.webp",
@@ -326,6 +366,7 @@ const directions_data: directions_data_type = {
   },
   work_apparatus: {
     direction: "Работа на снарядах",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_40.jpeg",
       webp: "/images/directions/result_direction_40.webp",
@@ -334,6 +375,7 @@ const directions_data: directions_data_type = {
   },
   box: {
     direction: "Бокс",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_41.jpeg",
       webp: "/images/directions/result_direction_41.webp",
@@ -342,6 +384,7 @@ const directions_data: directions_data_type = {
   },
   grappling: {
     direction: "Грепплинг",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_42.jpeg",
       webp: "/images/directions/result_direction_42.webp",
@@ -350,6 +393,7 @@ const directions_data: directions_data_type = {
   },
   kickboxing: {
     direction: "Кикбоксинг",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_43.jpeg",
       webp: "/images/directions/result_direction_43.webp",
@@ -358,6 +402,7 @@ const directions_data: directions_data_type = {
   },
   mma: {
     direction: "ММА",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_44.jpeg",
       webp: "/images/directions/result_direction_44.webp",
@@ -366,6 +411,7 @@ const directions_data: directions_data_type = {
   },
   latina: {
     direction: "LATINA",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_45.jpeg",
       webp: "/images/directions/result_direction_45.webp",
@@ -374,6 +420,7 @@ const directions_data: directions_data_type = {
   },
   multidance: {
     direction: "MULTI DANCE",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_46.jpeg",
       webp: "/images/directions/result_direction_46.webp",
@@ -382,6 +429,7 @@ const directions_data: directions_data_type = {
   },
   oriental: {
     direction: "ORIENTAL",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_47.jpeg",
       webp: "/images/directions/result_direction_47.webp",
@@ -390,6 +438,7 @@ const directions_data: directions_data_type = {
   },
   zumba: {
     direction: "ZUMBA",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_48.jpeg",
       webp: "/images/directions/result_direction_48.webp",
@@ -398,6 +447,7 @@ const directions_data: directions_data_type = {
   },
   dance_mix: {
     direction: "DANCE MIX",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_49.jpeg",
       webp: "/images/directions/result_direction_49.webp",
@@ -406,6 +456,7 @@ const directions_data: directions_data_type = {
   },
   childrens_swimming: {
     direction: "Детское плавание",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_54.jpeg",
       webp: "/images/directions/result_direction_54.webp",
@@ -414,6 +465,7 @@ const directions_data: directions_data_type = {
   },
   martial_arts_children: {
     direction: "Детские единоборства",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_55.jpeg",
       webp: "/images/directions/result_direction_55.webp",
@@ -422,6 +474,7 @@ const directions_data: directions_data_type = {
   },
   children_center: {
     direction: "Детский центр",
+    description: "",
     images_url: {
       jpg: "/images/directions/result_direction_56.jpeg",
       webp: "/images/directions/result_direction_56.webp",
@@ -453,17 +506,30 @@ export const Directions_list = ({ keys_list }: keys_list_type) => {
     return null;
 
   return (
-    <ul className="grig grid-cols-3 gap-4">
+    <ul className="grid grid-cols-3 gap-6">
       {keys_list.map((current_key) => {
-        const { direction, images_url, link_path } =
+        const { description, direction, images_url, link_path } =
           directions_data[current_key] ?? {};
 
         return (
-          <li>
+          <li className="overflow-hidden rounded-3xl">
             <Link
               to={link_path}
-              className="relative overflow-hidden rounded-3xl after:w-full after:h-[120px] after:absolute after:bottom-0 after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
-            ></Link>
+              className="relative after:absolute after:bottom-0 after:left-0 after:z-0 after:w-full after:h-[120px] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
+            >
+              <picture>
+                <source srcSet={images_url?.webp} type="image/webp" />
+                <img
+                  className="overflow-hidden rounded-3xl object-cover h-full w-full"
+                  src={images_url?.jpg}
+                  alt={description}
+                  aria-label={description}
+                />
+              </picture>
+              <strong className="absolute z-10 bottom-5 left-5 text-[#d6d6d6] text-lg">
+                {direction}
+              </strong>
+            </Link>
           </li>
         );
       })}
