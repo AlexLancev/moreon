@@ -116,7 +116,7 @@ const directions_data: directions_data_type = {
     direction: "Групповые программы",
     description: "",
     images_url: {
-      jpg: "/images/directions/result_direction_12.jpeg",
+      jpg: "/images/directions/result_direction_12.jpg",
       webp: "/images/directions/result_direction_12.webp",
     },
     link_path: "",
