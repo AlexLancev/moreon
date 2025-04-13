@@ -983,13 +983,13 @@ export const Team_list = ({ isActiveTab }: Team_list_type) => {
               <Link
                 key={idx}
                 to="/"
-                className="relative overflow-hidden rounded-3xl after:w-full after:h-[120px] after:absolute after:bottom-0 after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
+                className="relative group overflow-hidden rounded-3xl after:w-full after:h-[120px] after:absolute after:bottom-0 after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
               >
                 <>
                   <picture>
                     <source srcSet={webp} type="image/webp" />
                     <img
-                      className="w-full h-full object-cover duration-700 hover:scale-[1.1]"
+                      className="w-full h-full object-cover duration-700 group-hover:scale-[1.1]"
                       width={300}
                       src={jpg}
                       alt={`На фото ${qualification}, ${name}`}

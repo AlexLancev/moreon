@@ -512,15 +512,15 @@ export const Directions_list = ({ keys_list }: keys_list_type) => {
           directions_data[current_key] ?? {};
 
         return (
-          <li className="overflow-hidden rounded-3xl">
+          <li className="overflow-hidden rounded-3xl group">
             <Link
               to={link_path}
-              className="relative after:absolute after:bottom-0 after:left-0 after:z-0 after:w-full after:h-[120px] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
+              className="relative after:absolute after:bottom-0 after:left-0 after:z-0 after:w-full after:h-[140px] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
             >
               <picture>
                 <source srcSet={images_url?.webp} type="image/webp" />
                 <img
-                  className="overflow-hidden rounded-3xl object-cover h-full w-full"
+                  className="overflow-hidden rounded-3xl object-cover h-full w-full duration-700 group-hover:scale-[1.1]"
                   src={images_url?.jpg}
                   alt={description}
                   aria-label={description}
