@@ -21,3 +21,4 @@ export { Profitable_list } from "./profitable_list";
 export { Every_card_list } from "./every_card_list";
 export { Reviews_list } from "./reviews_list";
 export { Directions_list } from "./directions_list";
+export { Choose_your_card } from "./choose_your_card";
