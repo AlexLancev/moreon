@@ -1,17 +1,15 @@
 import { Tabs_store } from "stores/tabs_store";
 
-import { Contacts, Team } from "components";
+import { Contacts, Freeze_card, Phyto_bar, Team } from "components";
 
 import {
   About_us,
   Club_news,
   Dream_body,
   Fitness_club,
-  Freeze_card,
   Home_hero,
   Other_directions,
   Our_application,
-  Phyto_bar,
   Stock,
   Video_reviews,
 } from "./components";

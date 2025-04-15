@@ -5,7 +5,5 @@ export { Stock } from "./stock";
 export { About_us } from "./about_us";
 export { Video_reviews } from "./video_reviews";
 export { Our_application } from "./our_application";
-export { Freeze_card } from "./freeze_card";
-export { Phyto_bar } from "./phyto_bar";
 export { Other_directions } from "./other_directions";
 export { Fitness_club } from "./fitness_club";

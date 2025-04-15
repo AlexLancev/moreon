@@ -1,6 +1,6 @@
 import { Tabs_store } from "stores/tabs_store";
 
-import { Team } from "components";
+import { Team, Water_zone } from "components";
 
 import {
   About_questions,
@@ -12,7 +12,6 @@ import {
   Personal_format,
   Profitable_visits,
   Stock,
-  Water_zone,
 } from "./components";
 
 const personal_tabs_store = new Tabs_store();

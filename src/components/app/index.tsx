@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import { paths } from "paths";
 import { Layout } from "components";
-import { About_page, Home_page, Services_page } from "pages";
+import { About_page, Home_page, Services_page, Team_page } from "pages";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -24,6 +24,7 @@ export const App = () => {
           <Route index element={<Home_page />} />
           <Route path={paths.about_club} element={<About_page />} />
           <Route path={paths.services} element={<Services_page />} />
+          <Route path={paths.team} element={<Team_page />} />
         </Route>
       </Routes>
     </BrowserRouter>

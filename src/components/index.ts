@@ -22,3 +22,7 @@ export { Every_card_list } from "./every_card_list";
 export { Reviews_list } from "./reviews_list";
 export { Directions_list } from "./directions_list";
 export { Choose_your_card } from "./choose_your_card";
+export { Freeze_card } from "./freeze_card";
+export { Water_zone } from "./water_zone";
+export { Phyto_bar } from "./phyto_bar";
+export { Childrens_center } from "./childrens_center"
