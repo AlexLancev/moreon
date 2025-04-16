@@ -44,7 +44,7 @@ export const Menu = () => {
               {sub_menu && (
                 <ul
                   className={classNames(
-                    "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-3 w-[320px] 2xl:w-[450px] bg-[rgb(0,9,8)] rounded-lg p-5 transition duration-300 a",
+                    "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-3 w-[320px] 2xl:w-[450px] bg-[rgb(0,9,8)] rounded-lg p-5 transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",
                     {
                       "opacity-100 visible": activeMenu === to_link,
                       "opacity-0 invisible": activeMenu !== to_link,

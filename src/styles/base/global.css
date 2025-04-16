@@ -69,20 +69,6 @@ body.lock {
   overflow: hidden;
 }
 
-.a:before {
-  content: "";
-  position: absolute;
-  width: 138px;
-  height: 138px;
-  border-radius: 50%;
-  background: #0b8c86;
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
-  z-index: 0;
-  right: 10%;
-  bottom: 20%;
-}
-
 h1,
 h2,
 h3,
