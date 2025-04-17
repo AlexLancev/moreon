@@ -1,4 +1,4 @@
-import { every_card_data_type } from "pages/about_page/components/every_card";
+import { every_card_data_type } from "components/every_card";
 
 export const Every_card_list = ({ data }: { data: every_card_data_type[] }) => {
   if (!data || data.length === 0) return null;

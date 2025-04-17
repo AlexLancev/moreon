@@ -1,6 +1,8 @@
 import { Tabs } from "components";
-import { Tabs_type } from "../../pages/about_page/components/fitness_area";
+
 import { observer } from "mobx-react-lite";
+
+import { Tabs_type } from "../../pages/about_page/components/fitness_area";
 
 const water_zone_data = {
   baths_swimming: {

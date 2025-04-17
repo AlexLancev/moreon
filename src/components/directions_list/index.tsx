@@ -481,9 +481,54 @@ const directions_data: directions_data_type = {
     },
     link_path: "",
   },
+  baths_swimming: {
+    direction: "Бани и бассейны",
+    description: "",
+    images_url: {
+      jpg: "/images/water_zone/result_zone_1.jpeg",
+      webp: "/images/water_zone/result_zone_1.webp",
+    },
+    link_path: "",
+  },
+  sports_pool: {
+    direction: "Спортивный бассейн",
+    description: "",
+    images_url: {
+      jpg: "/images/water_zone/result_zone_2.jpeg",
+      webp: "/images/water_zone/result_zone_2.webp",
+    },
+    link_path: "",
+  },
+  spa: {
+    direction: "СПА",
+    description: "",
+    images_url: {
+      jpg: "/images/water_zone/result_zone_3.jpeg",
+      webp: "/images/water_zone/result_zone_3.webp",
+    },
+    link_path: "",
+  },
+  thermal_baths: {
+    direction: "Термы",
+    description: "",
+    images_url: {
+      jpg: "/images/water_zone/result_zone_4.jpeg",
+      webp: "/images/water_zone/result_zone_4.webp",
+    },
+    link_path: "",
+  },
+  goldfish: {
+    direction: "Золотые рыбки",
+    description: "",
+    images_url: {
+      jpg: "/images/water_zone/result_zone_5.jpeg",
+      webp: "/images/water_zone/result_zone_5.webp",
+    },
+    link_path: "",
+  },
 };
 
-type keys_list_type = {
+export type keys_list_type = {
   keys_list: string[];
 };
 

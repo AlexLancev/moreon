@@ -7,6 +7,7 @@ import {
   About_page,
   Club_cards,
   Home_page,
+  Saunas_pools_page,
   Services_page,
   Team_page,
 } from "pages";
@@ -32,6 +33,7 @@ export const App = () => {
           <Route path={paths.services} element={<Services_page />} />
           <Route path={paths.team} element={<Team_page />} />
           <Route path={paths.club_cards} element={<Club_cards />} />
+          <Route path={paths.saunas_pools} element={<Saunas_pools_page />} />
         </Route>
       </Routes>
     </BrowserRouter>

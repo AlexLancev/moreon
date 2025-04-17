@@ -25,4 +25,8 @@ export { Choose_your_card } from "./choose_your_card";
 export { Freeze_card } from "./freeze_card";
 export { Water_zone } from "./water_zone";
 export { Phyto_bar } from "./phyto_bar";
-export { Childrens_center } from "./childrens_center"
+export { Childrens_center } from "./childrens_center";
+export { Effective_training } from "./effective_training";
+export { Every_card } from "./every_card";
+export { About_us } from "./about_us";
+export { Stock } from "./stock";

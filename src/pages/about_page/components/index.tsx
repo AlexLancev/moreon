@@ -1,9 +1,6 @@
 export { Gallery } from "./gallery";
-export { Effective_training } from "./effective_training";
-export { Stock } from "./stock";
 export { Personal_format } from "./personal_format";
 export { Fitness_area } from "./fitness_area";
 export { About_questions } from "./about_questions";
 export { Profitable_visits } from "./profitable_visits";
-export { Every_card } from "./every_card";
 export { About_reviews } from "./about_reviews";

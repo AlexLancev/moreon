@@ -26,13 +26,13 @@ export const About_questions = () => {
   if (!about_questions_data || about_questions_data.length === 0) return null;
 
   return (
-      <div className="container">
-    <section className="about_questions">
+    <div className="container">
+      <section className="about_questions">
         <h2 className="mb-10">
           Часто задаваемые <span className="head_decor">вопросы</span>
         </h2>
         <Questions questions_list={about_questions_data} />
-    </section>
-      </div>
+      </section>
+    </div>
   );
 };

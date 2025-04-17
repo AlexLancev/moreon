@@ -1,17 +1,20 @@
 import { Tabs_store } from "stores/tabs_store";
 
-import { Team, Water_zone } from "components";
+import {
+  Effective_training,
+  Every_card,
+  Stock,
+  Team,
+  Water_zone,
+} from "components";
 
 import {
   About_questions,
   About_reviews,
-  Effective_training,
-  Every_card,
   Fitness_area,
   Gallery,
   Personal_format,
   Profitable_visits,
-  Stock,
 } from "./components";
 
 const personal_tabs_store = new Tabs_store();
