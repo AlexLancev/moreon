@@ -15,11 +15,26 @@ const team_tabs_store = new Tabs_store();
 const choose_your_card_store = new Tabs_store();
 const water_zone_tabs_store = new Tabs_store();
 
+const keys_list = [
+  "mind_body",
+  "strength_functional_training",
+  "aerobics",
+  "gym",
+  "pool",
+  "martial_arts",
+  "dance",
+  "personal_training",
+  "yoga",
+  "test",
+  "kids_fitnes",
+  "group_training",
+];
+
 export const Services_page = () => {
   return (
     <>
       <Services_hero />
-      <Areas_study />
+      <Areas_study keys_list={keys_list} />
       <Team tabs_store={team_tabs_store} />
       <Choose_your_card tabs_store={choose_your_card_store} />
       <Freeze_card />

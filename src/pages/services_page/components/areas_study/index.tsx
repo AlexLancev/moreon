@@ -1,21 +1,9 @@
 import { Directions_list } from "components";
+import { keys_list_type } from "components/directions_list";
 
-const keys_list = [
-  "mind_body",
-  "strength_functional_training",
-  "aerobics",
-  "gym",
-  "pool",
-  "martial_arts",
-  "dance",
-  "personal_training",
-  "yoga",
-  "test",
-  "kids_fitnes",
-  "group_training",
-];
+export const Areas_study = ({ keys_list }: keys_list_type) => {
+  if (!keys_list || keys_list.length === 0) return null;
 
-export const Areas_study = () => {
   return (
     <div className="container">
       <section className="py-12">
