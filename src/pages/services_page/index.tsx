@@ -1,6 +1,7 @@
 import { Tabs_store } from "stores/tabs_store";
 
 import {
+  Areas_study,
   Childrens_center,
   Choose_your_card,
   Freeze_card,
@@ -9,7 +10,7 @@ import {
   Water_zone,
 } from "components";
 
-import { Areas_study, Services_hero } from "./components";
+import { Services_hero } from "./components";
 
 const team_tabs_store = new Tabs_store();
 const choose_your_card_store = new Tabs_store();

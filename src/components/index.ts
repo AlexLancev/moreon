@@ -30,3 +30,5 @@ export { Effective_training } from "./effective_training";
 export { Every_card } from "./every_card";
 export { About_us } from "./about_us";
 export { Stock } from "./stock";
+export { Trainers_direction } from "./trainers_direction";
+export { Areas_study } from "./areas_study";

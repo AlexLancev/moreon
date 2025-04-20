@@ -7,6 +7,7 @@ import {
   About_page,
   Club_cards,
   Home_page,
+  Kids_fitness_page,
   Saunas_pools_page,
   Services_page,
   Team_page,
@@ -34,6 +35,7 @@ export const App = () => {
           <Route path={paths.team} element={<Team_page />} />
           <Route path={paths.club_cards} element={<Club_cards />} />
           <Route path={paths.saunas_pools} element={<Saunas_pools_page />} />
+          <Route path={paths.kids_fitness} element={<Kids_fitness_page />} />
         </Route>
       </Routes>
     </BrowserRouter>

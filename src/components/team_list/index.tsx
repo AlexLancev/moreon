@@ -8,7 +8,7 @@ type Team_list_type = {
   isActiveTab: Tab_type;
 };
 
-const team_data = [
+export const team_data = [
   {
     name: "Бобровник Ольга",
     type: {
