@@ -1,3 +1,5 @@
+import { Other_directions } from "components";
+
 import {
   Childrens_center,
   Childrens_swimming,
@@ -12,6 +14,7 @@ export const Kids_fitness_page = () => {
       <Childrens_swimming />
       <Martial_arts_children />
       <Childrens_center />
+      <Other_directions />
     </>
   );
 };

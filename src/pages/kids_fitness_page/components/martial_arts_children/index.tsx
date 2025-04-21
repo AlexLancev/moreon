@@ -20,7 +20,7 @@ export const Martial_arts_children = () => {
         <h2 className="mb-10">
           <span className="head_decor">Единоборства</span> для детей
         </h2>
-        <div className="flex items-center gap-x-12">
+        <div className="flex items-center justify-between gap-x-12">
           <picture>
             <source
               srcSet="/images/martial_arts_children/child_1.webp"
@@ -35,7 +35,7 @@ export const Martial_arts_children = () => {
               aria-label="На изображении двое мужчин находятся в боксерском ринге. Один мужчина, одетый в черную спортивную форму и перчатки, выполняет удар правой рукой. Второй мужчина, одетый в белую футболку, стоит напротив него, защищаясь левой рукой. Оба находятся в боевой стойке, сосредоточены на тренировке. На заднем плане видны веревки ринга и зрители, хотя они размыты. Фон темный, что подчеркивает центральность действий в ринге."
             />
           </picture>
-          <div className="w-full max-w-[525px]">
+          <div className="w-full max-w-[725px]">
             <p className="mb-3">
               Тренировки по единоборствам помогают детям обрести уверенность в
               себе и развить силу духа! В основе лежат принципы гармоничного

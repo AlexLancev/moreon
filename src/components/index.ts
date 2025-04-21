@@ -32,3 +32,4 @@ export { About_us } from "./about_us";
 export { Stock } from "./stock";
 export { Trainers_direction } from "./trainers_direction";
 export { Areas_study } from "./areas_study";
+export { Other_directions } from "./other_directions";

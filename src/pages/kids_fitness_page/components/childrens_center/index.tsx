@@ -5,8 +5,8 @@ export const Childrens_center = () => {
         <h2 className="mb-10">
           Детский <span className="head_decor">центр</span>
         </h2>
-        <div className="flex items-center gap-x-12">
-          <div className="w-full max-w-[525px]">
+        <div className="flex items-center justify-between gap-x-12">
+          <div className="w-full max-w-[725px]">
             <p className="mb-3">
               Детский Центр “Мореон” – это всесторонне развитие вашего ребенка
               от 2 месяцев до 16 лет. Наша задача – раскрыть способности ребенка
@@ -21,11 +21,16 @@ export const Childrens_center = () => {
               чему у него есть предрасположенность — мы с удовольствием поможем
               разобраться в этом на пробных занятиях.
             </p>
-            <p>
+            <p className="mb-5">
               Занятия в детском центре Мореон — залог здорового и гармоничного
               развития личности!
             </p>
-            <button type="button">Гостевой визит</button>
+            <button
+              type="button"
+              className="inline-flex will-change-transform text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+            >
+              Гостевой визит
+            </button>
           </div>
           <picture>
             <source

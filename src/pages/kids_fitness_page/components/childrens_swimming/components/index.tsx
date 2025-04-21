@@ -96,8 +96,8 @@ export const Childrens_swimming_tabs = observer(
           change_tabs={change_tabs}
           tab_list={childrens_swimming_tab_list}
         />
-        <div className="flex items-center gap-x-12 py-3">
-          <div>
+        <div className="flex items-center justify-between gap-x-12 py-3">
+          <div className="w-full max-w-[725px]">
             <strong className="block mb-5">{head}</strong>
             <p className="mb-5">{description}</p>
             <Link
