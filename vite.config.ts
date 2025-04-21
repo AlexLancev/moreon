@@ -17,6 +17,7 @@ export default defineConfig(async () => {
     },
     resolve: {
       alias: {
+        "@": path.resolve(__dirname, "./src"),
         components: path.resolve(__dirname, "./src/components"),
         assets: path.resolve(__dirname, "./src/assets"),
         pages: path.resolve(__dirname, "./src/pages"),
@@ -27,6 +28,7 @@ export default defineConfig(async () => {
         constans: path.resolve(__dirname, "./src/constans"),
         hooks: path.resolve(__dirname, "./src/hooks"),
         paths: path.resolve(__dirname, "./src/paths"),
+        schema: path.resolve(__dirname, "./src/schema"),
       },
     },
   };
