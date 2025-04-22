@@ -22,7 +22,6 @@ function ScrollToTop() {
 
   return null;
 }
-
 export const App = () => {
   return (
     <BrowserRouter>

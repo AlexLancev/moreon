@@ -1,3 +1,5 @@
+import { modal_store } from "@/stores";
+
 const martial_arts_children_directions = [
   {
     description: "бокс",
@@ -14,6 +16,8 @@ const martial_arts_children_directions = [
 ];
 
 export const Martial_arts_children = () => {
+  const { isVisibleModal, change_modal } = modal_store;
+
   return (
     <section className="py-12">
       <div className="container">
@@ -68,8 +72,9 @@ export const Martial_arts_children = () => {
               тренировкой, а любимым досугом!
             </p>
             <button
-              type="button"
+              onClick={() => change_modal(!isVisibleModal)}
               className="inline-flex will-change-transform text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+              type="button"
             >
               Гостевой визит
             </button>

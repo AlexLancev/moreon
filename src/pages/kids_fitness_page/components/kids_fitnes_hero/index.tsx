@@ -1,3 +1,5 @@
+import { modal_store } from "@/stores";
+
 type kids_fitnes_hero_data_type = Record<string, string>;
 
 const kids_fitnes_hero_data: kids_fitnes_hero_data_type[] = [
@@ -19,6 +21,8 @@ const kids_fitnes_hero_data: kids_fitnes_hero_data_type[] = [
 ];
 
 export const Kids_fitnes_hero = () => {
+  const { isVisibleModal, change_modal } = modal_store;
+
   return (
     <div className="container">
       <section className="relative py-20 px-10 after:absolute after:inset-0 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
@@ -62,8 +66,9 @@ export const Kids_fitnes_hero = () => {
             Пусть ваши дети растут сильными, здоровыми и активными!
           </p>
           <button
-            type="button"
+            onClick={() => change_modal(!isVisibleModal)}
             className="inline-flex will-change-transform text-white py-4 px-7 mt-10 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+            type="button"
           >
             Гостевой визит
           </button>

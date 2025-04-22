@@ -33,3 +33,5 @@ export { Stock } from "./stock";
 export { Trainers_direction } from "./trainers_direction";
 export { Areas_study } from "./areas_study";
 export { Other_directions } from "./other_directions";
+export { Feedback_form } from "./feedback_form";
+export { Feedback_modal } from "./feedback_modal";

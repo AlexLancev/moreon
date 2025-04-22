@@ -75,48 +75,53 @@ const tab_list = [
   { key: "premium", category: "Премиум" },
 ];
 
-export const Choose_your_card = observer(({ tabs_store }: Tabs_type) => {
-  const { isActiveTab, change_tabs } = tabs_store;
-  if (!choose_your_result_card_data || isEmptyObj(choose_your_result_card_data))
-    return null;
+export const Choose_your_card = observer(
+  ({ tabs_store }: { tabs_store: Tabs_type }) => {
+    const { isActiveTab, change_tabs } = tabs_store;
+    if (
+      !choose_your_result_card_data ||
+      isEmptyObj(choose_your_result_card_data)
+    )
+      return null;
 
-  const { head, description, images_url, path } =
-    choose_your_result_card_data[isActiveTab as key_list_type] ?? {};
+    const { head, description, images_url, path } =
+      choose_your_result_card_data[isActiveTab as key_list_type] ?? {};
 
-  return (
-    <section className="py-12">
-      <div className="container">
-        <h2 className="mb-10">
-          Выберите свою <span className="head_decor">карту</span>
-        </h2>
-        <Tabs
-          isActiveTab={isActiveTab}
-          change_tabs={change_tabs}
-          tab_list={tab_list}
-        />
-        <div className="flex items-center gap-x-10 py-5">
-          <picture>
-            <source srcSet={images_url?.webp} type="image/webp" />
-            <img
-              width={590}
-              height={269}
-              src={images_url?.jpg}
-              alt=""
-              aria-hidden
-            />
-          </picture>
-          <div className="w-full max-w-[525px]">
-            <strong className="block mb-3 text-2xl text-white">{head}</strong>
-            <p className="mb-5 text-lg">{description}</p>
-            <Link
-              to={path}
-              className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            >
-              Подробнее
-            </Link>
+    return (
+      <section className="py-12">
+        <div className="container">
+          <h2 className="mb-10">
+            Выберите свою <span className="head_decor">карту</span>
+          </h2>
+          <Tabs
+            isActiveTab={isActiveTab}
+            change_tabs={change_tabs}
+            tab_list={tab_list}
+          />
+          <div className="flex items-center gap-x-10 py-5">
+            <picture>
+              <source srcSet={images_url?.webp} type="image/webp" />
+              <img
+                width={590}
+                height={269}
+                src={images_url?.jpg}
+                alt=""
+                aria-hidden
+              />
+            </picture>
+            <div className="w-full max-w-[525px]">
+              <strong className="block mb-3 text-2xl text-white">{head}</strong>
+              <p className="mb-5 text-lg">{description}</p>
+              <Link
+                to={path}
+                className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+              >
+                Подробнее
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-});
+      </section>
+    );
+  },
+);

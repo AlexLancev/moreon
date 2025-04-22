@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { Render_image } from "components";
+
+import { Render_image } from "@/components";
 
 const data_action = [
   {

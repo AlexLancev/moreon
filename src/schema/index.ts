@@ -20,4 +20,5 @@ export const UserFormSchema = z.object({
       /^[a-zA-Zа-яА-ЯёЁ]+$/,
       "Имя не должно содержать цифр или специальных символов",
     ),
+  comment: z.string(),
 });

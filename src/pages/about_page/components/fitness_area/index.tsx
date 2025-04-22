@@ -99,10 +99,8 @@ const tab_list = [
 ];
 
 export type Tabs_type = {
-  tabs_store: {
-    isActiveTab: string;
-    change_tabs: (value: string) => void;
-  };
+  isActiveTab: string;
+  change_tabs: (value: string) => void;
 };
 
 export const isEmptyObj = (object: object): boolean => {
@@ -114,56 +112,58 @@ export const isEmptyObj = (object: object): boolean => {
   return true;
 };
 
-export const Fitness_area = observer(({ tabs_store }: Tabs_type) => {
-  const { isActiveTab, change_tabs } = tabs_store;
+export const Fitness_area = observer(
+  ({ tabs_store }: { tabs_store: Tabs_type }) => {
+    const { isActiveTab, change_tabs } = tabs_store;
 
-  if (
-    !fitness_area_data ||
-    isEmptyObj(fitness_area_data) ||
-    !tab_list ||
-    tab_list.length === 0
-  )
-    return null;
+    if (
+      !fitness_area_data ||
+      isEmptyObj(fitness_area_data) ||
+      !tab_list ||
+      tab_list.length === 0
+    )
+      return null;
 
-  const current_data = fitness_area_data[isActiveTab as tab_list_type];
+    const current_data = fitness_area_data[isActiveTab as tab_list_type];
 
-  const { head, description, description_images, images_url } =
-    current_data ?? {};
+    const { head, description, description_images, images_url } =
+      current_data ?? {};
 
-  return (
-    <section className="py-12">
-      <div className="container">
-        <h2 className="mb-10">
-          <span className="head_decor">Зоны</span> фитнес клуба
-        </h2>
-        <Tabs
-          isActiveTab={isActiveTab as tab_list_type}
-          change_tabs={change_tabs}
-          tab_list={tab_list}
-        />
-        <div className="flex items-center gap-x-14 pt-8">
-          <picture>
-            <source srcSet={images_url?.jpg} type="image/webp" />
-            <img
-              className="rounded-3xl overflow-hidden h-[299px] object-cover"
-              width={525}
-              src={images_url?.jpg}
-              alt={description_images}
-              aria-label={description_images}
-            />
-          </picture>
-          <div className="w-full max-w-[525px]">
-            <h3 className="mb-3 head_decor text-3xl">{head}</h3>
-            <p className="mb-7 text-lg">{description}</p>
-            <a
-              href="/"
-              className="inline-flex text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            >
-              Подробнее
-            </a>
+    return (
+      <section className="py-12">
+        <div className="container">
+          <h2 className="mb-10">
+            <span className="head_decor">Зоны</span> фитнес клуба
+          </h2>
+          <Tabs
+            isActiveTab={isActiveTab as tab_list_type}
+            change_tabs={change_tabs}
+            tab_list={tab_list}
+          />
+          <div className="flex items-center gap-x-14 pt-8">
+            <picture>
+              <source srcSet={images_url?.jpg} type="image/webp" />
+              <img
+                className="rounded-3xl overflow-hidden h-[299px] object-cover"
+                width={525}
+                src={images_url?.jpg}
+                alt={description_images}
+                aria-label={description_images}
+              />
+            </picture>
+            <div className="w-full max-w-[525px]">
+              <h3 className="mb-3 head_decor text-3xl">{head}</h3>
+              <p className="mb-7 text-lg">{description}</p>
+              <a
+                href="/"
+                className="inline-flex text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+              >
+                Подробнее
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-});
+      </section>
+    );
+  },
+);

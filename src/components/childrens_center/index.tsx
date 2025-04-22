@@ -1,3 +1,5 @@
+import { modal_store } from "@/stores";
+
 const childrens_center_data = [
   {
     description: "Грудничковое плавание",
@@ -17,6 +19,8 @@ const childrens_center_data = [
 ];
 
 export const Childrens_center = () => {
+  const { isVisibleModal, change_modal } = modal_store;
+
   return (
     <div className="container">
       <section className="py-12">
@@ -60,6 +64,7 @@ export const Childrens_center = () => {
               Пусть ваши дети растут сильными, здоровыми и активными!
             </p>
             <button
+              onClick={() => change_modal(!isVisibleModal)}
               className="text-white py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
               type="button"
             >

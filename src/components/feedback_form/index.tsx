@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
 
 import {
   Form,
@@ -16,12 +17,13 @@ import {
 } from "@/components/ui/form";
 import { UserFormSchema } from "@/schema";
 
-export const Form_component = () => {
+export const Feedback_form = () => {
   const form = useForm({
     resolver: zodResolver(UserFormSchema),
     defaultValues: {
       phone: "",
       name: "",
+      comment: "",
     },
   });
 
@@ -62,9 +64,25 @@ export const Form_component = () => {
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="comment"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Textarea {...field} placeholder="Напишите ваш комментарий" />
+                </FormControl>
+              </FormItem>
+            )}
+          />
         </div>
 
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button
+          type="submit"
+          className="w-full border border-[rgb(115,115,115)]"
+          disabled={isSubmitting}
+        >
           Отправить
         </Button>
       </form>
