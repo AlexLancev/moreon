@@ -246,6 +246,8 @@ export const Personal_format_tabs = observer(
 
             const { key_name, category } = currentData;
 
+            if (!category) return null;
+
             return (
               <li key={idx} className="w-[20%] text-center">
                 <label className="personal_tabs">

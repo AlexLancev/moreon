@@ -11,6 +11,8 @@ const team_tab_list = [
 ];
 
 export const Team = observer(({ tabs_store }: tabs_store_type) => {
+  if (!tabs_store) return null;
+
   const { isActiveTab, change_tabs } = tabs_store;
 
   if (!team_tab_list || team_tab_list.length === 0) return null;

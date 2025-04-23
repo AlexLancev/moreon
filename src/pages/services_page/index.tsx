@@ -1,4 +1,4 @@
-import { Tabs_store } from "stores/tabs_store";
+import { Services_hero } from "./components";
 
 import {
   Areas_study,
@@ -8,13 +8,9 @@ import {
   Phyto_bar,
   Team,
   Water_zone,
-} from "components";
+} from "@/components";
 
-import { Services_hero } from "./components";
-
-const team_tabs_store = new Tabs_store();
-const choose_your_card_store = new Tabs_store();
-const water_zone_tabs_store = new Tabs_store();
+import { get_tabs_store } from "@/stores";
 
 const keys_list = [
   "mind_body",
@@ -36,11 +32,13 @@ export const Services_page = () => {
     <>
       <Services_hero />
       <Areas_study keys_list={keys_list} />
-      <Team tabs_store={team_tabs_store} />
-      <Choose_your_card tabs_store={choose_your_card_store} />
+      <Team tabs_store={get_tabs_store("component_team")} />
+      <Choose_your_card
+        tabs_store={get_tabs_store("component_choose_your_card")}
+      />
       <Freeze_card />
       <Childrens_center />
-      <Water_zone tabs_store={water_zone_tabs_store} />
+      <Water_zone tabs_store={get_tabs_store("component_water_zone")} />
       <Phyto_bar />
     </>
   );

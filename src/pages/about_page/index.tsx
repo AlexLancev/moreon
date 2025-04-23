@@ -7,7 +7,7 @@ import {
   Profitable_visits,
 } from "./components";
 
-import { Tabs_store } from "@/stores/tabs_store";
+import { get_tabs_store } from "@/stores";
 
 import {
   Effective_training,
@@ -17,21 +17,16 @@ import {
   Water_zone,
 } from "@/components";
 
-const personal_tabs_store = new Tabs_store();
-const team_tabs_store = new Tabs_store();
-const fitness_area_tabs_store = new Tabs_store();
-const water_zone_tabs_store = new Tabs_store();
-
 export const About_page = () => {
   return (
     <>
       <Gallery />
       <Effective_training />
       <Stock />
-      <Personal_format tabs_store={personal_tabs_store} />
-      <Team tabs_store={team_tabs_store} />
-      <Fitness_area tabs_store={fitness_area_tabs_store} />
-      <Water_zone tabs_store={water_zone_tabs_store} />
+      <Personal_format tabs_store={get_tabs_store("component_personal")} />
+      <Team tabs_store={''} />
+      <Fitness_area tabs_store={get_tabs_store("component_fitness_area")} />
+      <Water_zone tabs_store={get_tabs_store("component_water_zone")} />
       <About_questions />
       <Profitable_visits />
       <Every_card />
