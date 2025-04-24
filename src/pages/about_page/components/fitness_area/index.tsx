@@ -11,7 +11,7 @@ type fitness_area_data_type = {
       jpg: string;
       webp: string;
     };
-    to_link: string;
+    path: string;
   };
 };
 
@@ -27,7 +27,7 @@ const fitness_area_data: fitness_area_data_type = {
       jpg: "/images/fitness_area/result_zon_area_1.jpeg",
       webp: "/images/fitness_area/result_zon_area_1.webp",
     },
-    to_link: "",
+    path: "",
   },
   gym: {
     name_key: "gym",
@@ -40,7 +40,7 @@ const fitness_area_data: fitness_area_data_type = {
       jpg: "/images/fitness_area/result_zon_area_2.jpeg",
       webp: "/images/fitness_area/result_zon_area_2.webp",
     },
-    to_link: "",
+    path: "",
   },
   pool: {
     name_key: "pool",
@@ -53,7 +53,7 @@ const fitness_area_data: fitness_area_data_type = {
       jpg: "/images/fitness_area/result_zon_area_3.jpeg",
       webp: "/images/fitness_area/result_zon_area_3.webp",
     },
-    to_link: "",
+    path: "",
   },
   cardio_room: {
     name_key: "cardio_room",
@@ -66,7 +66,7 @@ const fitness_area_data: fitness_area_data_type = {
       jpg: "/images/fitness_area/result_zon_area_4.jpeg",
       webp: "/images/fitness_area/result_zon_area_4.webp",
     },
-    to_link: "",
+    path: "",
   },
   martial_arts: {
     name_key: "martial_arts",
@@ -79,7 +79,7 @@ const fitness_area_data: fitness_area_data_type = {
       jpg: "/images/fitness_area/result_zon_area_5.jpeg",
       webp: "/images/fitness_area/result_zon_area_5.webp",
     },
-    to_link: "",
+    path: "",
   },
 };
 

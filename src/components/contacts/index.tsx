@@ -32,7 +32,7 @@ export const Contacts = () => {
               <li className="mb-3" key={idx}>
                 <span className="mr-2">{contacts_data[contact]?.name}:</span>
                 <a
-                  href={contacts_data[contact]?.link}
+                  href={contacts_data[contact]?.path}
                   target="_blahk"
                   rel="noopener noreferrer"
                 >

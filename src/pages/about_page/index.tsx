@@ -24,7 +24,7 @@ export const About_page = () => {
       <Effective_training />
       <Stock />
       <Personal_format tabs_store={get_tabs_store("component_personal")} />
-      <Team tabs_store={''} />
+      <Team tabs_store={""} />
       <Fitness_area tabs_store={get_tabs_store("component_fitness_area")} />
       <Water_zone tabs_store={get_tabs_store("component_water_zone")} />
       <About_questions />

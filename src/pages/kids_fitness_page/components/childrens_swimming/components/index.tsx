@@ -9,7 +9,7 @@ const childrens_swimming_tabs_data = {
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, quos.",
     image_description: "",
-    patch: "/",
+    path: "/",
     images_url: {
       jpg: "/images/childrens_swimming_tabs/direction_1.jpeg",
       webp: "/images/childrens_swimming_tabs/direction_1.webp",
@@ -20,7 +20,7 @@ const childrens_swimming_tabs_data = {
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, quos.",
     image_description: "",
-    patch: "/",
+    path: "/",
     images_url: {
       jpg: "/images/childrens_swimming_tabs/direction_2.jpeg",
       webp: "/images/childrens_swimming_tabs/direction_2.webp",
@@ -31,7 +31,7 @@ const childrens_swimming_tabs_data = {
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, quos.",
     image_description: "",
-    patch: "/",
+    path: "/",
     images_url: {
       jpg: "/images/childrens_swimming_tabs/direction_3.jpeg",
       webp: "/images/childrens_swimming_tabs/direction_3.webp",
@@ -42,7 +42,7 @@ const childrens_swimming_tabs_data = {
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, quos.",
     image_description: "",
-    patch: "/",
+    path: "/",
     images_url: {
       jpg: "/images/childrens_swimming_tabs/direction_4.jpeg",
       webp: "/images/childrens_swimming_tabs/direction_4.webp",
@@ -84,7 +84,7 @@ export const Childrens_swimming_tabs = observer(
     )
       return null;
 
-    const { head, description, image_description, patch, images_url } =
+    const { head, description, image_description, path, images_url } =
       childrens_swimming_tabs_data[
         isActiveTab as childrens_swimming_tab_list_type
       ] ?? {};
@@ -101,7 +101,7 @@ export const Childrens_swimming_tabs = observer(
             <strong className="block mb-5">{head}</strong>
             <p className="mb-5">{description}</p>
             <Link
-              to={patch}
+              to={path}
               className="inline-flex will-change-transform text-white py-4 px-7 mt-10 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
             >
               Подробнее
