@@ -1,3 +1,4 @@
+import { isEmptyObj } from "@/utils";
 import { Link } from "react-router-dom";
 
 type directions_data_type = {
@@ -532,14 +533,6 @@ export type keys_list_type = {
   keys_list: string[];
 };
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
 
 export const Directions_list = ({ keys_list }: keys_list_type) => {
   if (

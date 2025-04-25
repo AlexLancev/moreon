@@ -1,3 +1,4 @@
+import { isEmptyObj } from "@/utils";
 import { Tabs } from "components";
 import { observer } from "mobx-react-lite";
 import { tabs_store_type } from "pages/about_page/components/personal_format";
@@ -63,14 +64,6 @@ const childrens_swimming_tab_list = [
   { key: "competitive_swimming", category: "Спортивное плавание" },
 ];
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
 
 export const Childrens_swimming_tabs = observer(
   ({ tabs_store }: tabs_store_type) => {

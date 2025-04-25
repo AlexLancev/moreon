@@ -12,6 +12,7 @@ type About_us_type = {
 };
 
 type Every_card_type = {
+  id: number;
   head: string;
   images_url: {
     png: string;
@@ -20,6 +21,7 @@ type Every_card_type = {
 };
 
 type Gallery_list_type = {
+  id: number;
   description: string;
   images_url: {
     jpg: string;

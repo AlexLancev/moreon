@@ -1,3 +1,4 @@
+import { isEmptyObj } from "@/utils";
 import { Tabs } from "components";
 import { observer } from "mobx-react-lite";
 
@@ -103,14 +104,6 @@ export type Tabs_type = {
   change_tabs: (value: string) => void;
 };
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
 
 export const Fitness_area = observer(
   ({ tabs_store }: { tabs_store: Tabs_type }) => {

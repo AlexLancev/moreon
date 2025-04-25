@@ -3,6 +3,7 @@ import { useState } from "react";
 import { observer } from "mobx-react-lite";
 
 import { Tabs } from "components";
+import { isEmptyObj } from "@/utils";
 
 export type personal_format_data_key_type =
   | "gym"
@@ -208,14 +209,6 @@ const personal_format_data: personal_format_data_type = {
   },
 };
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
 
 export const Personal_format_tabs = observer(
   ({ data_key, tabs_store }: personal_format_tabs_type) => {

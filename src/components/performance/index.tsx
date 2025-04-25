@@ -7,15 +7,7 @@ import { toJS } from "mobx";
 
 import { performance_data } from "@/data";
 import { performance_data_store } from "@/stores/data_store";
-
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
+import { isEmptyObj } from "@/utils";
 
 export const Performance = observer(
   ({ data_key, isVisibleBtn }: Performance_type) => {

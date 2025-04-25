@@ -1,17 +1,11 @@
+import { isEmptyObj } from "@/utils";
 import { contacts_data } from "constans";
 
 type Current_contacts_type = "address" | "phone" | "email";
 
 const current_contacts: Current_contacts_type[] = ["address", "phone", "email"];
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
+
 
 export const Contacts = () => {
   if (

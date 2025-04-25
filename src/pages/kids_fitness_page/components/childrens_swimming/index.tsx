@@ -2,22 +2,7 @@ import { Tabs_store } from "stores/tabs_store";
 
 import { Childrens_swimming_tabs } from "./components";
 
-type childrens_swimming_data_type = Record<string, string>;
-
-const childrens_swimming_data: childrens_swimming_data_type[] = [
-  {
-    description: "грудничковое плавание от 2 месяцев до 1 года",
-  },
-  {
-    description: "раннее плавание 1 — 3 года",
-  },
-  {
-    description: "детское плавание 3 года — 7 лет",
-  },
-  {
-    description: "спортивное плавание 7 — 13 лет",
-  },
-];
+import { childrens_swimming_data } from "@/constans";
 
 const childrens_swimming_store = new Tabs_store();
 

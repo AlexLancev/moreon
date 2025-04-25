@@ -5,6 +5,7 @@ import { observer } from "mobx-react-lite";
 import { type Tabs_type } from "../../pages/about_page/components/fitness_area";
 
 import { modal_store } from "@/stores";
+import { isEmptyObj } from "@/utils";
 
 const water_zone_data = {
   baths_swimming: {
@@ -73,15 +74,6 @@ const tab_list = [
   { key: "thermal_baths", category: "Термы" },
   { key: "goldfish", category: "Золотые рыбки" },
 ];
-
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
 
 export const Water_zone = observer(
   ({ tabs_store }: { tabs_store: Tabs_type }) => {

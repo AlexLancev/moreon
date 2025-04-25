@@ -1,17 +1,11 @@
+import { isEmptyObj } from "@/utils";
 import { contacts_data } from "constans";
 
 type feedback_data_type = "address" | "phone";
 
 const feedback_data: feedback_data_type[] = ["address", "phone"];
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
+
 
 export const Feedback = () => {
   if (
@@ -39,7 +33,7 @@ export const Feedback = () => {
             />
           </picture>
           <a
-            href={contacts_data[contact]?.link}
+            href={contacts_data[contact]?.path}
             className="transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem]"
             target="_blank"
             rel="noopener noreferrer"

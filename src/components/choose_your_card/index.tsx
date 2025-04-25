@@ -1,3 +1,4 @@
+import { isEmptyObj } from "@/utils";
 import { Tabs } from "components/tabs";
 import { observer } from "mobx-react-lite";
 import { Tabs_type } from "pages/about_page/components/fitness_area";
@@ -58,14 +59,6 @@ const choose_your_result_card_data = {
 
 type key_list_type = keyof typeof choose_your_result_card_data;
 
-export const isEmptyObj = (object: object): boolean => {
-  for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      return false;
-    }
-  }
-  return true;
-};
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },
