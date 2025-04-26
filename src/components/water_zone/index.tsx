@@ -1,71 +1,14 @@
-import { Tabs } from "components";
-
+import { useEffect } from "react";
+import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
+import { useQuery } from "@tanstack/react-query";
 
-import { type Tabs_type } from "../../pages/about_page/components/fitness_area";
+import { Tabs } from "components";
 
 import { modal_store } from "@/stores";
 import { isEmptyObj } from "@/utils";
-
-const water_zone_data = {
-  baths_swimming: {
-    head: "Бани и бассейны",
-    description:
-      "Мореон Фитнес предоставляет своим клиентам уникальные возможности для отдыха и оздоровления. Члены клуба Мореон получают доступ к спортивному бассейну, бассейну «Золотые рыбки», банному комплексу «Термы» и пространству Мореон SPA. В раздевалках фитнес-клуба работает солярий. В этом разделе Вы можете подробнее ознакомиться с велнесс-возможностями Мореон Фитнес.",
-    images_description: "",
-    images_url: {
-      jpg: "/images/water_zone/result_zone_1.jpeg",
-      webp: "/images/water_zone/result_zone_1.webp",
-    },
-  },
-  sports_pool: {
-    head: "Спортивный бассейн",
-    description:
-      "Спортивный бассейн Мореон Фитнес рассчитан на проведение групповых программ, занятий школы плавания, персональных тренировок и свободного плавания для всех членов клуба. Здесь же регулярно проходят соревнования по плаванию среди взрослых и детей. Трехуровневая система очистки воды гарантирует чистоту и безопасность. Панорамные окна наполняют помещение светом и вдохновляют на спортивные подвиги. Длина бассейна 25 м, количество дорожек — 5.",
-    images_description: "",
-    images_url: {
-      jpg: "/images/water_zone/result_zone_2.jpeg",
-      webp: "/images/water_zone/result_zone_2.webp",
-    },
-  },
-  spa: {
-    head: "СПА",
-    description:
-      "Мореон SPA – самое спокойное и красивое место в комплексе, открыто только для взрослых и детей старше 14 лет. Оформлено в стиле легендарного греческого острова Санторини. В переулках и террасах этого пространства хочется затеряться. Здесь тоже есть разнообразие бань – римская, хаммам, аромасауна, русская травяная, русская кедровая, греческие бани, ИК-сауны, а также небольшой бассейн, дорожка Кнайпа и соляная пещера. Работает SPA-бар с вкусным и полезным меню. За дополнительную плату можно заказать услуги косметолога, массажиста и СПА-терапевта. Здесь регулярно проводятся масштабные мероприятия с участием медийных членов клуба Мореон SPA, можно устроить свое мероприятие – например, свидание, мальчишник или девичник, доступны премиум-студии для индивидуального использования.",
-    images_description: "",
-    images_url: {
-      jpg: "/images/water_zone/result_zone_3.jpeg",
-      webp: "/images/water_zone/result_zone_3.webp",
-    },
-  },
-  thermal_baths: {
-    head: "Термы",
-    description:
-      "ермы – масштабный банный комплекс. По формату напоминает общественные бани, но намного интереснее. За один визит вы можете посетить 19 бань и саун разных мировых традиций – русская баня, финская сауна, хаммам, восточные аромасауны, греческие деликатные бани – тепидариум и лакониум. Главное украшение зоны – двухуровневый бассейн-лабиринт с контрастными ваннами, водопадами и рекой с реверсивным течением. Никогда не пустует античный аэрогидромассажный бассейн. После парной гости освежаются в фригидариуме и ледяных купелях, а отдыхают на лежаках с панорамным видом на березовую рощу или на летней веранде. В Термах можно отдыхать целый день, а перекусить можно здесь же – в кафе с европейской кухней. Есть услуга отдельной русской парной со своим предбанником, купелью и выходом на веранду.",
-    images_description: "",
-    images_url: {
-      jpg: "/images/water_zone/result_zone_4.jpeg",
-      webp: "/images/water_zone/result_zone_4.webp",
-    },
-  },
-  goldfish: {
-    head: "Золотые рыбки",
-    description:
-      "В бассейне «Золотые рыбки» проводятся оздоровительные и профилактические занятия в группах, а также занятия по детскому плаванию. Доступен только для занятий с инструктором. Находится на территории аквапарка «Мореон».",
-    images_description: "",
-    images_url: {
-      jpg: "/images/water_zone/result_zone_5.jpeg",
-      webp: "/images/water_zone/result_zone_5.webp",
-    },
-  },
-};
-
-type key_list_type =
-  | "baths_swimming"
-  | "sports_pool"
-  | "spa"
-  | "thermal_baths"
-  | "goldfish";
+import { water_zone_data } from "@/data";
+import { water_zone_store } from "@/stores/data_store";
 
 const tab_list = [
   { key: "baths_swimming", category: "Бани и бассейны" },
@@ -76,19 +19,36 @@ const tab_list = [
 ];
 
 export const Water_zone = observer(
-  ({ tabs_store }: { tabs_store: Tabs_type }) => {
+  ({ tabs_store }: { tabs_store: Water_zone_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
     const { isVisibleModal, change_modal } = modal_store;
 
+    const { data, isLoading, error } = useQuery({
+      queryKey: ["water_zone"],
+      queryFn: water_zone_data,
+    });
+
+    useEffect(() => {
+      if (data) {
+        water_zone_store.set_data(data);
+      }
+    }, [data]);
+
+    const water_zone_bd = toJS(water_zone_store?.data?.[0]?.data);
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: Failed to fetch data</div>;
+
     if (
-      !water_zone_data ||
-      isEmptyObj(water_zone_data) ||
+      !water_zone_store ||
+      !water_zone_bd ||
+      isEmptyObj(water_zone_bd) ||
       !tab_list ||
       tab_list.length === 0
     )
       return null;
 
-    const current_data = water_zone_data[isActiveTab as key_list_type];
+    const current_data = water_zone_bd[isActiveTab];
 
     const { head, description, images_url, images_description } =
       current_data ?? {};

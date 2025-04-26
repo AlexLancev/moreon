@@ -1,64 +1,15 @@
-import { isEmptyObj } from "@/utils";
-import { Tabs } from "components/tabs";
+import { useEffect } from "react";
+import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
-import { Tabs_type } from "pages/about_page/components/fitness_area";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
-const choose_your_result_card_data = {
-  fitnes: {
-    head: "Фитнес",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique, laboriosam repudiandae impedit modi obcaecati magni ullam quisquam iusto aut!",
-    images_url: {
-      jpg: "/images/choose_your_card/result_card_1.jpeg",
-      webp: "/images/choose_your_card/result_card_1.webp",
-    },
-    path: "/",
-  },
-  fitnes_spa: {
-    head: "Фитнес + СПА",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique, laboriosam repudiandae impedit modi obcaecati magni ullam quisquam iusto aut!",
-    images_url: {
-      jpg: "/images/choose_your_card/result_card_2.jpeg",
-      webp: "/images/choose_your_card/result_card_2.webp",
-    },
-    path: "/",
-  },
-  corporate_card: {
-    head: "Корпоративная карта",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique, laboriosam repudiandae impedit modi obcaecati magni ullam quisquam iusto aut!",
-    images_url: {
-      jpg: "/images/choose_your_card/result_card_3.jpeg",
-      webp: "/images/choose_your_card/result_card_3.webp",
-    },
-    path: "/",
-  },
-  flexible: {
-    head: "Гибкая",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique, laboriosam repudiandae impedit modi obcaecati magni ullam quisquam iusto aut!",
-    images_url: {
-      jpg: "/images/choose_your_card/result_card_4.jpeg",
-      webp: "/images/choose_your_card/result_card_4.webp",
-    },
-    path: "/",
-  },
-  premium: {
-    head: "Премиум",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique, laboriosam repudiandae impedit modi obcaecati magni ullam quisquam iusto aut!",
-    images_url: {
-      jpg: "/images/choose_your_card/result_card_5.jpeg",
-      webp: "/images/choose_your_card/result_card_5.webp",
-    },
-    path: "/",
-  },
-};
+import { Tabs } from "components/tabs";
 
-type key_list_type = keyof typeof choose_your_result_card_data;
-
+import { isEmptyObj } from "@/utils";
+import { club_cards_data } from "@/data";
+import { club_cards_store } from "@/stores/data_store";
+import xss from "xss";
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },
@@ -69,16 +20,40 @@ const tab_list = [
 ];
 
 export const Choose_your_card = observer(
-  ({ tabs_store }: { tabs_store: Tabs_type }) => {
+  ({ tabs_store }: { tabs_store: Club_cards_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
+    const { data, isLoading, error } = useQuery({
+      queryKey: ["club_cards"],
+      queryFn: club_cards_data,
+    });
+
+    useEffect(() => {
+      if (data) {
+        club_cards_store.set_data(data);
+      }
+    }, [data]);
+
+    const club_cards_bd = toJS(club_cards_store?.data?.[0]?.data);
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: Failed to fetch data</div>;
+
     if (
-      !choose_your_result_card_data ||
-      isEmptyObj(choose_your_result_card_data)
+      !club_cards_store ||
+      !club_cards_bd ||
+      isEmptyObj(club_cards_bd) ||
+      !tab_list ||
+      tab_list.length === 0
     )
       return null;
 
-    const { head, description, images_url, path } =
-      choose_your_result_card_data[isActiveTab as key_list_type] ?? {};
+    const current_data = club_cards_bd[isActiveTab] ?? {};
+
+    if (!current_data) return null;
+
+    const { head, description, images_url, path } = current_data;
+
+    const sanitized_description = xss(description);
 
     return (
       <section className="py-12">
@@ -104,7 +79,10 @@ export const Choose_your_card = observer(
             </picture>
             <div className="w-full max-w-[525px]">
               <strong className="block mb-3 text-2xl text-white">{head}</strong>
-              <p className="mb-5 text-lg">{description}</p>
+              <div
+                className="mb-5 text-lg ab"
+                dangerouslySetInnerHTML={{ __html: sanitized_description }}
+              ></div>
               <Link
                 to={path}
                 className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"

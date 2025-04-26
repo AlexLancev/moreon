@@ -114,3 +114,86 @@ type Personal_format_data_type = {
     }
   >;
 };
+
+type Fitness_area_tabs_type = {
+  isActiveTab: Tab_fitness_type;
+  change_tabs: (value: string) => void;
+};
+
+type Tab_fitness_type =
+  | "training_room"
+  | "gym"
+  | "pool"
+  | "cardio_room"
+  | "martial_arts";
+
+type Fitness_area_type = {
+  data: Record<
+    Tab_fitness_type,
+    {
+      name_key: Tab_fitness_type;
+      head: string;
+      description: string;
+      description_images: string;
+      images_url: {
+        jpg: string;
+        webp: string;
+      };
+      path: string;
+    }
+  >;
+};
+
+type Water_zone_key_type =
+  | "baths_swimming"
+  | "sports_pool"
+  | "spa"
+  | "thermal_baths"
+  | "goldfish";
+
+type Water_zone_tabs_type = {
+  isActiveTab: Water_zone_key_type;
+  change_tabs: (value: string) => void;
+};
+
+type Water_zone_type = {
+  data: Record<
+    Water_zone_key_type,
+    {
+      head: string;
+      description: string;
+      images_description: string;
+      images_url: {
+        jpg: string;
+        webp: string;
+      };
+    }
+  >;
+};
+
+type Club_cards_tabs_type = {
+  isActiveTab: Club_cards_key_type;
+  change_tabs: (value: string) => void;
+};
+
+type Club_cards_key_type =
+  | "fitnes"
+  | "fitnes_spa"
+  | "corporate_card"
+  | "flexible"
+  | "premium";
+
+type Club_cards_type = {
+  data: Record<
+    Club_cards_key_type,
+    {
+      head: string;
+      description: string;
+      images_url: {
+        jpg: string;
+        webp: string;
+      };
+      path: string;
+    }
+  >;
+};

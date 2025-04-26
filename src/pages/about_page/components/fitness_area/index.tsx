@@ -1,95 +1,13 @@
-import { isEmptyObj } from "@/utils";
-import { Tabs } from "components";
+import { useEffect } from "react";
 import { observer } from "mobx-react-lite";
+import { toJS } from "mobx";
+import { useQuery } from "@tanstack/react-query";
 
-type fitness_area_data_type = {
-  [key in tab_list_type]: {
-    name_key: string;
-    head: string;
-    description: string;
-    description_images: string;
-    images_url: {
-      jpg: string;
-      webp: string;
-    };
-    path: string;
-  };
-};
+import { Tabs } from "components";
 
-const fitness_area_data: fitness_area_data_type = {
-  training_room: {
-    name_key: "training_room",
-    head: "Зал групповых тренировок",
-    description:
-      "5 залов для групповых программ и более 70 видов тренировок: студия Cycle оснащенная тренажерами Real Ryder, Pilates Allegro, силовой и функциональный тренинг, программы мирового бренда Les Mills, танцевальные программы, программы Mind&Body.",
-    description_images:
-      "Современный фитнес-зал, где группа людей занимается групповой тренировкой. Участники стоят в линию с различным оборудованием: гантелями, скамейками и обручеми. Помещение оснащено зеркалами на задней стене и ярким освещением. Обстановка динамичная и организованная, подходящая для коллективных занятий по фитнесу или аэробике.",
-    images_url: {
-      jpg: "/images/fitness_area/result_zon_area_1.jpeg",
-      webp: "/images/fitness_area/result_zon_area_1.webp",
-    },
-    path: "",
-  },
-  gym: {
-    name_key: "gym",
-    head: "Тренажерный зал",
-    description:
-      "Разделен на несколько зон: зона свободных весов, зона силовых тренажеров и кардио. Новейшее премиальное оборудование Matrix и Technogym поможет добиться лучших результатов.",
-    description_images:
-      "Современный фитнес-зал, где мужчина и женщина выполняют силовые упражнения на тренажере. Женщина тянет веревку с помощью тренера, который помогает ей контролировать технику выполнения. Помещение оснащено профессиональным оборудованием, зеркалами и ярким освещением. Обстановка динамичная и сфокусирована на индивидуальной тренировке.",
-    images_url: {
-      jpg: "/images/fitness_area/result_zon_area_2.jpeg",
-      webp: "/images/fitness_area/result_zon_area_2.webp",
-    },
-    path: "",
-  },
-  pool: {
-    name_key: "pool",
-    head: "Спортивный бассейн",
-    description:
-      "Бассейн длиной 25 метров оборудован 5-ю дорожками для плавания. Трехуровневая система очистки воды гарантирует чистоту и безопасность. Панорамные окна наполняют помещение светом и вдохновляют на спортивные подвиги.",
-    description_images:
-      "Крытый бассейн с яркой голубой водой, разделенный на дорожки белыми линиями и красными плавучими разметками. В центре написано слово 'moreon' большими голубыми буквами. Над бассейном развеваются праздничные флаги разных цветов, добавляя динамичности пространству. Помещение оснащено большими окнами и современным дизайном потолка с подсветкой.",
-    images_url: {
-      jpg: "/images/fitness_area/result_zon_area_3.jpeg",
-      webp: "/images/fitness_area/result_zon_area_3.webp",
-    },
-    path: "",
-  },
-  cardio_room: {
-    name_key: "cardio_room",
-    head: "Зал кардио тренажеров",
-    description:
-      "В этой зоне представлены самые актуальные мировые фитнес-тренды, тренажеры Matrix, которые предлагают интерактивный формат занятий, вы можете подключить свои устройства и отслеживать показатели на экране.",
-    description_images:
-      "Современный фитнес-зал с рядами беговых дорожек, оснащенных интерактивными дисплеями. Помещение оформлено в светлых тонах с большими окнами, пропускающими естественный свет. Видны живые пальмы и другие растения, добавляющие свежесть и природный комфорт. Обстановка просторная и технологичная, подходящая для индивидуальных тренировок.",
-    images_url: {
-      jpg: "/images/fitness_area/result_zon_area_4.jpeg",
-      webp: "/images/fitness_area/result_zon_area_4.webp",
-    },
-    path: "",
-  },
-  martial_arts: {
-    name_key: "martial_arts",
-    head: "Зал единоборств",
-    description:
-      "Современный тренировочный зал с несколькими боксерскими мешками марки 'ALFAFIT'. Мешки подвешены на металлической конструкции, а помещение оснащено ярким освещением и спортивным оборудованием. Интерьер выполнен в темных тонах, создавая профессиональную и динамичную атмосферу для занятий боксом или другими контактными видами спорта.",
-    description_images:
-      "Более 500 м² для новых побед, оборудование Foreman, ринг на подиуме, Октагон, клетка BJJ, 12 боксерских мешков, 2 пневмогруши, покрытие татами, 2 груши на растяжках, 4 настенных подушки, тренажер вертушка",
-    images_url: {
-      jpg: "/images/fitness_area/result_zon_area_5.jpeg",
-      webp: "/images/fitness_area/result_zon_area_5.webp",
-    },
-    path: "",
-  },
-};
-
-type tab_list_type =
-  | "training_room"
-  | "gym"
-  | "pool"
-  | "cardio_room"
-  | "martial_arts";
+import { fitness_area_data } from "@/data";
+import { fitness_area_store } from "@/stores/data_store";
+import { isEmptyObj } from "@/utils";
 
 const tab_list = [
   { key: "gym", category: "Тренажёрный зал" },
@@ -99,27 +17,38 @@ const tab_list = [
   { key: "martial_arts", category: "Зал единоборств" },
 ];
 
-export type Tabs_type = {
-  isActiveTab: string;
-  change_tabs: (value: string) => void;
-};
-
-
 export const Fitness_area = observer(
-  ({ tabs_store }: { tabs_store: Tabs_type }) => {
+  ({ tabs_store }: { tabs_store: Fitness_area_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
 
+    const { data, isLoading, error } = useQuery({
+      queryKey: ["fitness_area"],
+      queryFn: fitness_area_data,
+    });
+
+    useEffect(() => {
+      if (data) {
+        fitness_area_store.set_data(data);
+      }
+    }, [data]);
+
+    const fitness_area_bd = toJS(fitness_area_store?.data?.[0]?.data);
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: Failed to fetch data</div>;
+
     if (
-      !fitness_area_data ||
-      isEmptyObj(fitness_area_data) ||
+      !fitness_area_store ||
+      !fitness_area_bd ||
+      isEmptyObj(fitness_area_bd) ||
       !tab_list ||
       tab_list.length === 0
     )
       return null;
 
-    const current_data = fitness_area_data[isActiveTab as tab_list_type];
+    const current_data = fitness_area_bd[isActiveTab];
 
-    const { head, description, description_images, images_url } =
+    const { head, description, description_images, path, images_url } =
       current_data ?? {};
 
     return (
@@ -129,7 +58,7 @@ export const Fitness_area = observer(
             <span className="head_decor">Зоны</span> фитнес клуба
           </h2>
           <Tabs
-            isActiveTab={isActiveTab as tab_list_type}
+            isActiveTab={isActiveTab}
             change_tabs={change_tabs}
             tab_list={tab_list}
           />
@@ -148,7 +77,7 @@ export const Fitness_area = observer(
               <h3 className="mb-3 head_decor text-3xl">{head}</h3>
               <p className="mb-7 text-lg">{description}</p>
               <a
-                href="/"
+                href={path}
                 className="inline-flex text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
               >
                 Подробнее

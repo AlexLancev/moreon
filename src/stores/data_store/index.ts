@@ -6,3 +6,6 @@ export { performance_data_store } from "./performance_data_store";
 export { video_reviews_store } from "./video_reviews_store";
 export { about_questions_store } from "./about_questions_store";
 export { personal_format_store } from "./personal_format_store";
+export { fitness_area_store } from "./fitness_area_store";
+export { water_zone_store } from "./water_zone_store";
+export { club_cards_store } from "./club_cards_store";

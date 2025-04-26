@@ -6,3 +6,6 @@ export { performance_data } from "./performance_data";
 export { video_reviews_data } from "./video_reviews_data";
 export { about_questions_data } from "./about_questions_data";
 export { personal_format_data } from "./personal_format_data";
+export { fitness_area_data } from "./fitness_area_data";
+export { water_zone_data } from "./water_zone_data";
+export { club_cards_data } from "./club_cards_data";
