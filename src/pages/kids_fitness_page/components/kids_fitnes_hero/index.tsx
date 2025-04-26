@@ -1,24 +1,5 @@
+import { kids_fitnes_hero_data } from "@/constans";
 import { modal_store } from "@/stores";
-
-type kids_fitnes_hero_data_type = Record<string, string>;
-
-const kids_fitnes_hero_data: kids_fitnes_hero_data_type[] = [
-  {
-    description: "Грудничковое плавание",
-  },
-  {
-    description: "Спортивное плавание",
-  },
-  {
-    description: "Единоборства, бокс, кикбоксинг и MMA",
-  },
-  {
-    description: "Групповые и индивидуальные тренировки",
-  },
-  {
-    description: "Спортивные мероприятия и соревнования",
-  },
-];
 
 export const Kids_fitnes_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;

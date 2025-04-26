@@ -2,4 +2,7 @@ export { about_us_store } from "./about_us_store";
 export { types_services_store } from "./types_services_store";
 export { every_card_store } from "./every_card_store";
 export { gallery_list_store } from "./gallery_list_store";
-export { performance_data_store } from "./performance_data_store"
+export { performance_data_store } from "./performance_data_store";
+export { video_reviews_store } from "./video_reviews_store";
+export { about_questions_store } from "./about_questions_store";
+export { personal_format_store } from "./personal_format_store";

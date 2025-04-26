@@ -59,3 +59,58 @@ type Performance_data_type = {
     }
   >;
 };
+
+type Video_reviews_type = {
+  id: number;
+  description: string;
+  person_about_club: string;
+  preview_image: {
+    jpg: string;
+    webp: string;
+  };
+  path: string;
+};
+
+type About_question_type = {
+  id: number;
+  head: string;
+  description: string;
+};
+
+type Personal_format_key_type =
+  | "gym"
+  | "group_training"
+  | "childrens_programs"
+  | "beauty_health"
+  | "authors_programs";
+
+type Tabs_store_type = {
+  isActiveTab: string;
+  change_tabs: (value: string) => void;
+};
+
+type Personal_format_tabs_type = {
+  data_key: Personal_format_key_type[];
+  tabs_store: Tabs_store_type;
+};
+
+type Tab_list_type = {
+  key: string;
+  category: string;
+};
+
+type Key_list_type = {
+  [key: string]: { description: string };
+};
+
+type Personal_format_data_type = {
+  data: Record<
+    Personal_format_key_type,
+    {
+      key_name: Personal_format_key_type;
+      category: string;
+      tab_list: Tab_list_type[];
+      key_list: Key_list_type;
+    }
+  >;
+};

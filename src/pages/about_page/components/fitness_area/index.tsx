@@ -3,7 +3,7 @@ import { Tabs } from "components";
 import { observer } from "mobx-react-lite";
 
 type fitness_area_data_type = {
-  [key: string]: {
+  [key in tab_list_type]: {
     name_key: string;
     head: string;
     description: string;

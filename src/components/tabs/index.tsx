@@ -9,14 +9,20 @@ export type Tabs_type = {
   isActiveTab: string;
   change_tabs: (value: string) => void;
   tab_list: Tab_list_type[];
+  currentChangeTab?: string;
 };
 
-export const Tabs = ({ isActiveTab, change_tabs, tab_list }: Tabs_type) => {
+export const Tabs = ({
+  isActiveTab,
+  change_tabs,
+  tab_list,
+  currentChangeTab,
+}: Tabs_type) => {
   useEffect(() => {
     if (tab_list && tab_list.length > 0) {
       change_tabs(tab_list[0]?.key);
     }
-  }, [change_tabs, tab_list]);
+  }, [currentChangeTab]);
 
   if (!tab_list || tab_list.length === 0) return null;
 
