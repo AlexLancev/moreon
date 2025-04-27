@@ -9,3 +9,6 @@ export { personal_format_store } from "./personal_format_store";
 export { fitness_area_store } from "./fitness_area_store";
 export { water_zone_store } from "./water_zone_store";
 export { club_cards_store } from "./club_cards_store";
+export { childrens_swimming_store } from "./childrens_swimming_store";
+export { news_store } from "./news_store";
+export { stock_store } from "./stock_store";

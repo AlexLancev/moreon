@@ -197,3 +197,42 @@ type Club_cards_type = {
     }
   >;
 };
+
+type Childrens_swimming_tabs_type = {
+  isActiveTab: Childrens_swimming_key_type;
+  change_tabs: (value: string) => void;
+};
+
+type Childrens_swimming_key_type =
+  | "infant_swimming"
+  | "early_swimming"
+  | "childrens_swimming"
+  | "competitive_swimming";
+
+type Childrens_swimming_type = {
+  data: Record<
+    Childrens_swimming_key_type,
+    {
+      head: string;
+      description: string;
+      image_description: string;
+      path: string;
+      images_url: {
+        jpg: string;
+        webp: string;
+      };
+    }
+  >;
+};
+
+type News_type = {
+  id: number;
+  description: string;
+  description_picture: string;
+  url_images: {
+    jpg: string;
+    webp: string;
+  };
+};
+
+type Stock_type = Omit<News_type, "description_picture">;

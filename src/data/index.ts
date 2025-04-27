@@ -9,3 +9,6 @@ export { personal_format_data } from "./personal_format_data";
 export { fitness_area_data } from "./fitness_area_data";
 export { water_zone_data } from "./water_zone_data";
 export { club_cards_data } from "./club_cards_data";
+export { childrens_swimming_data } from "./childrens_swimming_data";
+export { news_data } from "./news_data";
+export { stock_data } from "./stock_data";
