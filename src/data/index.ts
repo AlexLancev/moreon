@@ -12,3 +12,8 @@ export { club_cards_data } from "./club_cards_data";
 export { childrens_swimming_data } from "./childrens_swimming_data";
 export { news_data } from "./news_data";
 export { stock_data } from "./stock_data";
+export { team_data } from "./team_data";
+export { reviews_data } from "./reviews_data";
+export { profitable_visits_data } from "./profitable_visits_data";
+export { other_directions_data } from "./other_directions_data";
+export { directions_data } from "./directions_data";

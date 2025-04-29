@@ -1,42 +1,26 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { observer } from "mobx-react-lite";
-import { useQuery } from "@tanstack/react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import classNames from "classnames";
 
-import { about_us_data } from "@/data";
 import { about_us_store } from "@/stores/data_store";
 
 export const About_us_list = observer(() => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
+  const { data, isLoading, isError } = about_us_store;
 
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["about_us"],
-    queryFn: about_us_data,
-  });
-
-  useEffect(() => {
-    if (data) {
-      about_us_store.set_data(data);
-    }
-  }, [data]);
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
-
-  if (
-    !about_us_store ||
-    !about_us_store.data ||
-    about_us_store.data.length === 0
-  ) {
+  if (!about_us_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
+
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide key={startIndex} className="flex flex-col gap-5">
-      {about_us_store.data
+      {data
         .slice(startIndex, endIndex)
         .map(({ title, description }: About_us_type, idx: number) => {
           const currentIndex = startIndex + idx;

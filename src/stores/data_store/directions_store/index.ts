@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
-class About_us_store {
-  data: About_us_type[] = [];
+class Directions_store {
+  data: Directions_type[] = [];
   isLoading: boolean | null = null;
   isError: boolean | null = null;
 
@@ -9,7 +9,7 @@ class About_us_store {
     makeAutoObservable(this);
   }
 
-  set_data(get_data: About_us_type[]) {
+  set_data(get_data: Directions_type[]) {
     this.data = get_data;
   }
   set_isLoad(isLoad: boolean) {
@@ -20,4 +20,4 @@ class About_us_store {
   }
 }
 
-export const about_us_store = new About_us_store();
+export const directions_store = new Directions_store();

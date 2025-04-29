@@ -1,55 +1,39 @@
-const other_directions_data = [
-  {
-    path: "https://more-on.ru/",
-    descriptions: "Перейти на другой сайт Многофункциональный комплекс Мореон",
-    images_url: {
-      png: "/images/other_directions/аква.png",
-      webp: "/images/other_directions/аква.webp",
-    },
-  },
-  {
-    path: "https://therm.more-on.ru/",
-    descriptions: "Перейти на другой сайт Термы Мореон",
-    images_url: {
-      png: "/images/other_directions/термы.png",
-      webp: "/images/other_directions/термы.webp",
-    },
-  },
-  {
-    path: "https://spa.more-on.ru/",
-    descriptions: "Перейти на другой сайт Мореон СПА",
-    images_url: {
-      png: "/images/other_directions/спа.png",
-      webp: "/images/other_directions/спа.webp",
-    },
-  },
-  {
-    path: "https://bowling.more-on.ru/",
-    descriptions: "Перейти на другой сайт Мореон Боулинг и Караоке",
-    images_url: {
-      png: "/images/other_directions/боулинг.png",
-      webp: "/images/other_directions/боулинг.webp",
-    },
-  },
-  {
-    path: "https://more-on.ru/restaurants/",
-    descriptions: "Перейти на другой сайт Кафе ресторан ПОРТ",
-    images_url: {
-      png: "/images/other_directions/порт.png",
-      webp: "/images/other_directions/порт.webp",
-    },
-  },
-];
+import { useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 
-export const Other_directions = () => {
-  if (!other_directions_data || other_directions_data.length === 0) return null;
+import { other_directions_data } from "@/data";
+import { other_directions_store } from "@/stores/data_store";
+import { observer } from "mobx-react-lite";
+
+export const Other_directions = observer(() => {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["other_directions"],
+    queryFn: other_directions_data,
+  });
+
+  useEffect(() => {
+    if (data) {
+      other_directions_store.set_data(data);
+    }
+  }, [data]);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: Failed to fetch data</div>;
+
+  if (
+    !other_directions_store ||
+    !other_directions_store.data ||
+    other_directions_store.data.length === 0
+  ) {
+    return <div>No data available</div>;
+  }
 
   return (
     <section className="py-12">
       <h2 className="visually-hidden">Наши другие направления</h2>
       <div className="container">
         <ul className="flex items-center justify-around gap-4">
-          {other_directions_data.map(
+          {other_directions_store.data.map(
             (
               { path, descriptions, images_url: { png, webp } },
               idx: number,
@@ -74,4 +58,4 @@ export const Other_directions = () => {
       </div>
     </section>
   );
-};
+});

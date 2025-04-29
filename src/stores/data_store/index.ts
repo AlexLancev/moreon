@@ -12,3 +12,8 @@ export { club_cards_store } from "./club_cards_store";
 export { childrens_swimming_store } from "./childrens_swimming_store";
 export { news_store } from "./news_store";
 export { stock_store } from "./stock_store";
+export { team_store } from "./team_store";
+export { reviews_store } from "./reviews_store";
+export { profitable_visits_store } from "./profitable_visits_store";
+export { other_directions_store } from "./other_directions_store";
+export { directions_store } from "./directions_store";

@@ -1,7 +1,5 @@
 import { Tabs, Team_list } from "components";
-import { type Tab_type } from "components/team_list";
 import { observer } from "mobx-react-lite";
-import { tabs_store_type } from "pages/about_page/components/personal_format";
 
 const team_tab_list = [
   { key: "gym", category: "Тренажёрный зал" },
@@ -10,24 +8,27 @@ const team_tab_list = [
   { key: "pool", category: "Бассейн" },
 ];
 
-export const Team = observer(({ tabs_store }: tabs_store_type) => {
-  if (!tabs_store) return null;
+export const Team = observer(
+  ({ tabs_store }: { tabs_store: Team_key_type }) => {
+    if (!tabs_store) return null;
 
-  const { isActiveTab, change_tabs } = tabs_store;
+    const { isActiveTab, change_tabs } = tabs_store;
 
-  if (!team_tab_list || team_tab_list.length === 0) return null;
+    if (!team_tab_list || team_tab_list.length === 0 || !change_tabs)
+      return null;
 
-  return (
-    <section className="py-12">
-      <div className="container">
-        <h2 className="mb-10">Команда</h2>
-        <Tabs
-          isActiveTab={isActiveTab as Tab_type}
-          change_tabs={change_tabs}
-          tab_list={team_tab_list}
-        />
-        <Team_list isActiveTab={isActiveTab as Tab_type} />
-      </div>
-    </section>
-  );
-});
+    return (
+      <section className="py-12">
+        <div className="container">
+          <h2 className="mb-10">Команда</h2>
+          <Tabs
+            isActiveTab={isActiveTab}
+            change_tabs={change_tabs}
+            tab_list={team_tab_list}
+          />
+          <Team_list isActiveTab={isActiveTab} />
+        </div>
+      </section>
+    );
+  },
+);

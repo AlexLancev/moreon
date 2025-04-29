@@ -2947,3 +2947,511 @@
 //     },
 //   },
 // };
+
+// const directions_data = {
+//   mind_body: {
+//     direction: "Mind Body",
+//     description: "На изображении женщина выполняет йоговскую позу, сидя на коврике. Она одета в темно-синюю спортивную форму и находится в позе 'Разделение ног' (Hanumanasana), поддерживая равновесие одной рукой. Ее другая рука поднята вверх, создавая грациозный образ. Фон простой и нейтральный, что акцентирует внимание на технике выполнения упражнения.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_1.jpeg",
+//       webp: "/images/directions/result_direction_1.webp",
+//     },
+//     path: "/services/mind-body",
+//   },
+//   strength_functional_training: {
+//     direction: "Силовые и функциональные тренировки",
+//     description: "На изображении группа женщин выполняет упражнение с гантелями в тренажерном зале. Они одеты в одинаковые черные спортивные костюмы и держат зеленые гантели, выполняя приседания или другое силовое упражнение. Все участницы сосредоточены на выполнении движения, демонстрируя командную атмосферу тренировки. Фон простой, акцентирующий внимание на группе.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_2.jpeg",
+//       webp: "/images/directions/result_direction_2.webp",
+//     },
+//     path: "/services/strength_functional_training",
+//   },
+//   aerobics: {
+//     direction: "Кардиопрограммы и аэробика",
+//     description: "На изображении трое человек выполняют упражнения с гантелями в тренажерном зале. Женщина в центре делает выпады, мужчина помогает ей сохранять равновесие. На заднем плане видно фитнес-оборудование.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_3.jpeg",
+//       webp: "/images/directions/result_direction_3.webp",
+//     },
+//     path: "/services/aerobics",
+//   },
+//   gym: {
+//     direction: "Тренажерный зал",
+//     description: "Современный тренажерный зал с оборудованием для силовых и кардио тренировок, включая штанги, гантели и беговые дорожки. Просторное помещение с несколькими посетителями.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_4.jpeg",
+//       webp: "/images/directions/result_direction_4.webp",
+//     },
+//     path: "/services/gym",
+//   },
+//   pool: {
+//     direction: "Водные программы",
+//     description: "На изображении показан человек, плавающий в воде брассом. Видны руки и часть тела спортсмена под водой, а также капли воды на поверхности. Спортсмен носит очки для плавания и купальный костюм. Окружающая среда — открытый водоем или бассейн с голубой водой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_5.jpeg",
+//       webp: "/images/directions/result_direction_5.webp",
+//     },
+//     path: "/services/pool",
+//   },
+//   martial_arts: {
+//     direction: "Единоборства",
+//     description: "Тренировочный зал с боксерскими мешками, черным резиновым полом и ярким освещением. Просторное помещение для занятий боксом или боевыми искусствами.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_6.jpeg",
+//       webp: "/images/directions/result_direction_6.webp",
+//     },
+//     path: "/services/martial_arts",
+//   },
+//   dance: {
+//     direction: "Танцы",
+//     description: "Девушка в яркой спортивной одежде выполняет активное движение на улице, демонстрируя энергию, стиль и уверенность в каждом шаге.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_7.jpeg",
+//       webp: "/images/directions/result_direction_7.webp",
+//     },
+//     path: "/services/dance",
+//   },
+//   personal_training: {
+//     direction: "Персональный тренинг",
+//     description: "Мужчина помогает женщине выполнять упражнение с гантелями в тренажерном зале. Женщина делает выпады, мужчина контролирует технику выполнения.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_8.jpeg",
+//       webp: "/images/directions/result_direction_8.webp",
+//     },
+//     path: "/services/personal_training",
+//   },
+//   yoga: {
+//     direction: "Йога",
+//     description: "Женщина выполняет йогу на коврике, занимаясь растяжкой и укреплением мышц в помещении с мягким освещением.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_9.jpeg",
+//       webp: "/images/directions/result_direction_9.webp",
+//     },
+//     path: "/services/yoga",
+//   },
+//   test: {
+//     direction: "Фитнес-тестирование",
+//     description: "Профессиональный медицинский анализатор тела (InBody) в современном помещении для оценки состава тела и здоровья.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_10.jpeg",
+//       webp: "/images/directions/result_direction_10.webp",
+//     },
+//     path: "/services/test",
+//   },
+//   kids_fitnes: {
+//     direction: "Детский фитнес",
+//     description: "Три женщины выполняют йогу в помещении, занимаясь растяжкой и укреплением мышц на ковриках. Освещение мягкое, атмосфера спокойная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_11.jpeg",
+//       webp: "/images/directions/result_direction_11.webp",
+//     },
+//     path: "/services/kids_fitnes",
+//   },
+//   group_training: {
+//     direction: "Групповые программы",
+//     description: "Группа женщин выполняет активную танцевальную тренировку в зале. Все одеты ярко, синхронно двигаются и улыбаются, создавая веселую атмосферу.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_12.jpg",
+//       webp: "/images/directions/result_direction_12.webp",
+//     },
+//     path: "/services/group_training",
+//   },
+//   stretching: {
+//     direction: "МФР+Stretching",
+//     description: "Женщина выполняет упражнение на растяжку спины с использованием ролика для массажа. Она находится в помещении с окном, одета в спортивную форму.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_13.jpeg",
+//       webp: "/images/directions/result_direction_13.webp",
+//     },
+//     path: "/services/stretching",
+//   },
+//   pranayama_meditation: {
+//     direction: "ПРАНАЯМА И МЕДИТАЦИЯ",
+//     description: "Женщина медитирует в позе лотоса на коврике для йоги в тренажерном зале. Она одета в спортивную форму и выглядит сосредоточенной.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_14.jpeg",
+//       webp: "/images/directions/result_direction_14.webp",
+//     },
+//     path: "/services/pranayama_meditation",
+//   },
+//   yoga_intensiv_90: {
+//     direction: "YOGA INTENSIV-90",
+//     description: "Группа женщин выполняет упражнение на растяжку в зале. Они стоят в линию, вытягивая руки в стороны и вперед, одеты в спортивную форму.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_15.jpeg",
+//       webp: "/images/directions/result_direction_15.webp",
+//     },
+//     path: "/services/yoga_intensiv_90",
+//   },
+//   pilates_allegro: {
+//     direction: "PILATES ALLEGRO",
+//     description: "Женщина выполняет упражнение на тренажере с резиновой лентой для укрепления мышц. Она находится в помещении с ярким освещением и спортивной атмосферой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_16.jpeg",
+//       webp: "/images/directions/result_direction_16.webp",
+//     },
+//     path: "/services/pilates_allegro",
+//   },
+//   healthy_back: {
+//     direction: "Здоровая спина",
+//     description: "Женщина медитирует в позе лотоса, сидя на коврике. Она одета в легкую спортивную форму и сосредоточена, руки сложены в мудру. Освещение мягкое, фон простой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_17.jpeg",
+//       webp: "/images/directions/result_direction_17.webp",
+//     },
+//     path: "/services/healthy_back",
+//   },
+//   pilates_mat: {
+//     direction: "PILATES MAT",
+//     description: "Группа женщин выполняет упражнения на пресс в зале. Они лежат на ковриках, поднимая корпус и работая над мышцами живота. Освещение яркое, атмосфера активная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_18.jpeg",
+//       webp: "/images/directions/result_direction_18.webp",
+//     },
+//     path: "/services/pilates_mat",
+//   },
+//   soft_balance: {
+//     direction: "SOFT BALANCE",
+//     description: "Группа женщин выполняет динамичное упражнение на боковую стойку в зале. Все одеты в спортивную форму и активно двигаются, поднимая руки вверх. Атмосфера энергичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_19.jpeg",
+//       webp: "/images/directions/result_direction_19.webp",
+//     },
+//     path: "/services/soft_balance",
+//   },
+//   hatha_yoga: {
+//     direction: "HATHA YOGA",
+//     description: "Группа женщин выполняет упражнение на растяжку в зале. Они лежат на ковриках, поднимая ноги и руки вверх, создавая синхронные движения. Освещение мягкое, атмосфера спокойная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_20.jpeg",
+//       webp: "/images/directions/result_direction_20.webp",
+//     },
+//     path: "/services/hatha_yoga",
+//   },
+//   cross_training: {
+//     direction: "КроссТренинг",
+//     description: "Мужчина и женщина выполняют упражнение на прыжки с подъемом ноги в помещении. Они одеты в спортивную форму, сосредоточены на тренировке. Освещение яркое, фон простой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_21.jpeg",
+//       webp: "/images/directions/result_direction_21.webp",
+//     },
+//     path: "/services/cross_training",
+//   },
+//   abs_streth: {
+//     direction: "ABS+STRETH",
+//     description: "Женщина выполняет упражнение на пресс, лежа на коврике. Она поднимает корпус и сгибает ноги, одета в спортивную форму. Освещение мягкое, фон простой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_22.jpeg",
+//       webp: "/images/directions/result_direction_22.webp",
+//     },
+//     path: "/services/abs_streth",
+//   },
+//   hot_iron_1: {
+//     direction: "HOT IRON 1",
+//     description: "Женщина выполняет упражнение с гантелями, стоя на коврике в тренажерном зале. Она одета в спортивную форму и сосредоточена на технике выполнения. Освещение яркое, фон простой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_24.jpeg",
+//       webp: "/images/directions/result_direction_24.webp",
+//     },
+//     path: "/services/hot_iron_1",
+//   },
+//   hot_iron_2: {
+//     direction: "HOT IRON 2",
+//     description: "Мужчина выполняет упражнение с гантелями, стоя на одной ноге в тренажерном зале. Он одет в спортивную форму и сосредоточен на технике выполнения. Второй человек стоит рядом, наблюдая за ним.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_25.jpeg",
+//       webp: "/images/directions/result_direction_25.webp",
+//     },
+//     path: "/services/hot_iron_2",
+//   },
+//   les_mills_grit: {
+//     direction: "LES MILLS GRIT",
+//     description: "Группа людей выполняет упражнения с эспандерами на открытом воздухе. Они одеты в спортивную форму и двигаются синхронно, сосредоточившись на тренировке. Атмосфера активная и дружелюбная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_26.jpeg",
+//       webp: "/images/directions/result_direction_26.webp",
+//     },
+//     path: "/services/les_mills_grit",
+//   },
+//   thinner: {
+//     direction: "Похудей-ка",
+//     description: "Женщина измеряет талию сантиметром. На экране показано значение 90,2 см. Она одета в спортивную форму, сосредоточена на контроле параметров фигуры.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_27.jpeg",
+//       webp: "/images/directions/result_direction_27.webp",
+//     },
+//     path: "/services/thinner",
+//   },
+//   les_mills_core: {
+//     direction: "LES MILLS CORE",
+//     description: "Группа женщин выполняет упражнение с эспандерами в тренажерном зале. Они одеты в спортивную форму и двигаются синхронно, сосредоточившись на растяжке мышц. Атмосфера активная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_28.jpeg",
+//       webp: "/images/directions/result_direction_28.webp",
+//     },
+//     path: "/services/les_mills_core",
+//   },
+//   real_ryder: {
+//     direction: "REAL RYDER",
+//     description: "Мужчина тренируется на велотренажере в современном фитнес-центре. Освещение синее, оборудование профессиональное, фон выглядит технологичным и стильным.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_29.jpeg",
+//       webp: "/images/directions/result_direction_29.webp",
+//     },
+//     path: "/services/real_ryder",
+//   },
+//   step: {
+//     direction: "STEP",
+//     description: "Группа женщин выполняет упражнения на ступеньках в тренажерном зале. Они одеты в спортивную форму и активно работают над мышцами ног, двигаясь синхронно. Атмосфера энергичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_30.jpeg",
+//       webp: "/images/directions/result_direction_30.webp",
+//     },
+//     path: "/services/step",
+//   },
+//   step_pro: {
+//     direction: "STEP PRO",
+//     description: "Женщина позирует в тренажерном зале, одета в спортивную форму. На заднем плане видны другие люди, занимающиеся на тренажерах. Освещение яркое, атмосфера активная и динамичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_31.jpeg",
+//       webp: "/images/directions/result_direction_31.webp",
+//     },
+//     path: "/services/step_pro",
+//   },
+//   pro_jumping: {
+//     direction: "PRO JUMPING",
+//     description: "Две женщины выполняют упражнения на тренажерах в помещении. Одна занимается на степ-платформе, другая — на мини-тренировочном батуте. Они одеты в спортивную форму и сосредоточены на тренировке.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_32.jpeg",
+//       webp: "/images/directions/result_direction_32.webp",
+//     },
+//     path: "/services/pro_jumping",
+//   },
+//   step_interval: {
+//     direction: "STEP-INTERVAL",
+//     description: "Группа людей выполняет упражнения на ступеньках в тренажерном зале. Они одеты в спортивную форму и активно работают над мышцами ног, двигаясь синхронно. Освещение яркое, фон простой.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_33.jpeg",
+//       webp: "/images/directions/result_direction_33.webp",
+//     },
+//     path: "/services/step_interval",
+//   },
+//   infant_swimming: {
+//     direction: "Грудничковое плавание",
+//     description: "Маленький ребенок в голубой шапочке для плавания тренируется в бассейне, используя жевательный поплавок. Вода ярко-зеленая, атмосфера спокойная и безопасная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_34.jpeg",
+//       webp: "/images/directions/result_direction_34.webp",
+//     },
+//     path: "/services/infant_swimming",
+//   },
+//   swimming_children: {
+//     direction: "Плавание для детей",
+//     description: "Маленький ребенок плавает в бассейне, одетый в синие очки для плавания. Он держит красно-белую игрушку и весело плывет на спине. Вода ярко-синяя, атмосфера легкая и радостная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_35.jpeg",
+//       webp: "/images/directions/result_direction_35.webp",
+//     },
+//     path: "/services/swimming_children",
+//   },
+//   school_competitive_swimming: {
+//     direction: "Школа спортивного плавания",
+//     description: "Маленький ребенок плавает в бассейне, одетый в шапочку и очки для плавания. Он выполняет технику брасса, сосредоточенно двигая руками и ногами. Вода ярко-синяя, атмосфера спортивная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_36.jpeg",
+//       webp: "/images/directions/result_direction_36.webp",
+//     },
+//     path: "/services/school_competitive_swimming",
+//   },
+//   swimming_adults: {
+//     direction: "Плавание для взрослых",
+//     description: "Спортсменка плавает в бассейне, выполняя технику брасса. Она одета в очки для плавания и яркий купальник с рисунком. Вода вокруг нее бурлит от движения, создавая динамичную атмосферу тренировки.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_37.jpeg",
+//       webp: "/images/directions/result_direction_37.webp",
+//     },
+//     path: "/services/swimming_adults",
+//   },
+//   aqua_aerobics: {
+//     direction: "Аквааэробика",
+//     description: "Женщина тренируется в бассейне, используя желтый плавательный поплавок. Она одета в черный купальник и сосредоточена на упражнении. Вода ярко-синяя, атмосфера спокойная и активная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_38.jpeg",
+//       webp: "/images/directions/result_direction_38.webp",
+//     },
+//     path: "/services/aqua_aerobics",
+//   },
+//   aqua_mom: {
+//     direction: "Aqua Mama",
+//     description: "Дети плавают в бассейне под наблюдением инструктора. Один ребенок, одетый в шапочку для плавания, выполняет упражнение на месте, сосредоточенно двигая руками и ногами. Вода ярко-синяя, атмосфера безопасная и дружелюбная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_39.jpeg",
+//       webp: "/images/directions/result_direction_39.webp",
+//     },
+//     path: "/services/aqua_mom",
+//   },
+//   work_apparatus: {
+//     direction: "Работа на снарядах",
+//     description: "Мужчина в боксерских перчатках готовится к тренировке или бою. Он одет только в нижнее белье, демонстрируя подтянутое тело и сосредоточенное выражение лица. Атмосфера напряженная и спортивная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_40.jpeg",
+//       webp: "/images/directions/result_direction_40.webp",
+//     },
+//     path: "/services/work_apparatus",
+//   },
+//   box: {
+//     direction: "Бокс",
+//     description: "Два боксера в перчатках стоят друг напротив друга, готовясь к поединку. Один носит синие перчатки, другой — красные. Оба сосредоточены и находятся в боевой позиции, создавая драматичную атмосферу.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_41.jpeg",
+//       webp: "/images/directions/result_direction_41.webp",
+//     },
+//     path: "/services/box",
+//   },
+//   grappling: {
+//     direction: "Грепплинг",
+//     description: "Два спортсмена выполняют прием в борьбе или ММА. Один спортсмен находится сверху, контролируя противника, который лежит на полу. Оба одеты в спортивную форму, атмосфера напряженная и сосредоточенная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_42.jpeg",
+//       webp: "/images/directions/result_direction_42.webp",
+//     },
+//     path: "/services/grappling",
+//   },
+//   kickboxing: {
+//     direction: "Кикбоксинг",
+//     description: "Боксер в синих перчатках и шортах наносит удар противнику, одетому в красные перчатки. Они находятся в ринге, атмосфера напряженная и динамичная. Боксер сосредоточен на атаке, демонстрируя технику удара.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_43.jpeg",
+//       webp: "/images/directions/result_direction_43.webp",
+//     },
+//     path: "/services/kickboxing",
+//   },
+//   mma: {
+//     direction: "ММА",
+//     description: "Мужчина выполняет силовое упражнение с гантелями, сосредоточенно работая над мышцами рук и плеч. Он одет в спортивную форму, атмосфера тренировки напряженная и активная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_44.jpeg",
+//       webp: "/images/directions/result_direction_44.webp",
+//     },
+//     path: "/services/mma",
+//   },
+//   latina: {
+//     direction: "LATINA",
+//     description: "Пара танцует вальс на сцене. Мужчина одет в черный костюм, а женщина — в красное платье, раскрывающее движения. Они выполняют элегантные и изящные па, создавая романтическую атмосферу.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_45.jpeg",
+//       webp: "/images/directions/result_direction_45.webp",
+//     },
+//     path: "/services/latina",
+//   },
+//   multidance: {
+//     direction: "MULTI DANCE",
+//     description: "Группа женщин выполняет танцевальную тренировку на открытом воздухе. Они одеты в яркую спортивную форму и активно двигаются, поднимая руки и ноги. Атмосфера веселая и энергичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_46.jpeg",
+//       webp: "/images/directions/result_direction_46.webp",
+//     },
+//     path: "/services/multidance",
+//   },
+//   oriental: {
+//     direction: "ORIENTAL",
+//     description: "Женщина в элегантном черном платье с открытым декольте позирует, демонстрируя изящную фигуру. Ее волосы распущены, а лицо украшено традиционными индийскими узорами на глазах и щеках. Атмосфера загадочная и романтичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_47.jpeg",
+//       webp: "/images/directions/result_direction_47.webp",
+//     },
+//     path: "/services/oriental",
+//   },
+//   zumba: {
+//     direction: "ZUMBA",
+//     description: "Девушка в белой футболке и джинсах выполняет акробатическое движение, подпрыгивая на мяче. Ее волосы развеваются, а тело демонстрирует гибкость и координацию. Атмосфера активная и динамичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_48.jpeg",
+//       webp: "/images/directions/result_direction_48.webp",
+//     },
+//     path: "/services/zumba",
+//   },
+//   dance_mix: {
+//     direction: "DANCE MIX",
+//     description: "Группа женщин выполняет танцевальную тренировку в помещении. Они одеты в яркую спортивную форму и активно двигаются, поднимая руки и ноги. Атмосфера веселая и энергичная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_49.jpeg",
+//       webp: "/images/directions/result_direction_49.webp",
+//     },
+//     path: "/services/dance_mix",
+//   },
+//   childrens_swimming: {
+//     direction: "Детское плавание",
+//     description: "Маленький ребенок плавает в бассейне под присмотром взрослого. Ребенок держится за руку взрослого, а вода вокруг него ярко-синяя. Атмосфера спокойная и безопасная, создавая ощущение заботы и обучения.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_54.jpeg",
+//       webp: "/images/directions/result_direction_54.webp",
+//     },
+//     path: "/services/childrens_swimming",
+//   },
+//   martial_arts_children: {
+//     direction: "Детские единоборства",
+//     description: "Два боксера в перчатках стоят друг напротив друга, готовясь к поединку. Один носит черные перчатки и защищается, а другой — белые и наносит удар. Атмосфера напряженная и сосредоточенная, демонстрируя технику бокса.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_55.jpeg",
+//       webp: "/images/directions/result_direction_55.webp",
+//     },
+//     path: "/services/martial_arts_children",
+//   },
+//   children_center: {
+//     direction: "Детский центр",
+//     description: "Группа женщин выполняет упражнение на растяжку в зале. Они стоят в линию, вытягивая руки и наклоняясь в сторону. Все одеты в спортивную форму, атмосфера спокойная и сосредоточенная.",
+//     images_url: {
+//       jpg: "/images/directions/result_direction_56.jpeg",
+//       webp: "/images/directions/result_direction_56.webp",
+//     },
+//     path: "/services/children_center",
+//   },
+//   baths_swimming: {
+//     direction: "Бани и бассейны",
+//     description: "Уютная сауна с деревянными стенами и скамьями. В помещении мягкий свет от настенных ламп, создавая расслабляющую атмосферу. На переднем плане виден каменный очаг для нагрева воды или пара.",
+//     images_url: {
+//       jpg: "/images/water_zone/result_zone_1.jpeg",
+//       webp: "/images/water_zone/result_zone_1.webp",
+//     },
+//     path: "/services/baths_swimming",
+//   },
+//   sports_pool: {
+//     direction: "Спортивный бассейн",
+//     description: "Модерн-стильный бассейн с чистой голубой водой, окруженный деревянными скамьями и стеклянными окнами. Помещение освещено ярко, создавая открытую и свежую атмосферу для тренировок или отдыха.",
+//     images_url: {
+//       jpg: "/images/water_zone/result_zone_2.jpeg",
+//       webp: "/images/water_zone/result_zone_2.webp",
+//     },
+//     path: "/services/sports_pool",
+//   },
+//   spa: {
+//     direction: "СПА",
+//     description: "Уютный зимний сад или терраса с большими окнами, пропускающими естественный свет. На переднем плане виден круглый стол с плетеными стульями, а вокруг — зеленые растения и удобные лежаки для отдыха. Атмосфера спокойная и расслабляющая.",
+//     images_url: {
+//       jpg: "/images/water_zone/result_zone_3.jpeg",
+//       webp: "/images/water_zone/result_zone_3.webp",
+//     },
+//     path: "/services/spa",
+//   },
+//   thermal_baths: {
+//     direction: "Термы",
+//     description: "Яркий бассейн с голубой водой, окруженный белыми лежаками и подушками. Помещение оформлено в современном стиле с прозрачными перилами и светлым потолком. Атмосфера роскошная и расслабляющая, идеально подходит для отдыха.",
+//     images_url: {
+//       jpg: "/images/water_zone/result_zone_4.jpeg",
+//       webp: "/images/water_zone/result_zone_4.webp",
+//     },
+//     path: "/services/thermal_baths",
+//   },
+//   goldfish: {
+//     direction: "Золотые рыбки",
+//     description: "Модный тренажерный зал с бассейном, окруженным современным оборудованием. Бассейн имеет ярко-голубую воду и стеклянные перила, а окна пропускают естественный свет. Помещение выглядит просторным и технологичным, создавая динамичную атмосферу для занятий спортом.",
+//     images_url: {
+//       jpg: "/images/water_zone/result_zone_5.jpeg",
+//       webp: "/images/water_zone/result_zone_5.webp",
+//     },
+//     path: "/services/goldfish",
+//   },
+// };
+

@@ -1,7 +1,6 @@
 import { Directions_list } from "components";
-import { keys_list_type } from "components/directions_list";
 
-export const Areas_study = ({ keys_list }: keys_list_type) => {
+export const Areas_study = ({ keys_list }: Directions_keys_type) => {
   if (!keys_list || keys_list.length === 0) return null;
 
   return (

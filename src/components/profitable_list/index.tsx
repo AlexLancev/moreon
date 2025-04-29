@@ -1,26 +1,37 @@
-import classNames from "classnames";
+import { profitable_visits_data } from "@/data";
+import { profitable_visits_store } from "@/stores/data_store";
+import { useQuery } from "@tanstack/react-query";
+import { observer } from "mobx-react-lite";
+import { useEffect } from "react";
 
-type profitable_data_type = {
-  head: string;
-  profitable_visits_list: string[];
-  images_url: {
-    png: string;
-    webp: string;
-  };
-};
+export const Profitable_list = observer(() => {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["profitable_visits"],
+    queryFn: profitable_visits_data,
+  });
 
-export const Profitable_list = ({
-  profitable_data,
-}: {
-  profitable_data: profitable_data_type[];
-}) => {
-  if (!profitable_data || profitable_data.length === 0) return null;
+  useEffect(() => {
+    if (data) {
+      profitable_visits_store.set_data(data);
+    }
+  }, [data]);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: Failed to fetch data</div>;
+
+  if (
+    !profitable_visits_store ||
+    !profitable_visits_store.data ||
+    profitable_visits_store.data.length === 0
+  ) {
+    return <div>No data available</div>;
+  }
 
   return (
     <ul className="grid grid-cols-4 gap-6 py-5">
-      {profitable_data.map(
+      {profitable_visits_store.data.map(
         ({ head, profitable_visits_list, images_url }, idx: number) => {
-          if (!head || !profitable_visits_list || !images_url) return null;
+          if (!head && !profitable_visits_list && !images_url) return null;
 
           return (
             <li
@@ -52,4 +63,4 @@ export const Profitable_list = ({
       )}
     </ul>
   );
-};
+});

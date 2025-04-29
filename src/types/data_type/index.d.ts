@@ -236,3 +236,134 @@ type News_type = {
 };
 
 type Stock_type = Omit<News_type, "description_picture">;
+
+type Team_tab_key_type = "martial_arts" | "gym" | "group_training" | "pool";
+
+type Team_key_type = {
+  isActiveTab: Team_tab_key_type;
+  change_tabs?: (value: string) => void;
+};
+
+type Team_type = {
+  name: string;
+  type: Partial<Record<string, boolean>>;
+  url_images: {
+    jpg: string;
+    webp: string;
+  };
+  about_coach: {
+    qualification: string;
+    work_experience: string;
+    contacts: {
+      phone: string;
+    };
+    specialization: string;
+    education: string;
+    achievements: string;
+  };
+};
+
+type Reviews_type = {
+  id: number;
+  person: string;
+  review: string;
+  raiting: string;
+};
+
+type Profitable_visits_type = {
+  id: number;
+  head: string;
+  profitable_visits_list: string[];
+  images_url: {
+    png: string;
+    webp: string;
+  };
+};
+
+type Other_directions_type = {
+  id: number;
+  path: string;
+  descriptions: string;
+  images_url: {
+    png: string;
+    webp: string;
+  };
+};
+
+type Direct_keys_type =
+  | "mind_body"
+  | "strength_functional_training"
+  | "aerobics"
+  | "gym"
+  | "pool"
+  | "martial_arts"
+  | "dance"
+  | "personal_training"
+  | "yoga"
+  | "test"
+  | "kids_fitnes"
+  | "group_training"
+  | "stretching"
+  | "pranayama_meditation"
+  | "yoga_intensiv_90"
+  | "pilates_allegro"
+  | "healthy_back"
+  | "pilates_mat"
+  | "soft_balance"
+  | "hatha_yoga"
+  | "cross_training"
+  | "abs_streth"
+  | "les_mills_body_pump"
+  | "hot_iron_1"
+  | "hot_iron_2"
+  | "les_mills_grit"
+  | "thinner"
+  | "les_mills_core"
+  | "real_ryder"
+  | "step"
+  | "step_pro"
+  | "pro_jumping"
+  | "step_interval"
+  | "infant_swimming"
+  | "swimming_children"
+  | "school_competitive_swimming"
+  | "swimming_adults"
+  | "aqua_aerobics"
+  | "aqua_mom"
+  | "work_apparatus"
+  | "box"
+  | "grappling"
+  | "kickboxing"
+  | "mma"
+  | "latina"
+  | "multidance"
+  | "oriental"
+  | "zumba"
+  | "dance_mix"
+  | "childrens_swimming"
+  | "martial_arts_children"
+  | "children_center"
+  | "baths_swimming"
+  | "sports_pool"
+  | "spa"
+  | "thermal_baths"
+  | "goldfish";
+
+type Directions_type = {
+  data: Record<
+    Direct_keys_type,
+    {
+      direction: string;
+      description: string;
+      images_url: {
+        jpg: string;
+        webp: string;
+      };
+      path: string;
+    }
+  >;
+};
+
+type Directions_keys_type = {
+  keys_list: Direct_keys_type[];
+};
