@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const database_uri = import.meta.env.VITE_API_KEY;
 
@@ -6,12 +6,26 @@ if (!database_uri) {
   throw new Error("Ошибка VITE_API_KEY не найден");
 }
 
-export const types_services_data = async (): Promise<
-  Types_services_type[] | undefined
-> => {
-  const response = await axios.get(`${database_uri}/types_services`);
-  if (response) {
+export const types_services_data = async (): Promise<Types_services_type[]> => {
+  try {
+    const response = await axios.get<Types_services_type[]>(
+      `${database_uri}/types_services`,
+    );
+
+    if (!response.data || response.data.length === 0) {
+      throw new Error("Получен пустой ответ от сервера.");
+    }
+
     return response.data;
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      console.error(`Ошибка при запросе данных: ${error.message}`);
+      throw new Error(
+        `Ошибка сети: ${error.response?.statusText ?? "Неизвестная ошибка"}`,
+      );
+    }
+
+    console.error("Произошла неожиданная ошибка:", error);
+    throw new Error("Не удалось получить данные.");
   }
-  return;
 };

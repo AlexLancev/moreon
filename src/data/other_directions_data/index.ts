@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const database_uri = import.meta.env.VITE_API_KEY;
 
@@ -7,12 +7,27 @@ if (!database_uri) {
 }
 
 export const other_directions_data = async (): Promise<
-  Other_directions_type[] | undefined
+  Other_directions_type[]
 > => {
-  const response = await axios.get(`${database_uri}/other_directions`);
-  if (response) {
-    return response.data;
-  }
+  try {
+    const response = await axios.get<Other_directions_type[]>(
+      `${database_uri}/other_directions`,
+    );
 
-  return;
+    if (!response.data || response.data.length === 0) {
+      throw new Error("Получен пустой ответ от сервера.");
+    }
+
+    return response.data;
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      console.error(`Ошибка при запросе данных: ${error.message}`);
+      throw new Error(
+        `Ошибка сети: ${error.response?.statusText || "Неизвестная ошибка"}`,
+      );
+    }
+
+    console.error("Произошла неожиданная ошибка:", error);
+    throw new Error("Не удалось получить данные.");
+  }
 };

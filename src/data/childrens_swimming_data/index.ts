@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const database_uri = import.meta.env.VITE_API_KEY;
 
@@ -7,12 +7,27 @@ if (!database_uri) {
 }
 
 export const childrens_swimming_data = async (): Promise<
-  Childrens_swimming_type[] | undefined
+  Childrens_swimming_type[]
 > => {
-  const response = await axios.get(`${database_uri}/childrens_swimming`);
-  if (response) {
-    return response.data;
-  }
+  try {
+    const response = await axios.get<Childrens_swimming_type[]>(
+      `${database_uri}/childrens_swimming`,
+    );
 
-  return;
+    if (!response.data || response.data.length === 0) {
+      throw new Error("Получен пустой ответ от сервера.");
+    }
+
+    return response.data;
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      console.error(`Ошибка при запросе данных: ${error.message}`);
+      throw new Error(
+        `Ошибка сети: ${error.response?.statusText || "Неизвестная ошибка"}`,
+      );
+    }
+
+    console.error("Произошла неожиданная ошибка:", error);
+    throw new Error("Не удалось получить данные.");
+  }
 };
