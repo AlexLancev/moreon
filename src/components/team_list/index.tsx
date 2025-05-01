@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 
 import { team_store } from "@/stores/data_store";
+import { filterDataByActiveTab } from "@/utils";
 
 export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   const { data, isLoading, isError } = team_store;
@@ -14,9 +15,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
     return <div>No data available</div>;
   }
 
-  const selected_category_data = data?.filter(
-    ({ type }) => type?.[isActiveTab],
-  );
+  const selected_category_data = filterDataByActiveTab(data, isActiveTab);
 
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide key={startIndex} className="min-h-[348px]">
