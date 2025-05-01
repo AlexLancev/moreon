@@ -34,7 +34,7 @@ export const App = () => {
           <Route path={paths.services} element={<Services_page />} />
           <Route path={paths.team} element={<Team_page />} />
           <Route path={paths.club_cards} element={<Club_cards />} />
-          <Route path={paths.saunas_pools} element={<Saunas_pools_page />} />
+          <Route path={paths.pools} element={<Saunas_pools_page />} />
           <Route path={paths.kids_fitness} element={<Kids_fitness_page />} />
         </Route>
       </Routes>
