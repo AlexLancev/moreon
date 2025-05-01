@@ -1,13 +1,10 @@
-import { useEffect } from "react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
-import { useQuery } from "@tanstack/react-query";
 
 import { Tabs } from "components";
 
 import { modal_store } from "@/stores";
 import { isEmptyObj } from "@/utils";
-import { water_zone_data } from "@/data";
 import { water_zone_store } from "@/stores/data_store";
 
 const tab_list = [
@@ -23,21 +20,12 @@ export const Water_zone = observer(
     const { isActiveTab, change_tabs } = tabs_store;
     const { isVisibleModal, change_modal } = modal_store;
 
-    const { data, isLoading, error } = useQuery({
-      queryKey: ["water_zone"],
-      queryFn: water_zone_data,
-    });
+    const { data, isLoading, isError } = water_zone_store;
 
-    useEffect(() => {
-      if (data) {
-        water_zone_store.set_data(data);
-      }
-    }, [data]);
-
-    const water_zone_bd = toJS(water_zone_store?.data?.[0]?.data);
+    const water_zone_bd = toJS(data?.[0]?.data);
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: Failed to fetch data</div>;
+    if (isError) return <div>Error: Failed to fetch data</div>;
 
     if (
       !water_zone_store ||

@@ -1,28 +1,16 @@
-import { stock_data } from "@/data";
-import { stock_store } from "@/stores/data_store";
-import { useQuery } from "@tanstack/react-query";
 import { observer } from "mobx-react-lite";
-import { useEffect } from "react";
 import { Pagination } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export const Stock_list = observer(() => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["stock"],
-    queryFn: stock_data,
-  });
+import { stock_store } from "@/stores/data_store";
 
-  useEffect(() => {
-    if (data) {
-      stock_store.set_data(data);
-    }
-  }, [data]);
+export const Stock_list = observer(() => {
+  const { data, isLoading, isError } = stock_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (!stock_store || !stock_store.data || stock_store.data.length === 0) {
+  if (!stock_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
   return (

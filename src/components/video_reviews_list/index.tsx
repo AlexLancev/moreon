@@ -1,34 +1,19 @@
 import { PlayCircleOutlined } from "@ant-design/icons";
-import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 
-import { video_reviews_data } from "@/data";
 import { video_reviews_store } from "@/stores/data_store";
 
 export const Video_reviews_list = observer(() => {
   const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["video_reviews"],
-    queryFn: video_reviews_data,
-  });
-
-  useEffect(() => {
-    if (data) {
-      video_reviews_store.set_data(data);
-    }
-  }, [data]);
+  const { data, isLoading, isError } = video_reviews_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (
-    !video_reviews_store ||
-    !video_reviews_store.data ||
-    video_reviews_store.data.length === 0
-  ) {
+  if (!video_reviews_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
@@ -39,7 +24,7 @@ export const Video_reviews_list = observer(() => {
       slidesPerView={4}
       pagination={{ clickable: true }}
     >
-      {video_reviews_store.data.map(
+      {data.map(
         (
           {
             description,

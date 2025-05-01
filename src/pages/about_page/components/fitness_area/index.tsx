@@ -1,11 +1,8 @@
-import { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
-import { useQuery } from "@tanstack/react-query";
 
 import { Tabs } from "components";
 
-import { fitness_area_data } from "@/data";
 import { fitness_area_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 
@@ -21,21 +18,12 @@ export const Fitness_area = observer(
   ({ tabs_store }: { tabs_store: Fitness_area_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
 
-    const { data, isLoading, error } = useQuery({
-      queryKey: ["fitness_area"],
-      queryFn: fitness_area_data,
-    });
+    const { data, isLoading, isError } = fitness_area_store;
 
-    useEffect(() => {
-      if (data) {
-        fitness_area_store.set_data(data);
-      }
-    }, [data]);
-
-    const fitness_area_bd = toJS(fitness_area_store?.data?.[0]?.data);
+    const fitness_area_bd = toJS(data?.[0]?.data);
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: Failed to fetch data</div>;
+    if (isError) return <div>Error: Failed to fetch data</div>;
 
     if (
       !fitness_area_store ||

@@ -1,32 +1,16 @@
-import { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import { reviews_data } from "@/data";
-import { reviews_store } from "@/stores/data_store";
 import { observer } from "mobx-react-lite";
 
-export const Reviews_list = observer(() => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["reviews"],
-    queryFn: reviews_data,
-  });
+import { reviews_store } from "@/stores/data_store";
 
-  useEffect(() => {
-    if (data) {
-      reviews_store.set_data(data);
-    }
-  }, [data]);
+export const Reviews_list = observer(() => {
+  const { data, isLoading, isError } = reviews_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (
-    !reviews_store ||
-    !reviews_store.data ||
-    reviews_store.data.length === 0
-  ) {
+  if (!reviews_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
@@ -37,8 +21,8 @@ export const Reviews_list = observer(() => {
       slidesPerView={3}
       pagination={{ clickable: true }}
     >
-      {reviews_store.data.map(({ person, review, raiting }, idx: number) => {
-        if (!person || !review) return null;
+      {data.map(({ person, review, raiting }, idx: number) => {
+        if (!person && !review) return null;
 
         return (
           <SwiperSlide

@@ -1,30 +1,14 @@
-import { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
-
-import { other_directions_data } from "@/data";
-import { other_directions_store } from "@/stores/data_store";
 import { observer } from "mobx-react-lite";
 
-export const Other_directions = observer(() => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["other_directions"],
-    queryFn: other_directions_data,
-  });
+import { other_directions_store } from "@/stores/data_store";
 
-  useEffect(() => {
-    if (data) {
-      other_directions_store.set_data(data);
-    }
-  }, [data]);
+export const Other_directions = observer(() => {
+  const { data, isLoading, isError } = other_directions_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (
-    !other_directions_store ||
-    !other_directions_store.data ||
-    other_directions_store.data.length === 0
-  ) {
+  if (!other_directions_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
@@ -33,7 +17,7 @@ export const Other_directions = observer(() => {
       <h2 className="visually-hidden">Наши другие направления</h2>
       <div className="container">
         <ul className="flex items-center justify-around gap-4">
-          {other_directions_store.data.map(
+          {data.map(
             (
               { path, descriptions, images_url: { png, webp } },
               idx: number,

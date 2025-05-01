@@ -1,32 +1,20 @@
-import { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 
-import { team_data } from "@/data";
 import { team_store } from "@/stores/data_store";
 
 export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["team"],
-    queryFn: team_data,
-  });
-
-  useEffect(() => {
-    if (data) {
-      team_store.set_data(data);
-    }
-  }, [data]);
+  const { data, isLoading, isError } = team_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (!team_store || !team_store.data || team_store.data.length === 0) {
+  if (!team_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
-  const selected_category_data = team_store.data?.filter(
+  const selected_category_data = data?.filter(
     ({ type }) => type?.[isActiveTab],
   );
 

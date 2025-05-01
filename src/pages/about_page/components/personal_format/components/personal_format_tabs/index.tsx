@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
 import { Tabs } from "components";
 
 import { isEmptyObj } from "@/utils";
-import { personal_format_data } from "@/data";
 import { personal_format_store } from "@/stores/data_store";
 
 export const Personal_format_tabs = observer(
@@ -15,21 +13,12 @@ export const Personal_format_tabs = observer(
     const [currentChangeTab, setCurrentChangeTab] =
       useState<Personal_format_key_type>("gym");
 
-    const { data, isLoading, error } = useQuery({
-      queryKey: ["personal_format"],
-      queryFn: personal_format_data,
-    });
+    const { data, isLoading, isError } = personal_format_store;
 
-    useEffect(() => {
-      if (data) {
-        personal_format_store.set_data(data);
-      }
-    }, [data]);
-
-    const personal_format_bd = toJS(personal_format_store?.data?.[0]?.data);
+    const personal_format_bd = toJS(data?.[0]?.data);
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: Failed to fetch data</div>;
+    if (isError) return <div>Error: Failed to fetch data</div>;
 
     if (
       !personal_format_store ||

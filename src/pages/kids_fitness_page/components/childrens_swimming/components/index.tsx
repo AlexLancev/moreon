@@ -1,13 +1,10 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
-import { useQuery } from "@tanstack/react-query";
 import xss from "xss";
 
 import { Tabs } from "components";
 
-import { childrens_swimming_data } from "@/data";
 import { childrens_swimming_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 
@@ -21,23 +18,12 @@ const childrens_swimming_list = [
 export const Childrens_swimming_tabs = observer(
   ({ tabs_store }: { tabs_store: Childrens_swimming_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
-    const { data, isLoading, error } = useQuery({
-      queryKey: ["childrens_swimming"],
-      queryFn: childrens_swimming_data,
-    });
+    const { data, isLoading, isError } = childrens_swimming_store;
 
-    useEffect(() => {
-      if (data) {
-        childrens_swimming_store.set_data(data);
-      }
-    }, [data]);
-
-    const childrens_swimming_bd = toJS(
-      childrens_swimming_store?.data?.[0]?.data,
-    );
+    const childrens_swimming_bd = toJS(data?.[0]?.data);
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: Failed to fetch data</div>;
+    if (isError) return <div>Error: Failed to fetch data</div>;
 
     if (
       !childrens_swimming_store ||
