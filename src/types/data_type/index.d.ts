@@ -36,7 +36,7 @@ type Performance_key_type =
   | "sales_department";
 
 type Performance_type = {
-  data_key: string[];
+  data_key: Performance_key_type[];
   isVisibleBtn: boolean;
 };
 

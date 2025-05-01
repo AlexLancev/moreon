@@ -1,28 +1,16 @@
-import { useEffect } from "react";
 import { observer } from "mobx-react-lite";
-import { useQuery } from "@tanstack/react-query";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { news_data } from "@/data";
 import { news_store } from "@/stores/data_store";
 
 export const News_list = observer(() => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["news"],
-    queryFn: news_data,
-  });
-
-  useEffect(() => {
-    if (data) {
-      news_store.set_data(data);
-    }
-  }, [data]);
+  const { data, isLoading, isError } = news_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (!news_store || !news_store.data || news_store.data.length === 0) {
+  if (!news_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
@@ -33,7 +21,7 @@ export const News_list = observer(() => {
       slidesPerView={4}
       pagination={{ clickable: true }}
     >
-      {news_store.data.map(
+      {data.map(
         (
           { description, description_picture, url_images: { webp, jpg } },
           idx: number,

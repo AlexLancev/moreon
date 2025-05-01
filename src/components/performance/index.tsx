@@ -1,31 +1,19 @@
-import { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 
-import { performance_data } from "@/data";
 import { performance_data_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 
 export const Performance = observer(
   ({ data_key, isVisibleBtn }: Performance_type) => {
-    const { data, isLoading, error } = useQuery({
-      queryKey: ["performance_data"],
-      queryFn: performance_data,
-    });
+    const { data, isLoading, isError } = performance_data_store;
 
-    useEffect(() => {
-      if (data) {
-        performance_data_store.set_data(data);
-      }
-    }, [data]);
-
-    const performance_bd = toJS(performance_data_store?.data?.[0]?.data);
+    const performance_bd = toJS(data?.[0]?.data);
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: Failed to fetch data</div>;
+    if (isError) return <div>Error: Failed to fetch data</div>;
 
     if (
       !performance_data_store ||
@@ -39,7 +27,7 @@ export const Performance = observer(
     return (
       <ul className="performance">
         {data_key.map((key, idx: number) => {
-          const currentData = performance_bd[key as Performance_key_type];
+          const currentData = performance_bd[key];
           if (!currentData) return null;
 
           const { decor_title, arr_images, title, description } = currentData;
@@ -60,10 +48,7 @@ export const Performance = observer(
                 pagination={{ clickable: true }}
               >
                 {arr_images?.map(
-                  ({
-                    images_description,
-                    images_url: { jpg, webp },
-                  }: Performance_images_type) => (
+                  ({ images_description, images_url: { jpg, webp } }) => (
                     <SwiperSlide className="rounded-3xl overflow-hidden">
                       <picture>
                         <source srcSet={jpg} type="image/webp" />

@@ -1,15 +1,12 @@
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
-import { Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import xss from "xss";
 
 import { Tabs } from "components/tabs";
 
 import { isEmptyObj } from "@/utils";
-import { club_cards_data } from "@/data";
 import { club_cards_store } from "@/stores/data_store";
-import xss from "xss";
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },
@@ -22,21 +19,12 @@ const tab_list = [
 export const Choose_your_card = observer(
   ({ tabs_store }: { tabs_store: Club_cards_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
-    const { data, isLoading, error } = useQuery({
-      queryKey: ["club_cards"],
-      queryFn: club_cards_data,
-    });
+    const { data, isLoading, isError } = club_cards_store;
 
-    useEffect(() => {
-      if (data) {
-        club_cards_store.set_data(data);
-      }
-    }, [data]);
-
-    const club_cards_bd = toJS(club_cards_store?.data?.[0]?.data);
+    const club_cards_bd = toJS(data?.[0]?.data);
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: Failed to fetch data</div>;
+    if (isError) return <div>Error: Failed to fetch data</div>;
 
     if (
       !club_cards_store ||

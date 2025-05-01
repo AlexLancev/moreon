@@ -2,6 +2,8 @@ import { makeAutoObservable } from "mobx";
 
 class Every_card_store {
   data: Every_card_type[] = [];
+  isLoading: boolean | null = null;
+  isError: boolean | null = null;
 
   constructor() {
     makeAutoObservable(this);
@@ -9,6 +11,12 @@ class Every_card_store {
 
   set_data(get_data: Every_card_type[]) {
     this.data = get_data;
+  }
+  set_isLoad(isLoad: boolean) {
+    this.isLoading = isLoad;
+  }
+  set_isError(isError: boolean) {
+    this.isError = isError;
   }
 }
 

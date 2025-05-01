@@ -1,38 +1,23 @@
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import { observer } from "mobx-react-lite";
 
-import { gallery_list_data } from "@/data";
 import { gallery_list_store } from "@/stores/data_store";
 
 const num = 6;
 
 export const Gallery_list = observer(() => {
   const [visibleShow, setVisibleShow] = useState<number>(num);
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["gallery_list"],
-    queryFn: gallery_list_data,
-  });
-
-  useEffect(() => {
-    if (data) {
-      gallery_list_store.set_data(data);
-    }
-  }, [data]);
+  const { data, isLoading, isError } = gallery_list_store;
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: Failed to fetch data</div>;
+  if (isError) return <div>Error: Failed to fetch data</div>;
 
-  if (
-    !gallery_list_store ||
-    !gallery_list_store.data ||
-    gallery_list_store.data.length === 0
-  ) {
+  if (!gallery_list_store || !data || data.length === 0) {
     return <div>No data available</div>;
   }
 
   const handleVisibleShow = () => {
-    if (gallery_list_store.data.length > visibleShow) {
+    if (data.length > visibleShow) {
       setVisibleShow((prev) => prev + num);
     }
   };
@@ -40,30 +25,25 @@ export const Gallery_list = observer(() => {
   return (
     <>
       <ul className="grid grid-cols-3 place-items-center gap-4">
-        {gallery_list_store.data
+        {data
           .slice(0, visibleShow)
-          .map(
-            (
-              { description, images_url: { jpg, webp } }: Gallery_list_type,
-              idx: number,
-            ) => (
-              <li key={idx} className="h-full rounded-3xl overflow-hidden">
-                <button type="button" className="block h-full">
-                  <span className="visually-hidden">{description}</span>
-                  <picture>
-                    <source srcSet={jpg} type="image/webp" />
-                    <img
-                      className="h-full object-cover duration-700 hover:scale-[1.1]"
-                      src={jpg}
-                      alt={description}
-                    />
-                  </picture>
-                </button>
-              </li>
-            ),
-          )}
+          .map(({ description, images_url: { jpg, webp } }, idx: number) => (
+            <li key={idx} className="h-full rounded-3xl overflow-hidden">
+              <button type="button" className="block h-full">
+                <span className="visually-hidden">{description}</span>
+                <picture>
+                  <source srcSet={jpg} type="image/webp" />
+                  <img
+                    className="h-full object-cover duration-700 hover:scale-[1.1]"
+                    src={jpg}
+                    alt={description}
+                  />
+                </picture>
+              </button>
+            </li>
+          ))}
       </ul>
-      {gallery_list_store.data.length > visibleShow && (
+      {data.length > visibleShow && (
         <button
           onClick={handleVisibleShow}
           type="button"
