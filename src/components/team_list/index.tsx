@@ -17,6 +17,8 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
 
   const selected_category_data = filterDataByActiveTab(data, isActiveTab);
 
+  if (!selected_category_data) return null;
+
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide key={startIndex} className="min-h-[348px]">
       {selected_category_data

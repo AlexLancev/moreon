@@ -33,6 +33,16 @@ const {
   pools,
   kids_fitness,
   mind_body,
+  strength_functional_training,
+  aerobics,
+  gym,
+  pool,
+  martial_arts,
+  dance,
+  personal_training,
+  yoga,
+  test,
+  group_programs,
 } = paths;
 
 export const App = () => {
@@ -49,6 +59,21 @@ export const App = () => {
           <Route path={pools} element={<Saunas_pools_page />} />
           <Route path={kids_fitness} element={<Kids_fitness_page />} />
           <Route path={mind_body} element={<Presentation_directions_page />} />
+          <Route
+            path={strength_functional_training}
+            element={<Presentation_directions_page />}
+          />
+          <Route path={aerobics} element={<Presentation_directions_page />} />
+          <Route path={gym} element={<Presentation_directions_page />} />
+          <Route path={pool} element={<Presentation_directions_page />} />
+          <Route path={martial_arts} element={<Presentation_directions_page />} />
+
+          <Route path={dance} element={<Presentation_directions_page />} />
+          <Route path={personal_training} element={<Presentation_directions_page />} />
+          <Route path={yoga} element={<Presentation_directions_page />} />
+          <Route path={test} element={<Presentation_directions_page />} />
+          <Route path={group_programs} element={<Presentation_directions_page />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

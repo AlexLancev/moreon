@@ -10,18 +10,18 @@ export const isEmptyObj = (object: object): boolean => {
 export const filterDataByActiveTab = (
   data: Team_type[],
   isKey: Team_tab_key_type,
-) => {
+): Team_type[] | null => {
   if (!Array.isArray(data)) {
-    return [];
+    return null;
   }
   if (typeof isKey !== "string") {
-    return [];
+    return null;
   }
 
-  return data?.filter(({ type }) => {
+  return data.filter(({ type }) => {
     if (typeof type === "object" && type !== null && isKey in type) {
       return type[isKey];
     }
-    return false;
+    return null;
   });
 };

@@ -5,10 +5,10 @@ export const paths = {
   team: "/team",
   club_cards: "/club_cards",
   pools: "/pool",
-  kids_fitness: "/kids_fitnes",
+  kids_fitness: "/services/kids_fitnes",
   schedule: "/schedule",
   mind_body: "/services/mind-body",
-  strength_functional_training: "/strength_functional_training",
+  strength_functional_training: "/services/strength_functional_training",
   aerobics: "/services/aerobics",
   gym: "/services/gym",
   pool: "/services/pool",
@@ -18,4 +18,5 @@ export const paths = {
   yoga: "services/yoga",
   inbody: "services/inbody",
   group_programs: "services/group_training",
+  test: "services/test",
 };
