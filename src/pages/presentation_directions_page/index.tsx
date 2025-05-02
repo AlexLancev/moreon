@@ -113,7 +113,9 @@ const presentation_directions_data: Current_direct_type = {
 export const Presentation_directions_page = observer(() => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
-  const service = pathSegments[pathSegments.length - 1];
+  const service = pathSegments[
+    pathSegments.length - 1
+  ] as Current_direct_key_type;
 
   const {
     data: directions_data,
@@ -138,12 +140,12 @@ export const Presentation_directions_page = observer(() => {
     !directions_data ||
     !directions_bd ||
     !team_data ||
+    !service ||
     team_data.length === 0
   )
     return null;
 
-  const { directions, team } =
-    presentation_directions_data[service as Current_direct_key_type];
+  const { directions, team } = presentation_directions_data[service];
 
   if (!directions || !team) return null;
 
@@ -165,7 +167,6 @@ export const Presentation_directions_page = observer(() => {
           ),
         )}
       </ul>
-        <strong>Фитнес-тестирование</strong><b>Продолжительность:</b><span> 55 мин</span><b>Уровень подготовленности:</b><span>для всех</span><b>Возраст:</b><span>взрослые</span><p>МФР+STRETCHING — низкоинтенсивный комплекс упражнений, в котором используются приемы самомассажа. Занятия проводятся с использованием мячей, роллов для пилатеса. Упражнения позволяют расслабить мышцы и фасции, а затем растянуть их.</p>
     </>
   );
 });

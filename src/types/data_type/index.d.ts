@@ -353,6 +353,8 @@ type Directions_type = {
   data: Record<
     Direct_keys_type,
     {
+      directions: Direct_keys_type[] | null;
+      team: string | null;
       direction: string;
       description: string;
       images_url: {

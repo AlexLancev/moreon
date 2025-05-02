@@ -6,6 +6,7 @@ import { Layout } from "@/components";
 import {
   About_page,
   Club_cards,
+  Current_direction_page,
   Home_page,
   Kids_fitness_page,
   Presentation_directions_page,
@@ -43,6 +44,8 @@ const {
   yoga,
   test,
   group_programs,
+  abs_streth,
+  pranayama_meditation,
 } = paths;
 
 export const App = () => {
@@ -81,6 +84,14 @@ export const App = () => {
           <Route
             path={group_programs}
             element={<Presentation_directions_page />}
+          />
+          <Route
+            path={abs_streth}
+            element={<Current_direction_page />}
+          />
+          <Route
+            path={pranayama_meditation}
+            element={<Current_direction_page />}
           />
         </Route>
       </Routes>

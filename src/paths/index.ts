@@ -19,4 +19,6 @@ export const paths = {
   inbody: "/services/inbody",
   group_programs: "/services/group_training",
   test: "/services/test",
+  abs_streth: "/services/abs_streth",
+  pranayama_meditation: "/services/pranayama_meditation",
 };
