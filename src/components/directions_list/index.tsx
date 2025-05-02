@@ -32,7 +32,7 @@ export const Directions_list = observer(
           return (
             <li className="min-h-[350px] overflow-hidden rounded-3xl group">
               <Link
-                to={path}
+                to={`/services/${path}`}
                 className="relative after:absolute after:bottom-0 after:left-0 after:z-0 after:w-full after:h-[140px] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
               >
                 <picture>

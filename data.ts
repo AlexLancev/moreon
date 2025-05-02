@@ -2402,29 +2402,29 @@
 //  const menu_data = [
 //   { path: "/about-club", name_link: "О клубе" },
 //   {
-//     path: "/services",
+//     path: "",
 //     name_link: "Услуги",
 //     sub_menu: [
-//       { path: "/services/mind-body", name_link: "Mind Body" },
+//       { path: "/mind-body", name_link: "Mind Body" },
 //       {
-//         path: "/services/strength-functional-training",
+//         path: "/strength-functional-training",
 //         name_link: "Силовые и функциональные тренировки",
 //       },
 //       {
-//         path: "/services/cardio-aerobics",
+//         path: "/cardio-aerobics",
 //         name_link: "Кардиопрограммы и аэробика",
 //       },
-//       { path: "/services/gym", name_link: "Тренажерный зал" },
-//       { path: "/services/aquatic-programs", name_link: "Водные программы" },
-//       { path: "/services/martial-arts", name_link: "Единоборства" },
-//       { path: "/services/dance", name_link: "Танцы" },
+//       { path: "/gym", name_link: "Тренажерный зал" },
+//       { path: "/aquatic-programs", name_link: "Водные программы" },
+//       { path: "/martial-arts", name_link: "Единоборства" },
+//       { path: "/dance", name_link: "Танцы" },
 //       {
-//         path: "/services/personal-training",
+//         path: "/personal-training",
 //         name_link: "Персональный тренинг",
 //       },
-//       { path: "/services/yoga", name_link: "Йога" },
-//       { path: "/services/inbody", name_link: "InBody" },
-//       { path: "/services/group-programs", name_link: "Групповые программы" },
+//       { path: "/yoga", name_link: "Йога" },
+//       { path: "/inbody", name_link: "InBody" },
+//       { path: "/group-programs", name_link: "Групповые программы" },
 //     ],
 //   },
 //   { path: "/team", name_link: "Команда" },
@@ -2583,7 +2583,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_1.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_1.webp",
 //     },
-//     path: "/services/training-room",
+//     path: "/training-room",
 //   },
 //   gym: {
 //     name_key: "gym",
@@ -2596,7 +2596,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_2.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_2.webp",
 //     },
-//     path: "/services/gym",
+//     path: "/gym",
 //   },
 //   pool: {
 //     name_key: "pool",
@@ -2609,7 +2609,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_3.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_3.webp",
 //     },
-//     path: "/services/pool",
+//     path: "/pool",
 //   },
 //   cardio_room: {
 //     name_key: "cardio_room",
@@ -2622,7 +2622,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_4.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_4.webp",
 //     },
-//     path: "/services/cardio-room",
+//     path: "/cardio-room",
 //   },
 //   martial_arts: {
 //     name_key: "martial_arts",
@@ -2635,7 +2635,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_5.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_5.webp",
 //     },
-//     path: "/services/martial-arts",
+//     path: "/martial-arts",
 //   },
 // };
 
@@ -2948,7 +2948,7 @@
 //   },
 // };
 
-// const directions_data = {
+// const directions = {
 //   mind_body: {
 //     direction: "Mind Body",
 //     description: "На изображении женщина выполняет йоговскую позу, сидя на коврике. Она одета в темно-синюю спортивную форму и находится в позе 'Разделение ног' (Hanumanasana), поддерживая равновесие одной рукой. Ее другая рука поднята вверх, создавая грациозный образ. Фон простой и нейтральный, что акцентирует внимание на технике выполнения упражнения.",
@@ -2956,7 +2956,7 @@
 //       jpg: "/images/directions/result_direction_1.jpeg",
 //       webp: "/images/directions/result_direction_1.webp",
 //     },
-//     path: "/services/mind-body",
+//     path: "/mind_body",
 //   },
 //   strength_functional_training: {
 //     direction: "Силовые и функциональные тренировки",
@@ -2965,7 +2965,7 @@
 //       jpg: "/images/directions/result_direction_2.jpeg",
 //       webp: "/images/directions/result_direction_2.webp",
 //     },
-//     path: "/services/strength_functional_training",
+//     path: "/strength_functional_training",
 //   },
 //   aerobics: {
 //     direction: "Кардиопрограммы и аэробика",
@@ -2974,7 +2974,7 @@
 //       jpg: "/images/directions/result_direction_3.jpeg",
 //       webp: "/images/directions/result_direction_3.webp",
 //     },
-//     path: "/services/aerobics",
+//     path: "/aerobics",
 //   },
 //   gym: {
 //     direction: "Тренажерный зал",
@@ -2983,7 +2983,7 @@
 //       jpg: "/images/directions/result_direction_4.jpeg",
 //       webp: "/images/directions/result_direction_4.webp",
 //     },
-//     path: "/services/gym",
+//     path: "/gym",
 //   },
 //   pool: {
 //     direction: "Водные программы",
@@ -2992,7 +2992,7 @@
 //       jpg: "/images/directions/result_direction_5.jpeg",
 //       webp: "/images/directions/result_direction_5.webp",
 //     },
-//     path: "/services/pool",
+//     path: "/pool",
 //   },
 //   martial_arts: {
 //     direction: "Единоборства",
@@ -3001,7 +3001,7 @@
 //       jpg: "/images/directions/result_direction_6.jpeg",
 //       webp: "/images/directions/result_direction_6.webp",
 //     },
-//     path: "/services/martial_arts",
+//     path: "/martial_arts",
 //   },
 //   dance: {
 //     direction: "Танцы",
@@ -3010,7 +3010,7 @@
 //       jpg: "/images/directions/result_direction_7.jpeg",
 //       webp: "/images/directions/result_direction_7.webp",
 //     },
-//     path: "/services/dance",
+//     path: "/dance",
 //   },
 //   personal_training: {
 //     direction: "Персональный тренинг",
@@ -3019,7 +3019,7 @@
 //       jpg: "/images/directions/result_direction_8.jpeg",
 //       webp: "/images/directions/result_direction_8.webp",
 //     },
-//     path: "/services/personal_training",
+//     path: "/personal_training",
 //   },
 //   yoga: {
 //     direction: "Йога",
@@ -3028,7 +3028,7 @@
 //       jpg: "/images/directions/result_direction_9.jpeg",
 //       webp: "/images/directions/result_direction_9.webp",
 //     },
-//     path: "/services/yoga",
+//     path: "/yoga",
 //   },
 //   test: {
 //     direction: "Фитнес-тестирование",
@@ -3037,7 +3037,7 @@
 //       jpg: "/images/directions/result_direction_10.jpeg",
 //       webp: "/images/directions/result_direction_10.webp",
 //     },
-//     path: "/services/test",
+//     path: "/test",
 //   },
 //   kids_fitnes: {
 //     direction: "Детский фитнес",
@@ -3046,7 +3046,7 @@
 //       jpg: "/images/directions/result_direction_11.jpeg",
 //       webp: "/images/directions/result_direction_11.webp",
 //     },
-//     path: "/services/kids_fitnes",
+//     path: "/kids_fitnes",
 //   },
 //   group_training: {
 //     direction: "Групповые программы",
@@ -3055,7 +3055,7 @@
 //       jpg: "/images/directions/result_direction_12.jpg",
 //       webp: "/images/directions/result_direction_12.webp",
 //     },
-//     path: "/services/group_training",
+//     path: "/group_training",
 //   },
 //   stretching: {
 //     direction: "МФР+Stretching",
@@ -3064,7 +3064,7 @@
 //       jpg: "/images/directions/result_direction_13.jpeg",
 //       webp: "/images/directions/result_direction_13.webp",
 //     },
-//     path: "/services/stretching",
+//     path: "/stretching",
 //   },
 //   pranayama_meditation: {
 //     direction: "ПРАНАЯМА И МЕДИТАЦИЯ",
@@ -3073,7 +3073,7 @@
 //       jpg: "/images/directions/result_direction_14.jpeg",
 //       webp: "/images/directions/result_direction_14.webp",
 //     },
-//     path: "/services/pranayama_meditation",
+//     path: "/pranayama_meditation",
 //   },
 //   yoga_intensiv_90: {
 //     direction: "YOGA INTENSIV-90",
@@ -3082,7 +3082,7 @@
 //       jpg: "/images/directions/result_direction_15.jpeg",
 //       webp: "/images/directions/result_direction_15.webp",
 //     },
-//     path: "/services/yoga_intensiv_90",
+//     path: "/yoga_intensiv_90",
 //   },
 //   pilates_allegro: {
 //     direction: "PILATES ALLEGRO",
@@ -3091,7 +3091,7 @@
 //       jpg: "/images/directions/result_direction_16.jpeg",
 //       webp: "/images/directions/result_direction_16.webp",
 //     },
-//     path: "/services/pilates_allegro",
+//     path: "/pilates_allegro",
 //   },
 //   healthy_back: {
 //     direction: "Здоровая спина",
@@ -3100,7 +3100,7 @@
 //       jpg: "/images/directions/result_direction_17.jpeg",
 //       webp: "/images/directions/result_direction_17.webp",
 //     },
-//     path: "/services/healthy_back",
+//     path: "/healthy_back",
 //   },
 //   pilates_mat: {
 //     direction: "PILATES MAT",
@@ -3109,7 +3109,7 @@
 //       jpg: "/images/directions/result_direction_18.jpeg",
 //       webp: "/images/directions/result_direction_18.webp",
 //     },
-//     path: "/services/pilates_mat",
+//     path: "/pilates_mat",
 //   },
 //   soft_balance: {
 //     direction: "SOFT BALANCE",
@@ -3118,7 +3118,7 @@
 //       jpg: "/images/directions/result_direction_19.jpeg",
 //       webp: "/images/directions/result_direction_19.webp",
 //     },
-//     path: "/services/soft_balance",
+//     path: "/soft_balance",
 //   },
 //   hatha_yoga: {
 //     direction: "HATHA YOGA",
@@ -3127,7 +3127,7 @@
 //       jpg: "/images/directions/result_direction_20.jpeg",
 //       webp: "/images/directions/result_direction_20.webp",
 //     },
-//     path: "/services/hatha_yoga",
+//     path: "/hatha_yoga",
 //   },
 //   cross_training: {
 //     direction: "КроссТренинг",
@@ -3136,7 +3136,7 @@
 //       jpg: "/images/directions/result_direction_21.jpeg",
 //       webp: "/images/directions/result_direction_21.webp",
 //     },
-//     path: "/services/cross_training",
+//     path: "/cross_training",
 //   },
 //   abs_streth: {
 //     direction: "ABS+STRETH",
@@ -3145,7 +3145,7 @@
 //       jpg: "/images/directions/result_direction_22.jpeg",
 //       webp: "/images/directions/result_direction_22.webp",
 //     },
-//     path: "/services/abs_streth",
+//     path: "/abs_streth",
 //   },
 //   hot_iron_1: {
 //     direction: "HOT IRON 1",
@@ -3154,7 +3154,7 @@
 //       jpg: "/images/directions/result_direction_24.jpeg",
 //       webp: "/images/directions/result_direction_24.webp",
 //     },
-//     path: "/services/hot_iron_1",
+//     path: "/hot_iron_1",
 //   },
 //   hot_iron_2: {
 //     direction: "HOT IRON 2",
@@ -3163,7 +3163,7 @@
 //       jpg: "/images/directions/result_direction_25.jpeg",
 //       webp: "/images/directions/result_direction_25.webp",
 //     },
-//     path: "/services/hot_iron_2",
+//     path: "/hot_iron_2",
 //   },
 //   les_mills_grit: {
 //     direction: "LES MILLS GRIT",
@@ -3172,7 +3172,7 @@
 //       jpg: "/images/directions/result_direction_26.jpeg",
 //       webp: "/images/directions/result_direction_26.webp",
 //     },
-//     path: "/services/les_mills_grit",
+//     path: "/les_mills_grit",
 //   },
 //   thinner: {
 //     direction: "Похудей-ка",
@@ -3181,7 +3181,7 @@
 //       jpg: "/images/directions/result_direction_27.jpeg",
 //       webp: "/images/directions/result_direction_27.webp",
 //     },
-//     path: "/services/thinner",
+//     path: "/thinner",
 //   },
 //   les_mills_core: {
 //     direction: "LES MILLS CORE",
@@ -3190,7 +3190,7 @@
 //       jpg: "/images/directions/result_direction_28.jpeg",
 //       webp: "/images/directions/result_direction_28.webp",
 //     },
-//     path: "/services/les_mills_core",
+//     path: "/les_mills_core",
 //   },
 //   real_ryder: {
 //     direction: "REAL RYDER",
@@ -3199,7 +3199,7 @@
 //       jpg: "/images/directions/result_direction_29.jpeg",
 //       webp: "/images/directions/result_direction_29.webp",
 //     },
-//     path: "/services/real_ryder",
+//     path: "/real_ryder",
 //   },
 //   step: {
 //     direction: "STEP",
@@ -3208,7 +3208,7 @@
 //       jpg: "/images/directions/result_direction_30.jpeg",
 //       webp: "/images/directions/result_direction_30.webp",
 //     },
-//     path: "/services/step",
+//     path: "/step",
 //   },
 //   step_pro: {
 //     direction: "STEP PRO",
@@ -3217,7 +3217,7 @@
 //       jpg: "/images/directions/result_direction_31.jpeg",
 //       webp: "/images/directions/result_direction_31.webp",
 //     },
-//     path: "/services/step_pro",
+//     path: "/step_pro",
 //   },
 //   pro_jumping: {
 //     direction: "PRO JUMPING",
@@ -3226,7 +3226,7 @@
 //       jpg: "/images/directions/result_direction_32.jpeg",
 //       webp: "/images/directions/result_direction_32.webp",
 //     },
-//     path: "/services/pro_jumping",
+//     path: "/pro_jumping",
 //   },
 //   step_interval: {
 //     direction: "STEP-INTERVAL",
@@ -3235,7 +3235,7 @@
 //       jpg: "/images/directions/result_direction_33.jpeg",
 //       webp: "/images/directions/result_direction_33.webp",
 //     },
-//     path: "/services/step_interval",
+//     path: "/step_interval",
 //   },
 //   infant_swimming: {
 //     direction: "Грудничковое плавание",
@@ -3244,7 +3244,7 @@
 //       jpg: "/images/directions/result_direction_34.jpeg",
 //       webp: "/images/directions/result_direction_34.webp",
 //     },
-//     path: "/services/infant_swimming",
+//     path: "/infant_swimming",
 //   },
 //   swimming_children: {
 //     direction: "Плавание для детей",
@@ -3253,7 +3253,7 @@
 //       jpg: "/images/directions/result_direction_35.jpeg",
 //       webp: "/images/directions/result_direction_35.webp",
 //     },
-//     path: "/services/swimming_children",
+//     path: "/swimming_children",
 //   },
 //   school_competitive_swimming: {
 //     direction: "Школа спортивного плавания",
@@ -3262,7 +3262,7 @@
 //       jpg: "/images/directions/result_direction_36.jpeg",
 //       webp: "/images/directions/result_direction_36.webp",
 //     },
-//     path: "/services/school_competitive_swimming",
+//     path: "/school_competitive_swimming",
 //   },
 //   swimming_adults: {
 //     direction: "Плавание для взрослых",
@@ -3271,7 +3271,7 @@
 //       jpg: "/images/directions/result_direction_37.jpeg",
 //       webp: "/images/directions/result_direction_37.webp",
 //     },
-//     path: "/services/swimming_adults",
+//     path: "/swimming_adults",
 //   },
 //   aqua_aerobics: {
 //     direction: "Аквааэробика",
@@ -3280,7 +3280,7 @@
 //       jpg: "/images/directions/result_direction_38.jpeg",
 //       webp: "/images/directions/result_direction_38.webp",
 //     },
-//     path: "/services/aqua_aerobics",
+//     path: "/aqua_aerobics",
 //   },
 //   aqua_mom: {
 //     direction: "Aqua Mama",
@@ -3289,7 +3289,7 @@
 //       jpg: "/images/directions/result_direction_39.jpeg",
 //       webp: "/images/directions/result_direction_39.webp",
 //     },
-//     path: "/services/aqua_mom",
+//     path: "/aqua_mom",
 //   },
 //   work_apparatus: {
 //     direction: "Работа на снарядах",
@@ -3298,7 +3298,7 @@
 //       jpg: "/images/directions/result_direction_40.jpeg",
 //       webp: "/images/directions/result_direction_40.webp",
 //     },
-//     path: "/services/work_apparatus",
+//     path: "/work_apparatus",
 //   },
 //   box: {
 //     direction: "Бокс",
@@ -3307,7 +3307,7 @@
 //       jpg: "/images/directions/result_direction_41.jpeg",
 //       webp: "/images/directions/result_direction_41.webp",
 //     },
-//     path: "/services/box",
+//     path: "/box",
 //   },
 //   grappling: {
 //     direction: "Грепплинг",
@@ -3316,7 +3316,7 @@
 //       jpg: "/images/directions/result_direction_42.jpeg",
 //       webp: "/images/directions/result_direction_42.webp",
 //     },
-//     path: "/services/grappling",
+//     path: "/grappling",
 //   },
 //   kickboxing: {
 //     direction: "Кикбоксинг",
@@ -3325,7 +3325,7 @@
 //       jpg: "/images/directions/result_direction_43.jpeg",
 //       webp: "/images/directions/result_direction_43.webp",
 //     },
-//     path: "/services/kickboxing",
+//     path: "/kickboxing",
 //   },
 //   mma: {
 //     direction: "ММА",
@@ -3334,7 +3334,7 @@
 //       jpg: "/images/directions/result_direction_44.jpeg",
 //       webp: "/images/directions/result_direction_44.webp",
 //     },
-//     path: "/services/mma",
+//     path: "/mma",
 //   },
 //   latina: {
 //     direction: "LATINA",
@@ -3343,7 +3343,7 @@
 //       jpg: "/images/directions/result_direction_45.jpeg",
 //       webp: "/images/directions/result_direction_45.webp",
 //     },
-//     path: "/services/latina",
+//     path: "/latina",
 //   },
 //   multidance: {
 //     direction: "MULTI DANCE",
@@ -3352,7 +3352,7 @@
 //       jpg: "/images/directions/result_direction_46.jpeg",
 //       webp: "/images/directions/result_direction_46.webp",
 //     },
-//     path: "/services/multidance",
+//     path: "/multidance",
 //   },
 //   oriental: {
 //     direction: "ORIENTAL",
@@ -3361,7 +3361,7 @@
 //       jpg: "/images/directions/result_direction_47.jpeg",
 //       webp: "/images/directions/result_direction_47.webp",
 //     },
-//     path: "/services/oriental",
+//     path: "/oriental",
 //   },
 //   zumba: {
 //     direction: "ZUMBA",
@@ -3370,7 +3370,7 @@
 //       jpg: "/images/directions/result_direction_48.jpeg",
 //       webp: "/images/directions/result_direction_48.webp",
 //     },
-//     path: "/services/zumba",
+//     path: "/zumba",
 //   },
 //   dance_mix: {
 //     direction: "DANCE MIX",
@@ -3379,7 +3379,7 @@
 //       jpg: "/images/directions/result_direction_49.jpeg",
 //       webp: "/images/directions/result_direction_49.webp",
 //     },
-//     path: "/services/dance_mix",
+//     path: "/dance_mix",
 //   },
 //   childrens_swimming: {
 //     direction: "Детское плавание",
@@ -3388,7 +3388,7 @@
 //       jpg: "/images/directions/result_direction_54.jpeg",
 //       webp: "/images/directions/result_direction_54.webp",
 //     },
-//     path: "/services/childrens_swimming",
+//     path: "/childrens_swimming",
 //   },
 //   martial_arts_children: {
 //     direction: "Детские единоборства",
@@ -3397,7 +3397,7 @@
 //       jpg: "/images/directions/result_direction_55.jpeg",
 //       webp: "/images/directions/result_direction_55.webp",
 //     },
-//     path: "/services/martial_arts_children",
+//     path: "/martial_arts_children",
 //   },
 //   children_center: {
 //     direction: "Детский центр",
@@ -3406,7 +3406,7 @@
 //       jpg: "/images/directions/result_direction_56.jpeg",
 //       webp: "/images/directions/result_direction_56.webp",
 //     },
-//     path: "/services/children_center",
+//     path: "/children_center",
 //   },
 //   baths_swimming: {
 //     direction: "Бани и бассейны",
@@ -3415,7 +3415,7 @@
 //       jpg: "/images/water_zone/result_zone_1.jpeg",
 //       webp: "/images/water_zone/result_zone_1.webp",
 //     },
-//     path: "/services/baths_swimming",
+//     path: "/baths_swimming",
 //   },
 //   sports_pool: {
 //     direction: "Спортивный бассейн",
@@ -3424,7 +3424,7 @@
 //       jpg: "/images/water_zone/result_zone_2.jpeg",
 //       webp: "/images/water_zone/result_zone_2.webp",
 //     },
-//     path: "/services/sports_pool",
+//     path: "/sports_pool",
 //   },
 //   spa: {
 //     direction: "СПА",
@@ -3433,7 +3433,7 @@
 //       jpg: "/images/water_zone/result_zone_3.jpeg",
 //       webp: "/images/water_zone/result_zone_3.webp",
 //     },
-//     path: "/services/spa",
+//     path: "/spa",
 //   },
 //   thermal_baths: {
 //     direction: "Термы",
@@ -3442,7 +3442,7 @@
 //       jpg: "/images/water_zone/result_zone_4.jpeg",
 //       webp: "/images/water_zone/result_zone_4.webp",
 //     },
-//     path: "/services/thermal_baths",
+//     path: "/thermal_baths",
 //   },
 //   goldfish: {
 //     direction: "Золотые рыбки",
@@ -3451,7 +3451,7 @@
 //       jpg: "/images/water_zone/result_zone_5.jpeg",
 //       webp: "/images/water_zone/result_zone_5.webp",
 //     },
-//     path: "/services/goldfish",
+//     path: "/goldfish",
 //   },
 // };
 

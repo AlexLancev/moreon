@@ -6,7 +6,7 @@ import { directions_store, team_store } from "@/stores/data_store";
 import { filterDataByActiveTab } from "@/utils";
 
 type Current_direct_key_type =
-  | "mind-body"
+  | "mind_body"
   | "strength_functional_training"
   | "aerobics"
   | "gym"
@@ -26,7 +26,7 @@ type Current_direct_type = Record<
 >;
 
 const presentation_directions_data: Current_direct_type = {
-  ["mind-body"]: {
+  mind_body: {
     directions: [
       "abs_streth",
       "pranayama_meditation",
@@ -39,7 +39,7 @@ const presentation_directions_data: Current_direct_type = {
     ],
     team: "group_training",
   },
-  ["strength_functional_training"]: {
+  strength_functional_training: {
     directions: [
       "cross_training",
       "abs_streth",
@@ -51,7 +51,7 @@ const presentation_directions_data: Current_direct_type = {
     ],
     team: "group_training",
   },
-  ["aerobics"]: {
+  aerobics: {
     directions: [
       "real_ryder",
       "step",
@@ -61,11 +61,11 @@ const presentation_directions_data: Current_direct_type = {
     ],
     team: "group_training",
   },
-  ["gym"]: {
+  gym: {
     directions: null,
     team: "gym",
   },
-  ["pool"]: {
+  pool: {
     directions: [
       "infant_swimming",
       "childrens_swimming",
@@ -76,27 +76,27 @@ const presentation_directions_data: Current_direct_type = {
     ],
     team: "pool",
   },
-  ["martial_arts"]: {
+  martial_arts: {
     directions: ["work_apparatus", "box", "grappling", "kickboxing", "mma"],
     team: "martial_arts",
   },
-  ["dance"]: {
+  dance: {
     directions: ["latina", "multidance", "oriental", "zumba", "dance_mix"],
     team: "group_training",
   },
-  ["personal_training"]: {
+  personal_training: {
     directions: null,
     team: null,
   },
-  ["yoga"]: {
+  yoga: {
     directions: ["pranayama_meditation", "yoga_intensiv_90", "hatha_yoga"],
     team: "group_training",
   },
-  ["test"]: {
+  test: {
     directions: null,
     team: null,
   },
-  ["group_training"]: {
+  group_training: {
     directions: [
       "mind_body",
       "strength_functional_training",
@@ -152,7 +152,7 @@ export const Presentation_directions_page = observer(() => {
       <ul>
         {directions.map((direct) => (
           <li>
-            <Link to={directions_bd[direct]?.path}>
+            <Link to={`/services/${directions_bd[direct]?.path}`}>
               {directions_bd[direct]?.direction}
             </Link>
           </li>
@@ -165,6 +165,7 @@ export const Presentation_directions_page = observer(() => {
           ),
         )}
       </ul>
+        <strong>Фитнес-тестирование</strong><b>Продолжительность:</b><span> 55 мин</span><b>Уровень подготовленности:</b><span>для всех</span><b>Возраст:</b><span>взрослые</span><p>МФР+STRETCHING — низкоинтенсивный комплекс упражнений, в котором используются приемы самомассажа. Занятия проводятся с использованием мячей, роллов для пилатеса. Упражнения позволяют расслабить мышцы и фасции, а затем растянуть их.</p>
     </>
   );
 });

@@ -66,14 +66,22 @@ export const App = () => {
           <Route path={aerobics} element={<Presentation_directions_page />} />
           <Route path={gym} element={<Presentation_directions_page />} />
           <Route path={pool} element={<Presentation_directions_page />} />
-          <Route path={martial_arts} element={<Presentation_directions_page />} />
+          <Route
+            path={martial_arts}
+            element={<Presentation_directions_page />}
+          />
 
           <Route path={dance} element={<Presentation_directions_page />} />
-          <Route path={personal_training} element={<Presentation_directions_page />} />
+          <Route
+            path={personal_training}
+            element={<Presentation_directions_page />}
+          />
           <Route path={yoga} element={<Presentation_directions_page />} />
           <Route path={test} element={<Presentation_directions_page />} />
-          <Route path={group_programs} element={<Presentation_directions_page />} />
-
+          <Route
+            path={group_programs}
+            element={<Presentation_directions_page />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
