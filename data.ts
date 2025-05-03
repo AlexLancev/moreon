@@ -3,25 +3,25 @@
 //     head: "Тренажерный зал",
 //     description:
 //       "Площадь тренажерного зала 1500 кв.м, потолок 35 м. Светлый и просторный зал с панорамными окнами, приточная система вентиляции, вид на березовую рощу. Оборудование премиум-класса Matrix и TechnoGym. Всё для комфортных тренировок",
-//     path: "/uslugi/trenazhernyj-zal/",
+//     path: "uslugi/trenazhernyj-zal/",
 //   },
 //   {
 //     head: "СПА и Термы",
 //     description:
 //       "25 бань и саун, более 70 спа-услуг, джакузи, соляная пещера, двухуровневый бассейн, массаж, контрастные ванны. Панорамные окна и веранда. Всё для полного расслабления после отличных тренировок",
-//     path: "/uslugi/bani-i-bassejny/",
+//     path: "uslugi/bani-i-bassejny/",
 //   },
 //   {
 //     head: "Единоборства",
 //     description:
 //       "Более 500 кв.м для вашей уверенности в себе! Зона оборудована в соответствии с требованиям профессионального спорта: ринг, октагон, клетка BJJ, настенные боксерские подушки для отработки прямых ударов, подвесные снаряды, татами для борьбы.",
-//     path: "/uslugi/edinoborstva/",
+//     path: "uslugi/edinoborstva/",
 //   },
 //   {
 //     head: "Групповые занятия",
 //     description:
 //       "Популярные групповые тренировки мировых брендов проводят сертифицированные тренеры. Разнообразие программ позволяет каждому найти направление на свой вкус, выбери свою продуктивную тренировку!",
-//     path: "/uslugi/gruppovye-programmy/",
+//     path: "uslugi/gruppovye-programmy/",
 //   },
 // ];
 
@@ -133,7 +133,7 @@
 //       jpg: "/images/choose_your_card/result_card_1.jpeg",
 //       webp: "/images/choose_your_card/result_card_1.webp",
 //     },
-//     path: "/club-cards/fitnes",
+//     path: "club-cards/fitnes",
 //   },
 //   fitnes_spa: {
 //     head: "Фитнес + СПА",
@@ -143,7 +143,7 @@
 //       jpg: "/images/choose_your_card/result_card_2.jpeg",
 //       webp: "/images/choose_your_card/result_card_2.webp",
 //     },
-//     path: "/club-cards/fitnes-spa",
+//     path: "club-cards/fitnes-spa",
 //   },
 //   corporate_card: {
 //     head: "Корпоративная карта",
@@ -153,7 +153,7 @@
 //       jpg: "/images/choose_your_card/result_card_3.jpeg",
 //       webp: "/images/choose_your_card/result_card_3.webp",
 //     },
-//     path: "/club-cards/corporate-card",
+//     path: "club-cards/corporate-card",
 //   },
 //   flexible: {
 //     head: "Гибкая",
@@ -163,7 +163,7 @@
 //       jpg: "/images/choose_your_card/result_card_4.jpeg",
 //       webp: "/images/choose_your_card/result_card_4.webp",
 //     },
-//     path: "/club-cards/flexible",
+//     path: "club-cards/flexible",
 //   },
 //   premium: {
 //     head: "Премиум",
@@ -173,7 +173,7 @@
 //       jpg: "/images/choose_your_card/result_card_5.jpeg",
 //       webp: "/images/choose_your_card/result_card_5.webp",
 //     },
-//     path: "/club-cards/premium",
+//     path: "club-cards/premium",
 //   },
 // };
 
@@ -2400,38 +2400,38 @@
 // };
 
 //  const menu_data = [
-//   { path: "/about-club", name_link: "О клубе" },
+//   { path: "about-club", name_link: "О клубе" },
 //   {
 //     path: "",
 //     name_link: "Услуги",
 //     sub_menu: [
-//       { path: "/mind-body", name_link: "Mind Body" },
+//       { path: "mind-body", name_link: "Mind Body" },
 //       {
-//         path: "/strength-functional-training",
+//         path: "strength-functional-training",
 //         name_link: "Силовые и функциональные тренировки",
 //       },
 //       {
-//         path: "/cardio-aerobics",
+//         path: "cardio-aerobics",
 //         name_link: "Кардиопрограммы и аэробика",
 //       },
-//       { path: "/gym", name_link: "Тренажерный зал" },
-//       { path: "/aquatic-programs", name_link: "Водные программы" },
-//       { path: "/martial-arts", name_link: "Единоборства" },
-//       { path: "/dance", name_link: "Танцы" },
+//       { path: "gym", name_link: "Тренажерный зал" },
+//       { path: "aquatic-programs", name_link: "Водные программы" },
+//       { path: "martial-arts", name_link: "Единоборства" },
+//       { path: "dance", name_link: "Танцы" },
 //       {
-//         path: "/personal-training",
+//         path: "personal-training",
 //         name_link: "Персональный тренинг",
 //       },
-//       { path: "/yoga", name_link: "Йога" },
-//       { path: "/inbody", name_link: "InBody" },
-//       { path: "/group-programs", name_link: "Групповые программы" },
+//       { path: "yoga", name_link: "Йога" },
+//       { path: "inbody", name_link: "InBody" },
+//       { path: "group-programs", name_link: "Групповые программы" },
 //     ],
 //   },
-//   { path: "/team", name_link: "Команда" },
-//   { path: "/club-cards", name_link: "Клубные карты" },
-//   { path: "/schedule", name_link: "Расписание" },
-//   { path: "/saunas-pools", name_link: "Бани и бассейны" },
-//   { path: "/kids-fitness", name_link: "Детский фитнес" },
+//   { path: "team", name_link: "Команда" },
+//   { path: "club-cards", name_link: "Клубные карты" },
+//   { path: "schedule", name_link: "Расписание" },
+//   { path: "saunas-pools", name_link: "Бани и бассейны" },
+//   { path: "kids-fitness", name_link: "Детский фитнес" },
 // ];
 
 // const about_questions = [
@@ -2583,7 +2583,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_1.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_1.webp",
 //     },
-//     path: "/training-room",
+//     path: "training-room",
 //   },
 //   gym: {
 //     name_key: "gym",
@@ -2596,7 +2596,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_2.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_2.webp",
 //     },
-//     path: "/gym",
+//     path: "gym",
 //   },
 //   pool: {
 //     name_key: "pool",
@@ -2609,7 +2609,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_3.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_3.webp",
 //     },
-//     path: "/pool",
+//     path: "pool",
 //   },
 //   cardio_room: {
 //     name_key: "cardio_room",
@@ -2622,7 +2622,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_4.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_4.webp",
 //     },
-//     path: "/cardio-room",
+//     path: "cardio-room",
 //   },
 //   martial_arts: {
 //     name_key: "martial_arts",
@@ -2635,7 +2635,7 @@
 //       jpg: "/images/fitness_area/result_zon_area_5.jpeg",
 //       webp: "/images/fitness_area/result_zon_area_5.webp",
 //     },
-//     path: "/martial-arts",
+//     path: "martial-arts",
 //   },
 // };
 
@@ -2907,7 +2907,7 @@
 //     description:
 //       "<p>Занятия в бассейне для грудничков позволяют укрепить мышечную систему новорожденного, иммунитет, повысить уровень доверия между родителями и ребенком. Занятия в воде дают положительные эмоции малышу и взрослым.</p><p>Занятия по грудничковому плаванию проходят в детском бассейне “Золотые рыбки”, который находится на территории самого большого аквапарка Москвы. Длина бассейна составляет 12 метров, глубина 1,2 метра. Зал оснащен всем необходимым оборудованием и инвентарем.</p>",
 //     image_description: "На изображении группа взрослых и детей занимается плаванием в бассейне. Впереди женщина помогает маленькому ребенку, который улыбается и смотрит на камеру. Другие участники находятся в воде, обучаясь или отдыхая. Бассейн оформлен в ярких тонах, создавая дружелюбную атмосферу для занятий плаванием.",
-//     path: "/saunas-pools/infant-swimming",
+//     path: "saunas-pools/infant-swimming",
 //     images_url: {
 //       jpg: "/images/childrens_swimming_tabs/direction_1.jpeg",
 //       webp: "/images/childrens_swimming_tabs/direction_1.webp",
@@ -2918,7 +2918,7 @@
 //     description:
 //       "<p>Раннее плавание для детей — это расслабление мышц, снятие тонуса, улучшение кровоснабжения мозга и тканей, тренировка гибкости позвоночника.<br />Положительное значение пребывания ребенка в воде и выполнения в ней плавательных упражнений заключается еще и в закаливающем, гигиеническом, механическом и физическом воздействиях воды.</p><p>Опытные тренеры помогут вашим детям полюбить воду и научиться основам плавания.</p>",
 //     image_description: "На изображении женщина помогает маленькому ребенку в бассейне. Ребенок, одетый в плавательный жилетик с рисунком, улыбается и смотрит в сторону. Женщина поддерживает его за плечи, создавая безопасную и поддерживающую атмосферу для обучения плаванию. Вода вокруг ребенка ярко-голубая, что указывает на спокойное и приятное занятие.",
-//     path: "/saunas-pools/early-swimming",
+//     path: "saunas-pools/early-swimming",
 //     images_url: {
 //       jpg: "/images/childrens_swimming_tabs/direction_2.jpeg",
 //       webp: "/images/childrens_swimming_tabs/direction_2.webp",
@@ -2929,7 +2929,7 @@
 //     description:
 //       "<p>Для детей от 3 до 7 лет плавание может быть спортивное и оздоровительное.</p><p>Его польза обусловлена сочетанием физических нагрузок и оздоровительными свойствами воды.</p><p>Обучение плаванию происходит в форме игры, задача тренера — поставить правильную технику и дать азы осознанного плавания.</p>",
 //     image_description: "На изображении ребенок плавает в бассейне. Он одет в яркий купальный костюм с розовыми и голубыми деталями, шапочку для плавания и очки. Ребенок улыбается, демонстрируя радость и удовольствие от занятия. Вода вокруг него спокойная, создавая приятную атмосферу для обучения плаванию.",
-//     path: "/saunas-pools/childrens-swimming",
+//     path: "saunas-pools/childrens-swimming",
 //     images_url: {
 //       jpg: "/images/childrens_swimming_tabs/direction_3.jpeg",
 //       webp: "/images/childrens_swimming_tabs/direction_3.webp",
@@ -2940,7 +2940,7 @@
 //     description:
 //       "<p>Для детей от 7 лет до 13 лет занятия проходят в спортивном бассейне 25 метров, где под руководством опытных инструкторов дети осваивают 4 основных стиля спортивного плавания, правильный старт и повороты.</p><p>Панорамные окна наполняют помещение светом и вдохновляют на спортивные подвиги.<br />Ждем юных пловцов в спортивную школу плавания!</p>",
 //     image_description: "На изображении показан подросток, который плавает в бассейне. Он одет в яркую шапочку для плавания с принтом и черные очки для плавания. Вода вокруг него создает легкое бульканье, что указывает на активное движение. Поза и выражение лица спортсмена демонстрируют сосредоточенность и напряжение во время тренировки или соревнования.",
-//     path: "/saunas-pools/competitive-swimming",
+//     path: "saunas-pools/competitive-swimming",
 //     images_url: {
 //       jpg: "/images/childrens_swimming_tabs/direction_4.jpeg",
 //       webp: "/images/childrens_swimming_tabs/direction_4.webp",
@@ -2951,518 +2951,1864 @@
 const directions = {
   mind_body: {
     directions: [
-        "abs_streth",
-        "pranayama_meditation",
-        "yoga_intensiv_90",
-        "pilates_allegro",
-        "healthy_back",
-        "pilates_mat",
-        "soft_balance",
-        "hatha_yoga",
-      ],
-      team: "group_training",
+      "abs_streth",
+      "pranayama_meditation",
+      "yoga_intensiv_90",
+      "pilates_allegro",
+      "healthy_back",
+      "pilates_mat",
+      "soft_balance",
+      "hatha_yoga",
+    ],
+    team: "group_training",
     direction: "Mind Body",
-    description: "На изображении женщина выполняет йоговскую позу, сидя на коврике. Она одета в темно-синюю спортивную форму и находится в позе 'Разделение ног' (Hanumanasana), поддерживая равновесие одной рукой. Ее другая рука поднята вверх, создавая грациозный образ. Фон простой и нейтральный, что акцентирует внимание на технике выполнения упражнения.",
+    description:
+      "На изображении женщина выполняет йоговскую позу, сидя на коврике. Она одета в темно-синюю спортивную форму и находится в позе 'Разделение ног' (Hanumanasana), поддерживая равновесие одной рукой. Ее другая рука поднята вверх, создавая грациозный образ. Фон простой и нейтральный, что акцентирует внимание на технике выполнения упражнения.",
     images_url: {
       jpg: "/images/directions/result_direction_1.jpeg",
       webp: "/images/directions/result_direction_1.webp",
     },
-    path: "/mind_body",
+    hero: {
+      description:
+        "<h1>Mind Body</h1><p>Программы, направленные на гармонизацию тела и сознания. Включают развитие силы, гибкости и баланса, а также контроль разума. Доступны групповые и индивидуальные занятия различных уровней сложности.</p>",
+      images_url: {
+        jpg: "/images/current_direction/mind_body/direct_1.jpg",
+        webp: "/images/current_direction/mind_body/direct_1.webp",
+      },
+    },
+    path: "mind_body",
   },
   strength_functional_training: {
+    directions: [
+      "cross_training",
+      "abs_streth",
+      "les_mills_core",
+      "hot_iron_1",
+      "hot_iron_2",
+      "les_mills_grit",
+      "thinner",
+    ],
+    team: "group_training",
     direction: "Силовые и функциональные тренировки",
-    description: "На изображении группа женщин выполняет упражнение с гантелями в тренажерном зале. Они одеты в одинаковые черные спортивные костюмы и держат зеленые гантели, выполняя приседания или другое силовое упражнение. Все участницы сосредоточены на выполнении движения, демонстрируя командную атмосферу тренировки. Фон простой, акцентирующий внимание на группе.",
+    description:
+      "На изображении группа женщин выполняет упражнение с гантелями в тренажерном зале. Они одеты в одинаковые черные спортивные костюмы и держат зеленые гантели, выполняя приседания или другое силовое упражнение. Все участницы сосредоточены на выполнении движения, демонстрируя командную атмосферу тренировки. Фон простой, акцентирующий внимание на группе.",
     images_url: {
       jpg: "/images/directions/result_direction_2.jpeg",
       webp: "/images/directions/result_direction_2.webp",
     },
-    path: "/strength_functional_training",
+    hero: {
+      description:
+        "<h1>Силовые и функциональные тренировки</h1><p>Функциональный тренинг направлен на улучшение общей физической формы, развитие выносливости, скорости, координации и силы. Включает работу с различными группами мышц с использованием дополнительного оборудования, что обеспечивает эффективное сжигание калорий.</p>",
+      images_url: {
+        jpg: "/images/current_direction/strength_functional_training/direct_1.jpg",
+        webp: "/images/current_direction/strength_functional_training/direct_1.webp",
+      },
+    },
+    path: "strength_functional_training",
   },
   aerobics: {
+    directions: [
+      "real_ryder",
+      "step",
+      "step_pro",
+      "pro_jumping",
+      "step_interval",
+    ],
+    team: "group_training",
     direction: "Кардиопрограммы и аэробика",
-    description: "На изображении трое человек выполняют упражнения с гантелями в тренажерном зале. Женщина в центре делает выпады, мужчина помогает ей сохранять равновесие. На заднем плане видно фитнес-оборудование.",
+    description:
+      "На изображении трое человек выполняют упражнения с гантелями в тренажерном зале. Женщина в центре делает выпады, мужчина помогает ей сохранять равновесие. На заднем плане видно фитнес-оборудование.",
     images_url: {
       jpg: "/images/directions/result_direction_3.jpeg",
       webp: "/images/directions/result_direction_3.webp",
     },
-    path: "/aerobics",
+    hero: {
+      description:
+        "<h1>Кардиопрограммы и аэробика</h1><p>Комплексные тренировки, направленные на снижение веса, развитие выносливости, улучшение координации и укрепление сердечно-сосудистой системы. Кардиотренировки дарят положительные эмоции, помогают преодолевать трудности и способствуют самосовершенствованию.</p>",
+      images_url: {
+        jpg: "/images/current_direction/aerobics/direct_1.jpg",
+        webp: "/images/current_direction/aerobics/direct_1.webp",
+      },
+    },
+    path: "aerobics",
   },
   gym: {
+    directions: null,
+    team: "gym",
     direction: "Тренажерный зал",
-    description: "Современный тренажерный зал с оборудованием для силовых и кардио тренировок, включая штанги, гантели и беговые дорожки. Просторное помещение с несколькими посетителями.",
+    description:
+      "Современный тренажерный зал с оборудованием для силовых и кардио тренировок, включая штанги, гантели и беговые дорожки. Просторное помещение с несколькими посетителями.",
     images_url: {
       jpg: "/images/directions/result_direction_4.jpeg",
       webp: "/images/directions/result_direction_4.webp",
     },
-    path: "/gym",
+    hero: {
+      description:
+        "<h1>Тренажерный зал</h1><p>Тренажерный зал Мореон Фитнес в Ясенево — тропический оазис в городских джунглях. Площадь тренажерного зала 1500 м², потолок 35 м. Зал светлый и просторный, из панорамных окон открывается вид на березовую рощу.</p><p>В Мореон Фитнес используются тренажеры итальянской компании Technologym (эксклюзивный поставщик Олимпийских Игр). Это оборудование премиум-класса, которое подходит и для новичков, и для спортсменов-профессионалов.</p>",
+      images_url: {
+        jpg: "/images/current_direction/gym/direct_1.jpg",
+        webp: "/images/current_direction/gym/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/gym/direct_1.jpg",
+          webp: "/images/current_direction/gym/direct_1.webp",
+        },
+        content:
+          "<strong>Тренажерный зал</strong><p>Тренажерный зал разделен на зоны:</p><p><b>Кардиозона.</b> Беговые дорожки, велотренажеры, эллипсы, гребные тренажеры. Все кардиотренажеры оснащены панелями с сенсорным управлением, телевидением и выходом в интернет.</p><p><b>Зона блочных тренажеров линейки Selection.</b> Тренажеры для полной проработки всех групп мышц, увеличения мышечной массы и улучшения выносливости.</p><p><b>Зона свободных весов.</b> Гантели и штанги, скамьи для жима, тренажер «Смита», силовые рамы и даже помост для тяги. Удовлетворит запросы любого, даже профессионального атлета.</p><p><b>Зона стретчинга и функционального тренинга.</b> Оборудование для тренировок на все группы мышц и растяжки. Коврики, фитболы, BOSU, амортизаторы, бодибары, утяжелители; Зона тренажеров KINESIS. Тренажеры подходят для пользователей с любым уровнем подготовки, для различных тренировочных целей, в том числе реабилитации.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/gym/direct_1.jpg",
+          webp: "/images/current_direction/gym/direct_1.webp",
+        },
+        content:
+          "<strong>Тренировки в тренажерном зале</strong><p>Тренироваться в зале можно самостоятельно, но для более быстрого и качественного результата лучше обратиться к персональному тренеру. Также можно заниматься по индивидуальной программе, которую составит тренер.</p><p><b>Преимущества тренажерного зала:</b></p><ul><li>Функциональный и комфортный дизайн</li><li>Свободное пространство в каждой зоне</li><li>Чистый и свежий воздух</li><li>Международные стандарты качества</li><li>Профессиональные тренеры</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "gym",
   },
   pool: {
+    directions: [
+        "infant_swimming",
+        "childrens_swimming",
+        "school_competitive_swimming",
+        "swimming_adults",
+        "aqua_aerobics",
+        "aqua_mom",
+      ],
+      team: "pool",
     direction: "Водные программы",
-    description: "На изображении показан человек, плавающий в воде брассом. Видны руки и часть тела спортсмена под водой, а также капли воды на поверхности. Спортсмен носит очки для плавания и купальный костюм. Окружающая среда — открытый водоем или бассейн с голубой водой.",
+    description:
+      "На изображении показан человек, плавающий в воде брассом. Видны руки и часть тела спортсмена под водой, а также капли воды на поверхности. Спортсмен носит очки для плавания и купальный костюм. Окружающая среда — открытый водоем или бассейн с голубой водой.",
     images_url: {
       jpg: "/images/directions/result_direction_5.jpeg",
       webp: "/images/directions/result_direction_5.webp",
     },
-    path: "/pool",
+    hero: {
+      description:
+        "<h1>Водные программы</h1><p>В Moreon Fitness представлены:</p><ul><li>Групповые и индивидуальные занятия в бассейне для взрослых</li><li>Аквааэробика и суставная гимнастика в спортивном бассейне</li><li>Специальные программы для беременных в бассейне «Золотые рыбки»</li><li>Соревнования для активных спортсменов</li></ul><p>Выберите подходящие занятия и тренируйтесь с удовольствием!</p>",
+      images_url: {
+        jpg: "/images/current_direction/pool/direct_1.jpg",
+        webp: "/images/current_direction/pool/direct_1.webp",
+      },
+    },
+    path: "pool",
   },
   martial_arts: {
+    directions: ["work_apparatus", "box", "grappling", "kickboxing", "mma"],
+    team: "martial_arts",
     direction: "Единоборства",
-    description: "Тренировочный зал с боксерскими мешками, черным резиновым полом и ярким освещением. Просторное помещение для занятий боксом или боевыми искусствами.",
+    description:
+      "Тренировочный зал с боксерскими мешками, черным резиновым полом и ярким освещением. Просторное помещение для занятий боксом или боевыми искусствами.",
     images_url: {
       jpg: "/images/directions/result_direction_6.jpeg",
       webp: "/images/directions/result_direction_6.webp",
     },
-    path: "/martial_arts",
+    hero: {
+      description:
+        "<h1>Единоборства</h1><p>Доступные направления:</p><ul><li>Бокс</li><li>Кикбоксинг</li><li>Грепплинг</li><li>MMA</li></ul><p>Занятия проводятся для детей и взрослых. Выберите дисциплину по душе!</p>",
+      images_url: {
+        jpg: "/images/current_direction/martial_arts/direct_1.jpg",
+        webp: "/images/current_direction/martial_arts/direct_1.webp",
+      },
+    },
+    path: "martial_arts",
   },
   dance: {
+    directions: ["latina", "multidance", "oriental", "zumba", "dance_mix"],
+    team: "group_training",
     direction: "Танцы",
-    description: "Девушка в яркой спортивной одежде выполняет активное движение на улице, демонстрируя энергию, стиль и уверенность в каждом шаге.",
+    description:
+      "Девушка в яркой спортивной одежде выполняет активное движение на улице, демонстрируя энергию, стиль и уверенность в каждом шаге.",
     images_url: {
       jpg: "/images/directions/result_direction_7.jpeg",
       webp: "/images/directions/result_direction_7.webp",
     },
-    path: "/dance",
+    hero: {
+      description:
+        "<h1>Танцевальные программы</h1><p>Широкий выбор направлений:</p><ul><li>Латина</li><li>Восточные танцы</li><li>Современные стили</li></ul><p>Формат занятий: групповые и индивидуальные. Регулярно проводятся конкурсы и соревнования. Выбирайте подходящее направление и получайте удовольствие от танцев!</p>",
+      images_url: {
+        jpg: "/images/current_direction/dance/direct_1.jpg",
+        webp: "/images/current_direction/dance/direct_1.webp",
+      },
+    },
+    path: "dance",
   },
   personal_training: {
+    directions: null,
+    team: null,
     direction: "Персональный тренинг",
-    description: "Мужчина помогает женщине выполнять упражнение с гантелями в тренажерном зале. Женщина делает выпады, мужчина контролирует технику выполнения.",
+    description:
+      "Мужчина помогает женщине выполнять упражнение с гантелями в тренажерном зале. Женщина делает выпады, мужчина контролирует технику выполнения.",
     images_url: {
       jpg: "/images/directions/result_direction_8.jpeg",
       webp: "/images/directions/result_direction_8.webp",
     },
-    path: "/personal_training",
+    hero: {
+      description:
+        "<h1>Персональный тренинг</h1><p>Индивидуальные занятия с инструктором выбирают клиенты, которые хотят получить максимальный результат в короткие сроки. Персональный тренер разрабатывает программу с учетом особенностей организма и норм безопасности, контролирует выполнение упражнений и следит за прогрессом.</p><p>В фитнес-центре «Мореон» доступны персональные тренировки по всем направлениям. Тренер совместно с врачом проведет фитнес-тестирование для определения уровня подготовки, состояния организма и состава тела, после чего составит оптимальную программу занятий.</p>",
+      images_url: {
+        jpg: "/images/current_direction/personal_training/direct_1.jpg",
+        webp: "/images/current_direction/personal_training/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/personal_training/direct_2.jpg",
+          webp: "/images/current_direction/personal_training/direct_2.webp",
+        },
+        content:
+          "<strong>Мотивация и поддержка</strong><p>Занятия фитнесом должны приносить не только пользу, но и радость, чувство гордости за свои достижения. Наши персональные тренеры - опытные психологи, которые помогут преодолеть любые трудности и будут искренне радоваться вашим успехам.</p><p>Тренер постоянно контролирует и корректирует программу тренировок, ставит достижимые цели и помогает их реализовать. Когда вы видите свой прогресс под руководством наставника, заниматься становится проще и эффективнее.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/personal_training/direct_3.jpg",
+          webp: "/images/current_direction/personal_training/direct_3.webp",
+        },
+        content:
+          "<strong>Широкий спектр возможностей</strong><p>Персональный тренинг включает различные направления:</p><ul><li>Тренажерный зал</li><li>Восстановительные программы</li><li>Бассейн</li><li>Сайкл-студия</li><li>Танцевальные студии</li><li>Функциональный тренинг</li><li>Аэробика</li><li>Боевые искусства</li><li>Пилатес</li><li>Фитнес для детей и беременных</li><li>Йога</li></ul>",
+      },
+    ],
+    path: "personal_training",
   },
   yoga: {
+    directions: ["pranayama_meditation", "yoga_intensiv_90", "hatha_yoga"],
+    team: "group_training",
     direction: "Йога",
-    description: "Женщина выполняет йогу на коврике, занимаясь растяжкой и укреплением мышц в помещении с мягким освещением.",
+    description:
+      "Женщина выполняет йогу на коврике, занимаясь растяжкой и укреплением мышц в помещении с мягким освещением.",
     images_url: {
       jpg: "/images/directions/result_direction_9.jpeg",
       webp: "/images/directions/result_direction_9.webp",
     },
-    path: "/yoga",
+    hero: {
+      description:
+        "<h1>Йога</h1><p>Комплексная система оздоровления, сочетающая:</p><ul><li>Физические упражнения (асаны)</li><li>Дыхательные техники (пранаямы)</li><li>Практики концентрации</li></ul><p>Регулярные занятия способствуют:</p><ul><li>Гармонизации физического и психического состояния</li><li>Раскрытию скрытых возможностей организма</li><li>Улучшению качества жизни</li></ul><p>Йога - это путь к самопознанию и здоровому образу жизни.</p>",
+      images_url: {
+        jpg: "/images/current_direction/yoga/direct_1.jpg",
+        webp: "/images/current_direction/yoga/direct_1.webp",
+      },
+    },
+    path: "yoga",
   },
   test: {
+    directions: null,
+    team: null,
     direction: "Фитнес-тестирование",
-    description: "Профессиональный медицинский анализатор тела (InBody) в современном помещении для оценки состава тела и здоровья.",
+    description:
+      "Профессиональный медицинский анализатор тела (InBody) в современном помещении для оценки состава тела и здоровья.",
     images_url: {
       jpg: "/images/directions/result_direction_10.jpeg",
       webp: "/images/directions/result_direction_10.webp",
     },
-    path: "/test",
+    hero: {
+      description:
+        "<h1>Анализ состава тела InBody за 60 секунд!</h1><p>InBody – это современный аппарат для точного анализа состава тела, который предоставляет подробную информацию о вашем организме.</p>",
+      images_url: {
+        jpg: "/images/current_direction/test/direct_1.jpg",
+        webp: "/images/current_direction/test/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/test/direct_2.jpg",
+          webp: "/images/current_direction/test/direct_2.webp",
+        },
+        content:
+          "<strong>Анализ состава тела InBody</strong><p>Определяет ключевые параметры организма:</p><ul><li>Общий вес тела</li><li>Массу мышечной ткани</li><li>Процент жировой ткани</li><li>Содержание воды и минералов</li><li>Распределение жира по зонам</li><li>Рекомендуемый калораж для поддержания веса</li></ul>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/test/direct_3.jpg",
+          webp: "/images/current_direction/test/direct_3.webp",
+        },
+        content:
+          "<strong>Условия проведения анализа InBody</strong><p>Анализ включен в стоимость клубной карты (первичный), последующие исследования - 500 руб. Для клиентов с персональным тренером - бесплатно.</p><p>Получите точные данные о составе тела для разработки индивидуальной программы тренировок и питания!</p><p>Записаться можно по телефону: <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "test",
   },
   kids_fitnes: {
+    directions: null,
+    team: null,
     direction: "Детский фитнес",
-    description: "Три женщины выполняют йогу в помещении, занимаясь растяжкой и укреплением мышц на ковриках. Освещение мягкое, атмосфера спокойная.",
+    description:
+      "Три женщины выполняют йогу в помещении, занимаясь растяжкой и укреплением мышц на ковриках. Освещение мягкое, атмосфера спокойная.",
     images_url: {
       jpg: "/images/directions/result_direction_11.jpeg",
       webp: "/images/directions/result_direction_11.webp",
     },
-    path: "/kids_fitnes",
+    path: "kids_fitnes",
   },
   group_training: {
+    directions: [
+      "mind_body",
+      "strength_functional_training",
+      "aerobics",
+      "pool",
+      "martial_arts",
+      "dance",
+      "yoga",
+    ],
+    team: "group_training",
     direction: "Групповые программы",
-    description: "Группа женщин выполняет активную танцевальную тренировку в зале. Все одеты ярко, синхронно двигаются и улыбаются, создавая веселую атмосферу.",
+    description:
+      "Группа женщин выполняет активную танцевальную тренировку в зале. Все одеты ярко, синхронно двигаются и улыбаются, создавая веселую атмосферу.",
     images_url: {
       jpg: "/images/directions/result_direction_12.jpg",
       webp: "/images/directions/result_direction_12.webp",
     },
-    path: "/group_training",
-  },
-  stretching: {
-    direction: "МФР+Stretching",
-    description: "Женщина выполняет упражнение на растяжку спины с использованием ролика для массажа. Она находится в помещении с окном, одета в спортивную форму.",
-    images_url: {
-      jpg: "/images/directions/result_direction_13.jpeg",
-      webp: "/images/directions/result_direction_13.webp",
-    },
-    path: "/stretching",
+    path: "group_training",
   },
   pranayama_meditation: {
+    directions: null,
+    team: null,
     direction: "ПРАНАЯМА И МЕДИТАЦИЯ",
-    description: "Женщина медитирует в позе лотоса на коврике для йоги в тренажерном зале. Она одета в спортивную форму и выглядит сосредоточенной.",
+    description:
+      "Женщина медитирует в позе лотоса на коврике для йоги в тренажерном зале. Она одета в спортивную форму и выглядит сосредоточенной.",
     images_url: {
       jpg: "/images/directions/result_direction_14.jpeg",
       webp: "/images/directions/result_direction_14.webp",
     },
-    path: "/pranayama_meditation",
+    hero: {
+      description:
+        "<h1>Пранаяма и медитация</h1><p>Важной частью йоги является работа с дыханием и умом. Именно контроль дыхания позволяет нам успокоить ум во время практики асан, углубить свое понимание движения, работы тела и развить контроль.</p>",
+      images_url: {
+        jpg: "/images/current_direction/pranayama_meditation/direct_1.jpg",
+        webp: "/images/current_direction/pranayama_meditation/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/pranayama_meditation/direct_2.jpg",
+          webp: "/images/current_direction/pranayama_meditation/direct_2.webp",
+        },
+        content:
+          "<h2>POWER YOGA</h2><p>Йога не ограничивается работой с телом, а предлагает нам инструменты более тонкой и глубокой работы с сознанием и энергией. В восьми ступенчатой системе йоге такие инструменты или техники относятся к четвертой ступени — Пранаяме.</p><p>Пранаяма — навык контроля Праны (жизненной энергии), через выполнение дыхательных упражнений, направленных на стабилизацию нервной системы, очищения энергетических каналов и развития концентрации.</p><p>На занятии мы будем разбирать и осваивать разные техники Пранаямы, а также медитировать и развивать навыки концентрации.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/pranayama_meditation/direct_1.jpg",
+          webp: "/images/current_direction/pranayama_meditation/direct_1.webp",
+        },
+        content:
+          "<strong>Ждем вас по субботам в 11.00, зал 2.</strong><br><b>Продолжительность:</b><span> 30 минут</span><br><b>Занятие проводит:</b><span> Наталья Пепик</span><br><p>Необходима предварительная запись через приложение Moreon Fitness.</p><p>Подробности по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "pranayama_meditation",
   },
   yoga_intensiv_90: {
+    directions: null,
+    team: null,
     direction: "YOGA INTENSIV-90",
-    description: "Группа женщин выполняет упражнение на растяжку в зале. Они стоят в линию, вытягивая руки в стороны и вперед, одеты в спортивную форму.",
+    description:
+      "Группа женщин выполняет упражнение на растяжку в зале. Они стоят в линию, вытягивая руки в стороны и вперед, одеты в спортивную форму.",
     images_url: {
       jpg: "/images/directions/result_direction_15.jpeg",
       webp: "/images/directions/result_direction_15.webp",
     },
-    path: "/yoga_intensiv_90",
+    hero: {
+      description:
+        "<h1>YOGA INTENSIV-90</h1><p>Занятия йогой в этой студии предназначены в основном для тех, кто регулярно практикует.</p><p>Занятие состоит из практического блока – интенсивной тренировки, а также теории – последовательного разбора асан, основных понятий и терминов йоги, медитации и дыхательных практик.</p><p>Также возможны занятия йогой для начинающих.</p>",
+      images_url: {
+        jpg: "/images/current_direction/yoga_intensiv_90/direct_1.jpg",
+        webp: "/images/current_direction/yoga_intensiv_90/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/yoga_intensiv_90/direct_2.jpg",
+          webp: "/images/current_direction/yoga_intensiv_90/direct_2.webp",
+        },
+        content:
+          "<strong>YOGA INTENSIV-90</strong><br><b>Продолжительность:</b><span> 90 мин</span><br><b>Уровень подготовки:</b><span> Продвинутый</span><br><b>Возраст:</b><span> Взрослые</span><br><p>Занятия в этой студии предназначены в основном для тех, кто регулярно практикует йогу. На занятии мы углубляем свои знания по отстройке и технике выполнения асан, приступаем к освоению сложных асан – стоек и балансов на руках, перевернутых асан, шпагата, прогибов, изучаем и практикуем дыхательные техники, поем мантры.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/yoga_intensiv_90/direct_3.jpg",
+          webp: "/images/current_direction/yoga_intensiv_90/direct_3.webp",
+        },
+        content:
+          "<strong>Занятие состоит из:</strong><ul><li>практического блока – интенсивной тренировки</li><li>теории – последовательного разбора асан, основных понятий и терминов йоги</li><li>медитации и дыхательных практик</li></ul><p>Записаться можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "yoga_intensiv_90",
   },
   pilates_allegro: {
+    directions: null,
+    team: null,
     direction: "PILATES ALLEGRO",
-    description: "Женщина выполняет упражнение на тренажере с резиновой лентой для укрепления мышц. Она находится в помещении с ярким освещением и спортивной атмосферой.",
+    description:
+      "Женщина выполняет упражнение на тренажере с резиновой лентой для укрепления мышц. Она находится в помещении с ярким освещением и спортивной атмосферой.",
     images_url: {
       jpg: "/images/directions/result_direction_16.jpeg",
       webp: "/images/directions/result_direction_16.webp",
     },
-    path: "/pilates_allegro",
+    hero: {
+      description:
+        "<h1>PILATES ALLEGRO</h1><p>Pilates Allegro — ваш любимый пилатес, только еще круче!</p><p>Рекомендуется всем, у кого проблемы с позвоночником и суставами, кто ведет малоподвижный образ жизни.</p><p>Помогает восстановиться после травм и после родов.</p>",
+      images_url: {
+        jpg: "/images/current_direction/pilates_allegro/direct_1.jpg",
+        webp: "/images/current_direction/pilates_allegro/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/pilates_allegro/direct_2.jpg",
+          webp: "/images/current_direction/pilates_allegro/direct_2.webp",
+        },
+        content:
+          "<strong>PILATES ALLEGRO</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Тренажер Pilates Allegro позволяет сочетать упражнения на устойчивость, растяжку, укрепление опорно-двигательного аппарата. Эксклюзивность этой программы заключается в том, что нагрузка на позвоночник минимальная, при этом мышцы тела укрепляются и восстанавливаются.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/pilates_allegro/direct_3.jpg",
+          webp: "/images/current_direction/pilates_allegro/direct_3.webp",
+        },
+        content:
+          "<strong>Результаты занятий на тренажере Allegro:</strong><ul><li>Улучшает осанку</li><li>Укрепляет опорно-двигательный аппарат</li><li>Тренирует выносливость</li><li>Нормализует дыхание</li></ul><p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "pilates_allegro",
   },
   healthy_back: {
+    directions: null,
+    team: null,
     direction: "Здоровая спина",
-    description: "Женщина медитирует в позе лотоса, сидя на коврике. Она одета в легкую спортивную форму и сосредоточена, руки сложены в мудру. Освещение мягкое, фон простой.",
+    description:
+      "Женщина медитирует в позе лотоса, сидя на коврике. Она одета в легкую спортивную форму и сосредоточена, руки сложены в мудру. Освещение мягкое, фон простой.",
     images_url: {
       jpg: "/images/directions/result_direction_17.jpeg",
       webp: "/images/directions/result_direction_17.webp",
     },
-    path: "/healthy_back",
+    hero: {
+      description:
+        "<h1>Здоровая спина</h1><p>Проблемы со спиной есть почти у каждого офисного работника. Занятия «Здоровая спина» помогут снять напряжение, убрать сутулость и поддерживать красивую осанку. Уже после первого занятия вы почувствуете облегчение, уйдут боли и спазмы.</p>",
+      images_url: {
+        jpg: "/images/current_direction/healthy_back/direct_1.jpg",
+        webp: "/images/current_direction/healthy_back/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/healthy_back/direct_2.jpg",
+          webp: "/images/current_direction/healthy_back/direct_2.webp",
+        },
+        content:
+          "<strong>Здоровая спина</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Проблемы со спиной есть почти у каждого офисного работника. Занятия «Здоровая спина» помогут снять напряжение, убрать сутулость и поддерживать красивую осанку. Уже после первого занятия вы почувствуете облегчение, уйдут боли и спазмы.</p><p>«Здоровая спина» — комплекс упражнений на укрепление спины и пресса. В программу включены упражнения из йоги, ЛФК, пилатеса, и стретчинга.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/healthy_back/direct_3.jpg",
+          webp: "/images/current_direction/healthy_back/direct_3.webp",
+        },
+        content:
+          "<strong>Польза занятий «Здоровая спина»:</strong><ul><li>Улучшают осанку</li><li>Избавляют от боли в спине</li><li>Помогают снять зажимы и вытянуть позвоночник</li><li>Служат для профилактики заболеваний позвоночника</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "healthy_back",
   },
   pilates_mat: {
+    directions: null,
+    team: null,
     direction: "PILATES MAT",
-    description: "Группа женщин выполняет упражнения на пресс в зале. Они лежат на ковриках, поднимая корпус и работая над мышцами живота. Освещение яркое, атмосфера активная.",
+    description:
+      "Группа женщин выполняет упражнения на пресс в зале. Они лежат на ковриках, поднимая корпус и работая над мышцами живота. Освещение яркое, атмосфера активная.",
     images_url: {
       jpg: "/images/directions/result_direction_18.jpeg",
       webp: "/images/directions/result_direction_18.webp",
     },
-    path: "/pilates_mat",
+    hero: {
+      description:
+        "<h1>PILATES MAT</h1><p>Пилатес Мат – это упражнения на коврике, которые направлены на укрепление мышц бедер, спины, брюшного пресса и ягодиц. Мышцы пресса постоянно находятся в напряжении.</p>",
+      images_url: {
+        jpg: "/images/current_direction/pilates_mat/direct_1.jpg",
+        webp: "/images/current_direction/pilates_mat/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/pilates_mat/direct_2.jpg",
+          webp: "/images/current_direction/pilates_mat/direct_2.webp",
+        },
+        content:
+          "<strong>PILATES MAT</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые, юниоры</span><br><p>Пилатес Мат – это упражнения на коврике, которые направлены на укрепление мышц бедер, спины, брюшного пресса и ягодиц. Мышцы пресса постоянно находятся в напряжении.</p><p>Ключевой момент при выполнении упражнений – правильное дыхание. Дышать нужно животом так, чтобы легкие расширялись и сжимались без особого движения грудной клетки.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/pilates_mat/direct_3.jpg",
+          webp: "/images/current_direction/pilates_mat/direct_3.webp",
+        },
+        content:
+          "<strong>Преимущества Пилатес Мат:</strong><ul><li>Помогает улучшить осанку</li><li>Снимает зажимы и боли в шейном отделе</li><li>Помогает контролировать вес</li><li>Снимает стресс и тревожность</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "pilates_mat",
   },
   soft_balance: {
+    directions: null,
+    team: null,
     direction: "SOFT BALANCE",
-    description: "Группа женщин выполняет динамичное упражнение на боковую стойку в зале. Все одеты в спортивную форму и активно двигаются, поднимая руки вверх. Атмосфера энергичная.",
+    description:
+      "Группа женщин выполняет динамичное упражнение на боковую стойку в зале. Все одеты в спортивную форму и активно двигаются, поднимая руки вверх. Атмосфера энергичная.",
     images_url: {
       jpg: "/images/directions/result_direction_19.jpeg",
       webp: "/images/directions/result_direction_19.webp",
     },
-    path: "/soft_balance",
+    hero: {
+      description:
+        "<h1>SOFT BALANCE</h1><p>Программа SOFT BALANCE поможет поддерживать тело в тонусе. Занятия проходят с использованием специальной балансировочной подушки. Подушка состоит из сверхмягкого пенного материала — миллионов воздушных пузырьков, которые сжимаются во время тренировки, что дает вам ощущение нахождения на облаке.</p><p>Программа разработана специалистами Moreon Fitness.</p>",
+      images_url: {
+        jpg: "/images/current_direction/soft_balance/direct_1.jpg",
+        webp: "/images/current_direction/soft_balance/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/soft_balance/direct_2.jpg",
+          webp: "/images/current_direction/soft_balance/direct_2.webp",
+        },
+        content:
+          "<strong>SOFT BALANCE</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>У вас сидячий образ жизни, вы мало двигаетесь? Вы можете столкнуться с нарушением двигательной функции и системы кровообращения, болью в суставах, набором веса.</p><p>Программа SOFT BALANCE поможет поддерживать тело в тонусе. Занятия проходят с использованием специальной балансировочной подушки. Подушка состоит из сверхмягкого пенного материала — миллионов воздушных пузырьков, которые сжимаются во время тренировки, что дает вам ощущение нахождения на облаке.</p><p>Программа разработана специалистами Moreon Fitness.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/soft_balance/direct_1.jpg",
+          webp: "/images/current_direction/soft_balance/direct_1.webp",
+        },
+        content:
+          "<strong>Тренировки помогают:</strong><ul><li>Улучшить координацию</li><li>Снизить риск травмирования суставов</li><li>Улучшить осанку и двигательную функцию</li><li>Поддерживать мышцы в тонусе</li><li>Улучшить кровообращение</li><li>Контролировать вес</li></ul><p>Балансируй как на облаке!</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "soft_balance",
   },
   hatha_yoga: {
+    directions: null,
+    team: null,
     direction: "HATHA YOGA",
-    description: "Группа женщин выполняет упражнение на растяжку в зале. Они лежат на ковриках, поднимая ноги и руки вверх, создавая синхронные движения. Освещение мягкое, атмосфера спокойная.",
+    description:
+      "Группа женщин выполняет упражнение на растяжку в зале. Они лежат на ковриках, поднимая ноги и руки вверх, создавая синхронные движения. Освещение мягкое, атмосфера спокойная.",
     images_url: {
       jpg: "/images/directions/result_direction_20.jpeg",
       webp: "/images/directions/result_direction_20.webp",
     },
-    path: "/hatha_yoga",
+    hero: {
+      description:
+        "<h1>ХАТХА YOGA</h1><p>Хатха-йога — верный способ укрепить физическое здоровье и равновесие духа, познать возвышенное и умиротворенное состояние. Хатха-йога — это не просто фитнес, это искусство отдыха и расслабления.</p>",
+      images_url: {
+        jpg: "/images/current_direction/hatha_yoga/direct_1.jpg",
+        webp: "/images/current_direction/hatha_yoga/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/hatha_yoga/direct_2.jpg",
+          webp: "/images/current_direction/hatha_yoga/direct_2.webp",
+        },
+        content:
+          "<strong>ХАТХА YOGA</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> начинающий, продвинутый</span><br><b>Возраст:</b><span> взрослые</span><br><p>Хатха-йога — верный способ укрепить физическое здоровье и равновесие духа, познать возвышенное и умиротворенное состояние. Хатха-йога — это не просто фитнес, это искусство отдыха и расслабления.</p><p>Йога снимает лишнюю нагрузку с суставов и позвоночника, учит контролировать дыхание и эмоции, очищает сознание и проясняет мысли.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/hatha_yoga/direct_3.jpg",
+          webp: "/images/current_direction/hatha_yoga/direct_3.webp",
+        },
+        content:
+          "<strong>Преимущества хатха-йоги:</strong><ul><li>Замедляет старение</li><li>Повышает выносливость, силу и эластичность мышц</li><li>Увеличивает работоспособность</li><li>Развивает внимательность и пробуждает жизненные силы</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "hatha_yoga",
   },
   cross_training: {
+    directions: null,
+    team: null,
     direction: "КроссТренинг",
-    description: "Мужчина и женщина выполняют упражнение на прыжки с подъемом ноги в помещении. Они одеты в спортивную форму, сосредоточены на тренировке. Освещение яркое, фон простой.",
+    description:
+      "Мужчина и женщина выполняют упражнение на прыжки с подъемом ноги в помещении. Они одеты в спортивную форму, сосредоточены на тренировке. Освещение яркое, фон простой.",
     images_url: {
       jpg: "/images/directions/result_direction_21.jpeg",
       webp: "/images/directions/result_direction_21.webp",
     },
-    path: "/cross_training",
+    hero: {
+      description:
+        "<h1>КроссТренинг</h1><p>Тренировки в стиле КроссФит — это программа упражнений на силу и выносливость, состоящая в основном из анаэробных упражнений, гимнастики (упражнения с весом собственного тела) и тяжёлой атлетики. Помогают укрепить мускулатуру и избавиться от жировых отложений.</p>",
+      images_url: {
+        jpg: "/images/current_direction/cross_training/direct_1.jpg",
+        webp: "/images/current_direction/cross_training/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/cross_training/direct_2.jpg",
+          webp: "/images/current_direction/cross_training/direct_2.webp",
+        },
+        content:
+          "<strong>КроссТренинг</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> Для всех</span><br><b>Возраст:</b><span> Взрослые и юниоры</span><br><p>КроссТренинг — это тренировки в стиле КроссФит, программа упражнений на силу и выносливость, состоящая в основном из анаэробных упражнений, гимнастики (упражнения с весом собственного тела) и тяжёлой атлетики. Помогают укрепить мускулатуру и избавиться от жировых отложений.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/cross_training/direct_3.jpg",
+          webp: "/images/current_direction/cross_training/direct_3.webp",
+        },
+        content:
+          "<p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "cross_training",
   },
   abs_streth: {
+    directions: null,
+    team: null,
     direction: "ABS+STRETH",
-    description: "Женщина выполняет упражнение на пресс, лежа на коврике. Она поднимает корпус и сгибает ноги, одета в спортивную форму. Освещение мягкое, фон простой.",
+    description:
+      "Женщина выполняет упражнение на пресс, лежа на коврике. Она поднимает корпус и сгибает ноги, одета в спортивную форму. Освещение мягкое, фон простой.",
     images_url: {
       jpg: "/images/directions/result_direction_22.jpeg",
       webp: "/images/directions/result_direction_22.webp",
     },
-    path: "/abs_streth",
+    hero: {
+      description:
+        "<h1>МФР+Stretching</h1><p>МФР+STRETCHING — низкоинтенсивный комплекс упражнений, в котором используются приемы самомассажа. Занятия проводятся с использованием мячей, роллов для пилатеса. Упражнения позволяют расслабить мышцы и фасции, а затем растянуть их.</p>",
+      images_url: {
+        jpg: "/images/current_direction/abs_streth/direct_1.jpg",
+        webp: "/images/current_direction/abs_streth/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/abs_streth/direct_2.jpg",
+          webp: "/images/current_direction/abs_streth/direct_2.webp",
+        },
+        content:
+          "<strong>Фитнес-тестирование</strong><b>Продолжительность:</b><span> 55 мин</span><b>Уровень подготовленности:</b><span>для всех</span><b>Возраст:</b><span>взрослые</span><p>МФР+STRETCHING — низкоинтенсивный комплекс упражнений, в котором используются приемы самомассажа. Занятия проводятся с использованием мячей, роллов для пилатеса. Упражнения позволяют расслабить мышцы и фасции, а затем растянуть их.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/abs_streth/direct_3.jpg",
+          webp: "/images/current_direction/abs_streth/direct_3.webp",
+        },
+        content:
+          "<strong>Польза МФР+Stretching:</strong><ul><li>помогает снять мышечное напряжение и зажимы в теле;</li><li>помогает избавиться от болевых ощущений;</li><li>улучшает кровообращение;</li><li>избавляет от депрессии, беспокойства и бессонницы.</li></ul><p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку.</p>",
+      },
+    ],
+    path: "abs_streth",
   },
   hot_iron_1: {
+    directions: null,
+    team: null,
     direction: "HOT IRON 1",
-    description: "Женщина выполняет упражнение с гантелями, стоя на коврике в тренажерном зале. Она одета в спортивную форму и сосредоточена на технике выполнения. Освещение яркое, фон простой.",
+    description:
+      "Женщина выполняет упражнение с гантелями, стоя на коврике в тренажерном зале. Она одета в спортивную форму и сосредоточена на технике выполнения. Освещение яркое, фон простой.",
     images_url: {
       jpg: "/images/directions/result_direction_24.jpeg",
       webp: "/images/directions/result_direction_24.webp",
     },
-    path: "/hot_iron_1",
+    hero: {
+      description:
+        "<h1>HOT IRON 1</h1><p>Силовая тренировка на все группы мышц с использованием штанги, степ-платформ и ковриков, направленная на жиросжигание и силовую выносливость.</p>",
+      images_url: {
+        jpg: "/images/current_direction/hot_iron_1/direct_1.jpg",
+        webp: "/images/current_direction/hot_iron_1/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/hot_iron_1/direct_2.jpg",
+          webp: "/images/current_direction/hot_iron_1/direct_2.webp",
+        },
+        content:
+          "<strong>HOT IRON 1</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> для всех</span><br><p>Силовая тренировка на все группы мышц с использованием штанги, степ-платформ и ковриков, направленная на жиросжигание и силовую выносливость. Во время занятия на каждую группу мышц отводится от 3 до 5 минут и обеспечивается полная прокачка всего тела.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/hot_iron_1/direct_3.jpg",
+          webp: "/images/current_direction/hot_iron_1/direct_3.webp",
+        },
+        content:
+          "<p>Лицензионная программа IRON SYSTEMS</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "hot_iron_1",
   },
   hot_iron_2: {
+    directions: null,
+    team: null,
     direction: "HOT IRON 2",
-    description: "Мужчина выполняет упражнение с гантелями, стоя на одной ноге в тренажерном зале. Он одет в спортивную форму и сосредоточен на технике выполнения. Второй человек стоит рядом, наблюдая за ним.",
+    description:
+      "Мужчина выполняет упражнение с гантелями, стоя на одной ноге в тренажерном зале. Он одет в спортивную форму и сосредоточен на технике выполнения. Второй человек стоит рядом, наблюдая за ним.",
     images_url: {
       jpg: "/images/directions/result_direction_25.jpeg",
       webp: "/images/directions/result_direction_25.webp",
     },
-    path: "/hot_iron_2",
+    hero: {
+      description:
+        "<h1>HOT IRON 2</h1><p>Силовая тренировка на все группы мышц с использованием штанги, степ-платформ и ковриков, направленная на жиросжигание и силовую выносливость.</p>",
+      images_url: {
+        jpg: "/images/current_direction/hot_iron_2/direct_1.jpg",
+        webp: "/images/current_direction/hot_iron_2/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/hot_iron_2/direct_2.jpg",
+          webp: "/images/current_direction/hot_iron_2/direct_2.webp",
+        },
+        content:
+          "<strong>HOT IRON 2</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> продвинутый</span><br><p>Силовая тренировка на все группы мышц с использованием штанги, степ-платформ и ковриков, направленная на жиросжигание и силовую выносливость. Во время занятия на каждую группу мышц отводится от 3 до 5 минут и обеспечивается полная прокачка всего тела.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/hot_iron_2/direct_3.jpg",
+          webp: "/images/current_direction/hot_iron_2/direct_3.webp",
+        },
+        content:
+          "<strong>Лицензионная программа IRON SYSTEMS</strong><p>Рекомендуется для тех, кто прошел 1 уровень HOT IRON</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "hot_iron_2",
   },
   les_mills_grit: {
+    directions: null,
+    team: null,
     direction: "LES MILLS GRIT",
-    description: "Группа людей выполняет упражнения с эспандерами на открытом воздухе. Они одеты в спортивную форму и двигаются синхронно, сосредоточившись на тренировке. Атмосфера активная и дружелюбная.",
+    description:
+      "Группа людей выполняет упражнения с эспандерами на открытом воздухе. Они одеты в спортивную форму и двигаются синхронно, сосредоточившись на тренировке. Атмосфера активная и дружелюбная.",
     images_url: {
       jpg: "/images/directions/result_direction_26.jpeg",
       webp: "/images/directions/result_direction_26.webp",
     },
-    path: "/les_mills_grit",
+    hero: {
+      description:
+        "<h1>LES MILLS GRIT</h1><p>МОРЕОН GRIT — это 30 минут суперинтенсивного фитнеса и 15 минут упражнений на пресс и растяжку. Благодаря комплексу силовых упражнений с использованием гантелей, штанги и фитнес-платформы задействованы все основные группы мышц.</p>",
+      images_url: {
+        jpg: "/images/current_direction/les_mills_grit/direct_1.jpg",
+        webp: "/images/current_direction/les_mills_grit/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/les_mills_grit/direct_2.jpg",
+          webp: "/images/current_direction/les_mills_grit/direct_2.webp",
+        },
+        content:
+          "<strong>LES MILLS GRIT</strong><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> продвинутый</span><br><b>Возраст:</b><span> взрослые</span><br><p>МОРЕОН GRIT — это 30 минут суперинтенсивного фитнеса и 15 минут упражнений на пресс и растяжку. Благодаря комплексу силовых упражнений с использованием гантелей, штанги и фитнес-платформы задействованы все основные группы мышц.</p><p>По окончании программы метаболизм в организме продолжается еще несколько часов. Эта тренировка практически ничем не отличается от кроссфита. Нагрузка достаточно большая и подходит как для женщин, так и для мужчин. Это тренировка унисекс.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/les_mills_grit/direct_3.jpg",
+          webp: "/images/current_direction/les_mills_grit/direct_3.webp",
+        },
+        content:
+          "<strong>Польза занятий МОРЕОН GRIT:</strong><ul><li>Тренируется выносливость</li><li>Эффективно сжигаются калории</li><li>Мышцы поддерживаются в тонусе</li><li>Тренируется не только тело, но и сила духа</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "les_mills_grit",
   },
   thinner: {
+    directions: null,
+    team: null,
     direction: "Похудей-ка",
-    description: "Женщина измеряет талию сантиметром. На экране показано значение 90,2 см. Она одета в спортивную форму, сосредоточена на контроле параметров фигуры.",
+    description:
+      "Женщина измеряет талию сантиметром. На экране показано значение 90,2 см. Она одета в спортивную форму, сосредоточена на контроле параметров фигуры.",
     images_url: {
       jpg: "/images/directions/result_direction_27.jpeg",
       webp: "/images/directions/result_direction_27.webp",
     },
-    path: "/thinner",
+    hero: {
+      description:
+        "<h1>Похудей-ка</h1><p>Комплекс физических упражнений, составленный с использованием различных методов: аэробной тренировки, интервально-круговой тренировки, силовой. Это уникальный метод снижения веса и коррекции фигуры.</p>",
+      images_url: {
+        jpg: "/images/current_direction/thinner/direct_1.jpg",
+        webp: "/images/current_direction/thinner/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/thinner/direct_2.jpg",
+          webp: "/images/current_direction/thinner/direct_2.webp",
+        },
+        content:
+          "<strong>Похудей-ка</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><p>Комплекс физических упражнений, составленный с использованием различных методов: аэробной тренировки, интервально-круговой тренировки, силовой. Это уникальный метод снижения веса и коррекции фигуры.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/thinner/direct_3.jpg",
+          webp: "/images/current_direction/thinner/direct_3.webp",
+        },
+        content:
+          "<p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "thinner",
   },
   les_mills_core: {
+    directions: null,
+    team: null,
     direction: "LES MILLS CORE",
-    description: "Группа женщин выполняет упражнение с эспандерами в тренажерном зале. Они одеты в спортивную форму и двигаются синхронно, сосредоточившись на растяжке мышц. Атмосфера активная.",
+    description:
+      "Группа женщин выполняет упражнение с эспандерами в тренажерном зале. Они одеты в спортивную форму и двигаются синхронно, сосредоточившись на растяжке мышц. Атмосфера активная.",
     images_url: {
       jpg: "/images/directions/result_direction_28.jpeg",
       webp: "/images/directions/result_direction_28.webp",
     },
-    path: "/les_mills_core",
+    hero: {
+      description:
+        "<h1>LES MILLS CORE</h1><p>Мышцы кора – эта группа мышц, расположенных в центральной части тела человека. Они отвечают за стабилизацию и равновесие нашего тела и внутренних органов.</p><p>Прорабатывая кор, программа LES MILLS CORE создает фундамент для более сильного тела.</p>",
+      images_url: {
+        jpg: "/images/current_direction/les_mills_core/direct_1.jpg",
+        webp: "/images/current_direction/les_mills_core/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/les_mills_core/direct_2.jpg",
+          webp: "/images/current_direction/les_mills_core/direct_2.webp",
+        },
+        content:
+          "<strong>LES MILLS CORE</strong><br><b>Продолжительность:</b><span> 30/45 минут</span><br><b>Возраст:</b><span> взрослые</span><br><p><strong>LES MILLS CORE</strong> – это 45 или 30-минутная тренировка кора, которая гарантирует быстрый результат, независимо от уровня подготовки.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/les_mills_core/direct_3.jpg",
+          webp: "/images/current_direction/les_mills_core/direct_3.webp",
+        },
+        content:
+          "<p>Мышцы кора – это группа мышц, расположенных в центральной части тела человека. Они отвечают за стабилизацию и равновесие нашего тела и внутренних органов.</p><p>Прорабатывая кор, программа LES MILLS CORE создает фундамент для более сильного тела.</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "les_mills_core",
   },
   real_ryder: {
+    directions: null,
+    team: null,
     direction: "REAL RYDER",
-    description: "Мужчина тренируется на велотренажере в современном фитнес-центре. Освещение синее, оборудование профессиональное, фон выглядит технологичным и стильным.",
+    description:
+      "Мужчина тренируется на велотренажере в современном фитнес-центре. Освещение синее, оборудование профессиональное, фон выглядит технологичным и стильным.",
     images_url: {
       jpg: "/images/directions/result_direction_29.jpeg",
       webp: "/images/directions/result_direction_29.webp",
     },
-    path: "/real_ryder",
+    hero: {
+      description:
+        "<h1>REAL RYDER</h1><p>RealRyder® – это динамичный вело-тренажер, который симулирует езду на велосипеде. Во время тренировки сжигается большое количество калорий. RealRyder создает ощущение настоящей велогонки. Максимальная реалистичность, динамика и плавность движений в трех измерениях.</p>",
+      images_url: {
+        jpg: "/images/current_direction/real_ryder/direct_1.jpg",
+        webp: "/images/current_direction/real_ryder/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/real_ryder/direct_2.jpg",
+          webp: "/images/current_direction/real_ryder/direct_2.webp",
+        },
+        content:
+          "<strong>REAL RYDER</strong><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>RealRyder® – это динамичный вело-тренажер, который симулирует езду на велосипеде. Во время тренировки сжигается большое количество калорий. RealRyder создает ощущение настоящей велогонки. Максимальная реалистичность, динамика и плавность движений в трех измерениях.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/real_ryder/direct_3.jpg",
+          webp: "/images/current_direction/real_ryder/direct_3.webp",
+        },
+        content:
+          "<strong>Польза тренировок REALRYDER (сайкл):</strong><ul><li>Тренируется выносливость</li><li>Эффективно сжигаются калории</li><li>Мышцы укрепляются и поддерживаются в тонусе</li><li>Улучшается кровообращение</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "real_ryder",
   },
   step: {
+    directions: null,
+    team: null,
     direction: "STEP",
-    description: "Группа женщин выполняет упражнения на ступеньках в тренажерном зале. Они одеты в спортивную форму и активно работают над мышцами ног, двигаясь синхронно. Атмосфера энергичная.",
+    description:
+      "Группа женщин выполняет упражнения на ступеньках в тренажерном зале. Они одеты в спортивную форму и активно работают над мышцами ног, двигаясь синхронно. Атмосфера энергичная.",
     images_url: {
       jpg: "/images/directions/result_direction_30.jpeg",
       webp: "/images/directions/result_direction_30.webp",
     },
-    path: "/step",
+    hero: {
+      description:
+        "<h1>STEP</h1><p>Для тех, кто хочет сбросить вес, скорректировать проблемные зоны (ноги, ягодицы, живот), нужна аэробная и силовая нагрузка. STEP сочетает в себе и то, и другое, и даже включает элементы танцев. Это одна из лучших фитнес-программ, признанных во всем мире.</p>",
+      images_url: {
+        jpg: "/images/current_direction/step/direct_1.jpg",
+        webp: "/images/current_direction/step/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/step/direct_2.jpg",
+          webp: "/images/current_direction/step/direct_2.webp",
+        },
+        content:
+          "<strong>STEP</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровни подготовленности:</b><span> для начинающих, подготовленных и продвинутых</span><br><b>Возраст:</b><span> юниоры, взрослые</span><br><p>Степ-аэробика состоит из набора базовых шагов, соединенных в связки (комбинации). Тренировки проходят под быструю ритмичную музыку с использованием степ-платформ. Платформы имеют регулируемую высоту, которая позволяет увеличить или уменьшить сложность тренировки.</p><p>Уровень сложности шагов и связок зависит от конкретного урока. STEP I – занятия для новичков, изучение базовых шагов. STEP INTERVAL – чередуем аэробную и силовую нагрузку, рекомендуется для тех, кто уже изучил базовые движения. STEP PRO – усложненная хореография, высокий темп, уровень для продвинутых.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/step/direct_3.jpg",
+          webp: "/images/current_direction/step/direct_3.webp",
+        },
+        content:
+          "<strong>Тренировки помогают:</strong><ul><li>Поддерживать мышцы в тонусе</li><li>Улучшить кровообращение</li><li>Контролировать вес</li><li>Улучшить выносливость</li><li>Развить координацию движений</li><li>Повысить жизненный тонус и улучшить настроение</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "step",
   },
   step_pro: {
+    directions: null,
+    team: null,
     direction: "STEP PRO",
-    description: "Женщина позирует в тренажерном зале, одета в спортивную форму. На заднем плане видны другие люди, занимающиеся на тренажерах. Освещение яркое, атмосфера активная и динамичная.",
+    description:
+      "Женщина позирует в тренажерном зале, одета в спортивную форму. На заднем плане видны другие люди, занимающиеся на тренажерах. Освещение яркое, атмосфера активная и динамичная.",
     images_url: {
       jpg: "/images/directions/result_direction_31.jpeg",
       webp: "/images/directions/result_direction_31.webp",
     },
-    path: "/step_pro",
+    hero: {
+      description:
+        "<h1>STEP PRO</h1><p>STEP PRO — это направление степ-аэробики продвинутого уровня. Совершенствование техники движений на step-платформе. Степ-аэробика является очень популярным классом на групповых занятиях благодаря эффективной и при этом щадящей для суставов нагрузке.</p>",
+      images_url: {
+        jpg: "/images/current_direction/step_pro/direct_1.jpg",
+        webp: "/images/current_direction/step_pro/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/step_pro/direct_2.jpg",
+          webp: "/images/current_direction/step_pro/direct_2.webp",
+        },
+        content:
+          "<strong>STEP PRO</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>STEP PRO — это направление степ-аэробики продвинутого уровня. Совершенствование техники движений на step-платформе. Степ-аэробика является очень популярным классом на групповых занятиях благодаря эффективной и при этом щадящей для суставов нагрузке.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/step_pro/direct_3.jpg",
+          webp: "/images/current_direction/step_pro/direct_3.webp",
+        },
+        content:
+          "<strong>Тренировка на степ-платформе поможет вам:</strong><ul><li>Получить хорошую фигуру</li><li>Натренировать сердечную мышцу</li><li>Развить выносливость</li><li>Улучшить координацию движений</li><li>Укрепить мышцы</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "step_pro",
   },
   pro_jumping: {
+    directions: null,
+    team: null,
     direction: "PRO JUMPING",
-    description: "Две женщины выполняют упражнения на тренажерах в помещении. Одна занимается на степ-платформе, другая — на мини-тренировочном батуте. Они одеты в спортивную форму и сосредоточены на тренировке.",
+    description:
+      "Две женщины выполняют упражнения на тренажерах в помещении. Одна занимается на степ-платформе, другая — на мини-тренировочном батуте. Они одеты в спортивную форму и сосредоточены на тренировке.",
     images_url: {
       jpg: "/images/directions/result_direction_32.jpeg",
       webp: "/images/directions/result_direction_32.webp",
     },
-    path: "/pro_jumping",
+    hero: {
+      description:
+        "<h1>PRO JUMPING</h1><p>Мини-батут позволяет прокачать все тело сразу. Не нужно делать отдельные комплексы для ног, рук, пресса и проблемных зон. Во время прыжка работает абсолютно всё тело! Pro Jumping ускоряет процессы похудения и оптимизацию вашей фигуры.</p>",
+      images_url: {
+        jpg: "/images/current_direction/pro_jumping/direct_1.jpg",
+        webp: "/images/current_direction/pro_jumping/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/pro_jumping/direct_2.jpg",
+          webp: "/images/current_direction/pro_jumping/direct_2.webp",
+        },
+        content:
+          "<strong>PRO JUMPING</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> для всех</span><br><p>Мини-батут позволяет прокачать все тело сразу. Не нужно делать отдельные комплексы для ног, рук, пресса и проблемных зон. Во время прыжка работает абсолютно всё тело! Причем нагрузка распределяется равномерно. Эффект полета дарит дополнительную мотивацию заниматься. Pro Jumping ускоряет процессы похудения и оптимизацию вашей фигуры.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/pro_jumping/direct_3.jpg",
+          webp: "/images/current_direction/pro_jumping/direct_3.webp",
+        },
+        content:
+          "<p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "pro_jumping",
   },
   step_interval: {
+    directions: null,
+    team: null,
     direction: "STEP-INTERVAL",
-    description: "Группа людей выполняет упражнения на ступеньках в тренажерном зале. Они одеты в спортивную форму и активно работают над мышцами ног, двигаясь синхронно. Освещение яркое, фон простой.",
+    description:
+      "Группа людей выполняет упражнения на ступеньках в тренажерном зале. Они одеты в спортивную форму и активно работают над мышцами ног, двигаясь синхронно. Освещение яркое, фон простой.",
     images_url: {
       jpg: "/images/directions/result_direction_33.jpeg",
       webp: "/images/directions/result_direction_33.webp",
     },
-    path: "/step_interval",
+    hero: {
+      description:
+        "<h1>STEP-INTERVAL</h1><p>Специальная тренировка с использованием степ-платформы и различного оборудования, построенная на чередовании аэробной и силовой нагрузки. Рекомендуется для имеющих начальную подготовку.</p>",
+      images_url: {
+        jpg: "/images/current_direction/step_interval/direct_1.jpg",
+        webp: "/images/current_direction/step_interval/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/step_interval/direct_2.jpg",
+          webp: "/images/current_direction/step_interval/direct_2.webp",
+        },
+        content:
+          "<strong>STEP-INTERVAL</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><p>Специальная тренировка с использованием степ-платформы и различного оборудования, построенная на чередовании аэробной и силовой нагрузки. Рекомендуется для имеющих начальную подготовку.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/step_interval/direct_3.jpg",
+          webp: "/images/current_direction/step_interval/direct_3.webp",
+        },
+        content:
+          "<strong>Польза занятий Step Interval:</strong><ul><li>Интенсивное развитие выносливости, равновесия, пластичности и ловкости</li><li>Приведение в тонус ягодиц и внутренней части бедра — происходит не наращивание мышц, а сушка тела</li><li>Профилактика таких заболеваний суставов, как артрит, остеопороз</li><li>Сброс лишнего веса</li><li>Уплотнение костной ткани и предотвращение болезней костей в старости</li><li>Устранение последствий гиподинамии</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "step_interval",
   },
   infant_swimming: {
+    directions: null,
+    team: null,
     direction: "Грудничковое плавание",
-    description: "Маленький ребенок в голубой шапочке для плавания тренируется в бассейне, используя жевательный поплавок. Вода ярко-зеленая, атмосфера спокойная и безопасная.",
+    description:
+      "Маленький ребенок в голубой шапочке для плавания тренируется в бассейне, используя жевательный поплавок. Вода ярко-зеленая, атмосфера спокойная и безопасная.",
     images_url: {
       jpg: "/images/directions/result_direction_34.jpeg",
       webp: "/images/directions/result_direction_34.webp",
     },
-    path: "/infant_swimming",
+    hero: {
+      description:
+        "<h1>Грудничковое плавание</h1><p>Плавание — один из самых полезных видов спорта, практически не имеющий противопоказаний. Плавание в воде оказывает эффект физиологического массажа мышц ребенка, положительно воздействует на кожные покровы и активизирует кровоснабжение.</p><p>Мы работаем с малышами практически с рождения. Наши профессиональные тренеры проводят групповые и индивидуальные занятия для детей от 2 месяцев.</p>",
+      images_url: {
+        jpg: "/images/current_direction/infant_swimming/direct_1.jpg",
+        webp: "/images/current_direction/infant_swimming/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/infant_swimming/direct_2.jpg",
+          webp: "/images/current_direction/infant_swimming/direct_2.webp",
+        },
+        content:
+          "<strong>Грудничковое плавание</strong><p>Занятия в бассейне для грудничков позволяют укрепить мышечную систему новорожденного, иммунитет, повысить уровень доверия между родителями и ребенком. Занятия в воде дают положительные эмоции малышу и взрослым.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/infant_swimming/direct_3.jpg",
+          webp: "/images/current_direction/infant_swimming/direct_3.webp",
+        },
+        content:
+          "<strong>Занятия проходят в бассейне Золотые рыбки</strong><p>Бассейн находится на территории самого большого аквапарка Москвы. Длина бассейна составляет 12 метров, глубина 1,2 метра. Зал оснащен всем необходимым оборудованием и инвентарем.</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "infant_swimming",
   },
-  swimming_children: {
+  childrens_swimming: {
+    directions: null,
+    team: null,
     direction: "Плавание для детей",
-    description: "Маленький ребенок плавает в бассейне, одетый в синие очки для плавания. Он держит красно-белую игрушку и весело плывет на спине. Вода ярко-синяя, атмосфера легкая и радостная.",
+    description:
+      "Маленький ребенок плавает в бассейне, одетый в синие очки для плавания. Он держит красно-белую игрушку и весело плывет на спине. Вода ярко-синяя, атмосфера легкая и радостная.",
     images_url: {
       jpg: "/images/directions/result_direction_35.jpeg",
       webp: "/images/directions/result_direction_35.webp",
     },
-    path: "/swimming_children",
+    hero: {
+      description:
+        "<h1>Плавание для детей</h1><p>Плавание — один из самых полезных видов спорта, практически не имеющий противопоказаний. Мы работаем с малышами практически с рождения. Наши профессиональные тренеры проводят групповые и индивидуальные занятия для детей от 0 до 13 лет.</p>",
+      images_url: {
+        jpg: "/images/current_direction/childrens_swimming/direct_1.jpg",
+        webp: "/images/current_direction/childrens_swimming/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/childrens_swimming/direct_2.jpg",
+          webp: "/images/current_direction/childrens_swimming/direct_2.webp",
+        },
+        content:
+          "<strong>Это больше, чем просто плавание:</strong><ul><li>2 бассейна для тренировок</li><li>Разделение по возрастам и уровню навыков</li><li>Тренер в воде вместе с детьми</li><li>Без погони за нормативами</li><li>Продолжительность занятия от 45 минут</li><li>Бесплатная пробная тренировка</li></ul><p>Мы знаем, как полюбить воду и поможем вашим деткам!</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/childrens_swimming/direct_3.jpg",
+          webp: "/images/current_direction/childrens_swimming/direct_3.webp",
+        },
+        content:
+          "<b>Особенности занятий:</b><ul><li>2 специализированных бассейна</li><li>Группы формируются по возрасту и уровню подготовки</li><li>Индивидуальный подход - тренер находится в воде</li><li>Акцент на удовольствие от процесса, а не на нормативы</li><li>Оптимальная продолжительность - от 45 минут</li><li>Возможность бесплатно попробовать</li></ul><p>Наша методика помогает детям полюбить воду и получать удовольствие от плавания!</p><p><b>Контакты для записи:</b>Телефон: <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "swimming_children",
   },
   school_competitive_swimming: {
+    directions: null,
+    team: null,
     direction: "Школа спортивного плавания",
-    description: "Маленький ребенок плавает в бассейне, одетый в шапочку и очки для плавания. Он выполняет технику брасса, сосредоточенно двигая руками и ногами. Вода ярко-синяя, атмосфера спортивная.",
+    description:
+      "Маленький ребенок плавает в бассейне, одетый в шапочку и очки для плавания. Он выполняет технику брасса, сосредоточенно двигая руками и ногами. Вода ярко-синяя, атмосфера спортивная.",
     images_url: {
       jpg: "/images/directions/result_direction_36.jpeg",
       webp: "/images/directions/result_direction_36.webp",
     },
-    path: "/school_competitive_swimming",
+    hero: {
+      description:
+        "<h1>Школа спортивного плавания</h1><p>Плавание способствует оздоровлению организма, укрепляет иммунитет и поднимает настроение. В Школе спортивного плавания занимаются дети от 7 лет под чутким контролем опытных тренеров с многолетним стажем.</p>",
+      images_url: {
+        jpg: "/images/current_direction/school_competitive_swimming/direct_1.jpg",
+        webp: "/images/current_direction/school_competitive_swimming/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/school_competitive_swimming/direct_2.jpg",
+          webp: "/images/current_direction/school_competitive_swimming/direct_2.webp",
+        },
+        content:
+          "<strong>Школа спортивного плавания</strong><p>Сделайте первый шаг на пути к новым рекордам и достижениям! Нам важно не просто научить плавать, познакомить с разными техниками плавания, но и чтобы ребенку это нравилось!</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/school_competitive_swimming/direct_3.jpg",
+          webp: "/images/current_direction/school_competitive_swimming/direct_3.webp",
+        },
+        content:
+          "<strong>Школа спортивного плавания</strong><p>Занятия проходят в 25-метровом бассейне в группах, сформированных с учетом возраста и уровня подготовки. В обучении используется профессиональное оборудование: доски, нудлы, ласты.</p><p>Плавание — жизненно важный навык, который должен освоить каждый ребенок.</p><p>Записаться на тренировку можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "school_competitive_swimming",
   },
   swimming_adults: {
+    directions: null,
+    team: null,
     direction: "Плавание для взрослых",
-    description: "Спортсменка плавает в бассейне, выполняя технику брасса. Она одета в очки для плавания и яркий купальник с рисунком. Вода вокруг нее бурлит от движения, создавая динамичную атмосферу тренировки.",
+    description:
+      "Спортсменка плавает в бассейне, выполняя технику брасса. Она одета в очки для плавания и яркий купальник с рисунком. Вода вокруг нее бурлит от движения, создавая динамичную атмосферу тренировки.",
     images_url: {
       jpg: "/images/directions/result_direction_37.jpeg",
       webp: "/images/directions/result_direction_37.webp",
     },
-    path: "/swimming_adults",
+    hero: {
+      description:
+        "<h1>Плавание для взрослых</h1><p>Плавание – это отличный вид спорта, подходящий для людей любого возраста. В Мореон Фитнес проводятся групповые и индивидуальные занятия в бассейне.</p>",
+      images_url: {
+        jpg: "/images/current_direction/swimming_adults/direct_1.jpg",
+        webp: "/images/current_direction/swimming_adults/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/swimming_adults/direct_2.jpg",
+          webp: "/images/current_direction/swimming_adults/direct_2.webp",
+        },
+        content:
+          "<strong>Плавание для взрослых</strong><p>Плавание – это отличный вид спорта, подходящий для людей любого возраста. В Мореон Фитнес проводятся групповые и индивидуальные занятия в бассейне. Для начинающих есть уроки с минимальной нагрузкой, силовые уроки с использованием дополнительного оборудования с отягощением в воде для продвинутых, для будущих мам – занятия, где вместе с инструктором вы научитесь правильному дыханию, подберете оптимальную физическую нагрузку.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/swimming_adults/direct_3.jpg",
+          webp: "/images/current_direction/swimming_adults/direct_3.webp",
+        },
+        content:
+          "<strong>Плавание для взрослых</strong><p>Для самых активных спортсменов проводятся соревнования. Укрепляйте свой организм и улучшайте спортивные навыки вместе с нами!</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "swimming_adults",
   },
   aqua_aerobics: {
+    directions: null,
+    team: null,
     direction: "Аквааэробика",
-    description: "Женщина тренируется в бассейне, используя желтый плавательный поплавок. Она одета в черный купальник и сосредоточена на упражнении. Вода ярко-синяя, атмосфера спокойная и активная.",
+    description:
+      "Женщина тренируется в бассейне, используя желтый плавательный поплавок. Она одета в черный купальник и сосредоточена на упражнении. Вода ярко-синяя, атмосфера спокойная и активная.",
     images_url: {
       jpg: "/images/directions/result_direction_38.jpeg",
       webp: "/images/directions/result_direction_38.webp",
     },
-    path: "/aqua_aerobics",
+    hero: {
+      description:
+        "<h1>Акваэробика</h1><p>Аквааэробика – это польза водных процедур и физических упражнений. Аквааэробика является наименее травматичным видом нагрузок и имеет много преимуществ:</p><ul><li>Поддержание хорошей физической формы</li><li>Улучшение осанки</li><li>Контроль веса и избавление от целлюлита</li><li>Укрепление иммунитета</li><li>Снятие напряжения, избавление от стресса</li><li>Нормализация обмена веществ</li><li>Поддержание заряда бодрости и хорошего настроения</li></ul>",
+      images_url: {
+        jpg: "/images/current_direction/aqua_aerobics/direct_1.jpg",
+        webp: "/images/current_direction/aqua_aerobics/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_2.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_2.webp",
+        },
+        content:
+          "<h2>AQUABEGINNERS</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для начинающих</span><br><b>Возраст:</b><span> взрослые</span><br><p>Аквааэробика – самый безопасный и полезный вид спорта для людей с ослабленным здоровьем и пожилых людей.</p><p>AquaBeginners – это уроки для начинающих с минимальной нагрузкой. Используются основные движения в простых комбинациях. Аэробная часть занимает около 25 минут, затем 10-15 минут выполняются упражнения на гибкость и растяжку. Используется дополнительное оборудование – пояс и перчатки. Урок отлично подходит тем, кто первый раз пришел на аквааэробику.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_3.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_3.webp",
+        },
+        content:
+          "<h2>AQUAPRESS</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Aqua Press – это силовая тренировка, направленная на укрепление прямых и косых мышц пресса, спины и ягодиц.</p><p>Занятие развивает силовую выносливость и задействует мышцы-стабилизаторы. Используется дополнительное оборудование – пояс и перчатки.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_4.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_4.webp",
+        },
+        content:
+          "<h2>СУСТАВНАЯ ГИМНАСТИКА</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для начинающих и подготовленных</span><br><b>Возраст:</b><span> взрослые</span><br><p>Суставная гимнастика в бассейне помогает улучшить подвижность суставов и служит хорошей профилактикой остеохондроза.</p><p>Занятие включает в себя простые и доступные упражнения из аквааэробики. Используется дополнительное оборудование: перчатки, гантели, нудлы.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_5.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_5.webp",
+        },
+        content:
+          "<h2>AQUA MIX</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Aqua Mix – комбинированное занятие с элементами классической аквааэробики, силовых упражнений средней интенсивности с гантелями и аква-Noodle (гибкой палки).</p><p>Урок направлен на тренировку сердечно-сосудистой и дыхательной систем организма, на развитие координации, укрепление мышц рук, ног и брюшного пресса, развитие гибкости. Используется дополнительное оборудование – пояс, перчатки, гантели, нудл.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_6.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_6.webp",
+        },
+        content:
+          "<h2>AQUAPOWER</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Aqua Power — аэробно-силовой комплекс упражнений с гантелями, объединяющий кардио-тренировку и растяжку всех групп мышц.</p><p>Урок направлен на тренировку мышц плечевого пояса и пресса и укрепление позвоночника. Дополнительное оборудование – пояс, перчатки.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_7.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_7.webp",
+        },
+        content:
+          "<h2>AQUA NOODLES</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Aqua Noodles – занятия с noodles (мягкими палками). Noodles не только поддерживают тело на воде, но и используются в качестве дополнительного отягощения.</p><p>Урок направлен на тренировку сердечно-сосудистой и дыхательной систем организма, на развитие координации, укрепление мышц рук и ног.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_aerobics/direct_8.jpg",
+          webp: "/images/current_direction/aqua_aerobics/direct_8.webp",
+        },
+        content:
+          "<h2>AQUA LEGS</h2><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><p>AQUA LEGS — аэробно-силовой урок, направленный на проработку мышц ног, с использованием оборудования: аквапояс, NOODLES, или без него.</p>",
+      },
+    ],
+    path: "aqua_aerobics",
   },
   aqua_mom: {
+    directions: null,
+    team: null,
     direction: "Aqua Mama",
-    description: "Дети плавают в бассейне под наблюдением инструктора. Один ребенок, одетый в шапочку для плавания, выполняет упражнение на месте, сосредоточенно двигая руками и ногами. Вода ярко-синяя, атмосфера безопасная и дружелюбная.",
+    description:
+      "Дети плавают в бассейне под наблюдением инструктора. Один ребенок, одетый в шапочку для плавания, выполняет упражнение на месте, сосредоточенно двигая руками и ногами. Вода ярко-синяя, атмосфера безопасная и дружелюбная.",
     images_url: {
       jpg: "/images/directions/result_direction_39.jpeg",
       webp: "/images/directions/result_direction_39.webp",
     },
-    path: "/aqua_mom",
+    hero: {
+      description:
+        "<h1>Aqua Mama</h1><p>Групповое занятие для будущих мам. Вместе с инструктором вы научитесь правильному дыханию, подберете оптимальную физическую нагрузку в соответствии со сроком беременности, избавитесь от боли в пояснице и укрепите мышцы.</p>",
+      images_url: {
+        jpg: "/images/current_direction/aqua_mom/direct_1.jpg",
+        webp: "/images/current_direction/aqua_mom/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_mom/direct_2.jpg",
+          webp: "/images/current_direction/aqua_mom/direct_2.webp",
+        },
+        content:
+          "<strong>Aqua Mama</strong><br><b>Продолжительность:</b><span> 45 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Групповое занятие для будущих мам. Вместе с инструктором вы научитесь правильному дыханию, подберете оптимальную физическую нагрузку в соответствии со сроком беременности, избавитесь от боли в пояснице и укрепите мышцы.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/aqua_mom/direct_3.jpg",
+          webp: "/images/current_direction/aqua_mom/direct_3.webp",
+        },
+        content:
+          "<strong>Польза аквааэробики для беременных:</strong><ul><li>Улучшает кровообращение и работу сердечно-сосудистой системы</li><li>Обеспечивает мягкий массажный эффект для всего тела</li><li>Снижает нагрузку на суставы и позвоночник</li><li>Укрепляет мышцы, важные для беременности и родов</li><li>Помогает снять напряжение в пояснице</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "aqua_mom",
   },
   work_apparatus: {
+    directions: null,
+    team: null,
     direction: "Работа на снарядах",
-    description: "Мужчина в боксерских перчатках готовится к тренировке или бою. Он одет только в нижнее белье, демонстрируя подтянутое тело и сосредоточенное выражение лица. Атмосфера напряженная и спортивная.",
+    description:
+      "Мужчина в боксерских перчатках готовится к тренировке или бою. Он одет только в нижнее белье, демонстрируя подтянутое тело и сосредоточенное выражение лица. Атмосфера напряженная и спортивная.",
     images_url: {
       jpg: "/images/directions/result_direction_40.jpeg",
       webp: "/images/directions/result_direction_40.webp",
     },
-    path: "/work_apparatus",
+    hero: {
+      description:
+        "<h1>Работа на снарядах</h1><p>Работа на снарядах – это возможность улучшить боевые навыки без ущерба для здоровья и внешнего вида.</p>",
+      images_url: {
+        jpg: "/images/current_direction/work_apparatus/direct_1.jpg",
+        webp: "/images/current_direction/work_apparatus/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/work_apparatus/direct_2.jpg",
+          webp: "/images/current_direction/work_apparatus/direct_2.webp",
+        },
+        content:
+          "<strong>Работа на снарядах</strong><p>Снарядная тренировка позволяет:</p><ul><li>Развить все навыки боя: силу, точность, быстроту удара, умение уворачиваться, маневрировать</li><li>Освоить азы боевых искусств: тренировка со снарядами - это база для будущих побед</li><li>Минимизировать травмы: специальные снаряды помогают отрабатывать технику без полноконтактных спаррингов</li></ul>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/work_apparatus/direct_3.jpg",
+          webp: "/images/current_direction/work_apparatus/direct_3.webp",
+        },
+        content:
+          "<strong>Работа на снарядах</strong><p>Работа на снарядах – это возможность улучшить боевые навыки без ущерба для здоровья и внешнего вида.</p><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "work_apparatus",
   },
   box: {
+    directions: null,
+    team: null,
     direction: "Бокс",
-    description: "Два боксера в перчатках стоят друг напротив друга, готовясь к поединку. Один носит синие перчатки, другой — красные. Оба сосредоточены и находятся в боевой позиции, создавая драматичную атмосферу.",
+    description:
+      "Два боксера в перчатках стоят друг напротив друга, готовясь к поединку. Один носит синие перчатки, другой — красные. Оба сосредоточены и находятся в боевой позиции, создавая драматичную атмосферу.",
     images_url: {
       jpg: "/images/directions/result_direction_41.jpeg",
       webp: "/images/directions/result_direction_41.webp",
     },
-    path: "/box",
+    hero: {
+      description:
+        "<h1>Бокс</h1><p>Бокс – это отличная кардионагрузка, равномерное развитие всех групп мышц, а также развитие реакции, координации и выносливости!</p><p>Вы научитесь принимать самостоятельные решения, рассчитывать только на себя, держать удар и сохранять хладнокровие в любой ситуации.</p><p>Занятия проходят в специальных мягких перчатках.</p>",
+      images_url: {
+        jpg: "/images/current_direction/box/direct_1.jpg",
+        webp: "/images/current_direction/box/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/box/direct_2.jpg",
+          webp: "/images/current_direction/box/direct_2.webp",
+        },
+        content:
+          "<strong>Бокс</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Бокс – это отличная кардионагрузка, равномерное развитие всех групп мышц, а также развитие реакции, координации и выносливости! Вы научитесь принимать самостоятельные решения, рассчитывать только на себя, держать удар и сохранять хладнокровие в любой ситуации. Занятия проходят в специальных мягких перчатках.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/box/direct_3.jpg",
+          webp: "/images/current_direction/box/direct_3.webp",
+        },
+        content:
+          "<strong>Польза от занятий боксом:</strong><ul><li>Укрепление здоровья и иммунитета</li><li>Развитие всех групп мышц</li><li>Улучшение обмена веществ</li><li>Развитие быстрой реакции</li><li>Повышение уверенности в себе</li></ul><p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "box",
   },
   grappling: {
+    directions: null,
+    team: null,
     direction: "Грепплинг",
-    description: "Два спортсмена выполняют прием в борьбе или ММА. Один спортсмен находится сверху, контролируя противника, который лежит на полу. Оба одеты в спортивную форму, атмосфера напряженная и сосредоточенная.",
+    description:
+      "Два спортсмена выполняют прием в борьбе или ММА. Один спортсмен находится сверху, контролируя противника, который лежит на полу. Оба одеты в спортивную форму, атмосфера напряженная и сосредоточенная.",
     images_url: {
       jpg: "/images/directions/result_direction_42.jpeg",
       webp: "/images/directions/result_direction_42.webp",
     },
-    path: "/grappling",
+    hero: {
+      description:
+        "<h1>Грепплинг</h1><p>Вид спортивного единоборства, совмещающий в себе технику всех борцовских дисциплин, с минимальными ограничениями по использованию болевых и удушающих приёмов. Этот вид борьбы не включает в себя нанесение ударов и использование оружия.</p>",
+      images_url: {
+        jpg: "/images/current_direction/grappling/direct_1.jpg",
+        webp: "/images/current_direction/grappling/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/grappling/direct_2.jpg",
+          webp: "/images/current_direction/grappling/direct_2.webp",
+        },
+        content:
+          "<strong>Грепплинг</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> Для всех</span><br><b>Возраст:</b><span> Взрослые и юниоры</span><br><p>Вид спортивного единоборства, совмещающий в себе технику всех борцовских дисциплин, с минимальными ограничениями по использованию болевых и удушающих приёмов. Этот вид борьбы не включает в себя нанесение ударов и использование оружия.</p><p>Стремление закончить поединок досрочно, с помощью болевого или удушающего приёма, является отличительной особенностью грепплинга.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/grappling/direct_3.jpg",
+          webp: "/images/current_direction/grappling/direct_3.webp",
+        },
+        content:
+          "<p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "grappling",
   },
   kickboxing: {
+    directions: null,
+    team: null,
     direction: "Кикбоксинг",
-    description: "Боксер в синих перчатках и шортах наносит удар противнику, одетому в красные перчатки. Они находятся в ринге, атмосфера напряженная и динамичная. Боксер сосредоточен на атаке, демонстрируя технику удара.",
+    description:
+      "Боксер в синих перчатках и шортах наносит удар противнику, одетому в красные перчатки. Они находятся в ринге, атмосфера напряженная и динамичная. Боксер сосредоточен на атаке, демонстрируя технику удара.",
     images_url: {
       jpg: "/images/directions/result_direction_43.jpeg",
       webp: "/images/directions/result_direction_43.webp",
     },
-    path: "/kickboxing",
+    hero: {
+      description:
+        "<h1>Кикбоксинг</h1><p>Вид боевых искусств, в котором разрешены удары руками и ногами. В экипировке обязательно присутствуют боксерские перчатки.</p>",
+      images_url: {
+        jpg: "/images/current_direction/kickboxing/direct_1.jpg",
+        webp: "/images/current_direction/kickboxing/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/kickboxing/direct_2.jpg",
+          webp: "/images/current_direction/kickboxing/direct_2.webp",
+        },
+        content:
+          "<strong>Кикбоксинг</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> Для всех</span><br><b>Возраст:</b><span> Взрослые и юниоры</span><br><p>Вид боевых искусств, в котором разрешены удары руками и ногами. В экипировке обязательно присутствуют боксерские перчатки.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/kickboxing/direct_3.jpg",
+          webp: "/images/current_direction/kickboxing/direct_3.webp",
+        },
+        content:
+          "<p>Записаться на занятие можно по телефону <b>+7 (495) 859-03-72</b></p>",
+      },
+    ],
+    path: "kickboxing",
   },
   mma: {
+    directions: null,
+    team: null,
     direction: "ММА",
-    description: "Мужчина выполняет силовое упражнение с гантелями, сосредоточенно работая над мышцами рук и плеч. Он одет в спортивную форму, атмосфера тренировки напряженная и активная.",
+    description:
+      "Мужчина выполняет силовое упражнение с гантелями, сосредоточенно работая над мышцами рук и плеч. Он одет в спортивную форму, атмосфера тренировки напряженная и активная.",
     images_url: {
       jpg: "/images/directions/result_direction_44.jpeg",
       webp: "/images/directions/result_direction_44.webp",
     },
-    path: "/mma",
+    hero: {
+      description:
+        "<h1>ММА</h1><p>Боевые искусства, представляющие собой сочетание множества техник, школ и направлений единоборств. ММА являются полноконтактным боем с применением ударной техники и борьбы как в стойке (клинч), так и на полу (партер).</p>",
+      images_url: {
+        jpg: "/images/current_direction/mma/direct_1.jpg",
+        webp: "/images/current_direction/mma/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/mma/direct_2.jpg",
+          webp: "/images/current_direction/mma/direct_2.webp",
+        },
+        content:
+          "<strong>ММА</strong><br><b>Продолжительность:</b><span> 55 мин</span><br><b>Уровень подготовки:</b><span> Для всех</span><br><b>Возраст:</b><span> Взрослые и юниоры</span><br><p>Боевые искусства, представляющие собой сочетание множества техник, школ и направлений единоборств. ММА являются полноконтактным боем с применением ударной техники и борьбы как в стойке (клинч), так и на полу (партер).</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/mma/direct_3.jpg",
+          webp: "/images/current_direction/mma/direct_3.webp",
+        },
+        content:
+          "<p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "mma",
   },
   latina: {
+    directions: null,
+    team: null,
     direction: "LATINA",
-    description: "Пара танцует вальс на сцене. Мужчина одет в черный костюм, а женщина — в красное платье, раскрывающее движения. Они выполняют элегантные и изящные па, создавая романтическую атмосферу.",
+    description:
+      "Пара танцует вальс на сцене. Мужчина одет в черный костюм, а женщина — в красное платье, раскрывающее движения. Они выполняют элегантные и изящные па, создавая романтическую атмосферу.",
     images_url: {
       jpg: "/images/directions/result_direction_45.jpeg",
       webp: "/images/directions/result_direction_45.webp",
     },
-    path: "/latina",
+    hero: {
+      description:
+        "<h1>LATINA</h1><p>Латина учит двигаться непринужденно и свободно. Программа обучения начинается с базы – активных движений бедрами, развития гибкости и пластики тела, работы ног и рук. Быстрый темп музыки гарантирует физическую нагрузку и заряд позитивной энергии.</p>",
+      images_url: {
+        jpg: "/images/current_direction/latina/direct_1.jpg",
+        webp: "/images/current_direction/latina/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/latina/direct_2.jpg",
+          webp: "/images/current_direction/latina/direct_2.webp",
+        },
+        content:
+          "<strong>LATINA</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые и юниоры</span><br><p>Если вы считаете себя ярким, зажигательным и привлекательным человеком или хотите стать таковым, смело выбирайте танцы латина! Латина — это зажигательный коктейль из пасодобля и джайва, меренге и бачаты, джайва и сальсы, ча-ча-ча и мамбы, самбы и румбы.</p><p>Латина учит двигаться непринужденно и свободно. Программа обучения начинается с базы – активных движений бедрами, развития гибкости и пластики тела, работы ног и рук. Быстрый темп музыки гарантирует физическую нагрузку и заряд позитивной энергии.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/latina/direct_3.jpg",
+          webp: "/images/current_direction/latina/direct_3.webp",
+        },
+        content:
+          "<strong>Польза латинских танцев:</strong><ul><li>Развитие пластики и грации</li><li>Совершенствование осанки и координации</li><li>Эффективное снижение веса</li><li>Повышение уверенности в себе</li><li>Улучшение работы сердечно-сосудистой системы</li></ul><p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "latina",
   },
   multidance: {
+    directions: null,
+    team: null,
     direction: "MULTI DANCE",
-    description: "Группа женщин выполняет танцевальную тренировку на открытом воздухе. Они одеты в яркую спортивную форму и активно двигаются, поднимая руки и ноги. Атмосфера веселая и энергичная.",
+    description:
+      "Группа женщин выполняет танцевальную тренировку на открытом воздухе. Они одеты в яркую спортивную форму и активно двигаются, поднимая руки и ноги. Атмосфера веселая и энергичная.",
     images_url: {
       jpg: "/images/directions/result_direction_46.jpeg",
       webp: "/images/directions/result_direction_46.webp",
     },
-    path: "/multidance",
+    hero: {
+      description:
+        "<h1>MULTI DANCE</h1><p>MULTI DANCE — это смешение стилей и авторский подход к современным танцам. Это отличный способ снять стресс и напряжение после рабочего дня.</p><p>Раскройте свой творческий потенциал, погрузившись в мир музыки, ритма и движения!</p>",
+      images_url: {
+        jpg: "/images/current_direction/multidance/direct_1.jpg",
+        webp: "/images/current_direction/multidance/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/multidance/direct_2.jpg",
+          webp: "/images/current_direction/multidance/direct_2.webp",
+        },
+        content:
+          "<strong>MULTI DANCE</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые и юниоры</span><br><p>MULTI DANCE — смешение стилей и авторское видение современных танцев. Это отличный способ снять стресс и нервное напряжение после трудовых будней. Раскройте свой творческий потенциал, погрузившись в прекрасный мир музыки, ритма и движений!</p><p>На занятиях разучиваются движения из разных стилей: латина, брейк-данс, хаус, джаз-фанк, фри-стайл, стрип-пластика и др. Вместе они объединяются в красивый и неповторимый танец.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/multidance/direct_3.jpg",
+          webp: "/images/current_direction/multidance/direct_3.webp",
+        },
+        content:
+          "<strong>Преимущества MULTI DANCE:</strong><ul><li>Развитие пластики и координации</li><li>Совершенствование чувства ритма</li><li>Снятие стресса и эмоциональная разгрузка</li><li>Улучшение физической формы</li><li>Раскрытие творческого потенциала</li></ul><p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "multidance",
   },
   oriental: {
+    directions: null,
+    team: null,
     direction: "ORIENTAL",
-    description: "Женщина в элегантном черном платье с открытым декольте позирует, демонстрируя изящную фигуру. Ее волосы распущены, а лицо украшено традиционными индийскими узорами на глазах и щеках. Атмосфера загадочная и романтичная.",
+    description:
+      "Женщина в элегантном черном платье с открытым декольте позирует, демонстрируя изящную фигуру. Ее волосы распущены, а лицо украшено традиционными индийскими узорами на глазах и щеках. Атмосфера загадочная и романтичная.",
     images_url: {
       jpg: "/images/directions/result_direction_47.jpeg",
       webp: "/images/directions/result_direction_47.webp",
     },
-    path: "/oriental",
+    hero: {
+      description:
+        "<h1>ORIENTAL</h1><p>ORIENTAL – это восточные танцы, включающие элементы классического танца живота. Тренируют мышцы шеи, рук, бедер, спины, диафрагмы и, конечно, живота.</p>",
+      images_url: {
+        jpg: "/images/current_direction/oriental/direct_1.jpg",
+        webp: "/images/current_direction/oriental/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/oriental/direct_2.jpg",
+          webp: "/images/current_direction/oriental/direct_2.webp",
+        },
+        content:
+          "<strong>ORIENTAL</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые</span><br><p>Хотите раскрыть женскую энергию и сделать формы более подтянутыми? ORIENTAL подчеркивает преимущества женской фигуры и помогает раскрепоститься.</p><p>ORIENTAL – это восточные танцы, включающие элементы классического танца живота. Тренируют мышцы шеи, рук, бедер, спины, диафрагмы и, конечно, живота.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/oriental/direct_3.jpg",
+          webp: "/images/current_direction/oriental/direct_3.webp",
+        },
+        content:
+          "<strong>Польза восточных танцев:</strong><ul><li>Укрепление мышц пресса, спины и ног</li><li>Развитие пластики и грации</li><li>Раскрепощение и повышение уверенности</li><li>Раскрытие женской энергии</li><li>Эффективное снижение веса</li><li>Улучшение осанки и работы внутренних органов</li></ul><p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "oriental",
   },
   zumba: {
+    directions: null,
+    team: null,
     direction: "ZUMBA",
-    description: "Девушка в белой футболке и джинсах выполняет акробатическое движение, подпрыгивая на мяче. Ее волосы развеваются, а тело демонстрирует гибкость и координацию. Атмосфера активная и динамичная.",
+    description:
+      "Девушка в белой футболке и джинсах выполняет акробатическое движение, подпрыгивая на мяче. Ее волосы развеваются, а тело демонстрирует гибкость и координацию. Атмосфера активная и динамичная.",
     images_url: {
       jpg: "/images/directions/result_direction_48.jpeg",
       webp: "/images/directions/result_direction_48.webp",
     },
-    path: "/zumba",
+    hero: {
+      description:
+        "<h1>ZUMBA®</h1><p>Зумба – это танцевальный фитнес, сочетающий элементы клубной латины: меренге, бачата, сальса, самба и реггетон.</p><p>Занятия дают отличную кардионагрузку, укрепляют мышцы и заряжают позитивом. Динамичная смена темпов делает тренировку эффективной и увлекательной.</p>",
+      images_url: {
+        jpg: "/images/current_direction/zumba/direct_1.jpg",
+        webp: "/images/current_direction/zumba/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/zumba/direct_2.jpg",
+          webp: "/images/current_direction/zumba/direct_2.webp",
+        },
+        content:
+          "<strong>ZUMBA®</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><b>Возраст:</b><span> взрослые, юниоры</span><br><p>Зумба – это танцевальный фитнес, сочетающий элементы клубной латины: меренге, бачата, сальса, самба и реггетон.</p><p>Занятия дают отличную кардионагрузку, укрепляют мышцы и заряжают позитивом. Динамичная смена темпов делает тренировку эффективной и увлекательной.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/zumba/direct_3.jpg",
+          webp: "/images/current_direction/zumba/direct_3.webp",
+        },
+        content:
+          "<strong>Преимущества ZUMBA®:</strong><ul><li>Укрепление и тонизирование всех групп мышц</li><li>Эффективное сжигание калорий</li><li>Улучшение работы сердечно-сосудистой системы</li><li>Развитие координации и чувства ритма</li><li>Снятие стресса и заряд позитивной энергии</li></ul><p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "zumba",
   },
   dance_mix: {
+    directions: null,
+    team: null,
     direction: "DANCE MIX",
-    description: "Группа женщин выполняет танцевальную тренировку в помещении. Они одеты в яркую спортивную форму и активно двигаются, поднимая руки и ноги. Атмосфера веселая и энергичная.",
+    description:
+      "Группа женщин выполняет танцевальную тренировку в помещении. Они одеты в яркую спортивную форму и активно двигаются, поднимая руки и ноги. Атмосфера веселая и энергичная.",
     images_url: {
       jpg: "/images/directions/result_direction_49.jpeg",
       webp: "/images/directions/result_direction_49.webp",
     },
-    path: "/dance_mix",
-  },
-  childrens_swimming: {
-    direction: "Детское плавание",
-    description: "Маленький ребенок плавает в бассейне под присмотром взрослого. Ребенок держится за руку взрослого, а вода вокруг него ярко-синяя. Атмосфера спокойная и безопасная, создавая ощущение заботы и обучения.",
-    images_url: {
-      jpg: "/images/directions/result_direction_54.jpeg",
-      webp: "/images/directions/result_direction_54.webp",
+    hero: {
+      description:
+        "<h1>DANCE MIX</h1><p>Смешанный танец – так по-другому называют Dance Mix. Прекрасно развивает пластику и координацию движений, способствует укреплению здоровья, нормализует работу сердечно-сосудистой системы и кровоснабжения.</p>",
+      images_url: {
+        jpg: "/images/current_direction/dance_mix/direct_1.jpg",
+        webp: "/images/current_direction/dance_mix/direct_1.webp",
+      },
     },
-    path: "/childrens_swimming",
-  },
-  martial_arts_children: {
-    direction: "Детские единоборства",
-    description: "Два боксера в перчатках стоят друг напротив друга, готовясь к поединку. Один носит черные перчатки и защищается, а другой — белые и наносит удар. Атмосфера напряженная и сосредоточенная, демонстрируя технику бокса.",
-    images_url: {
-      jpg: "/images/directions/result_direction_55.jpeg",
-      webp: "/images/directions/result_direction_55.webp",
-    },
-    path: "/martial_arts_children",
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/dance_mix/direct_2.jpg",
+          webp: "/images/current_direction/dance_mix/direct_2.webp",
+        },
+        content:
+          "<strong>DANCE MIX</strong><br><b>Продолжительность:</b><span> 55 мин.</span><br><b>Уровень подготовленности:</b><span> для всех</span><br><p>Смешанный танец – так по-другому называют Dance Mix. Прекрасно развивает пластику и координацию движений, способствует укреплению здоровья, нормализует работу сердечно-сосудистой системы и кровоснабжения.</p><p>Dance mix — это смесь элементов разных танцевальных направлений прошлого и современности.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/dance_mix/direct_3.jpg",
+          webp: "/images/current_direction/dance_mix/direct_3.webp",
+        },
+        content:
+          "<p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "dance_mix",
   },
   children_center: {
+    directions: null,
+    team: null,
     direction: "Детский центр",
-    description: "Группа женщин выполняет упражнение на растяжку в зале. Они стоят в линию, вытягивая руки и наклоняясь в сторону. Все одеты в спортивную форму, атмосфера спокойная и сосредоточенная.",
+    description:
+      "Группа женщин выполняет упражнение на растяжку в зале. Они стоят в линию, вытягивая руки и наклоняясь в сторону. Все одеты в спортивную форму, атмосфера спокойная и сосредоточенная.",
     images_url: {
       jpg: "/images/directions/result_direction_56.jpeg",
       webp: "/images/directions/result_direction_56.webp",
     },
-    path: "/children_center",
+    path: "children_center",
   },
   baths_swimming: {
+    directions: null,
+    team: null,
     direction: "Бани и бассейны",
-    description: "Уютная сауна с деревянными стенами и скамьями. В помещении мягкий свет от настенных ламп, создавая расслабляющую атмосферу. На переднем плане виден каменный очаг для нагрева воды или пара.",
+    description:
+      "Уютная сауна с деревянными стенами и скамьями. В помещении мягкий свет от настенных ламп, создавая расслабляющую атмосферу. На переднем плане виден каменный очаг для нагрева воды или пара.",
     images_url: {
       jpg: "/images/water_zone/result_zone_1.jpeg",
       webp: "/images/water_zone/result_zone_1.webp",
     },
-    path: "/baths_swimming",
+    path: "baths_swimming",
   },
   sports_pool: {
+    directions: null,
+    team: null,
     direction: "Спортивный бассейн",
-    description: "Модерн-стильный бассейн с чистой голубой водой, окруженный деревянными скамьями и стеклянными окнами. Помещение освещено ярко, создавая открытую и свежую атмосферу для тренировок или отдыха.",
+    description:
+      "Модерн-стильный бассейн с чистой голубой водой, окруженный деревянными скамьями и стеклянными окнами. Помещение освещено ярко, создавая открытую и свежую атмосферу для тренировок или отдыха.",
     images_url: {
       jpg: "/images/water_zone/result_zone_2.jpeg",
       webp: "/images/water_zone/result_zone_2.webp",
     },
-    path: "/sports_pool",
+    hero: {
+      description:
+        "<h1>Спортивный бассейн</h1><p>Спортивный бассейн Мореон Фитнес предназначен для групповых программ, школы плавания, персональных тренировок и свободного плавания. Здесь также проводятся соревнования для взрослых и детей.</p><p>Бассейн оснащен трехуровневой системой очистки воды и панорамными окнами. Длина - 25 м, 5 дорожек.</p>",
+      images_url: {
+        jpg: "/images/current_direction/sports_pool/direct_1.jpg",
+        webp: "/images/current_direction/sports_pool/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/sports_pool/direct_2.jpg",
+          webp: "/images/current_direction/sports_pool/direct_2.webp",
+        },
+        content:
+          "<strong>Спортивный бассейн</strong><p>Спортивный бассейн Мореон Фитнес предназначен для групповых программ, школы плавания, персональных тренировок и свободного плавания для всех членов клуба. Здесь также регулярно проводятся соревнования по плаванию среди взрослых и детей.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/sports_pool/direct_1.jpg",
+          webp: "/images/current_direction/sports_pool/direct_1.webp",
+        },
+        content:
+          "<p>Трехуровневая система очистки воды гарантирует чистоту и безопасность. Панорамные окна наполняют помещение естественным светом.</p><p>Длина бассейна - 25 метров, количество дорожек - 5.</p>",
+      },
+    ],
+    path: "sports_pool",
   },
   spa: {
+    directions: null,
+    team: null,
     direction: "СПА",
-    description: "Уютный зимний сад или терраса с большими окнами, пропускающими естественный свет. На переднем плане виден круглый стол с плетеными стульями, а вокруг — зеленые растения и удобные лежаки для отдыха. Атмосфера спокойная и расслабляющая.",
+    description:
+      "Уютный зимний сад или терраса с большими окнами, пропускающими естественный свет. На переднем плане виден круглый стол с плетеными стульями, а вокруг — зеленые растения и удобные лежаки для отдыха. Атмосфера спокойная и расслабляющая.",
     images_url: {
       jpg: "/images/water_zone/result_zone_3.jpeg",
       webp: "/images/water_zone/result_zone_3.webp",
     },
-    path: "/spa",
+    hero: {
+      description:
+        "<h1>SPA-комплекс Мореон</h1><p>Мореон SPA – уютное пространство для отдыха, доступное только для взрослых и детей от 14 лет. Оформлено в стиле греческого острова Санторини.</p><p>Это место создано для полного расслабления и релаксации.</p>",
+      images_url: {
+        jpg: "/images/current_direction/spa/direct_1.jpg",
+        webp: "/images/current_direction/spa/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/spa/direct_2.jpg",
+          webp: "/images/current_direction/spa/direct_2.webp",
+        },
+        content:
+          "<strong>Дополнительные услуги SPA-комплекса</strong><p>Доступны услуги косметолога, массажиста и SPA-терапевта. В комплексе проводятся мероприятия с участием медийных персон, а также можно организовать частные события (свидания, мальчишники, девичники). Представлены премиум-студии для индивидуального использования.</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/spa/direct_3.jpg",
+          webp: "/images/current_direction/spa/direct_3.webp",
+        },
+        content:
+          "<strong>Мореон SPA</strong><p>Эксклюзивная зона отдыха для взрослых и детей от 14 лет, оформленная в стиле греческого острова Санторини. Включает:</p><ul><li>Разнообразие бань: римская, хаммам, аромасауна, русские травяная и кедровая, греческие бани, ИК-сауны</li><li>Небольшой бассейн</li><li>Дорожка Кнайпа</li><li>Соляная пещера</li><li>SPA-бар с полезным меню</li></ul><p>Идеальное место для полного релакса и восстановления.</p>",
+      },
+    ],
+    path: "spa",
   },
   thermal_baths: {
+    directions: null,
+    team: null,
     direction: "Термы",
-    description: "Яркий бассейн с голубой водой, окруженный белыми лежаками и подушками. Помещение оформлено в современном стиле с прозрачными перилами и светлым потолком. Атмосфера роскошная и расслабляющая, идеально подходит для отдыха.",
+    description:
+      "Яркий бассейн с голубой водой, окруженный белыми лежаками и подушками. Помещение оформлено в современном стиле с прозрачными перилами и светлым потолком. Атмосфера роскошная и расслабляющая, идеально подходит для отдыха.",
     images_url: {
       jpg: "/images/water_zone/result_zone_4.jpeg",
       webp: "/images/water_zone/result_zone_4.webp",
     },
-    path: "/thermal_baths",
+    hero: {
+      description:
+        "<h1>Банный комплекс Термы</h1><p>Термы – масштабный банный комплекс в формате общественных бань с расширенными возможностями для отдыха и релаксации.</p>",
+      images_url: {
+        jpg: "/images/current_direction/thermal_baths/direct_1.jpg",
+        webp: "/images/current_direction/thermal_baths/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/thermal_baths/direct_2.jpg",
+          webp: "/images/current_direction/thermal_baths/direct_2.webp",
+        },
+        content:
+          "<strong>Банный комплекс Термы</strong><p>Крупнейший банный комплекс с уникальными возможностями. За один визит вы можете посетить:</p><ul><li>9 бань и саун разных традиций: русская, кедровая, алтайская, финская сауна, хаммам, 4 аромасауны</li><li>Горячие чаны</li><li>Двухуровневый бассейн-лабиринт с контрастными ваннами, водопадами и рекой с реверсивным течением</li><li>Античный аэрогидромассажный бассейн</li></ul>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/thermal_baths/direct_3.jpg",
+          webp: "/images/current_direction/thermal_baths/direct_3.webp",
+        },
+        content:
+          "<strong>Зона отдыха в Термах</strong><p>После парной гости могут:</p><ul><li>Освежиться в фригидариуме и ледяных купелях</li><li>Отдохнуть на лежаках с видом на березовую рощу</li><li>Провести время на летней веранде</li></ul><p>В кафе с европейской кухней можно перекусить, что позволяет комфортно проводить в комплексе целый день.</p>",
+      },
+    ],
+    path: "thermal_baths",
   },
   goldfish: {
+    directions: null,
+    team: null,
     direction: "Золотые рыбки",
-    description: "Модный тренажерный зал с бассейном, окруженным современным оборудованием. Бассейн имеет ярко-голубую воду и стеклянные перила, а окна пропускают естественный свет. Помещение выглядит просторным и технологичным, создавая динамичную атмосферу для занятий спортом.",
+    description:
+      "Модный тренажерный зал с бассейном, окруженным современным оборудованием. Бассейн имеет ярко-голубую воду и стеклянные перила, а окна пропускают естественный свет. Помещение выглядит просторным и технологичным, создавая динамичную атмосферу для занятий спортом.",
     images_url: {
       jpg: "/images/water_zone/result_zone_5.jpeg",
       webp: "/images/water_zone/result_zone_5.webp",
     },
-    path: "/goldfish",
+    hero: {
+      description:
+        "<h1>Бассейн «Золотые рыбки»</h1><p>Специализированный бассейн для оздоровительных и профилактических занятий в группах, а также для детского плавания. Доступен только для занятий с инструктором.</p><p>Расположен на территории аквапарка «Мореон».</p>",
+      images_url: {
+        jpg: "/images/current_direction/gold_fish/direct_1.jpg",
+        webp: "/images/current_direction/gold_fish/direct_1.webp",
+      },
+    },
+    description_direction: [
+      {
+        images_url: {
+          jpg: "/images/current_direction/gold_fish/direct_2.jpg",
+          webp: "/images/current_direction/gold_fish/direct_2.webp",
+        },
+        content:
+          "<strong>Бассейн «Золотые рыбки»</strong><p>Специализированный бассейн для:</p><ul><li>Оздоровительных и профилактических групповых занятий</li><li>Занятий по детскому плаванию</li></ul><p>Доступен только для тренировок с инструктором. Расположен на территории аквапарка «Мореон».</p>",
+      },
+      {
+        images_url: {
+          jpg: "/images/current_direction/gold_fish/direct_3.jpg",
+          webp: "/images/current_direction/gold_fish/direct_3.webp",
+        },
+        content:
+          "<p>Запишитесь на занятие по телефону <b>+7 (495) 859-03-72</b> или оставьте заявку</p>",
+      },
+    ],
+    path: "goldfish",
   },
 };
-
