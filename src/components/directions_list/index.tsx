@@ -9,7 +9,7 @@ export const Directions_list = observer(
   ({ keys_list }: Directions_keys_type) => {
     const { data, isLoading, isError } = directions_store;
 
-    const directions_bd = toJS(data?.[0]?.data);
+    const directions_bd = toJS(data?.[0]);
 
     if (
       !directions_store ||
@@ -26,8 +26,11 @@ export const Directions_list = observer(
     return (
       <ul className="grid grid-cols-3 gap-6">
         {keys_list.map((current_key) => {
-          const { description, direction, images_url, path } =
-            directions_bd[current_key];
+          const {
+            hero: { description, images_url },
+            direction,
+            path,
+          } = directions_bd[current_key];
 
           return (
             <li className="min-h-[350px] overflow-hidden rounded-3xl group">

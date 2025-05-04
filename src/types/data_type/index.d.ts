@@ -349,22 +349,22 @@ type Direct_keys_type =
   | "thermal_baths"
   | "goldfish";
 
-type Directions_type = {
-  data: Record<
-    Direct_keys_type,
-    {
-      directions: Direct_keys_type[] | null;
-      team: string | null;
-      direction: string;
+type Directions_type = Record<
+  Direct_keys_type,
+  {
+    directions: Direct_keys_type[] | null;
+    team: Team_tab_key_type | null;
+    direction: string;
+    hero: {
       description: string;
       images_url: {
         jpg: string;
         webp: string;
       };
-      path: string;
-    }
-  >;
-};
+    };
+    path: string;
+  }
+>;
 
 type Directions_keys_type = {
   keys_list: Direct_keys_type[];

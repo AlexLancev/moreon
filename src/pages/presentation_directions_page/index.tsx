@@ -1,121 +1,16 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 
 import { directions_store, team_store } from "@/stores/data_store";
-import { filterDataByActiveTab } from "@/utils";
-
-type Current_direct_key_type =
-  | "mind_body"
-  | "strength_functional_training"
-  | "aerobics"
-  | "gym"
-  | "pool"
-  | "martial_arts"
-  | "dance"
-  | "personal_training"
-  | "yoga"
-  | "test"
-  | "group_training";
-type Current_direct_type = Record<
-  Current_direct_key_type,
-  {
-    directions: Direct_keys_type[] | null;
-    team: Team_tab_key_type | null;
-  }
->;
-
-const presentation_directions_data: Current_direct_type = {
-  mind_body: {
-    directions: [
-      "abs_streth",
-      "pranayama_meditation",
-      "yoga_intensiv_90",
-      "pilates_allegro",
-      "healthy_back",
-      "pilates_mat",
-      "soft_balance",
-      "hatha_yoga",
-    ],
-    team: "group_training",
-  },
-  strength_functional_training: {
-    directions: [
-      "cross_training",
-      "abs_streth",
-      "les_mills_core",
-      "hot_iron_1",
-      "hot_iron_2",
-      "les_mills_grit",
-      "thinner",
-    ],
-    team: "group_training",
-  },
-  aerobics: {
-    directions: [
-      "real_ryder",
-      "step",
-      "step_pro",
-      "pro_jumping",
-      "step_interval",
-    ],
-    team: "group_training",
-  },
-  gym: {
-    directions: null,
-    team: "gym",
-  },
-  pool: {
-    directions: [
-      "infant_swimming",
-      "childrens_swimming",
-      "school_competitive_swimming",
-      "swimming_adults",
-      "aqua_aerobics",
-      "aqua_mom",
-    ],
-    team: "pool",
-  },
-  martial_arts: {
-    directions: ["work_apparatus", "box", "grappling", "kickboxing", "mma"],
-    team: "martial_arts",
-  },
-  dance: {
-    directions: ["latina", "multidance", "oriental", "zumba", "dance_mix"],
-    team: "group_training",
-  },
-  personal_training: {
-    directions: null,
-    team: null,
-  },
-  yoga: {
-    directions: ["pranayama_meditation", "yoga_intensiv_90", "hatha_yoga"],
-    team: "group_training",
-  },
-  test: {
-    directions: null,
-    team: null,
-  },
-  group_training: {
-    directions: [
-      "mind_body",
-      "strength_functional_training",
-      "aerobics",
-      "pool",
-      "martial_arts",
-      "dance",
-      "yoga",
-    ],
-    team: "group_training",
-  },
-};
+import { modal_store } from "@/stores";
+import { Areas_study, Team_list } from "@/components";
 
 export const Presentation_directions_page = observer(() => {
+  const { isVisibleModal, change_modal } = modal_store;
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
-  const service = pathSegments[
-    pathSegments.length - 1
-  ] as Current_direct_key_type;
+  const service = pathSegments[pathSegments.length - 1] as Direct_keys_type;
 
   const {
     data: directions_data,
@@ -129,14 +24,13 @@ export const Presentation_directions_page = observer(() => {
     isError: team_isError,
   } = team_store;
 
-  const directions_bd = toJS(directions_data?.[0]?.data);
+  const directions_bd = toJS(directions_data?.[0]);
 
   if (directions_isLoading || team_isLoading) return <div>Loading...</div>;
   if (directions_isError || team_isError)
     return <div>Error: Failed to fetch data</div>;
 
   if (
-    !presentation_directions_data ||
     !directions_data ||
     !directions_bd ||
     !team_data ||
@@ -145,28 +39,54 @@ export const Presentation_directions_page = observer(() => {
   )
     return null;
 
-  const { directions, team } = presentation_directions_data[service];
+  const {
+    directions,
+    team,
+    hero: {
+      description,
+      images_url: { jpg, webp },
+    },
+  } = directions_bd[service];
 
   if (!directions || !team) return null;
 
   return (
     <>
-      <ul>
-        {directions.map((direct) => (
-          <li>
-            <Link to={`/services/${directions_bd[direct]?.path}`}>
-              {directions_bd[direct]?.direction}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <ul>
-        {filterDataByActiveTab(team_data, team)?.map(
-          ({ name, url_images, about_coach: { qualification } }) => (
-            <li>{name}</li>
-          ),
-        )}
-      </ul>
+      <div className="container">
+        <section className="relative min-h-[400px] py-20 px-10 after:absolute after:inset-0 after:bg-black/80 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
+          <picture>
+            <source srcSet={webp} type="image/webp" />
+            <img
+              className="absolute inset-0 w-full h-full object-cover -z-10"
+              src={jpg}
+              alt=""
+              aria-hidden
+            />
+          </picture>
+          <div className="relative w-full max-w-[525px] z-10">
+            <div
+              className="ab"
+              dangerouslySetInnerHTML={{ __html: description }}
+            ></div>
+            <button
+              onClick={() => change_modal(!isVisibleModal)}
+              className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
+              type="button"
+            >
+              Гостевой визит
+            </button>
+          </div>
+        </section>
+      </div>
+      <Areas_study keys_list={directions} />
+      <section className="py-10">
+        <div className="container">
+          <h2 className="mb-10">
+            <span className="head_decor">Тренеры</span> направления
+          </h2>
+          <Team_list isActiveTab={team} />
+        </div>
+      </section>
     </>
   );
 });

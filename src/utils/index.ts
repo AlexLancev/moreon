@@ -9,7 +9,7 @@ export const isEmptyObj = (object: object): boolean => {
 
 export const filterDataByActiveTab = (
   data: Team_type[],
-  isKey: Team_tab_key_type,
+  isKey: Team_tab_key_type | null,
 ): Team_type[] | null => {
   if (!Array.isArray(data)) {
     return null;
