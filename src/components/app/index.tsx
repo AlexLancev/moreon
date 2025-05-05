@@ -9,6 +9,7 @@ import {
   Current_direction_page,
   Home_page,
   Kids_fitness_page,
+  Person_team_page,
   Presentation_directions_page,
   Saunas_pools_page,
   Services_page,
@@ -46,6 +47,46 @@ const {
   group_programs,
   abs_streth,
   pranayama_meditation,
+  yoga_intensiv_90,
+  pilates_allegro,
+  healthy_back,
+  pilates_mat,
+  soft_balance,
+  hatha_yoga,
+  cross_training,
+  hot_iron_1,
+  hot_iron_2,
+  les_mills_grit,
+  thinner,
+  les_mills_core,
+  real_ryder,
+  step,
+  step_pro,
+  pro_jumping,
+  step_interval,
+  infant_swimming,
+  childrens_swimming,
+  school_competitive_swimming,
+  swimming_adults,
+  aqua_aerobics,
+  aqua_mom,
+  work_apparatus,
+  box,
+  grappling,
+  kickboxing,
+  mma,
+  latina,
+  multidance,
+  oriental,
+  zumba,
+  dance_mix,
+  children_center,
+  baths_swimming,
+  sports_pool,
+  spa,
+  thermal_baths,
+  goldfish,
+  person_team,
 } = paths;
 
 export const App = () => {
@@ -67,7 +108,7 @@ export const App = () => {
             element={<Presentation_directions_page />}
           />
           <Route path={aerobics} element={<Presentation_directions_page />} />
-          <Route path={gym} element={<Presentation_directions_page />} />
+          <Route path={gym} element={<Current_direction_page />} />
           <Route path={pool} element={<Presentation_directions_page />} />
           <Route
             path={martial_arts}
@@ -77,22 +118,65 @@ export const App = () => {
           <Route path={dance} element={<Presentation_directions_page />} />
           <Route
             path={personal_training}
-            element={<Presentation_directions_page />}
+            element={<Current_direction_page />}
           />
           <Route path={yoga} element={<Presentation_directions_page />} />
-          <Route path={test} element={<Presentation_directions_page />} />
+          <Route path={test} element={<Current_direction_page />} />
           <Route
             path={group_programs}
             element={<Presentation_directions_page />}
           />
-          <Route
-            path={abs_streth}
-            element={<Current_direction_page />}
-          />
+          <Route path={abs_streth} element={<Current_direction_page />} />
           <Route
             path={pranayama_meditation}
             element={<Current_direction_page />}
           />
+          <Route path={yoga_intensiv_90} element={<Current_direction_page />} />
+          <Route path={pilates_allegro} element={<Current_direction_page />} />
+          <Route path={healthy_back} element={<Current_direction_page />} />
+          <Route path={pilates_mat} element={<Current_direction_page />} />
+          <Route path={soft_balance} element={<Current_direction_page />} />
+          <Route path={hatha_yoga} element={<Current_direction_page />} />
+          <Route path={cross_training} element={<Current_direction_page />} />
+          <Route path={hot_iron_1} element={<Current_direction_page />} />
+          <Route path={hot_iron_2} element={<Current_direction_page />} />
+          <Route path={les_mills_grit} element={<Current_direction_page />} />
+          <Route path={thinner} element={<Current_direction_page />} />
+          <Route path={les_mills_core} element={<Current_direction_page />} />
+          <Route path={real_ryder} element={<Current_direction_page />} />
+          <Route path={step} element={<Current_direction_page />} />
+          <Route path={step_pro} element={<Current_direction_page />} />
+          <Route path={pro_jumping} element={<Current_direction_page />} />
+          <Route path={step_interval} element={<Current_direction_page />} />
+          <Route path={infant_swimming} element={<Current_direction_page />} />
+          <Route
+            path={childrens_swimming}
+            element={<Current_direction_page />}
+          />
+          <Route
+            path={school_competitive_swimming}
+            element={<Current_direction_page />}
+          />
+          <Route path={swimming_adults} element={<Current_direction_page />} />
+          <Route path={aqua_aerobics} element={<Current_direction_page />} />
+          <Route path={aqua_mom} element={<Current_direction_page />} />
+          <Route path={work_apparatus} element={<Current_direction_page />} />
+          <Route path={box} element={<Current_direction_page />} />
+          <Route path={grappling} element={<Current_direction_page />} />
+          <Route path={kickboxing} element={<Current_direction_page />} />
+          <Route path={mma} element={<Current_direction_page />} />
+          <Route path={latina} element={<Current_direction_page />} />
+          <Route path={multidance} element={<Current_direction_page />} />
+          <Route path={oriental} element={<Current_direction_page />} />
+          <Route path={zumba} element={<Current_direction_page />} />
+          <Route path={dance_mix} element={<Current_direction_page />} />
+          <Route path={children_center} element={<Kids_fitness_page />} />
+          <Route path={baths_swimming} element={<Current_direction_page />} />
+          <Route path={sports_pool} element={<Current_direction_page />} />
+          <Route path={spa} element={<Current_direction_page />} />
+          <Route path={thermal_baths} element={<Current_direction_page />} />
+          <Route path={goldfish} element={<Current_direction_page />} />
+          <Route path={person_team} element={<Person_team_page />} />
         </Route>
       </Routes>
     </BrowserRouter>

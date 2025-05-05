@@ -1,4 +1,3 @@
-
 export { Home_page } from "./home_page";
 export { About_page } from "./about_page";
 export { Services_page } from "./services_page";
@@ -8,3 +7,4 @@ export { Saunas_pools_page } from "./saunas_pools_page";
 export { Kids_fitness_page } from "./kids_fitness_page";
 export { Presentation_directions_page } from "./presentation_directions_page";
 export { Current_direction_page } from "./current direction_page";
+export { Person_team_page } from "./person_team_page";

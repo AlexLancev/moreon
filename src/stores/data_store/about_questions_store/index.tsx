@@ -21,4 +21,3 @@ class About_questions_store {
 }
 
 export const about_questions_store = new About_questions_store();
-

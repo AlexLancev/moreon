@@ -528,8 +528,38 @@ h3 {
     padding-left: 20px;
     margin-bottom: 15px;
 
-      li {
-        margin-bottom: 5px;
-      }
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.current-direction {
+  strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  b {
+    display: inline-block;
+    font-size: 18px;
+    width: 45%;
+    margin-bottom: 10px;
+  }
+
+  span {
+    display: inline-block;
+    width: 50%;
+  }
+  p {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  ul {
+    margin-bottom: 10px;
+    li:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 }

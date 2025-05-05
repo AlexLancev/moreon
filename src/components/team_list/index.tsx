@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
@@ -29,8 +30,8 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
             idx: number,
           ) => {
             return (
-              <button
-                type="button"
+              <Link
+                to={`/team/${name}`}
                 key={idx}
                 className="relative group overflow-hidden rounded-3xl after:w-full after:h-[120px] after:absolute after:bottom-0 after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
               >
@@ -50,7 +51,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
                     {name}
                   </strong>
                 </>
-              </button>
+              </Link>
             );
           },
         )}

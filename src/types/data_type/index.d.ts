@@ -229,6 +229,7 @@ type News_type = {
   id: number;
   description: string;
   description_picture: string;
+  description_promotion: string;
   url_images: {
     jpg: string;
     webp: string;
@@ -349,12 +350,25 @@ type Direct_keys_type =
   | "thermal_baths"
   | "goldfish";
 
+type Description_direction_type = {
+  content: string;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+};
+
 type Directions_type = Record<
   Direct_keys_type,
   {
     directions: Direct_keys_type[] | null;
     team: Team_tab_key_type | null;
     direction: string;
+    description: string;
+    images_url: {
+      jpg: string;
+      webp: string;
+    };
     hero: {
       description: string;
       images_url: {
@@ -362,6 +376,7 @@ type Directions_type = Record<
         webp: string;
       };
     };
+    description_direction: Description_direction_type[];
     path: string;
   }
 >;

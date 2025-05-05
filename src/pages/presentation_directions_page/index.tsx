@@ -24,20 +24,14 @@ export const Presentation_directions_page = observer(() => {
     isError: team_isError,
   } = team_store;
 
-  const directions_bd = toJS(directions_data?.[0]);
-
   if (directions_isLoading || team_isLoading) return <div>Loading...</div>;
   if (directions_isError || team_isError)
     return <div>Error: Failed to fetch data</div>;
 
-  if (
-    !directions_data ||
-    !directions_bd ||
-    !team_data ||
-    !service ||
-    team_data.length === 0
-  )
+  if (!directions_data || !team_data || !service || team_data.length === 0)
     return null;
+
+  const directions_bd = toJS(directions_data?.[0]);
 
   const {
     directions,
@@ -46,7 +40,7 @@ export const Presentation_directions_page = observer(() => {
       description,
       images_url: { jpg, webp },
     },
-  } = directions_bd[service];
+  } = directions_bd[service] ?? {};
 
   if (!directions || !team) return null;
 

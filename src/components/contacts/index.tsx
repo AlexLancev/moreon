@@ -5,8 +5,6 @@ type Current_contacts_type = "address" | "phone" | "email";
 
 const current_contacts: Current_contacts_type[] = ["address", "phone", "email"];
 
-
-
 export const Contacts = () => {
   if (
     !contacts_data ||

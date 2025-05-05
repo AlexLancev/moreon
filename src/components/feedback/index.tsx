@@ -5,8 +5,6 @@ type feedback_data_type = "address" | "phone";
 
 const feedback_data: feedback_data_type[] = ["address", "phone"];
 
-
-
 export const Feedback = () => {
   if (
     !contacts_data ||

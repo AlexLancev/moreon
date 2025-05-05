@@ -12,7 +12,7 @@ import {
 
 import { get_tabs_store } from "@/stores";
 
-const keys_list = [
+const keys_list: Direct_keys_type[] = [
   "mind_body",
   "strength_functional_training",
   "aerobics",
@@ -23,7 +23,6 @@ const keys_list = [
   "personal_training",
   "yoga",
   "test",
-  "kids_fitnes",
   "group_training",
 ];
 

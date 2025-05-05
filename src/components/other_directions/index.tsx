@@ -1,9 +1,7 @@
 import { Directions_list } from "components";
 
-const key_list = [
+const key_list: Direct_keys_type[] = [
   "childrens_swimming",
-  "martial_arts_children",
-  "children_center",
   "infant_swimming",
 ];
 
