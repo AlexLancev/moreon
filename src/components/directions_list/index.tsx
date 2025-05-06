@@ -26,7 +26,8 @@ export const Directions_list = observer(
     return (
       <ul className="grid grid-cols-3 gap-6">
         {keys_list.map((current_key) => {
-          const { images_url, direction, path, description } = directions_bd?.[current_key] ?? {};
+          const { images_url, direction, path, description } =
+            directions_bd?.[current_key] ?? {};
           return (
             <li className="min-h-[350px] overflow-hidden rounded-3xl group">
               <Link

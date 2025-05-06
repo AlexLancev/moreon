@@ -30,7 +30,10 @@ export const Types_services = observer(() => {
           >
             <h3 className="uppercase mb-20 text-xl">{head}</h3>
             <p className="mb-2 flex-auto text-lg">{description}</p>
-            <Link to={`/services/${path}`} className="duration-300 hover:text-white">
+            <Link
+              to={`/services/${path}`}
+              className="duration-300 hover:text-white"
+            >
               Узнать подробнее
             </Link>
           </SwiperSlide>

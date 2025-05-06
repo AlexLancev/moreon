@@ -1,9 +1,6 @@
 import { Directions_list } from "components";
 
-const key_list: Direct_keys_type[] = [
-  "childrens_swimming",
-  "infant_swimming",
-];
+const key_list: Direct_keys_type[] = ["childrens_swimming", "infant_swimming"];
 
 export const Other_directions = () => {
   return (

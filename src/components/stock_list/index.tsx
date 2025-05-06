@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { stock_store } from "@/stores/data_store";
@@ -21,9 +22,9 @@ export const Stock_list = observer(() => {
       pagination={{ clickable: true }}
     >
       {stock_store.data.map(
-        ({ description, url_images: { jpg, webp } }, idx: number) => (
+        ({ id, description, url_images: { jpg, webp } }, idx: number) => (
           <SwiperSlide key={idx} className="rounded-3xl overflow-hidden">
-            <button type="button">
+            <Link to={`/${id}`}>
               <picture>
                 <source srcSet={webp} type="image/webp" />
                 <img
@@ -33,7 +34,7 @@ export const Stock_list = observer(() => {
                   aria-label={description}
                 />
               </picture>
-            </button>
+            </Link>
           </SwiperSlide>
         ),
       )}
