@@ -61,4 +61,5 @@ export const paths = {
   thermal_baths: "/services/thermal_baths",
   goldfish: "/services/goldfish",
   person_team: "/team/:name",
+  stock: "/:id",
 };

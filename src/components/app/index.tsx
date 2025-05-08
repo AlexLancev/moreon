@@ -13,6 +13,7 @@ import {
   Presentation_directions_page,
   Saunas_pools_page,
   Services_page,
+  Stock_presentation_page,
   Team_page,
 } from "@/pages";
 
@@ -87,6 +88,7 @@ const {
   thermal_baths,
   goldfish,
   person_team,
+  stock,
 } = paths;
 
 export const App = () => {
@@ -177,6 +179,7 @@ export const App = () => {
           <Route path={thermal_baths} element={<Current_direction_page />} />
           <Route path={goldfish} element={<Current_direction_page />} />
           <Route path={person_team} element={<Person_team_page />} />
+          <Route path={stock} element={<Stock_presentation_page />} />
         </Route>
       </Routes>
     </BrowserRouter>

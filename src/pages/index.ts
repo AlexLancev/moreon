@@ -8,3 +8,4 @@ export { Kids_fitness_page } from "./kids_fitness_page";
 export { Presentation_directions_page } from "./presentation_directions_page";
 export { Current_direction_page } from "./current direction_page";
 export { Person_team_page } from "./person_team_page";
+export { Stock_presentation_page } from "./stock_presentation_page";
