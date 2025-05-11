@@ -227,7 +227,7 @@ type Childrens_swimming_type = {
 
 type News_type = {
   id: number;
-  description: string;
+  description?: string;
   description_picture: string;
   description_promotion: string;
   url_images: {
@@ -236,7 +236,7 @@ type News_type = {
   };
 };
 
-type Stock_type = Omit<News_type, "description_picture">;
+type Stock_type = News_type;
 
 type Team_tab_key_type = "martial_arts" | "gym" | "group_training" | "pool";
 
