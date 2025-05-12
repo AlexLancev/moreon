@@ -35,3 +35,4 @@ export { Areas_study } from "./areas_study";
 export { Other_directions } from "./other_directions";
 export { Feedback_form } from "./feedback_form";
 export { Feedback_modal } from "./feedback_modal";
+export { Render_slider } from "./render_slider";

@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import xss from "xss";
 
-import { stock_store } from "@/stores/data_store";
+import { news_store } from "@/stores/data_store";
 import { Container } from "@/components/container";
 import { Render_slider } from "@/components";
 
-export const Stock_presentation_page = observer(() => {
-  const { data, isLoading, isError } = stock_store;
+export const News_presentation_page = observer(() => {
+  const { data, isLoading, isError } = news_store;
   const { id } = useParams();
   const numeric_Id = Number(id);
 
@@ -16,10 +16,10 @@ export const Stock_presentation_page = observer(() => {
 
   if (!data || data.length === 0 || !numeric_Id) return null;
 
-  const stock = data.find((el) => el.id === numeric_Id);
+  const news = data.find((el) => el.id === numeric_Id);
 
   const { description_picture, description_promotion, url_images } =
-    stock ?? {};
+    news ?? {};
 
   if (!description_picture || !description_promotion || !url_images)
     return null;
@@ -45,7 +45,7 @@ export const Stock_presentation_page = observer(() => {
           <picture>
             <source srcSet={url_images?.webp} type="image/webp" />
             <img
-              className="rounded-3xl overflow-hidden"
+              className="max-w-[500px] rounded-3xl overflow-hidden"
               src={url_images?.jpg}
               alt={description_picture}
             />
@@ -72,7 +72,7 @@ export const Stock_presentation_page = observer(() => {
         <h2 className="mb-10">
           Другие <span className="head_decor">акции клуба</span>
         </h2>
-        <Render_slider path={numeric_Id} type="stock" data={data} />
+        <Render_slider path={numeric_Id} type="news" data={data} />
       </section>
     </Container>
   );

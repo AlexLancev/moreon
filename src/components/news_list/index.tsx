@@ -3,6 +3,7 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { news_store } from "@/stores/data_store";
+import { Link } from "react-router-dom";
 
 export const News_list = observer(() => {
   const { data, isLoading, isError } = news_store;
@@ -23,11 +24,11 @@ export const News_list = observer(() => {
     >
       {data.map(
         (
-          { description, description_picture, url_images: { webp, jpg } },
+          { id, description, description_picture, url_images: { webp, jpg } },
           idx: number,
         ) => (
           <SwiperSlide key={idx}>
-            <button type="button">
+            <Link to={`/news/${id}`}>
               <picture>
                 <source srcSet={webp} type="image/webp" />
                 <img
@@ -41,7 +42,7 @@ export const News_list = observer(() => {
               <h3 className="text-base text-[rgb(176,176,176)] px-1 text-center">
                 {description}
               </h3>
-            </button>
+            </Link>
           </SwiperSlide>
         ),
       )}

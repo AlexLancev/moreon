@@ -62,4 +62,5 @@ export const paths = {
   goldfish: "/services/goldfish",
   person_team: "/team/:name",
   stock: "/stock/:id",
+  news: "/news/:id",
 };

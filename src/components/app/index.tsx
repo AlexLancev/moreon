@@ -9,6 +9,7 @@ import {
   Current_direction_page,
   Home_page,
   Kids_fitness_page,
+  News_presentation_page,
   Person_team_page,
   Presentation_directions_page,
   Saunas_pools_page,
@@ -89,6 +90,7 @@ const {
   goldfish,
   person_team,
   stock,
+  news,
 } = paths;
 
 export const App = () => {
@@ -180,6 +182,7 @@ export const App = () => {
           <Route path={goldfish} element={<Current_direction_page />} />
           <Route path={person_team} element={<Person_team_page />} />
           <Route path={stock} element={<Stock_presentation_page />} />
+          <Route path={news} element={<News_presentation_page />} />
         </Route>
       </Routes>
     </BrowserRouter>
