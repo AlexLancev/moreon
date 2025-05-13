@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 
-import { Tabs } from "components";
+import { Container, Tabs } from "components";
 
 import { fitness_area_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
@@ -41,7 +41,7 @@ export const Fitness_area = observer(
 
     return (
       <section className="py-12">
-        <div className="container">
+        <Container>
           <h2 className="mb-10">
             <span className="head_decor">Зоны</span> фитнес клуба
           </h2>
@@ -72,7 +72,7 @@ export const Fitness_area = observer(
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     );
   },

@@ -1,3 +1,4 @@
+import { Container } from "@/components";
 import { Personal_format_tabs } from "./components/personal_format_tabs";
 
 const personal_format_data_key: Personal_format_key_type[] = [
@@ -18,7 +19,7 @@ export type tabs_store_type = {
 export const Personal_format = ({ tabs_store }: tabs_store_type) => {
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">
           <span className="head_decor">Формат,</span> который подойдет именно
           Вам
@@ -27,7 +28,7 @@ export const Personal_format = ({ tabs_store }: tabs_store_type) => {
           tabs_store={tabs_store}
           data_key={personal_format_data_key}
         />
-      </div>
+      </Container>
     </section>
   );
 };

@@ -18,8 +18,7 @@ export const News_presentation_page = observer(() => {
 
   const news = data.find((el) => el.id === numeric_Id);
 
-  const { description_picture, description_promotion, url_images } =
-    news ?? {};
+  const { description_picture, description_promotion, url_images } = news ?? {};
 
   if (!description_picture || !description_promotion || !url_images)
     return null;

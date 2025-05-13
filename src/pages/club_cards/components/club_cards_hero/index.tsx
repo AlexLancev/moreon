@@ -1,6 +1,8 @@
+import { Container } from "@/components";
+
 export const Club_cards_hero = () => {
   return (
-    <div className="container">
+    <Container>
       <section className="relative py-16 px-10 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
         <picture>
           <source
@@ -30,6 +32,6 @@ export const Club_cards_hero = () => {
           </button>
         </div>
       </section>
-    </div>
+    </Container>
   );
 };

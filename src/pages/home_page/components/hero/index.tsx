@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-import { Render_image } from "@/components";
+import { Container, Render_image } from "@/components";
 
 const data_action = [
   {
@@ -102,7 +102,7 @@ export const Home_hero = () => {
                   label,
                 }}
               />
-              <div className="container">
+              <Container>
                 <div className="relative">
                   <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[8rem] 2xl:-translate-y-[12rem]">
                     <Link
@@ -119,7 +119,7 @@ export const Home_hero = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Container>
             </SwiperSlide>
           ),
         )}

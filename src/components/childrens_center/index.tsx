@@ -1,4 +1,5 @@
 import { modal_store } from "@/stores";
+import { Container } from "@/components";
 
 const childrens_center_data = [
   {
@@ -22,7 +23,7 @@ export const Childrens_center = () => {
   const { isVisibleModal, change_modal } = modal_store;
 
   return (
-    <div className="container">
+    <Container>
       <section className="py-12">
         <div className="flex items-center gap-x-10">
           <picture>
@@ -73,6 +74,6 @@ export const Childrens_center = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Container>
   );
 };

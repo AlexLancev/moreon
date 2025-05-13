@@ -1,7 +1,9 @@
+import { Container } from "@/components";
+
 export const Freeze_card = () => {
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">
           Заморозь свою карту <span className="head_decor">Moreon</span>
         </h2>
@@ -44,7 +46,7 @@ export const Freeze_card = () => {
             </picture>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

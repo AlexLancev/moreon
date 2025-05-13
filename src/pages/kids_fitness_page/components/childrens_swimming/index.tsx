@@ -3,12 +3,13 @@ import { Tabs_store } from "stores/tabs_store";
 import { Childrens_swimming_tabs } from "./components";
 
 import { childrens_swimming_data } from "@/constans";
+import { Container } from "@/components";
 
 const childrens_swimming_store = new Tabs_store();
 
 export const Childrens_swimming = () => {
   return (
-    <div className="container">
+    <Container>
       <section className="py-12 px-10 text-lg">
         <h2 className="mb-10">
           <span className="head_decor">Детское плавание</span> от 0 до 13 лет
@@ -42,6 +43,6 @@ export const Childrens_swimming = () => {
         <p className="mb-10">Приглашаем на занятия юных пловцов!</p>
         <Childrens_swimming_tabs tabs_store={childrens_swimming_store} />
       </section>
-    </div>
+    </Container>
   );
 };

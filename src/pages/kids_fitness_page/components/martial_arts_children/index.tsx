@@ -1,3 +1,4 @@
+import { Container } from "@/components";
 import { modal_store } from "@/stores";
 
 const martial_arts_children_directions = [
@@ -20,7 +21,7 @@ export const Martial_arts_children = () => {
 
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">
           <span className="head_decor">Единоборства</span> для детей
         </h2>
@@ -80,7 +81,7 @@ export const Martial_arts_children = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

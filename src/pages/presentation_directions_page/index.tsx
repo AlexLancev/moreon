@@ -4,7 +4,7 @@ import { toJS } from "mobx";
 
 import { directions_store, team_store } from "@/stores/data_store";
 import { modal_store } from "@/stores";
-import { Areas_study, Team_list } from "@/components";
+import { Areas_study, Container, Team_list } from "@/components";
 
 export const Presentation_directions_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -46,7 +46,7 @@ export const Presentation_directions_page = observer(() => {
 
   return (
     <>
-      <div className="container">
+      <Container>
         <section className="relative min-h-[400px] py-20 px-10 after:absolute after:inset-0 after:bg-black/80 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
           <picture>
             <source srcSet={webp} type="image/webp" />
@@ -71,15 +71,15 @@ export const Presentation_directions_page = observer(() => {
             </button>
           </div>
         </section>
-      </div>
+      </Container>
       <Areas_study keys_list={directions} />
       <section className="py-10">
-        <div className="container">
+        <Container>
           <h2 className="mb-10">
             <span className="head_decor">Тренеры</span> направления
           </h2>
           <Team_list isActiveTab={team} />
-        </div>
+        </Container>
       </section>
     </>
   );

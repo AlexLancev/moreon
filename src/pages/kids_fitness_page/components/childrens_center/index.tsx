@@ -1,3 +1,4 @@
+import { Container } from "@/components";
 import { modal_store } from "@/stores";
 
 export const Childrens_center = () => {
@@ -5,7 +6,7 @@ export const Childrens_center = () => {
 
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">
           Детский <span className="head_decor">центр</span>
         </h2>
@@ -52,7 +53,7 @@ export const Childrens_center = () => {
             />
           </picture>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

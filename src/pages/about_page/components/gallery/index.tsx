@@ -1,12 +1,12 @@
-import { Gallery_list } from "components";
+import { Container, Gallery_list } from "components";
 
 export const Gallery = () => {
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">Фотогалерея</h2>
         <Gallery_list />
-      </div>
+      </Container>
     </section>
   );
 };

@@ -1,14 +1,14 @@
-import { About_us_list } from "components";
+import { About_us_list, Container } from "components";
 
 export const About_us = () => {
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">
           Почему стоит <span className="head_decor">выбрать нас</span>
         </h2>
         <About_us_list />
-      </div>
+      </Container>
     </section>
   );
 };

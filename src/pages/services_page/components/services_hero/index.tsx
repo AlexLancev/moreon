@@ -1,10 +1,11 @@
+import { Container } from "@/components";
 import { modal_store } from "@/stores";
 
 export const Services_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;
 
   return (
-    <div className="container">
+    <Container>
       <section className="px-20 pt-12 pb-24 relative">
         <picture>
           <source
@@ -39,6 +40,6 @@ export const Services_hero = () => {
           </button>
         </div>
       </section>
-    </div>
+    </Container>
   );
 };

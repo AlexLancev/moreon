@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 
 import { other_directions_store } from "@/stores/data_store";
+import { Container } from "@/components";
 
 export const Other_directions = observer(() => {
   const { data, isLoading, isError } = other_directions_store;
@@ -15,7 +16,7 @@ export const Other_directions = observer(() => {
   return (
     <section className="py-12">
       <h2 className="visually-hidden">Наши другие направления</h2>
-      <div className="container">
+      <Container>
         <ul className="flex items-center justify-around gap-4">
           {data.map(
             (
@@ -39,7 +40,7 @@ export const Other_directions = observer(() => {
             ),
           )}
         </ul>
-      </div>
+      </Container>
     </section>
   );
 });

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import { modal_store } from "@/stores";
 import { directions_store } from "@/stores/data_store";
-import { Directions_list } from "@/components";
+import { Container, Directions_list } from "@/components";
 
 export const Current_direction_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -29,7 +29,7 @@ export const Current_direction_page = observer(() => {
     directions_bd?.[service] ?? {};
 
   return (
-    <div className="container">
+    <Container>
       <section className="relative min-h-[400px] py-20 px-10 after:absolute after:inset-0 after:bg-black/80 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
         <picture>
           <source srcSet={hero?.images_url?.webp} type="image/webp" />
@@ -94,6 +94,6 @@ export const Current_direction_page = observer(() => {
           <Directions_list keys_list={directions} />
         </section>
       )}
-    </div>
+    </Container>
   );
 });

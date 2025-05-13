@@ -1,14 +1,14 @@
-import { News_list } from "components";
+import { Container, News_list } from "components";
 
 export const Club_news = () => {
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">
           <span className="head_decor">Новости</span> фитнес клуба
         </h2>
         <News_list />
-      </div>
+      </Container>
     </section>
   );
 };

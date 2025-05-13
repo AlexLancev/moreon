@@ -3,7 +3,7 @@ import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import xss from "xss";
 
-import { Tabs } from "components/tabs";
+import { Tabs, Container } from "@/components";
 
 import { isEmptyObj } from "@/utils";
 import { club_cards_store } from "@/stores/data_store";
@@ -45,7 +45,7 @@ export const Choose_your_card = observer(
 
     return (
       <section className="py-12">
-        <div className="container">
+        <Container>
           <h2 className="mb-10">
             Выберите свою <span className="head_decor">карту</span>
           </h2>
@@ -79,7 +79,7 @@ export const Choose_your_card = observer(
               </Link>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     );
   },

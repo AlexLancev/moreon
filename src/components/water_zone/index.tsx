@@ -1,7 +1,7 @@
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
-import { Tabs } from "components";
+import { Container, Tabs } from "components";
 
 import { modal_store } from "@/stores";
 import { isEmptyObj } from "@/utils";
@@ -43,7 +43,7 @@ export const Water_zone = observer(
 
     return (
       <section className="py-12">
-        <div className="container">
+        <Container>
           <div className="water_zone">
             <picture>
               <source
@@ -89,7 +89,7 @@ export const Water_zone = observer(
               </picture>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     );
   },

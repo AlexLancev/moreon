@@ -1,5 +1,6 @@
 import { isEmptyObj } from "@/utils";
 import { contacts_data } from "constans";
+import { Container } from "@/components";
 
 type Current_contacts_type = "address" | "phone" | "email";
 
@@ -16,7 +17,7 @@ export const Contacts = () => {
 
   return (
     <section>
-      <div className="container">
+      <Container>
         <div>
           <h2>Контакты</h2>
           <ul>
@@ -41,7 +42,7 @@ export const Contacts = () => {
           </ul>
         </div>
         {/* map */}
-      </div>
+      </Container>
     </section>
   );
 };

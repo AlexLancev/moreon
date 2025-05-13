@@ -1,3 +1,4 @@
+import { Container } from "@/components";
 import { kids_fitnes_hero_data } from "@/constans";
 import { modal_store } from "@/stores";
 
@@ -5,7 +6,7 @@ export const Kids_fitnes_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;
 
   return (
-    <div className="container">
+    <Container>
       <section className="relative py-20 px-10 after:absolute after:inset-0 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
         <picture>
           <source
@@ -55,6 +56,6 @@ export const Kids_fitnes_hero = () => {
           </button>
         </div>
       </section>
-    </div>
+    </Container>
   );
 };

@@ -1,12 +1,12 @@
-import { Reviews_list } from "components";
+import { Container, Reviews_list } from "components";
 
 export const About_reviews = () => {
   return (
     <section className="py-12">
-      <div className="container">
+      <Container>
         <h2 className="mb-10">Отзывы</h2>
         <Reviews_list />
-      </div>
+      </Container>
     </section>
   );
 };

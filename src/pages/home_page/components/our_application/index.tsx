@@ -1,6 +1,8 @@
+import { Container } from "@/components";
+
 export const Our_application = () => {
   return (
-    <div className="container">
+    <Container>
       <section className="relative my-12 pt-24 pb-60 bg-[url('/images/application/salefon.png')] bg-auto bg-no-repeat">
         <picture>
           <source srcSet="/images/application/phons.webp" type="image/webp" />
@@ -70,6 +72,6 @@ export const Our_application = () => {
           </a>
         </div>
       </section>
-    </div>
+    </Container>
   );
 };

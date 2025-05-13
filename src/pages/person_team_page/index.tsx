@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 
 import { team_store } from "@/stores/data_store";
-import { Other_directions, Stock } from "@/components";
+import { Container, Other_directions, Stock } from "@/components";
 import { Fitness_area, Profitable_visits } from "../about_page/components";
 import { get_tabs_store } from "@/stores";
 
@@ -38,7 +38,7 @@ export const Person_team_page = observer(() => {
   return (
     <>
       <section className="py-12">
-        <div className="container">
+        <Container>
           <div className="flex">
             <picture>
               <source srcSet={webp} type="image/webp" />
@@ -59,7 +59,7 @@ export const Person_team_page = observer(() => {
               <div dangerouslySetInnerHTML={{ __html: achievements }}></div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       <Stock />
       <Fitness_area tabs_store={get_tabs_store("component_fitness_area")} />
