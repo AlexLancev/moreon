@@ -1,12 +1,12 @@
-import { Container, Questions } from "components";
+import { Container, Questions, Title } from "components";
 
 export const About_questions = () => {
   return (
     <Container>
       <section className="about_questions">
-        <h2 className="mb-10">
+        <Title>
           Часто задаваемые <span className="head_decor">вопросы</span>
-        </h2>
+        </Title>
         <Questions />
       </section>
     </Container>

@@ -1,5 +1,7 @@
 import { modal_store } from "@/stores";
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "../ui/button";
+import { ClipboardPen } from "lucide-react";
 
 const childrens_center_data = [
   {
@@ -40,7 +42,7 @@ export const Childrens_center = () => {
             />
           </picture>
           <div>
-            <h2 className="mb-5">Детский центр</h2>
+            <Title className="mb-5">Детский центр</Title>
             <p className="mb-4">
               Детский возраст – лучшее время, для того чтобы приучать ребенка к
               здоровому образу жизни.
@@ -64,13 +66,10 @@ export const Childrens_center = () => {
             <p className="mb-8">
               Пусть ваши дети растут сильными, здоровыми и активными!
             </p>
-            <button
-              onClick={() => change_modal(!isVisibleModal)}
-              className="text-white py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-              type="button"
-            >
+            <Button onClick={() => change_modal(!isVisibleModal)}>
               Записаться на бесплатное пробное занятие
-            </button>
+              <ClipboardPen size={20} />
+            </Button>
           </div>
         </div>
       </section>

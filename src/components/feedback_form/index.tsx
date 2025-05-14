@@ -16,6 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { UserFormSchema } from "@/schema";
+import { Send } from "lucide-react";
 
 export const Feedback_form = () => {
   const form = useForm({
@@ -80,7 +81,7 @@ export const Feedback_form = () => {
 
         <Button
           type="submit"
-          className="w-full border border-[rgb(115,115,115)]"
+          className="w-full custom-grey-btn"
           disabled={isSubmitting}
         >
           Отправить

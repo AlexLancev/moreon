@@ -3,8 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 
+import { Title } from "@/components";
+
 import { performance_data_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
+import { Button } from "../ui/button";
+import { NotebookText } from "lucide-react";
 
 export const Performance = observer(
   ({ data_key, isVisibleBtn }: Performance_type) => {
@@ -66,17 +70,17 @@ export const Performance = observer(
                 )}
               </Swiper>
               <div className="w-full max-w-[525px] pt-8">
-                <h3 className="uppercase head_decor text-2xl font-bold mb-3">
+                <Title
+                  size="md"
+                  className="uppercase head_decor text-2xl font-bold mb-3"
+                >
                   {title}
-                </h3>
+                </Title>
                 <p className="text-lg">{description}</p>
                 {isVisibleBtn && (
-                  <button
-                    type="button"
-                    className="text-white mt-10 py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgba(255,255,255,0.2)] shadow-custom-shadows duration-300 hover:bg-[rgba(255,255,255,0.3)] hover:translate-y-[1px]"
-                  >
-                    Смотреть меню
-                  </button>
+                  <Button className="custom-grey-btn">
+                    Смотреть меню <NotebookText />
+                  </Button>
                 )}
               </div>
             </li>

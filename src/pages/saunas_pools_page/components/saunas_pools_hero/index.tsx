@@ -1,5 +1,7 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
+import { NotebookText } from "lucide-react";
 
 export const Saunas_pools_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -17,7 +19,9 @@ export const Saunas_pools_hero = () => {
           />
         </picture>
         <div className="relative z-10 w-full max-w-[625px] text-lg">
-          <h1 className="mb-6">Бани и бассейны</h1>
+          <Title size="xl" className="mb-6">
+            ани и бассейны
+          </Title>
           <p className="mb-4">
             Мореон Фитнес предоставляет своим клиентам уникальные возможности
             для отдыха и оздоровления.
@@ -31,13 +35,9 @@ export const Saunas_pools_hero = () => {
             В этом разделе Вы можете подробнее ознакомиться с
             велнесс-возможностями Мореон Фитнес.
           </p>
-          <button
-            onClick={() => change_modal(!isVisibleModal)}
-            className="inline-flex will-change-transform text-white py-4 px-7 mt-10 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            type="button"
-          >
-            Гостевой визит
-          </button>
+          <Button onClick={() => change_modal(!isVisibleModal)}>
+            Гостевой визит <NotebookText />
+          </Button>
         </div>
       </section>
     </Container>

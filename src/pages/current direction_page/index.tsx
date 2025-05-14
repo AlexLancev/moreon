@@ -4,7 +4,9 @@ import { useLocation } from "react-router-dom";
 
 import { modal_store } from "@/stores";
 import { directions_store } from "@/stores/data_store";
-import { Container, Directions_list } from "@/components";
+import { Container, Directions_list, Title } from "@/components";
+import { Button } from "@/components/ui/button";
+import { NotebookText } from "lucide-react";
 
 export const Current_direction_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -45,13 +47,9 @@ export const Current_direction_page = observer(() => {
             className="ab"
             dangerouslySetInnerHTML={{ __html: hero?.description }}
           ></div>
-          <button
-            onClick={() => change_modal(!isVisibleModal)}
-            className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            type="button"
-          >
-            Гостевой визит
-          </button>
+          <Button onClick={() => change_modal(!isVisibleModal)}>
+            Гостевой визит <NotebookText />
+          </Button>
         </div>
       </section>
       {description_direction && description_direction.length !== 0 && (
@@ -88,9 +86,9 @@ export const Current_direction_page = observer(() => {
       )}
       {directions && directions.length !== 0 && (
         <section className="py-12 px-10">
-          <h2 className="mb-10">
+          <Title>
             <span className="head_decor">Другие</span> направления
-          </h2>
+          </Title>
           <Directions_list keys_list={directions} />
         </section>
       )}

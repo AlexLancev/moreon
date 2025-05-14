@@ -1,10 +1,10 @@
-import { Container, Reviews_list } from "components";
+import { Container, Reviews_list, Title } from "components";
 
 export const About_reviews = () => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">Отзывы</h2>
+        <Title>Отзывы</Title>
         <Reviews_list />
       </Container>
     </section>

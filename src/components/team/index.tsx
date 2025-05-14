@@ -1,4 +1,4 @@
-import { Container, Tabs, Team_list } from "components";
+import { Container, Tabs, Team_list, Title } from "components";
 import { observer } from "mobx-react-lite";
 
 const team_tab_list = [
@@ -20,7 +20,7 @@ export const Team = observer(
     return (
       <section className="py-12">
         <Container>
-          <h2 className="mb-10">Команда</h2>
+          <Title>Команда</Title>
           <Tabs
             isActiveTab={isActiveTab}
             change_tabs={change_tabs}

@@ -4,7 +4,9 @@ import { toJS } from "mobx";
 
 import { directions_store, team_store } from "@/stores/data_store";
 import { modal_store } from "@/stores";
-import { Areas_study, Container, Team_list } from "@/components";
+import { Areas_study, Container, Team_list, Title } from "@/components";
+import { Button } from "@/components/ui/button";
+import { NotebookText } from "lucide-react";
 
 export const Presentation_directions_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -62,22 +64,18 @@ export const Presentation_directions_page = observer(() => {
               className="ab"
               dangerouslySetInnerHTML={{ __html: description }}
             ></div>
-            <button
-              onClick={() => change_modal(!isVisibleModal)}
-              className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-              type="button"
-            >
-              Гостевой визит
-            </button>
+            <Button onClick={() => change_modal(!isVisibleModal)}>
+              Гостевой визит <NotebookText />
+            </Button>
           </div>
         </section>
       </Container>
       <Areas_study keys_list={directions} />
       <section className="py-10">
         <Container>
-          <h2 className="mb-10">
+          <Title>
             <span className="head_decor">Тренеры</span> направления
-          </h2>
+          </Title>
           <Team_list isActiveTab={team} />
         </Container>
       </section>

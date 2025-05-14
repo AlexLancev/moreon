@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 
+import { Title } from "@/components";
+
 import { types_services_store } from "@/stores/data_store";
 
 export const Types_services = observer(() => {
@@ -28,7 +30,9 @@ export const Types_services = observer(() => {
             key={head ?? idx}
             className="relative p-7 bg-[#031817] flex flex-col overflow-hidden rounded-3xl text-sm min-h-[430px] before:w-full before:h-[120px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
           >
-            <h3 className="uppercase mb-20 text-xl">{head}</h3>
+            <Title size="md" className="uppercase mb-20 text-xl">
+              {head}
+            </Title>
             <p className="mb-2 flex-auto text-lg">{description}</p>
             <Link
               to={`/services/${path}`}

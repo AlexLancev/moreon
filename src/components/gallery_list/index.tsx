@@ -2,6 +2,8 @@ import { useState } from "react";
 import { observer } from "mobx-react-lite";
 
 import { gallery_list_store } from "@/stores/data_store";
+import { Button } from "../ui/button";
+import { Eye } from "lucide-react";
 
 const num = 6;
 
@@ -44,13 +46,9 @@ export const Gallery_list = observer(() => {
           ))}
       </ul>
       {data.length > visibleShow && (
-        <button
-          onClick={handleVisibleShow}
-          type="button"
-          className="flex will-change-transform text-white py-4 px-7 mt-10 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-        >
-          Показать ещё
-        </button>
+        <Button onClick={handleVisibleShow} className="flex m-auto mt-5">
+          Показать ещё <Eye />
+        </Button>
       )}
     </>
   );

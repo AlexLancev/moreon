@@ -1,5 +1,7 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
+import { NotebookText } from "lucide-react";
 
 export const Team_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -17,14 +19,10 @@ export const Team_hero = () => {
           />
         </picture>
         <div className="relative z-10">
-          <h1 className="mb-1">Наша команда</h1>
-          <button
-            onClick={() => change_modal(!isVisibleModal)}
-            className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            type="button"
-          >
-            Гостевой визит
-          </button>
+          <Title size="xl">Наша команда</Title>
+          <Button onClick={() => change_modal(!isVisibleModal)}>
+            Гостевой визит <NotebookText />
+          </Button>
         </div>
       </section>
     </Container>

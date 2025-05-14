@@ -3,6 +3,8 @@ import { observer } from "mobx-react-lite";
 import classNames from "classnames";
 import xss from "xss";
 
+import { Title } from "@/components";
+
 import { about_questions_store } from "@/stores/data_store";
 
 export const Questions = observer(() => {
@@ -33,7 +35,7 @@ export const Questions = observer(() => {
               type="button"
               onClick={() => setVisibleIndex(visibleIndex === idx ? null : idx)}
             >
-              <h3 className="text-base">{head}</h3>
+              <Title size="md" className="mb-0">{head}</Title>
               <div
                 className={classNames(
                   "duration-300 transition-opacity overflow-hidden ab",

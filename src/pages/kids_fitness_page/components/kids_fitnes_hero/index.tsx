@@ -1,6 +1,8 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "@/components/ui/button";
 import { kids_fitnes_hero_data } from "@/constans";
 import { modal_store } from "@/stores";
+import { NotebookText } from "lucide-react";
 
 export const Kids_fitnes_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -21,7 +23,7 @@ export const Kids_fitnes_hero = () => {
           />
         </picture>
         <div className="relative z-10 w-full max-w-[625px] text-lg">
-          <h1 className="mb-3">Детский фитнес</h1>
+          <Title className="mb-3">Детский фитнес</Title>
           <p className="mb-4">
             Детский возраст – лучшее время, для того чтобы приучать ребенка к
             здоровому образу жизни.
@@ -47,13 +49,9 @@ export const Kids_fitnes_hero = () => {
           <p className="mb-5">
             Пусть ваши дети растут сильными, здоровыми и активными!
           </p>
-          <button
-            onClick={() => change_modal(!isVisibleModal)}
-            className="inline-flex will-change-transform text-white py-4 px-7 mt-10 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            type="button"
-          >
-            Гостевой визит
-          </button>
+          <Button onClick={() => change_modal(!isVisibleModal)}>
+            Гостевой визит <NotebookText />
+          </Button>
         </div>
       </section>
     </Container>

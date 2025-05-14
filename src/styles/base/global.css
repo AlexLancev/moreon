@@ -69,26 +69,6 @@ body.lock {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: #ffffff;
-  line-height: 1.4;
-}
-
-h1 {
-  font-size: 54px;
-}
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
 .swiper-button-prev {
   left: 30px !important;
 }
@@ -476,6 +456,7 @@ h3 {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -508,6 +489,7 @@ h3 {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -540,6 +522,7 @@ h3 {
     font-size: 22px;
     margin-bottom: 20px;
   }
+
   b {
     display: inline-block;
     font-size: 18px;
@@ -551,6 +534,7 @@ h3 {
     display: inline-block;
     width: 50%;
   }
+
   p {
     padding: 10px 0;
     font-size: 18px;
@@ -558,8 +542,34 @@ h3 {
 
   ul {
     margin-bottom: 10px;
+
     li:not(:last-child) {
       margin-bottom: 5px;
+    }
+  }
+}
+
+@layer components {
+  .custom-green-btn {
+    background-color: rgb(45, 154, 148);
+    box-shadow:
+      0px 11.6px 23.2px rgba(8, 35, 34, 0.5585),
+      inset 0px -5.95467px 5.95467px #176561,
+      inset 0px 5.95467px 5.95467px #36ece3;
+    &:hover {
+      background-color: rgba(45, 154, 149, 0.76);
+    }
+  }
+
+  .custom-grey-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0px 11.6px 23.2px rgba(0, 0, 0, 0.5585),
+      inset 0px -5.95467px 5.95467px #454545,
+      inset 0px 5.95467px 5.95467px #454545;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
     }
   }
 }

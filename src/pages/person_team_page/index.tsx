@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 
 import { team_store } from "@/stores/data_store";
-import { Container, Other_directions, Stock } from "@/components";
+import { Container, Other_directions, Stock, Title } from "@/components";
 import { Fitness_area, Profitable_visits } from "../about_page/components";
 import { get_tabs_store } from "@/stores";
 
@@ -45,7 +45,7 @@ export const Person_team_page = observer(() => {
               <img src={jpg} alt="" aria-hidden />
             </picture>
             <div className="ab">
-              <h1>{name_person}</h1>
+              <Title size="xl">{name_person}</Title>
               <ul>
                 <li>{qualification}</li>
                 <li>Стаж работы: {work_experience}</li>

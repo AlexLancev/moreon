@@ -1,6 +1,6 @@
 import { isEmptyObj } from "@/utils";
 import { contacts_data } from "constans";
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
 
 type Current_contacts_type = "address" | "phone" | "email";
 
@@ -19,7 +19,7 @@ export const Contacts = () => {
     <section>
       <Container>
         <div>
-          <h2>Контакты</h2>
+          <Title>Контакты</Title>
           <ul>
             {current_contacts.map((contact, idx: number) => (
               <li className="mb-3" key={idx}>

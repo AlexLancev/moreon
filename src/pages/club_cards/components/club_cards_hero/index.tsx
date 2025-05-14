@@ -1,4 +1,6 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "@/components/ui/button";
+import { IdCard } from "lucide-react";
 
 export const Club_cards_hero = () => {
   return (
@@ -17,19 +19,18 @@ export const Club_cards_hero = () => {
           />
         </picture>
         <div className="w-full max-w-[525px]">
-          <h1 className="mb-3">Клубные карты</h1>
+          <Title size="xl" className="mb-3">
+            Клубные карты
+          </Title>
           <p className="mb-5 text-lg">
             С клубной картой Мореон Фитнес вы становитесь членом клуба
             профессионалов и любителей спорта и здорового образа жизни.
             Сотрудников и клиентов Мореон Фитнес объединяет общая идея -
             "Присоединись к уникальности – стань уникальным!".
           </p>
-          <button
-            className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            type="button"
-          >
-            Выбрать клубную карту
-          </button>
+          <Button className="mt-10">
+            Выбрать клубную карту <IdCard />
+          </Button>
         </div>
       </section>
     </Container>

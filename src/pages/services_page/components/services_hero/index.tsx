@@ -1,5 +1,7 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
+import { NotebookText } from "lucide-react";
 
 export const Services_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -20,9 +22,9 @@ export const Services_hero = () => {
           />
         </picture>
         <div className="w-full max-w-[700px]">
-          <h2 className="mb-8 text-5xl">
+          <Title className="mb-8">
             Услуги <span className="head_decor">Moreon Fitness</span>
-          </h2>
+          </Title>
           <p className="mb-14 text-xl">
             Занятия фитнесом – это микс эффективных упражнений, мотивирующего
             влияния тренера, духа соревнований и общения с единомышленниками.
@@ -31,13 +33,9 @@ export const Services_hero = () => {
             уровня подготовки и возраста – от начинающих до продвинутых
             спортсменов, для детей и взрослых.
           </p>
-          <button
-            onClick={() => change_modal(!isVisibleModal)}
-            className="flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            type="button"
-          >
-            Гостевой визит
-          </button>
+          <Button onClick={() => change_modal(!isVisibleModal)}>
+            Гостевой визит <NotebookText />
+          </Button>
         </div>
       </section>
     </Container>

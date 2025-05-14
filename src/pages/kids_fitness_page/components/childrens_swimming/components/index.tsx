@@ -7,6 +7,8 @@ import { Tabs } from "components";
 
 import { childrens_swimming_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
+import { Button } from "@/components/ui/button";
+import { MessageCircleQuestion } from "lucide-react";
 
 const childrens_swimming_list = [
   { key: "infant_swimming", category: "Грудничковое плавание" },
@@ -57,12 +59,11 @@ export const Childrens_swimming_tabs = observer(
               className="mb-5 ab"
               dangerouslySetInnerHTML={{ __html: sanitized_description }}
             ></div>
-            <Link
-              to={path}
-              className="inline-flex will-change-transform text-white py-4 px-7 mt-10 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            >
-              Подробнее
-            </Link>
+            <Button asChild>
+              <Link to={path}>
+                Подробнее <MessageCircleQuestion />
+              </Link>
+            </Button>
           </div>
           <picture>
             <source srcSet={images_url?.webp} type="image/webp" />

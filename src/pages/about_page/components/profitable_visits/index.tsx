@@ -1,12 +1,12 @@
-import { Container, Profitable_list } from "components";
+import { Container, Profitable_list, Title } from "components";
 
 export const Profitable_visits = () => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">
+        <Title>
           Выгоды посещения <span className="head_decor">фитнес клуба</span>
-        </h2>
+        </Title>
         <Profitable_list />
       </Container>
     </section>

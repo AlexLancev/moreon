@@ -1,9 +1,11 @@
 import { observer } from "mobx-react-lite";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
+
+import { Title } from "@/components";
 
 import { news_store } from "@/stores/data_store";
-import { Link } from "react-router-dom";
 
 export const News_list = observer(() => {
   const { data, isLoading, isError } = news_store;
@@ -39,9 +41,12 @@ export const News_list = observer(() => {
                   aria-label={description_picture}
                 />
               </picture>
-              <h3 className="text-base text-[rgb(176,176,176)] px-1 text-center">
+              <Title
+                size="md"
+                className="text-[rgb(176,176,176)] px-1 text-center"
+              >
                 {description}
-              </h3>
+              </Title>
             </Link>
           </SwiperSlide>
         ),

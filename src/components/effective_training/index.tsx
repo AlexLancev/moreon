@@ -1,4 +1,4 @@
-import { Container, Performance } from "@/components";
+import { Container, Performance, Title } from "@/components";
 
 const effective_training_data_key = [
   "spa",
@@ -11,10 +11,11 @@ export const Effective_training = () => {
   return (
     <section>
       <Container>
-        <h2 className="mb-3">
+        <Title className="mb-3">
           Все, что нужно для
           <span className="head_decor"> эффективных тренировок</span>
-        </h2>
+        </Title>
+
         <strong className="block mb-10 text-lg">
           Многофункциональный отдых включает в себя <br /> тренировки, отдых и
           развлечения

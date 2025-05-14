@@ -4,7 +4,7 @@ import xss from "xss";
 
 import { news_store } from "@/stores/data_store";
 import { Container } from "@/components/container";
-import { Render_slider } from "@/components";
+import { Render_slider, Title } from "@/components";
 
 export const News_presentation_page = observer(() => {
   const { data, isLoading, isError } = news_store;
@@ -68,9 +68,9 @@ export const News_presentation_page = observer(() => {
             aria-hidden
           />
         </picture>
-        <h2 className="mb-10">
+        <Title>
           Другие <span className="head_decor">акции клуба</span>
-        </h2>
+        </Title>
         <Render_slider path={numeric_Id} type="news" data={data} />
       </section>
     </Container>

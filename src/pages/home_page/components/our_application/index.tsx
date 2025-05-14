@@ -1,4 +1,4 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
 
 export const Our_application = () => {
   return (
@@ -15,9 +15,9 @@ export const Our_application = () => {
           />
         </picture>
         <div className="w-full max-w-[525px] ml-auto pt-32">
-          <h2 className="mb-3">
+          <Title className="mb-3">
             Приложение <span className="head_decor">Moreon Fitness</span>
-          </h2>
+          </Title>
           <p className="mb-4">
             В нашем приложении вы можете записаться на тренировку, заморозить
             карту, задать интересующие вас вопросы, быть в курсе расписания

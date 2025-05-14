@@ -1,10 +1,13 @@
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 
-import { Container, Tabs } from "components";
+import { Container, Tabs, Title } from "components";
 
 import { fitness_area_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
+import { Button } from "@/components/ui/button";
+import { MessageCircleQuestion } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const tab_list = [
   { key: "gym", category: "Тренажёрный зал" },
@@ -42,9 +45,9 @@ export const Fitness_area = observer(
     return (
       <section className="py-12">
         <Container>
-          <h2 className="mb-10">
+          <Title>
             <span className="head_decor">Зоны</span> фитнес клуба
-          </h2>
+          </Title>
           <Tabs
             isActiveTab={isActiveTab}
             change_tabs={change_tabs}
@@ -62,14 +65,15 @@ export const Fitness_area = observer(
               />
             </picture>
             <div className="w-full max-w-[525px]">
-              <h3 className="mb-3 head_decor text-3xl">{head}</h3>
+              <Title size="md" className="mb-3 head_decor">
+                {head}
+              </Title>
               <p className="mb-7 text-lg">{description}</p>
-              <a
-                href={path}
-                className="inline-flex text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-              >
-                Подробнее
-              </a>
+              <Button asChild>
+                <Link to={path}>
+                  Подробнее <MessageCircleQuestion />
+                </Link>
+              </Button>
             </div>
           </div>
         </Container>

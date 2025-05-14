@@ -3,6 +3,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 import { Container, Render_image } from "@/components";
+import { Button } from "@/components/ui/button";
+import { HandCoins, MessageCircleQuestion } from "lucide-react";
 
 const data_action = [
   {
@@ -105,18 +107,15 @@ export const Home_hero = () => {
               <Container>
                 <div className="relative">
                   <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[8rem] 2xl:-translate-y-[12rem]">
-                    <Link
-                      to="/"
-                      className="will-change-transform py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-                    >
-                      Узнать подробнее
-                    </Link>
-                    <button
-                      type="button"
-                      className="will-change-transform py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgba(255,255,255,0.2)] shadow-custom-shadows duration-300 hover:bg-[rgba(255,255,255,0.3)] hover:translate-y-[1px]"
-                    >
+                    <Button asChild>
+                      <Link to="/">
+                        Узнать подробнее <MessageCircleQuestion />
+                      </Link>
+                    </Button>
+                    <Button className="custom-grey-btn">
                       Рассчитать стоимость
-                    </button>
+                      <HandCoins />
+                    </Button>
                   </div>
                 </div>
               </Container>

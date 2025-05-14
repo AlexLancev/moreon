@@ -1,13 +1,13 @@
-import { Container, Types_services } from "components";
+import { Container, Title, Types_services } from "components";
 
 export const Dream_body = () => {
   return (
     <section className="py-12">
       <Container>
-        <h1 className="mb-10">
+        <Title size="xl">
           Создай тело мечты вместе
           <span className="head_decor"> с Moreon Fitness</span>
-        </h1>
+        </Title>
         <Types_services />
       </Container>
     </section>

@@ -1,10 +1,10 @@
-import { Container, Gallery_list } from "components";
+import { Container, Gallery_list, Title } from "components";
 
 export const Gallery = () => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">Фотогалерея</h2>
+        <Title>Фотогалерея</Title>
         <Gallery_list />
       </Container>
     </section>

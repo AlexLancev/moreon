@@ -1,12 +1,12 @@
-import { About_us_list, Container } from "components";
+import { About_us_list, Container, Title } from "components";
 
 export const About_us = () => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">
+        <Title>
           Почему стоит <span className="head_decor">выбрать нас</span>
-        </h2>
+        </Title>
         <About_us_list />
       </Container>
     </section>

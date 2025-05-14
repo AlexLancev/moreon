@@ -3,10 +3,12 @@ import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import xss from "xss";
 
-import { Tabs, Container } from "@/components";
+import { Tabs, Container, Title } from "@/components";
 
 import { isEmptyObj } from "@/utils";
 import { club_cards_store } from "@/stores/data_store";
+import { Button } from "../ui/button";
+import { MessageCircleQuestion } from "lucide-react";
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },
@@ -46,9 +48,9 @@ export const Choose_your_card = observer(
     return (
       <section className="py-12">
         <Container>
-          <h2 className="mb-10">
+          <Title>
             Выберите свою <span className="head_decor">карту</span>
-          </h2>
+          </Title>
           <Tabs
             isActiveTab={isActiveTab}
             change_tabs={change_tabs}
@@ -71,12 +73,11 @@ export const Choose_your_card = observer(
                 className="mb-5 text-lg ab"
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}
               ></div>
-              <Link
-                to={path}
-                className="inline-flex text-white py-4 px-7 mt-10 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-              >
-                Подробнее
-              </Link>
+              <Button asChild>
+                <Link to={path}>
+                  Подробнее <MessageCircleQuestion />
+                </Link>
+              </Button>
             </div>
           </div>
         </Container>

@@ -1,12 +1,14 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "../ui/button";
+import { Snowflake } from "lucide-react";
 
 export const Freeze_card = () => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">
+        <Title>
           Заморозь свою карту <span className="head_decor">Moreon</span>
-        </h2>
+        </Title>
         <div className="flex justify-between gap-x-8">
           <div className="w-full max-w-[525px]">
             <p>
@@ -23,12 +25,9 @@ export const Freeze_card = () => {
               Заморозка – лучший помощник в ситуациях, когда нужно отложить
               занятия фитнесом.
             </p>
-            <button
-              type="button"
-              className="text-white py-4 px-7 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-            >
-              Заморозить карту
-            </button>
+            <Button>
+              Заморозить карту <Snowflake />
+            </Button>
           </div>
           <div className="freeze_decor">
             <picture>

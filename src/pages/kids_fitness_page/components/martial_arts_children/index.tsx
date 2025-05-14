@@ -1,5 +1,7 @@
-import { Container } from "@/components";
+import { Container, Title } from "@/components";
+import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
+import { NotebookText } from "lucide-react";
 
 const martial_arts_children_directions = [
   {
@@ -22,9 +24,9 @@ export const Martial_arts_children = () => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">
+        <Title>
           <span className="head_decor">Единоборства</span> для детей
-        </h2>
+        </Title>
         <div className="flex items-center justify-between gap-x-12">
           <picture>
             <source
@@ -72,13 +74,9 @@ export const Martial_arts_children = () => {
               Занятия в Moreon Fitness становятся для детей не только
               тренировкой, а любимым досугом!
             </p>
-            <button
-              onClick={() => change_modal(!isVisibleModal)}
-              className="inline-flex will-change-transform text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-              type="button"
-            >
-              Гостевой визит
-            </button>
+            <Button onClick={() => change_modal(!isVisibleModal)}>
+              Гостевой визит <NotebookText />
+            </Button>
           </div>
         </div>
       </Container>

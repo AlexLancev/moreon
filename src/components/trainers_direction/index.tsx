@@ -1,4 +1,4 @@
-import { Container, Team_list } from "components";
+import { Container, Team_list, Title } from "components";
 
 type Trainers_direction_type = {
   direction: "martial_arts" | "gym" | "group_training" | "pool";
@@ -8,9 +8,9 @@ export const Trainers_direction = ({ direction }: Trainers_direction_type) => {
   return (
     <section className="py-12">
       <Container>
-        <h2 className="mb-10">
+        <Title>
           Тренеры <span className="head_decor">направления</span>
-        </h2>
+        </Title>
         <Team_list isActiveTab={direction} />
       </Container>
     </section>

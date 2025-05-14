@@ -4,10 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import classNames from "classnames";
 
+import { Title } from "@/components";
+
 import { about_us_store } from "@/stores/data_store";
 
 export const About_us_list = observer(() => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const { data, isLoading, isError } = about_us_store;
 
@@ -22,7 +23,7 @@ export const About_us_list = observer(() => {
     <SwiperSlide key={startIndex} className="flex flex-col gap-5">
       {data
         .slice(startIndex, endIndex)
-        .map(({ title, description }: About_us_type, idx: number) => {
+        .map(({ title, description }, idx: number) => {
           const currentIndex = startIndex + idx;
           return (
             <button
@@ -37,7 +38,9 @@ export const About_us_list = observer(() => {
                 )
               }
             >
-              <h3 className="text-base">{title}</h3>
+              <Title size="lg" className="text-base">
+                {title}
+              </Title>
               <p
                 className={classNames("duration-300 transition-opacity", {
                   ["activeClasses"]: visibleIndex === currentIndex,

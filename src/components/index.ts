@@ -37,3 +37,4 @@ export { Feedback_form } from "./feedback_form";
 export { Feedback_modal } from "./feedback_modal";
 export { Render_slider } from "./render_slider";
 export { Container } from "./container";
+export { Title } from "./title";

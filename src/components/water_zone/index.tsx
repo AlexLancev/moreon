@@ -1,11 +1,13 @@
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
-import { Container, Tabs } from "components";
+import { Container, Tabs, Title } from "components";
 
 import { modal_store } from "@/stores";
 import { isEmptyObj } from "@/utils";
 import { water_zone_store } from "@/stores/data_store";
+import { Button } from "../ui/button";
+import { NotebookText } from "lucide-react";
 
 const tab_list = [
   { key: "baths_swimming", category: "Бани и бассейны" },
@@ -67,15 +69,13 @@ export const Water_zone = observer(
             />
             <div className="pt-10 flex items-center justify-between gap-x-5">
               <div className="w-full max-w-[625px]">
-                <h3 className="text-3xl mb-5">{head}</h3>
+                <Title size="md" className="text-3xl mb-5">
+                  {head}
+                </Title>
                 <p className="mb-8 text-lg">{description}</p>
-                <button
-                  onClick={() => change_modal(!isVisibleModal)}
-                  className="inline-flex text-white py-4 px-7 m-auto 2xl:py-5 2xl:px-8 2xl:text-[1.75rem] rounded-xl bg-[rgb(45,154,148)] hover:bg-[rgba(45,154,149,0.76)] shadow-custom-shadow duration-300 hover:translate-y-[1px]"
-                  type="button"
-                >
-                  Записаться на гостевой визит
-                </button>
+                <Button onClick={() => change_modal(!isVisibleModal)}>
+                  Записаться на гостевой визит <NotebookText />
+                </Button>
               </div>
               <picture>
                 <source srcSet={images_url?.jpg} type="image/webp" />
