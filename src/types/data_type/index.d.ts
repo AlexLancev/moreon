@@ -183,12 +183,15 @@ type Club_cards_key_type =
   | "flexible"
   | "premium";
 
-type Club_cards_type = {
-  data: Record<
+type Page_description_type_key = "all" | "daytime" | "business" | "weekend";
+
+type Club_cards_type = Record<
     Club_cards_key_type,
     {
       head: string;
       description: string;
+      hero_description: string;
+      page_description: Record<Page_description_type_key, string>;
       images_url: {
         jpg: string;
         webp: string;
@@ -196,7 +199,6 @@ type Club_cards_type = {
       path: string;
     }
   >;
-};
 
 type Childrens_swimming_tabs_type = {
   isActiveTab: Childrens_swimming_key_type;

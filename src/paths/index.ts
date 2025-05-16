@@ -63,4 +63,5 @@ export const paths = {
   person_team: "/team/:name",
   stock: "/stock/:id",
   news: "/news/:id",
+  presentation_cards: "/presentation_cards/:path",
 };

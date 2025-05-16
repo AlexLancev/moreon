@@ -5,6 +5,7 @@ import { paths } from "@/paths";
 import { Layout } from "@/components";
 import {
   About_page,
+  Cards_presentation_page,
   Club_cards,
   Current_direction_page,
   Home_page,
@@ -91,6 +92,7 @@ const {
   person_team,
   stock,
   news,
+  presentation_cards,
 } = paths;
 
 export const App = () => {
@@ -183,6 +185,10 @@ export const App = () => {
           <Route path={person_team} element={<Person_team_page />} />
           <Route path={stock} element={<Stock_presentation_page />} />
           <Route path={news} element={<News_presentation_page />} />
+          <Route
+            path={presentation_cards}
+            element={<Cards_presentation_page />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

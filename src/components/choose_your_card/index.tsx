@@ -23,7 +23,7 @@ export const Choose_your_card = observer(
     const { isActiveTab, change_tabs } = tabs_store;
     const { data, isLoading, isError } = club_cards_store;
 
-    const club_cards_bd = toJS(data?.[0]?.data);
+    const club_cards_bd = toJS(data?.[0]);
 
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: Failed to fetch data</div>;
@@ -74,9 +74,9 @@ export const Choose_your_card = observer(
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}
               ></div>
               <Button asChild>
-                <Link to={path}>
+                <a href={`/presentation_cards/${path}`}>
                   Подробнее <MessageCircleQuestion />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
