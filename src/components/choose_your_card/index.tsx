@@ -43,7 +43,7 @@ export const Choose_your_card = observer(
 
     const { head, description, images_url, path } = current_data;
 
-    const sanitized_description = xss(description);
+    const sanitized_description = xss(description) ?? "";
 
     return (
       <section className="py-12">
@@ -74,9 +74,9 @@ export const Choose_your_card = observer(
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}
               ></div>
               <Button asChild>
-                <a href={`/presentation_cards/${path}`}>
+                <Link to={`/presentation_cards/${path}`}>
                   Подробнее <MessageCircleQuestion />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
