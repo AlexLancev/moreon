@@ -207,25 +207,22 @@ type Childrens_swimming_tabs_type = {
 
 type Childrens_swimming_key_type =
   | "infant_swimming"
-  | "early_swimming"
   | "childrens_swimming"
-  | "competitive_swimming";
+  | "school_competitive_swimming";
 
-type Childrens_swimming_type = {
-  data: Record<
-    Childrens_swimming_key_type,
-    {
-      head: string;
-      description: string;
-      image_description: string;
-      path: string;
-      images_url: {
-        jpg: string;
-        webp: string;
-      };
-    }
-  >;
-};
+type Childrens_swimming_type = Record<
+  Childrens_swimming_key_type,
+  {
+    head: string;
+    description: string;
+    image_description: string;
+    path: string;
+    images_url: {
+      jpg: string;
+      webp: string;
+    };
+  }
+>;
 
 type News_type = {
   id: number;

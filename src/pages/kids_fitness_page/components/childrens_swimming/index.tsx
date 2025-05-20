@@ -32,7 +32,7 @@ export const Childrens_swimming = () => {
                 if (!description) return null;
 
                 return (
-                  <li key={idx} className="[&:not(:last-child)]:mb-2">
+                  <li key={idx} className="last:mb-2">
                     {description}
                   </li>
                 );

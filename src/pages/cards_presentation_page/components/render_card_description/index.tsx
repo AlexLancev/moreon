@@ -3,8 +3,6 @@ import xss from "xss";
 
 import { Tabs } from "@/components";
 
-type Page_description_type_key = "all" | "daytime" | "business" | "weekend";
-
 type Render_card_description_props = {
   page_description: Record<Page_description_type_key, string>;
   images_url: {

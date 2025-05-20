@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import xss from "xss";
 
-import { Container } from "@/components";
-import { club_cards_store } from "@/stores/data_store";
 import { Render_card_description } from "./components/render_card_description";
+
+import { club_cards_store } from "@/stores/data_store";
+import { Container, Every_card } from "@/components";
 import { get_tabs_store } from "@/stores";
 
 export const Cards_presentation_page = observer(() => {
@@ -20,8 +21,7 @@ export const Cards_presentation_page = observer(() => {
 
   if (!current_card) return null;
 
-  const { head, description, images_url, page_description, hero_description } =
-    current_card;
+  const { images_url, page_description, hero_description } = current_card;
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
@@ -53,6 +53,7 @@ export const Cards_presentation_page = observer(() => {
         page_description={page_description}
         tabs_store={get_tabs_store("component_choose_your_card")}
       />
+      <Every_card />
     </Container>
   );
 });
