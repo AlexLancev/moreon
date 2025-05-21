@@ -1,4 +1,3 @@
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -9,14 +8,12 @@ import { Textarea } from "../ui/textarea";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { UserFormSchema } from "@/schema";
-import { Send } from "lucide-react";
 
 export const Feedback_form = () => {
   const form = useForm({
@@ -30,7 +27,7 @@ export const Feedback_form = () => {
 
   const { isSubmitting } = form.formState;
 
-  const onSubmit = (data: z.infer<typeof UserFormSchema>) => {
+  const onSubmit = () => {
     form.reset();
   };
 

@@ -13,7 +13,7 @@ export const directions_data = async (): Promise<Directions_type[]> => {
       throw new Error("Пустой ответ от сервера");
     }
 
-    return data as Directions_type[];
+    return data;
   } catch (err) {
     console.error("Произошла ошибка:", err);
     throw err;

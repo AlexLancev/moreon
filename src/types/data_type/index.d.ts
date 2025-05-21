@@ -48,17 +48,15 @@ type Performance_images_type = {
   };
 };
 
-type Performance_data_type = {
-  data: Record<
-    Performance_key_type,
-    {
-      title: string;
-      description: string;
-      decor_title: string;
-      arr_images: Performance_images_type[];
-    }
-  >;
-};
+type Performance_data_type = Record<
+  Performance_key_type,
+  {
+    title: string;
+    description: string;
+    decor_title: string;
+    arr_images: Performance_images_type[];
+  }
+>;
 
 type Video_reviews_type = {
   id: number;

@@ -21,7 +21,7 @@ export const Reviews_list = observer(() => {
       slidesPerView={3}
       pagination={{ clickable: true }}
     >
-      {data.map(({ person, review, raiting }, idx: number) => {
+      {data.map(({ person, review }, idx: number) => {
         if (!person && !review) return null;
 
         return (

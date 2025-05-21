@@ -1,20 +1,21 @@
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
+import { NotebookText } from "lucide-react";
 import { toJS } from "mobx";
+
+import { Button } from "../ui/button";
 
 import { Title } from "@/components";
 
 import { performance_data_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
-import { Button } from "../ui/button";
-import { NotebookText } from "lucide-react";
 
 export const Performance = observer(
   ({ data_key, isVisibleBtn }: Performance_type) => {
     const { data, isLoading, isError } = performance_data_store;
 
-    const performance_bd = toJS(data?.[0]?.data);
+    const performance_bd = toJS(data?.[0]);
 
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: Failed to fetch data</div>;
@@ -52,7 +53,7 @@ export const Performance = observer(
                 pagination={{ clickable: true }}
               >
                 {arr_images?.map(
-                  ({ images_description, images_url: { jpg, webp } }) => (
+                  ({ images_description, images_url: { jpg } }) => (
                     <SwiperSlide className="rounded-3xl overflow-hidden">
                       <picture>
                         <source srcSet={jpg} type="image/webp" />

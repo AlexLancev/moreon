@@ -1,31 +1,21 @@
-import axios, { AxiosError } from "axios";
-
-const database_uri = import.meta.env.VITE_API_KEY;
-
-if (!database_uri) {
-  throw new Error("VITE_API_KEY не найден. Проверьте настройки окружения.");
-}
+import supabase from "../supabase";
 
 export const fitness_area_data = async (): Promise<Fitness_area_type[]> => {
   try {
-    const response = await axios.get<Fitness_area_type[]>(
-      `${database_uri}/fitness_area`,
-    );
+    const { data, error } = await supabase.from("fitness_area").select("*");
 
-    if (!response.data || response.data.length === 0) {
-      throw new Error("Получен пустой ответ от сервера.");
+    if (error) {
+      console.error("Ошибка при получении данных:", error);
+      throw new Error("Не удалось получить данные");
     }
 
-    return response.data;
-  } catch (error) {
-    if (error instanceof AxiosError) {
-      console.error(`Ошибка при запросе данных: ${error.message}`);
-      throw new Error(
-        `Ошибка сети: ${error.response?.statusText || "Неизвестная ошибка"}`,
-      );
+    if (!data || data.length === 0) {
+      throw new Error("Пустой ответ от сервера");
     }
 
-    console.error("Произошла неожиданная ошибка:", error);
-    throw new Error("Не удалось получить данные.");
+    return data;
+  } catch (err) {
+    console.error("Произошла ошибка:", err);
+    throw err;
   }
 };

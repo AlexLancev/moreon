@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { observer } from "mobx-react-lite";
+import { Eye } from "lucide-react";
+
+import { Button } from "../ui/button";
 
 import { gallery_list_store } from "@/stores/data_store";
-import { Button } from "../ui/button";
-import { Eye } from "lucide-react";
 
 const num = 6;
 
@@ -29,7 +30,7 @@ export const Gallery_list = observer(() => {
       <ul className="grid grid-cols-3 place-items-center gap-4">
         {data
           .slice(0, visibleShow)
-          .map(({ description, images_url: { jpg, webp } }, idx: number) => (
+          .map(({ description, images_url: { jpg } }, idx: number) => (
             <li key={idx} className="h-full rounded-3xl overflow-hidden">
               <button type="button" className="block h-full">
                 <span className="visually-hidden">{description}</span>
