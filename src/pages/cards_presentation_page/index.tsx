@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import xss from "xss";
 
-import { Render_card_description } from "./components/render_card_description";
+import {
+  Render_card_description,
+  type Render_card_tabs_type,
+} from "./components/render_card_description";
 
 import { club_cards_store } from "@/stores/data_store";
 import { Container, Every_card } from "@/components";
@@ -51,7 +54,9 @@ export const Cards_presentation_page = observer(() => {
       <Render_card_description
         images_url={images_url}
         page_description={page_description}
-        tabs_store={get_tabs_store("component_choose_your_card")}
+        tabs_store={
+          get_tabs_store("component_choose_your_card") as Render_card_tabs_type
+        }
       />
       <Every_card />
     </Container>

@@ -15,7 +15,9 @@ export const Club_cards = () => {
     <>
       <Club_cards_hero />
       <Choose_your_card
-        tabs_store={get_tabs_store("component_choose_your_card")}
+        tabs_store={
+          get_tabs_store("component_choose_your_card") as Club_cards_tabs_type
+        }
       />
       <Effective_training />
       <Every_card />

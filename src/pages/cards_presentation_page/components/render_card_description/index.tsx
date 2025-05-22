@@ -3,16 +3,18 @@ import xss from "xss";
 
 import { Tabs } from "@/components";
 
+export type Render_card_tabs_type = {
+  isActiveTab: Page_description_type_key;
+  change_tabs: (value: string) => void;
+};
+
 type Render_card_description_props = {
   page_description: Record<Page_description_type_key, string>;
   images_url: {
     jpg: string;
     webp: string;
   };
-  tabs_store: {
-    isActiveTab: Page_description_type_key;
-    change_tabs: (value: string) => void;
-  };
+  tabs_store: Render_card_tabs_type;
 };
 
 const tab_list = [

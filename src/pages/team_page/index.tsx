@@ -8,7 +8,7 @@ export const Team_page = () => {
   return (
     <>
       <Team_hero />
-      <Team tabs_store={get_tabs_store("component_team")} />
+      <Team tabs_store={get_tabs_store("component_team") as Team_key_type} />
     </>
   );
 };

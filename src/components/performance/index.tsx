@@ -53,8 +53,14 @@ export const Performance = observer(
                 pagination={{ clickable: true }}
               >
                 {arr_images?.map(
-                  ({ images_description, images_url: { jpg } }) => (
-                    <SwiperSlide className="rounded-3xl overflow-hidden">
+                  (
+                    { images_description, images_url: { jpg } },
+                    idx: number,
+                  ) => (
+                    <SwiperSlide
+                      className="rounded-3xl overflow-hidden"
+                      key={idx}
+                    >
                       <picture>
                         <source srcSet={jpg} type="image/webp" />
                         <img

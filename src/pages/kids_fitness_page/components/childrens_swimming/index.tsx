@@ -41,7 +41,9 @@ export const Childrens_swimming = () => {
           </>
         )}
         <p className="mb-10">Приглашаем на занятия юных пловцов!</p>
-        <Childrens_swimming_tabs tabs_store={childrens_swimming_store} />
+        <Childrens_swimming_tabs
+          tabs_store={childrens_swimming_store as Childrens_swimming_tabs_type}
+        />
       </section>
     </Container>
   );

@@ -31,13 +31,19 @@ export const Services_page = () => {
     <>
       <Services_hero />
       <Areas_study keys_list={keys_list} />
-      <Team tabs_store={get_tabs_store("component_team")} />
+      <Team tabs_store={get_tabs_store("component_team") as Team_key_type} />
       <Choose_your_card
-        tabs_store={get_tabs_store("component_choose_your_card")}
+        tabs_store={
+          get_tabs_store("component_choose_your_card") as Club_cards_tabs_type
+        }
       />
       <Freeze_card />
       <Childrens_center />
-      <Water_zone tabs_store={get_tabs_store("component_water_zone")} />
+      <Water_zone
+        tabs_store={
+          get_tabs_store("component_water_zone") as Water_zone_tabs_type
+        }
+      />
       <Phyto_bar />
     </>
   );

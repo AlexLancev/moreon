@@ -9,7 +9,10 @@ const team_tab_list = [
 ];
 
 export const Team = observer(
-  ({ tabs_store: { isActiveTab, change_tabs } }: { tabs_store: Team_key_type }) => {
+  ({ tabs_store }: { tabs_store: Team_key_type }) => {
+    if (!tabs_store) return null;
+
+    const { isActiveTab, change_tabs } = tabs_store;
 
     if (!team_tab_list || team_tab_list.length === 0 || !change_tabs)
       return null;

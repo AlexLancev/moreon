@@ -2,9 +2,11 @@ import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 
-import { team_store } from "@/stores/data_store";
-import { Container, Other_directions, Stock, Title } from "@/components";
 import { Fitness_area, Profitable_visits } from "../about_page/components";
+
+import { team_store } from "@/stores/data_store";
+import { Container, Stock, Title } from "@/components";
+
 import { get_tabs_store } from "@/stores";
 
 export const Person_team_page = observer(() => {
@@ -62,7 +64,11 @@ export const Person_team_page = observer(() => {
         </Container>
       </section>
       <Stock />
-      <Fitness_area tabs_store={get_tabs_store("component_fitness_area")} />
+      <Fitness_area
+        tabs_store={
+          get_tabs_store("component_fitness_area") as Fitness_area_tabs_type
+        }
+      />
       <Profitable_visits />
     </>
   );

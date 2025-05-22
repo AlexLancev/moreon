@@ -35,7 +35,9 @@ export const Questions = observer(() => {
               type="button"
               onClick={() => setVisibleIndex(visibleIndex === idx ? null : idx)}
             >
-              <Title size="md" className="mb-0">{head}</Title>
+              <Title size="md" className="mb-0">
+                {head}
+              </Title>
               <div
                 className={classNames(
                   "duration-300 transition-opacity overflow-hidden ab",
