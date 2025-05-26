@@ -45,6 +45,22 @@ body.lock {
   box-sizing: inherit;
 }
 
+h1, h2, h3 {
+  font-family: 'DelaGothicOne', sans-serif;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
 .main {
   display: block;
   flex: 1 1 auto;

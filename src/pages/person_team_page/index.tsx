@@ -41,10 +41,17 @@ export const Person_team_page = observer(() => {
     <>
       <section className="py-12">
         <Container>
-          <div className="flex">
+          <div className="flex gap-10">
             <picture>
               <source srcSet={webp} type="image/webp" />
-              <img src={jpg} alt="" aria-hidden />
+              <img
+                className="overflow-hidden rounded-3xl"
+                width={340}
+                height={340}
+                src={jpg}
+                alt=""
+                aria-hidden
+              />
             </picture>
             <div className="ab">
               <Title size="xl">{name_person}</Title>
