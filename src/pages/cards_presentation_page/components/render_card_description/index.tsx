@@ -32,29 +32,31 @@ export const Render_card_description = observer(
     if (!page_description) return null;
 
     return (
-      <>
+      <section className="py-12">
         {Object.keys(page_description).length > 1 && (
-          <Tabs
-            isActiveTab={isActiveTab}
-            change_tabs={change_tabs}
-            tab_list={tab_list}
-          />
+          <div className="py-10">
+            <Tabs
+              isActiveTab={isActiveTab}
+              change_tabs={change_tabs}
+              tab_list={tab_list}
+            />
+          </div>
         )}
-        <section className="flex py-12">
+        <div className="flex gap-10">
+          <picture>
+            <source srcSet={images_url?.webp} type="image/webp" />
+            <img src={images_url?.jpg} alt="" aria-hidden />
+          </picture>
           <div
-            className="mb-5 ab"
+            className="mb-5 card_page max-w-[750px]"
             dangerouslySetInnerHTML={{
               __html: xss(
                 page_description.all ?? page_description[isActiveTab] ?? "",
               ),
             }}
           ></div>
-          <picture>
-            <source srcSet={images_url?.webp} type="image/webp" />
-            <img src={images_url?.jpg} alt="" aria-hidden />
-          </picture>
-        </section>
-      </>
+        </div>
+      </section>
     );
   },
 );
