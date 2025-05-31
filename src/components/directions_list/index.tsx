@@ -28,6 +28,9 @@ export const Directions_list = observer(
         {keys_list.map((current_key, idx: number) => {
           const { images_url, direction, path, description } =
             directions_bd?.[current_key] ?? {};
+
+          if (!images_url && !direction && !path && !description) return null;
+
           return (
             <li
               key={idx}

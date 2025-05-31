@@ -1,6 +1,9 @@
-import { isEmptyObj } from "@/utils";
 import { contacts_data } from "constans";
-import { Container, Title } from "@/components";
+
+import { Map_moreon } from "../map";
+
+import { isEmptyObj } from "@/utils";
+import { Container } from "@/components";
 
 type Current_contacts_type = "address" | "phone" | "email";
 
@@ -16,13 +19,12 @@ export const Contacts = () => {
     return null;
 
   return (
-    <section>
+    <section className="py-12">
       <Container>
-        <div>
-          <Title>Контакты</Title>
+        <div className="flex justify-evenly items-center gap-x-5">
           <ul>
             {current_contacts.map((contact, idx: number) => (
-              <li className="mb-3" key={idx}>
+              <li className="mb-3 text-xl" key={idx}>
                 <span className="mr-2">{contacts_data[contact]?.name}:</span>
                 <a
                   href={contacts_data[contact]?.path}
@@ -40,8 +42,8 @@ export const Contacts = () => {
               </li>
             ))}
           </ul>
+          <Map_moreon />
         </div>
-        {/* map */}
       </Container>
     </section>
   );

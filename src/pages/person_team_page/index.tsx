@@ -53,7 +53,7 @@ export const Person_team_page = observer(() => {
                 aria-hidden
               />
             </picture>
-            <div className="ab">
+            <div className="ab max-w-[800px]">
               <Title size="xl">{name_person}</Title>
               <ul>
                 <li>{qualification}</li>

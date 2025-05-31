@@ -17,3 +17,4 @@ export { reviews_data } from "./reviews_data";
 export { profitable_visits_data } from "./profitable_visits_data";
 export { other_directions_data } from "./other_directions_data";
 export { directions_data } from "./directions_data";
+export { hero_data } from "./hero_data";

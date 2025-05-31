@@ -18,7 +18,8 @@ export const Reviews_list = observer(() => {
     <Swiper
       modules={[Pagination]}
       spaceBetween={20}
-      slidesPerView={3}
+      slidesPerView={2}
+      autoHeight={true}
       pagination={{ clickable: true }}
     >
       {data.map(({ person, review }, idx: number) => {
@@ -29,10 +30,8 @@ export const Reviews_list = observer(() => {
             key={idx}
             className="bg-[rgba(255,255,255,0.19)] p-8 rounded-3xl"
           >
-            <strong className="flex text-xl mb-3">{person}</strong>
-            <p className="text-lg h-[305px] overflow-y-auto custom-scrollbar">
-              {review}
-            </p>
+            <strong className="flex text-xl mb-2 text-white">{person}</strong>
+            <p className="text-lg overflow-y-auto custom-scrollbar">{review}</p>
           </SwiperSlide>
         );
       })}

@@ -2,11 +2,12 @@ import { useLocation } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 
+import { NotebookText } from "lucide-react";
+
 import { directions_store, team_store } from "@/stores/data_store";
 import { modal_store } from "@/stores";
 import { Areas_study, Container, Team_list, Title } from "@/components";
 import { Button } from "@/components/ui/button";
-import { NotebookText } from "lucide-react";
 
 export const Presentation_directions_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;

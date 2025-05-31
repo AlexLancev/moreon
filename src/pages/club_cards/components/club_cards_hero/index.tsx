@@ -1,6 +1,7 @@
+import { IdCard } from "lucide-react";
+
 import { Container, Title } from "@/components";
 import { Button } from "@/components/ui/button";
-import { IdCard } from "lucide-react";
 
 export const Club_cards_hero = () => {
   return (

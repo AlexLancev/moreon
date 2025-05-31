@@ -3,12 +3,14 @@ import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import xss from "xss";
 
+import { MessageCircleQuestion } from "lucide-react";
+
+import { Button } from "../ui/button";
+
 import { Tabs, Container, Title } from "@/components";
 
 import { isEmptyObj } from "@/utils";
 import { club_cards_store } from "@/stores/data_store";
-import { Button } from "../ui/button";
-import { MessageCircleQuestion } from "lucide-react";
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },

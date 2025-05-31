@@ -38,3 +38,5 @@ export { Feedback_modal } from "./feedback_modal";
 export { Render_slider } from "./render_slider";
 export { Container } from "./container";
 export { Title } from "./title";
+export { Opening_hours } from "./opening_hours";
+export { App_store } from "./app_store";

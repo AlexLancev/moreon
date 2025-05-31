@@ -2,8 +2,10 @@ type Types_services_type = {
   id: number;
   head: string;
   description: string;
-  path: string;
+  path: Types_services_key;
 };
+
+type Types_services_key = "spa" | "martial_arts" | "gym" | "group_training";
 
 type About_us_type = {
   id: number;
@@ -101,17 +103,15 @@ type Key_list_type = {
   [key: string]: { description: string };
 };
 
-type Personal_format_data_type = {
-  data: Record<
-    Personal_format_key_type,
-    {
-      key_name: Personal_format_key_type;
-      category: string;
-      tab_list: Tab_list_type[];
-      key_list: Key_list_type;
-    }
-  >;
-};
+type Personal_format_data_type = Record<
+  Personal_format_key_type,
+  {
+    key_name: Personal_format_key_type;
+    category: string;
+    tab_list: Tab_list_type[];
+    key_list: Key_list_type;
+  }
+>;
 
 type Fitness_area_tabs_type = {
   isActiveTab: Tab_fitness_type;
@@ -380,4 +380,15 @@ type Directions_type = Record<
 
 type Directions_keys_type = {
   keys_list: Direct_keys_type[];
+};
+
+type Data_action_type = {
+  id: number;
+  label: string;
+  url_xxxl_img_webp: string;
+  url_xxxl_img_jpg: string;
+  url_xxl_img_webp: string;
+  url_xxl_img_jpg: string;
+  url_xl_img_webp: string;
+  url_xl_img_jpg: string;
 };

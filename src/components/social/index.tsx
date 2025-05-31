@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 const data_social = [
   {
     label: "Открыть Instagram в новой вкладке",
@@ -22,9 +24,13 @@ const data_social = [
   },
 ];
 
-export const Social = () => {
+type Social_props_type = {
+  className?: string;
+};
+
+export const Social = ({ className }: Social_props_type) => {
   return (
-    <ul className="flex items-center gap-x-5">
+    <ul className={classNames("flex items-center gap-x-5", className)}>
       {data_social?.map(
         (
           { label, url_externe, url_png_icon, url_webp_icon, url_svg_icon },

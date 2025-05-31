@@ -3,11 +3,13 @@ import { toJS } from "mobx";
 
 import { Container, Tabs, Title } from "components";
 
+import { MessageCircleQuestion } from "lucide-react";
+
+import { Link } from "react-router-dom";
+
 import { fitness_area_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 import { Button } from "@/components/ui/button";
-import { MessageCircleQuestion } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const tab_list = [
   { key: "gym", category: "Тренажёрный зал" },

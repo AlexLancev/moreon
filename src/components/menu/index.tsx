@@ -4,7 +4,15 @@ import classNames from "classnames";
 
 import { menu_data } from "constans";
 
-export const Menu = () => {
+type Menu_props_type = {
+  className?: string;
+  isVisibleSubMenu?: boolean;
+};
+
+export const Menu = ({
+  className,
+  isVisibleSubMenu = false,
+}: Menu_props_type) => {
   const pathname = useLocation().pathname;
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const timeoutRef = useRef<number | null>(null);
@@ -30,7 +38,12 @@ export const Menu = () => {
 
   return (
     <nav>
-      <ul className="flex items-center gap-x-10 text-[rgba(255,255,255,0.8)] text-sm">
+      <ul
+        className={classNames(
+          "flex text-[rgba(255,255,255,0.8)] text-sm",
+          className,
+        )}
+      >
         {menu_data.map(({ path, name_link, sub_menu }) => {
           if (!path || !name_link) return null;
 
@@ -52,7 +65,7 @@ export const Menu = () => {
                 >
                   {name_link}
                 </Link>
-                {sub_menu && (
+                {isVisibleSubMenu && sub_menu && (
                   <ul
                     className={classNames(
                       "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-3 w-[320px] 2xl:w-[450px] bg-[rgb(0,9,8)] rounded-lg p-5 transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",

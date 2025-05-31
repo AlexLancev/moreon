@@ -17,3 +17,4 @@ export { reviews_store } from "./reviews_store";
 export { profitable_visits_store } from "./profitable_visits_store";
 export { other_directions_store } from "./other_directions_store";
 export { directions_store } from "./directions_store";
+export { hero_store } from "./hero_store";

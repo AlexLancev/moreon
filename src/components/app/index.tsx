@@ -10,11 +10,13 @@ import {
   Current_direction_page,
   Home_page,
   Kids_fitness_page,
+  News_page,
   News_presentation_page,
   Person_team_page,
   Presentation_directions_page,
   Saunas_pools_page,
   Services_page,
+  Stock_page,
   Stock_presentation_page,
   Team_page,
 } from "@/pages";
@@ -93,6 +95,8 @@ const {
   stock,
   news,
   presentation_cards,
+  stock_page,
+  news_page,
 } = paths;
 
 export const App = () => {
@@ -185,6 +189,8 @@ export const App = () => {
           <Route path={person_team} element={<Person_team_page />} />
           <Route path={stock} element={<Stock_presentation_page />} />
           <Route path={news} element={<News_presentation_page />} />
+          <Route path={stock_page} element={<Stock_page />} />
+          <Route path={news_page} element={<News_page />} />
           <Route
             path={presentation_cards}
             element={<Cards_presentation_page />}

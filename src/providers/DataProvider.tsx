@@ -21,6 +21,7 @@ import {
   personal_format_store,
   other_directions_store,
   childrens_swimming_store,
+  hero_store,
 } from "@/stores/data_store";
 import {
   directions_data,
@@ -42,6 +43,7 @@ import {
   personal_format_data,
   other_directions_data,
   childrens_swimming_data,
+  hero_data,
 } from "@/data";
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
@@ -272,6 +274,26 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     retry: 3,
     placeholderData: keepPreviousData,
   });
+
+  const {
+    data: hero_db,
+    isLoading: hero__isLoading,
+    isError: hero__isError,
+  } = useQuery({
+    queryKey: ["hero"],
+    queryFn: hero_data,
+    staleTime: Infinity,
+    retry: 3,
+    placeholderData: keepPreviousData,
+  });
+
+  useEffect(() => {
+    if (hero_db) {
+      hero_store.set_data(hero_db);
+      hero_store.set_isLoad(hero__isLoading);
+      hero_store.set_isError(hero__isError);
+    }
+  }, [hero_db, hero__isLoading, hero__isError]);
 
   useEffect(() => {
     if (swimming_data) {

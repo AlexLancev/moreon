@@ -1,8 +1,9 @@
+import { NotebookText } from "lucide-react";
+
 import { Container, Title } from "@/components";
 import { Button } from "@/components/ui/button";
 import { kids_fitnes_hero_data } from "@/constans";
 import { modal_store } from "@/stores";
-import { NotebookText } from "lucide-react";
 
 export const Kids_fitnes_hero = () => {
   const { isVisibleModal, change_modal } = modal_store;

@@ -3,9 +3,19 @@ import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 
+import { ReactNode } from "react";
+
 import { Title } from "@/components";
 
 import { types_services_store } from "@/stores/data_store";
+import { types_services_data_decor } from "@/constans";
+import { isEmptyObj } from "@/utils";
+
+const render_icons = (path: Types_services_key): ReactNode | null => {
+  if (isEmptyObj(types_services_data_decor)) return null;
+
+  return types_services_data_decor[path];
+};
 
 export const Types_services = observer(() => {
   const { data, isLoading, isError } = types_services_store;
@@ -40,6 +50,11 @@ export const Types_services = observer(() => {
             >
               Узнать подробнее
             </Link>
+            {render_icons(path) && (
+              <div className="absolute bottom-3 right-0 -z-10 opacity-5 *:text-[#00a887] *:w-[200px] *:h-auto">
+                {render_icons(path)}
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

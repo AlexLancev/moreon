@@ -7,7 +7,6 @@ const {
   club_cards,
   pools,
   kids_fitness,
-  schedule,
   mind_body,
   strength_functional_training,
   aerobics,
@@ -19,6 +18,8 @@ const {
   yoga,
   inbody,
   group_programs,
+  news_page,
+  stock_page,
 } = paths;
 
 export const menu_data = [
@@ -51,7 +52,8 @@ export const menu_data = [
   },
   { path: team, name_link: "Команда" },
   { path: club_cards, name_link: "Клубные карты" },
-  { path: schedule, name_link: "Расписание" },
+  { path: stock_page, name_link: "Акции" },
+  { path: news_page, name_link: "Новости" },
   { path: pools, name_link: "Бани и бассейны" },
   { path: kids_fitness, name_link: "Детский фитнес" },
 ];

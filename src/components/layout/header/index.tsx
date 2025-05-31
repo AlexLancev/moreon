@@ -6,7 +6,7 @@ export const Header = () => {
       <div className="flex items-center bg-[rgb(0,70,67)] min-h-10 py-2 2xl:py-4">
         <Container>
           <div className="flex items-center gap-x-6 justify-end">
-            <Feedback />
+            <Feedback className="items-center justify-end gap-x-6" />
             <Social />
           </div>
         </Container>
@@ -15,7 +15,7 @@ export const Header = () => {
         <Container>
           <div className="flex items-center justify-between">
             <Logo />
-            <Menu />
+            <Menu className="items-center gap-x-10" isVisibleSubMenu />
           </div>
         </Container>
       </div>

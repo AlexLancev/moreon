@@ -11,3 +11,5 @@ export { Person_team_page } from "./person_team_page";
 export { Stock_presentation_page } from "./stock_presentation_page";
 export { News_presentation_page } from "./news_presentation_page";
 export { Cards_presentation_page } from "./cards_presentation_page";
+export { Stock_page } from "./stock_page";
+export { News_page } from "./news_page";

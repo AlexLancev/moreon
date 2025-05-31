@@ -1,7 +1,8 @@
+import { NotebookText } from "lucide-react";
+
 import { Container, Title } from "@/components";
 import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
-import { NotebookText } from "lucide-react";
 
 const martial_arts_children_directions = [
   {

@@ -3,11 +3,13 @@ import { observer } from "mobx-react-lite";
 
 import { Container, Tabs, Title } from "components";
 
+import { NotebookText } from "lucide-react";
+
+import { Button } from "../ui/button";
+
 import { modal_store } from "@/stores";
 import { isEmptyObj } from "@/utils";
 import { water_zone_store } from "@/stores/data_store";
-import { Button } from "../ui/button";
-import { NotebookText } from "lucide-react";
 
 const tab_list = [
   { key: "baths_swimming", category: "Бани и бассейны" },

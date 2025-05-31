@@ -1,4 +1,4 @@
-import { Container, Title } from "@/components";
+import { App_store, Container, Title } from "@/components";
 
 export const Our_application = () => {
   return (
@@ -28,48 +28,7 @@ export const Our_application = () => {
             Забудьте о карте клуба, теперь достаточно получить штрих код и
             показать его с телефона.
           </p>
-          <a
-            href="/"
-            className="mr-5 inline-flex"
-            title="Перейти на внешний сайт App store"
-          >
-            <span className="visually-hidden">
-              Перейти на внешний сайт App store
-            </span>
-            <picture>
-              <source
-                srcSet="/images/application/appstore.webp"
-                type="image/webp"
-              />
-              <img
-                width={155}
-                src="/images/application/appstore.jpg"
-                alt=""
-                aria-hidden
-              />
-            </picture>
-          </a>
-          <a
-            href="/"
-            className="inline-flex"
-            title="Перейти на внешний сайт Google Play"
-          >
-            <span className="visually-hidden">
-              Перейти на внешний сайт Google Play
-            </span>
-            <picture>
-              <source
-                srcSet="/images/application/googleplay.webp"
-                type="image/webp"
-              />
-              <img
-                width={155}
-                src="/images/application/googleplay.jpg"
-                alt=""
-                aria-hidden
-              />
-            </picture>
-          </a>
+          <App_store />
         </div>
       </section>
     </Container>
