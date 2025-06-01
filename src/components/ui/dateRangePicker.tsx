@@ -1,7 +1,5 @@
-"use client";
-
 import * as React from "react";
-import { addDays, format } from "date-fns";
+import { addDays, format, isBefore } from "date-fns";
 import { ru } from "date-fns/locale";
 import { CalendarIcon } from "lucide-react";
 import { DateRange } from "react-day-picker";
@@ -22,6 +20,17 @@ export function DatePickerWithRange({
     from: new Date(),
     to: addDays(new Date(), 10),
   });
+
+  const handleDateSelect = (range: DateRange | undefined) => {
+    if (!range?.from) return;
+
+    const minEndDate = addDays(range.from, 10);
+    if (!range.to || isBefore(range.to, minEndDate)) {
+      setDate({ from: range.from, to: minEndDate });
+    } else {
+      setDate(range);
+    }
+  };
 
   return (
     <div className={cn("grid gap-2", className)}>
@@ -58,7 +67,7 @@ export function DatePickerWithRange({
             mode="range"
             defaultMonth={date?.from}
             selected={date}
-            onSelect={setDate}
+            onSelect={handleDateSelect}
             numberOfMonths={2}
             locale={ru}
           />
