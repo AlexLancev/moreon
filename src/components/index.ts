@@ -40,3 +40,6 @@ export { Container } from "./container";
 export { Title } from "./title";
 export { Opening_hours } from "./opening_hours";
 export { App_store } from "./app_store";
+export { Range_slider } from "./range_slider";
+export { Calculate_cost } from "./calculate_cost";
+export { Radio_group } from "./radio_group";

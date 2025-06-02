@@ -6,10 +6,9 @@ import { HandCoins, MessageCircleQuestion } from "lucide-react";
 
 import { observer } from "mobx-react-lite";
 
-import { Container, Render_image } from "@/components";
+import { Calculate_cost, Container, Render_image } from "@/components";
 import { Button } from "@/components/ui/button";
 import { hero_store } from "@/stores/data_store";
-import { DatePickerWithRange } from "@/components/ui/DateRangePicker";
 
 export const Home_hero = observer(() => {
   const { data, isLoading, isError } = hero_store;
@@ -22,8 +21,8 @@ export const Home_hero = observer(() => {
   if (isError) return <div>Error: Failed to fetch data</div>;
 
   return (
-    <section className="w-full m-auto">
-      <DatePickerWithRange />
+    <section className="w-full m-auto ">
+      <Calculate_cost />
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
