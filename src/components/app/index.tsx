@@ -10,16 +10,21 @@ import {
   Current_direction_page,
   Home_page,
   Kids_fitness_page,
+  Login,
   News_page,
   News_presentation_page,
   Person_team_page,
+  Personal_account_page,
   Presentation_directions_page,
+  Register,
   Saunas_pools_page,
   Services_page,
   Stock_page,
   Stock_presentation_page,
   Team_page,
 } from "@/pages";
+import { Wrapper } from "@/pages/wrapper";
+import { Logout } from "@/pages/Logout";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -194,6 +199,18 @@ export const App = () => {
           <Route
             path={presentation_cards}
             element={<Cards_presentation_page />}
+          />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/personal_account"
+            element={
+              <Wrapper>
+                <Personal_account_page />
+              </Wrapper>
+            }
           />
         </Route>
       </Routes>

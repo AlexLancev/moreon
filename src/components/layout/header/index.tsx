@@ -1,4 +1,5 @@
 import { Menu, Feedback, Social, Logo, Container } from "components";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -8,6 +9,7 @@ export const Header = () => {
           <div className="flex items-center gap-x-6 justify-end">
             <Feedback className="items-center justify-end gap-x-6" />
             <Social />
+            <Link to="/personal_account">Личный кабинет</Link>
           </div>
         </Container>
       </div>

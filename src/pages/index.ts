@@ -13,6 +13,6 @@ export { News_presentation_page } from "./news_presentation_page";
 export { Cards_presentation_page } from "./cards_presentation_page";
 export { Stock_page } from "./stock_page";
 export { News_page } from "./news_page";
-export { Sign_in_page } from "./sign_in_page";
-export { Sign_up_page } from "./sign_up_page";
+export { Register } from "./register";
+export { Login } from "./login";
 export { Personal_account_page } from "./personal_account_page";
