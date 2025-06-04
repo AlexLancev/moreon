@@ -2,12 +2,19 @@ import { useState, useEffect } from "react";
 
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip";
+import { MessageCircleQuestion } from "lucide-react";
 
 type Options_data_type = {
   id: number;
   label: string;
   sum?: number;
   coefficient?: number;
+  answer_question?: string;
 };
 
 type Calculate_cost_data_type = {
@@ -28,6 +35,8 @@ const calculate_cost_data: Calculate_cost_data_type[] = [
         id: 2,
         label: "Фитнес+СПА",
         sum: 3200,
+        answer_question:
+          "Не включает такие услуги как массаж, иглоукалывание, глина, медицинские пиявки.",
       },
     ],
   },
@@ -43,6 +52,7 @@ const calculate_cost_data: Calculate_cost_data_type[] = [
         id: 2,
         label: "Да",
         coefficient: 1.12,
+        answer_question: "Рассрочка на 3 месяца равными долями.",
       },
     ],
   },
@@ -83,6 +93,7 @@ const calculate_cost_data: Calculate_cost_data_type[] = [
         id: 1,
         label: "Да, подобрать позже",
         coefficient: 1.1,
+        answer_question: "Минимальное кол-во в месяц (6 занятий по 60 минут)",
       },
       {
         id: 2,
@@ -118,6 +129,8 @@ const calculate_cost_data: Calculate_cost_data_type[] = [
         id: 2,
         label: "Да",
         coefficient: 1.3,
+        answer_question:
+          "Срок действия карты другого фитнес-клуба должен быть не менее 28 дней",
       },
     ],
   },
@@ -198,15 +211,32 @@ export const Radio_group = ({ setTotalSum }: Radio_group_props_type) => {
                     }
                   }}
                 >
-                  {options.map(({ label, id }) => {
+                  {options.map(({ label, id, answer_question }) => {
                     return (
                       <li key={id}>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-x-2">
                           <RadioGroupItem
                             value={label}
                             id={`${title}-${label}`}
                           />
                           <Label htmlFor={`${title}-${label}`}>{label}</Label>
+                          {answer_question && answer_question.length !== 0 && (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <button type="button">
+                                  <MessageCircleQuestion
+                                    size={14}
+                                    strokeWidth={1.5}
+                                  />
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="bg-[#eaeaea] max-w-[280px] text-[#505050] text-xs px-2 py-1 rounded-md">
+                                  {answer_question}
+                                </p>
+                              </TooltipContent>
+                            </Tooltip>
+                          )}
                         </div>
                       </li>
                     );

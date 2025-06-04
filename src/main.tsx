@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { App } from "components";
@@ -14,11 +15,13 @@ import { queryClient, DataProvider } from "./providers";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <DataProvider>
-        <App />
-      </DataProvider>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <TooltipProvider>
+      <QueryClientProvider client={queryClient}>
+        <DataProvider>
+          <App />
+        </DataProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </TooltipProvider>
   </StrictMode>,
 );
