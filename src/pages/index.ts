@@ -16,3 +16,4 @@ export { News_page } from "./news_page";
 export { Register } from "./register";
 export { Login } from "./login";
 export { Personal_account_page } from "./personal_account_page";
+export { Congratulations_registration } from "./congratulations_registration"

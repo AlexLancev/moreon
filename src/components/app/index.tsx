@@ -7,6 +7,7 @@ import {
   About_page,
   Cards_presentation_page,
   Club_cards,
+  Congratulations_registration,
   Current_direction_page,
   Home_page,
   Kids_fitness_page,
@@ -204,14 +205,13 @@ export const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/personal_account"
-            element={
-              <Wrapper>
-                <Personal_account_page />
-              </Wrapper>
-            }
-          />
+          <Route path="/congratulations_registration" element={<Congratulations_registration />} />
+          <Route element={<Wrapper />}>
+            <Route
+              path="/personal_account"
+              element={<Personal_account_page />}
+            />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

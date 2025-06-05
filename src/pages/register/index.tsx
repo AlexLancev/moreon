@@ -1,70 +1,51 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import supabase from "@/data/supabase";
+import { AuthForm } from "@/AuthForm";
+import { useState } from "react";
 
 export const Register = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  const handleSubmit = async (event: any) => {
-    event.preventDefault();
-    setMessage("");
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
-
-    const { data, error } = await supabase.auth.signUp({
-      email: email,
-      password: password,
-    });
+  const handleRegister = async (email: string, password: string) => {
+    const { data, error } = await supabase.auth.signUp({ email, password });
 
     if (error) {
-      setMessage(error.message);
+      alert(error.message);
       return;
     }
 
-    if (data && data.user?.email === session?.user.email?.toLowerCase()) {
-      setMessage("Такая почта уже сущестует");
-      return null;
+    // Проверка на существование пользователя
+    if (data.user?.identities?.length === 0) {
+      setMessage("Аккаунт с указанной почтой уже существует");
+      return;
     }
 
-    if (data) {
-      setMessage("Аккаунт создан!");
+    // Если пользователь успешно создан, но почта еще не подтверждена
+    if (data.user && !data.session) {
+      navigate('/congratulations_registration')
+      return;
+    }
+
+    // Если пользователь успешно зарегистрирован и авторизован
+    if (data.user?.email) {
       navigate("/personal_account");
     }
-
-    setEmail("");
-    setPassword("");
   };
 
   return (
     <div>
-      <h2>Регистрация</h2>
-      <br></br>
-      {message && <span>{message}</span>}
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          type="email"
-          placeholder="Email"
-          required
-        />
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-          type="password"
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Создать аккаунт</button>
-      </form>
-      <span>У вас уже есть аккаунт?</span>
-      <br />
-      <Link to="/login">Вход</Link>
+      {/* Отображение сообщения */}
+      {message && message.length !== 0 && <span>{message}</span>}
+      <AuthForm
+        onSubmit={handleRegister}
+        submitButtonText="Создать аккаунт"
+        title="Регистрация"
+      />
+      <div className="mt-5">
+        <span>Есть аккаунт?</span>
+        <Link to="/login">Войти</Link>
+      </div>
     </div>
   );
 };

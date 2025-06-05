@@ -1,35 +1,39 @@
-import { ReactNode, useEffect, useState } from "react";
-
-import { Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 import supabase from "@/data/supabase";
 
-type Wrapper_props = {
-  children: ReactNode;
-};
-
-export const Wrapper = ({ children }: Wrapper_props) => {
-  const [authenticated, setAuthenticated] = useState<boolean | null>(false);
-  const [loading, setLoading] = useState<boolean | null>(true);
+export const Wrapper = () => {
+  const [authenticated, setAuthenticated] = useState<boolean | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
-    const getSession = async () => {
+    const checkSession = async () => {
       const {
         data: { session },
       } = await supabase.auth.getSession();
       setAuthenticated(!!session);
-      setLoading(false);
     };
 
-    getSession();
+    checkSession();
   }, []);
 
-  if (loading) {
+  if (authenticated === null) {
     return <div>Загрузка...</div>;
-  } else {
-    if (authenticated) {
-      return <>{children}</>;
-    }
+  }
+
+  // Если пользователь авторизован, но пытается зайти на /login или /register
+  if (
+    authenticated &&
+    (location.pathname === "/login" || location.pathname === "/register")
+  ) {
+    return <Navigate to="/personal_account" />;
+  }
+
+  // Если пользователь не авторизован, но пытается зайти на защищенные маршруты
+  if (!authenticated && location.pathname.startsWith("/personal_account")) {
     return <Navigate to="/login" />;
   }
+
+  return authenticated ? <Outlet /> : <Navigate to="/login" />;
 };
