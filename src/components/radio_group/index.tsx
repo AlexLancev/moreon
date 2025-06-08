@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Label } from "../ui/label";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@radix-ui/react-tooltip";
+
 import { MessageCircleQuestion } from "lucide-react";
+
+import classNames from "classnames";
+
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { Label } from "../ui/label";
 
 type Options_data_type = {
   id: number;
@@ -138,9 +142,13 @@ const calculate_cost_data: Calculate_cost_data_type[] = [
 
 type Radio_group_props_type = {
   setTotalSum: (value: number) => void;
+  className?: string;
 };
 
-export const Radio_group = ({ setTotalSum }: Radio_group_props_type) => {
+export const Radio_group = ({
+  setTotalSum,
+  className,
+}: Radio_group_props_type) => {
   const [selectedValues, setSelectedValues] = useState<
     Record<string, Options_data_type>
   >(() => {
@@ -177,7 +185,7 @@ export const Radio_group = ({ setTotalSum }: Radio_group_props_type) => {
     return finalResult;
   };
 
-  const [result, setResult] = useState<number>(calculateResult());
+  const [, setResult] = useState<number>(calculateResult());
 
   useEffect(() => {
     const newResult = calculateResult();
@@ -188,65 +196,69 @@ export const Radio_group = ({ setTotalSum }: Radio_group_props_type) => {
   if (!calculate_cost_data || calculate_cost_data.length === 0) return null;
 
   return (
-    <div>
-      <ul>
-        {calculate_cost_data.map(({ title, options }, idx: number) => {
-          if (!title || !options || options.length === 0) return null;
+    <ul className={classNames("mb-5 grid grid-cols-2 gap-y-10", className)}>
+      {calculate_cost_data.map(({ title, options }, idx: number) => {
+        if (!title || !options || options.length === 0) return null;
 
-          return (
-            <li key={idx}>
-              <strong>{title}</strong>
-              <ul>
-                <RadioGroup
-                  defaultValue={options[0]?.label}
-                  onValueChange={(value) => {
-                    const selectedOption = options.find(
-                      (option) => option.label === value,
-                    );
-                    if (selectedOption) {
-                      setSelectedValues((prev) => ({
-                        ...prev,
-                        [title]: selectedOption,
-                      }));
-                    }
-                  }}
-                >
-                  {options.map(({ label, id, answer_question }) => {
-                    return (
-                      <li key={id}>
-                        <div className="flex items-center gap-x-2">
-                          <RadioGroupItem
-                            value={label}
-                            id={`${title}-${label}`}
-                          />
-                          <Label htmlFor={`${title}-${label}`}>{label}</Label>
-                          {answer_question && answer_question.length !== 0 && (
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <button type="button">
-                                  <MessageCircleQuestion
-                                    size={14}
-                                    strokeWidth={1.5}
-                                  />
-                                </button>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="bg-[#eaeaea] max-w-[280px] text-[#505050] text-xs px-2 py-1 rounded-md">
-                                  {answer_question}
-                                </p>
-                              </TooltipContent>
-                            </Tooltip>
-                          )}
-                        </div>
-                      </li>
-                    );
-                  })}
-                </RadioGroup>
-              </ul>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+        return (
+          <li key={idx} className="mb-5 last:mb-0">
+            <strong className="block mb-3 text-xl">{title}</strong>
+            <ul>
+              <RadioGroup
+                defaultValue={options[0]?.label}
+                onValueChange={(value) => {
+                  const selectedOption = options.find(
+                    (option) => option.label === value,
+                  );
+                  if (selectedOption) {
+                    setSelectedValues((prev) => ({
+                      ...prev,
+                      [title]: selectedOption,
+                    }));
+                  }
+                }}
+              >
+                {options.map(({ label, id, answer_question }) => {
+                  return (
+                    <li key={id}>
+                      <div className="flex items-center gap-x-2">
+                        <RadioGroupItem
+                          value={label}
+                          id={`${title}-${label}`}
+                          className="peer data-[state=checked]:cursor-default"
+                        />
+                        <Label
+                          className="text-lg peer-hover:text-white duration-300 peer-data-[state=checked]:text-white peer-data-[state=checked]:cursor-default"
+                          htmlFor={`${title}-${label}`}
+                        >
+                          {label}
+                        </Label>
+                        {answer_question && answer_question.length !== 0 && (
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <button type="button" className="-translate-y-2">
+                                <MessageCircleQuestion
+                                  size={14}
+                                  strokeWidth={1.5}
+                                />
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="bg-[#eaeaea] max-w-[280px] text-[#505050] text-xs px-2 py-1 rounded-md">
+                                {answer_question}
+                              </p>
+                            </TooltipContent>
+                          </Tooltip>
+                        )}
+                      </div>
+                    </li>
+                  );
+                })}
+              </RadioGroup>
+            </ul>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
