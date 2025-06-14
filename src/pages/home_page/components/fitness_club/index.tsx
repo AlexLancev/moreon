@@ -6,7 +6,7 @@ export const Fitness_club = () => {
 
   return (
     <Container>
-      <section className="p-10 my-12 fitness_club_decor">
+      <section className="p-10 my-12 fitnes_decor">
         <Title>
           <span className="head_decor">Фитнес-клуб</span> Moreon Fitness
         </Title>
