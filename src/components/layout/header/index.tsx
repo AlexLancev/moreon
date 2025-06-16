@@ -1,4 +1,5 @@
 import { Menu, Feedback, Social, Logo, Container } from "components";
+import { User, UserLock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
@@ -9,7 +10,22 @@ export const Header = () => {
           <div className="flex items-center gap-x-6 justify-end">
             <Feedback className="items-center justify-end gap-x-6" />
             <Social />
-            <Link to="/personal_account">Личный кабинет</Link>
+            <div className="flex items-center gap-x-2 group">
+              <Link
+                className="group-hover:text-white duration-300"
+                to="/personal_account"
+              >
+                Личный кабинет
+              </Link>
+              <UserLock
+                size={18}
+                className="group-hover:stroke-white duration-300"
+              />
+              {/* <User
+                size={16}
+                className="group-hover:stroke-white duration-300"
+              /> */}
+            </div>
           </div>
         </Container>
       </div>
