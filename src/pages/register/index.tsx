@@ -1,11 +1,23 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 import supabase from "@/data/supabase";
 import { AuthForm } from "@/AuthForm";
-import { useState } from "react";
 
 export const Register = () => {
   const navigate = useNavigate();
   const [message, setMessage] = useState<string>("");
+
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        navigate("/personal_account");
+      }
+    };
+
+    checkAuthentication();
+  }, [navigate]);
 
   const handleRegister = async (email: string, password: string) => {
     const { data, error } = await supabase.auth.signUp({ email, password });
@@ -15,19 +27,16 @@ export const Register = () => {
       return;
     }
 
-    // Проверка на существование пользователя
     if (data.user?.identities?.length === 0) {
       setMessage("Аккаунт с указанной почтой уже существует");
       return;
     }
 
-    // Если пользователь успешно создан, но почта еще не подтверждена
     if (data.user && !data.session) {
-      navigate('/congratulations_registration')
+      navigate("/congratulations_registration");
       return;
     }
 
-    // Если пользователь успешно зарегистрирован и авторизован
     if (data.user?.email) {
       navigate("/personal_account");
     }
@@ -35,7 +44,6 @@ export const Register = () => {
 
   return (
     <div>
-      {/* Отображение сообщения */}
       {message && message.length !== 0 && <span>{message}</span>}
       <AuthForm
         onSubmit={handleRegister}
