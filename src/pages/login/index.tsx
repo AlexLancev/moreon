@@ -1,12 +1,23 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import supabase from "@/data/supabase";
 import { AuthForm } from "@/AuthForm";
+import supabase from "@/data/supabase";
 
 export const Login = () => {
   const navigate = useNavigate();
   const [message, setMessage] = useState<string>("");
+
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        navigate("/personal_account");
+      }
+    };
+
+    checkAuthentication();
+  }, [navigate]);
 
   const handleLogin = async (email: string, password: string) => {
     const { data, error } = await supabase.auth.signInWithPassword({
