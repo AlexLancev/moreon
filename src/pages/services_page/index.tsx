@@ -26,7 +26,7 @@ const keys_list: Direct_keys_type[] = [
   "group_training",
 ];
 
-export const Services_page = () => {
+const Services_page = () => {
   return (
     <>
       <Services_hero />
@@ -48,3 +48,5 @@ export const Services_page = () => {
     </>
   );
 };
+
+export default Services_page;
