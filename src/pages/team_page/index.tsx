@@ -4,7 +4,7 @@ import { Team } from "@/components";
 
 import { get_tabs_store } from "@/stores";
 
-export const Team_page = () => {
+const Team_page = () => {
   return (
     <>
       <Team_hero />
@@ -12,3 +12,5 @@ export const Team_page = () => {
     </>
   );
 };
+
+export default Team_page;
