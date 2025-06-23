@@ -6,7 +6,7 @@ import { stock_store } from "@/stores/data_store";
 import { Container } from "@/components/container";
 import { Render_slider, Title } from "@/components";
 
-export const Stock_presentation_page = observer(() => {
+const Stock_presentation_page = observer(() => {
   const { data, isLoading, isError } = stock_store;
   const { id } = useParams();
   const numeric_Id = Number(id);
@@ -38,6 +38,7 @@ export const Stock_presentation_page = observer(() => {
             className="absolute inset-0 w-full h-full"
             src="/images/stock_presentation/trenerroom.jpg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
@@ -48,6 +49,7 @@ export const Stock_presentation_page = observer(() => {
               className="rounded-3xl overflow-hidden"
               src={url_images?.jpg}
               alt={description_picture}
+              loading="lazy"
             />
           </picture>
           <div
@@ -66,6 +68,7 @@ export const Stock_presentation_page = observer(() => {
             className="absolute inset-0 w-full h-full"
             src="/images/stock_presentation/salefon.png"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
@@ -77,3 +80,5 @@ export const Stock_presentation_page = observer(() => {
     </Container>
   );
 });
+
+export default Stock_presentation_page;
