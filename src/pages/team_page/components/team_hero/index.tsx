@@ -16,6 +16,7 @@ export const Team_hero = () => {
             className="absolute inset-0 -z-10 object-cover w-full h-full opacity-10"
             src="/images/team_hero/hero.jpeg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
