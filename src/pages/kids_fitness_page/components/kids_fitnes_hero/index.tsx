@@ -20,6 +20,7 @@ export const Kids_fitnes_hero = () => {
             className="absolute inset-0 w-full h-full object-cover opacity-10"
             src="/images/kids_fitnes_hero/kids_hero.jpeg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>

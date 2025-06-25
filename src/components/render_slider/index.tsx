@@ -36,6 +36,7 @@ export const Render_slider = ({
                     src={jpg}
                     alt={description_picture}
                     aria-label={description_picture}
+                    loading="lazy"
                   />
                 </picture>
                 {description && (

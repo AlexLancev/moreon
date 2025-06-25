@@ -19,6 +19,7 @@ export const Services_hero = () => {
             className="absolute inset-0 -z-10 w-full h-full object-cover"
             src="/images/services_hero/service_bg.png"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>

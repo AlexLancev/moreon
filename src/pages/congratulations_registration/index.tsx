@@ -1,4 +1,4 @@
-export const Congratulations_registration = () => {
+const Congratulations_registration = () => {
   return (
     <h1 className="text-xl">
       Аккаунт создан! Пожалуйста, подтвердите свою электронную почту, указанную
@@ -6,3 +6,5 @@ export const Congratulations_registration = () => {
     </h1>
   );
 };
+
+export default Congratulations_registration;

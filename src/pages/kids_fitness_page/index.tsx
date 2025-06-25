@@ -7,7 +7,7 @@ import {
   Martial_arts_children,
 } from "./components";
 
-export const Kids_fitness_page = () => {
+const Kids_fitness_page = () => {
   return (
     <>
       <Kids_fitnes_hero />
@@ -18,3 +18,5 @@ export const Kids_fitness_page = () => {
     </>
   );
 };
+
+export default Kids_fitness_page;

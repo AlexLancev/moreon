@@ -51,7 +51,10 @@ export const Calculate_cost = () => {
 
   return (
     <Container>
-      <section className="relative py-12 px-16 fitnes_decor rounded-3xl overflow-hidden">
+      <section
+        id="price-calc"
+        className="relative py-12 px-16 fitnes_decor rounded-3xl overflow-hidden"
+      >
         <Wallet
           className="absolute bottom-[1rem] right-[40rem] opacity-5 rotate-45 -z-10"
           size={348}

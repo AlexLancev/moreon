@@ -9,7 +9,7 @@ import { Container, Stock, Title } from "@/components";
 
 import { get_tabs_store } from "@/stores";
 
-export const Person_team_page = observer(() => {
+const Person_team_page = observer(() => {
   const { data, isLoading, isError } = team_store;
   const { name } = useParams();
 
@@ -50,6 +50,7 @@ export const Person_team_page = observer(() => {
                 height={340}
                 src={jpg}
                 alt=""
+                loading="lazy"
                 aria-hidden
               />
             </picture>
@@ -80,3 +81,5 @@ export const Person_team_page = observer(() => {
     </>
   );
 });
+
+export default Person_team_page;

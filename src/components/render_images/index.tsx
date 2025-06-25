@@ -48,10 +48,11 @@ export const Render_image = ({
       <source srcSet={`${url_xl_img_jpg} 2x`} media="(min-width: 320px)" />
 
       <img
-        src={url_xxl_img_jpg}
         className="w-full m-auto object-cover"
-        alt={label}
         style={{ height: "calc(100vh - 115.34px)" }}
+        src={url_xxl_img_jpg}
+        alt={label}
+        loading="lazy"
       />
     </picture>
   );

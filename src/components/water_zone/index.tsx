@@ -58,6 +58,7 @@ export const Water_zone = observer(
                 className="absolute inset-0 -z-10 w-full h-full object-cover rounded-3xl overflow-hidden"
                 src="/images/water_zone/result_zone_bg.jpeg"
                 alt=""
+                loading="lazy"
                 aria-hidden
               />
             </picture>
@@ -87,6 +88,7 @@ export const Water_zone = observer(
                   src={images_url?.jpg}
                   alt={images_description}
                   aria-label={images_description}
+                  loading="lazy"
                 />
               </picture>
             </div>

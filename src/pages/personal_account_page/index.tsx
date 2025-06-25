@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import supabase from "@/data/supabase";
 
-export const Personal_account_page = () => {
+const Personal_account_page = () => {
   const [user, setUser] = useState<User | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -170,7 +170,13 @@ export const Personal_account_page = () => {
           {avatarUrl ? (
             <div>
               <p>Текущий аватар:</p>
-              <img src={avatarUrl} alt="Аватар" width="300" height="300" />
+              <img
+                src={avatarUrl}
+                alt="Аватар"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
             </div>
           ) : (
             <div>
@@ -194,3 +200,5 @@ export const Personal_account_page = () => {
     </>
   );
 };
+
+export default Personal_account_page;

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import supabase from "@/data/supabase";
 
-export const Logout = () => {
+const Logout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,3 +17,5 @@ export const Logout = () => {
 
   return <div>Выход из аккаунта...</div>;
 };
+
+export default Logout;

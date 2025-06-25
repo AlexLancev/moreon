@@ -10,6 +10,7 @@ import {
 
 import {
   About_us,
+  Calculate_cost,
   Contacts,
   Freeze_card,
   Phyto_bar,
@@ -19,12 +20,13 @@ import {
 
 import { get_tabs_store } from "@/stores";
 
-export const Home_page = () => {
+const Home_page = () => {
   return (
     <>
       <Home_hero />
       <Dream_body />
       <Stock />
+      <Calculate_cost />
       <Club_news />
       <About_us />
       <Video_reviews />
@@ -38,3 +40,5 @@ export const Home_page = () => {
     </>
   );
 };
+
+export default Home_page;

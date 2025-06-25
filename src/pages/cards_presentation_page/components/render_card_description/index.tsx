@@ -45,7 +45,7 @@ export const Render_card_description = observer(
         <div className="flex gap-10">
           <picture>
             <source srcSet={images_url?.webp} type="image/webp" />
-            <img src={images_url?.jpg} alt="" aria-hidden />
+            <img src={images_url?.jpg} alt="" loading="lazy" aria-hidden />
           </picture>
           <div
             className="mb-5 card_page max-w-[750px]"

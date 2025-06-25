@@ -6,7 +6,7 @@ import { news_store } from "@/stores/data_store";
 import { Container } from "@/components/container";
 import { Render_slider, Title } from "@/components";
 
-export const News_presentation_page = observer(() => {
+const News_presentation_page = observer(() => {
   const { data, isLoading, isError } = news_store;
   const { id } = useParams();
   const numeric_Id = Number(id);
@@ -37,6 +37,7 @@ export const News_presentation_page = observer(() => {
             className="absolute inset-0 w-full h-full"
             src="/images/stock_presentation/trenerroom.jpg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
@@ -47,6 +48,7 @@ export const News_presentation_page = observer(() => {
               className="max-w-[500px] rounded-3xl overflow-hidden"
               src={url_images?.jpg}
               alt={description_picture}
+              loading="lazy"
             />
           </picture>
           <div
@@ -65,6 +67,7 @@ export const News_presentation_page = observer(() => {
             className="absolute inset-0 w-full h-full"
             src="/images/stock_presentation/salefon.png"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
@@ -76,3 +79,5 @@ export const News_presentation_page = observer(() => {
     </Container>
   );
 });
+
+export default News_presentation_page;

@@ -9,7 +9,7 @@ const keys_list: Direct_keys_type[] = [
   "goldfish",
 ];
 
-export const Saunas_pools_page = () => {
+const Saunas_pools_page = () => {
   return (
     <>
       <Saunas_pools_hero />
@@ -18,3 +18,5 @@ export const Saunas_pools_page = () => {
     </>
   );
 };
+
+export default Saunas_pools_page;

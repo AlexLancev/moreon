@@ -73,6 +73,7 @@ export const Childrens_swimming_tabs = observer(
               src={images_url?.jpg}
               alt={image_description}
               aria-label={image_description}
+              loading="lazy"
             />
           </picture>
         </div>

@@ -40,6 +40,7 @@ export const Gallery_list = observer(() => {
                     className="h-full object-cover duration-700 hover:scale-[1.1]"
                     src={jpg}
                     alt={description}
+                    loading="lazy"
                   />
                 </picture>
               </button>

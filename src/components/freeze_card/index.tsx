@@ -42,6 +42,7 @@ export const Freeze_card = () => {
                 height={283}
                 src="/images/freeze_card/freez.png"
                 alt=""
+                loading="lazy"
                 aria-hidden
               />
             </picture>

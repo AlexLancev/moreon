@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-[class*='ymaps'][class*='-ground-pane'] {
+[class*="ymaps"][class*="-ground-pane"] {
   filter: grayscale(1);
   -ms-filter: grayscale(1);
   -webkit-filter: grayscale(1);
@@ -10,8 +10,19 @@
   -o-filter: grayscale(1);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 .preload-background-map {
-  background-image: url('/images/bg-map.png');
+  background-image: url("/images/bg-map.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,6 +70,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -359,7 +371,7 @@ h3 {
   }
 }
 
-.fitness_club_decor {
+.fitnes_decor {
   position: relative;
 
   &::before {
@@ -412,7 +424,7 @@ h3 {
 
     &::after {
       content: attr(data-decor);
-      font-family: 'a_GroticTitulOtlHv';
+      font-family: "a_GroticTitulOtlHv";
       position: absolute;
       right: 40px;
       top: -40px;

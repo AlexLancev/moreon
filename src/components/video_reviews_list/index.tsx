@@ -53,6 +53,7 @@ export const Video_reviews_list = observer(() => {
                   alt={description}
                   aria-label={description}
                   title={person_about_club}
+                  loading="lazy"
                 />
               </picture>
               <PlayCircleOutlined className="play_icon" />

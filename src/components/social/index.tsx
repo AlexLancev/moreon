@@ -48,7 +48,7 @@ export const Social = ({ className }: Social_props_type) => {
               <picture>
                 <source width={17} srcSet={url_svg_icon} type="image/svg+xml" />
                 <source srcSet={url_webp_icon} type="image/webp" />
-                <img src={url_png_icon} alt={label} />
+                <img src={url_png_icon} alt={label} loading="lazy" />
               </picture>
             </a>
           </li>

@@ -55,7 +55,13 @@ export const App_store = ({ className }: App_store_props_type) => {
                   <span className="visually-hidden">{description}</span>
                   <picture>
                     <source srcSet={images?.webp} type="image/webp" />
-                    <img width={155} src={images?.jpg} alt="" aria-hidden />
+                    <img
+                      width={155}
+                      src={images?.jpg}
+                      alt=""
+                      loading="lazy"
+                      aria-hidden
+                    />
                   </picture>
                 </a>
               </li>

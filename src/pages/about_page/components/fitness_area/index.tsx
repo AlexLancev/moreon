@@ -64,6 +64,7 @@ export const Fitness_area = observer(
                 src={images_url?.jpg}
                 alt={description_images}
                 aria-label={description_images}
+                loading="lazy"
               />
             </picture>
             <div className="w-full max-w-[525px]">

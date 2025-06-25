@@ -33,7 +33,7 @@ export const Other_directions = observer(() => {
                   <span className="visually-hidden">{descriptions}</span>
                   <picture>
                     <source srcSet={webp} type="image/webp" />
-                    <img src={png} alt="" aria-hidden />
+                    <img src={png} alt="" loading="lazy" aria-hidden />
                   </picture>
                 </a>
               </li>

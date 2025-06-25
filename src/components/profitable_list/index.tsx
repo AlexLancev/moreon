@@ -28,6 +28,7 @@ export const Profitable_list = observer(() => {
                 className="block m-auto mb-5 opacity-70 group-hover:opacity-100 duration-300"
                 src={images_url?.png}
                 alt=""
+                loading="lazy"
                 aria-hidden
               />
             </picture>

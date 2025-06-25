@@ -9,7 +9,7 @@ import { modal_store } from "@/stores";
 import { Areas_study, Container, Team_list, Title } from "@/components";
 import { Button } from "@/components/ui/button";
 
-export const Presentation_directions_page = observer(() => {
+const Kids_fitness_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
@@ -57,6 +57,7 @@ export const Presentation_directions_page = observer(() => {
               className="absolute inset-0 w-full h-full object-cover -z-10"
               src={jpg}
               alt=""
+              loading="lazy"
               aria-hidden
             />
           </picture>
@@ -83,3 +84,5 @@ export const Presentation_directions_page = observer(() => {
     </>
   );
 });
+
+export default Kids_fitness_page;

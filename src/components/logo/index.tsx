@@ -22,6 +22,7 @@ export const Logo = ({ className }: Logo_props_type) => {
           src="/images/logowhite.png"
           alt="Логотип фитнес клуба Moreon Fitness"
           title="Логотип фитнес клуба Moreon Fitness"
+          loading="lazy"
         />
       </picture>
     </Link>

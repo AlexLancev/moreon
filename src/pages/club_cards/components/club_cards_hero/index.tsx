@@ -16,6 +16,7 @@ export const Club_cards_hero = () => {
             className="absolute inset-0 w-full h-full object-cover object-top -z-10"
             src="/images/club_cards_hero/card.jpg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>

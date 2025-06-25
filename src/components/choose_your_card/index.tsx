@@ -66,6 +66,7 @@ export const Choose_your_card = observer(
                 height={269}
                 src={images_url?.jpg}
                 alt=""
+                loading="lazy"
                 aria-hidden
               />
             </picture>

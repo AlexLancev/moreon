@@ -10,7 +10,7 @@ import { Club_cards_hero } from "./components";
 
 import { get_tabs_store } from "@/stores";
 
-export const Club_cards = () => {
+const Club_cards = () => {
   return (
     <>
       <Club_cards_hero />
@@ -26,3 +26,5 @@ export const Club_cards = () => {
     </>
   );
 };
+
+export default Club_cards;

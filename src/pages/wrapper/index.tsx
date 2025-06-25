@@ -3,16 +3,21 @@ import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 import supabase from "@/data/supabase";
 
-export const Wrapper = () => {
+const Wrapper = () => {
   const [authenticated, setAuthenticated] = useState<boolean | null>(null);
   const location = useLocation();
 
   useEffect(() => {
     const checkSession = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      setAuthenticated(!!session);
+      try {
+        const {
+          data: { session },
+        } = await supabase.auth.getSession();
+        setAuthenticated(!!session);
+      } catch (error) {
+        console.error("Ошибка при проверке сессии:", error);
+        setAuthenticated(false);
+      }
     };
 
     checkSession();
@@ -22,7 +27,6 @@ export const Wrapper = () => {
     return <div>Загрузка...</div>;
   }
 
-  // Если пользователь авторизован, но пытается зайти на /login или /register
   if (
     authenticated &&
     (location.pathname === "/login" || location.pathname === "/register")
@@ -30,10 +34,11 @@ export const Wrapper = () => {
     return <Navigate to="/personal_account" />;
   }
 
-  // Если пользователь не авторизован, но пытается зайти на защищенные маршруты
   if (!authenticated && location.pathname.startsWith("/personal_account")) {
     return <Navigate to="/login" />;
   }
 
-  return authenticated ? <Outlet /> : <Navigate to="/login" />;
+  return <Outlet />;
 };
+
+export default Wrapper;

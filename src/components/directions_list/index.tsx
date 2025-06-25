@@ -49,6 +49,7 @@ export const Directions_list = observer(
                     src={images_url?.jpg}
                     alt={description}
                     aria-label={description}
+                    loading="lazy"
                   />
                 </picture>
                 <strong className="absolute z-10 bottom-5 left-5 text-[#d6d6d6] text-lg">

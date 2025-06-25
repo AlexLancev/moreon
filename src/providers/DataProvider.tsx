@@ -45,8 +45,11 @@ import {
   childrens_swimming_data,
   hero_data,
 } from "@/data";
+import useSession from "@/hooks/useSession";
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
+  useSession();
+
   const {
     data: swimming_data,
     isLoading: swimming_isLoading,

@@ -1,6 +1,6 @@
 import { Container, Every_card, News_list, Title } from "@/components";
 
-export const News_page = () => {
+const News_page = () => {
   return (
     <section className="py-12">
       <Container>
@@ -13,3 +13,5 @@ export const News_page = () => {
     </section>
   );
 };
+
+export default News_page;

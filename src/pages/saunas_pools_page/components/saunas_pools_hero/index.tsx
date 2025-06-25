@@ -16,6 +16,7 @@ export const Saunas_pools_hero = () => {
             className="absolute inset-0 -z-10 w-full h-full object-cover opacity-10"
             src="/images/saunas_pools_hero/hero_bg.jpeg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>

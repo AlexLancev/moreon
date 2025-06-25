@@ -9,7 +9,7 @@ import { directions_store } from "@/stores/data_store";
 import { Container, Directions_list, Title } from "@/components";
 import { Button } from "@/components/ui/button";
 
-export const Current_direction_page = observer(() => {
+const Current_direction_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
@@ -40,6 +40,7 @@ export const Current_direction_page = observer(() => {
             className="absolute inset-0 w-full h-full object-cover -z-10"
             src={hero?.images_url?.jpg}
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
@@ -72,6 +73,7 @@ export const Current_direction_page = observer(() => {
                       className="max-h-[600] rounded-3xl overflow-hidden object-cover"
                       src={jpg}
                       alt=""
+                      loading="lazy"
                       aria-hidden
                     />
                   </picture>
@@ -96,3 +98,5 @@ export const Current_direction_page = observer(() => {
     </Container>
   );
 });
+
+export default Current_direction_page;

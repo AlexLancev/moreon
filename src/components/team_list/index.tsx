@@ -45,6 +45,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
                       alt={`На фото ${qualification}, ${name}`}
                       aria-label={`На фото ${qualification}, ${name}`}
                       title={`Ознокамится подробнее с ${name}`}
+                      loading="lazy"
                     />
                   </picture>
                   <strong className="absolute z-10 bottom-5 left-5 text-[#d6d6d6] text-lg">

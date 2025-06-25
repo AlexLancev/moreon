@@ -11,6 +11,7 @@ export const Our_application = () => {
             width={639}
             src="/images/application/phons.png"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>

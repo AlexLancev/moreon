@@ -57,6 +57,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
                         src={jpg}
                         alt={images_description}
                         aria-label={images_description}
+                        loading="lazy"
                       />
                     </picture>
                   </SwiperSlide>

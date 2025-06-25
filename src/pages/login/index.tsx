@@ -3,21 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { AuthForm } from "@/AuthForm";
 import supabase from "@/data/supabase";
+import session_store from "@/stores/session_store";
 
-export const Login = () => {
+const Login = () => {
   const navigate = useNavigate();
   const [message, setMessage] = useState<string>("");
-
-  useEffect(() => {
-    const checkAuthentication = async () => {
-      const { data } = await supabase.auth.getSession();
-      if (data.session) {
-        navigate("/personal_account");
-      }
-    };
-
-    checkAuthentication();
-  }, [navigate]);
 
   const handleLogin = async (email: string, password: string) => {
     const { data, error } = await supabase.auth.signInWithPassword({
@@ -35,6 +25,10 @@ export const Login = () => {
     }
   };
 
+  if (session_store && session_store.isActiveSession) {
+    navigate("/personal_account");
+  }
+
   return (
     <div>
       {message && message.length !== 0 && <span>{message}</span>}
@@ -46,3 +40,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;

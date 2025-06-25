@@ -28,10 +28,11 @@ export const Stock_list = observer(() => {
               <picture>
                 <source srcSet={webp} type="image/webp" />
                 <img
-                  width={500}
+                  className="w-full"
                   src={jpg}
                   alt={description}
                   aria-label={description}
+                  loading="lazy"
                 />
               </picture>
             </Link>

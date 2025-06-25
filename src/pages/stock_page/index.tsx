@@ -2,7 +2,7 @@ import { Profitable_visits } from "../about_page/components";
 
 import { Contacts, Container, Stock_list, Title } from "@/components";
 
-export const Stock_page = () => {
+const Stock_page = () => {
   return (
     <section className="py-12">
       <Container>
@@ -16,3 +16,5 @@ export const Stock_page = () => {
     </section>
   );
 };
+
+export default Stock_page;

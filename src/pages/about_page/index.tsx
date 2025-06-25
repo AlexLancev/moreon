@@ -17,7 +17,7 @@ import {
   Water_zone,
 } from "@/components";
 
-export const About_page = () => {
+const About_page = () => {
   return (
     <>
       <Gallery />
@@ -42,3 +42,5 @@ export const About_page = () => {
     </>
   );
 };
+
+export default About_page;

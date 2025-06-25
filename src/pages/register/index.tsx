@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import supabase from "@/data/supabase";
 import { AuthForm } from "@/AuthForm";
 
-export const Register = () => {
+const Register = () => {
   const navigate = useNavigate();
   const [message, setMessage] = useState<string>("");
 
@@ -57,3 +57,5 @@ export const Register = () => {
     </div>
   );
 };
+
+export default Register;

@@ -39,6 +39,7 @@ export const News_list = observer(() => {
                   src={jpg}
                   alt={description_picture}
                   aria-label={description_picture}
+                  loading="lazy"
                 />
               </picture>
               <Title

@@ -34,6 +34,7 @@ export const Feedback = ({ className }: Feedback_props_type) => {
                 width={17}
                 src={contacts_data[contact]?.images_url?.png}
                 alt=""
+                loading="lazy"
                 aria-hidden
               />
             </picture>

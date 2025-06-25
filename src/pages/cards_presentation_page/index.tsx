@@ -12,7 +12,7 @@ import { club_cards_store } from "@/stores/data_store";
 import { Container, Every_card } from "@/components";
 import { get_tabs_store } from "@/stores";
 
-export const Cards_presentation_page = observer(() => {
+const Cards_presentation_page = observer(() => {
   const { data, isLoading, isError } = club_cards_store;
   const { path } = useParams<{ path: Club_cards_key_type }>();
 
@@ -43,6 +43,7 @@ export const Cards_presentation_page = observer(() => {
             className="absolute inset-0 -z-10 w-full h-full bg-no-repeat bg-cover"
             src="/images/cards_presentation/classik.jpg"
             alt=""
+            loading="lazy"
             aria-hidden
           />
         </picture>
@@ -62,3 +63,5 @@ export const Cards_presentation_page = observer(() => {
     </Container>
   );
 });
+
+export default Cards_presentation_page;

@@ -24,7 +24,7 @@ export const Every_card_list = observer(() => {
           >
             <picture>
               <source srcSet={images_url?.webp} type="image/webp" />
-              <img src={images_url?.png} alt="" aria-hidden />
+              <img src={images_url?.png} alt="" loading="lazy" aria-hidden />
             </picture>
             <strong>{head}</strong>
           </li>

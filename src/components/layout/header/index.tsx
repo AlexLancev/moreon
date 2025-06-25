@@ -1,8 +1,11 @@
 import { Menu, Feedback, Social, Logo, Container } from "components";
 import { User, UserLock } from "lucide-react";
+import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+import session_store from "@/stores/session_store";
+
+export const Header = observer(() => {
   return (
     <header className="w-full m-auto">
       <div className="flex items-center bg-[rgb(0,70,67)] min-h-10 py-2 2xl:py-4">
@@ -12,19 +15,22 @@ export const Header = () => {
             <Social />
             <div className="flex items-center gap-x-2 group">
               <Link
-                className="group-hover:text-white duration-300"
+                className="flex items-center gap-x-2 group-hover:text-white duration-300"
                 to="/personal_account"
               >
                 Личный кабинет
+                {session_store && session_store.isActiveSession ? (
+                  <User
+                    size={16}
+                    className="group-hover:stroke-white duration-300"
+                  />
+                ) : (
+                  <UserLock
+                    size={18}
+                    className="group-hover:stroke-white duration-300"
+                  />
+                )}
               </Link>
-              <UserLock
-                size={18}
-                className="group-hover:stroke-white duration-300"
-              />
-              {/* <User
-                size={16}
-                className="group-hover:stroke-white duration-300"
-              /> */}
             </div>
           </div>
         </Container>
@@ -39,4 +45,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+});

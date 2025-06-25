@@ -6,7 +6,7 @@ import { HandCoins, MessageCircleQuestion } from "lucide-react";
 
 import { observer } from "mobx-react-lite";
 
-import { Calculate_cost, Container, Render_image } from "@/components";
+import { Container, Render_image } from "@/components";
 import { Button } from "@/components/ui/button";
 import { hero_store } from "@/stores/data_store";
 
@@ -22,7 +22,6 @@ export const Home_hero = observer(() => {
 
   return (
     <section className="w-full m-auto ">
-      <Calculate_cost />
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
@@ -64,9 +63,15 @@ export const Home_hero = observer(() => {
                         Узнать подробнее <MessageCircleQuestion />
                       </Link>
                     </Button>
-                    <Button className="custom-grey-btn">
-                      Рассчитать стоимость
-                      <HandCoins />
+                    <Button asChild>
+                      <a className="custom-grey-btn" href="#price-calc">
+                        Рассчитать стоимость
+                        <HandCoins />
+                      </a>
+                      {/* <Link className="custom-grey-btn" to="#price-calc">
+                        Рассчитать стоимость
+                        <HandCoins />
+                      </Link> */}
                     </Button>
                   </div>
                 </div>
