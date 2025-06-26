@@ -5,7 +5,7 @@ type SessionStoreType = {
   setSessionActive: () => void;
   setSessionInactive: () => void;
   toggleSession: () => void;
-}
+};
 
 class SessionStore implements SessionStoreType {
   // Наблюдаемое свойство для статуса сессии

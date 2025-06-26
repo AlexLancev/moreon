@@ -70,7 +70,7 @@ export const Calculate_cost = () => {
         <h2 className="mb-10">
           Рассчитать <span className="head_decor">стоимость</span>
         </h2>
-        <Range_slider onMonthsChange={setSelectedMonths} className="mb-12" />
+        <Range_slider onMonthsChange={setSelectedMonths} className="mb-10" />
         <Radio_group setTotalSum={setBaseSum} className="mb-16" />
         <h3 className="mb-3">
           <span className="head_decor">Итоговая</span> стоимость:

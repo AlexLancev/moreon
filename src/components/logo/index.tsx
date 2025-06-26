@@ -18,7 +18,7 @@ export const Logo = ({ className }: Logo_props_type) => {
       <picture>
         <source srcSet="/images/logowhite.webp" type="image/webp" />
         <img
-          className="w-[160px] 2xl:w-[200px]"
+          className="w-[120px] lg:w-[160px] 2xl:w-[200px] 3xl:w-[250px]"
           src="/images/logowhite.png"
           alt="Логотип фитнес клуба Moreon Fitness"
           title="Логотип фитнес клуба Moreon Fitness"

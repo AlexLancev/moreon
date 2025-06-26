@@ -5,7 +5,6 @@ import supabase from "@/data/supabase";
 import session_store from "@/stores/session_store";
 
 function useSession() {
-
   useEffect(() => {
     // Функция для проверки текущей сессии при загрузке приложения
     const checkSession = async () => {

@@ -10,8 +10,8 @@ export const Layout = () => {
     <>
       <Header />
       <main className="main">
-        <Outlet />
-        <Feedback_modal />
+        {/* <Outlet />
+        <Feedback_modal /> */}
       </main>
       <Footer />
     </>

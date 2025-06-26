@@ -2,6 +2,7 @@ import { contacts_data } from "constans";
 import classNames from "classnames";
 
 import { isEmptyObj } from "@/utils";
+import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
 type feedback_data_type = "address" | "phone";
 
@@ -12,6 +13,7 @@ type Feedback_props_type = {
 };
 
 export const Feedback = ({ className }: Feedback_props_type) => {
+  const innerWidth = useGettingWindowWidth();
   if (!contacts_data || isEmptyObj(contacts_data)) return null;
 
   return (
@@ -24,30 +26,38 @@ export const Feedback = ({ className }: Feedback_props_type) => {
         )}
       >
         {feedback_data?.map((contact, idx: number) => (
-          <li key={idx} className="flex items-center gap-x-2">
-            <picture>
-              <source
-                srcSet={contacts_data[contact]?.images_url?.svg}
-                type="image/svg+xml"
-              />
-              <img
-                width={17}
-                src={contacts_data[contact]?.images_url?.png}
-                alt=""
-                loading="lazy"
-                aria-hidden
-              />
-            </picture>
+          <li key={idx}>
             <a
               href={contacts_data[contact]?.path}
-              className="transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem]"
+              className="flex items-center gap-x-2 2xl:gap-x-3 transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem] 3xl:text-[1.75rem]"
               target="_blank"
+              title={contacts_data[contact]?.label}
               rel="noopener noreferrer"
             >
-              {contacts_data[contact]?.name === "Адрес" ? (
-                <address>{contacts_data[contact]?.text}</address>
-              ) : (
-                contacts_data[contact]?.text
+              <span className="visually-hidden">
+                {contacts_data[contact]?.label}
+              </span>
+              <picture>
+                <source
+                  srcSet={contacts_data[contact]?.images_url?.svg}
+                  type="image/svg+xml"
+                />
+                <img
+                  className="w-[17px] 2xl:w-[22px] 3xl:w-[27px]"
+                  src={contacts_data[contact]?.images_url?.png}
+                  alt=""
+                  loading="lazy"
+                  aria-hidden
+                />
+              </picture>
+              {innerWidth > 634 && (
+                <>
+                  {contacts_data[contact]?.name === "Адрес" ? (
+                    <address>{contacts_data[contact]?.text}</address>
+                  ) : (
+                    contacts_data[contact]?.text
+                  )}
+                </>
               )}
             </a>
           </li>

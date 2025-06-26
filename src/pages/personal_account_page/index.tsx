@@ -2,9 +2,15 @@ import { User } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { Personal_account_modal } from "./personal_account_modal";
+
 import supabase from "@/data/supabase";
+import { Container } from "@/components";
+import { Button } from "@/components/ui/button";
+import { personal_account_store } from "@/stores";
 
 const Personal_account_page = () => {
+  const { isVisibleModal, change_modal } = personal_account_store;
   const [user, setUser] = useState<User | null>(null);
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -108,11 +114,65 @@ const Personal_account_page = () => {
   }
 
   return (
-    <>
-      <h1>Личный кабинет</h1>
-      <p>Email: {user.email}</p>
+    <section className="py-12">
+      <Container>
+        <h1 className="mb-12">Личный кабинет</h1>
+        <div className="flex gap-x-10">
+          <div>
+            {avatarUrl ? (
+              <img
+                src={avatarUrl}
+                width="400"
+                alt=""
+                loading="lazy"
+                aria-hidden
+              />
+            ) : (
+              <picture>
+                <source srcSet="/images/avatar_user.webp" type="image/webp" />
+                <img
+                  width={400}
+                  src="/images/avatar_user.png"
+                  alt=""
+                  loading="lazy"
+                  aria-hidden
+                />
+              </picture>
+            )}
+          </div>
 
-      <form onSubmit={updateProfile}>
+          <ul className="flex flex-col gap-y-3">
+            <li>
+              <b className="mr-1">Имя: </b>
+              <span className="text-xl">{firstName || "Шаньга"}</span>
+            </li>
+            <li>
+              <b className="mr-1">Фамилия: </b>
+              <span className="text-xl">{lastName || "Майонезная"}</span>
+            </li>
+            {dateOfBirth && (
+              <li>
+                <b className="mr-1">Дата рождения: </b>
+                <span className="text-xl">{dateOfBirth}</span>
+              </li>
+            )}
+            <li>
+              <b className="mr-1">Email: </b>
+              <span className="text-xl">{user.email}</span>
+            </li>
+            {phoneNumber && (
+              <li>
+                <b className="mr-1">Номер телефона: </b>
+                <span className="text-xl">{phoneNumber}</span>
+              </li>
+            )}
+          </ul>
+        </div>
+      </Container>
+
+      <Personal_account_modal />
+
+      {/* <form onSubmit={updateProfile}>
         <div>
           <label htmlFor="first_name">Имя:</label>
           <span>{firstName}</span>
@@ -167,37 +227,20 @@ const Personal_account_page = () => {
             accept="image/*"
             onChange={(e) => setFile(e.target.files?.[0] || null)}
           />
-          {avatarUrl ? (
-            <div>
-              <p>Текущий аватар:</p>
-              <img
-                src={avatarUrl}
-                alt="Аватар"
-                width="300"
-                height="300"
-                loading="lazy"
-              />
-            </div>
-          ) : (
-            <div>
-              <p>Заглушка аватара:</p>
-              <img
-                src="/default-avatar.png"
-                alt="Заглушка аватара"
-                width="300"
-                height="300"
-              />
-            </div>
-          )}
         </div>
 
         <button type="submit" disabled={profileLoading}>
           {profileLoading ? "Сохранение..." : "Сохранить"}
         </button>
-      </form>
+      </form> */}
 
-      <Link to="/logout">Выйти из аккаунта</Link>
-    </>
+      <div className="flex items-center gap-x-5">
+        <Button onClick={() => change_modal(!isVisibleModal)}>
+          Редактировать
+        </Button>
+        <Link to="/logout">Выйти из аккаунта</Link>
+      </div>
+    </section>
   );
 };
 

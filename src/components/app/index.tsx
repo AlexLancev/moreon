@@ -106,7 +106,6 @@ function ScrollToTop() {
 }
 
 export const App = () => {
-
   return (
     <BrowserRouter>
       <ScrollToTop />

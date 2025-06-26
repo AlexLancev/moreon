@@ -52,7 +52,7 @@ function Calendar({
         day_today: "bg-accent text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground aria-selected:bg-accent/50",
-        day_disabled: "text-muted-foreground opacity-50 cursor-not-allowed", // Стиль для заблокированных дат
+        day_disabled: "text-muted-foreground opacity-50 cursor-not-allowed",
         day_range_middle:
           "aria-selected:bg-accent/80 border border-black/80 aria-selected:text-accent-foreground",
         day_hidden: "invisible",

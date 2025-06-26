@@ -46,9 +46,14 @@ export const Social = ({ className }: Social_props_type) => {
               rel="noopener noreferrer"
             >
               <picture>
-                <source width={17} srcSet={url_svg_icon} type="image/svg+xml" />
+                <source srcSet={url_svg_icon} type="image/svg+xml" />
                 <source srcSet={url_webp_icon} type="image/webp" />
-                <img src={url_png_icon} alt={label} loading="lazy" />
+                <img
+                  className="w-[17px] 2xl:w-[22px] 3xl:w-[27px]"
+                  src={url_png_icon}
+                  alt={label}
+                  loading="lazy"
+                />
               </picture>
             </a>
           </li>

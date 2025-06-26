@@ -196,7 +196,7 @@ export const Radio_group = ({
   if (!calculate_cost_data || calculate_cost_data.length === 0) return null;
 
   return (
-    <ul className={classNames("mb-5 grid grid-cols-2 gap-y-10", className)}>
+    <ul className={classNames("mb-5 grid grid-cols-2 gap-y-6", className)}>
       {calculate_cost_data.map(({ title, options }, idx: number) => {
         if (!title || !options || options.length === 0) return null;
 
