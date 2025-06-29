@@ -56,7 +56,7 @@ export const App_store = ({ className }: App_store_props_type) => {
                   <picture>
                     <source srcSet={images?.webp} type="image/webp" />
                     <img
-                      width={155}
+                      className="w-[155px] 2xl:w-[225px]"
                       src={images?.jpg}
                       alt=""
                       loading="lazy"

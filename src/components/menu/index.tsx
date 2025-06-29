@@ -57,7 +57,7 @@ export const Menu = ({
                 <Link
                   to={path}
                   className={classNames(
-                    "transition duration-300 text-[rgb(191,191,191)] hover:text-white 2xl:text-[1.25rem] 3xl:text-[1.75rem]",
+                    "transition duration-300 text-[rgb(191,191,191)] hover:text-white xl:text-[1.15rem] 2xl:text-[1.25rem] 3xl:text-[1.75rem]",
                     {
                       "text-white cursor-default": pathname === path,
                     },

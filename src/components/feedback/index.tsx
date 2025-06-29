@@ -29,7 +29,7 @@ export const Feedback = ({ className }: Feedback_props_type) => {
           <li key={idx}>
             <a
               href={contacts_data[contact]?.path}
-              className="flex items-center gap-x-2 2xl:gap-x-3 transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem] 3xl:text-[1.75rem]"
+              className="flex items-center leading-normal gap-x-2 2xl:gap-x-3 transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem] 3xl:text-[1.75rem]"
               target="_blank"
               title={contacts_data[contact]?.label}
               rel="noopener noreferrer"
@@ -53,9 +53,13 @@ export const Feedback = ({ className }: Feedback_props_type) => {
               {innerWidth > 634 && (
                 <>
                   {contacts_data[contact]?.name === "Адрес" ? (
-                    <address>{contacts_data[contact]?.text}</address>
+                    <address className="flex-1">
+                      {contacts_data[contact]?.text}
+                    </address>
                   ) : (
-                    contacts_data[contact]?.text
+                    <span className="flex-1">
+                      {contacts_data[contact]?.text}
+                    </span>
                   )}
                 </>
               )}
