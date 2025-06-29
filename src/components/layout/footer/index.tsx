@@ -39,20 +39,20 @@ export const Footer = () => {
         <div className="grid grid-cols-4 place-items-center gap-x-5 pb-10 border-b-[1px] border-[rgba(255,255,255,0.3)]">
           <div>
             <Logo className="mb-10" />
-            <strong className="block mb-3">Обратная связь</strong>
+            <strong className="block mb-3 lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl">Обратная связь</strong>
             <Feedback className="flex-col items-start justify-end gap-y-4 mb-5" />
           </div>
           <Opening_hours />
-          <Menu className="flex-col items-start gap-y-3" />
+          <Menu className="flex flex-col items-start lg:gap-y-3 xl:gap-y-4" />
           <div>
-            <strong className="block mb-3">Наши социальные сети</strong>
+            <strong className="block mb-3 2xl:mb-6 lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl">Наши социальные сети</strong>
             <Social className="mb-5" />
-            <strong className="block mb-3">Скачать приложение</strong>
-            <App_store className="mb-3" />
-            <b>Разработано: </b>
+            <strong className="block mb-3 2xl:mb-6 lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl">Скачать приложение</strong>
+            <App_store className="mb-3 2xl:mb-6" />
+            <b className="lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl">Разработано: </b>
             <a
               href="https://github.com/AlexLancev"
-              className="hover:text-white duration-300"
+              className="hover:text-white duration-300 lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl"
               target="_blank"
             >
               AlexLancev
@@ -60,7 +60,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex justify-between gap-x-3 py-4 text-sm">
-          <div className="max-w-[590px]">
+          <div className="max-w-[590px] lg:text-base xl:text-xl">
             &copy; Все права принадлежат ФИТНЕС-ЦЕНТР «МОРЕОН» г. Москва м.
             Ясенево, ул. Голубинская, д. 16.
           </div>
@@ -73,7 +73,7 @@ export const Footer = () => {
                   <li key={id ?? idx}>
                     <a
                       href={path}
-                      className="hover:text-white duration-300"
+                      className="hover:text-white duration-300 lg:text-base 3xl:text-xl"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
