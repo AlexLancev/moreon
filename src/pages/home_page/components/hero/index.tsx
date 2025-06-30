@@ -68,10 +68,6 @@ export const Home_hero = observer(() => {
                         Рассчитать стоимость
                         <HandCoins />
                       </a>
-                      {/* <Link className="custom-grey-btn" to="#price-calc">
-                        Рассчитать стоимость
-                        <HandCoins />
-                      </Link> */}
                     </Button>
                   </div>
                 </div>

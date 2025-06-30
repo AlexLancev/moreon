@@ -8,7 +8,7 @@ import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
 export const Header = observer(() => {
   const innerWidth = useGettingWindowWidth();
-  
+
   return (
     <header className="w-full m-auto">
       <div className="flex items-center bg-[rgb(0,70,67)] min-h-10 py-2 2xl:py-4 3xl:py-6">

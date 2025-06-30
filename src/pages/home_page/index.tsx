@@ -24,7 +24,7 @@ const Home_page = () => {
   return (
     <>
       <Home_hero />
-      <Dream_body />
+      {/* <Dream_body />
       <Stock />
       <Calculate_cost />
       <Club_news />
@@ -36,7 +36,7 @@ const Home_page = () => {
       <Phyto_bar />
       <Other_directions />
       <Fitness_club />
-      <Contacts />
+      <Contacts /> */}
     </>
   );
 };

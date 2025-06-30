@@ -1,6 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
+import { useState } from "react";
+
 import {
   Form,
   FormControl,
@@ -13,7 +15,6 @@ import { UserFormSchema } from "@/schema";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { useState } from "react";
 
 export const Personal_account_form = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
