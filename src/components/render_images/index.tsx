@@ -1,3 +1,5 @@
+import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+
 type RenderImageType = {
   url_xxxl_img_webp: string;
   url_xxxl_img_jpg: string;
@@ -21,6 +23,8 @@ export const Render_image = ({
 }: {
   data_image: RenderImageType;
 }) => {
+    const innerWidth = useGettingWindowWidth();
+    
   return (
     <picture>
       <source
@@ -49,7 +53,7 @@ export const Render_image = ({
 
       <img
         className="w-full m-auto lg:object-cover"
-        style={{ height: "calc(100vh - 115.34px)" }}
+        style={{ height: innerWidth > 1024 ? "calc(100vh - 115.34px)" : "" }}
         src={url_xxl_img_jpg}
         alt={label}
         loading="lazy"
