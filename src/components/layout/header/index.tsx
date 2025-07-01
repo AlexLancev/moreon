@@ -22,26 +22,19 @@ export const Header = observer(() => {
             >
               {innerWidth > 945 && <span>Личный кабинет</span>}
               {session_store && session_store.isActiveSession ? (
-                <UserCheck
-                  className="group-hover:stroke-white duration-300 w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] h-auto"
-                />
+                <UserCheck className="group-hover:stroke-white duration-300 w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] h-auto" />
               ) : (
-                <UserLock
-                  className="group-hover:stroke-white duration-300 w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] h-auto"
-                />
+                <UserLock className="group-hover:stroke-white duration-300 w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] h-auto" />
               )}
             </Link>
           </div>
         </Container>
       </div>
-      <div className="py-8 bg-[rgb(0,9,8)]">
+      <div className="py-4 md:py-6 xl:py-8 bg-[rgb(0,9,8)]">
         <Container>
           <div className="flex items-center justify-between">
             <Logo />
-            <Menu
-              className="min-[1025px]:flex hidden items-center"
-              isVisibleSubMenu
-            />
+            <Menu className="lg:flex hidden items-center" isVisibleSubMenu />
           </div>
         </Container>
       </div>

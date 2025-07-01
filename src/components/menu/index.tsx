@@ -68,7 +68,7 @@ export const Menu = ({
                 {isVisibleSubMenu && sub_menu && (
                   <ul
                     className={classNames(
-                      "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-y-2 w-[320px] bg-[rgb(0,9,8)] rounded-lg p-4 transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",
+                      "absolute top-[30px] left-0 z-[99999] p-4 2xl:p-8 flex flex-col items-start gap-y-2 2xl:gap-y-4 xl:text-lg 2xl:text-xl 3xl:text-2xl w-max bg-[rgb(0,9,8)] rounded-lg transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",
                       {
                         "opacity-100 visible": activeMenu === path,
                         "opacity-0 invisible": activeMenu !== path,
