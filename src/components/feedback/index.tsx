@@ -20,16 +20,13 @@ export const Feedback = ({ className }: Feedback_props_type) => {
     !feedback_data ||
     (feedback_data.length !== 0 && (
       <ul
-        className={classNames(
-          "flex text-xs text-[rgba(255,255,255,0.8)]",
-          className,
-        )}
+        className={classNames("flex gap-x-7 text-[rgba(255,255,255,0.8)]", className)}
       >
         {feedback_data?.map((contact, idx: number) => (
           <li key={idx}>
             <a
               href={contacts_data[contact]?.path}
-              className="flex items-center leading-normal gap-x-2 2xl:gap-x-3 transition duration-300 hover:text-[rgb(255,255,255)] 2xl:text-[1.25rem] 3xl:text-[1.75rem]"
+              className="flex items-center leading-normal group gap-x-4 lg:gap-x-2 md:gap-x-2 3xl:text-2xl 2xl:text-xl xl:text-base transition duration-300 hover:text-[rgb(255,255,255)]"
               target="_blank"
               title={contacts_data[contact]?.label}
               rel="noopener noreferrer"
@@ -43,14 +40,14 @@ export const Feedback = ({ className }: Feedback_props_type) => {
                   type="image/svg+xml"
                 />
                 <img
-                  className="w-[17px] 2xl:w-[22px] 3xl:w-[27px]"
+                  className="w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] opacity-80 group-hover:opacity-100 duration-300"
                   src={contacts_data[contact]?.images_url?.png}
                   alt=""
                   loading="lazy"
                   aria-hidden
                 />
               </picture>
-              {innerWidth > 634 && (
+              {innerWidth > 768 && (
                 <>
                   {contacts_data[contact]?.name === "Адрес" ? (
                     <address className="flex-1">

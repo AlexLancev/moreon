@@ -40,7 +40,7 @@ export const Menu = ({
     <nav>
       <ul
         className={classNames(
-          "text-[rgba(255,255,255,0.8)] text-sm",
+          "flex-wrap text-[rgba(255,255,255,0.8)] text-sm gap-x-8 xl:gap-x-10 2xl:gap-x-12 3xl:gap-x-14 gap-y-5",
           className,
         )}
       >
@@ -57,7 +57,7 @@ export const Menu = ({
                 <Link
                   to={path}
                   className={classNames(
-                    "transition duration-300 text-[rgb(191,191,191)] hover:text-white xl:text-[1.15rem] 2xl:text-[1.25rem] 3xl:text-[1.75rem]",
+                    "transition duration-300 text-[rgb(191,191,191)] hover:text-white xl:text-lg 2xl:text-xl 3xl:text-2xl",
                     {
                       "text-white cursor-default": pathname === path,
                     },
@@ -68,7 +68,7 @@ export const Menu = ({
                 {isVisibleSubMenu && sub_menu && (
                   <ul
                     className={classNames(
-                      "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-3 2xl:gap-5 3xl:gap-7 w-[320px] 2xl:w-[450px] 3xl:w-[650px] bg-[rgb(0,9,8)] rounded-lg p-5 2xl:p-7 3xl:p-9 transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",
+                      "absolute top-[30px] left-0 z-[99999] flex flex-col items-start gap-y-2 w-[320px] bg-[rgb(0,9,8)] rounded-lg p-4 transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",
                       {
                         "opacity-100 visible": activeMenu === path,
                         "opacity-0 invisible": activeMenu !== path,
@@ -80,7 +80,7 @@ export const Menu = ({
                         <li key={subToLink}>
                           <Link
                             to={subToLink}
-                            className="transition duration-300 hover:text-white 2xl:text-[1.25rem] 3xl:text-[1.75rem]"
+                            className="transition duration-300 hover:text-white"
                           >
                             {subNameLink}
                           </Link>
