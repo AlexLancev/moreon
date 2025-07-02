@@ -4,9 +4,16 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { stock_store } from "@/stores/data_store";
+import { useGetResponsiveValue } from "@/utils";
+import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 
 export const Stock_list = observer(() => {
   const { data, isLoading, isError } = stock_store;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    3,
+    numberVisibleElementsData,
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
@@ -17,8 +24,8 @@ export const Stock_list = observer(() => {
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={3}
+      spaceBetween={indentationSlide}
+      slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
       {stock_store.data.map(

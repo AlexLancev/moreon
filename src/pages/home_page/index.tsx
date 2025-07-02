@@ -25,8 +25,8 @@ const Home_page = () => {
     <>
       {/* <Home_hero /> */}
       <Dream_body />
-      {/* <Stock />
-      <Calculate_cost />
+      <Stock />
+      {/* <Calculate_cost />
       <Club_news />
       <About_us />
       <Video_reviews />
