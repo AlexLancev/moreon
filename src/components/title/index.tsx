@@ -2,8 +2,6 @@ import { createElement, type ReactNode } from "react";
 
 import classNames from "classnames";
 
-type TitleSize = "xs" | "sm" | "md" | "lg" | "xl";
-
 type Title_props_type = {
   size?: TitleSize;
   className?: string;
@@ -13,7 +11,7 @@ type Title_props_type = {
 export const Title = ({
   children,
   size = "lg",
-  className = "mb-10 text-white leading-[1.4] font-[DelaGothicOne]",
+  className = "mb-10 2xl:mb-16 text-white leading-[1.4] font-[DelaGothicOne]",
 }: Title_props_type) => {
   const mapTagBySize = {
     xs: "h5",
@@ -27,7 +25,7 @@ export const Title = ({
     xs: "text-[18px]",
     sm: "text-[20px]",
     md: "text-[24px]",
-    lg: "text-[40px]",
+    lg: "text-[30px]",
     xl: "text-[54px]",
   } as const;
 

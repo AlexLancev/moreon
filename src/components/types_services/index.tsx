@@ -8,8 +8,12 @@ import { ReactNode } from "react";
 import { Title } from "@/components";
 
 import { types_services_store } from "@/stores/data_store";
-import { types_services_data_decor } from "@/constans";
-import { isEmptyObj } from "@/utils";
+import {
+  numberVisibleElementsData,
+  sizeRangesData,
+  types_services_data_decor,
+} from "@/constans";
+import { isEmptyObj, useGetResponsiveValue } from "@/utils";
 
 const render_icons = (path: Types_services_key): ReactNode | null => {
   if (isEmptyObj(types_services_data_decor)) return null;
@@ -19,6 +23,11 @@ const render_icons = (path: Types_services_key): ReactNode | null => {
 
 export const Types_services = observer(() => {
   const { data, isLoading, isError } = types_services_store;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    3,
+    numberVisibleElementsData,
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
@@ -31,22 +40,27 @@ export const Types_services = observer(() => {
     <div>
       <Swiper
         modules={[Pagination]}
-        spaceBetween={20}
-        slidesPerView={3}
+        spaceBetween={indentationSlide}
+        slidesPerView={quantitySlide}
         pagination={{ clickable: true }}
       >
         {data.map(({ head, description, path }, idx: number) => (
           <SwiperSlide
             key={head ?? idx}
-            className="relative p-7 bg-[#031817] flex flex-col overflow-hidden rounded-3xl text-sm min-h-[430px] before:w-full before:h-[120px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
+            className="relative p-4 3xl:p-10 h-auto bg-[#031817] flex flex-col items-start overflow-hidden rounded-3xl text-sm before:w-full before:h-[120px] 2xl:before:h-[140px] 3xl:before:h-[160px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
           >
-            <Title size="md" className="uppercase mb-20 text-xl">
+            <Title
+              size="md"
+              className="uppercase mb-7 text-lg 2xl:text-2xl 3xl:text-3xl"
+            >
               {head}
             </Title>
-            <p className="mb-2 flex-auto text-lg">{description}</p>
+            <p className="mb-5 2xl:mb-7 3xl:mb-10 flex-auto text-lg lg:text-xl 2xl:text-2xl 3xl:text-3xl 3xl:leading-normal">
+              {description}
+            </p>
             <Link
               to={`/services/${path}`}
-              className="duration-300 hover:text-white"
+              className="duration-300 hover:text-white text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl"
             >
               Узнать подробнее
             </Link>

@@ -23,8 +23,8 @@ export const Render_image = ({
 }: {
   data_image: RenderImageType;
 }) => {
-    const innerWidth = useGettingWindowWidth();
-    
+  const innerWidth = useGettingWindowWidth();
+
   return (
     <picture>
       <source

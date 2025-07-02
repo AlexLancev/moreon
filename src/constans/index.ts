@@ -4,3 +4,6 @@ export { fitness_club_list } from "./fitness_club_list_data";
 export { childrens_swimming_data } from "./childrens_swimming_data";
 export { kids_fitnes_hero_data } from "./kids_fitnes_hero_data";
 export { types_services_data_decor } from "./types_services_data_decor";
+export { sizeTitleData } from "./sizeTitleData";
+export { sizeRangesData } from "./sizeRangesData";
+export { numberVisibleElementsData } from "./numberVisibleElementsData";

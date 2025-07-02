@@ -23,9 +23,9 @@ import { get_tabs_store } from "@/stores";
 const Home_page = () => {
   return (
     <>
-      <Home_hero />
-      {/* <Dream_body />
-      <Stock />
+      {/* <Home_hero /> */}
+      <Dream_body />
+      {/* <Stock />
       <Calculate_cost />
       <Club_news />
       <About_us />
