@@ -7,10 +7,17 @@ import classNames from "classnames";
 import { Title } from "@/components";
 
 import { about_us_store } from "@/stores/data_store";
+import { useGetResponsiveValue } from "@/utils";
+import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 
 export const About_us_list = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const { data, isLoading, isError } = about_us_store;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    2,
+    numberVisibleAboutUsData,
+  );
 
   if (!about_us_store || !data || data.length === 0) {
     return <div>No data available</div>;
@@ -27,10 +34,13 @@ export const About_us_list = observer(() => {
           const currentIndex = startIndex + idx;
           return (
             <button
-              key={title || idx}
-              className={classNames("about_slide", {
-                "about_slide--active": visibleIndex === currentIndex,
-              })}
+              key={title ?? idx}
+              className={classNames(
+                "bg-tabs-gradient-custom hover:bg-tabs-hover-gradient-custom relative w-full py-4 px-6 pr-12 rounded-2xl text-left before:absolute before:top-6 before:right-6 before:duration-150 before:w-4 before:h-2.5 before:bg-no-repeat before:bg-[url('/images/list__blue.webp')]",
+                {
+                  "before:rotate-180": visibleIndex === currentIndex,
+                },
+              )}
               type="button"
               onClick={() =>
                 setVisibleIndex(
@@ -38,13 +48,12 @@ export const About_us_list = observer(() => {
                 )
               }
             >
-              <Title size="lg" className="text-base">
-                {title}
-              </Title>
+              <Title className="text-base">{title}</Title>
               <p
                 className={classNames("duration-300 transition-opacity", {
-                  ["activeClasses"]: visibleIndex === currentIndex,
-                  ["inactiveClasses"]: visibleIndex !== currentIndex,
+                  ["pt-4 h-auto"]: visibleIndex === currentIndex,
+                  ["invisible pt-0 opacity-0 h-0"]:
+                    visibleIndex !== currentIndex,
                 })}
               >
                 {description}
@@ -64,8 +73,8 @@ export const About_us_list = observer(() => {
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={2}
+      spaceBetween={indentationSlide}
+      slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
       {slides}

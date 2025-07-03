@@ -11,7 +11,7 @@ export const Childrens_center = () => {
     <section className="py-12">
       <Container>
         <Title>
-          Детский <span className="head_decor">центр</span>
+          Детский <span className="customHeadDecor">центр</span>
         </Title>
         <div className="flex items-center justify-between gap-x-12">
           <div className="w-full max-w-[725px]">

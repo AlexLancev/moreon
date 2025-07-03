@@ -37,7 +37,7 @@ export const Video_reviews_list = observer(() => {
           <SwiperSlide key={idx}>
             <button
               type="button"
-              className="btn_review"
+              className="w-full rounded-3xl overflow-hidden group"
               style={{ display: `${isVideoActive === idx ? "none" : "block"}` }}
               onClick={() =>
                 setIsVideoActive(isVideoActive === idx ? null : idx)
@@ -56,7 +56,7 @@ export const Video_reviews_list = observer(() => {
                   loading="lazy"
                 />
               </picture>
-              <PlayCircleOutlined className="play_icon" />
+              <PlayCircleOutlined className="group-hover:after:w-[180%] group-hover:after:h-[180%] group-hover:after:bg-[rgba(255,255,255,0.3)] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl text-[#33b0aa] z-10 after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-[150%] after:h-[150%] after:rounded-full after:bg-[rgba(191,191,191,0.278)] after:-z-10 after:duration-500" />
             </button>
             {isVideoActive === idx && (
               <iframe

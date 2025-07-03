@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 
 import { NotebookText } from "lucide-react";
 
+import xss from "xss";
+
 import { modal_store } from "@/stores";
 import { directions_store } from "@/stores/data_store";
 import { Container, Directions_list, Title } from "@/components";
@@ -31,6 +33,8 @@ const Current_direction_page = observer(() => {
   const { hero, description_direction, directions } =
     directions_bd?.[service] ?? {};
 
+  const sanitized_description = xss(hero?.description);
+
   return (
     <Container>
       <section className="relative min-h-[400px] py-20 px-10 after:absolute after:inset-0 after:bg-black/80 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
@@ -46,8 +50,8 @@ const Current_direction_page = observer(() => {
         </picture>
         <div className="relative w-full max-w-[525px] z-10">
           <div
-            className="ab"
-            dangerouslySetInnerHTML={{ __html: hero?.description }}
+            className="customInsertHTML"
+            dangerouslySetInnerHTML={{ __html: sanitized_description }}
           ></div>
           <Button onClick={() => change_modal(!isVisibleModal)}>
             Гостевой визит <NotebookText />
@@ -59,6 +63,8 @@ const Current_direction_page = observer(() => {
           {description_direction.map(
             ({ content, images_url: { jpg, webp } }, idx) => {
               if (!content && !jpg && !webp) return null;
+
+              const sanitized_content = xss(content);
 
               return (
                 <li
@@ -78,8 +84,8 @@ const Current_direction_page = observer(() => {
                     />
                   </picture>
                   <div
-                    className="current-direction w-full max-w-[525px]"
-                    dangerouslySetInnerHTML={{ __html: content }}
+                    className="customInsertPageHTML"
+                    dangerouslySetInnerHTML={{ __html: sanitized_content }}
                   ></div>
                 </li>
               );
@@ -90,7 +96,7 @@ const Current_direction_page = observer(() => {
       {directions && directions.length !== 0 && (
         <section className="py-12 px-10">
           <Title>
-            <span className="head_decor">Другие</span> направления
+            <span className="customHeadDecor">Другие</span> направления
           </Title>
           <Directions_list keys_list={directions} />
         </section>

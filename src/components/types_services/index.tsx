@@ -50,7 +50,7 @@ export const Types_services = observer(() => {
             className="relative p-4 3xl:p-10 h-auto bg-[#031817] flex flex-col items-start overflow-hidden rounded-3xl text-sm before:w-full before:h-[120px] 2xl:before:h-[140px] 3xl:before:h-[160px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
           >
             <Title
-              size="md"
+              fontSize="md"
               className="uppercase mb-7 text-lg 2xl:text-2xl 3xl:text-3xl"
             >
               {head}

@@ -5,7 +5,7 @@ const News_page = () => {
     <section className="py-12">
       <Container>
         <Title>
-          <span className="head_decor">Новости</span> клуба
+          <span className="customHeadDecor">Новости</span> клуба
         </Title>
         <News_list />
         <Every_card />

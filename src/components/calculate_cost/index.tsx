@@ -53,7 +53,7 @@ export const Calculate_cost = () => {
     <Container>
       <section
         id="price-calc"
-        className="relative py-12 px-16 fitnes_decor rounded-3xl overflow-hidden"
+        className="relative py-12 px-16 rounded-3xl overflow-hidden before:absolute before:top-0 before:left-0 before:bg-[#33b0aa] before:w-full before:h-full before:opacity-10 before:clip-[polygon(0_0,_100%_0,_100%_100%,_0_25%)] before:[-webkit-clip-path:polygon(0_0,_100%_0,_100%_100%,_0_25%)] before:pointer-events-none before:z-10"
       >
         <Wallet
           className="absolute bottom-[1rem] right-[40rem] opacity-5 rotate-45 -z-10"
@@ -68,16 +68,16 @@ export const Calculate_cost = () => {
           strokeWidth={1.5}
         />
         <h2 className="mb-10">
-          Рассчитать <span className="head_decor">стоимость</span>
+          Рассчитать <span className="customHeadDecor">стоимость</span>
         </h2>
         <Range_slider onMonthsChange={setSelectedMonths} className="mb-10" />
         <Radio_group setTotalSum={setBaseSum} className="mb-16" />
         <h3 className="mb-3">
-          <span className="head_decor">Итоговая</span> стоимость:
+          <span className="customHeadDecor">Итоговая</span> стоимость:
         </h3>
         <strong className="text-lg">
           <span className="text-white text-2xl">{displayedSum.toFixed(2)}</span>{" "}
-          ₽ за <span className="head_decor text-xl">{selectedMonths}</span>{" "}
+          ₽ за <span className="customHeadDecor text-xl">{selectedMonths}</span>{" "}
           {selectedMonths > 1 && selectedMonths < 5
             ? "месяца"
             : selectedMonths === 1

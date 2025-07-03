@@ -29,9 +29,12 @@ export const Questions = observer(() => {
           <li key={idx} className="mb-2">
             <button
               key={idx}
-              className={classNames("about_slide", {
-                "about_slide--active": visibleIndex === idx,
-              })}
+              className={classNames(
+                "bg-tabs-gradient-custom hover:bg-tabs-hover-gradient-custom relative w-full py-4 px-6 pr-12 rounded-2xl text-left before:absolute before:top-6 before:right-6 before:duration-150 before:w-4 before:h-2.5 before:bg-no-repeat before:bg-[url('/images/list__blue.webp')]",
+                {
+                  "before:rotate-180": visibleIndex === idx,
+                },
+              )}
               type="button"
               onClick={() => setVisibleIndex(visibleIndex === idx ? null : idx)}
             >
@@ -40,10 +43,10 @@ export const Questions = observer(() => {
               </Title>
               <div
                 className={classNames(
-                  "duration-300 transition-opacity overflow-hidden ab",
+                  "customInsertHTML duration-300 transition-opacity overflow-hidden",
                   {
-                    ["activeClasses"]: visibleIndex === idx,
-                    ["inactiveClasses"]: visibleIndex !== idx,
+                    ["pt-4 h-auto"]: visibleIndex === idx,
+                    ["invisible p-0 opacity-0 h-0"]: visibleIndex !== idx,
                   },
                 )}
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}

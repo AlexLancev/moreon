@@ -7,7 +7,7 @@ export const Phyto_bar = () => {
     <section className="py-12">
       <Container>
         <Title>
-          Фито <span className="head_decor">бар</span>
+          Фито <span className="customHeadDecor">бар</span>
         </Title>
         <Performance data_key={phyto_bar_data_key} isVisibleBtn={true} />
       </Container>

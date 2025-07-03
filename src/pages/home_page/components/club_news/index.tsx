@@ -1,11 +1,16 @@
 import { Container, News_list, Title } from "components";
 
+import { sizeTitleData } from "@/constans";
+import { useGetResponsiveValue } from "@/utils";
+
 export const Club_news = () => {
+  const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
+
   return (
     <section className="py-12">
       <Container>
-        <Title>
-          <span className="head_decor">Новости</span> фитнес клуба
+        <Title fontSize={size}>
+          <span className="customHeadDecor">Новости</span> фитнес клуба
         </Title>
         <News_list />
       </Container>

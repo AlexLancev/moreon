@@ -23,10 +23,10 @@ import { get_tabs_store } from "@/stores";
 const Home_page = () => {
   return (
     <>
-      {/* <Home_hero /> */}
+      <Home_hero />
       <Dream_body />
       <Stock />
-      {/* <Calculate_cost />
+      <Calculate_cost />
       <Club_news />
       <About_us />
       <Video_reviews />
@@ -36,7 +36,7 @@ const Home_page = () => {
       <Phyto_bar />
       <Other_directions />
       <Fitness_club />
-      <Contacts /> */}
+      <Contacts />
     </>
   );
 };

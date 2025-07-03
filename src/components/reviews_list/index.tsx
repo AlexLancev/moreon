@@ -31,7 +31,7 @@ export const Reviews_list = observer(() => {
             className="bg-[rgba(255,255,255,0.19)] p-8 rounded-3xl"
           >
             <strong className="flex text-xl mb-2 text-white">{person}</strong>
-            <p className="text-lg overflow-y-auto custom-scrollbar">{review}</p>
+            <p className="text-lg overflow-y-auto customScrollbar">{review}</p>
           </SwiperSlide>
         );
       })}

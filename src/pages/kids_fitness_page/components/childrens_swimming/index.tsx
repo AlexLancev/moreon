@@ -12,7 +12,8 @@ export const Childrens_swimming = () => {
     <Container>
       <section className="py-12 px-10 text-lg">
         <Title>
-          <span className="head_decor">Детское плавание</span> от 0 до 13 лет
+          <span className="customHeadDecor">Детское плавание</span> от 0 до 13
+          лет
         </Title>
         <p className="mb-4">
           Приучите ребенка к здоровому образу жизни с первых шагов!

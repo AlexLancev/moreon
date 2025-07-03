@@ -4,3 +4,8 @@ export const numberVisibleElementsData: sizeRangesType[] = [
   { min: 445, max: 623, meaning: 1.25 },
   { max: 445, meaning: 1 },
 ];
+
+export const numberVisibleAboutUsData: sizeRangesType[] = [
+  { min: 1024, meaning: 2 },
+  { max: 768, meaning: 1 },
+];

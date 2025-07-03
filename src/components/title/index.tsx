@@ -3,15 +3,17 @@ import { createElement, type ReactNode } from "react";
 import classNames from "classnames";
 
 type Title_props_type = {
-  size?: TitleSize;
+  fontSize?: TitleSize;
+  headingType?: TitleSize;
   className?: string;
   children: ReactNode;
 };
 
 export const Title = ({
   children,
-  size = "lg",
-  className = "mb-10 2xl:mb-16 text-white leading-[1.4] font-[DelaGothicOne]",
+  fontSize = "lg",
+  headingType = "lg",
+  className,
 }: Title_props_type) => {
   const mapTagBySize = {
     xs: "h5",
@@ -30,8 +32,14 @@ export const Title = ({
   } as const;
 
   return createElement(
-    mapTagBySize[size],
-    { className: classNames(className, mapClassNameBySize[size]) },
+    mapTagBySize[headingType],
+    {
+      className: classNames(
+        "mb-10 2xl:mb-16 text-white leading-[1.4] font-familyDelaGothicOne",
+        className,
+        mapClassNameBySize[fontSize],
+      ),
+    },
     children,
   );
 };

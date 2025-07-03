@@ -49,13 +49,13 @@ export const Personal_format_tabs = observer(
               <li key={idx} className="w-[20%] text-center">
                 <label className="personal_tabs">
                   <input
-                    className="visually-hidden"
+                    className="visually-hidden peer"
                     type="radio"
                     value={key_name}
                     onChange={() => setCurrentChangeTab(key_name)}
                     checked={currentChangeTab === key}
                   />
-                  <span className="block h-full py-5 px-8 rounded-t-3xl">
+                  <span className="peer-checked:cursor-default peer-checked:bg-[rgba(255,255,255,4%)] peer-checked:text-white block h-full py-5 px-8 rounded-t-3xl cursor-pointer text-[rgba(255,255,255,0.7)] duration-300 transition-colors hover:text-[rgba(255,255,255,1)]">
                     {category}
                   </span>
                 </label>

@@ -9,7 +9,7 @@ export const Freeze_card = () => {
     <section className="py-12">
       <Container>
         <Title>
-          Заморозь свою карту <span className="head_decor">Moreon</span>
+          Заморозь свою карту <span className="customHeadDecor">Moreon</span>
         </Title>
         <div className="flex justify-between gap-x-8">
           <div className="w-full max-w-[525px]">
@@ -31,7 +31,7 @@ export const Freeze_card = () => {
               Заморозить карту <Snowflake />
             </Button>
           </div>
-          <div className="freeze_decor">
+          <div className="relative after:absolute after:inset-0 after:w-full after:h-full after:bg-freeze-gradient-custom">
             <picture>
               <source
                 srcSet="/images/freeze_card/freez.webp"

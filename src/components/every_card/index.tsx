@@ -5,7 +5,7 @@ export const Every_card = () => {
     <section className="py-12">
       <Container>
         <Title>
-          В каждой <span className="head_decor">клубной карте</span>
+          В каждой <span className="customHeadDecor">клубной карте</span>
         </Title>
         <Every_card_list />
       </Container>

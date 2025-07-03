@@ -48,7 +48,7 @@ export const Fitness_area = observer(
       <section className="py-12">
         <Container>
           <Title>
-            <span className="head_decor">Зоны</span> фитнес клуба
+            <span className="customHeadDecor">Зоны</span> фитнес клуба
           </Title>
           <Tabs
             isActiveTab={isActiveTab}
@@ -68,7 +68,7 @@ export const Fitness_area = observer(
               />
             </picture>
             <div className="w-full max-w-[525px]">
-              <Title size="md" className="mb-3 head_decor">
+              <Title size="md" className="mb-3 customHeadDecor">
                 {head}
               </Title>
               <p className="mb-7 text-lg">{description}</p>

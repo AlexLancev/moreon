@@ -13,7 +13,7 @@ export const Effective_training = () => {
       <Container>
         <Title className="mb-3">
           Все, что нужно для
-          <span className="head_decor"> эффективных тренировок</span>
+          <span className="customHeadDecor"> эффективных тренировок</span>
         </Title>
 
         <strong className="block mb-10 text-lg">

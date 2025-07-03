@@ -8,7 +8,7 @@ export const Areas_study = ({ keys_list }: Directions_keys_type) => {
       <section className="py-12">
         <div className="w-full max-w-[1080px] m-auto">
           <Title>
-            Направления <span className="head_decor">занятий</span>
+            Направления <span className="customHeadDecor">занятий</span>
           </Title>
           <Directions_list keys_list={keys_list} />
         </div>

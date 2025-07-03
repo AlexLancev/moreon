@@ -53,7 +53,7 @@ const Stock_presentation_page = observer(() => {
             />
           </picture>
           <div
-            className="ab"
+            className="customInsertHTML"
             dangerouslySetInnerHTML={{ __html: sanitized_description }}
           ></div>
         </div>
@@ -73,7 +73,7 @@ const Stock_presentation_page = observer(() => {
           />
         </picture>
         <Title>
-          Другие <span className="head_decor">акции клуба</span>
+          Другие <span className="customHeadDecor">акции клуба</span>
         </Title>
         <Render_slider path={numeric_Id} type="stock" data={data} />
       </section>

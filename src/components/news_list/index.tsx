@@ -6,9 +6,16 @@ import { Link } from "react-router-dom";
 import { Title } from "@/components";
 
 import { news_store } from "@/stores/data_store";
+import { useGetResponsiveValue } from "@/utils";
+import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 
 export const News_list = observer(() => {
   const { data, isLoading, isError } = news_store;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    4,
+    numberVisibleElementsData,
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
@@ -20,8 +27,8 @@ export const News_list = observer(() => {
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={4}
+      spaceBetween={indentationSlide}
+      slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
       {data.map(
@@ -43,7 +50,8 @@ export const News_list = observer(() => {
                 />
               </picture>
               <Title
-                size="md"
+                fontSize="md"
+                headingType="md"
                 className="text-[rgb(176,176,176)] px-1 text-center"
               >
                 {description}

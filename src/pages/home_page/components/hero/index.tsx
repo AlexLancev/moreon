@@ -64,7 +64,7 @@ export const Home_hero = observer(() => {
                       </Link>
                     </Button>
                     <Button asChild>
-                      <a className="custom-grey-btn" href="#price-calc">
+                      <a className="customGreyBtn" href="#price-calc">
                         Рассчитать стоимость
                         <HandCoins />
                       </a>

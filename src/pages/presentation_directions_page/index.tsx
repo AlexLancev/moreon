@@ -63,7 +63,7 @@ const Kids_fitness_page = observer(() => {
           </picture>
           <div className="relative w-full max-w-[525px] z-10">
             <div
-              className="ab"
+              className="customInsertHTML"
               dangerouslySetInnerHTML={{ __html: description }}
             ></div>
             <Button onClick={() => change_modal(!isVisibleModal)}>
@@ -76,7 +76,7 @@ const Kids_fitness_page = observer(() => {
       <section className="py-10">
         <Container>
           <Title>
-            <span className="head_decor">Тренеры</span> направления
+            <span className="customHeadDecor">Тренеры</span> направления
           </Title>
           <Team_list isActiveTab={team} />
         </Container>

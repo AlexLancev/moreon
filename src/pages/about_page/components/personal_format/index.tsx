@@ -22,8 +22,8 @@ export const Personal_format = ({ tabs_store }: tabs_store_type) => {
     <section className="py-12">
       <Container>
         <Title>
-          <span className="head_decor">Формат,</span> который подойдет именно
-          Вам
+          <span className="customHeadDecor">Формат,</span> который подойдет
+          именно Вам
         </Title>
         <Personal_format_tabs
           tabs_store={tabs_store}

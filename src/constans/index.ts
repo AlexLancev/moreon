@@ -6,4 +6,7 @@ export { kids_fitnes_hero_data } from "./kids_fitnes_hero_data";
 export { types_services_data_decor } from "./types_services_data_decor";
 export { sizeTitleData } from "./sizeTitleData";
 export { sizeRangesData } from "./sizeRangesData";
-export { numberVisibleElementsData } from "./numberVisibleElementsData";
+export {
+  numberVisibleElementsData,
+  numberVisibleAboutUsData,
+} from "./numberVisibleElementsData";

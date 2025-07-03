@@ -9,9 +9,9 @@ export const Dream_body = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title size={size}>
+        <Title fontSize={size}>
           Создай тело мечты вместе
-          <span className="head_decor"> с Moreon Fitness</span>
+          <span className="customHeadDecor"> с Moreon Fitness</span>
         </Title>
         <Types_services />
       </Container>

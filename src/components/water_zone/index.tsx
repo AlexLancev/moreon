@@ -48,7 +48,7 @@ export const Water_zone = observer(
     return (
       <section className="py-12">
         <Container>
-          <div className="water_zone">
+          <div className="relative py-24 px-14 after:absolute after:inset-0 after:-z-10 after:bg-water-zone-gradient-custom">
             <picture>
               <source
                 srcSet="/images/water_zone/result_zone_bg.webp"

@@ -51,7 +51,7 @@ export const Choose_your_card = observer(
       <section className="py-12">
         <Container>
           <Title>
-            Выберите свою <span className="head_decor">карту</span>
+            Выберите свою <span className="customHeadDecor">карту</span>
           </Title>
           <Tabs
             isActiveTab={isActiveTab}

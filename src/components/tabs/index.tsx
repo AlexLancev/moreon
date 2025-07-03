@@ -33,15 +33,17 @@ export const Tabs = ({
 
         return (
           <li key={idx}>
-            <label className="tabs_label">
+            <label className="hover:cursor-pointer">
               <input
-                className="visually-hidden"
+                className="visually-hidden peer"
                 type="radio"
                 value={key}
                 onChange={() => change_tabs(key)}
                 checked={isActiveTab === key}
               />
-              <span>{category}</span>
+              <span className="bg-[rgb(42,54,53)] peer-checked:cursor-default peer-checked:bg-[rgba(42,54,53,0.3)] peer-checked:border peer-checked:border-[rgb(42,54,53)] hover:bg-[rgba(42,54,53,0.5)] py-2.5 px-4 rounded-xl text-xl text-white duration-300 border border-transparent transition-colors">
+                {category}
+              </span>
             </label>
           </li>
         );

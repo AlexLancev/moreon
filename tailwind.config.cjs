@@ -10,6 +10,22 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        familyDelaGothicOne: ["DelaGothicOne", "sans-serif"],
+        familyGroticTitulOtlHv: ["a_GroticTitulOtlHv", "sans-serif"],
+      },
+      backgroundImage: {
+        "tabs-gradient-custom":
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(181, 181, 181, 0.1) 100%)",
+        "tabs-hover-gradient-custom":
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(181, 181, 181, 0.15) 100%)",
+        "freeze-gradient-custom":
+          "linear-gradient(270deg,#00100f 0%,rgba(0, 0, 0, 0) 58.19%)",
+        "fitnes-club-gradient-custom":
+          "linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%,rgba(181, 181, 181, 0.2) 100%)",
+        "water-zone-gradient-custom":
+          "linear-gradient(270deg,#00100f 28.37%,rgba(0, 16, 15, 0.75) 55.82%)",
+      },
       colors: {
         customGray: "rgb(60, 60, 60)",
         customGrayLight: "rgb(30, 30, 30)",

@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "custom-green-btn text-white duration-300 hover:translate-y-[1px]",
+          "customGreenBtn text-white duration-300 hover:translate-y-[1px]",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:

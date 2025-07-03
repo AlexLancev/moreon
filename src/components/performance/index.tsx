@@ -26,7 +26,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
     return null;
 
   return (
-    <ul className="performance">
+    <ul>
       {data_key.map((key, idx: number) => {
         const currentData = performance_bd[key];
         if (!currentData) return null;
@@ -34,7 +34,11 @@ export const Performance = observer(({ data_key }: Performance_type) => {
         const { arr_images, title, description } = currentData;
 
         return (
-          <li key={idx} className="performance_item" data-decor={title}>
+          <li
+            key={idx}
+            className="relative flex justify-center gap-10 py-10 px-0 bg-no-repeat bg-[90%_0] after:content-[attr(data-decor)] after:font-familyGroticTitulOtlHv after:absolute after:right-10 after:-top-10 after:text-[rgba(23,101,97,0.1)] after:text-8xl odd:flex-row-reverse odd:after:left-10"
+            data-decor={title}
+          >
             <Swiper
               className="w-full max-w-[525px] mx-0"
               modules={[Pagination]}
@@ -67,7 +71,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
             <div className="w-full max-w-[525px] pt-8">
               <Title
                 size="md"
-                className="uppercase head_decor text-2xl font-bold mb-3"
+                className="uppercase customHeadDecor text-2xl font-bold mb-3"
               >
                 {title}
               </Title>
