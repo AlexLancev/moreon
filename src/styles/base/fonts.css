@@ -3,8 +3,6 @@
   src:
     url("/fonts/DelaGothicOne/DelaGothicOne-Regular.woff2") format("woff2"),
     url("/fonts/DelaGothicOne/DelaGothicOne-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
@@ -12,6 +10,4 @@
   src:
     url("/fonts/a_GroticTitulOtlHv/a_GroticTitulOtlHv.woff2") format("woff2"),
     url("/fonts/a_GroticTitulOtlHv/a_GroticTitulOtlHv.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
 }

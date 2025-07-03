@@ -48,7 +48,7 @@ export const Render_card_description = observer(
             <img src={images_url?.jpg} alt="" loading="lazy" aria-hidden />
           </picture>
           <div
-            className="mb-5 card_page max-w-[750px]"
+            className="mb-5 customInsertCardPageHTML max-w-[750px]"
             dangerouslySetInnerHTML={{
               __html: xss(
                 page_description.all ?? page_description[isActiveTab] ?? "",

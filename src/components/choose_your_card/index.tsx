@@ -9,8 +9,9 @@ import { Button } from "../ui/button";
 
 import { Tabs, Container, Title } from "@/components";
 
-import { isEmptyObj } from "@/utils";
+import { isEmptyObj, useGetResponsiveValue } from "@/utils";
 import { club_cards_store } from "@/stores/data_store";
+import { sizeTitleData } from "@/constans";
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },
@@ -24,6 +25,7 @@ export const Choose_your_card = observer(
   ({ tabs_store }: { tabs_store: Club_cards_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
     const { data, isLoading, isError } = club_cards_store;
+    const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
 
     const club_cards_bd = toJS(data?.[0]);
 
@@ -50,7 +52,7 @@ export const Choose_your_card = observer(
     return (
       <section className="py-12">
         <Container>
-          <Title>
+          <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
             Выберите свою <span className="customHeadDecor">карту</span>
           </Title>
           <Tabs

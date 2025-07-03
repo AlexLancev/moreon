@@ -3,12 +3,16 @@ import { Snowflake } from "lucide-react";
 import { Button } from "../ui/button";
 
 import { Container, Title } from "@/components";
+import { useGetResponsiveValue } from "@/utils";
+import { sizeTitleData } from "@/constans";
 
 export const Freeze_card = () => {
+  const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
+
   return (
     <section className="py-12">
       <Container>
-        <Title>
+        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
           Заморозь свою карту <span className="customHeadDecor">Moreon</span>
         </Title>
         <div className="flex justify-between gap-x-8">

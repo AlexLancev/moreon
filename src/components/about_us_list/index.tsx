@@ -52,7 +52,7 @@ export const About_us_list = observer(() => {
               <p
                 className={classNames("duration-300 transition-opacity", {
                   ["pt-4 h-auto"]: visibleIndex === currentIndex,
-                  ["invisible pt-0 opacity-0 h-0"]:
+                  ["invisible p-0 opacity-0 h-0"]:
                     visibleIndex !== currentIndex,
                 })}
               >

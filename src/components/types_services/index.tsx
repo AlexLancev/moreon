@@ -51,6 +51,7 @@ export const Types_services = observer(() => {
           >
             <Title
               fontSize="md"
+              headingType="md"
               className="uppercase mb-7 text-lg 2xl:text-2xl 3xl:text-3xl"
             >
               {head}

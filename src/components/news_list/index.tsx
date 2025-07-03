@@ -52,7 +52,7 @@ export const News_list = observer(() => {
               <Title
                 fontSize="md"
                 headingType="md"
-                className="text-[rgb(176,176,176)] px-1 text-center"
+                className="opacity-70 px-1 text-center"
               >
                 {description}
               </Title>

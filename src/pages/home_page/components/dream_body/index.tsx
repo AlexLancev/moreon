@@ -9,7 +9,7 @@ export const Dream_body = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title fontSize={size}>
+        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
           Создай тело мечты вместе
           <span className="customHeadDecor"> с Moreon Fitness</span>
         </Title>

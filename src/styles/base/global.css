@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body.lock {
+  overflow: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -84,7 +88,40 @@
     }
   }
 
-  .customcustomInsertHTML {
+  .customHeadDecor {
+    color: #33b0aa;
+  }
+
+  .customScrollbar {
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(39, 39, 39) rgba(0, 0, 0, 0.18);
+
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgb(39, 39, 39);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 0, 0, 0.396);
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none !important;
+      appearance: none;
+    }
+  }
+
+  .customInsertHTML {
     padding: 10px 0;
 
     h1 {
@@ -158,75 +195,50 @@
     }
   }
 
-  .customHeadDecor {
-    color: #33b0aa;
+  .customInsertCardPageHTML {
+    h1 {
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 
-  .customScrollbar {
-    padding-right: 15px;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(39, 39, 39) rgba(0, 0, 0, 0.18);
-
-    &::-webkit-scrollbar {
-      width: 2px;
-      height: 2px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.18);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: rgb(39, 39, 39);
-      border-radius: 2px;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: rgba(255, 0, 0, 0.396);
-    }
-
-    &::-webkit-scrollbar-button {
-      display: none !important;
-      appearance: none;
-    }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
-}
-
-html {
-  height: 100%;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  scrollbar-gutter: stable;
-}
-
-body {
-  min-width: 320px;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  margin: 0;
-  background-color: #00100f;
-  color: #bfbfbf;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  cursor: default;
-}
-
-body.lock {
-  overflow: hidden;
-}
-
-main {
-  display: block;
-  flex: 1 1 auto;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 [class*="ymaps"][class*="-ground-pane"] {
@@ -246,66 +258,3 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.card_page {
-  h1 {
-    font-size: 35px;
-    margin-bottom: 30px;
-  }
-
-  h2 {
-    font-size: 27px;
-    margin-bottom: 20px;
-  }
-
-  h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  p {
-    margin-bottom: 15px;
-    line-height: 1.5;
-  }
-
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-
-  li:not(:last-child) {
-    margin-bottom: 5px;
-  }
-}
-
-/* h1,
-h2,
-h3 {
-  font-family: "DelaGothicOne", sans-serif;
-}
-
-h1 {
-  font-size: 54px;
-}
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 24px;
-} */

@@ -9,7 +9,9 @@ export const Stock = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title size={size}>Акции клуба</Title>
+        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
+          Акции клуба
+        </Title>
         <Stock_list />
       </Container>
     </section>

@@ -35,7 +35,7 @@ export const Title = ({
     mapTagBySize[headingType],
     {
       className: classNames(
-        "mb-10 2xl:mb-16 text-white leading-[1.4] font-familyDelaGothicOne",
+        "text-white leading-[1.4] font-familyDelaGothicOne",
         className,
         mapClassNameBySize[fontSize],
       ),

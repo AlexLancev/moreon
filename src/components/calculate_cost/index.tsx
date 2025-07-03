@@ -2,44 +2,42 @@ import { useEffect, useRef, useState } from "react";
 
 import { Coins, Wallet } from "lucide-react";
 
-import { Container, Radio_group, Range_slider } from "@/components";
+import { Container, Radio_group, Range_slider, Title } from "@/components";
+import { useGetResponsiveValue } from "@/utils";
+import { sizeTitleData } from "@/constans";
 
 export const Calculate_cost = () => {
-  const [baseSum, setBaseSum] = useState<number>(0); // Базовая сумма из Radio_group
-  const [selectedMonths, setSelectedMonths] = useState<number>(3); // Количество месяцев
-  const [displayedSum, setDisplayedSum] = useState<number>(0); // Отображаемая сумма
-  const targetSumRef = useRef<number>(0); // Целевая сумма для анимации
+  const [baseSum, setBaseSum] = useState<number>(0);
+  const [selectedMonths, setSelectedMonths] = useState<number>(3);
+  const [displayedSum, setDisplayedSum] = useState<number>(0);
+  const targetSumRef = useRef<number>(0);
+  const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
 
-  // Вычисляем целевую сумму
   const totalCost = baseSum * selectedMonths;
 
   useEffect(() => {
-    // Устанавливаем новую целевую сумму
     targetSumRef.current = totalCost;
 
-    // Очищаем предыдущий интервал, если он существует
     let interval: NodeJS.Timeout | null = null;
 
-    // Функция для анимированного изменения суммы
     const animateSum = () => {
-      let currentSum = displayedSum; // Текущая отображаемая сумма
-      const step = Math.abs((targetSumRef.current - currentSum) / 20); // Шаг изменения
-      const direction = targetSumRef.current > currentSum ? 1 : -1; // Направление изменения (увеличение или уменьшение)
+      let currentSum = displayedSum;
+      const step = Math.abs((targetSumRef.current - currentSum) / 20);
+      const direction = targetSumRef.current > currentSum ? 1 : -1;
 
       interval = setInterval(() => {
         currentSum += step * direction;
 
-        // Если текущая сумма достигла или превысила целевую, останавливаем анимацию
         if (
           (direction === 1 && currentSum >= targetSumRef.current) ||
           (direction === -1 && currentSum <= targetSumRef.current)
         ) {
           clearInterval(interval!);
-          setDisplayedSum(targetSumRef.current); // Устанавливаем точное значение
+          setDisplayedSum(targetSumRef.current);
         } else {
-          setDisplayedSum(currentSum); // Обновляем отображаемую сумму
+          setDisplayedSum(currentSum);
         }
-      }, 30); // Интервал обновления (в миллисекундах)
+      }, 30);
     };
 
     animateSum();
@@ -47,7 +45,7 @@ export const Calculate_cost = () => {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [totalCost]); // Запускаем анимацию при изменении totalCost
+  }, [totalCost]);
 
   return (
     <Container>
@@ -67,14 +65,14 @@ export const Calculate_cost = () => {
           color="#555555"
           strokeWidth={1.5}
         />
-        <h2 className="mb-10">
+        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
           Рассчитать <span className="customHeadDecor">стоимость</span>
-        </h2>
+        </Title>
         <Range_slider onMonthsChange={setSelectedMonths} className="mb-10" />
         <Radio_group setTotalSum={setBaseSum} className="mb-16" />
-        <h3 className="mb-3">
+        <Title fontSize="lg" headingType="md" className="mb-3">
           <span className="customHeadDecor">Итоговая</span> стоимость:
-        </h3>
+        </Title>
         <strong className="text-lg">
           <span className="text-white text-2xl">{displayedSum.toFixed(2)}</span>{" "}
           ₽ за <span className="customHeadDecor text-xl">{selectedMonths}</span>{" "}

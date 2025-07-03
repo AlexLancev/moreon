@@ -9,7 +9,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <main className="main">
+      <main className="block flex-auto">
         <Outlet />
         <Feedback_modal />
       </main>

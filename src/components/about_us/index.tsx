@@ -9,7 +9,7 @@ export const About_us = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title fontSize={size}>
+        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
           Почему стоит <span className="customHeadDecor">выбрать нас</span>
         </Title>
         <About_us_list />

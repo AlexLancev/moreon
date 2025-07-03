@@ -1,6 +1,10 @@
 import { App_store, Container, Title } from "@/components";
+import { sizeTitleData } from "@/constans";
+import { useGetResponsiveValue } from "@/utils";
 
 export const Our_application = () => {
+  const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
+
   return (
     <Container>
       <section className="relative my-12 pt-24 pb-60 bg-[url('/images/application/salefon.png')] bg-auto bg-no-repeat">
@@ -16,7 +20,7 @@ export const Our_application = () => {
           />
         </picture>
         <div className="w-full max-w-[525px] ml-auto pt-32">
-          <Title className="mb-3">
+          <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
             Приложение <span className="customHeadDecor">Moreon Fitness</span>
           </Title>
           <p className="mb-4">

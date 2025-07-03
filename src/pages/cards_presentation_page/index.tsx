@@ -48,7 +48,7 @@ const Cards_presentation_page = observer(() => {
           />
         </picture>
         <div
-          className="mb-5 card_page max-w-[750px]"
+          className="mb-5 customInsertCardPageHTML max-w-[750px]"
           dangerouslySetInnerHTML={{ __html: sanitized_hero_description }}
         ></div>
       </section>
