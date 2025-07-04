@@ -1,4 +1,4 @@
-.swiper-button-prev {
+/* .swiper-button-prev {
   left: 30px !important;
 }
 
@@ -36,14 +36,18 @@
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   content: "";
-}
+} */
 
+/* .swiper-slide {
+  box-sizing: border-box !important;
+} */
+ 
 .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
   margin: 0 8px !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
-  background-color: #ffffff60 !important;
+  background-color: rgba(255, 255, 255, 0.376) !important;
   opacity: 1;
   transition: background-color 0.3s;
 
@@ -72,18 +76,6 @@
   }
 }
 
-.swiper-slide {
-  box-sizing: border-box !important;
-}
-
 .swiper {
   padding: 0 0 90px;
-}
-
-.team_list {
-  & .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
 }

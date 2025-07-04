@@ -8,3 +8,10 @@ export const numberVisibleElementsData: sizeRangesType[] = [
 export const numberVisibleAboutUsData: sizeRangesType[] = [
   { min: 1024, meaning: 2 },
 ];
+
+export const numberVisibleTeamData: sizeRangesType[] = [
+  { min: 1280, meaning: 4 },
+  { min: 835, max: 1280, meaning: 3 },
+  { min: 475, max: 835, meaning: 2 },
+  { min: 375, meaning: 1.15 },
+];

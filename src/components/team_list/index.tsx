@@ -4,11 +4,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 
 import { team_store } from "@/stores/data_store";
-import { filterDataByActiveTab } from "@/utils";
+import { filterDataByActiveTab, useGetResponsiveValue } from "@/utils";
+import { numberVisibleAboutUsData } from "@/constans";
+import { numberVisibleTeamData } from "@/constans/numberVisibleElementsData";
+import { sizeRangesTeamData } from "@/constans/sizeRangesData";
 
 export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   const { data, isLoading, isError } = team_store;
-
+  const indentationSlide = useGetResponsiveValue<number>(16, sizeRangesTeamData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    1,
+    numberVisibleTeamData,
+  );
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
 
@@ -21,7 +28,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   if (!selected_category_data) return null;
 
   const renderSlide = (startIndex: number, endIndex: number) => (
-    <SwiperSlide key={startIndex} className="min-h-[348px]">
+    <SwiperSlide key={startIndex} className="min-h-[348px] flex flex-col gap-4 lg:gap-6">
       {selected_category_data
         .slice(startIndex, endIndex)
         .map(
@@ -33,7 +40,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
               <Link
                 to={`/team/${name}`}
                 key={idx}
-                className="group relative overflow-hidden rounded-3xl after:absolute after:bottom-0 after:left-0 after:z-[0] after:h-[120px] after:w-full after:bg-[url('/images/decor_serv.svg')] after:bg-cover after:bg-no-repeat after:opacity-80"
+                className="group relative overflow-hidden rounded-3xl after:absolute after:bottom-0 after:left-0 after:z-[0] after:h-[120px] xs:after:h-[90px] 3xl:after:h-[160px] md:after:h-[120px] after:w-full after:bg-[url('/images/decor_serv.svg')] after:bg-cover after:bg-no-repeat after:opacity-80"
               >
                 <>
                   <picture>
@@ -48,7 +55,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
                       loading="lazy"
                     />
                   </picture>
-                  <strong className="absolute bottom-5 left-5 z-10 text-lg text-[#d6d6d6]">
+                  <strong className="absolute bottom-5 left-5 z-10 md:text-xl 2xl:text-2xl 3xl:text-3xl  text-[#d6d6d6]">
                     {name}
                   </strong>
                 </>
@@ -69,10 +76,9 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
 
   return (
     <Swiper
-      className="team_list"
       modules={[Pagination]}
-      slidesPerView={4}
-      spaceBetween={20}
+      spaceBetween={indentationSlide}
+      slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
       {slides}

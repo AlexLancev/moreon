@@ -14,7 +14,6 @@ export const About_us_list = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const { data, isLoading, isError } = about_us_store;
   const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
-
   const quantitySlide = useGetResponsiveValue<number>(
     1,
     numberVisibleAboutUsData,

@@ -92,8 +92,7 @@ body.lock {
     color: #33b0aa;
   }
 
-  .customScrollbar {
-    padding-right: 15px;
+  .customScrollBar {
     scrollbar-width: thin;
     scrollbar-color: rgb(39, 39, 39) rgba(0, 0, 0, 0.18);
 

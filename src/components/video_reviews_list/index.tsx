@@ -5,10 +5,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 
 import { video_reviews_store } from "@/stores/data_store";
+import { useGetResponsiveValue } from "@/utils";
+import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 
 export const Video_reviews_list = observer(() => {
   const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
   const { data, isLoading, isError } = video_reviews_store;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    1,
+    numberVisibleAboutUsData,
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
@@ -20,8 +27,8 @@ export const Video_reviews_list = observer(() => {
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={4}
+      spaceBetween={indentationSlide}
+      slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
       {data.map(
