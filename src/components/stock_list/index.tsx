@@ -30,7 +30,7 @@ export const Stock_list = observer(() => {
     >
       {stock_store.data.map(
         ({ id, description, url_images: { jpg, webp } }, idx: number) => (
-          <SwiperSlide key={idx} className="rounded-3xl overflow-hidden">
+          <SwiperSlide key={idx} className="overflow-hidden rounded-3xl">
             <Link to={`/stock/${id}`}>
               <picture>
                 <source srcSet={webp} type="image/webp" />

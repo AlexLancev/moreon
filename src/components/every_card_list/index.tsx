@@ -20,7 +20,7 @@ export const Every_card_list = observer(() => {
         return (
           <li
             key={idx}
-            className="grid gap-y-5 place-items-center p-10 rounded-3xl overflow-hidden bg-[rgba(255,255,255,0.19)] duration-300 hover:bg-[rgba(255,255,255,0.12)]"
+            className="grid place-items-center gap-y-5 overflow-hidden rounded-3xl bg-[rgba(255,255,255,0.19)] p-10 duration-300 hover:bg-[rgba(255,255,255,0.12)]"
           >
             <picture>
               <source srcSet={images_url?.webp} type="image/webp" />

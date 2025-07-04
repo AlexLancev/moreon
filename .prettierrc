@@ -8,5 +8,6 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "arrowParens": "always",
-  "endOfLine": "crlf"
+  "endOfLine": "crlf",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

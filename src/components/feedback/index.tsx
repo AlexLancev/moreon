@@ -29,7 +29,7 @@ export const Feedback = ({ className }: Feedback_props_type) => {
           <li key={idx}>
             <a
               href={contacts_data[contact]?.path}
-              className="flex items-center leading-normal group gap-x-4 lg:gap-x-2 md:gap-x-2 3xl:text-2xl 2xl:text-xl xl:text-base transition duration-300 hover:text-[rgb(255,255,255)]"
+              className="group flex items-center gap-x-4 leading-normal transition duration-300 hover:text-[rgb(255,255,255)] md:gap-x-2 lg:gap-x-2 xl:text-base 2xl:text-xl 3xl:text-2xl"
               target="_blank"
               title={contacts_data[contact]?.label}
               rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export const Feedback = ({ className }: Feedback_props_type) => {
                   type="image/svg+xml"
                 />
                 <img
-                  className="w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] opacity-80 group-hover:opacity-100 duration-300"
+                  className="w-[17px] opacity-80 duration-300 group-hover:opacity-100 xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]"
                   src={contacts_data[contact]?.images_url?.png}
                   alt=""
                   loading="lazy"

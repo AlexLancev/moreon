@@ -3,15 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { Coins, Wallet } from "lucide-react";
 
 import { Container, Radio_group, Range_slider, Title } from "@/components";
-import { useGetResponsiveValue } from "@/utils";
-import { sizeTitleData } from "@/constans";
 
 export const Calculate_cost = () => {
   const [baseSum, setBaseSum] = useState<number>(0);
   const [selectedMonths, setSelectedMonths] = useState<number>(3);
   const [displayedSum, setDisplayedSum] = useState<number>(0);
   const targetSumRef = useRef<number>(0);
-  const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
 
   const totalCost = baseSum * selectedMonths;
 
@@ -51,30 +48,30 @@ export const Calculate_cost = () => {
     <Container>
       <section
         id="price-calc"
-        className="relative py-12 px-16 rounded-3xl overflow-hidden before:absolute before:top-0 before:left-0 before:bg-[#33b0aa] before:w-full before:h-full before:opacity-10 before:clip-[polygon(0_0,_100%_0,_100%_100%,_0_25%)] before:[-webkit-clip-path:polygon(0_0,_100%_0,_100%_100%,_0_25%)] before:pointer-events-none before:z-10"
+        className="before:clip-[polygon(0_0,_100%_0,_100%_100%,_0_25%)] relative overflow-hidden rounded-3xl px-16 py-12 before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-[#33b0aa] before:opacity-10 before:[-webkit-clip-path:polygon(0_0,_100%_0,_100%_100%,_0_25%)]"
       >
         <Wallet
-          className="absolute bottom-[1rem] right-[40rem] opacity-5 rotate-45 -z-10"
+          className="absolute bottom-[1rem] right-[40rem] -z-10 rotate-45 opacity-5"
           size={348}
           color="#555555"
           strokeWidth={1.5}
         />
         <Coins
-          className="absolute top-[10rem] left-[16rem] opacity-5 -z-10"
+          className="absolute left-[16rem] top-[10rem] -z-10 opacity-5"
           size={348}
           color="#555555"
           strokeWidth={1.5}
         />
-        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
+        <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
           Рассчитать <span className="customHeadDecor">стоимость</span>
         </Title>
         <Range_slider onMonthsChange={setSelectedMonths} className="mb-10" />
         <Radio_group setTotalSum={setBaseSum} className="mb-16" />
-        <Title fontSize="lg" headingType="md" className="mb-3">
+        <Title headingType="md" className="mb-3 text-xl">
           <span className="customHeadDecor">Итоговая</span> стоимость:
         </Title>
         <strong className="text-lg">
-          <span className="text-white text-2xl">{displayedSum.toFixed(2)}</span>{" "}
+          <span className="text-2xl text-white">{displayedSum.toFixed(2)}</span>{" "}
           ₽ за <span className="customHeadDecor text-xl">{selectedMonths}</span>{" "}
           {selectedMonths > 1 && selectedMonths < 5
             ? "месяца"

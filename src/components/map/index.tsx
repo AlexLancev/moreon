@@ -30,7 +30,7 @@ export const Map_moreon = () => {
   };
 
   return (
-    <div className="bg-['url(/images/bg-map.png)'] bg-[center_center] bg-cover bg-no-repeat w-full max-w-[700px] h-[400px] rounded-3xl overflow-hidden">
+    <div className="h-[400px] w-full max-w-[700px] overflow-hidden rounded-3xl bg-['url(/images/bg-map.png)'] bg-cover bg-[center_center] bg-no-repeat">
       <YMaps
         query={{
           apikey: KEY_MAP,

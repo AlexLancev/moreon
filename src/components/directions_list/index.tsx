@@ -34,25 +34,25 @@ export const Directions_list = observer(
           return (
             <li
               key={idx}
-              className="min-h-[350px] overflow-hidden rounded-3xl group"
+              className="group min-h-[350px] overflow-hidden rounded-3xl"
             >
               <Link
                 to={`/services/${path}`}
-                className="relative after:absolute after:bottom-0 after:left-0 after:z-0 after:w-full after:h-[140px] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
+                className="relative after:absolute after:bottom-0 after:left-0 after:z-0 after:h-[140px] after:w-full after:bg-[url('/images/decor_serv.svg')] after:bg-cover after:bg-no-repeat after:opacity-80"
               >
                 <picture>
                   <source srcSet={images_url?.webp} type="image/webp" />
                   <img
                     width={340}
                     height={350}
-                    className="overflow-hidden rounded-3xl object-cover h-full w-full duration-700 group-hover:scale-[1.1]"
+                    className="h-full w-full overflow-hidden rounded-3xl object-cover duration-700 group-hover:scale-[1.1]"
                     src={images_url?.jpg}
                     alt={description}
                     aria-label={description}
                     loading="lazy"
                   />
                 </picture>
-                <strong className="absolute z-10 bottom-5 left-5 text-[#d6d6d6] text-lg">
+                <strong className="absolute bottom-5 left-5 z-10 text-lg text-[#d6d6d6]">
                   {direction}
                 </strong>
               </Link>

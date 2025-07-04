@@ -59,7 +59,7 @@ export const Fitness_area = observer(
             <picture>
               <source srcSet={images_url?.jpg} type="image/webp" />
               <img
-                className="rounded-3xl overflow-hidden h-[299px] object-cover"
+                className="h-[299px] overflow-hidden rounded-3xl object-cover"
                 width={525}
                 src={images_url?.jpg}
                 alt={description_images}
@@ -68,7 +68,7 @@ export const Fitness_area = observer(
               />
             </picture>
             <div className="w-full max-w-[525px]">
-              <Title size="md" className="mb-3 customHeadDecor">
+              <Title size="md" className="customHeadDecor mb-3">
                 {head}
               </Title>
               <p className="mb-7 text-lg">{description}</p>

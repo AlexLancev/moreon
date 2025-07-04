@@ -28,14 +28,14 @@ const Stock_presentation_page = observer(() => {
 
   return (
     <Container>
-      <section className="relative py-20 px-10 before:absolute before:right-28 before:bottom-28 before:z-10 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
+      <section className="relative px-10 py-20 before:absolute before:bottom-28 before:right-28 before:z-10 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
         <picture>
           <source
             srcSet="/images/stock_presentation/trenerroom.webp"
             type="image/webp"
           />
           <img
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 h-full w-full"
             src="/images/stock_presentation/trenerroom.jpg"
             alt=""
             loading="lazy"
@@ -46,7 +46,7 @@ const Stock_presentation_page = observer(() => {
           <picture>
             <source srcSet={url_images?.webp} type="image/webp" />
             <img
-              className="rounded-3xl overflow-hidden"
+              className="overflow-hidden rounded-3xl"
               src={url_images?.jpg}
               alt={description_picture}
               loading="lazy"
@@ -58,14 +58,14 @@ const Stock_presentation_page = observer(() => {
           ></div>
         </div>
       </section>
-      <section className="relative py-20 px-10">
+      <section className="relative px-10 py-20">
         <picture>
           <source
             srcSet="/images/stock_presentation/salefon.webp"
             type="image/webp"
           />
           <img
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 h-full w-full"
             src="/images/stock_presentation/salefon.png"
             alt=""
             loading="lazy"

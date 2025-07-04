@@ -1,9 +1,15 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 import animate from "tailwindcss-animate";
 
 module.exports = {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      xs: "425px",
+      ...defaultTheme.screens,
+      "3xl": { min: "1920px" },
+    },
     extend: {
       borderRadius: {
         lg: "var(--radius)",
@@ -69,9 +75,6 @@ module.exports = {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
-      },
-      screens: {
-        "3xl": { min: "1921px" },
       },
     },
   },

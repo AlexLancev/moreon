@@ -36,11 +36,11 @@ export const Performance = observer(({ data_key }: Performance_type) => {
         return (
           <li
             key={idx}
-            className="relative flex justify-center gap-10 py-10 px-0 bg-no-repeat bg-[90%_0] after:content-[attr(data-decor)] after:font-familyGroticTitulOtlHv after:absolute after:right-10 after:-top-10 after:text-[rgba(23,101,97,0.1)] after:text-8xl odd:flex-row-reverse odd:after:left-10"
+            className="relative flex justify-center gap-10 bg-[90%_0] bg-no-repeat px-0 py-10 after:absolute after:-top-10 after:right-10 after:font-familyGroticTitulOtlHv after:text-8xl after:text-[rgba(23,101,97,0.1)] after:content-[attr(data-decor)] odd:flex-row-reverse odd:after:left-10"
             data-decor={title}
           >
             <Swiper
-              className="w-full max-w-[525px] mx-0"
+              className="mx-0 w-full max-w-[525px]"
               modules={[Pagination]}
               spaceBetween={10}
               slidesPerView={1}
@@ -49,7 +49,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
               {arr_images?.map(
                 ({ images_description, images_url: { jpg } }, idx: number) => (
                   <SwiperSlide
-                    className="rounded-3xl overflow-hidden"
+                    className="overflow-hidden rounded-3xl"
                     key={idx}
                   >
                     <picture>
@@ -69,10 +69,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
               )}
             </Swiper>
             <div className="w-full max-w-[525px] pt-8">
-              <Title
-                size="md"
-                className="uppercase customHeadDecor text-2xl font-bold mb-3"
-              >
+              <Title className="customHeadDecor mb-2 text-xl font-bold uppercase md:mb-6">
                 {title}
               </Title>
               <p className="text-lg">{description}</p>

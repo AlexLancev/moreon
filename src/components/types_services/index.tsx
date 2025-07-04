@@ -47,26 +47,26 @@ export const Types_services = observer(() => {
         {data.map(({ head, description, path }, idx: number) => (
           <SwiperSlide
             key={head ?? idx}
-            className="relative p-4 3xl:p-10 h-auto bg-[#031817] flex flex-col items-start overflow-hidden rounded-3xl text-sm before:w-full before:h-[120px] 2xl:before:h-[140px] 3xl:before:h-[160px] before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-[url('/images/decor_serv.svg')] before:bg-no-repeat before:bg-cover before:rotate-180"
+            className="relative flex h-auto flex-col items-start overflow-hidden rounded-3xl bg-[#031817] p-4 text-sm before:absolute before:left-0 before:top-0 before:z-[-1] before:h-[120px] before:w-full before:rotate-180 before:bg-[url('/images/decor_serv.svg')] before:bg-cover before:bg-no-repeat 2xl:before:h-[140px] 3xl:p-10 3xl:before:h-[160px]"
           >
             <Title
               fontSize="md"
               headingType="md"
-              className="uppercase mb-7 text-lg 2xl:text-2xl 3xl:text-3xl"
+              className="mb-7 text-lg uppercase 2xl:text-2xl 3xl:text-3xl"
             >
               {head}
             </Title>
-            <p className="mb-5 2xl:mb-7 3xl:mb-10 flex-auto text-lg lg:text-xl 2xl:text-2xl 3xl:text-3xl 3xl:leading-normal">
+            <p className="mb-5 flex-auto text-lg lg:text-xl 2xl:mb-7 2xl:text-2xl 3xl:mb-10 3xl:text-3xl 3xl:leading-normal">
               {description}
             </p>
             <Link
               to={`/services/${path}`}
-              className="duration-300 hover:text-white text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl"
+              className="text-lg duration-300 hover:text-white md:text-xl 2xl:text-2xl 3xl:text-3xl"
             >
               Узнать подробнее
             </Link>
             {render_icons(path) && (
-              <div className="absolute bottom-3 right-0 -z-10 opacity-5 *:text-[#00a887] *:w-[200px] *:h-auto">
+              <div className="absolute bottom-3 right-0 -z-10 opacity-5 *:h-auto *:w-[200px] *:text-[#00a887]">
                 {render_icons(path)}
               </div>
             )}

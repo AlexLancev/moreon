@@ -21,7 +21,7 @@ export const Contacts = () => {
   return (
     <section className="py-12">
       <Container>
-        <div className="flex justify-evenly items-center gap-x-5">
+        <div className="flex items-center justify-evenly gap-x-5">
           <ul>
             {current_contacts.map((contact, idx: number) => (
               <li className="mb-3 text-xl" key={idx}>

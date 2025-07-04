@@ -31,7 +31,7 @@ export const Gallery_list = observer(() => {
         {data
           .slice(0, visibleShow)
           .map(({ description, images_url: { jpg } }, idx: number) => (
-            <li key={idx} className="h-full rounded-3xl overflow-hidden">
+            <li key={idx} className="h-full overflow-hidden rounded-3xl">
               <button type="button" className="block h-full">
                 <span className="visually-hidden">{description}</span>
                 <picture>
@@ -48,7 +48,7 @@ export const Gallery_list = observer(() => {
           ))}
       </ul>
       {data.length > visibleShow && (
-        <Button onClick={handleVisibleShow} className="flex m-auto mt-5">
+        <Button onClick={handleVisibleShow} className="m-auto mt-5 flex">
           Показать ещё <Eye />
         </Button>
       )}

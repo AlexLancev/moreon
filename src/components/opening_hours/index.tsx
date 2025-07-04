@@ -1,7 +1,7 @@
 export const Opening_hours = () => {
   return (
     <div>
-      <strong className="block mb-4 xl:text-xl 2xl:text-2xl 3xl:text-3xl">
+      <strong className="mb-4 block xl:text-xl 2xl:text-2xl 3xl:text-3xl">
         Время работы:
       </strong>
       <ul className="mb-3 *:xl:text-xl *:2xl:text-2xl *:3xl:text-3xl">

@@ -28,10 +28,10 @@ export const Reviews_list = observer(() => {
         return (
           <SwiperSlide
             key={idx}
-            className="bg-[rgba(255,255,255,0.19)] p-8 rounded-3xl"
+            className="rounded-3xl bg-[rgba(255,255,255,0.19)] p-8"
           >
-            <strong className="flex text-xl mb-2 text-white">{person}</strong>
-            <p className="text-lg overflow-y-auto customScrollbar">{review}</p>
+            <strong className="mb-2 flex text-xl text-white">{person}</strong>
+            <p className="customScrollbar overflow-y-auto text-lg">{review}</p>
           </SwiperSlide>
         );
       })}

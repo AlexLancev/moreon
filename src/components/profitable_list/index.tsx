@@ -20,19 +20,19 @@ export const Profitable_list = observer(() => {
         return (
           <li
             key={idx}
-            className="group flex flex-col py-5 px-10 bg-[url('/images/profitable_visits/profit_decor.svg')] bg-[100%_auto] bg-no-repeat bg-left-bottom rounded-3xl overflow-hidden"
+            className="group flex flex-col overflow-hidden rounded-3xl bg-[url('/images/profitable_visits/profit_decor.svg')] bg-[100%_auto] bg-left-bottom bg-no-repeat px-10 py-5"
           >
             <picture>
               <source srcSet={images_url?.webp} type="image/webp" />
               <img
-                className="block m-auto mb-5 opacity-70 group-hover:opacity-100 duration-300"
+                className="m-auto mb-5 block opacity-70 duration-300 group-hover:opacity-100"
                 src={images_url?.png}
                 alt=""
                 loading="lazy"
                 aria-hidden
               />
             </picture>
-            <strong className="flex-1 text-center text-2xl mb-3">{head}</strong>
+            <strong className="mb-3 flex-1 text-center text-2xl">{head}</strong>
             <ul className="list-disc pb-2">
               {profitable_visits_list.map((profit, idx: number) => (
                 <li key={idx} className="[&:not(:last-child)]:mb-2">

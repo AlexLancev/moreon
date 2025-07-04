@@ -33,14 +33,14 @@ const Cards_presentation_page = observer(() => {
 
   return (
     <Container>
-      <section className="relative py-12 px-10">
+      <section className="relative px-10 py-12">
         <picture>
           <source
             srcSet="/images/cards_presentation/classik.webp"
             type="image/webp"
           />
           <img
-            className="absolute inset-0 -z-10 w-full h-full bg-no-repeat bg-cover"
+            className="absolute inset-0 -z-10 h-full w-full bg-cover bg-no-repeat"
             src="/images/cards_presentation/classik.jpg"
             alt=""
             loading="lazy"
@@ -48,7 +48,7 @@ const Cards_presentation_page = observer(() => {
           />
         </picture>
         <div
-          className="mb-5 customInsertCardPageHTML max-w-[750px]"
+          className="customInsertCardPageHTML mb-5 max-w-[750px]"
           dangerouslySetInnerHTML={{ __html: sanitized_hero_description }}
         ></div>
       </section>

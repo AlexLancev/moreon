@@ -50,18 +50,18 @@ const Kids_fitness_page = observer(() => {
   return (
     <>
       <Container>
-        <section className="relative min-h-[400px] py-20 px-10 after:absolute after:inset-0 after:bg-black/80 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
+        <section className="relative min-h-[400px] px-10 py-20 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] after:absolute after:inset-0 after:bg-black/80">
           <picture>
             <source srcSet={webp} type="image/webp" />
             <img
-              className="absolute inset-0 w-full h-full object-cover -z-10"
+              className="absolute inset-0 -z-10 h-full w-full object-cover"
               src={jpg}
               alt=""
               loading="lazy"
               aria-hidden
             />
           </picture>
-          <div className="relative w-full max-w-[525px] z-10">
+          <div className="relative z-10 w-full max-w-[525px]">
             <div
               className="customInsertHTML"
               dangerouslySetInnerHTML={{ __html: description }}

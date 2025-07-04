@@ -45,8 +45,8 @@ export const Range_slider = ({
   const [idx] = sliderValue;
   return (
     <div className={classNames("", className)}>
-      <strong className="text-xl block mb-5">Количество месяцев</strong>
-      <div className="flex items-center gap-x-5 max-w-[600px]">
+      <strong className="mb-5 block text-xl">Количество месяцев</strong>
+      <div className="flex max-w-[600px] items-center gap-x-5">
         <Input
           className="max-w-[50px] text-center"
           type="text"

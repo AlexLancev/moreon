@@ -9,7 +9,61 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', '@typescript-eslint', 'import'],
+  plugins: ['react-refresh', '@typescript-eslint', 'import', , 'unused-imports'],
+   sortUtilities: (utilities) => {
+    const order = [
+      'position',
+      'z-index',
+      'top',
+      'right',
+      'bottom',
+      'left',
+
+      'display',
+      'flex',
+      'grid',
+      'align-items',
+      'justify-content',
+      'margin',
+      'padding',
+      'border',
+      'rounded',
+      'width',
+      'height',
+      'min-width',
+      'min-height',
+      'max-width',
+      'max-height',
+      'box-sizing',
+
+      'font',
+      'text',
+      'line-height',
+      'letter-spacing',
+      'text-align',
+      'text-decoration',
+      'color',
+
+      'background',
+      'opacity',
+      'shadow',
+
+      'transform',
+      'transition',
+      'animation',
+    ];
+
+    return utilities.sort((a, b) => {
+      const aIndex = order.indexOf(a.split('-')[0]);
+      const bIndex = order.indexOf(b.split('-')[0]);
+
+      if (aIndex === -1 && bIndex === -1) return 0;
+      if (aIndex === -1) return 1;
+      if (bIndex === -1) return -1;
+
+      return aIndex - bIndex;
+    });
+  },
   rules: {
 
      'import/order': [
@@ -54,6 +108,17 @@ module.exports = {
       {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
         'newlines-between': 'always-and-inside-groups',
+      },
+    ],
+        // Правила для удаления неиспользуемых импортов
+    'unused-imports/no-unused-imports': 'warn', // Предупреждение (желтый)
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
       },
     ],
     'import/newline-after-import': ['warn', { count: 1 }],

@@ -9,11 +9,11 @@ export const Team_hero = () => {
 
   return (
     <Container>
-      <section className="relative py-20 px-10 after:absolute after:inset-0 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
+      <section className="relative px-10 py-20 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] after:absolute after:inset-0">
         <picture>
           <source srcSet="/images/team_hero/hero.webp" type="image/webp" />
           <img
-            className="absolute inset-0 -z-10 object-cover w-full h-full opacity-10"
+            className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
             src="/images/team_hero/hero.jpeg"
             alt=""
             loading="lazy"

@@ -53,9 +53,9 @@ export const Childrens_swimming_tabs = observer(
         />
         <div className="flex items-center justify-between gap-x-12 py-3">
           <div className="w-full max-w-[725px]">
-            <strong className="block mb-5">{head}</strong>
+            <strong className="mb-5 block">{head}</strong>
             <div
-              className="mb-5 ab"
+              className="ab mb-5"
               dangerouslySetInnerHTML={{ __html: sanitized_description }}
             ></div>
             <Button asChild>
@@ -69,7 +69,7 @@ export const Childrens_swimming_tabs = observer(
             <img
               width={525}
               height={350}
-              className="object-cover rounded-3xl overflow-hidden"
+              className="overflow-hidden rounded-3xl object-cover"
               src={images_url?.jpg}
               alt={image_description}
               aria-label={image_description}

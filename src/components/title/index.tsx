@@ -2,19 +2,28 @@ import { createElement, type ReactNode } from "react";
 
 import classNames from "classnames";
 
+import { useGetResponsiveValue } from "@/utils";
+import { sizeTitleData } from "@/constans";
+
 type Title_props_type = {
-  fontSize?: TitleSize;
   headingType?: TitleSize;
   className?: string;
   children: ReactNode;
+  defaultValue?: TitleSize;
+  typeObj?: sizeRangesType[];
 };
 
 export const Title = ({
   children,
-  fontSize = "lg",
-  headingType = "lg",
   className,
+  headingType = "lg",
+  defaultValue = "md",
 }: Title_props_type) => {
+  const fontSize = useGetResponsiveValue<TitleSize>(
+    defaultValue,
+    sizeTitleData,
+  );
+
   const mapTagBySize = {
     xs: "h5",
     sm: "h4",
@@ -36,8 +45,8 @@ export const Title = ({
     {
       className: classNames(
         "text-white leading-[1.4] font-familyDelaGothicOne",
+        mapClassNameBySize?.[fontSize],
         className,
-        mapClassNameBySize[fontSize],
       ),
     },
     children,

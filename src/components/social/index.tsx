@@ -32,7 +32,7 @@ export const Social = ({ className }: Social_props_type) => {
   return (
     <ul
       className={classNames(
-        "flex items-center gap-x-7 3xl:gap-x-8 2xl:gap-x-8",
+        "flex items-center gap-x-7 2xl:gap-x-8 3xl:gap-x-8",
         className,
       )}
     >
@@ -54,7 +54,7 @@ export const Social = ({ className }: Social_props_type) => {
                 <source srcSet={url_svg_icon} type="image/svg+xml" />
                 <source srcSet={url_webp_icon} type="image/webp" />
                 <img
-                  className="w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px]"
+                  className="w-[17px] xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]"
                   src={url_png_icon}
                   alt={label}
                   loading="lazy"

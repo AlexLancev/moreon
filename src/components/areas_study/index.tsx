@@ -10,7 +10,7 @@ export const Areas_study = ({ keys_list }: Directions_keys_type) => {
   return (
     <Container>
       <section className="py-12">
-        <div className="w-full max-w-[1080px] m-auto">
+        <div className="m-auto w-full max-w-[1080px]">
           <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
             Направления <span className="customHeadDecor">занятий</span>
           </Title>

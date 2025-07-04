@@ -9,14 +9,14 @@ export const Services_hero = () => {
 
   return (
     <Container>
-      <section className="px-20 pt-12 pb-24 relative">
+      <section className="relative px-20 pb-24 pt-12">
         <picture>
           <source
             srcSet="/images/services_hero/service_bg.webp"
             type="image/webp"
           />
           <img
-            className="absolute inset-0 -z-10 w-full h-full object-cover"
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
             src="/images/services_hero/service_bg.png"
             alt=""
             loading="lazy"

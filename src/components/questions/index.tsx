@@ -30,7 +30,7 @@ export const Questions = observer(() => {
             <button
               key={idx}
               className={classNames(
-                "bg-tabs-gradient-custom hover:bg-tabs-hover-gradient-custom relative w-full py-4 px-6 pr-12 rounded-2xl text-left before:absolute before:top-6 before:right-6 before:duration-150 before:w-4 before:h-2.5 before:bg-no-repeat before:bg-[url('/images/list__blue.webp')]",
+                "relative w-full rounded-2xl bg-tabs-gradient-custom px-6 py-4 pr-12 text-left before:absolute before:right-6 before:top-6 before:h-2.5 before:w-4 before:bg-[url('/images/list__blue.webp')] before:bg-no-repeat before:duration-150 hover:bg-tabs-hover-gradient-custom",
                 {
                   "before:rotate-180": visibleIndex === idx,
                 },
@@ -43,10 +43,10 @@ export const Questions = observer(() => {
               </Title>
               <div
                 className={classNames(
-                  "customInsertHTML duration-300 transition-opacity overflow-hidden",
+                  "customInsertHTML overflow-hidden transition-opacity duration-300",
                   {
-                    ["pt-4 h-auto"]: visibleIndex === idx,
-                    ["invisible p-0 opacity-0 h-0"]: visibleIndex !== idx,
+                    ["h-auto pt-4"]: visibleIndex === idx,
+                    ["invisible h-0 p-0 opacity-0"]: visibleIndex !== idx,
                   },
                 )}
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}

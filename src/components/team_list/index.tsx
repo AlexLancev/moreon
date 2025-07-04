@@ -33,13 +33,13 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
               <Link
                 to={`/team/${name}`}
                 key={idx}
-                className="relative group overflow-hidden rounded-3xl after:w-full after:h-[120px] after:absolute after:bottom-0 after:left-0 after:z-[0] after:bg-[url('/images/decor_serv.svg')] after:bg-no-repeat after:bg-cover after:opacity-80"
+                className="group relative overflow-hidden rounded-3xl after:absolute after:bottom-0 after:left-0 after:z-[0] after:h-[120px] after:w-full after:bg-[url('/images/decor_serv.svg')] after:bg-cover after:bg-no-repeat after:opacity-80"
               >
                 <>
                   <picture>
                     <source srcSet={webp} type="image/webp" />
                     <img
-                      className="w-full h-full object-cover duration-700 group-hover:scale-[1.1]"
+                      className="h-full w-full object-cover duration-700 group-hover:scale-[1.1]"
                       width={300}
                       src={jpg}
                       alt={`На фото ${qualification}, ${name}`}
@@ -48,7 +48,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
                       loading="lazy"
                     />
                   </picture>
-                  <strong className="absolute z-10 bottom-5 left-5 text-[#d6d6d6] text-lg">
+                  <strong className="absolute bottom-5 left-5 z-10 text-lg text-[#d6d6d6]">
                     {name}
                   </strong>
                 </>

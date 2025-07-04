@@ -1,15 +1,10 @@
 import { Container, Title, Types_services } from "components";
 
-import { sizeTitleData } from "@/constans";
-import { useGetResponsiveValue } from "@/utils";
-
 export const Dream_body = () => {
-  const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
-
   return (
     <section className="py-12">
       <Container>
-        <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
+        <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
           Создай тело мечты вместе
           <span className="customHeadDecor"> с Moreon Fitness</span>
         </Title>

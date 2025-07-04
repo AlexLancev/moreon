@@ -14,8 +14,9 @@ export const About_us_list = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const { data, isLoading, isError } = about_us_store;
   const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+
   const quantitySlide = useGetResponsiveValue<number>(
-    2,
+    1,
     numberVisibleAboutUsData,
   );
 
@@ -27,7 +28,7 @@ export const About_us_list = observer(() => {
   if (isError) return <div>Error: Failed to fetch data</div>;
 
   const renderSlide = (startIndex: number, endIndex: number) => (
-    <SwiperSlide key={startIndex} className="flex flex-col gap-5">
+    <SwiperSlide key={startIndex} className="flex flex-col gap-3 lg:gap-5">
       {data
         .slice(startIndex, endIndex)
         .map(({ title, description }, idx: number) => {
@@ -35,12 +36,7 @@ export const About_us_list = observer(() => {
           return (
             <button
               key={title ?? idx}
-              className={classNames(
-                "bg-tabs-gradient-custom hover:bg-tabs-hover-gradient-custom relative w-full py-4 px-6 pr-12 rounded-2xl text-left before:absolute before:top-6 before:right-6 before:duration-150 before:w-4 before:h-2.5 before:bg-no-repeat before:bg-[url('/images/list__blue.webp')]",
-                {
-                  "before:rotate-180": visibleIndex === currentIndex,
-                },
-              )}
+              className="w-full rounded-2xl bg-tabs-gradient-custom p-3 pr-10 text-left hover:bg-tabs-hover-gradient-custom xl:p-4 xl:pr-12 2xl:p-6 2xl:pr-14"
               type="button"
               onClick={() =>
                 setVisibleIndex(
@@ -48,13 +44,25 @@ export const About_us_list = observer(() => {
                 )
               }
             >
-              <Title className="text-base">{title}</Title>
+              <Title
+                className={classNames(
+                  "relative text-sm before:absolute before:-right-5 before:top-1/2 before:h-2.5 before:w-4 before:-translate-y-1/2 before:bg-[url('/images/list__blue.webp')] before:bg-[center_center] before:bg-no-repeat before:duration-150 xs:text-base xl:text-lg xl:before:-right-4 2xl:text-xl 2xl:before:h-6 2xl:before:w-8 2xl:before:bg-[auto_16px] 3xl:text-2xl",
+                  {
+                    "before:rotate-180": visibleIndex === currentIndex,
+                  },
+                )}
+              >
+                {title}
+              </Title>
               <p
-                className={classNames("duration-300 transition-opacity", {
-                  ["pt-4 h-auto"]: visibleIndex === currentIndex,
-                  ["invisible p-0 opacity-0 h-0"]:
-                    visibleIndex !== currentIndex,
-                })}
+                className={classNames(
+                  "transition-opacity duration-300 2xl:text-xl 3xl:text-2xl",
+                  {
+                    ["h-auto pt-4"]: visibleIndex === currentIndex,
+                    ["invisible h-0 p-0 opacity-0"]:
+                      visibleIndex !== currentIndex,
+                  },
+                )}
               >
                 {description}
               </p>

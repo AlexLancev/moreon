@@ -202,7 +202,7 @@ export const Radio_group = ({
 
         return (
           <li key={idx} className="mb-5 last:mb-0">
-            <strong className="block mb-3 text-xl">{title}</strong>
+            <strong className="mb-3 block text-xl">{title}</strong>
             <ul>
               <RadioGroup
                 defaultValue={options[0]?.label}
@@ -228,7 +228,7 @@ export const Radio_group = ({
                           className="peer data-[state=checked]:cursor-default"
                         />
                         <Label
-                          className="text-lg peer-hover:text-white duration-300 peer-data-[state=checked]:text-white peer-data-[state=checked]:cursor-default"
+                          className="text-lg duration-300 peer-hover:text-white peer-data-[state=checked]:cursor-default peer-data-[state=checked]:text-white"
                           htmlFor={`${title}-${label}`}
                         >
                           {label}
@@ -244,7 +244,7 @@ export const Radio_group = ({
                               </button>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p className="bg-[#eaeaea] max-w-[280px] text-[#505050] text-xs px-2 py-1 rounded-md">
+                              <p className="max-w-[280px] rounded-md bg-[#eaeaea] px-2 py-1 text-xs text-[#505050]">
                                 {answer_question}
                               </p>
                             </TooltipContent>

@@ -41,7 +41,7 @@ export const News_list = observer(() => {
               <picture>
                 <source srcSet={webp} type="image/webp" />
                 <img
-                  className="block w-full mb-3 rounded-3xl overflow-hidden"
+                  className="mb-3 block w-full overflow-hidden rounded-3xl"
                   width={370}
                   src={jpg}
                   alt={description_picture}
@@ -50,9 +50,8 @@ export const News_list = observer(() => {
                 />
               </picture>
               <Title
-                fontSize="md"
                 headingType="md"
-                className="opacity-70 px-1 text-center"
+                className="mb-4 px-1 text-center text-lg opacity-70 md:mb-6 lg:mb-8 2xl:mb-12"
               >
                 {description}
               </Title>

@@ -85,7 +85,7 @@ export const Personal_account_form = () => {
 
         <Button
           type="submit"
-          className="w-full customGreyBtn"
+          className="customGreyBtn w-full"
           disabled={isSubmitting}
         >
           Сохранить изменения

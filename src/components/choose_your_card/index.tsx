@@ -73,9 +73,9 @@ export const Choose_your_card = observer(
               />
             </picture>
             <div className="w-full max-w-[525px]">
-              <strong className="block mb-3 text-2xl text-white">{head}</strong>
+              <strong className="mb-3 block text-2xl text-white">{head}</strong>
               <div
-                className="mb-5 text-lg ab"
+                className="ab mb-5 text-lg"
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}
               ></div>
               <Button asChild>

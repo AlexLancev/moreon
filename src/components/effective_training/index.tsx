@@ -16,7 +16,7 @@ export const Effective_training = () => {
           <span className="customHeadDecor"> эффективных тренировок</span>
         </Title>
 
-        <strong className="block mb-10 text-lg">
+        <strong className="mb-10 block text-lg">
           Многофункциональный отдых включает в себя <br /> тренировки, отдых и
           развлечения
         </strong>

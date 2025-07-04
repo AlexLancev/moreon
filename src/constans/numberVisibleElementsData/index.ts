@@ -7,5 +7,4 @@ export const numberVisibleElementsData: sizeRangesType[] = [
 
 export const numberVisibleAboutUsData: sizeRangesType[] = [
   { min: 1024, meaning: 2 },
-  { max: 768, meaning: 1 },
 ];

@@ -48,14 +48,14 @@ export const Water_zone = observer(
     return (
       <section className="py-12">
         <Container>
-          <div className="relative py-24 px-14 after:absolute after:inset-0 after:-z-10 after:bg-water-zone-gradient-custom">
+          <div className="relative px-14 py-24 after:absolute after:inset-0 after:-z-10 after:bg-water-zone-gradient-custom">
             <picture>
               <source
                 srcSet="/images/water_zone/result_zone_bg.webp"
                 type="image/webp"
               />
               <img
-                className="absolute inset-0 -z-10 w-full h-full object-cover rounded-3xl overflow-hidden"
+                className="absolute inset-0 -z-10 h-full w-full overflow-hidden rounded-3xl object-cover"
                 src="/images/water_zone/result_zone_bg.jpeg"
                 alt=""
                 loading="lazy"
@@ -70,9 +70,9 @@ export const Water_zone = observer(
               change_tabs={change_tabs}
               tab_list={tab_list}
             />
-            <div className="pt-10 flex items-center justify-between gap-x-5">
+            <div className="flex items-center justify-between gap-x-5 pt-10">
               <div className="w-full max-w-[625px]">
-                <Title size="md" className="text-3xl mb-5">
+                <Title size="md" className="mb-5 text-3xl">
                   {head}
                 </Title>
                 <p className="mb-8 text-lg">{description}</p>
@@ -83,7 +83,7 @@ export const Water_zone = observer(
               <picture>
                 <source srcSet={images_url?.jpg} type="image/webp" />
                 <img
-                  className="h-[350px] object-cover rounded-3xl overflow-hidden"
+                  className="h-[350px] overflow-hidden rounded-3xl object-cover"
                   width={525}
                   src={images_url?.jpg}
                   alt={images_description}

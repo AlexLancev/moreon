@@ -10,7 +10,7 @@ const childrens_swimming_store = new Tabs_store();
 export const Childrens_swimming = () => {
   return (
     <Container>
-      <section className="py-12 px-10 text-lg">
+      <section className="px-10 py-12 text-lg">
         <Title>
           <span className="customHeadDecor">Детское плавание</span> от 0 до 13
           лет

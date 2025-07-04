@@ -27,7 +27,7 @@ export const Render_slider = ({
             { id, description_picture, description, url_images: { jpg, webp } },
             idx: number,
           ) => (
-            <SwiperSlide key={idx} className="rounded-3xl overflow-hidden">
+            <SwiperSlide key={idx} className="overflow-hidden rounded-3xl">
               <Link to={`/${type}/${id}`}>
                 <picture>
                   <source srcSet={webp} type="image/webp" />
@@ -40,7 +40,7 @@ export const Render_slider = ({
                   />
                 </picture>
                 {description && (
-                  <strong className="text-[rgb(176,176,176)] px-1 text-center">
+                  <strong className="px-1 text-center text-[rgb(176,176,176)]">
                     {description}
                   </strong>
                 )}

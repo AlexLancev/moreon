@@ -21,7 +21,7 @@ export const Home_hero = observer(() => {
   if (isError) return <div>Error: Failed to fetch data</div>;
 
   return (
-    <section className="w-full m-auto ">
+    <section className="m-auto w-full">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
@@ -57,7 +57,7 @@ export const Home_hero = observer(() => {
               />
               <Container>
                 <div className="relative">
-                  <div className="absolute z-10 flex items-center gap-x-5 text-white -translate-y-[8rem] 2xl:-translate-y-[12rem]">
+                  <div className="absolute z-10 flex -translate-y-[8rem] items-center gap-x-5 text-white 2xl:-translate-y-[12rem]">
                     <Button asChild>
                       <Link to={`/stock/${id}`}>
                         Узнать подробнее <MessageCircleQuestion />

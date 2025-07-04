@@ -40,7 +40,7 @@ export const Menu = ({
     <nav>
       <ul
         className={classNames(
-          "flex-wrap text-[rgba(255,255,255,0.8)] text-sm gap-x-8 xl:gap-x-10 2xl:gap-x-12 3xl:gap-x-14 gap-y-5",
+          "flex-wrap gap-x-8 gap-y-5 text-sm text-[rgba(255,255,255,0.8)] xl:gap-x-10 2xl:gap-x-12 3xl:gap-x-14",
           className,
         )}
       >
@@ -57,9 +57,9 @@ export const Menu = ({
                 <Link
                   to={path}
                   className={classNames(
-                    "transition duration-300 text-[rgb(191,191,191)] hover:text-white xl:text-lg 2xl:text-xl 3xl:text-2xl",
+                    "text-[rgb(191,191,191)] transition duration-300 hover:text-white xl:text-lg 2xl:text-xl 3xl:text-2xl",
                     {
-                      "text-white cursor-default": pathname === path,
+                      "cursor-default text-white": pathname === path,
                     },
                   )}
                 >
@@ -68,10 +68,10 @@ export const Menu = ({
                 {isVisibleSubMenu && sub_menu && (
                   <ul
                     className={classNames(
-                      "absolute top-[30px] left-0 z-[99999] p-4 2xl:p-8 flex flex-col items-start gap-y-2 2xl:gap-y-4 xl:text-lg 2xl:text-xl 3xl:text-2xl w-max bg-[rgb(0,9,8)] rounded-lg transition duration-300 before:absolute before:left-28 before:top-28 before:w-[138px] before:h-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]",
+                      "absolute left-0 top-[30px] z-[99999] flex w-max flex-col items-start gap-y-2 rounded-lg bg-[rgb(0,9,8)] p-4 transition duration-300 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] xl:text-lg 2xl:gap-y-4 2xl:p-8 2xl:text-xl 3xl:text-2xl",
                       {
-                        "opacity-100 visible": activeMenu === path,
-                        "opacity-0 invisible": activeMenu !== path,
+                        "visible opacity-100": activeMenu === path,
+                        "invisible opacity-0": activeMenu !== path,
                       },
                     )}
                   >

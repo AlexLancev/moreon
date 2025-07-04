@@ -55,7 +55,7 @@ export const Personal_format_tabs = observer(
                     onChange={() => setCurrentChangeTab(key_name)}
                     checked={currentChangeTab === key}
                   />
-                  <span className="peer-checked:cursor-default peer-checked:bg-[rgba(255,255,255,4%)] peer-checked:text-white block h-full py-5 px-8 rounded-t-3xl cursor-pointer text-[rgba(255,255,255,0.7)] duration-300 transition-colors hover:text-[rgba(255,255,255,1)]">
+                  <span className="block h-full cursor-pointer rounded-t-3xl px-8 py-5 text-[rgba(255,255,255,0.7)] transition-colors duration-300 hover:text-[rgba(255,255,255,1)] peer-checked:cursor-default peer-checked:bg-[rgba(255,255,255,4%)] peer-checked:text-white">
                     {category}
                   </span>
                 </label>
@@ -63,7 +63,7 @@ export const Personal_format_tabs = observer(
             );
           })}
         </ul>
-        <div className="min-h-[260px] px-10 py-14 bg-[rgba(255,255,255,4%)] rounded-b-3xl">
+        <div className="min-h-[260px] rounded-b-3xl bg-[rgba(255,255,255,4%)] px-10 py-14">
           <Tabs
             currentChangeTab={currentChangeTab}
             isActiveTab={isActiveTab}

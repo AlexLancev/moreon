@@ -10,31 +10,31 @@ export const Header = observer(() => {
   const innerWidth = useGettingWindowWidth();
 
   return (
-    <header className="w-full m-auto">
-      <div className="flex items-center bg-[rgb(0,70,67)] min-h-10 py-4">
+    <header className="m-auto w-full">
+      <div className="flex min-h-10 items-center bg-[rgb(0,70,67)] py-4">
         <Container>
-          <div className="flex items-center gap-x-7 3xl:gap-x-12 2xl:gap-x-8 xl:gap-x-6 lg:gap-x-4 justify-end">
-            <Feedback className="items-center justify-end 3xl:gap-x-12 2xl:gap-x-8" />
+          <div className="flex items-center justify-end gap-x-7 lg:gap-x-4 xl:gap-x-6 2xl:gap-x-8 3xl:gap-x-12">
+            <Feedback className="items-center justify-end 2xl:gap-x-8 3xl:gap-x-12" />
             <Social />
             <Link
-              className="flex items-center gap-x-4 3xl:text-2xl 2xl:text-xl xl:text-base hover:text-white duration-300"
+              className="flex items-center gap-x-4 duration-300 hover:text-white xl:text-base 2xl:text-xl 3xl:text-2xl"
               to="/personal_account"
             >
               {innerWidth > 945 && <span>Личный кабинет</span>}
               {session_store && session_store.isActiveSession ? (
-                <UserCheck className="group-hover:stroke-white duration-300 w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] h-auto" />
+                <UserCheck className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
               ) : (
-                <UserLock className="group-hover:stroke-white duration-300 w-[17px] 3xl:w-[30px] 2xl:w-[24px] xl:w-[20px] h-auto" />
+                <UserLock className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
               )}
             </Link>
           </div>
         </Container>
       </div>
-      <div className="py-4 md:py-6 xl:py-8 bg-[rgb(0,9,8)]">
+      <div className="bg-[rgb(0,9,8)] py-4 md:py-6 xl:py-8">
         <Container>
           <div className="flex items-center justify-between">
             <Logo />
-            <Menu className="lg:flex hidden items-center" isVisibleSubMenu />
+            <Menu className="hidden items-center lg:flex" isVisibleSubMenu />
           </div>
         </Container>
       </div>

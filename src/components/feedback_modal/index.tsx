@@ -15,9 +15,9 @@ export const Feedback_modal = observer(() => {
 
   return (
     <Dialog open={isVisibleModal} onOpenChange={change_modal}>
-      <DialogContent className="w-full max-w-[425px] bg-[rgba(14,14,19,1)] border-[rgb(115,115,115)]">
+      <DialogContent className="w-full max-w-[425px] border-[rgb(115,115,115)] bg-[rgba(14,14,19,1)]">
         <DialogHeader>
-          <DialogTitle className="text-inherit text-center text-2xl">
+          <DialogTitle className="text-center text-2xl text-inherit">
             Оставьте свои контактные данные
           </DialogTitle>
           <DialogDescription>
