@@ -3,7 +3,7 @@ import { App_store, Container, Title } from "@/components";
 export const Our_application = () => {
   return (
     <Container>
-      <section className="relative flex lg:*:w-1/2 flex-col-reverse md:flex-row md:gap-x-5 md:items-center  lg:my-12 bg-[url('/images/application/salefon.png')] bg-auto bg-no-repeat  lg:pb-60 lg:pt-24 py-10">
+      <section className="relative flex flex-col-reverse bg-[url('/images/application/salefon.png')] bg-auto bg-no-repeat py-10 md:flex-row md:items-center md:gap-x-5 lg:my-12 lg:pb-60 lg:pt-24 lg:*:w-1/2">
         <picture className="">
           <source srcSet="/images/application/phons.webp" type="image/webp" />
           <img
@@ -15,7 +15,7 @@ export const Our_application = () => {
             aria-hidden
           />
         </picture>
-        <div className="[&>p]:mb-4 lg:[&>p]:mb-6 xs:[&>p]:text-xl md:[&>p]:text-base lg:[&>p]:text-xl w-full mb-14">
+        <div className="mb-14 w-full [&>p]:mb-4 xs:[&>p]:text-xl md:[&>p]:text-base lg:[&>p]:mb-6 lg:[&>p]:text-xl">
           <Title className="mb-4 text-2xl md:mb-6">
             Приложение <span className="customHeadDecor">Moreon Fitness</span>
           </Title>

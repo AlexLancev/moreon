@@ -11,11 +11,11 @@ import { sizeRangesTeamData } from "@/constans/sizeRangesData";
 
 export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   const { data, isLoading, isError } = team_store;
-  const indentationSlide = useGetResponsiveValue<number>(16, sizeRangesTeamData);
-  const quantitySlide = useGetResponsiveValue<number>(
-    1,
-    numberVisibleTeamData,
+  const indentationSlide = useGetResponsiveValue<number>(
+    16,
+    sizeRangesTeamData,
   );
+  const quantitySlide = useGetResponsiveValue<number>(1, numberVisibleTeamData);
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: Failed to fetch data</div>;
 
@@ -28,7 +28,10 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   if (!selected_category_data) return null;
 
   const renderSlide = (startIndex: number, endIndex: number) => (
-    <SwiperSlide key={startIndex} className="min-h-[348px] flex flex-col gap-4 lg:gap-6">
+    <SwiperSlide
+      key={startIndex}
+      className="flex min-h-[348px] flex-col gap-4 lg:gap-6"
+    >
       {selected_category_data
         .slice(startIndex, endIndex)
         .map(
@@ -40,7 +43,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
               <Link
                 to={`/team/${name}`}
                 key={idx}
-                className="group relative overflow-hidden rounded-3xl after:absolute after:bottom-0 after:left-0 after:z-[0] after:h-[120px] xs:after:h-[90px] 3xl:after:h-[160px] md:after:h-[120px] after:w-full after:bg-[url('/images/decor_serv.svg')] after:bg-cover after:bg-no-repeat after:opacity-80"
+                className="group relative overflow-hidden rounded-3xl after:absolute after:bottom-0 after:left-0 after:z-[0] after:h-[120px] after:w-full after:bg-[url('/images/decor_serv.svg')] after:bg-cover after:bg-no-repeat after:opacity-80 xs:after:h-[90px] md:after:h-[120px] 3xl:after:h-[160px]"
               >
                 <>
                   <picture>
@@ -55,7 +58,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
                       loading="lazy"
                     />
                   </picture>
-                  <strong className="absolute bottom-5 left-5 z-10 md:text-xl 2xl:text-2xl 3xl:text-3xl  text-[#d6d6d6]">
+                  <strong className="absolute bottom-5 left-5 z-10 text-[#d6d6d6] md:text-xl 2xl:text-2xl 3xl:text-3xl">
                     {name}
                   </strong>
                 </>
