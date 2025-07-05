@@ -15,3 +15,9 @@ export const numberVisibleTeamData: sizeRangesType[] = [
   { min: 475, max: 835, meaning: 2 },
   { min: 375, meaning: 1.15 },
 ];
+
+export const numberVisiblePerformanceData: sizeRangesType[] = [
+  { min: 768, meaning: 1 },
+  { min: 425, max: 525, meaning: 1.15 },
+  { min: 525, max: 768, meaning: 2 },
+];
