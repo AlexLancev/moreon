@@ -5,11 +5,11 @@ import { profitable_visits_store } from "@/stores/data_store";
 export const Profitable_list = observer(() => {
   const { data, isLoading, isError } = profitable_visits_store;
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!profitable_visits_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
   return (

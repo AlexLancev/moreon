@@ -12,11 +12,11 @@ export const Gallery_list = observer(() => {
   const [visibleShow, setVisibleShow] = useState<number>(num);
   const { data, isLoading, isError } = gallery_list_store;
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!gallery_list_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
   const handleVisibleShow = () => {

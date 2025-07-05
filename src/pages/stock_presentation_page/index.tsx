@@ -11,8 +11,8 @@ const Stock_presentation_page = observer(() => {
   const { id } = useParams();
   const numeric_Id = Number(id);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!data || data.length === 0 || !numeric_Id) return null;
 

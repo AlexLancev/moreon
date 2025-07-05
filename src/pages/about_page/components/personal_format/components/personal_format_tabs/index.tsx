@@ -17,8 +17,8 @@ export const Personal_format_tabs = observer(
 
     const personal_format_bd = toJS(data?.[0]);
 
-    if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error: Failed to fetch data</div>;
+    if (isLoading) return <div>Загрузка...</div>;
+    if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
     if (
       !personal_format_store ||

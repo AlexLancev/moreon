@@ -13,11 +13,11 @@ const Person_team_page = observer(() => {
   const { data, isLoading, isError } = team_store;
   const { name } = useParams();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!data || data.length === 0 || !name) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
   const team_bd = toJS(data);
   const person = team_bd.find((el) => el.name === name);

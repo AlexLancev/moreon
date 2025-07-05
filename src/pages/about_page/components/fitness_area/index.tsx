@@ -27,8 +27,8 @@ export const Fitness_area = observer(
 
     const fitness_area_bd = toJS(data?.[0]?.data);
 
-    if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error: Failed to fetch data</div>;
+    if (isLoading) return <div>Загрузка...</div>;
+    if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
     if (
       !fitness_area_store ||

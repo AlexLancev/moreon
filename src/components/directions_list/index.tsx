@@ -20,8 +20,8 @@ export const Directions_list = observer(
     )
       return null;
 
-    if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error: Failed to fetch data</div>;
+    if (isLoading) return <div>Загрузка...</div>;
+    if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
     return (
       <ul className="grid grid-cols-3 gap-6">

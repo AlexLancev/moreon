@@ -11,7 +11,7 @@ export const Freeze_card = () => {
         <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
           Заморозь свою карту <span className="customHeadDecor">Moreon</span>
         </Title>
-        <div className="lg:flex lg:justify-between gap-x-8 lg:*:w-1/2">
+        <div className="gap-x-8 lg:flex lg:justify-between lg:*:w-1/2">
           <div className="mb-10 xs:[&>p]:text-xl xl:[&>p]:text-xl 2xl:[&>p]:text-3xl">
             <p>
               Если у вас появилась потребность заморозить клубную карту, вы

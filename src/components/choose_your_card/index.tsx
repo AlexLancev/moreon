@@ -29,8 +29,8 @@ export const Choose_your_card = observer(
 
     const club_cards_bd = toJS(data?.[0]);
 
-    if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error: Failed to fetch data</div>;
+    if (isLoading) return <div>Загрузка...</div>;
+    if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
     if (
       !club_cards_store ||

@@ -23,8 +23,8 @@ const Current_direction_page = observer(() => {
     isError: directions_isError,
   } = directions_store;
 
-  if (directions_isLoading) return <div>Loading...</div>;
-  if (directions_isError) return <div>Error: Failed to fetch data</div>;
+  if (directions_isLoading) return <div>Загрузка...</div>;
+  if (directions_isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!directions_data || !service) return null;
 

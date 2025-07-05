@@ -11,11 +11,11 @@ export const Questions = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const { data, isLoading, isError } = about_questions_store;
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!about_questions_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
   return (

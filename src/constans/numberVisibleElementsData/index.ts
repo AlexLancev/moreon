@@ -21,3 +21,9 @@ export const numberVisiblePerformanceData: sizeRangesType[] = [
   { min: 425, max: 525, meaning: 1.15 },
   { min: 525, max: 768, meaning: 2 },
 ];
+
+export const numberVisibleOtherDirectionsData: sizeRangesType[] = [
+  { min: 625, meaning: 5 },
+  { min: 525, max: 625, meaning: 4 },
+  { min: 425, max: 525, meaning: 3 },
+];

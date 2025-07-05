@@ -14,11 +14,11 @@ export const Home_hero = observer(() => {
   const { data, isLoading, isError } = hero_store;
 
   if (!hero_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   return (
     <section className="m-auto w-full">

@@ -26,8 +26,8 @@ const Cards_presentation_page = observer(() => {
 
   const { images_url, page_description, hero_description } = current_card;
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   const sanitized_hero_description = xss(hero_description) ?? "";
 

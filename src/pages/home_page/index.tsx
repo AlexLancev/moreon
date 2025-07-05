@@ -33,7 +33,12 @@ import { get_tabs_store } from "@/stores";
 {
   /* <Our_application /> */
 }
-{/* <Freeze_card /> */}
+{
+  /* <Freeze_card /> */
+}
+{
+  /* <Phyto_bar /> */
+}
 
 const Home_page = () => {
   return (
@@ -48,8 +53,8 @@ const Home_page = () => {
       {/* <Team tabs_store={get_tabs_store("component_team") as Team_key_type} /> */}
       {/* <Our_application /> */}
       {/* <Freeze_card /> */}
-      <Phyto_bar />
-      {/* <Other_directions /> */}
+      {/* <Phyto_bar /> */}
+      <Other_directions />
       {/* <Fitness_club /> */}
       {/* <Contacts /> */}
     </>

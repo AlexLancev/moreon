@@ -2,44 +2,69 @@ import { observer } from "mobx-react-lite";
 
 import { other_directions_store } from "@/stores/data_store";
 import { Container } from "@/components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import { useGetResponsiveValue } from "@/utils";
+import { sizeRangesData } from "@/constans";
+import { numberVisibleOtherDirectionsData } from "@/constans/numberVisibleElementsData";
 
 export const Other_directions = observer(() => {
   const { data, isLoading, isError } = other_directions_store;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    2,
+    numberVisibleOtherDirectionsData,
+  );
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!other_directions_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
   return (
     <section className="py-12">
       <h2 className="visually-hidden">Наши другие направления</h2>
       <Container>
-        <ul className="flex items-center justify-around gap-4">
-          {data.map(
-            (
-              { path, descriptions, images_url: { png, webp } },
-              idx: number,
-            ) => (
-              <li key={idx}>
-                <a
-                  href={path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={descriptions}
-                >
-                  <span className="visually-hidden">{descriptions}</span>
-                  <picture>
-                    <source srcSet={webp} type="image/webp" />
-                    <img src={png} alt="" loading="lazy" aria-hidden />
-                  </picture>
-                </a>
-              </li>
-            ),
-          )}
-        </ul>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={indentationSlide}
+          slidesPerView={quantitySlide}
+          pagination={{ clickable: true }}
+        >
+          <ul className="flex items-center justify-around gap-4">
+            {data.map(
+              (
+                { path, descriptions, images_url: { png, webp } },
+                idx: number,
+              ) => (
+                <li key={idx}>
+                  <SwiperSlide>
+                    <a
+                      href={path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={descriptions}
+                    >
+                      <span className="visually-hidden">{descriptions}</span>
+                      <picture>
+                        <source srcSet={webp} type="image/webp" />
+                        <img
+                          src={png}
+                          className="m-auto"
+                          alt=""
+                          loading="lazy"
+                          aria-hidden
+                        />
+                      </picture>
+                    </a>
+                  </SwiperSlide>
+                </li>
+              ),
+            )}
+          </ul>
+        </Swiper>
       </Container>
     </section>
   );

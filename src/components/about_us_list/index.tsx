@@ -20,11 +20,11 @@ export const About_us_list = observer(() => {
   );
 
   if (!about_us_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide key={startIndex} className="flex flex-col gap-3 lg:gap-5">

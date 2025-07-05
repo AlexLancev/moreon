@@ -7,11 +7,11 @@ import { reviews_store } from "@/stores/data_store";
 export const Reviews_list = observer(() => {
   const { data, isLoading, isError } = reviews_store;
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (!reviews_store || !data || data.length === 0) {
-    return <div>No data available</div>;
+    return <div>Нет доступных данных</div>;
   }
 
   return (

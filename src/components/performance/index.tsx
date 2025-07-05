@@ -20,8 +20,8 @@ export const Performance = observer(({ data_key }: Performance_type) => {
 
   const performance_bd = toJS(data?.[0]);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: Failed to fetch data</div>;
+  if (isLoading) return <div>Загрузка...</div>;
+  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   if (
     !performance_data_store ||
@@ -43,7 +43,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
         return (
           <li
             key={idx}
-            className="relative md:*:w-1/2 overflow-hidden flex flex-col-reverse md:flex-row md:justify-center gap-10 bg-[90%_0] bg-no-repeat px-0 py-5 md:py-8 xl:py-10 3xl:py-12 after:absolute after:top-0 after:left-0 md:after:right-10 md:after:left-auto after:font-familyGroticTitulOtlHv after:text-5xl lg:after:text-7xl xl:after:text-8xl after:text-[rgba(23,101,97,0.1)] after:content-[attr(data-decor)] md:odd:flex-row-reverse md:odd:after:left-10"
+            className="relative flex flex-col-reverse gap-10 overflow-hidden bg-[90%_0] bg-no-repeat px-0 py-5 after:absolute after:left-0 after:top-0 after:font-familyGroticTitulOtlHv after:text-5xl after:text-[rgba(23,101,97,0.1)] after:content-[attr(data-decor)] md:flex-row md:justify-center md:py-8 md:*:w-1/2 md:after:left-auto md:after:right-10 md:odd:flex-row-reverse md:odd:after:left-10 lg:after:text-7xl xl:py-10 xl:after:text-8xl 3xl:py-12"
             data-decor={title}
           >
             <Swiper
@@ -76,10 +76,12 @@ export const Performance = observer(({ data_key }: Performance_type) => {
               )}
             </Swiper>
             <div>
-              <Title className="customHeadDecor mb-2 lg:mb-6 2xl:mb-10 text-base font-bold uppercase md:mb-6 lg:text-lg xl:text-2xl 3xl:text-4xl">
+              <Title className="customHeadDecor mb-2 text-base font-bold uppercase md:mb-6 lg:mb-6 lg:text-lg xl:text-2xl 2xl:mb-10 3xl:text-4xl">
                 {title}
               </Title>
-              <p className="text-base lg:text-lg xl:text-2xl 3xl:text-4xl">{description}</p>
+              <p className="text-base lg:text-lg xl:text-2xl 3xl:text-4xl">
+                {description}
+              </p>
             </div>
           </li>
         );

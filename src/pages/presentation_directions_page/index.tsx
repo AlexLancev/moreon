@@ -27,9 +27,9 @@ const Kids_fitness_page = observer(() => {
     isError: team_isError,
   } = team_store;
 
-  if (directions_isLoading || team_isLoading) return <div>Loading...</div>;
+  if (directions_isLoading || team_isLoading) return <div>Загрузка...</div>;
   if (directions_isError || team_isError)
-    return <div>Error: Failed to fetch data</div>;
+    return <div>Ошибка: не удалось получить данные</div>;
 
   if (!directions_data || !team_data || !service || team_data.length === 0)
     return null;
