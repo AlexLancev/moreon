@@ -21,10 +21,13 @@ export const Contacts = () => {
   return (
     <section className="py-12">
       <Container>
-        <div className="flex items-center justify-evenly gap-x-5">
-          <ul>
+        <div className="gap-x-5 md:flex md:items-center md:justify-evenly">
+          <ul className="mb-10">
             {current_contacts.map((contact, idx: number) => (
-              <li className="mb-3 text-xl" key={idx}>
+              <li
+                className="mb-3 text-xl xl:mb-6 xl:text-2xl 3xl:text-3xl"
+                key={idx}
+              >
                 <span className="mr-2">{contacts_data[contact]?.name}:</span>
                 <a
                   href={contacts_data[contact]?.path}

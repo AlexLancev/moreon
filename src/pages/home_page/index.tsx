@@ -39,6 +39,15 @@ import { get_tabs_store } from "@/stores";
 {
   /* <Phyto_bar /> */
 }
+{
+  /* <Other_directions /> */
+}
+{
+  /* <Fitness_club /> */
+}
+{
+  /* <Contacts /> */
+}
 
 const Home_page = () => {
   return (
@@ -54,7 +63,7 @@ const Home_page = () => {
       {/* <Our_application /> */}
       {/* <Freeze_card /> */}
       {/* <Phyto_bar /> */}
-      <Other_directions />
+      {/* <Other_directions /> */}
       {/* <Fitness_club /> */}
       {/* <Contacts /> */}
     </>
