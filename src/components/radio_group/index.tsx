@@ -12,6 +12,13 @@ import classNames from "classnames";
 
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
+import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@radix-ui/react-popover";
+import { RenderQuestion } from "./components/renderQuestion";
 
 type Options_data_type = {
   id: number;
@@ -196,13 +203,15 @@ export const Radio_group = ({
   if (!calculate_cost_data || calculate_cost_data.length === 0) return null;
 
   return (
-    <ul className={classNames("mb-5 grid grid-cols-2 gap-y-6", className)}>
+    <ul className={classNames("gap-y-6 md:grid md:grid-cols-2", className)}>
       {calculate_cost_data.map(({ title, options }, idx: number) => {
         if (!title || !options || options.length === 0) return null;
 
         return (
-          <li key={idx} className="mb-5 last:mb-0">
-            <strong className="mb-3 block text-xl">{title}</strong>
+          <li key={idx} className="mb-8 last:mb-0">
+            <strong className="mb-3 block text-xl xl:mb-6 xl:text-2xl 2xl:text-3xl 3xl:text-4xl">
+              {title}
+            </strong>
             <ul>
               <RadioGroup
                 defaultValue={options[0]?.label}
@@ -228,27 +237,17 @@ export const Radio_group = ({
                           className="peer data-[state=checked]:cursor-default"
                         />
                         <Label
-                          className="text-lg duration-300 peer-hover:text-white peer-data-[state=checked]:cursor-default peer-data-[state=checked]:text-white"
+                          className="text-lg duration-300 peer-hover:text-white peer-data-[state=checked]:cursor-default peer-data-[state=checked]:text-white xl:text-xl 2xl:text-2xl 3xl:text-3xl"
                           htmlFor={`${title}-${label}`}
                         >
                           {label}
                         </Label>
                         {answer_question && answer_question.length !== 0 && (
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <button type="button" className="-translate-y-2">
-                                <MessageCircleQuestion
-                                  size={14}
-                                  strokeWidth={1.5}
-                                />
-                              </button>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="max-w-[280px] rounded-md bg-[#eaeaea] px-2 py-1 text-xs text-[#505050]">
-                                {answer_question}
-                              </p>
-                            </TooltipContent>
-                          </Tooltip>
+                          <RenderQuestion>
+                            <p className="max-w-[280px] rounded-md bg-[#eaeaea] px-2 py-1 text-xs text-[#505050]">
+                              {answer_question}
+                            </p>
+                          </RenderQuestion>
                         )}
                       </div>
                     </li>

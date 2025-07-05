@@ -45,10 +45,12 @@ export const Range_slider = ({
   const [idx] = sliderValue;
   return (
     <div className={classNames("", className)}>
-      <strong className="mb-5 block text-xl">Количество месяцев</strong>
+      <strong className="mb-5 block text-xl xl:mb-6 xl:text-2xl 2xl:text-3xl">
+        Количество месяцев
+      </strong>
       <div className="flex max-w-[600px] items-center gap-x-5">
         <Input
-          className="max-w-[50px] text-center"
+          className="max-w-[50px] text-center lg:text-xl"
           type="text"
           pattern="\d*"
           maxLength={2}
@@ -67,7 +69,7 @@ export const Range_slider = ({
           onValueChange={handleSliderChange}
         />
 
-        <div className="flex items-center gap-x-1">
+        <div className="flex items-center gap-x-1 lg:text-xl 2xl:text-2xl">
           <b>{idx}</b>
           <span>{renderMonth(idx)}</span>
         </div>

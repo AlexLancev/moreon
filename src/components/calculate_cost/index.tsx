@@ -48,7 +48,7 @@ export const Calculate_cost = () => {
     <Container>
       <section
         id="price-calc"
-        className="before:clip-[polygon(0_0,_100%_0,_100%_100%,_0_25%)] relative overflow-hidden rounded-3xl px-16 py-12 before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-[#33b0aa] before:opacity-10 before:[-webkit-clip-path:polygon(0_0,_100%_0,_100%_100%,_0_25%)]"
+        className="before:clip-[polygon(0_0,_100%_0,_100%_100%,_0_25%)] relative overflow-hidden rounded-3xl p-4 before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-[#33b0aa] before:opacity-10 before:[-webkit-clip-path:polygon(0_0,_100%_0,_100%_100%,_0_25%)] md:p-6 lg:p-8 xl:p-10 2xl:p-12"
       >
         <Wallet
           className="absolute bottom-[1rem] right-[40rem] -z-10 rotate-45 opacity-5"
@@ -66,8 +66,11 @@ export const Calculate_cost = () => {
           Рассчитать <span className="customHeadDecor">стоимость</span>
         </Title>
         <Range_slider onMonthsChange={setSelectedMonths} className="mb-10" />
-        <Radio_group setTotalSum={setBaseSum} className="mb-16" />
-        <Title headingType="md" className="mb-3 text-xl">
+        <Radio_group
+          setTotalSum={setBaseSum}
+          className="mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14 3xl:mb-16"
+        />
+        <Title headingType="md" className="mb-3 text-xl xl:text-3xl">
           <span className="customHeadDecor">Итоговая</span> стоимость:
         </Title>
         <strong className="text-lg">

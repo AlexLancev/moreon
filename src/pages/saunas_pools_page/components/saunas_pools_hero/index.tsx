@@ -22,7 +22,7 @@ export const Saunas_pools_hero = () => {
         </picture>
         <div className="relative z-10 w-full max-w-[625px] text-lg">
           <Title size="xl" className="mb-6">
-            ани и бассейны
+            Бани и бассейны
           </Title>
           <p className="mb-4">
             Мореон Фитнес предоставляет своим клиентам уникальные возможности
