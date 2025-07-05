@@ -30,8 +30,8 @@ const Home_page = () => {
       {/* <Club_news /> */} //
         {/* <About_us /> */} //
       {/* <Video_reviews /> */}
-      <Team tabs_store={get_tabs_store("component_team") as Team_key_type} />
-      {/* <Our_application /> */}
+      {/* <Team tabs_store={get_tabs_store("component_team") as Team_key_type} /> */} //
+      <Our_application />
       {/* <Freeze_card /> */}
       {/* <Phyto_bar /> */}
       {/* <Other_directions /> */}
