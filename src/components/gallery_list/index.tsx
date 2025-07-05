@@ -27,7 +27,7 @@ export const Gallery_list = observer(() => {
 
   return (
     <>
-      <ul className="grid grid-cols-3 place-items-center gap-4">
+      <ul className="grid md:grid-cols-3 xxs:grid-cols-2 place-items-center gap-4 2xl:gap-6">
         {data
           .slice(0, visibleShow)
           .map(({ description, images_url: { jpg } }, idx: number) => (
