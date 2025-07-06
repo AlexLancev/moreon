@@ -25,7 +25,7 @@ export const Fitness_area = observer(
 
     const { data, isLoading, isError } = fitness_area_store;
 
-    const fitness_area_bd = toJS(data?.[0]?.data);
+    const fitness_area_bd = toJS(data?.[0]);
 
     if (isLoading) return <div>Загрузка...</div>;
     if (isError) return <div>Ошибка: не удалось получить данные</div>;
@@ -47,7 +47,7 @@ export const Fitness_area = observer(
     return (
       <section className="py-12">
         <Container>
-          <Title>
+          <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
             <span className="customHeadDecor">Зоны</span> фитнес клуба
           </Title>
           <Tabs
@@ -55,11 +55,20 @@ export const Fitness_area = observer(
             change_tabs={change_tabs}
             tab_list={tab_list}
           />
-          <div className="flex items-center gap-x-14 pt-8">
+          <div className="gap-x-6 pt-4 md:flex md:items-center md:*:w-[50%]">
+            <div className="mb-10 w-full">
+              <Title className="customHeadDecor mb-3 xl:text-2xl 2xl:text-3xl">{head}</Title>
+              <p className="mb-7 text-lg 2xl:text-2xl 3xl:text-3xl">{description}</p>
+              <Button asChild>
+                <Link to={path}>
+                  Подробнее <MessageCircleQuestion />
+                </Link>
+              </Button>
+            </div>
             <picture>
               <source srcSet={images_url?.jpg} type="image/webp" />
               <img
-                className="h-[299px] overflow-hidden rounded-3xl object-cover"
+                className="h-[299px] 2xl:w-full 2xl:h-[500px] m-auto overflow-hidden rounded-3xl object-cover"
                 width={525}
                 src={images_url?.jpg}
                 alt={description_images}
@@ -67,17 +76,6 @@ export const Fitness_area = observer(
                 loading="lazy"
               />
             </picture>
-            <div className="w-full max-w-[525px]">
-              <Title size="md" className="customHeadDecor mb-3">
-                {head}
-              </Title>
-              <p className="mb-7 text-lg">{description}</p>
-              <Button asChild>
-                <Link to={path}>
-                  Подробнее <MessageCircleQuestion />
-                </Link>
-              </Button>
-            </div>
           </div>
         </Container>
       </section>

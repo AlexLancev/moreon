@@ -126,8 +126,7 @@ type Tab_fitness_type =
   | "cardio_room"
   | "martial_arts";
 
-type Fitness_area_type = {
-  data: Record<
+type Fitness_area_type = Record<
     Tab_fitness_type,
     {
       name_key: Tab_fitness_type;
@@ -141,7 +140,6 @@ type Fitness_area_type = {
       path: string;
     }
   >;
-};
 
 type Water_zone_key_type =
   | "baths_swimming"
@@ -155,8 +153,7 @@ type Water_zone_tabs_type = {
   change_tabs: (value: string) => void;
 };
 
-type Water_zone_type = {
-  data: Record<
+type Water_zone_type = Record<
     Water_zone_key_type,
     {
       head: string;
@@ -168,7 +165,6 @@ type Water_zone_type = {
       };
     }
   >;
-};
 
 type Club_cards_tabs_type = {
   isActiveTab: Club_cards_key_type;

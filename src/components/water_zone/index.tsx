@@ -26,7 +26,7 @@ export const Water_zone = observer(
 
     const { data, isLoading, isError } = water_zone_store;
 
-    const water_zone_bd = toJS(data?.[0]?.data);
+    const water_zone_bd = toJS(data?.[0]);
 
     if (isLoading) return <div>Загрузка...</div>;
     if (isError) return <div>Ошибка: не удалось получить данные</div>;
@@ -72,7 +72,7 @@ export const Water_zone = observer(
             />
             <div className="flex items-center justify-between gap-x-5 pt-10">
               <div className="w-full max-w-[625px]">
-                <Title size="md" className="mb-5 text-3xl">
+                <Title className="mb-5 text-3xl">
                   {head}
                 </Title>
                 <p className="mb-8 text-lg">{description}</p>
