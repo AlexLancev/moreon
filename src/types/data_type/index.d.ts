@@ -92,6 +92,7 @@ type Tabs_store_type = {
 type Personal_format_tabs_type = {
   data_key: Personal_format_key_type[];
   tabs_store: Tabs_store_type;
+  className?: string;
 };
 
 type Tab_list_type = {

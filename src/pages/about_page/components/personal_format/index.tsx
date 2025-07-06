@@ -21,7 +21,7 @@ export const Personal_format = ({ tabs_store }: tabs_store_type) => {
   return (
     <section className="py-12">
       <Container>
-        <Title>
+        <Title className="mb-3 md:mb-6 lg:mb-8 2xl:mb-12">
           <span className="customHeadDecor">Формат,</span> который подойдет
           именно Вам
         </Title>

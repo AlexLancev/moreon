@@ -20,12 +20,12 @@ import {
 const About_page = () => {
   return (
     <>
-      <Gallery />
-      {/* <Effective_training />
-      <Stock />
+      {/* <Gallery />
+      <Effective_training />
+      <Stock /> */}
       <Personal_format tabs_store={get_tabs_store("component_personal")} />
       <Team tabs_store={get_tabs_store("component_team") as Team_key_type} />
-      <Fitness_area
+      {/* <Fitness_area
         tabs_store={
           get_tabs_store("component_fitness_area") as Fitness_area_tabs_type
         }

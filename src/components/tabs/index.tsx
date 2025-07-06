@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { useEffect } from "react";
 
 export type Tab_list_type = {
@@ -10,6 +11,7 @@ export type Tabs_type = {
   change_tabs: (value: string) => void;
   tab_list: Tab_list_type[];
   currentChangeTab?: string;
+  className?: string;
 };
 
 export const Tabs = ({
@@ -17,6 +19,7 @@ export const Tabs = ({
   change_tabs,
   tab_list,
   currentChangeTab,
+  className,
 }: Tabs_type) => {
   useEffect(() => {
     if (tab_list && tab_list.length > 0) {
@@ -27,12 +30,17 @@ export const Tabs = ({
   if (!tab_list || tab_list.length === 0) return null;
 
   return (
-    <ul className="customScrollBar relative mb-8 flex items-center gap-x-2 overflow-x-auto pb-8 pt-3">
+    <ul
+      className={classNames(
+        "customScrollBar relative mb-8 flex items-center gap-x-2 overflow-x-auto pb-8 pt-3",
+        className,
+      )}
+    >
       {tab_list?.map(({ key, category }, idx: number) => {
         if (!key || !category) return null;
 
         return (
-          <li key={idx}>
+          <li key={idx} className="relative">
             <label className="hover:cursor-pointer">
               <input
                 className="visually-hidden peer"
