@@ -57,8 +57,12 @@ export const Fitness_area = observer(
           />
           <div className="gap-x-6 pt-4 md:flex md:items-center md:*:w-[50%]">
             <div className="mb-10 w-full">
-              <Title className="customHeadDecor mb-3 xl:text-2xl 2xl:text-3xl">{head}</Title>
-              <p className="mb-7 text-lg 2xl:text-2xl 3xl:text-3xl">{description}</p>
+              <Title className="customHeadDecor mb-3 xl:text-2xl 2xl:text-3xl">
+                {head}
+              </Title>
+              <p className="mb-7 text-lg 2xl:text-2xl 3xl:text-3xl">
+                {description}
+              </p>
               <Button asChild>
                 <Link to={path}>
                   Подробнее <MessageCircleQuestion />
@@ -68,7 +72,7 @@ export const Fitness_area = observer(
             <picture>
               <source srcSet={images_url?.jpg} type="image/webp" />
               <img
-                className="h-[299px] 2xl:w-full 2xl:h-[500px] m-auto overflow-hidden rounded-3xl object-cover"
+                className="m-auto h-[299px] overflow-hidden rounded-3xl object-cover 2xl:h-[500px] 2xl:w-full"
                 width={525}
                 src={images_url?.jpg}
                 alt={description_images}

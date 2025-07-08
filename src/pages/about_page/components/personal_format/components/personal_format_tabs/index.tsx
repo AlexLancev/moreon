@@ -47,7 +47,10 @@ export const Personal_format_tabs = observer(
             if (!category) return null;
 
             return (
-              <li key={idx} className="relative text-center lg:w-[20%] xl:text-xl">
+              <li
+                key={idx}
+                className="relative text-center lg:w-[20%] xl:text-xl"
+              >
                 <label className="personal_tabs">
                   <input
                     className="visually-hidden peer"
@@ -56,7 +59,7 @@ export const Personal_format_tabs = observer(
                     onChange={() => setCurrentChangeTab(key_name)}
                     checked={currentChangeTab === key}
                   />
-                  <span className="block h-full cursor-pointer whitespace-nowrap rounded-t-3xl p-4 lg:p-6 3xl:p-8 text-[rgba(255,255,255,0.7)] transition-colors duration-300 hover:text-[rgba(255,255,255,1)] peer-checked:cursor-default peer-checked:bg-[rgba(255,255,255,4%)] peer-checked:text-white">
+                  <span className="block h-full cursor-pointer whitespace-nowrap rounded-t-3xl p-4 text-[rgba(255,255,255,0.7)] transition-colors duration-300 hover:text-[rgba(255,255,255,1)] peer-checked:cursor-default peer-checked:bg-[rgba(255,255,255,4%)] peer-checked:text-white lg:p-6 3xl:p-8">
                     {category}
                   </span>
                 </label>
@@ -64,7 +67,7 @@ export const Personal_format_tabs = observer(
             );
           })}
         </ul>
-        <div className="rounded-b-3xl bg-[rgba(255,255,255,4%)] p-4 md:px-6 xl:px-8 md:pb-6">
+        <div className="rounded-b-3xl bg-[rgba(255,255,255,4%)] p-4 md:px-6 md:pb-6 xl:px-8">
           <Tabs
             currentChangeTab={currentChangeTab}
             isActiveTab={isActiveTab}
@@ -73,7 +76,9 @@ export const Personal_format_tabs = observer(
             className="lg:flex-wrap lg:gap-y-8"
           />
           {key_list?.[isActiveTab]?.description && (
-            <p className="lg:text-xl 2xl:text-2xl 3xl:text-3xl">{key_list?.[isActiveTab]?.description}</p>
+            <p className="lg:text-xl 2xl:text-2xl 3xl:text-3xl">
+              {key_list?.[isActiveTab]?.description}
+            </p>
           )}
         </div>
       </div>

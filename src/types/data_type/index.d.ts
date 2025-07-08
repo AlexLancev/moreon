@@ -127,19 +127,19 @@ type Tab_fitness_type =
   | "martial_arts";
 
 type Fitness_area_type = Record<
-    Tab_fitness_type,
-    {
-      name_key: Tab_fitness_type;
-      head: string;
-      description: string;
-      description_images: string;
-      images_url: {
-        jpg: string;
-        webp: string;
-      };
-      path: string;
-    }
-  >;
+  Tab_fitness_type,
+  {
+    name_key: Tab_fitness_type;
+    head: string;
+    description: string;
+    description_images: string;
+    images_url: {
+      jpg: string;
+      webp: string;
+    };
+    path: string;
+  }
+>;
 
 type Water_zone_key_type =
   | "baths_swimming"
@@ -154,17 +154,17 @@ type Water_zone_tabs_type = {
 };
 
 type Water_zone_type = Record<
-    Water_zone_key_type,
-    {
-      head: string;
-      description: string;
-      images_description: string;
-      images_url: {
-        jpg: string;
-        webp: string;
-      };
-    }
-  >;
+  Water_zone_key_type,
+  {
+    head: string;
+    description: string;
+    images_description: string;
+    images_url: {
+      jpg: string;
+      webp: string;
+    };
+  }
+>;
 
 type Club_cards_tabs_type = {
   isActiveTab: Club_cards_key_type;
