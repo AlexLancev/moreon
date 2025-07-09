@@ -36,9 +36,9 @@ const About_page = () => {
         }
       /> */}
       <About_questions />
-      <Profitable_visits />
+      {/* <Profitable_visits />
       <Every_card />
-      <About_reviews />
+      <About_reviews /> */}
     </>
   );
 };
