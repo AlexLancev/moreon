@@ -76,7 +76,7 @@ const Kids_fitness_page = observer(() => {
       <section className="py-10">
         <Container>
           <Title>
-            <span className="customHeadDecor">Тренеры</span> направления
+            <span className="text-customHeadDecor">Тренеры</span> направления
           </Title>
           <Team_list isActiveTab={team} />
         </Container>

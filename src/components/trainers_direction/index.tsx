@@ -9,7 +9,7 @@ export const Trainers_direction = ({ direction }: Trainers_direction_type) => {
     <section className="py-12">
       <Container>
         <Title>
-          Тренеры <span className="customHeadDecor">направления</span>
+          Тренеры <span className="text-customHeadDecor">направления</span>
         </Title>
         <Team_list isActiveTab={direction} />
       </Container>

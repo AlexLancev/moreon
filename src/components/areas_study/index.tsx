@@ -12,7 +12,7 @@ export const Areas_study = ({ keys_list }: Directions_keys_type) => {
       <section className="py-12">
         <div className="m-auto w-full max-w-[1080px]">
           <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
-            Направления <span className="customHeadDecor">занятий</span>
+            Направления <span className="text-customHeadDecor">занятий</span>
           </Title>
           <Directions_list keys_list={keys_list} />
         </div>

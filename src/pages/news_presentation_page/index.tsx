@@ -72,7 +72,7 @@ const News_presentation_page = observer(() => {
           />
         </picture>
         <Title>
-          Другие <span className="customHeadDecor">акции клуба</span>
+          Другие <span className="text-customHeadDecor">акции клуба</span>
         </Title>
         <Render_slider path={numeric_Id} type="news" data={data} />
       </section>

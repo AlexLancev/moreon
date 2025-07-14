@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { Title } from "@/components";
 
 import { about_us_store } from "@/stores/data_store";
-import { useGetResponsiveValue } from "@/utils";
+import { renderNumberSlides, useGetResponsiveValue } from "@/utils";
 import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 
 export const About_us_list = observer(() => {
@@ -71,11 +71,7 @@ export const About_us_list = observer(() => {
     </SwiperSlide>
   );
 
-  const slides = [];
-
-  for (let i = 0; i < about_us_store.data.length; i += 4) {
-    slides.push(renderSlide(i, i + 4));
-  }
+  const slides = renderNumberSlides(data, 4, renderSlide);
 
   return (
     <Swiper

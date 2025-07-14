@@ -4,7 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 
 import { team_store } from "@/stores/data_store";
-import { filterDataByActiveTab, useGetResponsiveValue } from "@/utils";
+import {
+  filterDataByActiveTab,
+  renderNumberSlides,
+  useGetResponsiveValue,
+} from "@/utils";
 import { numberVisibleAboutUsData } from "@/constans";
 import { numberVisibleTeamData } from "@/constans/numberVisibleElementsData";
 import { sizeRangesTeamData } from "@/constans/sizeRangesData";
@@ -72,10 +76,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   if (!selected_category_data || selected_category_data.length === 0)
     return null;
 
-  const slides: JSX.Element[] = [];
-  for (let index = 0; index < selected_category_data.length; index += 2) {
-    slides.push(renderSlide(index, index + 2));
-  }
+  const slides = renderNumberSlides(selected_category_data, 2, renderSlide);
 
   return (
     <Swiper

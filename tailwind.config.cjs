@@ -34,6 +34,7 @@ module.exports = {
           "linear-gradient(270deg,#00100f 28.37%,rgba(0, 16, 15, 0.75) 55.82%)",
       },
       colors: {
+        customHeadDecor: "#33b0aa",
         customGray: "rgb(60, 60, 60)",
         customGrayLight: "rgb(30, 30, 30)",
         background: "hsl(var(--background))",

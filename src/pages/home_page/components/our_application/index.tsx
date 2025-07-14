@@ -17,7 +17,8 @@ export const Our_application = () => {
         </picture>
         <div className="mb-14 w-full [&>p]:mb-4 xs:[&>p]:text-xl md:[&>p]:text-base lg:[&>p]:mb-6 lg:[&>p]:text-xl">
           <Title className="mb-4 text-2xl md:mb-6">
-            Приложение <span className="customHeadDecor">Moreon Fitness</span>
+            Приложение{" "}
+            <span className="text-customHeadDecor">Moreon Fitness</span>
           </Title>
           <p>
             В нашем приложении вы можете записаться на тренировку, заморозить

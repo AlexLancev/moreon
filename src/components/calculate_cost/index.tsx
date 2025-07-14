@@ -63,7 +63,7 @@ export const Calculate_cost = () => {
           strokeWidth={1.5}
         />
         <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
-          Рассчитать <span className="customHeadDecor">стоимость</span>
+          Рассчитать <span className="text-customHeadDecor">стоимость</span>
         </Title>
         <Range_slider onMonthsChange={setSelectedMonths} className="mb-10" />
         <Radio_group
@@ -71,11 +71,12 @@ export const Calculate_cost = () => {
           className="mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14 3xl:mb-16"
         />
         <Title headingType="md" className="mb-3 text-xl xl:text-3xl">
-          <span className="customHeadDecor">Итоговая</span> стоимость:
+          <span className="text-customHeadDecor">Итоговая</span> стоимость:
         </Title>
         <strong className="text-lg">
           <span className="text-2xl text-white">{displayedSum.toFixed(2)}</span>{" "}
-          ₽ за <span className="customHeadDecor text-xl">{selectedMonths}</span>{" "}
+          ₽ за{" "}
+          <span className="text-xl text-customHeadDecor">{selectedMonths}</span>{" "}
           {selectedMonths > 1 && selectedMonths < 5
             ? "месяца"
             : selectedMonths === 1

@@ -48,7 +48,7 @@ export const Fitness_area = observer(
       <section className="py-12">
         <Container>
           <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
-            <span className="customHeadDecor">Зоны</span> фитнес клуба
+            <span className="text-customHeadDecor">Зоны</span> фитнес клуба
           </Title>
           <Tabs
             isActiveTab={isActiveTab}
@@ -57,7 +57,7 @@ export const Fitness_area = observer(
           />
           <div className="gap-x-6 pt-4 md:flex md:items-center md:*:w-[50%]">
             <div className="mb-10 w-full">
-              <Title className="customHeadDecor mb-3 xl:text-2xl 2xl:text-3xl">
+              <Title className="mb-3 text-customHeadDecor xl:text-2xl 2xl:text-3xl">
                 {head}
               </Title>
               <p className="mb-7 text-lg 2xl:text-2xl 3xl:text-3xl">

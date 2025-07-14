@@ -96,7 +96,7 @@ const Current_direction_page = observer(() => {
       {directions && directions.length !== 0 && (
         <section className="px-10 py-12">
           <Title>
-            <span className="customHeadDecor">Другие</span> направления
+            <span className="text-customHeadDecor">Другие</span> направления
           </Title>
           <Directions_list keys_list={directions} />
         </section>

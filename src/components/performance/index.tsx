@@ -76,7 +76,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
               )}
             </Swiper>
             <div>
-              <Title className="customHeadDecor mb-2 text-base font-bold uppercase md:mb-6 lg:mb-6 lg:text-lg xl:text-2xl 2xl:mb-10 3xl:text-4xl">
+              <Title className="mb-2 text-base font-bold uppercase text-customHeadDecor md:mb-6 lg:mb-6 lg:text-lg xl:text-2xl 2xl:mb-10 3xl:text-4xl">
                 {title}
               </Title>
               <p className="text-base lg:text-lg xl:text-2xl 3xl:text-4xl">

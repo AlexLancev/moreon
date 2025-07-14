@@ -20,7 +20,7 @@ import {
 const About_page = () => {
   return (
     <>
-      {/* <Gallery />
+      <Gallery />
       <Effective_training />
       <Stock />
       <Personal_format tabs_store={get_tabs_store("component_personal")} />
@@ -35,7 +35,7 @@ const About_page = () => {
           get_tabs_store("component_water_zone") as Water_zone_tabs_type
         }
       />
-      <About_questions /> */}
+      <About_questions />
       <Profitable_visits />
       <Every_card />
       <About_reviews />

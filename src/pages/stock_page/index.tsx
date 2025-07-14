@@ -7,7 +7,7 @@ const Stock_page = () => {
     <section className="py-12">
       <Container>
         <Title>
-          <span className="customHeadDecor">Акциий</span> клуба
+          <span className="text-customHeadDecor">Акциий</span> клуба
         </Title>
         <Stock_list />
         <Profitable_visits />

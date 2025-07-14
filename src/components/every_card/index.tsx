@@ -6,8 +6,11 @@ export const Every_card = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title typeObj={sizeTitleData}>
-          В каждой <span className="customHeadDecor">клубной карте</span>
+        <Title
+          typeObj={sizeTitleData}
+          className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12"
+        >
+          В каждой <span className="text-customHeadDecor">клубной карте</span>
         </Title>
         <Every_card_list />
       </Container>

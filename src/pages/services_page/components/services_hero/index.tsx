@@ -25,7 +25,7 @@ export const Services_hero = () => {
         </picture>
         <div className="w-full max-w-[700px]">
           <Title className="mb-8">
-            Услуги <span className="customHeadDecor">Moreon Fitness</span>
+            Услуги <span className="text-customHeadDecor">Moreon Fitness</span>
           </Title>
           <p className="mb-14 text-xl">
             Занятия фитнесом – это микс эффективных упражнений, мотивирующего

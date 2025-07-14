@@ -26,7 +26,7 @@ export const Martial_arts_children = () => {
     <section className="py-12">
       <Container>
         <Title>
-          <span className="customHeadDecor">Единоборства</span> для детей
+          <span className="text-customHeadDecor">Единоборства</span> для детей
         </Title>
         <div className="flex items-center justify-between gap-x-12">
           <picture>

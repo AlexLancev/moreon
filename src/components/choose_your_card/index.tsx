@@ -53,7 +53,7 @@ export const Choose_your_card = observer(
       <section className="py-12">
         <Container>
           <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
-            Выберите свою <span className="customHeadDecor">карту</span>
+            Выберите свою <span className="text-customHeadDecor">карту</span>
           </Title>
           <Tabs
             isActiveTab={isActiveTab}
