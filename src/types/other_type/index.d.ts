@@ -7,3 +7,25 @@ type sizeRangesType = {
   max?: number;
   meaning: TitleSize | number;
 };
+type HeroDataType = {
+  title: {
+    general: string;
+    decor?: string;
+  };
+  images_url?: {
+    webp: string;
+    png?: string;
+    jpg?: string;
+  };
+  button: {
+    label: string,
+    iconBtn: ReactNode,
+  },
+};
+
+type HeroPropsType = {
+  data: HeroDataType;
+  isOpaque?: boolean;
+  children?: ReactNode;
+  className?: string;
+};

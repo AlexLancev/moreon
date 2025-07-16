@@ -67,3 +67,10 @@ export const renderNumberSlides = <T>(
 
   return slides;
 };
+
+export const validateImagePath = (path: string, allowedExtensions: string[]) => {
+  if (!path) return false;
+  const extensionPattern = allowedExtensions.join("|");
+  const regex = new RegExp(`^[a-z0-9_/]+\\/[a-z0-9_]+\\.(${extensionPattern})$`, "i");
+  return regex.test(path);
+};
