@@ -65,4 +65,9 @@ export const paths = {
   stock: "/stock/:id",
   news: "/news/:id",
   presentation_cards: "/presentation_cards/:path",
+  login: "/login",
+  logout: "/logout",
+  register: "/register",
+  congratulations_registration: "/congratulations_registration",
+  personal_account: "/personal_account",
 };

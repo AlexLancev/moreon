@@ -6,7 +6,6 @@ import session_store from "@/stores/session_store";
 
 function useSession() {
   useEffect(() => {
-    // Функция для проверки текущей сессии при загрузке приложения
     const checkSession = async () => {
       const {
         data: { session },
@@ -18,10 +17,8 @@ function useSession() {
       }
     };
 
-    // Проверяем сессию при монтировании компонента
     checkSession();
 
-    // Подписываемся на изменения состояния аутентификации
     const { data: authListener } = supabase.auth.onAuthStateChange(
       (event, session) => {
         if (event === "SIGNED_IN" && session) {
@@ -32,7 +29,6 @@ function useSession() {
       },
     );
 
-    // Отписываемся от слушателя при размонтировании компонента
     return () => {
       authListener?.subscription.unsubscribe();
     };

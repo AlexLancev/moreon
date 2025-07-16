@@ -93,6 +93,11 @@ const {
   presentation_cards,
   stock_page,
   news_page,
+  login,
+  logout,
+  register,
+  congratulations_registration,
+  personal_account,
 } = paths;
 
 function ScrollToTop() {
@@ -218,16 +223,16 @@ export const App = () => {
               element={<Cards_presentation_page />}
             />
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/register" element={<Register />} />
+            <Route path={login} element={<Login />} />
+            <Route path={logout} element={<Logout />} />
+            <Route path={register} element={<Register />} />
             <Route
-              path="/congratulations_registration"
+              path={congratulations_registration}
               element={<Congratulations_registration />}
             />
             <Route element={<Wrapper />}>
               <Route
-                path="/personal_account"
+                path={personal_account}
                 element={<Personal_account_page />}
               />
             </Route>
