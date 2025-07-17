@@ -38,7 +38,9 @@ export const Reviews_list = observer(() => {
             key={idx}
             className="rounded-3xl bg-[rgba(255,255,255,0.19)] p-4 xxs:p-6 lg:p-8"
           >
-            <strong className="mb-2 flex text-xl lg:text-2xl 2xl:text-3xl xl:mb-6 text-white">{person}</strong>
+            <strong className="mb-2 flex text-xl text-white lg:text-2xl xl:mb-6 2xl:text-3xl">
+              {person}
+            </strong>
             <p className="customScrollBar overflow-y-auto pr-4 xxs:text-lg lg:text-xl 2xl:text-2xl">
               {review}
             </p>

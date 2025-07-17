@@ -46,4 +46,3 @@ export const numberVisibleReviewsData: sizeRangesType[] = [
   { min: 768, meaning: 2 },
   { min: 425, max: 768, meaning: 1 },
 ];
-

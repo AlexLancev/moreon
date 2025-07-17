@@ -41,7 +41,12 @@ export const Hero = ({
 
   return (
     <Container>
-      <section className={classNames("relative px-20 pb-24 pt-12", className)}>
+      <section
+        className={classNames(
+          "relative px-3 py-8 xxs:px-6 lg:px-10 lg:py-12 2xl:px-12 2xl:py-16",
+          className,
+        )}
+      >
         {urlImageWebp && urlImageFallback && (
           <picture>
             <source srcSet={`/images/${urlImageWebp}`} type="image/webp" />
@@ -57,9 +62,9 @@ export const Hero = ({
             />
           </picture>
         )}
-        <div className="relative z-10 w-full max-w-[700px]">
+        <div className="relative z-10 w-full md:max-w-[700px] 2xl:max-w-[1200px]">
           {general && (
-            <Title className="mb-8">
+            <Title className="mb-3 text-2xl md:mb-5 xl:mb-8">
               {general} <span className="text-customHeadDecor">{decor}</span>
             </Title>
           )}

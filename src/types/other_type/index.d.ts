@@ -18,9 +18,9 @@ type HeroDataType = {
     jpg?: string;
   };
   button: {
-    label: string,
-    iconBtn: ReactNode,
-  },
+    label: string;
+    iconBtn: ReactNode;
+  };
 };
 
 type HeroPropsType = {
