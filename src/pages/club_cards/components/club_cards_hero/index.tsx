@@ -1,5 +1,4 @@
-import { IdCard } from "lucide-react";
-import { Container, Hero, Title } from "@/components";
+import { Hero } from "@/components";
 
 import { clubCardsData } from "@/constans/heroData";
 

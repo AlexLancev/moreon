@@ -1,13 +1,13 @@
 import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
 
 import { Title } from "@/components";
 
+import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 import { news_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
-import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 
 export const News_list = observer(() => {
   const { data, isLoading, isError } = news_store;

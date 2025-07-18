@@ -1,8 +1,4 @@
-import { NotebookText } from "lucide-react";
-
-import { Container, Hero, Title } from "@/components";
-import { Button } from "@/components/ui/button";
-import { modal_store } from "@/stores";
+import { Hero } from "@/components";
 import { saunasPoolsData } from "@/constans/heroData";
 
 export const Saunas_pools_hero = () => {

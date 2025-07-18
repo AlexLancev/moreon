@@ -1,7 +1,6 @@
 import { useEffect, Suspense } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
-import { paths } from "@/paths";
 import { Layout } from "@/components";
 import {
   About_page,
@@ -26,6 +25,7 @@ import {
   Wrapper,
   Logout,
 } from "@/pages";
+import { paths } from "@/paths";
 
 const {
   home,

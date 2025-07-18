@@ -1,9 +1,8 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
 import { App } from "components";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
 import "swiper/css";
 import "swiper/css/navigation";

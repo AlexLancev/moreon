@@ -1,8 +1,8 @@
-import { contacts_data } from "constans";
 import classNames from "classnames";
+import { contacts_data } from "constans";
 
-import { isEmptyObj } from "@/utils";
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { isEmptyObj } from "@/utils";
 
 type feedback_data_type = "address" | "phone";
 

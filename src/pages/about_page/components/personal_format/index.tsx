@@ -1,6 +1,6 @@
-import { Personal_format_tabs } from "./components/personal_format_tabs";
-
 import { Container, Title } from "@/components";
+
+import { Personal_format_tabs } from "./components/personal_format_tabs";
 
 const personal_format_data_key: Personal_format_key_type[] = [
   "gym",

@@ -1,11 +1,12 @@
 import { observer } from "mobx-react-lite";
 
-import { every_card_store } from "@/stores/data_store";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import { renderNumberSlides, useGetResponsiveValue } from "@/utils";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { sizeRangesData } from "@/constans";
 import { numberVisibleEveryCardData } from "@/constans/numberVisibleElementsData";
+import { every_card_store } from "@/stores/data_store";
+import { renderNumberSlides, useGetResponsiveValue } from "@/utils";
 
 export const Every_card_list = observer(() => {
   const { data, isLoading, isError } = every_card_store;

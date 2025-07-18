@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
-import { Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 import { stock_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
-import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 
 export const Stock_list = observer(() => {
   const { data, isLoading, isError } = stock_store;

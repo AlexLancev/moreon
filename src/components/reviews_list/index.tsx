@@ -1,11 +1,11 @@
+import { observer } from "mobx-react-lite";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { observer } from "mobx-react-lite";
 
-import { reviews_store } from "@/stores/data_store";
-import { useGetResponsiveValue } from "@/utils";
 import { sizeRangesData } from "@/constans";
 import { numberVisibleReviewsData } from "@/constans/numberVisibleElementsData";
+import { reviews_store } from "@/stores/data_store";
+import { useGetResponsiveValue } from "@/utils";
 
 export const Reviews_list = observer(() => {
   const { data, isLoading, isError } = reviews_store;

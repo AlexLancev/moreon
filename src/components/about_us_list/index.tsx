@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { observer } from "mobx-react-lite";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import classNames from "classnames";
+import { observer } from "mobx-react-lite";
+import { useState } from "react";
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Title } from "@/components";
 
+import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 import { about_us_store } from "@/stores/data_store";
 import { renderNumberSlides, useGetResponsiveValue } from "@/utils";
-import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 
 export const About_us_list = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);

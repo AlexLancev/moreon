@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 
+import { Feedback_form } from "@/components";
 import {
   Dialog,
   DialogContent,
@@ -7,7 +8,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Feedback_form } from "@/components";
 import { modal_store } from "@/stores";
 
 export const Feedback_modal = observer(() => {

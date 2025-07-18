@@ -1,6 +1,6 @@
 import { Modal_store } from "@/stores/modal_store";
-import { Tabs_store } from "@/stores/tabs_store";
 import { Personal_account_store } from "@/stores/personal_accout_store";
+import { Tabs_store } from "@/stores/tabs_store";
 
 type Tabs_store_key = `component_${string}`;
 

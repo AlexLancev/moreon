@@ -1,13 +1,13 @@
-import { useLocation } from "react-router-dom";
-import { observer } from "mobx-react-lite";
+import { NotebookText } from "lucide-react";
 import { toJS } from "mobx";
 
-import { NotebookText } from "lucide-react";
+import { observer } from "mobx-react-lite";
+import { useLocation } from "react-router-dom";
 
-import { directions_store, team_store } from "@/stores/data_store";
-import { modal_store } from "@/stores";
 import { Areas_study, Container, Team_list, Title } from "@/components";
 import { Button } from "@/components/ui/button";
+import { modal_store } from "@/stores";
+import { directions_store, team_store } from "@/stores/data_store";
 
 const Kids_fitness_page = observer(() => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -31,10 +31,10 @@ const Kids_fitness_page = observer(() => {
   if (directions_isError || team_isError)
     return <div>Ошибка: не удалось получить данные</div>;
 
-  if (!directions_data || !team_data || !service || team_data.length === 0)
+  if (!directions_data?.[0] || !team_data || !service || team_data.length === 0)
     return null;
 
-  const directions_bd = toJS(directions_data?.[0]);
+  const directions_bd = toJS(directions_data[0]);
 
   const {
     directions,
@@ -50,7 +50,7 @@ const Kids_fitness_page = observer(() => {
   return (
     <>
       <Container>
-        <section className="relative min-h-[400px] px-10 py-20 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] after:absolute after:inset-0 after:bg-black/80">
+        <section className="relative min-h-[400px] px-2.5 py-4 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] after:absolute after:inset-0 after:bg-black/80 md:px-10 md:py-20">
           <picture>
             <source srcSet={webp} type="image/webp" />
             <img
@@ -75,7 +75,7 @@ const Kids_fitness_page = observer(() => {
       <Areas_study keys_list={directions} />
       <section className="py-10">
         <Container>
-          <Title>
+          <Title className="mb-3 md:mb-6 lg:mb-8 2xl:mb-12">
             <span className="text-customHeadDecor">Тренеры</span> направления
           </Title>
           <Team_list isActiveTab={team} />

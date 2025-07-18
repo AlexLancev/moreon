@@ -1,14 +1,14 @@
+import { toJS } from "mobx";
+import { observer } from "mobx-react-lite";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { observer } from "mobx-react-lite";
-import { toJS } from "mobx";
 
 import { Title } from "@/components";
 
+import { sizeRangesData } from "@/constans";
+import { numberVisiblePerformanceData } from "@/constans/numberVisibleElementsData";
 import { performance_data_store } from "@/stores/data_store";
 import { isEmptyObj, useGetResponsiveValue } from "@/utils";
-import { numberVisiblePerformanceData } from "@/constans/numberVisibleElementsData";
-import { sizeRangesData } from "@/constans";
 
 export const Performance = observer(({ data_key }: Performance_type) => {
   const { data, isLoading, isError } = performance_data_store;

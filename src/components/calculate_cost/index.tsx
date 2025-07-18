@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-
 import { Coins, Wallet } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import { Container, Radio_group, Range_slider, Title } from "@/components";
 

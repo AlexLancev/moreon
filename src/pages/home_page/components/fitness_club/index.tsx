@@ -1,5 +1,5 @@
-import { fitness_club_list } from "@/constans";
 import { Container, Title } from "@/components";
+import { fitness_club_list } from "@/constans";
 
 export const Fitness_club = () => {
   if (!fitness_club_list || fitness_club_list.length === 0) return null;

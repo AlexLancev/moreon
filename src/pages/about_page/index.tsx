@@ -1,4 +1,13 @@
 import {
+  Effective_training,
+  Every_card,
+  Stock,
+  Team,
+  Water_zone,
+} from "@/components";
+import { get_tabs_store } from "@/stores";
+
+import {
   About_questions,
   About_reviews,
   Fitness_area,
@@ -6,16 +15,6 @@ import {
   Personal_format,
   Profitable_visits,
 } from "./components";
-
-import { get_tabs_store } from "@/stores";
-
-import {
-  Effective_training,
-  Every_card,
-  Stock,
-  Team,
-  Water_zone,
-} from "@/components";
 
 const About_page = () => {
   return (

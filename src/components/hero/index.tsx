@@ -1,9 +1,12 @@
+import classNames from "classnames";
+
 import { modal_store } from "@/stores";
+
+import { validateImagePath } from "@/utils";
+
 import { Container } from "../container";
 import { Title } from "../title";
 import { Button } from "../ui/button";
-import classNames from "classnames";
-import { validateImagePath } from "@/utils";
 
 export const Hero = ({
   data,

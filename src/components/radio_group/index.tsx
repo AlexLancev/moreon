@@ -1,23 +1,9 @@
+import classNames from "classnames";
 import { useState, useEffect } from "react";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@radix-ui/react-tooltip";
-
-import { MessageCircleQuestion } from "lucide-react";
-
-import classNames from "classnames";
-
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@radix-ui/react-popover";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+
 import { RenderQuestion } from "./components/renderQuestion";
 
 type Options_data_type = {

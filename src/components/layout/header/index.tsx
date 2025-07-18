@@ -3,8 +3,8 @@ import { UserCheck, UserLock } from "lucide-react";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
-import session_store from "@/stores/session_store";
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import session_store from "@/stores/session_store";
 
 export const Header = observer(() => {
   const innerWidth = useGettingWindowWidth();

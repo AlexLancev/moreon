@@ -1,8 +1,8 @@
 import { Snowflake } from "lucide-react";
 
-import { Button } from "../ui/button";
-
 import { Container, Title } from "@/components";
+
+import { Button } from "../ui/button";
 
 export const Freeze_card = () => {
   return (

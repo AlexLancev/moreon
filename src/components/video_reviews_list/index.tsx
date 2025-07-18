@@ -1,12 +1,12 @@
 import { PlayCircleOutlined } from "@ant-design/icons";
+import { observer } from "mobx-react-lite";
 import { useState } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { observer } from "mobx-react-lite";
 
+import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 import { video_reviews_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
-import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 
 export const Video_reviews_list = observer(() => {
   const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
@@ -41,7 +41,7 @@ export const Video_reviews_list = observer(() => {
           },
           idx: number,
         ) => (
-          <SwiperSlide key={idx}>
+          <SwiperSlide key={idx} className="h-auto min-h-full">
             <button
               type="button"
               className="group w-full overflow-hidden rounded-3xl"
@@ -68,9 +68,7 @@ export const Video_reviews_list = observer(() => {
             {isVideoActive === idx && (
               <iframe
                 src={path}
-                className="overflow-hidden rounded-2xl"
-                width={320}
-                height={570}
+                className="min-h-full w-full overflow-hidden rounded-2xl"
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
                 allowFullScreen
               ></iframe>

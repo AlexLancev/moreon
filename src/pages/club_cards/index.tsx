@@ -6,9 +6,9 @@ import {
   Stock,
 } from "components";
 
-import { Club_cards_hero } from "./components";
-
 import { get_tabs_store } from "@/stores";
+
+import { Club_cards_hero } from "./components";
 
 const Club_cards = () => {
   return (

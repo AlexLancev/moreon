@@ -1,8 +1,7 @@
+import classNames from "classnames";
+import { menu_data } from "constans";
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import classNames from "classnames";
-
-import { menu_data } from "constans";
 
 type Menu_props_type = {
   className?: string;

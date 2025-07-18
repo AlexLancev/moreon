@@ -1,9 +1,8 @@
+import classNames from "classnames";
 import { useState } from "react";
 
-import classNames from "classnames";
-
-import { Slider } from "../ui/slider";
 import { Input } from "../ui/input";
+import { Slider } from "../ui/slider";
 
 type Range_slider_props_type = {
   onMonthsChange: (months: number) => void;

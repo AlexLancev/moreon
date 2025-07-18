@@ -1,5 +1,3 @@
-import { Services_hero } from "./components";
-
 import {
   Areas_study,
   Childrens_center,
@@ -11,6 +9,8 @@ import {
 } from "@/components";
 
 import { get_tabs_store } from "@/stores";
+
+import { Services_hero } from "./components";
 
 const keys_list: Direct_keys_type[] = [
   "mind_body",
@@ -30,7 +30,7 @@ const Services_page = () => {
   return (
     <>
       <Services_hero />
-      {/* <Areas_study keys_list={keys_list} />
+      <Areas_study keys_list={keys_list} />
       <Team tabs_store={get_tabs_store("component_team") as Team_key_type} />
       <Choose_your_card
         tabs_store={
@@ -44,7 +44,7 @@ const Services_page = () => {
           get_tabs_store("component_water_zone") as Water_zone_tabs_type
         }
       />
-      <Phyto_bar /> */}
+      <Phyto_bar />
     </>
   );
 };

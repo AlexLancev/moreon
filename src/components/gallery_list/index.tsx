@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { observer } from "mobx-react-lite";
 import { Eye } from "lucide-react";
-
-import { Button } from "../ui/button";
+import { observer } from "mobx-react-lite";
+import { useState } from "react";
 
 import { gallery_list_store } from "@/stores/data_store";
+
+import { Button } from "../ui/button";
 
 const num = 6;
 

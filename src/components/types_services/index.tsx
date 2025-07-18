@@ -1,18 +1,17 @@
 import { observer } from "mobx-react-lite";
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 
-import { ReactNode } from "react";
-
 import { Title } from "@/components";
 
-import { types_services_store } from "@/stores/data_store";
 import {
   numberVisibleElementsData,
   sizeRangesData,
   types_services_data_decor,
 } from "@/constans";
+import { types_services_store } from "@/stores/data_store";
 import { isEmptyObj, useGetResponsiveValue } from "@/utils";
 
 const render_icons = (path: Types_services_key): ReactNode | null => {
@@ -50,7 +49,6 @@ export const Types_services = observer(() => {
             className="relative flex h-auto flex-col items-start overflow-hidden rounded-3xl bg-[#031817] p-4 text-sm before:absolute before:left-0 before:top-0 before:z-[-1] before:h-[120px] before:w-full before:rotate-180 before:bg-[url('/images/decor_serv.svg')] before:bg-cover before:bg-no-repeat 2xl:before:h-[140px] 3xl:p-10 3xl:before:h-[160px]"
           >
             <Title
-              fontSize="md"
               headingType="md"
               className="mb-7 text-lg uppercase 2xl:text-2xl 3xl:text-3xl"
             >

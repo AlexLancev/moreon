@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
+import { MessageCircleQuestion } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
 import xss from "xss";
-
-import { MessageCircleQuestion } from "lucide-react";
-
-import { Button } from "../ui/button";
 
 import { Tabs, Container, Title } from "@/components";
 
-import { isEmptyObj, useGetResponsiveValue } from "@/utils";
 import { club_cards_store } from "@/stores/data_store";
-import { sizeTitleData } from "@/constans";
+import { isEmptyObj } from "@/utils";
+
+import { Button } from "../ui/button";
 
 const tab_list = [
   { key: "fitnes", category: "Фитнес" },
@@ -25,7 +23,6 @@ export const Choose_your_card = observer(
   ({ tabs_store }: { tabs_store: Club_cards_tabs_type }) => {
     const { isActiveTab, change_tabs } = tabs_store;
     const { data, isLoading, isError } = club_cards_store;
-    const size = useGetResponsiveValue<TitleSize>("md", sizeTitleData);
 
     const club_cards_bd = toJS(data?.[0]);
 
@@ -52,7 +49,7 @@ export const Choose_your_card = observer(
     return (
       <section className="py-12">
         <Container>
-          <Title fontSize={size} className="mb-4 lg:mb-8 3xl:mb-12">
+          <Title className="mb-4 lg:mb-8 3xl:mb-12">
             Выберите свою <span className="text-customHeadDecor">карту</span>
           </Title>
           <Tabs
@@ -60,22 +57,23 @@ export const Choose_your_card = observer(
             change_tabs={change_tabs}
             tab_list={tab_list}
           />
-          <div className="flex items-center gap-x-10 py-5">
-            <picture>
+          <div className="py-5 lg:flex lg:items-center lg:justify-evenly lg:gap-x-10">
+            <picture className="2xl:flex-shrink-0">
               <source srcSet={images_url?.webp} type="image/webp" />
               <img
-                width={590}
-                height={269}
+                className="m-auto mb-10 lg:mb-0"
                 src={images_url?.jpg}
                 alt=""
                 loading="lazy"
                 aria-hidden
               />
             </picture>
-            <div className="w-full max-w-[525px]">
-              <strong className="mb-3 block text-2xl text-white">{head}</strong>
+            <div className="w-full lg:max-w-[525px] 2xl:max-w-[825px]">
+              <strong className="mb-3 block text-2xl text-white 2xl:text-4xl">
+                {head}
+              </strong>
               <div
-                className="ab mb-5 text-lg"
+                className="customInsertCardPageHTML mb-5 text-lg 2xl:text-2xl 3xl:text-3xl"
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}
               ></div>
               <Button asChild>

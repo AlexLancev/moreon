@@ -1,9 +1,9 @@
 import { contacts_data } from "constans";
 
-import { Map_moreon } from "../map";
-
-import { isEmptyObj } from "@/utils";
 import { Container } from "@/components";
+import { isEmptyObj } from "@/utils";
+
+import { Map_moreon } from "../map";
 
 type Current_contacts_type = "address" | "phone" | "email";
 

@@ -1,7 +1,5 @@
 import { observer } from "mobx-react-lite";
 
-import { Personal_account_form } from "../personal_account_form";
-
 import {
   Dialog,
   DialogContent,
@@ -9,6 +7,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { personal_account_store } from "@/stores";
+
+import { Personal_account_form } from "../personal_account_form";
 
 export const Personal_account_modal = observer(() => {
   const { isVisibleModal, change_modal } = personal_account_store;

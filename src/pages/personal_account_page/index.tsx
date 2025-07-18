@@ -2,12 +2,12 @@ import { User } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Personal_account_modal } from "./personal_account_modal";
-
-import supabase from "@/data/supabase";
 import { Container } from "@/components";
 import { Button } from "@/components/ui/button";
+import supabase from "@/data/supabase";
 import { personal_account_store } from "@/stores";
+
+import { Personal_account_modal } from "./personal_account_modal";
 
 const Personal_account_page = () => {
   const { isVisibleModal, change_modal } = personal_account_store;

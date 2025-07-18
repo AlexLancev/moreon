@@ -2672,7 +2672,7 @@ const fitness_area_data = {
       jpg: "/images/fitness_area/result_zon_area_1.jpeg",
       webp: "/images/fitness_area/result_zon_area_1.webp",
     },
-    path: "training-room",
+    path: "group_training",
   },
   gym: {
     name_key: "gym",
@@ -2711,7 +2711,7 @@ const fitness_area_data = {
       jpg: "/images/fitness_area/result_zon_area_4.jpeg",
       webp: "/images/fitness_area/result_zon_area_4.webp",
     },
-    path: "cardio-room",
+    path: "aerobics",
   },
   martial_arts: {
     name_key: "martial_arts",
@@ -2724,7 +2724,7 @@ const fitness_area_data = {
       jpg: "/images/fitness_area/result_zon_area_5.jpeg",
       webp: "/images/fitness_area/result_zon_area_5.webp",
     },
-    path: "martial-arts",
+    path: "martial_arts",
   },
 };
 

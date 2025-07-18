@@ -6,7 +6,7 @@ export const Other_directions = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title>
+        <Title className="mb-3 md:mb-6 lg:mb-8 2xl:mb-12">
           Другие <span className="text-customHeadDecor">направления</span>
         </Title>
         <Directions_list keys_list={key_list} />

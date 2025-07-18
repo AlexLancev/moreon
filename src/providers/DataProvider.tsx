@@ -1,28 +1,6 @@
-import { useEffect, ReactNode } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { useEffect, ReactNode } from "react";
 
-import {
-  directions_store,
-  about_us_store,
-  club_cards_store,
-  every_card_store,
-  gallery_list_store,
-  news_store,
-  performance_data_store,
-  profitable_visits_store,
-  about_questions_store,
-  reviews_store,
-  stock_store,
-  team_store,
-  types_services_store,
-  video_reviews_store,
-  water_zone_store,
-  fitness_area_store,
-  personal_format_store,
-  other_directions_store,
-  childrens_swimming_store,
-  hero_store,
-} from "@/stores/data_store";
 import {
   directions_data,
   about_us_data,
@@ -46,6 +24,28 @@ import {
   hero_data,
 } from "@/data";
 import useSession from "@/hooks/useSession";
+import {
+  directions_store,
+  about_us_store,
+  club_cards_store,
+  every_card_store,
+  gallery_list_store,
+  news_store,
+  performance_data_store,
+  profitable_visits_store,
+  about_questions_store,
+  reviews_store,
+  stock_store,
+  team_store,
+  types_services_store,
+  video_reviews_store,
+  water_zone_store,
+  fitness_area_store,
+  personal_format_store,
+  other_directions_store,
+  childrens_swimming_store,
+  hero_store,
+} from "@/stores/data_store";
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   useSession();

@@ -1,15 +1,14 @@
-import { toJS } from "mobx";
-import { observer } from "mobx-react-lite";
-
 import { Container, Tabs, Title } from "components";
 
 import { NotebookText } from "lucide-react";
-
-import { Button } from "../ui/button";
+import { toJS } from "mobx";
+import { observer } from "mobx-react-lite";
 
 import { modal_store } from "@/stores";
-import { isEmptyObj } from "@/utils";
 import { water_zone_store } from "@/stores/data_store";
+import { isEmptyObj } from "@/utils";
+
+import { Button } from "../ui/button";
 
 const tab_list = [
   { key: "baths_swimming", category: "Бани и бассейны" },

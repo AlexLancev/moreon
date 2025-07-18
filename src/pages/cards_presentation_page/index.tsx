@@ -1,16 +1,16 @@
 import { toJS } from "mobx";
-import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import { useParams } from "react-router-dom";
 import xss from "xss";
+
+import { Container, Every_card } from "@/components";
+import { get_tabs_store } from "@/stores";
+import { club_cards_store } from "@/stores/data_store";
 
 import {
   Render_card_description,
   type Render_card_tabs_type,
 } from "./components/render_card_description";
-
-import { club_cards_store } from "@/stores/data_store";
-import { Container, Every_card } from "@/components";
-import { get_tabs_store } from "@/stores";
 
 const Cards_presentation_page = observer(() => {
   const { data, isLoading, isError } = club_cards_store;
@@ -33,7 +33,7 @@ const Cards_presentation_page = observer(() => {
 
   return (
     <Container>
-      <section className="relative px-10 py-12">
+      <section className="relative px-2.5 py-3 md:px-10 md:py-12 xl:text-xl 2xl:text-2xl">
         <picture>
           <source
             srcSet="/images/cards_presentation/classik.webp"
@@ -48,7 +48,7 @@ const Cards_presentation_page = observer(() => {
           />
         </picture>
         <div
-          className="customInsertCardPageHTML mb-5 max-w-[750px]"
+          className="customInsertCardPageHTML mb-5 max-w-[750px] 2xl:max-w-[950px]"
           dangerouslySetInnerHTML={{ __html: sanitized_hero_description }}
         ></div>
       </section>

@@ -1,17 +1,16 @@
+import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { observer } from "mobx-react-lite";
 
+import { numberVisibleTeamData } from "@/constans/numberVisibleElementsData";
+import { sizeRangesTeamData } from "@/constans/sizeRangesData";
 import { team_store } from "@/stores/data_store";
 import {
   filterDataByActiveTab,
   renderNumberSlides,
   useGetResponsiveValue,
 } from "@/utils";
-import { numberVisibleAboutUsData } from "@/constans";
-import { numberVisibleTeamData } from "@/constans/numberVisibleElementsData";
-import { sizeRangesTeamData } from "@/constans/sizeRangesData";
 
 export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
   const { data, isLoading, isError } = team_store;

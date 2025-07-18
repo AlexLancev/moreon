@@ -1,9 +1,8 @@
+import classNames from "classnames";
 import { createElement, type ReactNode } from "react";
 
-import classNames from "classnames";
-
-import { useGetResponsiveValue } from "@/utils";
 import { sizeTitleData } from "@/constans";
+import { useGetResponsiveValue } from "@/utils";
 
 type Title_props_type = {
   headingType?: TitleSize;

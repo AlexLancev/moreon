@@ -2,12 +2,12 @@ import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 
-import { Fitness_area, Profitable_visits } from "../about_page/components";
-
-import { team_store } from "@/stores/data_store";
 import { Container, Stock, Title } from "@/components";
 
 import { get_tabs_store } from "@/stores";
+import { team_store } from "@/stores/data_store";
+
+import { Fitness_area, Profitable_visits } from "../about_page/components";
 
 const Person_team_page = observer(() => {
   const { data, isLoading, isError } = team_store;
@@ -54,8 +54,8 @@ const Person_team_page = observer(() => {
                 aria-hidden
               />
             </picture>
-            <div className="ab max-w-[800px]">
-              <Title size="xl">{name_person}</Title>
+            <div className="customInsertHTML max-w-[800px]">
+              <Title>{name_person}</Title>
               <ul>
                 <li>{qualification}</li>
                 <li>Стаж работы: {work_experience}</li>

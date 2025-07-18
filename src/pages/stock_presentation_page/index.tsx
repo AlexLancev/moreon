@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import { useParams } from "react-router-dom";
 import xss from "xss";
 
-import { stock_store } from "@/stores/data_store";
-import { Container } from "@/components/container";
 import { Render_slider, Title } from "@/components";
+import { Container } from "@/components/container";
+import { stock_store } from "@/stores/data_store";
 
 const Stock_presentation_page = observer(() => {
   const { data, isLoading, isError } = stock_store;
@@ -28,7 +28,7 @@ const Stock_presentation_page = observer(() => {
 
   return (
     <Container>
-      <section className="relative px-10 py-20 before:absolute before:bottom-28 before:right-28 before:z-10 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px]">
+      <section className="relative px-2.5 py-4 before:absolute before:bottom-28 before:right-28 before:z-10 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] md:px-10 md:py-20">
         <picture>
           <source
             srcSet="/images/stock_presentation/trenerroom.webp"
@@ -42,23 +42,23 @@ const Stock_presentation_page = observer(() => {
             aria-hidden
           />
         </picture>
-        <div className="relative z-10 flex gap-x-12">
+        <div className="relative z-10 gap-x-12 md:flex md:justify-center">
           <picture>
             <source srcSet={url_images?.webp} type="image/webp" />
             <img
-              className="overflow-hidden rounded-3xl"
+              className="m-auto overflow-hidden rounded-3xl"
               src={url_images?.jpg}
               alt={description_picture}
               loading="lazy"
             />
           </picture>
           <div
-            className="customInsertHTML"
+            className="customInsertHTML xl:text-xl 2xl:text-3xl"
             dangerouslySetInnerHTML={{ __html: sanitized_description }}
           ></div>
         </div>
       </section>
-      <section className="relative px-10 py-20">
+      <section className="relative md:px-10 md:py-20">
         <picture>
           <source
             srcSet="/images/stock_presentation/salefon.webp"
@@ -72,7 +72,7 @@ const Stock_presentation_page = observer(() => {
             aria-hidden
           />
         </picture>
-        <Title>
+        <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
           Другие <span className="text-customHeadDecor">акции клуба</span>
         </Title>
         <Render_slider path={numeric_Id} type="stock" data={data} />

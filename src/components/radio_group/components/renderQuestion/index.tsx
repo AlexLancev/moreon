@@ -1,4 +1,3 @@
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 import {
   Popover,
   PopoverContent,
@@ -11,6 +10,8 @@ import {
 } from "@radix-ui/react-tooltip";
 import { MessageCircleQuestion } from "lucide-react";
 import { ReactNode } from "react";
+
+import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
 type RenderQuestionType = {
   children: ReactNode;

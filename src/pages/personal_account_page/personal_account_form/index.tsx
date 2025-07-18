@@ -1,8 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-import { useState } from "react";
-
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Form,
   FormControl,
@@ -11,10 +12,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { UserFormSchema } from "@/schema";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { UserFormSchema } from "@/schema";
 
 export const Personal_account_form = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -28,9 +27,12 @@ export const Personal_account_form = () => {
     },
   });
 
+  // <Calendar />
+
   const { isSubmitting } = form.formState;
 
   const onSubmit = () => {
+    console.log('object')
     form.reset();
   };
 
@@ -80,8 +82,6 @@ export const Personal_account_form = () => {
             )}
           />
         </div>
-
-        <Calendar />
 
         <Button
           type="submit"

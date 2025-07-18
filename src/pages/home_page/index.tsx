@@ -1,14 +1,4 @@
 import {
-  Club_news,
-  Dream_body,
-  Fitness_club,
-  Home_hero,
-  Other_directions,
-  Our_application,
-  Video_reviews,
-} from "./components";
-
-import {
   About_us,
   Calculate_cost,
   Contacts,
@@ -19,6 +9,16 @@ import {
 } from "@/components";
 
 import { get_tabs_store } from "@/stores";
+
+import {
+  Club_news,
+  Dream_body,
+  Fitness_club,
+  Home_hero,
+  Other_directions,
+  Our_application,
+  Video_reviews,
+} from "./components";
 
 const Home_page = () => {
   return (

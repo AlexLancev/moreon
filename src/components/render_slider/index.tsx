@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { numberVisibleElementsData, sizeRangesData } from "@/constans";
+import { useGetResponsiveValue } from "@/utils";
+
 export const Render_slider = ({
   data,
   path,
@@ -11,13 +14,18 @@ export const Render_slider = ({
   path: number;
   type: string;
 }) => {
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    3,
+    numberVisibleElementsData,
+  );
   if (!data || !path || !type) return null;
 
   return (
     <Swiper
       modules={[Pagination]}
-      spaceBetween={20}
-      slidesPerView={3}
+      spaceBetween={indentationSlide}
+      slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
       {data

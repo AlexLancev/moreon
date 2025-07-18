@@ -1,9 +1,5 @@
-import { NotebookText } from "lucide-react";
-
-import { Container, Hero, Title } from "@/components";
-import { Button } from "@/components/ui/button";
+import { Hero } from "@/components";
 import { kids_fitnes_hero_data } from "@/constans";
-import { modal_store } from "@/stores";
 import { kidsFitnesData } from "@/constans/heroData";
 
 export const Kids_fitnes_hero = () => {

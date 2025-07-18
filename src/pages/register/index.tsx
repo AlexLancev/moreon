@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import supabase from "@/data/supabase";
 import { AuthForm } from "@/AuthForm";
+import supabase from "@/data/supabase";
 
 const Register = () => {
   const navigate = useNavigate();

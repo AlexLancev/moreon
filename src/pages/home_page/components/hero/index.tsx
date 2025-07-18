@@ -1,10 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import { Link } from "react-router-dom";
-
 import { HandCoins, MessageCircleQuestion } from "lucide-react";
 
 import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
+import { Pagination, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Container, Render_image } from "@/components";
 import { Button } from "@/components/ui/button";
@@ -23,6 +22,7 @@ export const Home_hero = observer(() => {
   return (
     <section className="m-auto w-full">
       <Swiper
+        className="pb-44 xxs:pb-32 lg:pb-16"
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
@@ -57,7 +57,7 @@ export const Home_hero = observer(() => {
               />
               <Container>
                 <div className="relative">
-                  <div className="absolute z-10 flex -translate-y-[8rem] items-center gap-x-5 text-white 2xl:-translate-y-[12rem]">
+                  <div className="absolute z-10 grid w-full translate-y-[1rem] items-center gap-3 text-white xxs:grid-cols-2 lg:w-[400px] lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
                     <Button asChild>
                       <Link to={`/stock/${id}`}>
                         Узнать подробнее <MessageCircleQuestion />

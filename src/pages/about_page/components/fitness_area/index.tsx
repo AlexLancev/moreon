@@ -1,15 +1,13 @@
-import { observer } from "mobx-react-lite";
-import { toJS } from "mobx";
-
 import { Container, Tabs, Title } from "components";
-
 import { MessageCircleQuestion } from "lucide-react";
+import { toJS } from "mobx";
+import { observer } from "mobx-react-lite";
 
 import { Link } from "react-router-dom";
 
+import { Button } from "@/components/ui/button";
 import { fitness_area_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
-import { Button } from "@/components/ui/button";
 
 const tab_list = [
   { key: "gym", category: "Тренажёрный зал" },
@@ -64,7 +62,7 @@ export const Fitness_area = observer(
                 {description}
               </p>
               <Button asChild>
-                <Link to={path}>
+                <Link to={`/services/${path}`}>
                   Подробнее <MessageCircleQuestion />
                 </Link>
               </Button>

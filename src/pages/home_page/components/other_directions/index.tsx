@@ -1,12 +1,13 @@
 import { observer } from "mobx-react-lite";
 
-import { other_directions_store } from "@/stores/data_store";
-import { Container } from "@/components";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import { useGetResponsiveValue } from "@/utils";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Container } from "@/components";
 import { sizeRangesData } from "@/constans";
 import { numberVisibleOtherDirectionsData } from "@/constans/numberVisibleElementsData";
+import { other_directions_store } from "@/stores/data_store";
+import { useGetResponsiveValue } from "@/utils";
 
 export const Other_directions = observer(() => {
   const { data, isLoading, isError } = other_directions_store;

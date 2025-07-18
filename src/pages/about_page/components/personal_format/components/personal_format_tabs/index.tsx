@@ -1,12 +1,11 @@
-import { useState } from "react";
+import classNames from "classnames";
+import { Tabs } from "components";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
+import { useState } from "react";
 
-import { Tabs } from "components";
-
-import { isEmptyObj } from "@/utils";
 import { personal_format_store } from "@/stores/data_store";
-import classNames from "classnames";
+import { isEmptyObj } from "@/utils";
 
 export const Personal_format_tabs = observer(
   ({ data_key, tabs_store, className }: Personal_format_tabs_type) => {

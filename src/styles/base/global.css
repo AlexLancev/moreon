@@ -124,7 +124,6 @@ body.lock {
     padding: 10px 0;
 
     h1 {
-      font-size: 35px;
       margin-bottom: 30px;
     }
 
@@ -140,6 +139,11 @@ body.lock {
     b {
       display: block;
       margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 5px;
     }
 
     ul {
@@ -207,6 +211,11 @@ body.lock {
 
     h3 {
       font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    b {
+      display: block;
       margin-bottom: 10px;
     }
 
