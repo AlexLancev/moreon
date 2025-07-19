@@ -6,6 +6,7 @@ import { Title } from "@/components";
 import { cn } from "@/lib/utils";
 
 import { about_questions_store } from "@/stores/data_store";
+
 import { AccessibleButton } from "../ui/accessibleButton";
 
 export const Questions = observer(() => {

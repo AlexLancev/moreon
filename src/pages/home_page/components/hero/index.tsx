@@ -9,6 +9,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Container, Render_image } from "@/components";
+import { AnchorLink } from "@/components/ui/anchorLink";
 import { Button } from "@/components/ui/button";
 import { hero_store } from "@/stores/data_store";
 
@@ -60,17 +61,17 @@ export const Home_hero = observer(() => {
               />
               <Container>
                 <div className="relative">
-                  <div className="absolute z-10 grid lg:flex w-full translate-y-[1rem] items-center gap-3 text-white xxs:grid-cols-2 lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
+                  <div className="absolute z-10 grid w-full translate-y-[1rem] items-center gap-3 text-white xxs:grid-cols-2 lg:flex lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
                     <Button asChild className="mt-0 lg:w-fit">
                       <Link to={`/stock/${id}`}>
                         Узнать подробнее <IconMessageCircleQuestion />
                       </Link>
                     </Button>
                     <Button asChild className="mt-0 lg:w-fit">
-                      <a className="customGreyBtn" href="#price-calc">
+                      <AnchorLink className="customGreyBtn">
                         Рассчитать стоимость
                         <IconHandCoins />
-                      </a>
+                      </AnchorLink>
                     </Button>
                   </div>
                 </div>

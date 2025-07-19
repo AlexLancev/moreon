@@ -4,8 +4,8 @@ import { useState } from "react";
 
 import { gallery_list_store } from "@/stores/data_store";
 
-import { Button } from "../ui/button";
 import { AccessibleButton } from "../ui/accessibleButton";
+import { Button } from "../ui/button";
 
 const num = 6;
 

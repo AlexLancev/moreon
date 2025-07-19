@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { numberVisibleVideoReviewsData, sizeRangesData } from "@/constans";
 import { video_reviews_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
+
 import { AccessibleButton } from "../ui/accessibleButton";
 
 export const Video_reviews_list = observer(() => {
