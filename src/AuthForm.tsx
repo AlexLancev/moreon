@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AccessibleButton } from "./components/ui/accessibleButton";
 
 type AuthFormProps = {
   onSubmit: (email: string, password: string) => Promise<void>;
@@ -39,7 +40,7 @@ export const AuthForm = ({
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">{submitButtonText}</button>
+        <AccessibleButton type="submit">{submitButtonText}</AccessibleButton>
       </form>
     </div>
   );

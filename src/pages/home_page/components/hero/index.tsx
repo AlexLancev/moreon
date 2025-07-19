@@ -25,7 +25,7 @@ export const Home_hero = observer(() => {
   return (
     <section className="m-auto w-full">
       <Swiper
-        className="pb-44 xxs:pb-32 lg:pb-16"
+        className="pb-44 xxs:pb-32 lg:pb-16 2xl:pb-24"
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
@@ -60,13 +60,13 @@ export const Home_hero = observer(() => {
               />
               <Container>
                 <div className="relative">
-                  <div className="absolute z-10 grid w-full translate-y-[1rem] items-center gap-3 text-white xxs:grid-cols-2 lg:w-[400px] lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
-                    <Button asChild>
+                  <div className="absolute z-10 grid lg:flex w-full translate-y-[1rem] items-center gap-3 text-white xxs:grid-cols-2 lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
+                    <Button asChild className="mt-0 lg:w-fit">
                       <Link to={`/stock/${id}`}>
                         Узнать подробнее <IconMessageCircleQuestion />
                       </Link>
                     </Button>
-                    <Button asChild>
+                    <Button asChild className="mt-0 lg:w-fit">
                       <a className="customGreyBtn" href="#price-calc">
                         Рассчитать стоимость
                         <IconHandCoins />

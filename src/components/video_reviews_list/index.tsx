@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { numberVisibleVideoReviewsData, sizeRangesData } from "@/constans";
 import { video_reviews_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
+import { AccessibleButton } from "../ui/accessibleButton";
 
 export const Video_reviews_list = observer(() => {
   const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
@@ -42,8 +43,7 @@ export const Video_reviews_list = observer(() => {
           idx: number,
         ) => (
           <SwiperSlide key={idx} className="h-auto min-h-full">
-            <button
-              type="button"
+            <AccessibleButton
               className="group w-full overflow-hidden rounded-3xl"
               style={{ display: `${isVideoActive === idx ? "none" : "block"}` }}
               onClick={() =>
@@ -62,7 +62,7 @@ export const Video_reviews_list = observer(() => {
                 />
               </picture>
               <PlayCircleOutlined className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-6xl text-[#33b0aa] after:absolute after:left-1/2 after:top-1/2 after:-z-10 after:h-[150%] after:w-[150%] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-[rgba(191,191,191,0.278)] after:duration-500 group-hover:after:h-[180%] group-hover:after:w-[180%] group-hover:after:bg-[rgba(255,255,255,0.3)]" />
-            </button>
+            </AccessibleButton>
             {isVideoActive === idx && (
               <iframe
                 src={path}

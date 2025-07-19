@@ -10,6 +10,8 @@ import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 import { about_us_store } from "@/stores/data_store";
 import { renderNumberSlides, useGetResponsiveValue } from "@/utils";
 
+import { AccessibleButton } from "../ui/accessibleButton";
+
 export const About_us_list = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const { data, isLoading, isError } = about_us_store;
@@ -32,11 +34,11 @@ export const About_us_list = observer(() => {
         .slice(startIndex, endIndex)
         .map(({ title, description }, idx: number) => {
           const currentIndex = startIndex + idx;
+
           return (
-            <button
-              key={title ?? idx}
+            <AccessibleButton
+              key={idx}
               className="w-full rounded-2xl bg-tabs-gradient-custom p-3 pr-10 text-left hover:bg-tabs-hover-gradient-custom xl:p-4 xl:pr-12 2xl:p-6 2xl:pr-14"
-              type="button"
               onClick={() =>
                 setVisibleIndex(
                   visibleIndex === currentIndex ? null : currentIndex,
@@ -61,7 +63,7 @@ export const About_us_list = observer(() => {
               >
                 {description}
               </p>
-            </button>
+            </AccessibleButton>
           );
         })}
     </SwiperSlide>

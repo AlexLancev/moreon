@@ -12,6 +12,7 @@ import { MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react
 import { ReactNode } from "react";
 
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { AccessibleButton } from "@/components/ui/accessibleButton";
 
 type RenderQuestionType = {
   children: ReactNode;
@@ -23,18 +24,18 @@ export const RenderQuestion = ({ children }: RenderQuestionType) => {
   return innerWidth > 768 ? (
     <Tooltip>
       <TooltipTrigger asChild>
-        <button type="button" className="-translate-y-2">
+        <AccessibleButton className="-translate-y-2">
           <IconMessageCircleQuestion size={14} strokeWidth={1.5} />
-        </button>
+        </AccessibleButton>
       </TooltipTrigger>
       <TooltipContent>{children}</TooltipContent>
     </Tooltip>
   ) : (
     <Popover>
       <PopoverTrigger asChild>
-        <button type="button" className="-translate-y-2">
+        <AccessibleButton className="-translate-y-2">
           <IconMessageCircleQuestion size={14} strokeWidth={1.5} />
-        </button>
+        </AccessibleButton>
       </PopoverTrigger>
       <PopoverContent>{children}</PopoverContent>
     </Popover>

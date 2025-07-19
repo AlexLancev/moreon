@@ -5,6 +5,7 @@ import { useState } from "react";
 import { gallery_list_store } from "@/stores/data_store";
 
 import { Button } from "../ui/button";
+import { AccessibleButton } from "../ui/accessibleButton";
 
 const num = 6;
 
@@ -32,7 +33,7 @@ export const Gallery_list = observer(() => {
           .slice(0, visibleShow)
           .map(({ description, images_url: { jpg } }, idx: number) => (
             <li key={idx} className="h-full overflow-hidden rounded-3xl">
-              <button type="button" className="block h-full">
+              <AccessibleButton className="block h-full">
                 <span className="visually-hidden">{description}</span>
                 <picture>
                   <source srcSet={jpg} type="image/webp" />
@@ -43,12 +44,12 @@ export const Gallery_list = observer(() => {
                     loading="lazy"
                   />
                 </picture>
-              </button>
+              </AccessibleButton>
             </li>
           ))}
       </ul>
       {data.length > visibleShow && (
-        <Button onClick={handleVisibleShow} className="m-auto mt-5 flex">
+        <Button onClick={handleVisibleShow} className="m-auto flex">
           Показать ещё <IconEye />
         </Button>
       )}

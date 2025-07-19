@@ -78,7 +78,7 @@ export const Footer = () => {
                 if (!path && !description) return null;
 
                 return (
-                  <li key={id ?? idx}>
+                  <li key={idx}>
                     <a
                       href={path}
                       className="duration-300 hover:text-white 3xl:text-xl"

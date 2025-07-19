@@ -45,7 +45,7 @@ export const Types_services = observer(() => {
       >
         {data.map(({ head, description, path }, idx: number) => (
           <SwiperSlide
-            key={head ?? idx}
+            key={idx}
             className="relative flex h-auto flex-col items-start overflow-hidden rounded-3xl bg-[#031817] p-4 text-sm before:absolute before:left-0 before:top-0 before:z-[-1] before:h-[120px] before:w-full before:rotate-180 before:bg-[url('/images/decor_serv.svg')] before:bg-cover before:bg-no-repeat 2xl:before:h-[140px] 3xl:p-10 3xl:before:h-[160px]"
           >
             <Title

@@ -229,9 +229,9 @@ const Personal_account_page = () => {
           />
         </div>
 
-        <button type="submit" disabled={profileLoading}>
+        <AccessibleButton type="submit" disabled={profileLoading}>
           {profileLoading ? "Сохранение..." : "Сохранить"}
-        </button>
+        </AccessibleButton>
       </form> */}
 
       <div className="flex items-center gap-x-5">

@@ -45,7 +45,7 @@ export const App_store = ({ className }: App_store_props_type) => {
             if (!path && !description && !images) return null;
 
             return (
-              <li key={id ?? idx}>
+              <li key={idx}>
                 <a
                   href={path}
                   title={description}

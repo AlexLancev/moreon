@@ -6,6 +6,7 @@ import { Title } from "@/components";
 import { cn } from "@/lib/utils";
 
 import { about_questions_store } from "@/stores/data_store";
+import { AccessibleButton } from "../ui/accessibleButton";
 
 export const Questions = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
@@ -27,12 +28,11 @@ export const Questions = observer(() => {
 
         return (
           <li key={idx} className="mb-2">
-            <button
+            <AccessibleButton
               key={idx}
               className={cn(
                 "w-full rounded-2xl bg-tabs-gradient-custom p-3 pr-10 text-left hover:bg-tabs-hover-gradient-custom xl:p-4 xl:pr-12 2xl:p-6 2xl:pr-14",
               )}
-              type="button"
               onClick={() => setVisibleIndex(visibleIndex === idx ? null : idx)}
             >
               <Title
@@ -51,7 +51,7 @@ export const Questions = observer(() => {
                 )}
                 dangerouslySetInnerHTML={{ __html: sanitized_description }}
               ></div>
-            </button>
+            </AccessibleButton>
           </li>
         );
       })}
