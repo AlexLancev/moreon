@@ -1,4 +1,4 @@
-import { ClipboardPen } from "lucide-react";
+import { ClipboardPen as IconClipboardPen } from "lucide-react";
 
 import { Container, Title } from "@/components";
 import { modal_store } from "@/stores";
@@ -66,7 +66,7 @@ export const Childrens_center = () => {
             </p>
             <Button onClick={() => change_modal(!isVisibleModal)}>
               Записаться на бесплатное пробное занятие
-              <ClipboardPen size={20} />
+              <IconClipboardPen size={20} />
             </Button>
           </div>
         </div>

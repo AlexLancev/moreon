@@ -1,4 +1,4 @@
-import { NotebookText } from "lucide-react";
+import { NotebookText as IconNotebookText } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { useLocation } from "react-router-dom";
@@ -53,7 +53,7 @@ const Current_direction_page = observer(() => {
             dangerouslySetInnerHTML={{ __html: sanitized_description }}
           ></div>
           <Button onClick={() => change_modal(!isVisibleModal)}>
-            Гостевой визит <NotebookText />
+            Гостевой визит <IconNotebookText />
           </Button>
         </div>
       </section>

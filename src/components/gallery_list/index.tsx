@@ -1,4 +1,4 @@
-import { Eye } from "lucide-react";
+import { Eye as IconEye } from "lucide-react";
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
 
@@ -49,7 +49,7 @@ export const Gallery_list = observer(() => {
       </ul>
       {data.length > visibleShow && (
         <Button onClick={handleVisibleShow} className="m-auto mt-5 flex">
-          Показать ещё <Eye />
+          Показать ещё <IconEye />
         </Button>
       )}
     </>

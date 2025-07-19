@@ -1,4 +1,4 @@
-import { Snowflake } from "lucide-react";
+import { Snowflake as IconSnowflake } from "lucide-react";
 
 import { Container, Title } from "@/components";
 
@@ -29,7 +29,7 @@ export const Freeze_card = () => {
               занятия фитнесом.
             </p>
             <Button>
-              Заморозить карту <Snowflake />
+              Заморозить карту <IconSnowflake />
             </Button>
           </div>
           <div className="relative after:absolute after:inset-0 after:h-full after:w-full after:bg-freeze-gradient-custom">

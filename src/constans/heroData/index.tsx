@@ -1,4 +1,7 @@
-import { IdCard, NotebookText } from "lucide-react";
+import {
+  IdCard as IconIdCard,
+  NotebookText as IconNotebookText,
+} from "lucide-react";
 
 export const servicesData: HeroDataType = {
   title: {
@@ -11,7 +14,7 @@ export const servicesData: HeroDataType = {
   },
   button: {
     label: "Гостевой визит",
-    iconBtn: <NotebookText />,
+    iconBtn: <IconNotebookText />,
   },
 };
 
@@ -25,7 +28,7 @@ export const teamData: HeroDataType = {
   },
   button: {
     label: "Гостевой визит",
-    iconBtn: <NotebookText />,
+    iconBtn: <IconNotebookText />,
   },
 };
 
@@ -39,7 +42,7 @@ export const clubCardsData: HeroDataType = {
   },
   button: {
     label: "Выбрать клубную карту",
-    iconBtn: <IdCard />,
+    iconBtn: <IconIdCard />,
   },
 };
 
@@ -53,7 +56,7 @@ export const saunasPoolsData: HeroDataType = {
   },
   button: {
     label: "Гостевой визит",
-    iconBtn: <NotebookText />,
+    iconBtn: <IconNotebookText />,
   },
 };
 
@@ -67,6 +70,6 @@ export const kidsFitnesData: HeroDataType = {
   },
   button: {
     label: "Гостевой визит",
-    iconBtn: <NotebookText />,
+    iconBtn: <IconNotebookText />,
   },
 };

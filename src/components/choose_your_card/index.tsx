@@ -1,4 +1,4 @@
-import { MessageCircleQuestion } from "lucide-react";
+import { MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
@@ -78,7 +78,7 @@ export const Choose_your_card = observer(
               ></div>
               <Button asChild>
                 <Link to={`/presentation_cards/${path}`}>
-                  Подробнее <MessageCircleQuestion />
+                  Подробнее <IconMessageCircleQuestion />
                 </Link>
               </Button>
             </div>

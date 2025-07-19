@@ -1,4 +1,4 @@
-import { NotebookText } from "lucide-react";
+import { NotebookText as IconNotebookText } from "lucide-react";
 
 import { Container, Title } from "@/components";
 import { Button } from "@/components/ui/button";
@@ -47,7 +47,7 @@ export const Childrens_center = () => {
               развития личности!
             </p>
             <Button onClick={() => change_modal(!isVisibleModal)}>
-              Гостевой визит <NotebookText />
+              Гостевой визит <IconNotebookText />
             </Button>
           </div>
         </div>

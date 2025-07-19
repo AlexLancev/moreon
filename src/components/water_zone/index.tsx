@@ -1,6 +1,6 @@
 import { Container, Tabs, Title } from "components";
 
-import { NotebookText } from "lucide-react";
+import { NotebookText as IconNotebookText } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
@@ -76,7 +76,7 @@ export const Water_zone = observer(
                   {description}
                 </p>
                 <Button onClick={() => change_modal(!isVisibleModal)}>
-                  Записаться на гостевой визит <NotebookText />
+                  Записаться на гостевой визит <IconNotebookText />
                 </Button>
               </div>
               <picture>

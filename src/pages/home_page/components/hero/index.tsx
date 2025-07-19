@@ -1,4 +1,4 @@
-import { HandCoins, MessageCircleQuestion } from "lucide-react";
+import { HandCoins as IconHandCoins, MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react";
 
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
@@ -60,13 +60,13 @@ export const Home_hero = observer(() => {
                   <div className="absolute z-10 grid w-full translate-y-[1rem] items-center gap-3 text-white xxs:grid-cols-2 lg:w-[400px] lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
                     <Button asChild>
                       <Link to={`/stock/${id}`}>
-                        Узнать подробнее <MessageCircleQuestion />
+                        Узнать подробнее <IconMessageCircleQuestion />
                       </Link>
                     </Button>
                     <Button asChild>
                       <a className="customGreyBtn" href="#price-calc">
                         Рассчитать стоимость
-                        <HandCoins />
+                        <IconHandCoins />
                       </a>
                     </Button>
                   </div>

@@ -1,5 +1,5 @@
 import { Tabs } from "components";
-import { MessageCircleQuestion } from "lucide-react";
+import { MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
@@ -69,7 +69,7 @@ export const Childrens_swimming_tabs = observer(
             ></div>
             <Button asChild>
               <Link to={`/services/${path}`}>
-                Подробнее <MessageCircleQuestion />
+                Подробнее <IconMessageCircleQuestion />
               </Link>
             </Button>
           </div>

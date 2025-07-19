@@ -1,5 +1,5 @@
 import { Menu, Feedback, Social, Logo, Container } from "components";
-import { UserCheck, UserLock } from "lucide-react";
+import { UserCheck as IconUserCheck, UserLock as IconUserLock } from "lucide-react";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
@@ -22,9 +22,9 @@ export const Header = observer(() => {
             >
               {innerWidth > 945 && <span>Личный кабинет</span>}
               {session_store && session_store.isActiveSession ? (
-                <UserCheck className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
+                <IconUserCheck className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
               ) : (
-                <UserLock className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
+                <IconUserLock className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
               )}
             </Link>
           </div>

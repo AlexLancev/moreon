@@ -1,4 +1,4 @@
-import { Coins, Wallet } from "lucide-react";
+import { Coins as IconCoins, Wallet as IconWallet } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { Container, Radio_group, Range_slider, Title } from "@/components";
@@ -49,13 +49,13 @@ export const Calculate_cost = () => {
         id="price-calc"
         className="before:clip-[polygon(0_0,_100%_0,_100%_100%,_0_25%)] relative overflow-hidden rounded-3xl p-4 before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-[#33b0aa] before:opacity-10 before:[-webkit-clip-path:polygon(0_0,_100%_0,_100%_100%,_0_25%)] md:p-6 lg:p-8 xl:p-10 2xl:p-12"
       >
-        <Wallet
+        <IconWallet
           className="absolute bottom-[1rem] right-[40rem] -z-10 rotate-45 opacity-5"
           size={348}
           color="#555555"
           strokeWidth={1.5}
         />
-        <Coins
+        <IconCoins
           className="absolute left-[16rem] top-[10rem] -z-10 opacity-5"
           size={348}
           color="#555555"

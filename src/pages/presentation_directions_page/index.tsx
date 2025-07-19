@@ -1,4 +1,4 @@
-import { NotebookText } from "lucide-react";
+import { NotebookText as IconNotebookText } from "lucide-react";
 import { toJS } from "mobx";
 
 import { observer } from "mobx-react-lite";
@@ -67,7 +67,7 @@ const Kids_fitness_page = observer(() => {
               dangerouslySetInnerHTML={{ __html: description }}
             ></div>
             <Button onClick={() => change_modal(!isVisibleModal)}>
-              Гостевой визит <NotebookText />
+              Гостевой визит <IconNotebookText />
             </Button>
           </div>
         </section>

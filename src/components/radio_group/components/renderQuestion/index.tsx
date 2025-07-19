@@ -8,7 +8,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@radix-ui/react-tooltip";
-import { MessageCircleQuestion } from "lucide-react";
+import { MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react";
 import { ReactNode } from "react";
 
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
@@ -24,7 +24,7 @@ export const RenderQuestion = ({ children }: RenderQuestionType) => {
     <Tooltip>
       <TooltipTrigger asChild>
         <button type="button" className="-translate-y-2">
-          <MessageCircleQuestion size={14} strokeWidth={1.5} />
+          <IconMessageCircleQuestion size={14} strokeWidth={1.5} />
         </button>
       </TooltipTrigger>
       <TooltipContent>{children}</TooltipContent>
@@ -33,7 +33,7 @@ export const RenderQuestion = ({ children }: RenderQuestionType) => {
     <Popover>
       <PopoverTrigger asChild>
         <button type="button" className="-translate-y-2">
-          <MessageCircleQuestion size={14} strokeWidth={1.5} />
+          <IconMessageCircleQuestion size={14} strokeWidth={1.5} />
         </button>
       </PopoverTrigger>
       <PopoverContent>{children}</PopoverContent>

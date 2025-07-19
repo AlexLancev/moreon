@@ -1,5 +1,5 @@
 import { Container, Tabs, Title } from "components";
-import { MessageCircleQuestion } from "lucide-react";
+import { MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
@@ -63,7 +63,7 @@ export const Fitness_area = observer(
               </p>
               <Button asChild>
                 <Link to={`/services/${path}`}>
-                  Подробнее <MessageCircleQuestion />
+                  Подробнее <IconMessageCircleQuestion />
                 </Link>
               </Button>
             </div>
