@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { useState } from "react";
+
+import { cn } from "@/lib/utils";
 
 import { Input } from "../ui/input";
 import { Slider } from "../ui/slider";
@@ -43,7 +44,7 @@ export const Range_slider = ({
 
   const [idx] = sliderValue;
   return (
-    <div className={classNames("", className)}>
+    <div className={cn("", className)}>
       <strong className="mb-5 block text-xl xl:mb-6 xl:text-2xl 2xl:text-3xl">
         Количество месяцев
       </strong>

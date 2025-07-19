@@ -9,4 +9,5 @@ export { sizeRangesData } from "./sizeRangesData";
 export {
   numberVisibleElementsData,
   numberVisibleAboutUsData,
+  numberVisibleVideoReviewsData,
 } from "./numberVisibleElementsData";

@@ -1,5 +1,8 @@
 import { isPast } from "date-fns";
-import { ChevronLeft as IconChevronLeft, ChevronRight as IconChevronRight } from "lucide-react";
+import {
+  ChevronLeft as IconChevronLeft,
+  ChevronRight as IconChevronRight,
+} from "lucide-react";
 import * as React from "react";
 import { DayPicker } from "react-day-picker";
 

@@ -1,7 +1,7 @@
-import classNames from "classnames";
 import { createElement, type ReactNode } from "react";
 
 import { sizeTitleData } from "@/constans";
+import { cn } from "@/lib/utils";
 import { useGetResponsiveValue } from "@/utils";
 
 type Title_props_type = {
@@ -42,7 +42,7 @@ export const Title = ({
   return createElement(
     mapTagBySize[headingType],
     {
-      className: classNames(
+      className: cn(
         "text-white leading-[1.4] font-familyDelaGothicOne",
         mapClassNameBySize?.[fontSize],
         className,

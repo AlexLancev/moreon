@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import {
   Form,
   FormControl,
@@ -32,7 +31,7 @@ export const Personal_account_form = () => {
   const { isSubmitting } = form.formState;
 
   const onSubmit = () => {
-    console.log('object')
+    console.log("object");
     form.reset();
   };
 

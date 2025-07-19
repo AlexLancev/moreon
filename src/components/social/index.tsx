@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { cn } from "@/lib/utils";
 
 const data_social = [
   {
@@ -31,7 +31,7 @@ type Social_props_type = {
 export const Social = ({ className }: Social_props_type) => {
   return (
     <ul
-      className={classNames(
+      className={cn(
         "flex items-center gap-x-7 2xl:gap-x-8 3xl:gap-x-8",
         className,
       )}

@@ -4,7 +4,18 @@ import { Container, Title } from "@/components";
 import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
 
-const martial_arts_children_directions = [
+type MartialArtsDirectionsKeyType =
+  | "бокс"
+  | "тайский бокс"
+  | "кикбоксинг"
+  | "ММА";
+
+type MartialArtsDirectionsType = Record<
+  "description",
+  MartialArtsDirectionsKeyType
+>;
+
+const martial_arts_children_directions: MartialArtsDirectionsType[] = [
   {
     description: "бокс",
   },

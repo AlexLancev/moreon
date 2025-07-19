@@ -1,7 +1,7 @@
-import classNames from "classnames";
 import { contacts_data } from "constans";
 
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { cn } from "@/lib/utils";
 import { isEmptyObj } from "@/utils";
 
 type feedback_data_type = "address" | "phone";
@@ -20,10 +20,7 @@ export const Feedback = ({ className }: Feedback_props_type) => {
     !feedback_data ||
     (feedback_data.length !== 0 && (
       <ul
-        className={classNames(
-          "flex gap-x-7 text-[rgba(255,255,255,0.8)]",
-          className,
-        )}
+        className={cn("flex gap-x-7 text-[rgba(255,255,255,0.8)]", className)}
       >
         {feedback_data?.map((contact, idx: number) => (
           <li key={idx}>

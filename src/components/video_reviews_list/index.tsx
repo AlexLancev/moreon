@@ -4,17 +4,17 @@ import { useState } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
+import { numberVisibleVideoReviewsData, sizeRangesData } from "@/constans";
 import { video_reviews_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
 
 export const Video_reviews_list = observer(() => {
   const [isVideoActive, setIsVideoActive] = useState<null | number>(null);
   const { data, isLoading, isError } = video_reviews_store;
-  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const indentationSlide = useGetResponsiveValue<number>(15, sizeRangesData);
   const quantitySlide = useGetResponsiveValue<number>(
     1,
-    numberVisibleAboutUsData,
+    numberVisibleVideoReviewsData,
   );
 
   if (isLoading) return <div>Загрузка...</div>;
@@ -53,9 +53,7 @@ export const Video_reviews_list = observer(() => {
               <picture>
                 <source srcSet={webp} type="image/webp" />
                 <img
-                  className="block w-full duration-700 hover:scale-[1.1]"
-                  width={320}
-                  height={570}
+                  className="block h-[400px] w-full object-cover duration-700 hover:scale-[1.1] lg:h-auto"
                   src={jpg}
                   alt={description}
                   aria-label={description}

@@ -46,3 +46,9 @@ export const numberVisibleReviewsData: sizeRangesType[] = [
   { min: 768, meaning: 2 },
   { min: 425, max: 768, meaning: 1 },
 ];
+
+export const numberVisibleVideoReviewsData: sizeRangesType[] = [
+  { min: 768, meaning: 4 },
+  { min: 525, max: 768, meaning: 3 },
+  { min: 375, max: 525, meaning: 2 },
+];

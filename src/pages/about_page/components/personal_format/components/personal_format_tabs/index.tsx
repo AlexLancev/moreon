@@ -1,8 +1,9 @@
-import classNames from "classnames";
 import { Tabs } from "components";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
+
+import { cn } from "@/lib/utils";
 
 import { personal_format_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
@@ -36,7 +37,7 @@ export const Personal_format_tabs = observer(
 
     return (
       <div>
-        <ul className={classNames("flex overflow-x-auto", className)}>
+        <ul className={cn("flex overflow-x-auto", className)}>
           {data_key.map((key, idx: number) => {
             const currentData = personal_format_bd[key];
             if (!currentData) return null;

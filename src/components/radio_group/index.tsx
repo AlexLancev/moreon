@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { useState, useEffect } from "react";
+
+import { cn } from "@/lib/utils";
 
 import { Label } from "../ui/label";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
@@ -189,7 +190,7 @@ export const Radio_group = ({
   if (!calculate_cost_data || calculate_cost_data.length === 0) return null;
 
   return (
-    <ul className={classNames("gap-y-6 md:grid md:grid-cols-2", className)}>
+    <ul className={cn("gap-y-6 md:grid md:grid-cols-2", className)}>
       {calculate_cost_data.map(({ title, options }, idx: number) => {
         if (!title || !options || options.length === 0) return null;
 

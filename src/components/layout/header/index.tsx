@@ -1,5 +1,8 @@
 import { Menu, Feedback, Social, Logo, Container } from "components";
-import { UserCheck as IconUserCheck, UserLock as IconUserLock } from "lucide-react";
+import {
+  UserCheck as IconUserCheck,
+  UserLock as IconUserLock,
+} from "lucide-react";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 

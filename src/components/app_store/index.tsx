@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { cn } from "@/lib/utils";
 
 type App_store_data_type = {
   id: number;
@@ -39,7 +39,7 @@ export const App_store = ({ className }: App_store_props_type) => {
   return (
     app_store_data &&
     app_store_data.length !== 0 && (
-      <ul className={classNames("flex items-center gap-x-3", className)}>
+      <ul className={cn("flex items-center gap-x-3", className)}>
         {app_store_data.map(
           ({ path, description, images, id }, idx: number) => {
             if (!path && !description && !images) return null;
@@ -48,9 +48,9 @@ export const App_store = ({ className }: App_store_props_type) => {
               <li key={id ?? idx}>
                 <a
                   href={path}
-                  className="inline-flex"
                   title={description}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span className="visually-hidden">{description}</span>
                   <picture>

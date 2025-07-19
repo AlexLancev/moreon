@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import cn from "clsx";
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
 import { Pagination } from "swiper/modules";
@@ -44,23 +44,19 @@ export const About_us_list = observer(() => {
               }
             >
               <Title
-                className={classNames(
+                className={cn(
                   "relative text-sm before:absolute before:-right-5 before:top-1/2 before:h-2.5 before:w-4 before:-translate-y-1/2 before:bg-[url('/images/list__blue.webp')] before:bg-[center_center] before:bg-no-repeat before:duration-150 xs:text-base xl:text-lg xl:before:-right-4 2xl:text-xl 2xl:before:h-6 2xl:before:w-8 2xl:before:bg-[auto_16px] 3xl:text-2xl",
-                  {
-                    "before:rotate-180": visibleIndex === currentIndex,
-                  },
+                  visibleIndex === currentIndex && "before:rotate-180",
                 )}
               >
                 {title}
               </Title>
               <p
-                className={classNames(
+                className={cn(
                   "transition-opacity duration-300 2xl:text-xl 3xl:text-2xl",
-                  {
-                    ["h-auto pt-4"]: visibleIndex === currentIndex,
-                    ["invisible h-0 p-0 opacity-0"]:
-                      visibleIndex !== currentIndex,
-                  },
+                  visibleIndex === currentIndex && "h-auto pt-4",
+                  visibleIndex !== currentIndex &&
+                    "invisible h-0 p-0 opacity-0",
                 )}
               >
                 {description}

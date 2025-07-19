@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { useEffect } from "react";
+
+import { cn } from "@/lib/utils";
 
 export type Tab_list_type = {
   key: string;
@@ -31,7 +32,7 @@ export const Tabs = ({
 
   return (
     <ul
-      className={classNames(
+      className={cn(
         "customScrollBar relative mb-8 flex items-center gap-x-2 overflow-x-auto pb-8 pt-3",
         className,
       )}

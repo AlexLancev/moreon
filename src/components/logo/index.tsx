@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { Link } from "react-router-dom";
+
+import { cn } from "@/lib/utils";
 
 import { paths } from "@/paths";
 
@@ -11,7 +12,7 @@ type Logo_props_type = {
 
 export const Logo = ({ className }: Logo_props_type) => {
   return (
-    <Link to={home} className={classNames("block", className)}>
+    <Link to={home} className={cn("block", className)}>
       <span className="visually-hidden">
         Логотип фитнес клуба Moreon Fitness
       </span>

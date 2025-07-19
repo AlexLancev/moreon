@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { cn } from "@/lib/utils";
 
 import { modal_store } from "@/stores";
 
@@ -45,7 +45,7 @@ export const Hero = ({
   return (
     <Container>
       <section
-        className={classNames(
+        className={cn(
           "relative px-3 py-8 xxs:px-6 lg:px-10 lg:py-12 2xl:px-12 2xl:py-16",
           className,
         )}
@@ -54,9 +54,9 @@ export const Hero = ({
           <picture>
             <source srcSet={`/images/${urlImageWebp}`} type="image/webp" />
             <img
-              className={classNames(
+              className={cn(
                 "absolute inset-0 -z-10 h-full w-full object-cover",
-                { "opacity-10": isOpaque },
+                isOpaque && "opacity-10",
               )}
               src={`/images/${urlImageFallback}`}
               alt=""
@@ -68,7 +68,8 @@ export const Hero = ({
         <div className="relative z-10 w-full md:max-w-[700px] 2xl:max-w-[1200px]">
           {general && (
             <Title className="mb-3 text-2xl md:mb-5 xl:mb-8">
-              {general} <span className="text-customHeadDecor">{decor}</span>
+              {general} {decor} && (
+              <span className="text-customHeadDecor">{decor}</span>)
             </Title>
           )}
           {children}

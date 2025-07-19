@@ -1,4 +1,7 @@
-import { HandCoins as IconHandCoins, MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react";
+import {
+  HandCoins as IconHandCoins,
+  MessageCircleQuestion as IconMessageCircleQuestion,
+} from "lucide-react";
 
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
