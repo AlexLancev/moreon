@@ -47,7 +47,7 @@ export const Social = ({ className }: Social_props_type) => {
               href={url_externe}
               aria-label={label}
               title={label}
-              target="_blanck"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <picture>
