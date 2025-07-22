@@ -52,7 +52,7 @@ const News_presentation_page = observer(() => {
             />
           </picture>
           <div
-            className="customInsertHTML xl:*:text-2xl [&_h1]:text-2xl sm:[&_h1]:text-3xl"
+            className="customInsertHTML xl:*:text-2xl [&_h1]:text-center [&_h1]:text-2xl sm:[&_h1]:text-3xl md:[&_h1]:text-left"
             dangerouslySetInnerHTML={{ __html: sanitized_description }}
           ></div>
         </div>

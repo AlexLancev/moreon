@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { numberVisibleElementsData, sizeRangesData } from "@/constans";
 import { useGetResponsiveValue } from "@/utils";
 
+import { Title } from "../title";
+
 export const Render_slider = ({
   data,
   path,
@@ -40,7 +42,7 @@ export const Render_slider = ({
                 <picture>
                   <source srcSet={webp} type="image/webp" />
                   <img
-                    width={500}
+                    className="mb-3 w-full"
                     src={jpg}
                     alt={description_picture}
                     aria-label={description_picture}
@@ -48,9 +50,12 @@ export const Render_slider = ({
                   />
                 </picture>
                 {description && (
-                  <strong className="px-1 text-center text-[rgb(176,176,176)]">
+                  <Title
+                    headingType="md"
+                    className="px-1 text-center text-lg opacity-70 xl:text-xl 2xl:text-3xl"
+                  >
                     {description}
-                  </strong>
+                  </Title>
                 )}
               </Link>
             </SwiperSlide>

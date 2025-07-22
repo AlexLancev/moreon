@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
+import { DateBirthUser } from "@/components/ui/dateBirthUser";
 import {
   Form,
   FormControl,
@@ -12,26 +13,31 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { UserFormSchema } from "@/schema";
+import { EditProfileUserFormSchema } from "@/schema";
+
+// Обновите схему, добавив поле для даты рождения
+type EditProfileUserDataType = {
+  name: string;
+  surname: string;
+  phone: string;
+  birthDate: string | undefined; // Добавляем поле для даты рождения
+};
 
 export const Personal_account_form = () => {
-  const [date, setDate] = useState<Date | undefined>(new Date());
-
-  const form = useForm({
-    resolver: zodResolver(UserFormSchema),
+  const form = useForm<EditProfileUserDataType>({
+    resolver: zodResolver(EditProfileUserFormSchema),
     defaultValues: {
       name: "",
       surname: "",
       phone: "",
+      birthDate: undefined, // Добавляем начальное значение
     },
   });
 
-  // <Calendar />
-
   const { isSubmitting } = form.formState;
 
-  const onSubmit = () => {
-    console.log("object");
+  const onSubmit = (data: EditProfileUserDataType) => {
+    console.log(data);
     form.reset();
   };
 
@@ -75,6 +81,23 @@ export const Personal_account_form = () => {
                 <FormLabel>Телефон</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="+7 999 999 9999" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="birthDate"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Дата рождения</FormLabel>
+                <FormControl>
+                  <DateBirthUser
+                    value={field.value}
+                    onChange={(dateStr) => field.onChange(dateStr)}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

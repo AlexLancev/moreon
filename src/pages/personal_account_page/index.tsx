@@ -12,14 +12,14 @@ import { Personal_account_modal } from "./personal_account_modal";
 const Personal_account_page = () => {
   const { isVisibleModal, change_modal } = personal_account_store;
   const [user, setUser] = useState<User | null>(null);
-  const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+  const [profileLoading, setProfileLoading] = useState<boolean>(false);
+  const [file, setFile] = useState<File | null>(null);
   const [lastName, setLastName] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("");
   const [dateOfBirth, setDateOfBirth] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
-  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
-  const [profileLoading, setProfileLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchUserData = async () => {

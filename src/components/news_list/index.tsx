@@ -51,7 +51,7 @@ export const News_list = observer(() => {
               </picture>
               <Title
                 headingType="md"
-                className="mb-4 px-1 text-center text-lg opacity-70 md:mb-6 lg:mb-8 2xl:mb-12"
+                className="px-1 text-center text-lg opacity-70 xl:text-xl 2xl:text-3xl"
               >
                 {description}
               </Title>
