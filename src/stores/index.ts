@@ -1,5 +1,4 @@
 import { Modal_store } from "@/stores/modal_store";
-import { Personal_account_store } from "@/stores/personal_accout_store";
 import { Tabs_store } from "@/stores/tabs_store";
 
 type Tabs_store_key = `component_${string}`;
@@ -17,4 +16,4 @@ export const get_tabs_store = (key: Tabs_store_key): Tabs_store => {
 };
 
 export const modal_store = new Modal_store();
-export const personal_account_store = new Personal_account_store();
+export const modalUserUpdateStore = new Modal_store();

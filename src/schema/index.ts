@@ -52,10 +52,10 @@ export const EditProfileUserFormSchema = z.object({
     .string({
       required_error: "Введите полную дату своего дня рождения",
     })
-    .regex(/^\d{2}\.\d{2}\.\d{4}$/, "Дата должна быть в формате ДД.ММ.ГГГГ")
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Дата должна быть в формате ГГГГ-ММ-ДД") // Новое регулярное выражение
     .refine(
       (dateStr) => {
-        const [day, month, year] = dateStr.split(".").map(Number);
+        const [year, month, day] = dateStr.split("-").map(Number);
         const date = new Date(year, month - 1, day);
 
         if (isNaN(date.getTime())) return false;
@@ -74,4 +74,19 @@ export const EditProfileUserFormSchema = z.object({
         message: "Возраст должен быть от 14 до 99 лет",
       },
     ),
+  avatar: z
+    .string({ message: "Avatar должен быть строкой" })
+    .refine(
+      (value) => {
+        const urlRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/.*)?$/;
+        const base64Regex = /^data:image\/(jpeg|png|webp);base64,/;
+        return urlRegex.test(value) || base64Regex.test(value);
+      },
+      {
+        message:
+          "Avatar должен быть URL изображения или base64-строкой (.jpg, .png, .webp)",
+      },
+    )
+    .optional()
+    .nullable(),
 });

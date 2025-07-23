@@ -6,12 +6,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { personal_account_store } from "@/stores";
+
+import { modalUserUpdateStore } from "@/stores";
 
 import { Personal_account_form } from "../personal_account_form";
 
 export const Personal_account_modal = observer(() => {
-  const { isVisibleModal, change_modal } = personal_account_store;
+  const { isVisibleModal, change_modal } = modalUserUpdateStore;
 
   return (
     <Dialog open={isVisibleModal} onOpenChange={change_modal}>

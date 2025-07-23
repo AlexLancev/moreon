@@ -1,7 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { observer } from "mobx-react-lite";
 import { useForm } from "react-hook-form";
 
+import { ChangeUserAvatar } from "@/components";
 import { Button } from "@/components/ui/button";
 import { DateBirthUser } from "@/components/ui/dateBirthUser";
 import {
@@ -14,31 +15,42 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { EditProfileUserFormSchema } from "@/schema";
+import { profileStore } from "@/stores/profile_store";
 
-// Обновите схему, добавив поле для даты рождения
 type EditProfileUserDataType = {
   name: string;
   surname: string;
   phone: string;
-  birthDate: string | undefined; // Добавляем поле для даты рождения
+  birthDate: string;
+  avatar: string | null;
 };
 
-export const Personal_account_form = () => {
+export const Personal_account_form = observer(() => {
   const form = useForm<EditProfileUserDataType>({
     resolver: zodResolver(EditProfileUserFormSchema),
     defaultValues: {
-      name: "",
-      surname: "",
-      phone: "",
-      birthDate: undefined, // Добавляем начальное значение
+      name: profileStore.firstName,
+      surname: profileStore.lastName,
+      phone: profileStore.phoneNumber,
+      birthDate: profileStore.dateOfBirth || "",
+      avatar: profileStore.avatarUrl,
     },
   });
 
-  const { isSubmitting } = form.formState;
+  const onSubmit = async (data: EditProfileUserDataType) => {
+    const success = await profileStore.updateProfile({
+      firstName: data.name,
+      lastName: data.surname,
+      phoneNumber: data.phone,
+      dateOfBirth: data.birthDate,
+      avatarUrl: data.avatar,
+    });
 
-  const onSubmit = (data: EditProfileUserDataType) => {
-    console.log(data);
-    form.reset();
+    if (success) {
+      alert("Профиль успешно обновлён!");
+    } else {
+      alert("Ошибка при обновлении профиля");
+    }
   };
 
   return (
@@ -50,9 +62,9 @@ export const Personal_account_form = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Ваше имя</FormLabel>
+                <FormLabel>Имя</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="Шаньга" />
+                  <Input {...field} placeholder="Введите ваше имя" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -64,9 +76,9 @@ export const Personal_account_form = () => {
             name="surname"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Ваша фамилия</FormLabel>
+                <FormLabel>Фамилия</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="Майонезная" />
+                  <Input {...field} placeholder="Введите вашу фамилию" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -80,7 +92,7 @@ export const Personal_account_form = () => {
               <FormItem>
                 <FormLabel>Телефон</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="+7 999 999 9999" />
+                  <Input {...field} placeholder="+7 (999) 999-99-99" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -103,16 +115,34 @@ export const Personal_account_form = () => {
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="avatar"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Аватар</FormLabel>
+                <FormControl>
+                  <ChangeUserAvatar
+                    value={field.value}
+                    onChange={(url) => field.onChange(url)}
+                    currentAvatarUrl={profileStore.avatarUrl}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
 
         <Button
           type="submit"
-          className="customGreyBtn w-full"
-          disabled={isSubmitting}
+          className="w-full"
+          disabled={profileStore.isUpdating}
         >
-          Сохранить изменения
+          {profileStore.isUpdating ? "Сохранение..." : "Сохранить изменения"}
         </Button>
       </form>
     </Form>
   );
-};
+});

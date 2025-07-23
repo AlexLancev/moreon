@@ -10,31 +10,28 @@ import { Calendar } from "./calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
 type DateBirthUserPropsType = {
-  className?: string; // Дополнительные классы для стилизации
-  value?: string; // Текущее значение даты в формате "dd.MM.yyyy"
-  onChange?: (dateStr: string) => void; // Колбэк при изменении даты
+  className?: string;
+  value?: string;
+  onChange?: (dateStr: string) => void;
 };
+
+const minAge = 14;
+const maxAge = 99;
 
 export const DateBirthUser = ({
   className,
   value,
   onChange,
 }: DateBirthUserPropsType) => {
-  // Текущая дата для расчетов
   const today = new Date();
 
-  // Ограничения возраста
-  const minAge = 14; // Минимальный допустимый возраст
-  const maxAge = 99; // Максимальный допустимый возраст
-
-  // Рассчитываем граничные даты
   const minDate = subYears(today, maxAge); // Самая ранняя допустимая дата (99 лет назад)
   const maxDate = subYears(today, minAge); // Самая поздняя допустимая дата (14 лет назад)
 
   // Состояние для хранения выбранной даты
   const [date, setDate] = useState<Date | undefined>(
-    // Преобразуем строку "dd.MM.yyyy" в объект Date при инициализации
-    value ? new Date(value.split(".").reverse().join("-")) : undefined,
+    // Преобразуем строку "YYYY-MM-DD" в объект Date при инициализации
+    value ? new Date(value) : undefined,
   );
 
   // Обработчик выбора даты
@@ -49,8 +46,8 @@ export const DateBirthUser = ({
     // Обновляем состояние
     setDate(selectedDate);
 
-    // Форматируем дату в строку "dd.MM.yyyy" с русской локалью
-    const formattedDate = format(selectedDate, "dd.MM.yyyy", { locale: ru });
+    // Форматируем дату в строку "YYYY-MM-DD"
+    const formattedDate = format(selectedDate, "yyyy-MM-dd");
 
     // Передаем отформатированную дату родительскому компоненту
     onChange?.(formattedDate);
@@ -75,7 +72,7 @@ export const DateBirthUser = ({
 
             {/* Отображение выбранной даты или плейсхолдера */}
             {date ? (
-              format(date, "dd.MM.yyyy", { locale: ru })
+              format(date, "dd.MM.yyyy", { locale: ru }) // Для отображения используем русский формат
             ) : (
               <span>Выберите дату рождения</span>
             )}
