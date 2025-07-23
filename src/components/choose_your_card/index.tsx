@@ -4,8 +4,7 @@ import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import xss from "xss";
 
-import { Tabs, Container, Title } from "@/components";
-
+import { Container, Tabs, Title } from "@/components";
 import { club_cards_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 

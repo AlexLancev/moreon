@@ -4,7 +4,7 @@ const News_page = () => {
   return (
     <section className="py-12">
       <Container>
-        <Title>
+        <Title className="mb-3 md:mb-6 lg:mb-8 2xl:mb-12">
           <span className="text-customHeadDecor">Новости</span> клуба
         </Title>
         <News_list />

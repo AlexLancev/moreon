@@ -74,7 +74,7 @@ export const Footer = () => {
           </div>
           {documents_data && documents_data.length !== 0 && (
             <ul className="flex flex-wrap gap-5 gap-x-4 gap-y-2 md:justify-start">
-              {documents_data.map(({ id, path, description }, idx: number) => {
+              {documents_data.map(({ path, description }, idx: number) => {
                 if (!path && !description) return null;
 
                 return (

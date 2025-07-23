@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
+
 import xss from "xss";
 
 import { Render_slider, Title } from "@/components";

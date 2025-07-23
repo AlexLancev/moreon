@@ -1,4 +1,4 @@
-import { useEffect, Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import { Layout } from "@/components";
@@ -11,6 +11,7 @@ import {
   Home_page,
   Kids_fitness_page,
   Login,
+  Logout,
   News_page,
   News_presentation_page,
   Person_team_page,
@@ -23,7 +24,6 @@ import {
   Stock_presentation_page,
   Team_page,
   Wrapper,
-  Logout,
 } from "@/pages";
 import { paths } from "@/paths";
 

@@ -1,6 +1,5 @@
 import { Hero, Team } from "@/components";
 import { teamData } from "@/constans/heroData";
-
 import { get_tabs_store } from "@/stores";
 
 const Team_page = () => {

@@ -3,7 +3,6 @@ import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 
 import { Container, Stock, Title } from "@/components";
-
 import { get_tabs_store } from "@/stores";
 import { team_store } from "@/stores/data_store";
 

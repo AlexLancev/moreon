@@ -1,51 +1,53 @@
-module.exports = {
-  plugins: [
-    require("tailwindcss"),
-    require("autoprefixer"),
-    require("postcss-sorting")({
-      "properties-order": [
-        "position",
-        "z-index",
-        "top",
-        "right",
-        "bottom",
-        "left",
+import autoprefixer from "autoprefixer";
+import postcssSorting from "postcss-sorting";
+import tailwindcss from "tailwindcss";
 
-        "display",
-        "flex",
-        "grid",
-        "align-items",
-        "justify-content",
-        "margin",
-        "padding",
-        "border",
-        "rounded",
-        "width",
-        "height",
-        "min-width",
-        "min-height",
-        "max-width",
-        "max-height",
-        "box-sizing",
+const sortingOptions = {
+  "properties-order": [
+    "position",
+    "z-index",
+    "top",
+    "right",
+    "bottom",
+    "left",
 
-        "font",
-        "text",
-        "line-height",
-        "letter-spacing",
-        "text-align",
-        "text-decoration",
-        "color",
+    "display",
+    "flex",
+    "grid",
+    "align-items",
+    "justify-content",
+    "margin",
+    "padding",
+    "border",
+    "rounded",
+    "width",
+    "height",
+    "min-width",
+    "min-height",
+    "max-width",
+    "max-height",
+    "box-sizing",
 
-        "background",
-        "opacity",
-        "shadow",
+    "font",
+    "text",
+    "line-height",
+    "letter-spacing",
+    "text-align",
+    "text-decoration",
+    "color",
 
-        "transform",
-        "transition",
-        "animation",
-      ],
-      "unspecified-properties-position": "bottom",
-      "empty-lines-between-children-rules": 1,
-    }),
+    "background",
+    "opacity",
+    "shadow",
+
+    "transform",
+    "transition",
+    "animation",
   ],
+  "unspecified-properties-position": "bottom",
+  "empty-lines-between-children-rules": 1,
+};
+
+export default {
+  plugins: [tailwindcss, autoprefixer, postcssSorting(sortingOptions)],
 };

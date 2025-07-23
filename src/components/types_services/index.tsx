@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
+
 import { Pagination } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Title } from "@/components";
-
 import {
   numberVisibleElementsData,
   sizeRangesData,

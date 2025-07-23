@@ -1,5 +1,4 @@
 import { Container, Tabs, Team_list, Title } from "components";
-
 import { observer } from "mobx-react-lite";
 
 const team_tab_list = [

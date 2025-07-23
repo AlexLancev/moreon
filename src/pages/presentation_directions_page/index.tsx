@@ -1,6 +1,5 @@
 import { NotebookText as IconNotebookText } from "lucide-react";
 import { toJS } from "mobx";
-
 import { observer } from "mobx-react-lite";
 import { useLocation } from "react-router-dom";
 

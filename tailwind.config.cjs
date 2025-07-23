@@ -1,7 +1,8 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import defaultTheme from "tailwindcss/defaultTheme";
 import animate from "tailwindcss-animate";
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -82,6 +83,9 @@ module.exports = {
   },
   variants: {
     extend: {},
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   plugins: [animate],
 };

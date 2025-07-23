@@ -7,7 +7,6 @@ import {
   Stock,
   Team,
 } from "@/components";
-
 import { get_tabs_store } from "@/stores";
 
 import {

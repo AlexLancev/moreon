@@ -2,7 +2,6 @@ import { NotebookText as IconNotebookText } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { useLocation } from "react-router-dom";
-
 import xss from "xss";
 
 import { Container, Directions_list, Title } from "@/components";

@@ -2,10 +2,9 @@ import {
   HandCoins as IconHandCoins,
   MessageCircleQuestion as IconMessageCircleQuestion,
 } from "lucide-react";
-
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Container, Render_image } from "@/components";

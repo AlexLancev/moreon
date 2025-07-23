@@ -1,12 +1,10 @@
 import { observer } from "mobx-react-lite";
-
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { sizeRangesData } from "@/constans";
 import { numberVisibleProfitablesData } from "@/constans/numberVisibleElementsData";
 import { profitable_visits_store } from "@/stores/data_store";
-
 import { useGetResponsiveValue } from "@/utils";
 
 export const Profitable_list = observer(() => {

@@ -1,7 +1,5 @@
 import { cn } from "@/lib/utils";
-
 import { modal_store } from "@/stores";
-
 import { validateImagePath } from "@/utils";
 
 import { Container } from "../container";
@@ -68,8 +66,8 @@ export const Hero = ({
         <div className="relative z-10 w-full md:max-w-[700px] 2xl:max-w-[1200px]">
           {general && (
             <Title className="mb-3 text-2xl md:mb-5 xl:mb-8">
-              {general} {decor} && (
-              <span className="text-customHeadDecor">{decor}</span>)
+              {general}{" "}
+              {decor && <span className="text-customHeadDecor">{decor}</span>}
             </Title>
           )}
           {children}

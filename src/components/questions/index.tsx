@@ -1,10 +1,10 @@
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
+
 import xss from "xss";
 
 import { Title } from "@/components";
 import { cn } from "@/lib/utils";
-
 import { about_questions_store } from "@/stores/data_store";
 
 import { AccessibleButton } from "../ui/accessibleButton";

@@ -4,7 +4,6 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Title } from "@/components";
-
 import { sizeRangesData } from "@/constans";
 import { numberVisiblePerformanceData } from "@/constans/numberVisibleElementsData";
 import { performance_data_store } from "@/stores/data_store";

@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
+
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 

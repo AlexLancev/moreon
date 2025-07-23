@@ -1,4 +1,4 @@
-import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+import { Map, Placemark, YMaps } from "@pbe/react-yandex-maps";
 
 const KEY_MAP: string = import.meta.env.VITE_YANDEX_MAP_KEY;
 

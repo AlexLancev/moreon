@@ -7,7 +7,6 @@ import {
   Team,
   Water_zone,
 } from "@/components";
-
 import { get_tabs_store } from "@/stores";
 
 import { Services_hero } from "./components";

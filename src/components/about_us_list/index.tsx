@@ -5,7 +5,6 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Title } from "@/components";
-
 import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
 import { about_us_store } from "@/stores/data_store";
 import { renderNumberSlides, useGetResponsiveValue } from "@/utils";

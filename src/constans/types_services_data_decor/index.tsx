@@ -4,7 +4,6 @@ import {
   Medal as IconMedal,
   UsersRound as IconUsersRound,
 } from "lucide-react";
-
 import { ReactNode } from "react";
 
 type Types_services_data_decor_type = Record<Types_services_key, ReactNode>;

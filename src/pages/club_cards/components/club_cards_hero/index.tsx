@@ -1,5 +1,4 @@
 import { Hero } from "@/components";
-
 import { clubCardsData } from "@/constans/heroData";
 
 export const Club_cards_hero = () => {
