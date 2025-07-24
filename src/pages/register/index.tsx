@@ -46,7 +46,7 @@ const Register = () => {
     <div>
       {message && message.length !== 0 && <span>{message}</span>}
       <AuthForm
-        onSubmit={handleRegister}
+        onTypeSubmit={handleRegister}
         submitButtonText="Создать аккаунт"
         title="Регистрация"
       />

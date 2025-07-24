@@ -46,7 +46,7 @@ export const Performance = observer(({ data_key }: Performance_type) => {
             data-decor={title}
           >
             <Swiper
-              className="mx-0 pb-16"
+              className="mx-0 pb-16 lg:pb-20 2xl:pb-24"
               modules={[Pagination]}
               spaceBetween={indentationSlide}
               slidesPerView={quantitySlide}

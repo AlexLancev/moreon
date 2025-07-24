@@ -3,6 +3,15 @@ import { useEffect, useRef, useState } from "react";
 
 import { Container, Radio_group, Range_slider, Title } from "@/components";
 
+const ANIMATION_STEPS = 20;
+const ANIMATION_INTERVAL_MS = 30;
+
+const MONTHS_DECLINATION = {
+  ONE: "месяц",
+  FEW: "месяца",
+  MANY: "месяцев",
+} as const;
+
 export const Calculate_cost = () => {
   const [baseSum, setBaseSum] = useState<number>(0);
   const [selectedMonths, setSelectedMonths] = useState<number>(3);
@@ -18,7 +27,9 @@ export const Calculate_cost = () => {
 
     const animateSum = () => {
       let currentSum = displayedSum;
-      const step = Math.abs((targetSumRef.current - currentSum) / 20);
+      const step = Math.abs(
+        (targetSumRef.current - currentSum) / ANIMATION_STEPS,
+      );
       const direction = targetSumRef.current > currentSum ? 1 : -1;
 
       interval = setInterval(() => {
@@ -33,7 +44,7 @@ export const Calculate_cost = () => {
         } else {
           setDisplayedSum(currentSum);
         }
-      }, 30);
+      }, ANIMATION_INTERVAL_MS);
     };
 
     animateSum();
@@ -42,6 +53,12 @@ export const Calculate_cost = () => {
       if (interval) clearInterval(interval);
     };
   }, [totalCost]);
+
+  const getMonthsDeclination = (months: number): string => {
+    if (months === 1) return MONTHS_DECLINATION.ONE;
+    if (months >= 2 && months <= 4) return MONTHS_DECLINATION.FEW;
+    return MONTHS_DECLINATION.MANY;
+  };
 
   return (
     <Container>
@@ -76,11 +93,7 @@ export const Calculate_cost = () => {
           <span className="text-2xl text-white">{displayedSum.toFixed(2)}</span>{" "}
           ₽ за{" "}
           <span className="text-xl text-customHeadDecor">{selectedMonths}</span>{" "}
-          {selectedMonths > 1 && selectedMonths < 5
-            ? "месяца"
-            : selectedMonths === 1
-              ? "месяц"
-              : "месяцев"}
+          {getMonthsDeclination(selectedMonths)}
         </strong>
       </section>
     </Container>

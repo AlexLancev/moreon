@@ -1,48 +1,91 @@
-import { useState } from "react";
-
 import { AccessibleButton } from "./components/ui/accessibleButton";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "./components/ui/form";
+import { Input } from "./components/ui/input";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { RegistrationAccountFormSchema } from "./schema";
 
 type AuthFormProps = {
-  onSubmit: (email: string, password: string) => Promise<void>;
+  onTypeSubmit: (email: string, password: string) => Promise<void>;
   submitButtonText: string;
   title: string;
 };
 
+type AuthFormType = {
+  email: string;
+  password: string;
+};
+
+type DataType = {
+  email: string;
+  password: string;
+};
+
 export const AuthForm = ({
-  onSubmit,
+  onTypeSubmit,
   submitButtonText,
   title,
 }: AuthFormProps) => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const form = useForm<AuthFormType>({
+    resolver: zodResolver(RegistrationAccountFormSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    await onSubmit(email, password);
+  const { isSubmitting } = form.formState;
+
+  const onSubmit = (data: DataType) => {
+    console.log(data);
+    onTypeSubmit(data.email, data.password);
+    form.reset();
   };
 
   return (
     <div>
       <h2>{title}</h2>
-      <br />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          autoComplete="off"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <AccessibleButton type="submit">{submitButtonText}</AccessibleButton>
-      </form>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Введите пароль</FormLabel>
+                <FormControl>
+                  <Input {...field} type="password" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <AccessibleButton type="submit" disabled={isSubmitting}>
+            {submitButtonText}
+          </AccessibleButton>
+        </form>
+      </Form>
     </div>
   );
 };

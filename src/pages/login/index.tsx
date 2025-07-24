@@ -32,7 +32,7 @@ const Login = () => {
   return (
     <div>
       {message && message.length !== 0 && <span>{message}</span>}
-      <AuthForm onSubmit={handleLogin} submitButtonText="Войти" title="Логин" />
+      <AuthForm onTypeSubmit={handleLogin} submitButtonText="Войти" title="Логин" />
       <div className="mt-5">
         <span>Нет аккаунта?</span>
         <Link to="/register">Зарегистрироваться</Link>
