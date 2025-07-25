@@ -27,7 +27,6 @@ export class ProfileStore {
         .select("*")
         .eq("id", authStore.user.id)
         .single();
-
       if (error) throw error;
 
       runInAction(() => {
