@@ -1,3 +1,7 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
 import { AccessibleButton } from "./components/ui/accessibleButton";
 import {
   Form,
@@ -8,33 +12,27 @@ import {
   FormMessage,
 } from "./components/ui/form";
 import { Input } from "./components/ui/input";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { RegistrationAccountFormSchema } from "./schema";
+import { BaseAccountSchema, PasswordValidationSchema } from "./schema";
 
 type AuthFormProps = {
   onTypeSubmit: (email: string, password: string) => Promise<void>;
   submitButtonText: string;
   title: string;
-};
-
-type AuthFormType = {
-  email: string;
-  password: string;
-};
-
-type DataType = {
-  email: string;
-  password: string;
+  validatePassword?: boolean;
 };
 
 export const AuthForm = ({
   onTypeSubmit,
   submitButtonText,
   title,
+  validatePassword = false,
 }: AuthFormProps) => {
-  const form = useForm<AuthFormType>({
-    resolver: zodResolver(RegistrationAccountFormSchema),
+  const formSchema = validatePassword
+    ? BaseAccountSchema.merge(PasswordValidationSchema)
+    : BaseAccountSchema;
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
       password: "",
@@ -43,14 +41,13 @@ export const AuthForm = ({
 
   const { isSubmitting } = form.formState;
 
-  const onSubmit = (data: DataType) => {
-    console.log(data);
+  const onSubmit = (data: z.infer<typeof formSchema>) => {
     onTypeSubmit(data.email, data.password);
     form.reset();
   };
 
   return (
-    <div>
+    <>
       <h2>{title}</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -61,7 +58,7 @@ export const AuthForm = ({
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field} type="email" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -73,7 +70,9 @@ export const AuthForm = ({
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Введите пароль</FormLabel>
+                <FormLabel>
+                  {validatePassword ? "Создайте пароль" : "Введите пароль"}
+                </FormLabel>
                 <FormControl>
                   <Input {...field} type="password" />
                 </FormControl>
@@ -81,11 +80,12 @@ export const AuthForm = ({
               </FormItem>
             )}
           />
+
           <AccessibleButton type="submit" disabled={isSubmitting}>
             {submitButtonText}
           </AccessibleButton>
         </form>
       </Form>
-    </div>
+    </>
   );
 };
