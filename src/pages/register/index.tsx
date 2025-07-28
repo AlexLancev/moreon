@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { AuthForm } from "@/AuthForm";
@@ -6,7 +6,6 @@ import supabase from "@/data/supabase";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [message, setMessage] = useState<string>("");
 
   useEffect(() => {
     const checkAuthentication = async () => {
@@ -28,7 +27,7 @@ const Register = () => {
     }
 
     if (data.user?.identities?.length === 0) {
-      setMessage("Аккаунт с указанной почтой уже существует");
+      alert("Аккаунт с указанной почтой уже существует");
       return;
     }
 
@@ -43,18 +42,18 @@ const Register = () => {
   };
 
   return (
-    <div>
-      {message && message.length !== 0 && <span>{message}</span>}
+    <>
       <AuthForm
         onTypeSubmit={handleRegister}
         submitButtonText="Создать аккаунт"
         title="Регистрация"
+        validatePassword
       />
       <div className="mt-5">
         <span>Есть аккаунт?</span>
         <Link to="/login">Войти</Link>
       </div>
-    </div>
+    </>
   );
 };
 
