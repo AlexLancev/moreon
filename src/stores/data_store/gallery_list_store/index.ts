@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Gallery_list_store {
   data: Gallery_list_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

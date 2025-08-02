@@ -12,13 +12,17 @@ export const Fitness_club = () => {
           Fitness
         </Title>
         <ul className="relative overflow-hidden rounded-3xl p-3 after:absolute after:inset-0 after:h-full after:w-full after:bg-fitnes-club-gradient-custom after:opacity-70 after:blur-[2px] sm:p-5 lg:p-6 2xl:p-10">
-          {fitness_club_list.map(({ description }, idx: number) => (
-            <li key={idx} className="mb-3 last:mb-0 md:mb-5 3xl:mb-8">
-              <p className="text-base xs:text-lg md:text-xl xl:text-2xl 3xl:text-3xl">
-                {description}
-              </p>
-            </li>
-          ))}
+          {fitness_club_list.map(({ description }, idx: number) => {
+            if (!description) return null;
+
+            return (
+              <li key={idx} className="mb-3 last:mb-0 md:mb-5 3xl:mb-8">
+                <p className="text-base xs:text-lg md:text-xl xl:text-2xl 3xl:text-3xl">
+                  {description}
+                </p>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </Container>

@@ -15,7 +15,7 @@ import { hero_store } from "@/stores/data_store";
 export const Home_hero = observer(() => {
   const { data, isLoading, isError } = hero_store;
 
-  if (!hero_store || !data || data.length === 0) {
+  if (!data || data.length === 0) {
     return <div>Нет доступных данных</div>;
   }
 
@@ -32,7 +32,7 @@ export const Home_hero = observer(() => {
         pagination={{ clickable: true }}
         loop
       >
-        {data?.map(
+        {data.map(
           (
             {
               url_xxxl_img_webp,
