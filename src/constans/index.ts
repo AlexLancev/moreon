@@ -11,3 +11,4 @@ export {
 export { sizeRangesData } from "./sizeRangesData";
 export { sizeTitleData } from "./sizeTitleData";
 export { types_services_data_decor } from "./types_services_data_decor";
+export { skeletons } from "./skeletons";

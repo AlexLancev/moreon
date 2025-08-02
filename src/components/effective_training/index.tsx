@@ -1,6 +1,6 @@
 import { Container, Performance, Title } from "@/components";
 
-const effective_training_data_key: Performance_key_type[] = [
+export const effective_training_data_key: Performance_key_type[] = [
   "spa",
   "cafe_restaurant",
   "reception",

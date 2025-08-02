@@ -19,9 +19,9 @@ import {
 const About_page = () => {
   return (
     <>
-      <Gallery />
+      {/* <Gallery /> */}
       <Effective_training />
-      <Stock />
+      {/* <Stock />
       <Personal_format tabs_store={get_tabs_store("component_personal")} />
       <Team tabs_store={get_tabs_store("component_team") as Team_key_type} />
       <Fitness_area
@@ -37,7 +37,7 @@ const About_page = () => {
       <About_questions />
       <Profitable_visits />
       <Every_card />
-      <About_reviews />
+      <About_reviews /> */}
     </>
   );
 };
