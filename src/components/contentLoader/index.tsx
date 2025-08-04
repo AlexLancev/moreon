@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, ComponentType } from "react";
 
 type CurrentStoreType<T> = {
   data: T[];
@@ -7,29 +7,35 @@ type CurrentStoreType<T> = {
 };
 
 type ContentLoaderType<T> = {
-  children: ReactNode;
-  skeleton: ReactNode;
   currentStore: CurrentStoreType<T>;
+  skeletonComponent: ComponentType;
+  children: ReactNode;
   initialVisibleCount?: number;
+  isEmpty?: boolean;
 };
 
 export const ContentLoader = <T,>({
   children,
-  skeleton,
+  skeletonComponent: SkeletonComponent,
   currentStore: { data, isLoading, isError },
   initialVisibleCount = 6,
+  isEmpty,
 }: ContentLoaderType<T>) => {
+  const objKeyListLength = data.length;
+
   if (isError) {
     console.error("Не удалось получить данные. Ошибка:", isError);
     return null;
   }
 
   if (isLoading) {
-    return Array.from({ length: initialVisibleCount }).map((_, idx) => (
-      <li key={idx} className="w-full">
-        {skeleton}
-      </li>
-    ));
+    return Array.from({ length: objKeyListLength || initialVisibleCount }).map(
+      (_, idx) => <SkeletonComponent key={idx} />,
+    );
+  }
+
+  if (isEmpty !== undefined && isEmpty) {
+    return null;
   }
 
   if (!data || data.length === 0) {
@@ -37,5 +43,7 @@ export const ContentLoader = <T,>({
     return null;
   }
 
-  return children;
+  return <>{children}</>;
 };
+
+ContentLoader.displayName = "SwiperSlider";

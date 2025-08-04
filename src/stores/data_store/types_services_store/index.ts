@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Types_services_store {
   data: Types_services_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

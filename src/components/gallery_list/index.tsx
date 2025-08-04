@@ -2,7 +2,7 @@ import { Eye as IconEye } from "lucide-react";
 import { observer } from "mobx-react-lite";
 import { useState } from "react";
 
-import { skeletons } from "@/constans";
+import { SkeletonGalleryGrid } from "@/constans";
 import { gallery_list_store } from "@/stores/data_store";
 
 import { ContentLoader } from "../contentLoader";
@@ -14,7 +14,6 @@ const initialVisibleCount = 6;
 export const Gallery_list = observer(() => {
   const [visibleShow, setVisibleShow] = useState<number>(initialVisibleCount);
   const { data } = gallery_list_store;
-  const { skeletonGrid } = skeletons;
 
   const handleVisibleShow = () => {
     if (data.length > visibleShow) {
@@ -26,8 +25,8 @@ export const Gallery_list = observer(() => {
     <>
       <ul className="grid place-items-center gap-4 xxs:grid-cols-2 md:grid-cols-3 2xl:gap-6">
         <ContentLoader
+          skeletonComponent={SkeletonGalleryGrid}
           currentStore={gallery_list_store}
-          skeleton={skeletonGrid}
         >
           {data
             .slice(0, visibleShow)

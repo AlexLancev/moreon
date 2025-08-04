@@ -1,6 +1,29 @@
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
-export const isEmptyObj = (object: object): boolean => {
+export const hasRequiredKeys = <T extends object, K extends keyof T>(
+  obj: T,
+  requiredKeys: K[],
+): boolean => {
+  if (!obj || typeof obj !== "object") return false;
+
+  return requiredKeys.every(
+    (key) =>
+      Object.prototype.hasOwnProperty.call(obj, key) &&
+      obj[key] !== undefined &&
+      obj[key] !== null,
+  );
+};
+
+export const isEmptyObj = <T extends object, K extends keyof T = keyof T>(
+  object: T,
+  requiredKeys?: K[],
+): boolean => {
+  if (!object || typeof object !== "object") return true;
+
+  if (requiredKeys) {
+    return !hasRequiredKeys(object, requiredKeys);
+  }
+
   for (const key in object) {
     if (Object.prototype.hasOwnProperty.call(object, key)) {
       return false;

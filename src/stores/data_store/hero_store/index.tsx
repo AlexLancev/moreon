@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Hero_store {
   data: Data_action_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {
