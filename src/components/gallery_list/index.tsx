@@ -27,6 +27,7 @@ export const Gallery_list = observer(() => {
         <ContentLoader
           skeletonComponent={SkeletonGalleryGrid}
           currentStore={gallery_list_store}
+          initialVisibleCount={initialVisibleCount}
         >
           {data
             .slice(0, visibleShow)

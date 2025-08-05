@@ -4,8 +4,12 @@ import { useState } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Title } from "@/components";
-import { numberVisibleAboutUsData, sizeRangesData } from "@/constans";
+import { ContentLoader, Title } from "@/components";
+import {
+  numberVisibleAboutUsData,
+  SkeletonAboutUs,
+  sizeRangesData,
+} from "@/constans";
 import { about_us_store } from "@/stores/data_store";
 import { renderNumberSlides, useGetResponsiveValue } from "@/utils";
 
@@ -13,19 +17,12 @@ import { AccessibleButton } from "../ui/accessibleButton";
 
 export const About_us_list = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
-  const { data, isLoading, isError } = about_us_store;
+  const { data } = about_us_store;
   const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
   const quantitySlide = useGetResponsiveValue<number>(
     1,
     numberVisibleAboutUsData,
   );
-
-  if (!about_us_store || !data || data.length === 0) {
-    return <div>Нет доступных данных</div>;
-  }
-
-  if (isLoading) return <div>Загрузка...</div>;
-  if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide key={startIndex} className="flex flex-col gap-3 lg:gap-5">
@@ -77,7 +74,12 @@ export const About_us_list = observer(() => {
       slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
-      {slides}
+      <ContentLoader
+        currentStore={about_us_store}
+        skeletonComponent={SkeletonAboutUs}
+      >
+        {slides}
+      </ContentLoader>
     </Swiper>
   );
 });

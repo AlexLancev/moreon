@@ -7,6 +7,7 @@ import {
   Stock,
   Team,
 } from "@/components";
+
 import { get_tabs_store } from "@/stores";
 
 import {
@@ -14,17 +15,17 @@ import {
   Dream_body,
   Fitness_club,
   Home_hero,
+  Video_reviews,
   Other_directions,
   Our_application,
-  Video_reviews,
 } from "./components";
 
 const Home_page = () => {
   return (
     <>
-      {/* <Home_hero /> */}
+      <Home_hero />
       <Dream_body />
-      {/* <Stock />
+      <Stock />
       <Calculate_cost />
       <Club_news />
       <About_us />
@@ -35,7 +36,7 @@ const Home_page = () => {
       <Phyto_bar />
       <Other_directions />
       <Fitness_club />
-      <Contacts /> */}
+      <Contacts />
     </>
   );
 };

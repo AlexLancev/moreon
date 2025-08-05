@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Other_directions_store {
   data: Other_directions_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

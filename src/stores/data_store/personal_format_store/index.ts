@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Personal_format_store {
   data: Personal_format_data_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

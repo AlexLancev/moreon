@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ContentLoader, Title } from "@/components";
 import {
   numberVisibleElementsData,
-  ServiceCardSkeleton,
+  SkeletonServiceCard,
   sizeRangesData,
   types_services_data_decor,
 } from "@/constans";
@@ -39,7 +39,7 @@ export const Types_services = observer(() => {
       >
         <ContentLoader
           currentStore={types_services_store}
-          skeletonComponent={ServiceCardSkeleton}
+          skeletonComponent={SkeletonServiceCard}
           initialVisibleCount={3}
         >
           {data.map(({ head, description, path }, idx: number) => (

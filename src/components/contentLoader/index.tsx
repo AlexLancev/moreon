@@ -1,27 +1,32 @@
 import { ReactNode, ComponentType } from "react";
 
 type CurrentStoreType<T> = {
-  data: T[];
+  data: T[] | null;
   isLoading: boolean;
   isError: null | boolean;
 };
 
 type ContentLoaderType<T> = {
   currentStore: CurrentStoreType<T>;
-  skeletonComponent: ComponentType;
+  skeletonComponent: ComponentType<{ className?: string }>;
   children: ReactNode;
   initialVisibleCount?: number;
   isEmpty?: boolean;
+  getSkeletonClassName?: string;
 };
 
 export const ContentLoader = <T,>({
   children,
   skeletonComponent: SkeletonComponent,
-  currentStore: { data, isLoading, isError },
-  initialVisibleCount = 6,
+  currentStore,
+  initialVisibleCount = 3,
   isEmpty,
+  getSkeletonClassName,
 }: ContentLoaderType<T>) => {
-  const objKeyListLength = data.length;
+  if (!currentStore) return null;
+
+  const { data, isLoading, isError } = currentStore;
+  const objKeyListLength = data?.length;
 
   if (isError) {
     console.error("Не удалось получить данные. Ошибка:", isError);
@@ -30,14 +35,15 @@ export const ContentLoader = <T,>({
 
   if (isLoading) {
     return Array.from({ length: objKeyListLength || initialVisibleCount }).map(
-      (_, idx) => <SkeletonComponent key={idx} />,
+      (_, idx) => (
+        <SkeletonComponent className={getSkeletonClassName} key={idx} />
+      ),
     );
   }
 
   if (isEmpty !== undefined && isEmpty) {
     return null;
   }
-
   if (!data || data.length === 0) {
     console.error("Нет данных:", data);
     return null;

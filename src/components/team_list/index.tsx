@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { SkeletonTeam } from "@/constans";
 import { numberVisibleTeamData } from "@/constans/numberVisibleElementsData";
 import { sizeRangesTeamData } from "@/constans/sizeRangesData";
 import { team_store } from "@/stores/data_store";
@@ -13,23 +14,17 @@ import {
   useGetResponsiveValue,
 } from "@/utils";
 
+import { ContentLoader } from "../contentLoader";
+
 export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
-  const { data, isLoading, isError } = team_store;
+  const { data } = team_store;
   const indentationSlide = useGetResponsiveValue<number>(
     16,
     sizeRangesTeamData,
   );
   const quantitySlide = useGetResponsiveValue<number>(1, numberVisibleTeamData);
-  if (isLoading) return <div>Загрузка...</div>;
-  if (isError) return <div>Ошибка: не удалось получить данные</div>;
-
-  if (!team_store || !data || data.length === 0) {
-    return <div>Нет доступных данных</div>;
-  }
 
   const selected_category_data = filterDataByActiveTab(data, isActiveTab);
-
-  if (!selected_category_data) return null;
 
   const renderSlide = (startIndex: number, endIndex: number) => (
     <SwiperSlide
@@ -37,7 +32,7 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
       className="flex min-h-[348px] flex-col gap-4 lg:gap-6"
     >
       {selected_category_data
-        .slice(startIndex, endIndex)
+        ?.slice(startIndex, endIndex)
         .map(
           (
             { name, url_images: { webp, jpg }, about_coach: { qualification } },
@@ -73,9 +68,6 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
     </SwiperSlide>
   );
 
-  if (!selected_category_data || selected_category_data.length === 0)
-    return null;
-
   const slides = renderNumberSlides(selected_category_data, 2, renderSlide);
 
   return (
@@ -85,7 +77,13 @@ export const Team_list = observer(({ isActiveTab }: Team_key_type) => {
       slidesPerView={quantitySlide}
       pagination={{ clickable: true }}
     >
-      {slides}
+      <ContentLoader
+        currentStore={{ ...team_store, data: selected_category_data }}
+        skeletonComponent={SkeletonTeam}
+        initialVisibleCount={4}
+      >
+        {slides}
+      </ContentLoader>
     </Swiper>
   );
 });

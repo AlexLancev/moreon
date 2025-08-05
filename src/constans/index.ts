@@ -1,8 +1,12 @@
 export {
-  ServiceCardSkeleton,
+  SkeletonServiceCard,
   SkeletonGalleryGrid,
   SkeletonPerformance,
   SkeletonHero,
+  SkeletonGrid,
+  SkeletonAboutUs,
+  SkeletonTeam,
+  SkeletonTabsGrid,
 } from "./skeletons";
 export { childrens_swimming_data } from "./childrens_swimming_data";
 export { contacts_data } from "./contacts_data";

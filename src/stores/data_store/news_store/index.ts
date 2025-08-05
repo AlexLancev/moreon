@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class News_store {
   data: News_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

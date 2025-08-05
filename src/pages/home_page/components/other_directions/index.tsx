@@ -2,26 +2,19 @@ import { observer } from "mobx-react-lite";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Container } from "@/components";
-import { sizeRangesData } from "@/constans";
+import { Container, ContentLoader } from "@/components";
+import { sizeRangesData, SkeletonGrid } from "@/constans";
 import { numberVisibleOtherDirectionsData } from "@/constans/numberVisibleElementsData";
 import { other_directions_store } from "@/stores/data_store";
 import { useGetResponsiveValue } from "@/utils";
 
 export const Other_directions = observer(() => {
-  const { data, isLoading, isError } = other_directions_store;
+  const { data } = other_directions_store;
   const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
   const quantitySlide = useGetResponsiveValue<number>(
     2,
     numberVisibleOtherDirectionsData,
   );
-
-  if (isLoading) return <div>Загрузка...</div>;
-  if (isError) return <div>Ошибка: не удалось получить данные</div>;
-
-  if (!other_directions_store || !data || data.length === 0) {
-    return <div>Нет доступных данных</div>;
-  }
 
   return (
     <section className="py-12">
@@ -34,33 +27,39 @@ export const Other_directions = observer(() => {
           slidesPerView={quantitySlide}
           pagination={{ clickable: true }}
         >
-          {data.map(
-            (
-              { path, descriptions, images_url: { png, webp } },
-              idx: number,
-            ) => (
-              <SwiperSlide key={idx}>
-                <a
-                  href={path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={descriptions}
-                >
-                  <span className="visually-hidden">{descriptions}</span>
-                  <picture>
-                    <source srcSet={webp} type="image/webp" />
-                    <img
-                      src={png}
-                      className="m-auto"
-                      alt=""
-                      loading="lazy"
-                      aria-hidden
-                    />
-                  </picture>
-                </a>
-              </SwiperSlide>
-            ),
-          )}
+          <ContentLoader
+            currentStore={other_directions_store}
+            skeletonComponent={SkeletonGrid}
+            initialVisibleCount={5}
+          >
+            {data.map(
+              (
+                { path, descriptions, images_url: { png, webp } },
+                idx: number,
+              ) => (
+                <SwiperSlide key={idx}>
+                  <a
+                    href={path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={descriptions}
+                  >
+                    <span className="visually-hidden">{descriptions}</span>
+                    <picture>
+                      <source srcSet={webp} type="image/webp" />
+                      <img
+                        src={png}
+                        className="m-auto"
+                        alt=""
+                        loading="lazy"
+                        aria-hidden
+                      />
+                    </picture>
+                  </a>
+                </SwiperSlide>
+              ),
+            )}
+          </ContentLoader>
         </Swiper>
       </Container>
     </section>
