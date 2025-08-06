@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Club_cards_store {
   data: Club_cards_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

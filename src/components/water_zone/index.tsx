@@ -8,6 +8,7 @@ import { water_zone_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 
 import { Button } from "../ui/button";
+import { waterZoneDefaultData } from "@/constans";
 
 const tab_list = [
   { key: "baths_swimming", category: "Бани и бассейны" },
@@ -22,26 +23,18 @@ export const Water_zone = observer(
     const { isActiveTab, change_tabs } = tabs_store;
     const { isVisibleModal, change_modal } = modal_store;
 
-    const { data, isLoading, isError } = water_zone_store;
+    const { data } = water_zone_store;
 
-    const water_zone_bd = toJS(data?.[0]);
+    const current_data = toJS(data?.[0])?.[isActiveTab];
 
-    if (isLoading) return <div>Загрузка...</div>;
-    if (isError) return <div>Ошибка: не удалось получить данные</div>;
+    const {
+      head,
+      description,
+      images_url: { webp, jpg },
+      images_description,
+    } = current_data ?? waterZoneDefaultData;
 
-    if (
-      !water_zone_store ||
-      !water_zone_bd ||
-      isEmptyObj(water_zone_bd) ||
-      !tab_list ||
-      tab_list.length === 0
-    )
-      return null;
-
-    const current_data = water_zone_bd[isActiveTab];
-
-    const { head, description, images_url, images_description } =
-      current_data ?? {};
+    if (!tab_list || tab_list.length === 0) return null;
 
     return (
       <section className="py-12">
@@ -79,11 +72,11 @@ export const Water_zone = observer(
                 </Button>
               </div>
               <picture>
-                <source srcSet={images_url?.jpg} type="image/webp" />
+                <source srcSet={jpg} type="image/webp" />
                 <img
                   className="m-auto h-[250px] overflow-hidden rounded-3xl object-cover md:h-[300px] xl:h-[350px]"
                   width={525}
-                  src={images_url?.jpg}
+                  src={jpg}
                   alt={images_description}
                   aria-label={images_description}
                   loading="lazy"

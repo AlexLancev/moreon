@@ -1,39 +1,20 @@
+import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 
-import { cn } from "@/lib/utils";
-import { ContentLoader } from "../contentLoader";
 import { SkeletonTabsGrid } from "@/constans";
-import { observer } from "mobx-react-lite";
+import { cn } from "@/lib/utils";
 
-type CurrentStoreType<T> = {
-  data: T[] | null;
-  isLoading: boolean;
-  isError: null | boolean;
-};
-
-export type Tab_list_type = {
-  key: string;
-  category: string;
-};
-
-export type Tabs_type<T> = {
-  isActiveTab: string;
-  change_tabs: (value: string) => void;
-  tab_list: Tab_list_type[];
-  currentChangeTab?: string;
-  className?: string;
-  currentStore: CurrentStoreType<T>;
-};
+import { ContentLoader } from "../contentLoader";
 
 export const Tabs = observer(
-  <T,>({
+  <T, K>({
     isActiveTab,
     change_tabs,
     tab_list,
     currentChangeTab,
     className,
     currentStore,
-  }: Tabs_type<T>) => {
+  }: Tabs_type<T, K>) => {
     useEffect(() => {
       if (tab_list && tab_list.length > 0 && !isActiveTab) {
         change_tabs(tab_list[0]?.key);
@@ -61,7 +42,7 @@ export const Tabs = observer(
                   <input
                     className="visually-hidden peer"
                     type="radio"
-                    value={key}
+                    value={String(key)}
                     onChange={() => change_tabs(key)}
                     checked={isActiveTab === key}
                   />

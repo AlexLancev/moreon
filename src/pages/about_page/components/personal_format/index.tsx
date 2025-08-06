@@ -10,14 +10,16 @@ const personal_format_data_key: Personal_format_key_type[] = [
   "authors_programs",
 ];
 
-export type tabs_store_type = {
-  tabs_store: {
-    isActiveTab: string;
-    change_tabs: (value: string) => void;
-  };
+export type tabs_store_type<K> = {
+  isActiveTab: K;
+  change_tabs: (value: K) => void;
 };
 
-export const Personal_format = ({ tabs_store }: tabs_store_type) => {
+export const Personal_format = ({
+  tabs_store,
+}: {
+  tabs_store: tabs_store_type<Personal_format_key_type>;
+}) => {
   return (
     <section className="py-12">
       <Container>

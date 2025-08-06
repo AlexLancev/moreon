@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export const SkeletonServiceCard = ({ className }: { className?: string }) => (
   <SwiperSlide
     className={cn(
-      "relative flex min-h-[331px] flex-col items-start overflow-hidden rounded-3xl bg-[#031817] p-4 text-sm before:absolute before:left-0 before:top-0 before:z-[-1] before:h-[120px] before:w-full before:rotate-180 before:bg-[url('/images/decor_serv.svg')] before:bg-cover before:bg-no-repeat before:opacity-15 2xl:before:h-[140px] 3xl:p-10 3xl:before:h-[160px]",
+      "relative flex min-h-[331px] flex-col items-start overflow-hidden rounded-2xl bg-[#031817] p-4 text-sm before:absolute before:left-0 before:top-0 before:z-[-1] before:h-[120px] before:w-full before:rotate-180 before:bg-[url('/images/decor_serv.svg')] before:bg-cover before:bg-no-repeat before:opacity-15 2xl:before:h-[140px] 3xl:p-10 3xl:before:h-[160px]",
       className,
     )}
   >
@@ -24,20 +24,50 @@ export const SkeletonServiceCard = ({ className }: { className?: string }) => (
   </SwiperSlide>
 );
 
+export const SkeletonFitnessSection = ({
+  className,
+}: {
+  className?: string;
+}) => (
+  <div
+    className={cn(
+      "flex flex-col items-start gap-4 md:flex-row lg:gap-10",
+      className,
+    )}
+  >
+    <div className="relative h-[400px] w-full overflow-hidden rounded-2xl md:w-1/2">
+      <Skeleton className="h-full w-full rounded-lg" />
+    </div>
+
+    <div className="flex flex-col items-start justify-center p-4 md:w-1/2">
+      <Skeleton className="mb-4 h-8 w-[270px] rounded-2xl md:w-3/4" />
+      <Skeleton className="mb-4 h-8 w-[260px] rounded-2xl md:w-1/2" />
+      <Skeleton className="mb-4 h-8 w-[250px] rounded-2xl md:w-1/3" />
+      <Skeleton className="mb-4 h-8 w-[260px] rounded-2xl md:w-2/3" />
+      <Skeleton className="mb-4 h-8 w-[220px] rounded-2xl md:w-3/4" />
+      <Skeleton className="mb-4 h-8 w-[200px] rounded-2xl md:w-1/2" />
+
+      <button className="mt-8 inline-flex items-center gap-2 rounded-2xl">
+        <Skeleton className="h-12 w-[200px]" />
+      </button>
+    </div>
+  </div>
+);
+
 export const SkeletonTeam = ({ className }: { className?: string }) => (
   <SwiperSlide className={cn("flex flex-col gap-4", className)}>
-    <div className="relative overflow-hidden rounded-3xl">
+    <div className="relative overflow-hidden rounded-2xl">
       <Skeleton className="h-[451px] w-full" />
       <div className="absolute bottom-0 left-0 right-0">
-        <div className="relative z-10 mx-4 mb-4 flex h-16 w-5/6 items-center justify-start rounded-xl">
+        <div className="relative z-10 mx-4 mb-4 flex h-16 w-5/6 items-center justify-start rounded-2xl">
           <Skeleton className="h-8 w-3/4" />
         </div>
       </div>
     </div>
-    <div className="relative overflow-hidden rounded-3xl shadow-md">
+    <div className="relative overflow-hidden rounded-2xl shadow-md">
       <Skeleton className="h-[451px] w-full" />
       <div className="absolute bottom-0 left-0 right-0">
-        <div className="relative z-10 mx-4 mb-4 flex h-16 w-5/6 items-center justify-start rounded-xl">
+        <div className="relative z-10 mx-4 mb-4 flex h-16 w-5/6 items-center justify-start rounded-2xl">
           <Skeleton className="h-8 w-3/4" />
         </div>
       </div>
@@ -55,8 +85,8 @@ export const SkeletonHero = ({ className }: { className?: string }) => (
     </div>
     <Skeleton className="h-full w-full rounded-none" />
     <div className="absolute bottom-20 z-10 grid w-full translate-y-[1rem] items-center gap-3 xxs:grid-cols-2 lg:left-5 lg:flex lg:-translate-y-[6rem] 2xl:-translate-y-[12rem]">
-      <Skeleton className="h-12 w-full rounded-xl lg:w-[200px]" />
-      <Skeleton className="h-12 w-full rounded-xl lg:w-[200px]" />
+      <Skeleton className="h-12 w-full rounded-2xl lg:w-[200px]" />
+      <Skeleton className="h-12 w-full rounded-2xl lg:w-[200px]" />
     </div>
   </SwiperSlide>
 );
@@ -64,7 +94,7 @@ export const SkeletonHero = ({ className }: { className?: string }) => (
 export const SkeletonVideoReviews = ({ className }: { className?: string }) => (
   <SwiperSlide
     className={cn(
-      "relative h-[400px] w-full overflow-hidden rounded-3xl lg:h-[530px] 2xl:h-[800px]",
+      "relative h-[400px] w-full overflow-hidden rounded-2xl lg:h-[530px] 2xl:h-[800px]",
       className,
     )}
   >
@@ -77,7 +107,7 @@ export const SkeletonVideoReviews = ({ className }: { className?: string }) => (
 
 export const SkeletonGalleryGrid = ({ className }: { className?: string }) => (
   <li className={cn("h-[300px] w-full", className)}>
-    <Skeleton className="h-full rounded-3xl" />
+    <Skeleton className="h-full rounded-2xl" />
   </li>
 );
 
@@ -90,14 +120,14 @@ export const SkeletonAboutUs = ({ className }: { className?: string }) => (
 );
 
 export const SkeletonTabsGrid = ({ className }: { className?: string }) => (
-  <li className={cn("w-[300px] h-12", className)}>
-    <Skeleton className="h-full w-full rounded-3xl" />
+  <li className={cn("h-12 w-[300px]", className)}>
+    <Skeleton className="h-full w-full rounded-2xl" />
   </li>
 );
 
 export const SkeletonGrid = ({ className }: { className?: string }) => (
   <SwiperSlide className={cn("h-[400px] w-full", className)}>
-    <Skeleton className="h-full w-full rounded-3xl" />
+    <Skeleton className="h-full w-full rounded-2xl" />
   </SwiperSlide>
 );
 
@@ -109,7 +139,7 @@ export const SkeletonPerformance = ({ className }: { className?: string }) => (
     )}
   >
     <div className="mx-0 pb-16 lg:pb-20 2xl:pb-24">
-      <Skeleton className="h-[293px] w-full rounded-3xl" />
+      <Skeleton className="h-[293px] w-full rounded-2xl" />
       <div className="mt-4 flex justify-center gap-2">
         {[...Array(4)].map((_, idx) => (
           <Skeleton key={idx} className="h-5 w-5 rounded-full" />

@@ -84,19 +84,19 @@ type Personal_format_key_type =
   | "beauty_health"
   | "authors_programs";
 
-type Tabs_store_type = {
-  isActiveTab: string;
-  change_tabs: (value: string) => void;
+type Tabs_store_type<K> = {
+  isActiveTab: K;
+  change_tabs: (value: K) => void;
 };
 
-type Personal_format_tabs_type = {
+type Personal_format_tabs_type<K> = {
   data_key: Personal_format_key_type[];
-  tabs_store: Tabs_store_type;
+  tabs_store: Tabs_store_type<K>;
   className?: string;
 };
 
-type Tab_list_type = {
-  key: string;
+type Tab_list_type<K> = {
+  key: K;
   category: string;
 };
 
@@ -109,7 +109,7 @@ type Personal_format_data_type = Record<
   {
     key_name: Personal_format_key_type;
     category: string;
-    tab_list: Tab_list_type[];
+    tab_list: Tab_list_type<Personal_format_key_type>[];
     key_list: Key_list_type;
   }
 >;
@@ -153,18 +153,17 @@ type Water_zone_tabs_type = {
   change_tabs: (value: string) => void;
 };
 
-type Water_zone_type = Record<
-  Water_zone_key_type,
-  {
-    head: string;
-    description: string;
-    images_description: string;
-    images_url: {
-      jpg: string;
-      webp: string;
-    };
-  }
->;
+type Water_zone_content_type = {
+  head: string;
+  description: string;
+  images_description: string;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+};
+
+type Water_zone_type = Record<Water_zone_key_type, Water_zone_content_type>;
 
 type Club_cards_tabs_type = {
   isActiveTab: Club_cards_key_type;
@@ -180,20 +179,19 @@ type Club_cards_key_type =
 
 type Page_description_type_key = "all" | "daytime" | "business" | "weekend";
 
-type Club_cards_type = Record<
-  Club_cards_key_type,
-  {
-    head: string;
-    description: string;
-    hero_description: string;
-    page_description: Record<Page_description_type_key, string>;
-    images_url: {
-      jpg: string;
-      webp: string;
-    };
-    path: string;
-  }
->;
+type Club_cards_content_type = {
+  head: string;
+  description: string;
+  hero_description: string;
+  page_description: Record<Page_description_type_key, string>;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+  path: string;
+};
+
+type Club_cards_type = Record<Club_cards_key_type, Club_cards_content_type>;
 
 type Childrens_swimming_tabs_type = {
   isActiveTab: Childrens_swimming_key_type;
@@ -388,4 +386,19 @@ type Data_action_type = {
   url_xxl_img_jpg: string;
   url_xl_img_webp: string;
   url_xl_img_jpg: string;
+};
+
+type CurrentStoreType<T> = {
+  data: T[] | null;
+  isLoading: boolean;
+  isError: null | boolean;
+};
+
+type Tabs_type<T, K> = {
+  isActiveTab: K;
+  change_tabs: (value: K) => void;
+  tab_list: Tab_list_type<K>[];
+  currentChangeTab?: string;
+  className?: string;
+  currentStore: CurrentStoreType<T>;
 };

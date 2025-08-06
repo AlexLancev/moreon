@@ -9,24 +9,25 @@ import { personal_format_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
 
 export const Personal_format_tabs = observer(
-  ({ data_key, tabs_store, className }: Personal_format_tabs_type) => {
+  ({
+    data_key,
+    tabs_store,
+    className,
+  }: Personal_format_tabs_type<Personal_format_key_type>) => {
     const { isActiveTab, change_tabs } = tabs_store;
     const [currentChangeTab, setCurrentChangeTab] =
       useState<Personal_format_key_type>("gym");
 
     const { data, isLoading } = personal_format_store;
 
-    const currentStoreObj = {
-      data: toJS(data?.[0]) ? Object.keys(toJS(data?.[0])) : null,
-      isLoading: toJS(personal_format_store).isLoading,
-      isError: toJS(personal_format_store).isError,
-    };
+    const currentData = toJS(data?.[0]);
 
-    console.log(isActiveTab);
+    const description =
+      currentData?.[currentChangeTab]?.key_list?.[isActiveTab]?.description;
 
-    console.log(
-      toJS(data?.[0])?.[currentChangeTab]?.key_list?.[isActiveTab]?.description,
-    );
+    const tabList = currentData?.[currentChangeTab]?.tab_list;
+
+    if (!data_key || data_key.length === 0) return null;
 
     return (
       <>
@@ -40,16 +41,17 @@ export const Personal_format_tabs = observer(
           <ContentLoader
             currentStore={{ ...personal_format_store, data: data_key }}
             skeletonComponent={SkeletonTabsGrid}
-            isEmpty={!toJS(data?.[0]) || isEmptyObj(toJS(data?.[0]), data_key)}
+            isEmpty={!currentData || isEmptyObj(currentData, data_key)}
             getSkeletonClassName="h-16 w-[19%]"
           >
             {data_key.map((key, idx: number) => {
-              const currentData = toJS(data?.[0])?.[key];
-              if (!currentData) return null;
+              const currentKeyData = currentData?.[key];
+              if (!currentKeyData) return null;
 
-              const { key_name, category } = currentData;
+              const { key_name, category } = currentKeyData;
+              const currentKey = currentData?.[key_name]?.tab_list?.[0]?.key;
 
-              if (!category) return null;
+              if (!category || !currentKey) return null;
 
               return (
                 <li
@@ -63,9 +65,7 @@ export const Personal_format_tabs = observer(
                       value={key_name}
                       onChange={() => {
                         setCurrentChangeTab(key_name);
-                        change_tabs(
-                          toJS(data?.[0])?.[key_name]?.tab_list?.[0]?.key || "",
-                        );
+                        change_tabs(currentKey);
                       }}
                       checked={currentChangeTab === key}
                     />
@@ -85,20 +85,16 @@ export const Personal_format_tabs = observer(
           )}
         >
           <Tabs
-            currentStore={currentStoreObj}
+            currentStore={personal_format_store}
             currentChangeTab={currentChangeTab}
             isActiveTab={isActiveTab}
             change_tabs={change_tabs}
-            tab_list={toJS(data?.[0])?.[currentChangeTab]?.tab_list}
+            tab_list={tabList}
             className="lg:flex-wrap lg:gap-y-8"
           />
-          {toJS(data?.[0])?.[currentChangeTab]?.key_list?.[isActiveTab]
-            ?.description && (
+          {description && (
             <p className="lg:text-xl 2xl:text-2xl 3xl:text-3xl">
-              {
-                toJS(data?.[0])?.[currentChangeTab]?.key_list?.[isActiveTab]
-                  ?.description
-              }
+              {description}
             </p>
           )}
         </div>
