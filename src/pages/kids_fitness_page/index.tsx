@@ -10,11 +10,11 @@ import {
 const Kids_fitness_page = () => {
   return (
     <>
-      <Kids_fitnes_hero />
+      {/* <Kids_fitnes_hero /> */}
       <Childrens_swimming />
-      <Martial_arts_children />
+      {/* <Martial_arts_children />
       <Childrens_center />
-      <Other_directions />
+      <Other_directions /> */}
     </>
   );
 };

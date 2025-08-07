@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Water_zone_store {
   data: Water_zone_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

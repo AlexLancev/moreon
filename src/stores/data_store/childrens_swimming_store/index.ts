@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Childrens_swimming_store {
   data: Childrens_swimming_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

@@ -126,20 +126,19 @@ type Tab_fitness_type =
   | "cardio_room"
   | "martial_arts";
 
-type Fitness_area_type = Record<
-  Tab_fitness_type,
-  {
-    name_key: Tab_fitness_type;
-    head: string;
-    description: string;
-    description_images: string;
-    images_url: {
-      jpg: string;
-      webp: string;
-    };
-    path: string;
-  }
->;
+type FitnessAreaContentType = {
+  name_key: Tab_fitness_type;
+  head: string;
+  description: string;
+  description_images: string;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+  path: string;
+};
+
+type Fitness_area_type = Record<Tab_fitness_type, FitnessAreaContentType>;
 
 type Water_zone_key_type =
   | "baths_swimming"
@@ -179,6 +178,20 @@ type Club_cards_key_type =
 
 type Page_description_type_key = "all" | "daytime" | "business" | "weekend";
 
+type Render_card_tabs_type = {
+  isActiveTab: Page_description_type_key;
+  change_tabs: (value: string) => void;
+};
+
+type Render_card_description_props = {
+  page_description: Record<Page_description_type_key, string>;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+  tabs_store: Render_card_tabs_type;
+};
+
 type Club_cards_content_type = {
   head: string;
   description: string;
@@ -203,18 +216,20 @@ type Childrens_swimming_key_type =
   | "childrens_swimming"
   | "school_competitive_swimming";
 
+type Childrens_swimming_content_type = {
+  head: string;
+  description: string;
+  image_description: string;
+  path: string;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+};
+
 type Childrens_swimming_type = Record<
   Childrens_swimming_key_type,
-  {
-    head: string;
-    description: string;
-    image_description: string;
-    path: string;
-    images_url: {
-      jpg: string;
-      webp: string;
-    };
-  }
+  Childrens_swimming_content_type
 >;
 
 type News_type = {

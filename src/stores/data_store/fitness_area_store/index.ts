@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Fitness_area_store {
   data: Fitness_area_type[] = [];
-  isLoading: boolean | null = null;
+  isLoading: boolean = true;
   isError: boolean | null = null;
 
   constructor() {

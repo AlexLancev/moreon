@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import xss from "xss";
 
 import { Container, ContentLoader, Tabs, Title } from "@/components";
+import { chooseYourCardDeafultData, SkeletonFitnessSection } from "@/constans";
 import { club_cards_store } from "@/stores/data_store";
 
-import { Button } from "../ui/button";
-import { chooseYourCardDeafultData, SkeletonFitnessSection } from "@/constans";
 import { isEmptyObj } from "@/utils";
+
+import { Button } from "../ui/button";
 
 const tab_list: Tab_list_type<Club_cards_key_type>[] = [
   { key: "fitnes", category: "Фитнес" },
@@ -19,7 +20,7 @@ const tab_list: Tab_list_type<Club_cards_key_type>[] = [
   { key: "premium", category: "Премиум" },
 ];
 
-const tabListKeys = tab_list?.map(({ key }) => key);
+const chooseYourCardKeys = tab_list?.map(({ key }) => key);
 
 export const Choose_your_card = observer(
   ({ tabs_store }: { tabs_store: Club_cards_tabs_type }) => {
@@ -34,7 +35,7 @@ export const Choose_your_card = observer(
       path,
     } = currentData ?? chooseYourCardDeafultData;
 
-    if (!tabListKeys || tabListKeys.length === 0) return null;
+    if (!chooseYourCardKeys || chooseYourCardKeys.length === 0) return null;
 
     return (
       <section className="py-12">
@@ -53,7 +54,7 @@ export const Choose_your_card = observer(
           <ContentLoader
             currentStore={club_cards_store}
             skeletonComponent={SkeletonFitnessSection}
-            isEmpty={!currentData || isEmptyObj(data?.[0], tabListKeys)}
+            isEmpty={!currentData || isEmptyObj(data?.[0], chooseYourCardKeys)}
             initialVisibleCount={1}
           >
             <div className="py-5 lg:flex lg:items-center lg:justify-evenly lg:gap-x-10">
