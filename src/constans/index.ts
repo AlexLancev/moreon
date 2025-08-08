@@ -13,6 +13,10 @@ export {
   SkeletonFitnessCard,
   SkeletonFitnessClubCard,
   SkeletonBabySwimmingSection,
+  SkeletonClubCardFAQ,
+  SkeletonBeautifulFigureSection,
+  SkeletonGymAndGroupPrograms,
+  RewiewsSkeleton,
 } from "./skeletons";
 export {
   chooseYourCardDeafultData,
@@ -20,6 +24,8 @@ export {
   fitnessAreaDefaultData,
   cardsPresentationDefaultData,
   childrensSwimmingDefaultData,
+  directionsListDeafaultData,
+  currentDirectionDeafaultData,
 } from "./defaultData";
 export { childrens_swimming_data } from "./childrens_swimming_data";
 export { contacts_data } from "./contacts_data";

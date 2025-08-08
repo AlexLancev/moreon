@@ -20,7 +20,7 @@ const childrens_swimming_list: Tab_list_type<Childrens_swimming_key_type>[] = [
   { key: "school_competitive_swimming", category: "Спортивное плавание" },
 ];
 
-const childrensSwimmingKeys = childrens_swimming_list?.map(({ key }) => key);
+const childrensSwimmingKeys = childrens_swimming_list.map(({ key }) => key);
 
 export const Childrens_swimming_tabs = observer(
   ({ tabs_store }: { tabs_store: Childrens_swimming_tabs_type }) => {
@@ -31,14 +31,6 @@ export const Childrens_swimming_tabs = observer(
 
     const { head, description, image_description, path, images_url } =
       current_data ?? childrensSwimmingDefaultData;
-
-    if (
-      !childrens_swimming_list ||
-      childrens_swimming_list.length === 0 ||
-      !childrensSwimmingKeys ||
-      childrensSwimmingKeys.length === 0
-    )
-      return null;
 
     const sanitized_description = xss(description);
 
@@ -74,10 +66,13 @@ export const Childrens_swimming_tabs = observer(
             </picture>
             <div className="w-full">
               <strong className="mb-5 block">{head}</strong>
-              <div
-                className="ab mb-5"
-                dangerouslySetInnerHTML={{ __html: sanitized_description }}
-              ></div>
+              {sanitized_description &&
+                sanitized_description.trim().length !== 0 && (
+                  <div
+                    className="ab mb-5"
+                    dangerouslySetInnerHTML={{ __html: sanitized_description }}
+                  ></div>
+                )}
               <Button asChild>
                 <Link to={`/services/${path}`}>
                   Подробнее <IconMessageCircleQuestion />

@@ -365,31 +365,34 @@ type Description_direction_type = {
   };
 };
 
-type Directions_type = Record<
-  Direct_keys_type,
-  {
-    directions: Direct_keys_type[] | null;
-    team: Team_tab_key_type | null;
-    direction: string;
+type Directions_content_page_type = {
+  hero: {
     description: string;
     images_url: {
       jpg: string;
       webp: string;
     };
-    hero: {
-      description: string;
-      images_url: {
-        jpg: string;
-        webp: string;
-      };
-    };
-    description_direction: Description_direction_type[];
-    path: string;
-  }
->;
+  };
+  description_direction: Description_direction_type[];
+  directions: Direct_keys_type[] | null;
+};
+
+type Directions_content_type = Directions_content_page_type & {
+  team: Team_tab_key_type | null;
+  direction: string;
+  description: string;
+  images_url: {
+    jpg: string;
+    webp: string;
+  };
+  path: string;
+};
+
+type Directions_type = Record<Direct_keys_type, Directions_content_type>;
 
 type Directions_keys_type = {
   keys_list: Direct_keys_type[];
+  visibleElements?: number;
 };
 
 type Data_action_type = {

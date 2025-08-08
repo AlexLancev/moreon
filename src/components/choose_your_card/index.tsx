@@ -20,7 +20,7 @@ const tab_list: Tab_list_type<Club_cards_key_type>[] = [
   { key: "premium", category: "Премиум" },
 ];
 
-const chooseYourCardKeys = tab_list?.map(({ key }) => key);
+const chooseYourCardKeys = tab_list.map(({ key }) => key);
 
 export const Choose_your_card = observer(
   ({ tabs_store }: { tabs_store: Club_cards_tabs_type }) => {
@@ -34,8 +34,6 @@ export const Choose_your_card = observer(
       description,
       path,
     } = currentData ?? chooseYourCardDeafultData;
-
-    if (!chooseYourCardKeys || chooseYourCardKeys.length === 0) return null;
 
     return (
       <section className="py-12">
@@ -72,12 +70,14 @@ export const Choose_your_card = observer(
                 <strong className="mb-3 block text-2xl text-white 2xl:text-4xl">
                   {head}
                 </strong>
-                <div
-                  className="customInsertCardPageHTML mb-5 text-lg 2xl:text-2xl 3xl:text-3xl"
-                  dangerouslySetInnerHTML={{
-                    __html: xss(description),
-                  }}
-                ></div>
+                {description && description.trim().length !== 0 && (
+                  <div
+                    className="customInsertCardPageHTML mb-5 text-lg 2xl:text-2xl 3xl:text-3xl"
+                    dangerouslySetInnerHTML={{
+                      __html: xss(description),
+                    }}
+                  ></div>
+                )}
                 <Button asChild>
                   <Link to={`/presentation_cards/${path}`}>
                     Подробнее <IconMessageCircleQuestion />

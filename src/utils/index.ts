@@ -72,14 +72,20 @@ export const renderNumberSlides = <T>(
   data: T[] | null | undefined,
   count: number,
   renderSlide: (startIndex: number, endIndex: number) => JSX.Element,
-): JSX.Element[] => {
-  if (!data || data.length === 0) {
-    return [];
+): JSX.Element[] | null => {
+  if (!data?.length) {
+    console.error("Нет данных:", data);
+    return null;
   }
 
   if (count <= 0) {
     console.error("Некорректное значение в count");
-    return [];
+    return null;
+  }
+
+  if (typeof renderSlide !== "function") {
+    console.error("renderSlide должен быть функцией");
+    return null;
   }
 
   const slides: JSX.Element[] = [];

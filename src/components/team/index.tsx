@@ -17,8 +17,7 @@ export const Team = observer(
     if (!tabs_store) return null;
     const { isActiveTab, change_tabs } = tabs_store;
 
-    if (!teamTabListKeys || teamTabListKeys.length === 0 || !change_tabs)
-      return null;
+    if (!change_tabs) return null;
 
     return (
       <section className="py-12">

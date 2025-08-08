@@ -17,6 +17,8 @@ export const Performance = observer(({ data_key }: Performance_type) => {
     numberVisiblePerformanceData,
   );
 
+  if (!data_key?.length) return null;
+
   return (
     <ul>
       <ContentLoader

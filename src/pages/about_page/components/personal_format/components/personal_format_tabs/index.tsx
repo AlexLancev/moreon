@@ -92,7 +92,7 @@ export const Personal_format_tabs = observer(
             tab_list={tabList}
             className="lg:flex-wrap lg:gap-y-8"
           />
-          {description && (
+          {description && description.trim().length !== 0 && (
             <p className="lg:text-xl 2xl:text-2xl 3xl:text-3xl">
               {description}
             </p>

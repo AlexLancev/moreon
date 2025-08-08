@@ -3,29 +3,89 @@ import { SwiperSlide } from "swiper/react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
+export const RewiewsSkeleton = () => (
+  <SwiperSlide className="h-[400px]">
+    <div className="relative">
+      <Skeleton className="absolute inset-0 h-96 w-full overflow-hidden rounded-3xl" />
+      <Skeleton className="absolute left-10 top-10 h-10 w-1/3 overflow-hidden rounded-md" />
+      <Skeleton className="absolute left-10 top-28 h-60 w-5/6 overflow-hidden rounded-md" />
+    </div>
+  </SwiperSlide>
+);
+
+export const SkeletonGymAndGroupPrograms = ({
+  className,
+}: {
+  className?: string;
+}) => (
+  <SwiperSlide className="h-auto">
+    <ul className={cn("flex h-full flex-col gap-4 lg:gap-8", className)}>
+      <li>
+        <div className="mb-8">
+          <Skeleton className="mt-4 h-[230px] w-full overflow-hidden rounded-3xl" />
+        </div>
+
+        <div>
+          <Skeleton className="mt-4 h-[230px] w-full overflow-hidden rounded-3xl" />
+        </div>
+      </li>
+    </ul>
+  </SwiperSlide>
+);
+
+export const SkeletonBeautifulFigureSection = ({
+  className,
+}: {
+  className?: string;
+}) => (
+  <SwiperSlide className={cn("flex flex-col space-y-6", className)}>
+    <div className="space-y-4">
+      <div className="flex items-center space-x-3">
+        <Skeleton className="h-5 w-3/4" />
+      </div>
+      <div className="flex items-center space-x-3">
+        <Skeleton className="h-5 w-1/2" />
+      </div>
+      <div className="flex items-center space-x-3">
+        <Skeleton className="h-5 w-1/3" />
+      </div>
+      <div className="flex items-center space-x-3">
+        <Skeleton className="h-5 w-1/2" />
+      </div>
+    </div>
+  </SwiperSlide>
+);
+
+export const SkeletonClubCardFAQ = ({ className }: { className?: string }) => (
+  <li
+    className={cn(
+      "relative mb-4 overflow-hidden rounded-2xl last:mb-0",
+      className,
+    )}
+  >
+    <Skeleton className="h-[75px] w-full" />
+    <Skeleton className="absolute left-4 top-1/2 h-[32px] w-1/3 -translate-y-1/2 overflow-hidden rounded-md" />
+    <Skeleton className="absolute right-6 top-1/2 h-[27px] w-10 -translate-y-1/2" />
+  </li>
+);
+
 export const SkeletonBabySwimmingSection = ({
   className,
 }: {
   className?: string;
 }) => (
   <div className={cn("flex flex-col md:flex-row", className)}>
-    {/* Левая колонка (изображение) */}
     <div className="relative h-[400px] w-full overflow-hidden md:w-1/2">
       <Skeleton className="h-full w-full rounded-lg" />
     </div>
 
-    {/* Правая колонка (текст) */}
     <div className="flex flex-col p-4 md:w-1/2">
-      {/* Заголовок */}
       <Skeleton className="mb-4 h-8 w-56" />
-
-      {/* Основной текст */}
       <Skeleton className="mb-4 h-8 w-1/2" />
       <Skeleton className="mb-4 h-8 w-3/4" />
       <Skeleton className="mb-4 h-8 w-2/3" />
       <Skeleton className="mb-4 h-8 w-1/2" />
 
-      {/* Кнопка "Подробнее" */}
       <button className="mt-8 inline-flex items-center gap-2 rounded-md py-2">
         <Skeleton className="h-12 w-[200px]" />
       </button>
@@ -64,14 +124,11 @@ export const SkeletonFitnessCard = ({ className }: { className?: string }) => (
     </div>
 
     <div className="flex flex-col items-start justify-center p-4 md:w-1/2">
-      {/* Заголовок */}
       <Skeleton className="rounding-2xl mb-4 h-8 w-56" />
 
-      {/* Первый абзац */}
       <Skeleton className="rounding-2xl mb-4 h-8 w-1/2" />
       <Skeleton className="rounding-2xl mb-4 h-8 w-3/4" />
 
-      {/* Второй подраздел */}
       <Skeleton className="rounding-2xl mb-4 h-8 w-32" />
       <ul className="mb-4 ml-8 list-none space-y-2">
         <li>
@@ -91,7 +148,6 @@ export const SkeletonFitnessCard = ({ className }: { className?: string }) => (
         </li>
       </ul>
 
-      {/* Последний абзац */}
       <Skeleton className="rounding-2xl mb-4 h-8 w-1/2" />
       <Skeleton className="rounding-2xl mb-4 h-8 w-3/4" />
       <Skeleton className="rounding-2xl mb-4 h-8 w-2/3" />

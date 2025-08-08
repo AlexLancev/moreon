@@ -46,3 +46,33 @@ export const childrensSwimmingDefaultData: Childrens_swimming_content_type = {
   path: "",
   images_url: { webp: "", jpg: "" },
 };
+
+export const directionsListDeafaultData: Pick<
+  Directions_content_type,
+  "images_url" | "direction" | "path" | "description"
+> = {
+  images_url: { webp: "", jpg: "" },
+  direction: "",
+  path: "",
+  description: "",
+};
+
+export const currentDirectionDeafaultData: Directions_content_page_type = {
+  hero: {
+    description: "",
+    images_url: {
+      jpg: "",
+      webp: "",
+    },
+  },
+  description_direction: [
+    {
+      content: "",
+      images_url: {
+        jpg: "",
+        webp: "",
+      },
+    },
+  ],
+  directions: [],
+};

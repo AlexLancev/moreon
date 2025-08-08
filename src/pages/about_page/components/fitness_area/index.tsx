@@ -6,9 +6,9 @@ import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
+import { fitnessAreaDefaultData, SkeletonGymSection } from "@/constans";
 import { fitness_area_store } from "@/stores/data_store";
 import { isEmptyObj } from "@/utils";
-import { fitnessAreaDefaultData, SkeletonGymSection } from "@/constans";
 
 const tab_list: Tab_list_type<Tab_fitness_type>[] = [
   { key: "gym", category: "Тренажёрный зал" },
@@ -18,7 +18,7 @@ const tab_list: Tab_list_type<Tab_fitness_type>[] = [
   { key: "martial_arts", category: "Зал единоборств" },
 ];
 
-const fitnessAreaKeys = tab_list?.map(({ key }) => key);
+const fitnessAreaKeys = tab_list.map(({ key }) => key);
 
 export const Fitness_area = observer(
   ({ tabs_store }: { tabs_store: Fitness_area_tabs_type }) => {
@@ -35,14 +35,6 @@ export const Fitness_area = observer(
       path,
       images_url: { webp, jpg },
     } = currentData ?? fitnessAreaDefaultData;
-
-    if (
-      !tab_list ||
-      tab_list.length === 0 ||
-      !fitnessAreaKeys ||
-      fitnessAreaKeys.length === 0
-    )
-      return null;
 
     return (
       <section className="py-12">

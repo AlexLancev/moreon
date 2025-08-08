@@ -4,31 +4,12 @@ import { Container, Title } from "@/components";
 import { Button } from "@/components/ui/button";
 import { modal_store } from "@/stores";
 
-type MartialArtsDirectionsKeyType =
-  | "бокс"
-  | "тайский бокс"
-  | "кикбоксинг"
-  | "ММА";
-
-type MartialArtsDirectionsType = Record<
-  "description",
-  MartialArtsDirectionsKeyType
->;
-
-const martial_arts_children_directions: MartialArtsDirectionsType[] = [
-  {
-    description: "бокс",
-  },
-  {
-    description: "тайский бокс",
-  },
-  {
-    description: "кикбоксинг",
-  },
-  {
-    description: "ММА",
-  },
-];
+const martial_arts_children_directions = [
+  { description: "бокс" },
+  { description: "тайский бокс" },
+  { description: "кикбоксинг" },
+  { description: "ММА" },
+] as const;
 
 export const Martial_arts_children = () => {
   const { isVisibleModal, change_modal } = modal_store;
@@ -59,24 +40,17 @@ export const Martial_arts_children = () => {
               себе и развить силу духа! В основе лежат принципы гармоничного
               физического развития ребенка с приоритетом на здоровье.
             </p>
-            {martial_arts_children_directions &&
-              martial_arts_children_directions.length !== 0 && (
-                <>
-                  <p className="mb-3 xl:mb-7">
-                    Выбирайте направление, которое интереснее вашему ребенку или
-                    посещайте все:
-                  </p>
-                  <ul className="mb-3 list-disc space-y-1 pl-5 xl:space-y-3">
-                    {martial_arts_children_directions.map(
-                      ({ description }, idx: number) => {
-                        if (!description) return null;
-
-                        return <li key={idx}>{description}</li>;
-                      },
-                    )}
-                  </ul>
-                </>
+            <p className="mb-3 xl:mb-7">
+              Выбирайте направление, которое интереснее вашему ребенку или
+              посещайте все:
+            </p>
+            <ul className="mb-3 list-disc space-y-1 pl-5 xl:space-y-3">
+              {martial_arts_children_directions.map(
+                ({ description }, idx: number) => (
+                  <li key={idx}>{description}</li>
+                ),
               )}
+            </ul>
             <p className="mb-5">
               Занятия в Moreon Fitness становятся для детей не только
               тренировкой, а любимым досугом!

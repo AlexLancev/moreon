@@ -6,6 +6,7 @@ import xss from "xss";
 
 import { Container, Directions_list, Title } from "@/components";
 import { Button } from "@/components/ui/button";
+import { currentDirectionDeafaultData } from "@/constans";
 import { modal_store } from "@/stores";
 import { directions_store } from "@/stores/data_store";
 
@@ -15,42 +16,44 @@ const Current_direction_page = observer(() => {
   const pathSegments = location.pathname.split("/");
   const service = pathSegments[pathSegments.length - 1] as Direct_keys_type;
 
+  const { data } = directions_store;
+
+  const directions_bd = toJS(data?.[0]);
+
   const {
-    data: directions_data,
-    isLoading: directions_isLoading,
-    isError: directions_isError,
-  } = directions_store;
+    hero: {
+      images_url: { jpg, webp },
+      description,
+    },
+    description_direction,
+    directions,
+  } = directions_bd?.[service] ?? currentDirectionDeafaultData;
 
-  if (directions_isLoading) return <div>Загрузка...</div>;
-  if (directions_isError) return <div>Ошибка: не удалось получить данные</div>;
+  const sanitized_description = xss(description);
 
-  if (!directions_data || !service) return null;
-
-  const directions_bd = toJS(directions_data?.[0]);
-
-  const { hero, description_direction, directions } =
-    directions_bd?.[service] ?? {};
-
-  const sanitized_description = xss(hero?.description);
+  if (!service) return null;
 
   return (
     <Container>
       <section className="relative min-h-[400px] px-2.5 py-4 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] after:absolute after:inset-0 after:bg-black/80 md:px-10 md:py-20 lg:text-xl xl:text-2xl 2xl:text-3xl">
         <picture>
-          <source srcSet={hero?.images_url?.webp} type="image/webp" />
+          <source srcSet={webp} type="image/webp" />
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src={hero?.images_url?.jpg}
+            src={jpg}
             alt=""
             loading="lazy"
             aria-hidden
           />
         </picture>
         <div className="relative z-10 w-full xl:max-w-[725px] 2xl:max-w-[925px]">
-          <div
-            className="customInsertHTML"
-            dangerouslySetInnerHTML={{ __html: sanitized_description }}
-          ></div>
+          {sanitized_description &&
+            sanitized_description.trim().length !== 0 && (
+              <div
+                className="customInsertHTML"
+                dangerouslySetInnerHTML={{ __html: sanitized_description }}
+              ></div>
+            )}
           <Button onClick={() => change_modal(!isVisibleModal)}>
             Гостевой визит <IconNotebookText />
           </Button>
@@ -69,10 +72,13 @@ const Current_direction_page = observer(() => {
                   key={idx}
                   className="mb-20 last:mb-0 odd:flex-row-reverse sm:flex sm:items-start sm:justify-center sm:gap-4 md:gap-8"
                 >
-                  <div
-                    className="customInsertPageHTML mb-4 lg:text-xl xl:text-2xl 2xl:max-w-[825px] 2xl:text-3xl"
-                    dangerouslySetInnerHTML={{ __html: sanitized_content }}
-                  ></div>
+                  {sanitized_content &&
+                    sanitized_content.trim().length !== 0 && (
+                      <div
+                        className="customInsertPageHTML mb-4 lg:text-xl xl:text-2xl 2xl:max-w-[825px] 2xl:text-3xl"
+                        dangerouslySetInnerHTML={{ __html: sanitized_content }}
+                      ></div>
+                    )}
                   <picture>
                     <source srcSet={webp} type="image/webp" />
                     <img

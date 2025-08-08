@@ -21,22 +21,16 @@ export const Childrens_swimming = () => {
         <p className="mb-4 xl:mb-6 2xl:mb-8">
           Плавание – навык, который останется на всю жизнь!
         </p>
-        {childrens_swimming_data && childrens_swimming_data.length !== 0 && (
-          <>
-            <p className="mb-4">
-              В Moreon Fitness есть 2 бассейна для плавания. Занятия рассчитаны
-              на возрастные категории от 0 до 16 лет и делятся на 4 блока,
-              учитывая возможности и подготовку ребенка
-            </p>
-            <ul className="mb-4 list-disc space-y-1 pl-5 lg:space-y-2 xl:space-y-3">
-              {childrens_swimming_data.map(({ description }, idx: number) => {
-                if (!description) return null;
-
-                return <li key={idx}>{description}</li>;
-              })}
-            </ul>
-          </>
-        )}
+        <p className="mb-4">
+          В Moreon Fitness есть 2 бассейна для плавания. Занятия рассчитаны на
+          возрастные категории от 0 до 16 лет и делятся на 4 блока, учитывая
+          возможности и подготовку ребенка
+        </p>
+        <ul className="mb-4 list-disc space-y-1 pl-5 lg:space-y-2 xl:space-y-3">
+          {childrens_swimming_data.map(({ description }, idx: number) => (
+            <li key={idx}>{description}</li>
+          ))}
+        </ul>
         <p className="mb-10 xl:mb-12 2xl:mb-14">
           Приглашаем на занятия юных пловцов!
         </p>

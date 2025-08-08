@@ -1,7 +1,7 @@
 import { Container, Directions_list, Title } from "components";
 
 export const Areas_study = ({ keys_list }: Directions_keys_type) => {
-  if (!keys_list || keys_list.length === 0) return null;
+  if (!keys_list?.length) return null;
 
   return (
     <Container>
@@ -10,7 +10,7 @@ export const Areas_study = ({ keys_list }: Directions_keys_type) => {
           <Title className="mb-4 lg:mb-8 3xl:mb-12">
             Направления <span className="text-customHeadDecor">занятий</span>
           </Title>
-          <Directions_list keys_list={keys_list} />
+          <Directions_list keys_list={keys_list} visibleElements={9} />
         </div>
       </section>
     </Container>

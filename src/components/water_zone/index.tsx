@@ -7,8 +7,9 @@ import { SkeletonBathAndPoolsSection, waterZoneDefaultData } from "@/constans";
 import { modal_store } from "@/stores";
 import { water_zone_store } from "@/stores/data_store";
 
-import { Button } from "../ui/button";
 import { isEmptyObj } from "@/utils";
+
+import { Button } from "../ui/button";
 
 const tab_list: Tab_list_type<Water_zone_key_type>[] = [
   { key: "baths_swimming", category: "Бани и бассейны" },
@@ -18,7 +19,7 @@ const tab_list: Tab_list_type<Water_zone_key_type>[] = [
   { key: "goldfish", category: "Золотые рыбки" },
 ];
 
-const waterZoneKeys = tab_list?.map(({ key }) => key);
+const waterZoneKeys = tab_list.map(({ key }) => key);
 
 export const Water_zone = observer(
   ({ tabs_store }: { tabs_store: Water_zone_tabs_type }) => {
@@ -35,8 +36,6 @@ export const Water_zone = observer(
       images_url: { webp, jpg },
       images_description,
     } = current_data ?? waterZoneDefaultData;
-
-    if (!tab_list || tab_list.length === 0) return null;
 
     return (
       <section className="py-12">

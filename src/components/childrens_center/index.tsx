@@ -52,15 +52,11 @@ export const Childrens_center = () => {
             <p className="mb-4">
               Увлечем и заинтересуем юных спортсменов, в Moreon Fitness есть:
             </p>
-            {childrens_center_data && childrens_center_data.length !== 0 && (
-              <ul className="mb-4 list-disc space-y-1 pl-5 2xl:space-y-3">
-                {childrens_center_data.map(({ description }, idx: number) => {
-                  if (!description) return null;
-
-                  return <li key={idx}>{description}</li>;
-                })}
-              </ul>
-            )}
+            <ul className="mb-4 list-disc space-y-1 pl-5 2xl:space-y-3">
+              {childrens_center_data.map(({ description }, idx: number) => (
+                <li key={idx}>{description}</li>
+              ))}
+            </ul>
             <p className="mb-8">
               Пусть ваши дети растут сильными, здоровыми и активными!
             </p>

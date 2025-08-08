@@ -11,7 +11,7 @@ const tab_list: Omit<Tab_list_type<Page_description_type_key>, "all">[] = [
   { key: "weekend", category: "Тариф 'Выходного дня'" },
 ];
 
-const cardsPresentationKeys = tab_list?.map(({ key }) => key);
+const cardsPresentationKeys = tab_list.map(({ key }) => key);
 
 export const Render_card_description = observer(
   ({
@@ -19,12 +19,7 @@ export const Render_card_description = observer(
     page_description,
     tabs_store: { isActiveTab, change_tabs },
   }: Render_card_description_props) => {
-    if (
-      !page_description ||
-      !cardsPresentationKeys ||
-      cardsPresentationKeys.length === 0
-    )
-      return null;
+    if (!page_description) return null;
 
     return (
       <section className="py-12">
@@ -57,14 +52,19 @@ export const Render_card_description = observer(
                 aria-hidden
               />
             </picture>
-            <div
-              className="customInsertCardPageHTML mb-5 max-w-[750px] 2xl:text-2xl"
-              dangerouslySetInnerHTML={{
-                __html: xss(
-                  page_description.all ?? page_description[isActiveTab] ?? "",
-                ),
-              }}
-            ></div>
+            {page_description.all &&
+              page_description.all.trim().length !== 0 && (
+                <div
+                  className="customInsertCardPageHTML mb-5 max-w-[750px] 2xl:text-2xl"
+                  dangerouslySetInnerHTML={{
+                    __html: xss(
+                      page_description.all ??
+                        page_description[isActiveTab] ??
+                        "",
+                    ),
+                  }}
+                ></div>
+              )}
           </div>
         </ContentLoader>
       </section>
