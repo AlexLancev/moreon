@@ -14,8 +14,6 @@ export const Directions_list = observer(
 
     const directions_bd = toJS(data?.[0]);
 
-    if (!keys_list?.length) return null;
-
     return (
       <ul className="grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3 2xl:gap-6">
         <ContentLoader
@@ -24,7 +22,7 @@ export const Directions_list = observer(
           initialVisibleCount={visibleElements}
           isEmpty={!directions_bd || isEmptyObj(data?.[0], keys_list)}
         >
-          {keys_list.map((current_key, idx: number) => {
+          {keys_list?.map((current_key, idx: number) => {
             const {
               images_url: { webp, jpg },
               direction,
