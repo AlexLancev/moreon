@@ -3,6 +3,35 @@ import { SwiperSlide } from "swiper/react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
+export const BenefitsCardSkeleton = () => (
+  <li className="mb-20 list-none last:mb-0 odd:flex-row-reverse sm:flex sm:items-center sm:justify-center sm:gap-4 md:gap-8">
+    <div className="mb-4 w-1/2 space-y-5 2xl:max-w-[825px]">
+      <Skeleton className="h-8 w-full rounded lg:text-xl xl:text-2xl 2xl:text-3xl" />
+      <Skeleton className="h-8 w-4/5 rounded" />
+      <Skeleton className="h-8 w-3/5 rounded" />
+      <Skeleton className="h-8 w-3/5 rounded" />
+      <Skeleton className="h-8 w-3/5 rounded" />
+    </div>
+
+    <div className="max-h-[600px] w-2/3 overflow-hidden rounded-3xl">
+      <Skeleton className="h-[297px]" />
+    </div>
+  </li>
+);
+
+export const HeroSkeleton = () => (
+  <div className="h-[330px] md:h-[400px]">
+    <div className="relative">
+      <Skeleton className="absolute inset-0 h-[370px] w-full overflow-hidden rounded-3xl md:h-96" />
+      <Skeleton className="absolute left-2 top-10 h-10 w-[280px] overflow-hidden rounded-md md:left-10 md:w-1/3" />
+      <Skeleton className="absolute left-2 top-28 h-10 w-[270px] overflow-hidden rounded-md md:left-10 md:w-3/6" />
+      <Skeleton className="absolute left-2 top-40 h-10 w-[260px] overflow-hidden rounded-md md:left-10 md:w-2/6" />
+      <Skeleton className="absolute left-2 top-52 h-10 w-[230px] overflow-hidden rounded-md md:left-10 md:w-1/6" />
+      <Skeleton className="absolute left-2 top-72 h-12 w-[230px] overflow-hidden rounded-md md:left-10" />
+    </div>
+  </div>
+);
+
 export const RewiewsSkeleton = () => (
   <SwiperSlide className="h-[400px]">
     <div className="relative">
