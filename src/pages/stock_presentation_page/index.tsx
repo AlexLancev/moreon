@@ -15,8 +15,8 @@ const Stock_presentation_page = observer(() => {
   if (isLoading) return <div>Загрузка...</div>;
   if (isError) return <div>Ошибка: не удалось получить данные</div>;
 
+  // Выносим в кмопонент!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   if (!data || data.length === 0 || !numeric_Id) return null;
-
   const stock = data.find((el) => el.id === numeric_Id);
 
   const { description_picture, description_promotion, url_images } =
@@ -26,6 +26,7 @@ const Stock_presentation_page = observer(() => {
     return null;
 
   const sanitized_description = xss(description_promotion);
+  // Выносим в кмопонент!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   return (
     <Container>
@@ -59,6 +60,7 @@ const Stock_presentation_page = observer(() => {
           ></div>
         </div>
       </section>
+
       <section className="relative md:px-10 md:py-20">
         <picture>
           <source
