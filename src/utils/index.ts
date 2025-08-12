@@ -20,7 +20,7 @@ export const isEmptyObj = <T extends object, K extends keyof T = keyof T>(
 ): boolean => {
   if (!object || typeof object !== "object") return true;
 
-  if (requiredKeys) {
+  if (requiredKeys && requiredKeys.length !== 0) {
     return !hasRequiredKeys(object, requiredKeys);
   }
 
