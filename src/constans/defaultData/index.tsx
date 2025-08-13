@@ -76,3 +76,9 @@ export const currentDirectionDeafaultData: Directions_content_page_type = {
   ],
   directions: [],
 };
+
+export const stockPresentationDefaultData = {
+  url_images: { webp: "", jpg: "" },
+  description_promotion: "",
+  description_picture: "",
+};
