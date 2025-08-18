@@ -232,7 +232,7 @@ type Childrens_swimming_type = Record<
   Childrens_swimming_content_type
 >;
 
-type News_type = {
+type HeroDataType = {
   id: number;
   description?: string;
   description_picture: string;
@@ -243,7 +243,11 @@ type News_type = {
   };
 };
 
-type Stock_type = News_type;
+type Hero_type = {
+  data: HeroDataType[];
+  isLoading: boolean;
+  isError: null | boolean;
+};
 
 type Team_tab_key_type = "martial_arts" | "gym" | "group_training" | "pool";
 

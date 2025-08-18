@@ -13,7 +13,7 @@ export const BenefitsCardSkeleton = () => (
       <Skeleton className="h-8 w-3/5 rounded" />
     </div>
 
-    <div className="max-h-[600px] w-2/3 overflow-hidden rounded-3xl">
+    <div className="max-h-[600px] w-1/3 overflow-hidden rounded-3xl">
       <Skeleton className="h-[297px]" />
     </div>
   </li>

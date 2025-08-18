@@ -82,3 +82,21 @@ export const stockPresentationDefaultData = {
   description_promotion: "",
   description_picture: "",
 };
+
+export const heroTeamDefault = {
+  name: "",
+  url_images: {
+    jpg: "",
+    webp: "",
+  },
+  about_coach: {
+    qualification: "",
+    work_experience: "",
+    contacts: {
+      phone: "",
+    },
+    specialization: "",
+    education: "",
+    achievements: "",
+  },
+};

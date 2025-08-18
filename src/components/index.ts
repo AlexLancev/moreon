@@ -46,3 +46,4 @@ export { Types_services } from "./types_services";
 export { Video_reviews_list } from "./video_reviews_list";
 export { Water_zone } from "./water_zone";
 export { ContentLoader } from "./contentLoader";
+export { DescriptionHero } from "./descriptionHero";

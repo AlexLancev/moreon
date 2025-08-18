@@ -17,6 +17,8 @@ export {
   SkeletonBeautifulFigureSection,
   SkeletonGymAndGroupPrograms,
   RewiewsSkeleton,
+  HeroSkeleton,
+  BenefitsCardSkeleton,
 } from "./skeletons";
 export {
   chooseYourCardDeafultData,
@@ -26,6 +28,8 @@ export {
   childrensSwimmingDefaultData,
   directionsListDeafaultData,
   currentDirectionDeafaultData,
+  stockPresentationDefaultData,
+  heroTeamDefault,
 } from "./defaultData";
 export { childrens_swimming_data } from "./childrens_swimming_data";
 export { contacts_data } from "./contacts_data";

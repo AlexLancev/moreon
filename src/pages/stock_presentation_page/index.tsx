@@ -1,7 +1,13 @@
 import { observer } from "mobx-react-lite";
 
-import { DescriptionHero, Render_slider, Title } from "@/components";
+import {
+  ContentLoader,
+  DescriptionHero,
+  Render_slider,
+  Title,
+} from "@/components";
 import { Container } from "@/components/container";
+import { SkeletonFitnessSection } from "@/constans";
 import { stock_store } from "@/stores/data_store";
 
 const Stock_presentation_page = observer(() => {
@@ -9,7 +15,13 @@ const Stock_presentation_page = observer(() => {
 
   return (
     <Container>
-      <DescriptionHero data={data} />
+      <ContentLoader
+        currentStore={stock_store}
+        skeletonComponent={SkeletonFitnessSection}
+        initialVisibleCount={1}
+      >
+        <DescriptionHero data={data} />
+      </ContentLoader>
 
       <section className="relative md:px-10 md:py-20">
         <picture>
@@ -28,7 +40,7 @@ const Stock_presentation_page = observer(() => {
         <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">
           Другие <span className="text-customHeadDecor">акции клуба</span>
         </Title>
-        <Render_slider type="stock" data={data} />
+        <Render_slider type="stock" heroData={stock_store} />
       </section>
     </Container>
   );
