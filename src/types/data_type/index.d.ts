@@ -252,7 +252,7 @@ type Hero_type = {
 type Team_tab_key_type = "martial_arts" | "gym" | "group_training" | "pool";
 
 type Team_key_type = {
-  isActiveTab: Team_tab_key_type;
+  isActiveTab: Team_tab_key_type | null;
   change_tabs?: (value: string) => void;
 };
 
@@ -378,7 +378,7 @@ type Directions_content_page_type = {
     };
   };
   description_direction: Description_direction_type[];
-  directions: Direct_keys_type[] | null;
+  directions: Direct_keys_type[];
 };
 
 type Directions_content_type = Directions_content_page_type & {
