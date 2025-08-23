@@ -1,8 +1,6 @@
 import { Container, Directions_list, Title } from "components";
 
 export const Areas_study = ({ keys_list }: Directions_keys_type) => {
-  if (!keys_list?.length) return null;
-
   return (
     <Container>
       <section className="py-12">
