@@ -44,6 +44,7 @@ export const ContentLoader = <T,>({
   if (isEmpty !== undefined && isEmpty) {
     return null;
   }
+
   if (!data?.length) {
     console.error("Нет данных:", data);
     return null;
