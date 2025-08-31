@@ -100,3 +100,15 @@ export const heroTeamDefault = {
     achievements: "",
   },
 };
+
+export const directionsPageDefault = {
+  directions: [""],
+  team: "",
+  hero: {
+    description: "",
+    images_url: {
+      jpg: "",
+      webp: "",
+    },
+  },
+};
