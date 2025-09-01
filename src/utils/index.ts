@@ -73,10 +73,7 @@ export const renderNumberSlides = <T>(
   count: number,
   renderSlide: (startIndex: number, endIndex: number) => JSX.Element,
 ): JSX.Element[] | null => {
-  if (!data?.length) {
-    console.error("Нет данных:", data);
-    return null;
-  }
+  if (!data?.length) return null;
 
   if (count <= 0) {
     console.error("Некорректное значение в count");
