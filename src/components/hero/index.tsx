@@ -11,7 +11,7 @@ export const Hero = ({
   children,
   className,
   isOpaque,
-}: HeroPropsType) => {
+}: HeroPropsTypes) => {
   const { isVisibleModal, change_modal } = modal_store;
   if (!data) return null;
 

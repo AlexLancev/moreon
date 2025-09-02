@@ -3,7 +3,7 @@ import {
   NotebookText as IconNotebookText,
 } from "lucide-react";
 
-export const servicesData: HeroDataType = {
+export const servicesData: HeroDataTypes = {
   title: {
     general: "Услуги",
     decor: "Moreon Fitness",
@@ -18,7 +18,7 @@ export const servicesData: HeroDataType = {
   },
 };
 
-export const teamData: HeroDataType = {
+export const teamData: HeroDataTypes = {
   title: {
     general: "Наша команда",
   },
@@ -32,7 +32,7 @@ export const teamData: HeroDataType = {
   },
 };
 
-export const clubCardsData: HeroDataType = {
+export const clubCardsData: HeroDataTypes = {
   title: {
     general: "Клубные карты",
   },
@@ -46,7 +46,7 @@ export const clubCardsData: HeroDataType = {
   },
 };
 
-export const saunasPoolsData: HeroDataType = {
+export const saunasPoolsData: HeroDataTypes = {
   title: {
     general: "Бани и бассейны",
   },
@@ -60,7 +60,7 @@ export const saunasPoolsData: HeroDataType = {
   },
 };
 
-export const kidsFitnesData: HeroDataType = {
+export const kidsFitnesData: HeroDataTypes = {
   title: {
     general: "Детский фитнес",
   },

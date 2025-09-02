@@ -33,7 +33,7 @@ export const Fitness_area = observer(
       description,
       description_images,
       path,
-      images_url: { webp, jpg },
+      images_url: { jpg },
     } = currentData ?? fitnessAreaDefaultData;
 
     return (

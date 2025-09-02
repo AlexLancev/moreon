@@ -243,6 +243,27 @@ type HeroDataType = {
   };
 };
 
+type News_type = {
+  id: number;
+  description: string;
+  description_picture: string;
+  description_promotion: string;
+  url_images: {
+    jpg: string;
+    webp: string;
+  };
+};
+
+type Stock_type = {
+  id: number;
+  description_picture: string;
+  description_promotion: string;
+  url_images: {
+    jpg: string;
+    webp: string;
+  };
+};
+
 type Hero_type = {
   data: HeroDataType[];
   isLoading: boolean;
@@ -252,7 +273,7 @@ type Hero_type = {
 type Team_tab_key_type = "martial_arts" | "gym" | "group_training" | "pool";
 
 type Team_key_type = {
-  isActiveTab: Team_tab_key_type | null;
+  isActiveTab: Team_tab_key_type;
   change_tabs?: (value: string) => void;
 };
 
@@ -382,7 +403,7 @@ type Directions_content_page_type = {
 };
 
 type Directions_content_type = Directions_content_page_type & {
-  team: Team_tab_key_type | null;
+  team: Team_tab_key_type;
   direction: string;
   description: string;
   images_url: {

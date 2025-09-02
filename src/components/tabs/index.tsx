@@ -11,7 +11,6 @@ export const Tabs = observer(
     isActiveTab,
     change_tabs,
     tab_list,
-    currentChangeTab,
     className,
     currentStore,
   }: Tabs_type<T, K>) => {

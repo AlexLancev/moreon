@@ -21,6 +21,7 @@ export const Stock_list = observer(() => {
     3,
     numberVisibleElementsData,
   );
+
   return (
     <Swiper
       modules={[Pagination]}
@@ -33,7 +34,10 @@ export const Stock_list = observer(() => {
         skeletonComponent={SkeletonGrid}
       >
         {data.map(
-          ({ id, description, url_images: { jpg, webp } }, idx: number) => (
+          (
+            { id, description_picture, url_images: { jpg, webp } },
+            idx: number,
+          ) => (
             <SwiperSlide key={idx} className="overflow-hidden rounded-3xl">
               <Link to={`/stock/${id}`}>
                 <picture>
@@ -41,8 +45,8 @@ export const Stock_list = observer(() => {
                   <img
                     className="w-full"
                     src={jpg}
-                    alt={description}
-                    aria-label={description}
+                    alt={description_picture}
+                    aria-label={description_picture}
                     loading="lazy"
                   />
                 </picture>

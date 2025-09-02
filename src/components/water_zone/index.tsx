@@ -33,7 +33,7 @@ export const Water_zone = observer(
     const {
       head,
       description,
-      images_url: { webp, jpg },
+      images_url: { jpg },
       images_description,
     } = current_data ?? waterZoneDefaultData;
 

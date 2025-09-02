@@ -26,7 +26,7 @@ export const Range_slider = ({
   const handleSliderChange = (value: number[]) => {
     setSliderValue(value);
     setInputValue(value[0].toString());
-    onMonthsChange(value[0]); // Передаем значение в родительский компонент
+    onMonthsChange(value[0]);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +38,7 @@ export const Range_slider = ({
 
     if (!isNaN(parsedValue) && parsedValue >= 1 && parsedValue <= 12) {
       setSliderValue([parsedValue]);
-      onMonthsChange(parsedValue); // Передаем значение в родительский компонент
+      onMonthsChange(parsedValue);
     }
   };
 

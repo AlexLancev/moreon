@@ -30,6 +30,7 @@ export {
   currentDirectionDeafaultData,
   stockPresentationDefaultData,
   heroTeamDefault,
+  directionsPageDefault,
 } from "./defaultData";
 export { childrens_swimming_data } from "./childrens_swimming_data";
 export { contacts_data } from "./contacts_data";

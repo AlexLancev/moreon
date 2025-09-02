@@ -7,7 +7,7 @@ type sizeRangesType = {
   max?: number;
   meaning: TitleSize | number;
 };
-type HeroDataType = {
+type HeroDataTypes = {
   title: {
     general: string;
     decor?: string;
@@ -23,8 +23,8 @@ type HeroDataType = {
   };
 };
 
-type HeroPropsType = {
-  data: HeroDataType;
+type HeroPropsTypes = {
+  data: HeroDataTypes;
   isOpaque?: boolean;
   children?: ReactNode;
   className?: string;
