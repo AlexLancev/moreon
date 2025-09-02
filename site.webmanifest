@@ -1,0 +1,28 @@
+{
+  "name": "Moreon Fitness - Ваш фитнес-гид и трекер",
+  "short_name": "Moreon Fitness",
+  "description": "Современное приложение для отслеживания тренировок, питания и достижения ваших фитнес-целей.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00100f",
+  "theme_color": "#00100f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/favicon-32x32.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/favicon-16x16.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/apple-touch-icon.ico",
+      "sizes": "180x180",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["health", "fitness", "lifestyle"]
+}
