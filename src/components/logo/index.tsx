@@ -5,9 +5,9 @@ import { paths } from "@/paths";
 
 const { home } = paths;
 
-type LogoPropsType = {
+interface LogoPropsType {
   className?: string;
-};
+}
 
 export const Logo = ({ className }: LogoPropsType) => {
   return (

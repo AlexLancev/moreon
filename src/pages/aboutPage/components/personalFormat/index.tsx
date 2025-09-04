@@ -10,10 +10,10 @@ const personalFormatDataKey: PersonalFormatKeyType[] = [
   "authorsPrograms",
 ];
 
-export type tabsStoreType<K> = {
+export interface tabsStoreType<K> {
   isActiveTab: K;
   changeTabs: (value: K) => void;
-};
+}
 
 export const PersonalFormat = ({
   tabsStore,

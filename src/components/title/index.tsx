@@ -4,13 +4,13 @@ import { sizeTitleData } from "@/constans";
 import { cn } from "@/lib/utils";
 import { useGetResponsiveValue } from "@/utils";
 
-type TitlePropsType = {
+interface TitlePropsType {
   headingType?: TitleSize;
   className?: string;
   children: ReactNode;
   defaultValue?: TitleSize;
   typeObj?: sizeRangesType[];
-};
+}
 
 export const Title = ({
   children,
@@ -44,7 +44,7 @@ export const Title = ({
     {
       className: cn(
         "text-white leading-[1.4] font-familyDelaGothicOne",
-        mapClassNameBySize?.[fontSize],
+        mapClassNameBySize[fontSize],
         className,
       ),
     },

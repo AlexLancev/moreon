@@ -1,11 +1,11 @@
 import { makeAutoObservable } from "mobx";
 
-type SessionStoreType = {
+interface SessionStoreType {
   isActiveSession: boolean;
   setSessionActive: () => void;
   setSessionInactive: () => void;
   toggleSession: () => void;
-};
+}
 
 class SessionStore implements SessionStoreType {
   isActiveSession = false;

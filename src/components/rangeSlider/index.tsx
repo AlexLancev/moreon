@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 import { Input } from "../ui/input";
 import { Slider } from "../ui/slider";
 
-type RangeSliderPropsType = {
+interface RangeSliderPropsType {
   onMonthsChange: (months: number) => void;
   className?: string;
-};
+}
 
 export const RangeSlider = ({
   onMonthsChange,

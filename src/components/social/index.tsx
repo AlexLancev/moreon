@@ -24,9 +24,9 @@ const dataSocial = [
   },
 ];
 
-type SocialPropsType = {
+interface SocialPropsType {
   className?: string;
-};
+}
 
 export const Social = ({ className }: SocialPropsType) => {
   return (
@@ -36,7 +36,7 @@ export const Social = ({ className }: SocialPropsType) => {
         className,
       )}
     >
-      {dataSocial?.map(
+      {dataSocial.map(
         (
           { label, urlExterne, urlPngIcon, urlWebpIcon, urlSvgIcon },
           idx: number,

@@ -2,12 +2,14 @@ type FitnessClubListType = Record<string, string>;
 type ChildrensSwimmingDataType = Record<string, string>;
 type KidsFitnesHeroDataType = Record<string, string>;
 type TitleSize = "xs" | "sm" | "md" | "lg" | "xl";
-type sizeRangesType = {
+
+interface sizeRangesType {
   min?: number;
   max?: number;
   meaning: TitleSize | number;
-};
-type HeroDataTypes = {
+}
+
+interface HeroDataTypes {
   title: {
     general: string;
     decor?: string;
@@ -21,11 +23,11 @@ type HeroDataTypes = {
     label: string;
     iconBtn: ReactNode;
   };
-};
+}
 
-type HeroPropsTypes = {
+interface HeroPropsTypes {
   data: HeroDataTypes;
   isOpaque?: boolean;
   children?: ReactNode;
   className?: string;
-};
+}

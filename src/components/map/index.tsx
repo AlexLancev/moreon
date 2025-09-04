@@ -2,17 +2,17 @@ import { Map, Placemark, YMaps } from "@pbe/react-yandex-maps";
 
 const KEY_MAP: string = import.meta.env.VITE_YANDEX_MAP_KEY;
 
-type MapState = {
+interface MapState {
   center: [number, number];
   zoom: number;
-};
+}
 
-type PlacemarkOptions = {
+interface PlacemarkOptions {
   iconLayout: string;
   iconImageHref: string;
   iconImageSize: [number, number];
   iconImageOffset?: [number, number];
-};
+}
 
 export const MapMoreon = () => {
   if (!KEY_MAP) return null;

@@ -1,8 +1,8 @@
 import { Container, TeamList, Title } from "components";
 
-type TrainersDirectionType = {
+interface TrainersDirectionType {
   direction: "martialArts" | "gym" | "groupTraining" | "pool";
-};
+}
 
 export const TrainersDirection = ({ direction }: TrainersDirectionType) => {
   return (

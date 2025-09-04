@@ -1,35 +1,35 @@
-type TypesServicesType = {
+interface TypesServicesType {
   id: number;
   head: string;
   description: string;
   path: TypesServicesKey;
-};
+}
 
 type TypesServicesKey = "spa" | "martialArts" | "gym" | "groupTraining";
 
-type AboutUsType = {
+interface AboutUsType {
   id: number;
   title: string;
   description: string;
-};
+}
 
-type EveryCardType = {
+interface EveryCardType {
   id: number;
   head: string;
   imagesUrl: {
     png: string;
     webp: string;
   };
-};
+}
 
-type GalleryListType = {
+interface GalleryListType {
   id: number;
   description: string;
   imagesUrl: {
     jpg: string;
     webp: string;
   };
-};
+}
 
 type PerformanceKeyType =
   | "spa"
@@ -37,18 +37,18 @@ type PerformanceKeyType =
   | "reception"
   | "salesDepartment";
 
-type PerformanceType = {
+interface PerformanceType {
   dataKey: PerformanceKeyType[];
   isVisibleBtn: boolean;
-};
+}
 
-type PerformanceImagesType = {
+interface PerformanceImagesType {
   imagesDescription: string;
   imagesUrl: {
     jpg: string;
     webp: string;
   };
-};
+}
 
 type PerformanceDataType = Record<
   PerformanceKeyType,
@@ -60,7 +60,7 @@ type PerformanceDataType = Record<
   }
 >;
 
-type VideoReviewsType = {
+interface VideoReviewsType {
   id: number;
   description: string;
   personAboutClub: string;
@@ -69,13 +69,13 @@ type VideoReviewsType = {
     webp: string;
   };
   path: string;
-};
+}
 
-type AboutQuestionType = {
+interface AboutQuestionType {
   id: number;
   head: string;
   description: string;
-};
+}
 
 type PersonalFormatKeyType =
   | "gym"
@@ -84,21 +84,21 @@ type PersonalFormatKeyType =
   | "beautyHealth"
   | "authorsPrograms";
 
-type TabsStoreType<K> = {
+interface TabsStoreType<K> {
   isActiveTab: K;
   changeTabs: (value: K) => void;
-};
+}
 
-type PersonalFormatTabsType<K> = {
+interface PersonalFormatTabsType<K> {
   dataKey: PersonalFormatKeyType[];
   tabsStore: TabsStoreType<K>;
   className?: string;
-};
+}
 
-type TabListType<K> = {
+interface TabListType<K> {
   key: K;
   category: string;
-};
+}
 
 type KeyListType = {
   [key: string]: { description: string };
@@ -114,10 +114,10 @@ type PersonalFormatDataType = Record<
   }
 >;
 
-type FitnessAreaTabsType = {
+interface FitnessAreaTabsType {
   isActiveTab: TabFitnessType;
   changeTabs: (value: string) => void;
-};
+}
 
 type TabFitnessType =
   | "trainingRoom"
@@ -126,7 +126,7 @@ type TabFitnessType =
   | "cardioRoom"
   | "martialArts";
 
-type FitnessAreaContentType = {
+interface FitnessAreaContentType {
   nameKey: TabFitnessType;
   head: string;
   description: string;
@@ -136,7 +136,7 @@ type FitnessAreaContentType = {
     webp: string;
   };
   path: string;
-};
+}
 
 type FitnessAreaType = Record<TabFitnessType, FitnessAreaContentType>;
 
@@ -147,12 +147,12 @@ type WaterZoneKeyType =
   | "thermalBaths"
   | "goldfish";
 
-type WaterZoneTabsType = {
+interface WaterZoneTabsType {
   isActiveTab: WaterZoneKeyType;
   changeTabs: (value: string) => void;
-};
+}
 
-type WaterZoneContentType = {
+interface WaterZoneContentType {
   head: string;
   description: string;
   imagesDescription: string;
@@ -160,14 +160,14 @@ type WaterZoneContentType = {
     jpg: string;
     webp: string;
   };
-};
+}
 
 type WaterZoneType = Record<WaterZoneKeyType, WaterZoneContentType>;
 
-type ClubCardsTabsType = {
+interface ClubCardsTabsType {
   isActiveTab: ClubCardsKeyType;
   changeTabs: (value: string) => void;
-};
+}
 
 type ClubCardsKeyType =
   | "fitnes"
@@ -178,21 +178,21 @@ type ClubCardsKeyType =
 
 type PageDescriptionTypeKey = "all" | "daytime" | "business" | "weekend";
 
-type RenderCardTabsType = {
+interface RenderCardTabsType {
   isActiveTab: PageDescriptionTypeKey;
   changeTabs: (value: string) => void;
-};
+}
 
-type RenderCardDescriptionProps = {
+interface RenderCardDescriptionProps {
   pageDescription: Record<PageDescriptionTypeKey, string>;
   imagesUrl: {
     jpg: string;
     webp: string;
   };
   tabsStore: RenderCardTabsType;
-};
+}
 
-type ClubCardsContentType = {
+interface ClubCardsContentType {
   head: string;
   description: string;
   heroDescription: string;
@@ -202,21 +202,21 @@ type ClubCardsContentType = {
     webp: string;
   };
   path: string;
-};
+}
 
 type ClubCardsType = Record<ClubCardsKeyType, ClubCardsContentType>;
 
-type ChildrensSwimmingTabsType = {
+interface ChildrensSwimmingTabsType {
   isActiveTab: ChildrensSwimmingKeyType;
   changeTabs: (value: string) => void;
-};
+}
 
 type ChildrensSwimmingKeyType =
   | "infantSwimming"
   | "childrensSwimming"
   | "schoolCompetitiveSwimming";
 
-type ChildrensSwimmingContentType = {
+interface ChildrensSwimmingContentType {
   head: string;
   description: string;
   imageDescription: string;
@@ -225,14 +225,14 @@ type ChildrensSwimmingContentType = {
     jpg: string;
     webp: string;
   };
-};
+}
 
 type ChildrensSwimmingType = Record<
   ChildrensSwimmingKeyType,
   ChildrensSwimmingContentType
 >;
 
-type HeroDataType = {
+interface HeroDataType {
   id: number;
   description?: string;
   descriptionPicture: string;
@@ -241,9 +241,9 @@ type HeroDataType = {
     jpg: string;
     webp: string;
   };
-};
+}
 
-type NewsType = {
+interface NewsType {
   id: number;
   description: string;
   descriptionPicture: string;
@@ -252,9 +252,9 @@ type NewsType = {
     jpg: string;
     webp: string;
   };
-};
+}
 
-type StockType = {
+interface StockType {
   id: number;
   descriptionPicture: string;
   descriptionPromotion: string;
@@ -262,22 +262,22 @@ type StockType = {
     jpg: string;
     webp: string;
   };
-};
+}
 
-type HeroType = {
+interface HeroType {
   data: HeroDataType[];
   isLoading: boolean;
   isError: null | boolean;
-};
+}
 
 type TeamTabKeyType = "martialArts" | "gym" | "groupTraining" | "pool";
 
-type TeamKeyType = {
+interface TeamKeyType {
   isActiveTab: TeamTabKeyType;
   changeTabs?: (value: string) => void;
-};
+}
 
-type TeamType = {
+interface TeamType {
   name: string;
   type: Partial<Record<string, boolean>>;
   urlImages: {
@@ -294,16 +294,16 @@ type TeamType = {
     education: string;
     achievements: string;
   };
-};
+}
 
-type ReviewsType = {
+interface ReviewsType {
   id: number;
   person: string;
   review: string;
   raiting: string;
-};
+}
 
-type ProfitableVisitsType = {
+interface ProfitableVisitsType {
   id: number;
   head: string;
   profitableVisitsList: string[];
@@ -311,9 +311,9 @@ type ProfitableVisitsType = {
     png: string;
     webp: string;
   };
-};
+}
 
-type OtherDirectionsType = {
+interface OtherDirectionsType {
   id: number;
   path: string;
   descriptions: string;
@@ -321,7 +321,7 @@ type OtherDirectionsType = {
     png: string;
     webp: string;
   };
-};
+}
 
 type DirectKeysType =
   | "mindBody"
@@ -382,15 +382,15 @@ type DirectKeysType =
   | "thermalBaths"
   | "goldfish";
 
-type DescriptionDirectionType = {
+interface DescriptionDirectionType {
   content: string;
   imagesUrl: {
     jpg: string;
     webp: string;
   };
-};
+}
 
-type DirectionsContentPageType = {
+interface DirectionsContentPageType {
   hero: {
     description: string;
     imagesUrl: {
@@ -400,9 +400,9 @@ type DirectionsContentPageType = {
   };
   descriptionDirection: DescriptionDirectionType[];
   directions: DirectKeysType[];
-};
+}
 
-type DirectionsContentType = DirectionsContentPageType & {
+interface DirectionsContentType extends DirectionsContentPageType {
   team: TeamTabKeyType;
   direction: string;
   description: string;
@@ -411,16 +411,16 @@ type DirectionsContentType = DirectionsContentPageType & {
     webp: string;
   };
   path: string;
-};
+}
 
 type DirectionsType = Record<DirectKeysType, DirectionsContentType>;
 
-type DirectionsKeysType = {
+interface DirectionsKeysType {
   keysList: DirectKeysType[];
   visibleElements?: number;
-};
+}
 
-type DataActionType = {
+interface DataActionType {
   id: number;
   label: string;
   urlXxxlImgWebp: string;
@@ -429,19 +429,19 @@ type DataActionType = {
   urlXxlImgJpg: string;
   urlXlImgWebp: string;
   urlXlImgJpg: string;
-};
+}
 
-type CurrentStoreType<T> = {
+interface CurrentStoreType<T> {
   data: T[] | null;
   isLoading: boolean;
   isError: null | boolean;
-};
+}
 
-type TabsType<T, K> = {
+interface TabsType<T, K> {
   isActiveTab: K;
   changeTabs: (value: K) => void;
   tabList: TabListType<K>[];
   currentChangeTab?: string;
   className?: string;
   currentStore: CurrentStoreType<T>;
-};
+}

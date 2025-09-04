@@ -6,12 +6,12 @@ import { HeroSkeleton, directionsPageDefault } from "@/constans";
 import { modalStore } from "@/stores";
 import { directionsStore } from "@/stores/dataStore";
 
-type HeroDirectionsPropsType = {
+interface HeroDirectionsPropsType {
   data: {
     description: string;
     imagesUrl: { jpg: string; webp: string };
   };
-};
+}
 
 export const HeroDirections = ({ data }: HeroDirectionsPropsType) => {
   const { isVisibleModal, changeModal } = modalStore;

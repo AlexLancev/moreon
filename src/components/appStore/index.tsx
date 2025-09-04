@@ -1,20 +1,10 @@
 import { cn } from "@/lib/utils";
 
-type AppStoreDataType = {
-  id: number;
-  description: string;
-  images: {
-    webp: string;
-    jpg: string;
-  };
-  path: string;
-};
-
-type AppStorePropsType = {
+interface AppStorePropsType {
   className?: string;
-};
+}
 
-const appStoreData: AppStoreDataType[] = [
+const appStoreData = [
   {
     id: 1,
     description: "Перейти на внешний сайт App store",
@@ -37,36 +27,29 @@ const appStoreData: AppStoreDataType[] = [
 
 export const AppStore = ({ className }: AppStorePropsType) => {
   return (
-    appStoreData &&
-    appStoreData.length !== 0 && (
-      <ul className={cn("flex items-center gap-x-3", className)}>
-        {appStoreData.map(({ path, description, images }, idx: number) => {
-          if (!path && !description && !images) return null;
-
-          return (
-            <li key={idx}>
-              <a
-                href={path}
-                title={description}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="visually-hidden">{description}</span>
-                <picture>
-                  <source srcSet={images?.webp} type="image/webp" />
-                  <img
-                    className="w-[155px] duration-300 hover:opacity-80 2xl:w-[225px]"
-                    src={images?.jpg}
-                    alt=""
-                    loading="lazy"
-                    aria-hidden
-                  />
-                </picture>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    )
+    <ul className={cn("flex items-center gap-x-3", className)}>
+      {appStoreData.map(({ path, description, images }, idx: number) => (
+        <li key={idx}>
+          <a
+            href={path}
+            title={description}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="visually-hidden">{description}</span>
+            <picture>
+              <source srcSet={images?.webp} type="image/webp" />
+              <img
+                className="w-[155px] duration-300 hover:opacity-80 2xl:w-[225px]"
+                src={images?.jpg}
+                alt=""
+                loading="lazy"
+                aria-hidden
+              />
+            </picture>
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };

@@ -5,18 +5,10 @@ import { isEmptyObj } from "@/utils";
 
 import { MapMoreon } from "../map";
 
-type CurrentContactsType = "address" | "phone" | "email";
-
-const currentContacts: CurrentContactsType[] = ["address", "phone", "email"];
+const currentContacts = ["address", "phone", "email"] as const;
 
 export const Contacts = () => {
-  if (
-    !contactsData ||
-    isEmptyObj(contactsData) ||
-    !currentContacts ||
-    currentContacts.length === 0
-  )
-    return null;
+  if (!contactsData || isEmptyObj(contactsData)) return null;
 
   return (
     <section className="py-12">

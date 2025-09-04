@@ -2,10 +2,10 @@ import { type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type ContainerPropsType = {
+interface ContainerPropsType {
   children: ReactNode;
   className?: string;
-};
+}
 
 export const Container = ({ children, className }: ContainerPropsType) => {
   return (

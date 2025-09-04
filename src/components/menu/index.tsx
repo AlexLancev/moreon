@@ -4,10 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 
-type MenuPropsType = {
+interface MenuPropsType {
   className?: string;
   isVisibleSubMenu?: boolean;
-};
+}
 
 export const Menu = ({
   className,

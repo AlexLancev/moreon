@@ -1,19 +1,19 @@
 import { ReactNode, ComponentType } from "react";
 
-type CurrentStoreType<T> = {
+interface CurrentStoreType<T> {
   data: T[] | null;
   isLoading: boolean;
   isError: null | boolean;
-};
+}
 
-type ContentLoaderType<T> = {
+interface ContentLoaderType<T> {
   currentStore: CurrentStoreType<T>;
   skeletonComponent: ComponentType<{ className?: string }>;
   children: ReactNode;
   initialVisibleCount?: number;
   isEmpty?: boolean;
   getSkeletonClassName?: string;
-};
+}
 
 export const ContentLoader = <T,>({
   children,

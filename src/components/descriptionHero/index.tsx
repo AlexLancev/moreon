@@ -13,9 +13,9 @@ interface HeroItem {
   };
 }
 
-type DescriptionHeroPropsType<T extends HeroItem> = {
+interface DescriptionHeroPropsType<T extends HeroItem> {
   data: T[];
-};
+}
 
 export const DescriptionHero = <T extends HeroItem>({
   data,
@@ -24,7 +24,7 @@ export const DescriptionHero = <T extends HeroItem>({
   const numericId = Number(id);
 
   if (!data || data.length === 0 || !numericId) return null;
-  const hero = data.find((el) => el.id === numericId);
+  const hero = data.find(({ id }) => id === numericId);
 
   const { descriptionPicture, descriptionPromotion, urlImages } =
     hero ?? stockPresentationDefaultData;

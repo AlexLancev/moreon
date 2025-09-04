@@ -14,12 +14,12 @@ import {
 import { Input } from "./components/ui/input";
 import { BaseAccountSchema, PasswordValidationSchema } from "./schema";
 
-type AuthFormProps = {
+interface AuthFormProps {
   onTypeSubmit: (email: string, password: string) => Promise<void>;
   submitButtonText: string;
   title: string;
   validatePassword?: boolean;
-};
+}
 
 export const AuthForm = ({
   onTypeSubmit,

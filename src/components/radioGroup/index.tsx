@@ -3,24 +3,27 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { Label } from "../ui/label";
-import { RadioGroup as RadioGroupComponent, RadioGroupItem } from "../ui/radio-group";
+import {
+  RadioGroup as RadioGroupComponent,
+  RadioGroupItem,
+} from "../ui/radio-group";
 
 import { RenderQuestion } from "./components/renderQuestion";
 
-type OptionsDataType = {
+interface OptionsDataType {
   id: number;
   label: string;
   sum?: number;
   coefficient?: number;
   answerQuestion?: string;
-};
+}
 
-type CalculateCostDataType = {
-  title: string;
-  options: OptionsDataType[];
-};
+interface RadioGroupPropsType {
+  setTotalSum: (value: number) => void;
+  className?: string;
+}
 
-const calculateCostData: CalculateCostDataType[] = [
+const calculateCostData = [
   {
     title: "Какие зоны хотите посетить:",
     options: [
@@ -134,11 +137,6 @@ const calculateCostData: CalculateCostDataType[] = [
   },
 ];
 
-type RadioGroupPropsType = {
-  setTotalSum: (value: number) => void;
-  className?: string;
-};
-
 export const RadioGroup = ({ setTotalSum, className }: RadioGroupPropsType) => {
   const [selectedValues, setSelectedValues] = useState<
     Record<string, OptionsDataType>
@@ -184,64 +182,58 @@ export const RadioGroup = ({ setTotalSum, className }: RadioGroupPropsType) => {
     setTotalSum(newResult);
   }, [selectedValues]);
 
-  if (!calculateCostData || calculateCostData.length === 0) return null;
-
   return (
     <ul className={cn("gap-y-6 md:grid md:grid-cols-2", className)}>
-      {calculateCostData.map(({ title, options }, idx: number) => {
-        if (!title || !options || options.length === 0) return null;
-
-        return (
-          <li key={idx} className="mb-8 last:mb-0">
-            <strong className="mb-3 block text-xl xl:mb-6 xl:text-2xl 2xl:text-3xl 3xl:text-4xl">
-              {title}
-            </strong>
-            <ul>
-              <RadioGroupComponent
-                defaultValue={options[0]?.label}
-                onValueChange={(value) => {
-                  const selectedOption = options.find(
-                    (option) => option.label === value,
-                  );
-                  if (selectedOption) {
-                    setSelectedValues((prev) => ({
-                      ...prev,
-                      [title]: selectedOption,
-                    }));
-                  }
-                }}
-              >
-                {options.map(({ label, id, answerQuestion }) => {
-                  return (
-                    <li key={id}>
-                      <div className="flex items-center gap-x-2">
-                        <RadioGroupItem
-                          value={label}
-                          id={`${title}-${label}`}
-                          className="peer data-[state=checked]:cursor-default"
-                        />
-                        <Label
-                          className="text-lg duration-300 peer-hover:text-white peer-data-[state=checked]:cursor-default peer-data-[state=checked]:text-white xl:text-xl 2xl:text-2xl 3xl:text-3xl"
-                          htmlFor={`${title}-${label}`}
-                        >
-                          {label}
-                        </Label>
-                        {answerQuestion && answerQuestion.length !== 0 && (
-                          <RenderQuestion>
-                            <p className="max-w-[280px] rounded-md bg-[#eaeaea] px-2 py-1 text-xs text-[#505050]">
-                              {answerQuestion}
-                            </p>
-                          </RenderQuestion>
-                        )}
-                      </div>
-                    </li>
-                  );
-                })}
-              </RadioGroupComponent>
-            </ul>
-          </li>
-        );
-      })}
+      {calculateCostData.map(({ title, options }, idx: number) => (
+        <li key={idx} className="mb-8 last:mb-0">
+          <strong className="mb-3 block text-xl xl:mb-6 xl:text-2xl 2xl:text-3xl 3xl:text-4xl">
+            {title}
+          </strong>
+          <ul>
+            <RadioGroupComponent
+              defaultValue={options[0]?.label}
+              onValueChange={(value) => {
+                const selectedOption = options.find(
+                  (option) => option.label === value,
+                );
+                if (selectedOption) {
+                  setSelectedValues((prev) => ({
+                    ...prev,
+                    [title]: selectedOption,
+                  }));
+                }
+              }}
+            >
+              {options.map(({ label, id, answerQuestion }) => {
+                return (
+                  <li key={id}>
+                    <div className="flex items-center gap-x-2">
+                      <RadioGroupItem
+                        value={label}
+                        id={`${title}-${label}`}
+                        className="peer data-[state=checked]:cursor-default"
+                      />
+                      <Label
+                        className="text-lg duration-300 peer-hover:text-white peer-data-[state=checked]:cursor-default peer-data-[state=checked]:text-white xl:text-xl 2xl:text-2xl 3xl:text-3xl"
+                        htmlFor={`${title}-${label}`}
+                      >
+                        {label}
+                      </Label>
+                      {answerQuestion && answerQuestion.length !== 0 && (
+                        <RenderQuestion>
+                          <p className="max-w-[280px] rounded-md bg-[#eaeaea] px-2 py-1 text-xs text-[#505050]">
+                            {answerQuestion}
+                          </p>
+                        </RenderQuestion>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
+            </RadioGroupComponent>
+          </ul>
+        </li>
+      ))}
     </ul>
   );
 };

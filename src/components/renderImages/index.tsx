@@ -1,6 +1,6 @@
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
-type RenderImageType = {
+interface RenderImageType {
   urlXxxlImgWebp: string;
   urlXxxlImgJpg: string;
   urlXxlImgWebp: string;
@@ -8,7 +8,7 @@ type RenderImageType = {
   urlXlImgWebp: string;
   urlXlImgJpg: string;
   label: string;
-};
+}
 
 export const RenderImage = ({
   dataImage: {

@@ -8,13 +8,7 @@ import {
   Social,
 } from "@/components";
 
-type DocumentsDataType = {
-  id: number;
-  path: string;
-  description: string;
-};
-
-const documentsData: DocumentsDataType[] = [
+const documentsData = [
   {
     id: 1,
     path: "/documents/pdf/cookies.pdf",
@@ -72,26 +66,20 @@ export const Footer = () => {
             &copy; Все права принадлежат ФИТНЕС-ЦЕНТР «МОРЕОН» г. Москва м.
             Ясенево, ул. Голубинская, д. 16.
           </div>
-          {documentsData && documentsData.length !== 0 && (
-            <ul className="flex flex-wrap gap-5 gap-x-4 gap-y-2 md:justify-start">
-              {documentsData.map(({ path, description }, idx: number) => {
-                if (!path && !description) return null;
-
-                return (
-                  <li key={idx}>
-                    <a
-                      href={path}
-                      className="duration-300 hover:text-white 3xl:text-xl"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {description}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
+          <ul className="flex flex-wrap gap-5 gap-x-4 gap-y-2 md:justify-start">
+            {documentsData.map(({ path, description }, idx: number) => (
+              <li key={idx}>
+                <a
+                  href={path}
+                  className="duration-300 hover:text-white 3xl:text-xl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {description}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </footer>

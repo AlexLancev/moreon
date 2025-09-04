@@ -14,9 +14,9 @@ import { ReactNode } from "react";
 import { AccessibleButton } from "@/components/ui/accessibleButton";
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
-type RenderQuestionType = {
+interface RenderQuestionType {
   children: ReactNode;
-};
+}
 
 export const RenderQuestion = ({ children }: RenderQuestionType) => {
   const innerWidth = useGettingWindowWidth();

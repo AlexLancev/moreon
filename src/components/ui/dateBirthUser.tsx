@@ -9,11 +9,11 @@ import { Button } from "./button";
 import { Calendar } from "./calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
-type DateBirthUserPropsType = {
+interface DateBirthUserPropsType {
   className?: string;
   value?: string;
   onChange?: (dateStr: string) => void;
-};
+}
 
 const minAge = 14;
 const maxAge = 99;
