@@ -6,31 +6,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ContentLoader, Title } from "@/components";
 import { sizeRangesData, SkeletonPerformance } from "@/constans";
 import { numberVisiblePerformanceData } from "@/constans/numberVisibleElementsData";
-import { performance_data_store } from "@/stores/data_store";
+import { performanceDataStore } from "@/stores/dataStore";
 import { isEmptyObj, useGetResponsiveValue } from "@/utils";
 
-export const Performance = observer(({ data_key }: Performance_type) => {
-  const { data } = performance_data_store;
+export const Performance = observer(({ dataKey }: PerformanceType) => {
+  const { data } = performanceDataStore;
   const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
   const quantitySlide = useGetResponsiveValue<number>(
     1,
     numberVisiblePerformanceData,
   );
 
-  if (!data_key?.length) return null;
+  if (!dataKey?.length) return null;
 
   return (
     <ul>
       <ContentLoader
         skeletonComponent={SkeletonPerformance}
-        isEmpty={!toJS(data?.[0]) || isEmptyObj(data?.[0], data_key)}
-        currentStore={{ ...performance_data_store, data: data_key }}
+        isEmpty={!toJS(data?.[0]) || isEmptyObj(data?.[0], dataKey)}
+        currentStore={{ ...performanceDataStore, data: dataKey }}
       >
-        {data_key.map((key, idx: number) => {
+        {dataKey.map((key, idx: number) => {
           const currentData = toJS(data?.[0])?.[key];
           if (!currentData) return null;
 
-          const { arr_images, title, description } = currentData;
+          const { arrImages, title, description } = currentData;
 
           return (
             <li
@@ -45,11 +45,8 @@ export const Performance = observer(({ data_key }: Performance_type) => {
                 slidesPerView={quantitySlide}
                 pagination={{ clickable: true }}
               >
-                {arr_images?.map(
-                  (
-                    { images_description, images_url: { jpg } },
-                    idx: number,
-                  ) => (
+                {arrImages?.map(
+                  ({ imagesDescription, imagesUrl: { jpg } }, idx: number) => (
                     <SwiperSlide
                       className="overflow-hidden rounded-3xl"
                       key={idx}
@@ -61,8 +58,8 @@ export const Performance = observer(({ data_key }: Performance_type) => {
                           width={525}
                           height={293}
                           src={jpg}
-                          alt={images_description}
-                          aria-label={images_description}
+                          alt={imagesDescription}
+                          aria-label={imagesDescription}
                           loading="lazy"
                         />
                       </picture>

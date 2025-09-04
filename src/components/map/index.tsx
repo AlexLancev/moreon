@@ -14,7 +14,7 @@ type PlacemarkOptions = {
   iconImageOffset?: [number, number];
 };
 
-export const Map_moreon = () => {
+export const MapMoreon = () => {
   if (!KEY_MAP) return null;
 
   const mapState: MapState = {

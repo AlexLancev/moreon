@@ -1,19 +1,19 @@
-import { Modal_store } from "@/stores/modal_store";
-import { Tabs_store } from "@/stores/tabs_store";
+import { ModalStore } from "@/stores/modalStore";
+import { TabsStore } from "@/stores/tabsStore";
 
-type Tabs_store_key = `component_${string}`;
+type TabsStoreKey = `component${string}`;
 
-const tabs_store_instances: Record<Tabs_store_key, Tabs_store> = {} as Record<
-  Tabs_store_key,
-  Tabs_store
+const tabsStoreInstances: Record<TabsStoreKey, TabsStore> = {} as Record<
+  TabsStoreKey,
+  TabsStore
 >;
 
-export const get_tabs_store = (key: Tabs_store_key): Tabs_store => {
-  if (!tabs_store_instances[key]) {
-    tabs_store_instances[key] = new Tabs_store();
+export const getTabsStore = (key: TabsStoreKey): TabsStore => {
+  if (!tabsStoreInstances[key]) {
+    tabsStoreInstances[key] = new TabsStore();
   }
-  return tabs_store_instances[key];
+  return tabsStoreInstances[key];
 };
 
-export const modal_store = new Modal_store();
-export const modalUserUpdateStore = new Modal_store();
+export const modalStore = new ModalStore();
+export const modalUserUpdateStore = new ModalStore();

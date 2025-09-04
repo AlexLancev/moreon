@@ -4,7 +4,7 @@ import { sizeTitleData } from "@/constans";
 import { cn } from "@/lib/utils";
 import { useGetResponsiveValue } from "@/utils";
 
-type Title_props_type = {
+type TitlePropsType = {
   headingType?: TitleSize;
   className?: string;
   children: ReactNode;
@@ -17,7 +17,7 @@ export const Title = ({
   className,
   headingType = "lg",
   defaultValue = "md",
-}: Title_props_type) => {
+}: TitlePropsType) => {
   const fontSize = useGetResponsiveValue<TitleSize>(
     defaultValue,
     sizeTitleData,

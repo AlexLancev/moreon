@@ -6,25 +6,25 @@ import xss from "xss";
 import { ContentLoader, Title } from "@/components";
 import { SkeletonClubCardFAQ } from "@/constans";
 import { cn } from "@/lib/utils";
-import { about_questions_store } from "@/stores/data_store";
+import { aboutQuestionsStore } from "@/stores/dataStore";
 
 import { AccessibleButton } from "../ui/accessibleButton";
 
 export const Questions = observer(() => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
-  const { data } = about_questions_store;
+  const { data } = aboutQuestionsStore;
 
   return (
     <ul className="py-5">
       <ContentLoader
-        currentStore={about_questions_store}
+        currentStore={aboutQuestionsStore}
         skeletonComponent={SkeletonClubCardFAQ}
         initialVisibleCount={7}
       >
         {data?.map(({ head, description }, idx: number) => {
           if (!head && !description) return null;
 
-          const sanitized_description = xss(description);
+          const sanitizedDescription = xss(description);
 
           return (
             <li key={idx} className="mb-2">
@@ -51,7 +51,7 @@ export const Questions = observer(() => {
                     visibleIndex === idx && "h-auto pt-4",
                     visibleIndex !== idx && "invisible h-0 p-0 opacity-0",
                   )}
-                  dangerouslySetInnerHTML={{ __html: sanitized_description }}
+                  dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
                 ></div>
               </AccessibleButton>
             </li>

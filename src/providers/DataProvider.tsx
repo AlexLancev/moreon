@@ -2,453 +2,453 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { ReactNode, useEffect } from "react";
 
 import {
-  about_questions_data,
-  about_us_data,
-  childrens_swimming_data,
-  club_cards_data,
-  directions_data,
-  every_card_data,
-  fitness_area_data,
-  gallery_list_data,
-  hero_data,
-  news_data,
-  other_directions_data,
-  performance_data,
-  personal_format_data,
-  profitable_visits_data,
-  reviews_data,
-  stock_data,
-  team_data,
-  types_services_data,
-  video_reviews_data,
-  water_zone_data,
+  aboutQuestionsData,
+  aboutUsData,
+  childrensSwimmingData,
+  clubCardsData,
+  directionsData,
+  everyCardData,
+  fitnessAreaData,
+  galleryListData,
+  heroData,
+  newsData,
+  otherDirectionsData,
+  performanceData,
+  personalFormatData,
+  profitableVisitsData,
+  reviewsData,
+  stockData,
+  teamData,
+  typesServicesData,
+  videoReviewsData,
+  waterZoneData,
 } from "@/data";
 import useSession from "@/hooks/useSession";
 import {
-  about_questions_store,
-  about_us_store,
-  childrens_swimming_store,
-  club_cards_store,
-  directions_store,
-  every_card_store,
-  fitness_area_store,
-  gallery_list_store,
-  hero_store,
-  news_store,
-  other_directions_store,
-  performance_data_store,
-  personal_format_store,
-  profitable_visits_store,
-  reviews_store,
-  stock_store,
-  team_store,
-  types_services_store,
-  video_reviews_store,
-  water_zone_store,
-} from "@/stores/data_store";
+  aboutQuestionsStore,
+  aboutUsStore,
+  childrensSwimmingStore,
+  clubCardsStore,
+  directionsStore,
+  everyCardStore,
+  fitnessAreaStore,
+  galleryListStore,
+  heroStore,
+  newsStore,
+  otherDirectionsStore,
+  performanceDataStore,
+  personalFormatStore,
+  profitableVisitsStore,
+  reviewsStore,
+  stockStore,
+  teamStore,
+  typesServicesStore,
+  videoReviewsStore,
+  waterZoneStore,
+} from "@/stores/dataStore";
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   useSession();
 
   const {
-    data: swimming_data,
-    isLoading: swimming_isLoading,
-    isError: swimming_isError,
+    data: swimmingData,
+    isLoading: swimmingIsLoading,
+    isError: swimmingIsError,
   } = useQuery({
-    queryKey: ["childrens_swimming"],
-    queryFn: childrens_swimming_data,
+    queryKey: ["childrensSwimming"],
+    queryFn: childrensSwimmingData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: other_data,
-    isLoading: other_isLoading,
-    isError: other_isError,
+    data: otherData,
+    isLoading: otherIsLoading,
+    isError: otherIsError,
   } = useQuery({
-    queryKey: ["other_directions"],
-    queryFn: other_directions_data,
+    queryKey: ["otherDirections"],
+    queryFn: otherDirectionsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: format_data,
-    isLoading: format_isLoading,
-    isError: format_isError,
+    data: formatData,
+    isLoading: formatIsLoading,
+    isError: formatIsError,
   } = useQuery({
-    queryKey: ["personal_format"],
-    queryFn: personal_format_data,
+    queryKey: ["personalFormat"],
+    queryFn: personalFormatData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: fitness_data,
-    isLoading: fitness_isLoading,
-    isError: fitness_isError,
+    data: fitnessData,
+    isLoading: fitnessIsLoading,
+    isError: fitnessIsError,
   } = useQuery({
-    queryKey: ["fitness_area"],
-    queryFn: fitness_area_data,
+    queryKey: ["fitnessArea"],
+    queryFn: fitnessAreaData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: water_data,
-    isLoading: water_isLoading,
-    isError: water_isError,
+    data: waterData,
+    isLoading: waterIsLoading,
+    isError: waterIsError,
   } = useQuery({
-    queryKey: ["water_zone"],
-    queryFn: water_zone_data,
+    queryKey: ["waterZone"],
+    queryFn: waterZoneData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: video_data,
-    isLoading: video_isLoading,
-    isError: video_isError,
+    data: videoData,
+    isLoading: videoIsLoading,
+    isError: videoIsError,
   } = useQuery({
-    queryKey: ["video_reviews"],
-    queryFn: video_reviews_data,
+    queryKey: ["videoReviews"],
+    queryFn: videoReviewsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: services_data,
-    isLoading: services_isLoading,
-    isError: services_isError,
+    data: servicesData,
+    isLoading: servicesIsLoading,
+    isError: servicesIsError,
   } = useQuery({
-    queryKey: ["types_services"],
-    queryFn: types_services_data,
+    queryKey: ["typesServices"],
+    queryFn: typesServicesData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: team_list_data,
-    isLoading: team_list_isLoading,
-    isError: team_list_isError,
+    data: teamListData,
+    isLoading: teamListIsLoading,
+    isError: teamListIsError,
   } = useQuery({
     queryKey: ["team"],
-    queryFn: team_data,
+    queryFn: teamData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: stock_list_data,
-    isLoading: stock_list_isLoading,
-    isError: stock_list_isError,
+    data: stockListData,
+    isLoading: stockListIsLoading,
+    isError: stockListIsError,
   } = useQuery({
     queryKey: ["stock"],
-    queryFn: stock_data,
+    queryFn: stockData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: review_data,
-    isLoading: review_isLoading,
-    isError: review_isError,
+    data: reviewData,
+    isLoading: reviewIsLoading,
+    isError: reviewIsError,
   } = useQuery({
     queryKey: ["reviews"],
-    queryFn: reviews_data,
+    queryFn: reviewsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: questions_data,
-    isLoading: questions_isLoading,
-    isError: questions_isError,
+    data: questionsData,
+    isLoading: questionsIsLoading,
+    isError: questionsIsError,
   } = useQuery({
     queryKey: ["questions"],
-    queryFn: about_questions_data,
+    queryFn: aboutQuestionsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: profit_data,
-    isLoading: profit_isLoading,
-    isError: profit_isError,
+    data: profitData,
+    isLoading: profitIsLoading,
+    isError: profitIsError,
   } = useQuery({
-    queryKey: ["profitable_visits"],
-    queryFn: profitable_visits_data,
+    queryKey: ["profitableVisits"],
+    queryFn: profitableVisitsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: perform_data,
-    isLoading: perform_isLoading,
-    isError: perform_isError,
+    data: performData,
+    isLoading: performIsLoading,
+    isError: performIsError,
   } = useQuery({
-    queryKey: ["performance_data"],
-    queryFn: performance_data,
+    queryKey: ["performanceData"],
+    queryFn: performanceData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: news_list_data,
-    isLoading: news_list_isLoading,
-    isError: news_list_isError,
+    data: newsListData,
+    isLoading: newsListIsLoading,
+    isError: newsListIsError,
   } = useQuery({
     queryKey: ["news"],
-    queryFn: news_data,
+    queryFn: newsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: gallery_data,
-    isLoading: gallery_isLoading,
-    isError: gallery_isError,
+    data: galleryData,
+    isLoading: galleryIsLoading,
+    isError: galleryIsError,
   } = useQuery({
-    queryKey: ["gallery_list"],
-    queryFn: gallery_list_data,
+    queryKey: ["galleryList"],
+    queryFn: galleryListData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: card_data,
-    isLoading: card_isLoading,
-    isError: card_isError,
+    data: cardData,
+    isLoading: cardIsLoading,
+    isError: cardIsError,
   } = useQuery({
-    queryKey: ["every_card"],
-    queryFn: every_card_data,
+    queryKey: ["everyCard"],
+    queryFn: everyCardData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: cards_data,
-    isLoading: cards_isLoading,
-    isError: cards_isError,
+    data: cardsData,
+    isLoading: cardsIsLoading,
+    isError: cardsIsError,
   } = useQuery({
-    queryKey: ["club_cards"],
-    queryFn: club_cards_data,
+    queryKey: ["clubCards"],
+    queryFn: clubCardsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: direct_data,
-    isLoading: direct_isLoading,
-    isError: direct_isError,
+    data: directData,
+    isLoading: directIsLoading,
+    isError: directIsError,
   } = useQuery({
     queryKey: ["directions"],
-    queryFn: directions_data,
+    queryFn: directionsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: about_data,
-    isLoading: about_isLoading,
-    isError: about_isError,
+    data: aboutData,
+    isLoading: aboutIsLoading,
+    isError: aboutIsError,
   } = useQuery({
-    queryKey: ["about_us"],
-    queryFn: about_us_data,
+    queryKey: ["aboutUs"],
+    queryFn: aboutUsData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   const {
-    data: hero_db,
-    isLoading: hero__isLoading,
-    isError: hero__isError,
+    data: heroDb,
+    isLoading: hero_IsLoading,
+    isError: hero_IsError,
   } = useQuery({
     queryKey: ["hero"],
-    queryFn: hero_data,
+    queryFn: heroData,
     staleTime: Infinity,
     retry: 3,
     placeholderData: keepPreviousData,
   });
 
   useEffect(() => {
-    if (hero_db) {
-      hero_store.set_data(hero_db);
-      hero_store.set_isLoad(hero__isLoading);
-      hero_store.set_isError(hero__isError);
+    if (heroDb) {
+      heroStore.setData(heroDb);
+      heroStore.setIsLoad(hero_IsLoading);
+      heroStore.setIsError(hero_IsError);
     }
-  }, [hero_db, hero__isLoading, hero__isError]);
+  }, [heroDb, hero_IsLoading, hero_IsError]);
 
   useEffect(() => {
-    if (swimming_data) {
-      childrens_swimming_store.set_data(swimming_data);
-      childrens_swimming_store.set_isLoad(swimming_isLoading);
-      childrens_swimming_store.set_isError(swimming_isError);
+    if (swimmingData) {
+      childrensSwimmingStore.setData(swimmingData);
+      childrensSwimmingStore.setIsLoad(swimmingIsLoading);
+      childrensSwimmingStore.setIsError(swimmingIsError);
     }
-  }, [swimming_data, swimming_isError, swimming_isLoading]);
+  }, [swimmingData, swimmingIsError, swimmingIsLoading]);
 
   useEffect(() => {
-    if (other_data) {
-      other_directions_store.set_data(other_data);
-      other_directions_store.set_isLoad(other_isLoading);
-      other_directions_store.set_isError(other_isError);
+    if (otherData) {
+      otherDirectionsStore.setData(otherData);
+      otherDirectionsStore.setIsLoad(otherIsLoading);
+      otherDirectionsStore.setIsError(otherIsError);
     }
-  }, [other_data, other_isError, other_isLoading]);
+  }, [otherData, otherIsError, otherIsLoading]);
 
   useEffect(() => {
-    if (format_data) {
-      personal_format_store.set_data(format_data);
-      personal_format_store.set_isLoad(format_isLoading);
-      personal_format_store.set_isError(format_isError);
+    if (formatData) {
+      personalFormatStore.setData(formatData);
+      personalFormatStore.setIsLoad(formatIsLoading);
+      personalFormatStore.setIsError(formatIsError);
     }
-  }, [format_data, format_isError, format_isLoading]);
+  }, [formatData, formatIsError, formatIsLoading]);
 
   useEffect(() => {
-    if (fitness_data) {
-      fitness_area_store.set_data(fitness_data);
-      fitness_area_store.set_isLoad(fitness_isLoading);
-      fitness_area_store.set_isError(fitness_isError);
+    if (fitnessData) {
+      fitnessAreaStore.setData(fitnessData);
+      fitnessAreaStore.setIsLoad(fitnessIsLoading);
+      fitnessAreaStore.setIsError(fitnessIsError);
     }
-  }, [fitness_data, fitness_isError, fitness_isLoading]);
+  }, [fitnessData, fitnessIsError, fitnessIsLoading]);
 
   useEffect(() => {
-    if (water_data) {
-      water_zone_store.set_data(water_data);
-      water_zone_store.set_isLoad(water_isLoading);
-      water_zone_store.set_isError(water_isError);
+    if (waterData) {
+      waterZoneStore.setData(waterData);
+      waterZoneStore.setIsLoad(waterIsLoading);
+      waterZoneStore.setIsError(waterIsError);
     }
-  }, [water_data, water_isError, water_isLoading]);
+  }, [waterData, waterIsError, waterIsLoading]);
 
   useEffect(() => {
-    if (video_data) {
-      video_reviews_store.set_data(video_data);
-      video_reviews_store.set_isLoad(video_isLoading);
-      video_reviews_store.set_isError(video_isError);
+    if (videoData) {
+      videoReviewsStore.setData(videoData);
+      videoReviewsStore.setIsLoad(videoIsLoading);
+      videoReviewsStore.setIsError(videoIsError);
     }
-  }, [video_data, video_isError, video_isLoading]);
+  }, [videoData, videoIsError, videoIsLoading]);
 
   useEffect(() => {
-    if (services_data) {
-      types_services_store.set_data(services_data);
-      types_services_store.set_isLoad(services_isLoading);
-      types_services_store.set_isError(services_isError);
+    if (servicesData) {
+      typesServicesStore.setData(servicesData);
+      typesServicesStore.setIsLoad(servicesIsLoading);
+      typesServicesStore.setIsError(servicesIsError);
     }
-  }, [services_data, services_isError, services_isLoading]);
+  }, [servicesData, servicesIsError, servicesIsLoading]);
 
   useEffect(() => {
-    if (team_list_data) {
-      team_store.set_data(team_list_data);
-      team_store.set_isLoad(team_list_isLoading);
-      team_store.set_isError(team_list_isError);
+    if (teamListData) {
+      teamStore.setData(teamListData);
+      teamStore.setIsLoad(teamListIsLoading);
+      teamStore.setIsError(teamListIsError);
     }
-  }, [team_list_data, team_list_isError, team_list_isLoading]);
+  }, [teamListData, teamListIsError, teamListIsLoading]);
 
   useEffect(() => {
-    if (stock_list_data) {
-      stock_store.set_data(stock_list_data);
-      stock_store.set_isLoad(stock_list_isLoading);
-      stock_store.set_isError(stock_list_isError);
+    if (stockListData) {
+      stockStore.setData(stockListData);
+      stockStore.setIsLoad(stockListIsLoading);
+      stockStore.setIsError(stockListIsError);
     }
-  }, [stock_list_data, stock_list_isError, stock_list_isLoading]);
+  }, [stockListData, stockListIsError, stockListIsLoading]);
 
   useEffect(() => {
-    if (review_data) {
-      reviews_store.set_data(review_data);
-      reviews_store.set_isLoad(review_isLoading);
-      reviews_store.set_isError(review_isError);
+    if (reviewData) {
+      reviewsStore.setData(reviewData);
+      reviewsStore.setIsLoad(reviewIsLoading);
+      reviewsStore.setIsError(reviewIsError);
     }
-  }, [review_data, review_isError, review_isLoading]);
+  }, [reviewData, reviewIsError, reviewIsLoading]);
 
   useEffect(() => {
-    if (questions_data) {
-      about_questions_store.set_data(questions_data);
-      about_questions_store.set_isLoad(questions_isLoading);
-      about_questions_store.set_isError(questions_isError);
+    if (questionsData) {
+      aboutQuestionsStore.setData(questionsData);
+      aboutQuestionsStore.setIsLoad(questionsIsLoading);
+      aboutQuestionsStore.setIsError(questionsIsError);
     }
-  }, [questions_data, questions_isError, questions_isLoading]);
+  }, [questionsData, questionsIsError, questionsIsLoading]);
 
   useEffect(() => {
-    if (profit_data) {
-      profitable_visits_store.set_data(profit_data);
-      profitable_visits_store.set_isLoad(profit_isLoading);
-      profitable_visits_store.set_isError(profit_isError);
+    if (profitData) {
+      profitableVisitsStore.setData(profitData);
+      profitableVisitsStore.setIsLoad(profitIsLoading);
+      profitableVisitsStore.setIsError(profitIsError);
     }
-  }, [profit_data, profit_isError, profit_isLoading]);
+  }, [profitData, profitIsError, profitIsLoading]);
 
   useEffect(() => {
-    if (perform_data) {
-      performance_data_store.set_data(perform_data);
-      performance_data_store.set_isLoad(perform_isLoading);
-      performance_data_store.set_isError(perform_isError);
+    if (performData) {
+      performanceDataStore.setData(performData);
+      performanceDataStore.setIsLoad(performIsLoading);
+      performanceDataStore.setIsError(performIsError);
     }
-  }, [perform_data, perform_isError, perform_isLoading]);
+  }, [performData, performIsError, performIsLoading]);
 
   useEffect(() => {
-    if (news_list_data) {
-      news_store.set_data(news_list_data);
-      news_store.set_isLoad(news_list_isLoading);
-      news_store.set_isError(news_list_isError);
+    if (newsListData) {
+      newsStore.setData(newsListData);
+      newsStore.setIsLoad(newsListIsLoading);
+      newsStore.setIsError(newsListIsError);
     }
-  }, [news_list_data, news_list_isError, news_list_isLoading]);
+  }, [newsListData, newsListIsError, newsListIsLoading]);
 
   useEffect(() => {
-    if (gallery_data) {
-      gallery_list_store.set_data(gallery_data);
-      gallery_list_store.set_isLoad(gallery_isLoading);
-      gallery_list_store.set_isError(gallery_isError);
+    if (galleryData) {
+      galleryListStore.setData(galleryData);
+      galleryListStore.setIsLoad(galleryIsLoading);
+      galleryListStore.setIsError(galleryIsError);
     }
-  }, [gallery_data, gallery_isError, gallery_isLoading]);
+  }, [galleryData, galleryIsError, galleryIsLoading]);
 
   useEffect(() => {
-    if (card_data) {
-      every_card_store.set_data(card_data);
-      every_card_store.set_isLoad(card_isLoading);
-      every_card_store.set_isError(card_isError);
+    if (cardData) {
+      everyCardStore.setData(cardData);
+      everyCardStore.setIsLoad(cardIsLoading);
+      everyCardStore.setIsError(cardIsError);
     }
-  }, [card_data, card_isError, card_isLoading]);
+  }, [cardData, cardIsError, cardIsLoading]);
 
   useEffect(() => {
-    if (cards_data) {
-      club_cards_store.set_data(cards_data);
-      club_cards_store.set_isLoad(cards_isLoading);
-      club_cards_store.set_isError(cards_isError);
+    if (cardsData) {
+      clubCardsStore.setData(cardsData);
+      clubCardsStore.setIsLoad(cardsIsLoading);
+      clubCardsStore.setIsError(cardsIsError);
     }
-  }, [cards_data, cards_isError, cards_isLoading]);
+  }, [cardsData, cardsIsError, cardsIsLoading]);
 
   useEffect(() => {
-    if (direct_data) {
-      directions_store.set_data(direct_data);
-      directions_store.set_isLoad(direct_isLoading);
-      directions_store.set_isError(direct_isError);
+    if (directData) {
+      directionsStore.setData(directData);
+      directionsStore.setIsLoad(directIsLoading);
+      directionsStore.setIsError(directIsError);
     }
-  }, [direct_data, direct_isLoading, direct_isError]);
+  }, [directData, directIsLoading, directIsError]);
 
   useEffect(() => {
-    if (about_data) {
-      about_us_store.set_data(about_data);
-      about_us_store.set_isLoad(about_isLoading);
-      about_us_store.set_isError(about_isError);
+    if (aboutData) {
+      aboutUsStore.setData(aboutData);
+      aboutUsStore.setIsLoad(aboutIsLoading);
+      aboutUsStore.setIsError(aboutIsError);
     }
-  }, [about_data, about_isLoading, about_isError]);
+  }, [aboutData, aboutIsLoading, aboutIsError]);
 
   return <>{children}</>;
 };

@@ -7,7 +7,7 @@ import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
 import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
-import session_store from "@/stores/session_store";
+import sessionStore from "@/stores/sessionStore";
 
 export const Header = observer(() => {
   const innerWidth = useGettingWindowWidth();
@@ -21,10 +21,10 @@ export const Header = observer(() => {
             <Social />
             <Link
               className="flex items-center gap-x-4 duration-300 hover:text-white xl:text-base 2xl:text-xl 3xl:text-2xl"
-              to="/personal_account"
+              to="/personalAccount"
             >
               {innerWidth > 945 && <span>Личный кабинет</span>}
-              {session_store && session_store.isActiveSession ? (
+              {sessionStore && sessionStore.isActiveSession ? (
                 <IconUserCheck className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />
               ) : (
                 <IconUserLock className="h-auto w-[17px] duration-300 group-hover:stroke-white xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]" />

@@ -5,9 +5,9 @@ import { stockPresentationDefaultData } from "@/constans";
 
 interface HeroItem {
   id: number;
-  description_picture: string;
-  description_promotion: string;
-  url_images: {
+  descriptionPicture: string;
+  descriptionPromotion: string;
+  urlImages: {
     webp: string;
     jpg: string;
   };
@@ -21,18 +21,17 @@ export const DescriptionHero = <T extends HeroItem>({
   data,
 }: DescriptionHeroPropsType<T>) => {
   const { id } = useParams();
-  const numeric_Id = Number(id);
+  const numericId = Number(id);
 
-  if (!data || data.length === 0 || !numeric_Id) return null;
-  const hero = data.find((el) => el.id === numeric_Id);
+  if (!data || data.length === 0 || !numericId) return null;
+  const hero = data.find((el) => el.id === numericId);
 
-  const { description_picture, description_promotion, url_images } =
+  const { descriptionPicture, descriptionPromotion, urlImages } =
     hero ?? stockPresentationDefaultData;
 
-  if (!description_picture || !description_promotion || !url_images)
-    return null;
+  if (!descriptionPicture || !descriptionPromotion || !urlImages) return null;
 
-  const sanitized_description = xss(description_promotion);
+  const sanitizedDescription = xss(descriptionPromotion);
 
   return (
     <section className="relative px-2.5 py-4 before:absolute before:bottom-28 before:right-28 before:z-10 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] md:px-10 md:py-20">
@@ -51,17 +50,17 @@ export const DescriptionHero = <T extends HeroItem>({
       </picture>
       <div className="relative z-10 gap-x-12 md:flex md:justify-center">
         <picture>
-          <source srcSet={url_images?.webp} type="image/webp" />
+          <source srcSet={urlImages?.webp} type="image/webp" />
           <img
             className="m-auto overflow-hidden rounded-3xl"
-            src={url_images?.jpg}
-            alt={description_picture}
+            src={urlImages?.jpg}
+            alt={descriptionPicture}
             loading="lazy"
           />
         </picture>
         <div
           className="customInsertHTML xl:text-xl 2xl:text-3xl"
-          dangerouslySetInnerHTML={{ __html: sanitized_description }}
+          dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
         ></div>
       </div>
     </section>

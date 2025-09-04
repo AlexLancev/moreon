@@ -1,74 +1,74 @@
 export const chooseYourCardDeafultData: Omit<
-  Club_cards_content_type,
-  "hero_description" | "page_description"
+  ClubCardsContentType,
+  "heroDescription" | "pageDescription"
 > = {
-  images_url: { webp: "", jpg: "" },
+  imagesUrl: { webp: "", jpg: "" },
   head: "",
   description: "",
   path: "",
 };
 
-export const waterZoneDefaultData: Water_zone_content_type = {
-  images_url: { webp: "", jpg: "" },
+export const waterZoneDefaultData: WaterZoneContentType = {
+  imagesUrl: { webp: "", jpg: "" },
   head: "",
   description: "",
-  images_description: "",
+  imagesDescription: "",
 };
 
 export const fitnessAreaDefaultData: Omit<
   FitnessAreaContentType,
-  "path" | "name_key"
+  "path" | "nameKey"
 > = {
-  images_url: { webp: "", jpg: "" },
+  imagesUrl: { webp: "", jpg: "" },
   head: "",
   description: "",
-  description_images: "",
+  descriptionImages: "",
 };
 
 export const cardsPresentationDefaultData: Omit<
-  Club_cards_content_type,
+  ClubCardsContentType,
   "head" | "path" | "description"
 > = {
-  images_url: { webp: "", jpg: "" },
-  page_description: {
+  imagesUrl: { webp: "", jpg: "" },
+  pageDescription: {
     all: "",
     daytime: "",
     business: "",
     weekend: "",
   },
-  hero_description: "",
+  heroDescription: "",
 };
 
-export const childrensSwimmingDefaultData: Childrens_swimming_content_type = {
+export const childrensSwimmingDefaultData: ChildrensSwimmingContentType = {
   head: "",
   description: "",
-  image_description: "",
+  imageDescription: "",
   path: "",
-  images_url: { webp: "", jpg: "" },
+  imagesUrl: { webp: "", jpg: "" },
 };
 
 export const directionsListDeafaultData: Pick<
-  Directions_content_type,
-  "images_url" | "direction" | "path" | "description"
+  DirectionsContentType,
+  "imagesUrl" | "direction" | "path" | "description"
 > = {
-  images_url: { webp: "", jpg: "" },
+  imagesUrl: { webp: "", jpg: "" },
   direction: "",
   path: "",
   description: "",
 };
 
-export const currentDirectionDeafaultData: Directions_content_page_type = {
+export const currentDirectionDeafaultData: DirectionsContentPageType = {
   hero: {
     description: "",
-    images_url: {
+    imagesUrl: {
       jpg: "",
       webp: "",
     },
   },
-  description_direction: [
+  descriptionDirection: [
     {
       content: "",
-      images_url: {
+      imagesUrl: {
         jpg: "",
         webp: "",
       },
@@ -78,20 +78,20 @@ export const currentDirectionDeafaultData: Directions_content_page_type = {
 };
 
 export const stockPresentationDefaultData = {
-  url_images: { webp: "", jpg: "" },
-  description_promotion: "",
-  description_picture: "",
+  urlImages: { webp: "", jpg: "" },
+  descriptionPromotion: "",
+  descriptionPicture: "",
 };
 
 export const heroTeamDefault = {
   name: "",
-  url_images: {
+  urlImages: {
     jpg: "",
     webp: "",
   },
-  about_coach: {
+  aboutCoach: {
     qualification: "",
-    work_experience: "",
+    workExperience: "",
     contacts: {
       phone: "",
     },
@@ -106,7 +106,7 @@ export const directionsPageDefault = {
   team: "",
   hero: {
     description: "",
-    images_url: {
+    imagesUrl: {
       jpg: "",
       webp: "",
     },

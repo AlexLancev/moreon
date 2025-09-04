@@ -31,10 +31,10 @@ const Wrapper = () => {
     authenticated &&
     (location.pathname === "/login" || location.pathname === "/register")
   ) {
-    return <Navigate to="/personal_account" />;
+    return <Navigate to="/personalAccount" />;
   }
 
-  if (!authenticated && location.pathname.startsWith("/personal_account")) {
+  if (!authenticated && location.pathname.startsWith("/personalAccount")) {
     return <Navigate to="/login" />;
   }
 

@@ -11,7 +11,7 @@ const Register = () => {
     const checkAuthentication = async () => {
       const { data } = await supabase.auth.getSession();
       if (data.session) {
-        navigate("/personal_account");
+        navigate("/personalAccount");
       }
     };
 
@@ -32,12 +32,12 @@ const Register = () => {
     }
 
     if (data.user && !data.session) {
-      navigate("/congratulations_registration");
+      navigate("/congratulationsRegistration");
       return;
     }
 
     if (data.user?.email) {
-      navigate("/personal_account");
+      navigate("/personalAccount");
     }
   };
 

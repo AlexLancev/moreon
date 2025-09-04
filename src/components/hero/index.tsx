@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { modal_store } from "@/stores";
+import { modalStore } from "@/stores";
 import { validateImagePath } from "@/utils";
 
 import { Container } from "../container";
@@ -12,17 +12,17 @@ export const Hero = ({
   className,
   isOpaque,
 }: HeroPropsTypes) => {
-  const { isVisibleModal, change_modal } = modal_store;
+  const { isVisibleModal, changeModal } = modalStore;
   if (!data) return null;
 
   const {
-    images_url,
+    imagesUrl,
     title: { general, decor },
     button: { iconBtn, label },
   } = data;
 
-  const urlImageWebp = images_url?.webp ?? "";
-  const urlImageFallback = images_url?.png ?? images_url?.jpg ?? "";
+  const urlImageWebp = imagesUrl?.webp ?? "";
+  const urlImageFallback = imagesUrl?.png ?? imagesUrl?.jpg ?? "";
   const isValidWebp = validateImagePath(urlImageWebp, ["webp"]);
   const isValidFallback = validateImagePath(urlImageFallback, [
     "png",
@@ -72,7 +72,7 @@ export const Hero = ({
           )}
           {children}
           {(label || iconBtn) && (
-            <Button onClick={() => change_modal(!isVisibleModal)}>
+            <Button onClick={() => changeModal(!isVisibleModal)}>
               {label} {iconBtn}
             </Button>
           )}

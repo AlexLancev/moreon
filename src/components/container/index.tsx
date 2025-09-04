@@ -2,12 +2,12 @@ import { type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type Container_props_type = {
+type ContainerPropsType = {
   children: ReactNode;
   className?: string;
 };
 
-export const Container = ({ children, className }: Container_props_type) => {
+export const Container = ({ children, className }: ContainerPropsType) => {
   return (
     <div
       className={cn(

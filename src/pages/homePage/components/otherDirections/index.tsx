@@ -1,0 +1,67 @@
+import { observer } from "mobx-react-lite";
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Container, ContentLoader } from "@/components";
+import { sizeRangesData, SkeletonGrid } from "@/constans";
+import { numberVisibleOtherDirectionsData } from "@/constans/numberVisibleElementsData";
+import { otherDirectionsStore } from "@/stores/dataStore";
+import { useGetResponsiveValue } from "@/utils";
+
+export const OtherDirections = observer(() => {
+  const { data } = otherDirectionsStore;
+  const indentationSlide = useGetResponsiveValue<number>(20, sizeRangesData);
+  const quantitySlide = useGetResponsiveValue<number>(
+    2,
+    numberVisibleOtherDirectionsData,
+  );
+
+  return (
+    <section className="py-12">
+      <h2 className="visually-hidden">Наши другие направления</h2>
+      <Container>
+        <Swiper
+          className="flex items-center justify-around gap-4"
+          modules={[Pagination]}
+          spaceBetween={indentationSlide}
+          slidesPerView={quantitySlide}
+          pagination={{ clickable: true }}
+        >
+          <ContentLoader
+            currentStore={otherDirectionsStore}
+            skeletonComponent={SkeletonGrid}
+            initialVisibleCount={5}
+          >
+            {data.map(
+              (
+                { path, descriptions, imagesUrl: { png, webp } },
+                idx: number,
+              ) => (
+                <SwiperSlide key={idx}>
+                  <a
+                    href={path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={descriptions}
+                  >
+                    <span className="visually-hidden">{descriptions}</span>
+                    <picture>
+                      <source srcSet={webp} type="image/webp" />
+                      <img
+                        src={png}
+                        className="m-auto"
+                        alt=""
+                        loading="lazy"
+                        aria-hidden
+                      />
+                    </picture>
+                  </a>
+                </SwiperSlide>
+              ),
+            )}
+          </ContentLoader>
+        </Swiper>
+      </Container>
+    </section>
+  );
+});

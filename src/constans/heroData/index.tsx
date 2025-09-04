@@ -8,7 +8,7 @@ export const servicesData: HeroDataTypes = {
     general: "Услуги",
     decor: "Moreon Fitness",
   },
-  images_url: {
+  imagesUrl: {
     webp: "services_hero/service_bg.webp",
     png: "services_hero/service_bg.png",
   },
@@ -22,7 +22,7 @@ export const teamData: HeroDataTypes = {
   title: {
     general: "Наша команда",
   },
-  images_url: {
+  imagesUrl: {
     webp: "team_hero/hero.webp",
     jpg: "team_hero/hero.jpeg",
   },
@@ -36,7 +36,7 @@ export const clubCardsData: HeroDataTypes = {
   title: {
     general: "Клубные карты",
   },
-  images_url: {
+  imagesUrl: {
     webp: "club_cards_hero/card.webp",
     jpg: "club_cards_hero/card.jpg",
   },
@@ -50,7 +50,7 @@ export const saunasPoolsData: HeroDataTypes = {
   title: {
     general: "Бани и бассейны",
   },
-  images_url: {
+  imagesUrl: {
     webp: "saunas_pools_hero/hero_bg.webp",
     jpg: "saunas_pools_hero/hero_bg.jpeg",
   },
@@ -64,7 +64,7 @@ export const kidsFitnesData: HeroDataTypes = {
   title: {
     general: "Детский фитнес",
   },
-  images_url: {
+  imagesUrl: {
     webp: "kids_fitnes_hero/kids_hero.webp",
     jpg: "kids_fitnes_hero/kids_hero.jpeg",
   },

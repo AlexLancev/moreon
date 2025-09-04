@@ -5,17 +5,17 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { AuthForm } from "@/AuthForm";
 import supabase from "@/data/supabase";
-import session_store from "@/stores/session_store";
+import sessionStore from "@/stores/sessionStore";
 
 const Login = observer(() => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const dispose = reaction(
-      () => session_store.isActiveSession,
+      () => sessionStore.isActiveSession,
       (isActive) => {
         if (isActive) {
-          navigate("/personal_account");
+          navigate("/personalAccount");
         }
       },
     );
@@ -35,7 +35,7 @@ const Login = observer(() => {
     }
 
     if (data) {
-      navigate("/personal_account");
+      navigate("/personalAccount");
     }
   };
 

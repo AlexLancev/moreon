@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import supabase from "@/data/supabase";
-import session_store from "@/stores/session_store";
+import sessionStore from "@/stores/sessionStore";
 
 function useSession() {
   useEffect(() => {
@@ -10,9 +10,9 @@ function useSession() {
         data: { session },
       } = await supabase.auth.getSession();
       if (session) {
-        session_store.setSessionActive();
+        sessionStore.setSessionActive();
       } else {
-        session_store.setSessionInactive();
+        sessionStore.setSessionInactive();
       }
     };
 
@@ -21,9 +21,9 @@ function useSession() {
     const { data: authListener } = supabase.auth.onAuthStateChange(
       (event, session) => {
         if (event === "SIGNED_IN" && session) {
-          session_store.setSessionActive();
+          sessionStore.setSessionActive();
         } else if (event === "SIGNED_OUT") {
-          session_store.setSessionInactive();
+          sessionStore.setSessionInactive();
         }
       },
     );

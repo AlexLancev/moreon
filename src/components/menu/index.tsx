@@ -1,10 +1,10 @@
-import { menu_data } from "constans";
+import { menuData } from "constans";
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 
-type Menu_props_type = {
+type MenuPropsType = {
   className?: string;
   isVisibleSubMenu?: boolean;
 };
@@ -12,7 +12,7 @@ type Menu_props_type = {
 export const Menu = ({
   className,
   isVisibleSubMenu = false,
-}: Menu_props_type) => {
+}: MenuPropsType) => {
   const pathname = useLocation().pathname;
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const timeoutRef = useRef<number | null>(null);
@@ -34,7 +34,7 @@ export const Menu = ({
     setActiveMenu(path);
   };
 
-  if (!menu_data || menu_data.length === 0) return null;
+  if (!menuData || menuData.length === 0) return null;
 
   return (
     <nav>
@@ -44,8 +44,8 @@ export const Menu = ({
           className,
         )}
       >
-        {menu_data.map(({ path, name_link, sub_menu }) => {
-          if (!path || !name_link) return null;
+        {menuData.map(({ path, nameLink, subMenu }) => {
+          if (!path || !nameLink) return null;
 
           return (
             <li key={path} className="relative">
@@ -63,9 +63,9 @@ export const Menu = ({
                     },
                   )}
                 >
-                  {name_link}
+                  {nameLink}
                 </Link>
-                {isVisibleSubMenu && sub_menu && (
+                {isVisibleSubMenu && subMenu && (
                   <ul
                     className={cn(
                       "absolute left-0 top-[30px] z-[99999] flex w-max flex-col items-start gap-y-2 rounded-lg bg-[rgb(0,9,8)] p-4 transition duration-300 before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] xl:text-lg 2xl:gap-y-4 2xl:p-8 2xl:text-xl 3xl:text-2xl",
@@ -75,8 +75,8 @@ export const Menu = ({
                       },
                     )}
                   >
-                    {sub_menu?.map(
-                      ({ path: subToLink, name_link: subNameLink }) => (
+                    {subMenu?.map(
+                      ({ path: subToLink, nameLink: subNameLink }) => (
                         <li key={subToLink}>
                           <Link
                             to={subToLink}

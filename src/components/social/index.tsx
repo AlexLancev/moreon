@@ -1,34 +1,34 @@
 import { cn } from "@/lib/utils";
 
-const data_social = [
+const dataSocial = [
   {
     label: "Открыть Instagram в новой вкладке",
-    url_externe: "https://www.instagram.com/moreonfitness/",
-    url_png_icon: "/images/social/instagram.png",
-    url_webp_icon: "/images/social/instagram.webp",
-    url_svg_icon: "/images/social/instagram.svg",
+    urlExterne: "https://www.instagram.com/moreonfitness/",
+    urlPngIcon: "/images/social/instagram.png",
+    urlWebpIcon: "/images/social/instagram.webp",
+    urlSvgIcon: "/images/social/instagram.svg",
   },
   {
     label: "Открыть Telegram в новой вкладке",
-    url_externe: "https://t.me/moreonfitness/",
-    url_png_icon: "/images/social/telegram.png",
-    url_webp_icon: "/images/social/telegram.webp",
-    url_svg_icon: "/images/social/telegram.svg",
+    urlExterne: "https://t.me/moreonfitness/",
+    urlPngIcon: "/images/social/telegram.png",
+    urlWebpIcon: "/images/social/telegram.webp",
+    urlSvgIcon: "/images/social/telegram.svg",
   },
   {
     label: "Открыть VK в новой вкладке",
-    url_externe: "https://vk.com/moreonfitness",
-    url_png_icon: "/images/social/vk.png",
-    url_webp_icon: "/images/social/vk.webp",
-    url_svg_icon: "/images/social/vk.svg",
+    urlExterne: "https://vk.com/moreonfitness",
+    urlPngIcon: "/images/social/vk.png",
+    urlWebpIcon: "/images/social/vk.webp",
+    urlSvgIcon: "/images/social/vk.svg",
   },
 ];
 
-type Social_props_type = {
+type SocialPropsType = {
   className?: string;
 };
 
-export const Social = ({ className }: Social_props_type) => {
+export const Social = ({ className }: SocialPropsType) => {
   return (
     <ul
       className={cn(
@@ -36,26 +36,26 @@ export const Social = ({ className }: Social_props_type) => {
         className,
       )}
     >
-      {data_social?.map(
+      {dataSocial?.map(
         (
-          { label, url_externe, url_png_icon, url_webp_icon, url_svg_icon },
+          { label, urlExterne, urlPngIcon, urlWebpIcon, urlSvgIcon },
           idx: number,
         ) => (
           <li key={idx}>
             <a
               className="opacity-80 transition duration-300 hover:opacity-100"
-              href={url_externe}
+              href={urlExterne}
               aria-label={label}
               title={label}
               target="_blank"
               rel="noopener noreferrer"
             >
               <picture>
-                <source srcSet={url_svg_icon} type="image/svg+xml" />
-                <source srcSet={url_webp_icon} type="image/webp" />
+                <source srcSet={urlSvgIcon} type="image/svg+xml" />
+                <source srcSet={urlWebpIcon} type="image/webp" />
                 <img
                   className="w-[17px] xl:w-[20px] 2xl:w-[24px] 3xl:w-[30px]"
-                  src={url_png_icon}
+                  src={urlPngIcon}
                   alt={label}
                   loading="lazy"
                 />

@@ -5,11 +5,11 @@ import { paths } from "@/paths";
 
 const { home } = paths;
 
-type Logo_props_type = {
+type LogoPropsType = {
   className?: string;
 };
 
-export const Logo = ({ className }: Logo_props_type) => {
+export const Logo = ({ className }: LogoPropsType) => {
   return (
     <Link to={home} className={cn("block", className)}>
       <span className="visually-hidden">
