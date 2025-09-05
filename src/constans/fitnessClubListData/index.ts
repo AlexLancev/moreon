@@ -1,4 +1,4 @@
-export const fitnessClubList: FitnessClubListType[] = [
+export const fitnessClubList: DescriptionItemType[] = [
   {
     description:
       "Мореон Фитнес – это премиум фитнес-клуб с бассейном, более 40 видами групповых программ, зоной единоборств, кроссфита и фитнесом для детей.",

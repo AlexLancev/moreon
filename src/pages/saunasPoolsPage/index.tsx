@@ -2,12 +2,7 @@ import { AreasStudy, TrainersDirection } from "components";
 
 import { SaunasPoolsHero } from "./components";
 
-const keysList: DirectKeysType[] = [
-  "sportsPool",
-  "spa",
-  "thermalBaths",
-  "goldfish",
-];
+const keysList = ["sportsPool", "spa", "thermalBaths", "goldfish"] as const;
 
 const SaunasPoolsPage = () => {
   return (

@@ -1,8 +1,6 @@
-export const sizeRangesData: sizeRangesType[] = [
+export const sizeRangesData = [
   { min: 1921, meaning: 35 },
   { min: 1536, max: 1920, meaning: 25 },
 ];
 
-export const sizeRangesTeamData: sizeRangesType[] = [
-  { min: 1024, meaning: 24 },
-];
+export const sizeRangesTeamData = [{ min: 1024, meaning: 24 }];

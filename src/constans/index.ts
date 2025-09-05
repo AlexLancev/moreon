@@ -31,6 +31,7 @@ export {
   stockPresentationDefaultData,
   heroTeamDefault,
   directionsPageDefault,
+  defaultConfigTabList,
 } from "./defaultData";
 export { childrensSwimmingData } from "./childrensSwimmingData";
 export { contactsData } from "./contactsData";

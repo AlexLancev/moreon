@@ -5,22 +5,28 @@ import { Link } from "react-router-dom";
 import xss from "xss";
 
 import { Container, ContentLoader, Tabs, Title } from "@/components";
-import { chooseYourCardDeafultData, SkeletonFitnessSection } from "@/constans";
+import {
+  chooseYourCardDeafultData,
+  defaultConfigTabList,
+  SkeletonFitnessSection,
+} from "@/constans";
 import { clubCardsStore } from "@/stores/dataStore";
 
-import { isEmptyObj } from "@/utils";
+import { createTabListConfig, isEmptyObj } from "@/utils";
 
 import { Button } from "../ui/button";
 
-const tabList: TabListType<ClubCardsKeyType>[] = [
-  { key: "fitnes", category: "Фитнес" },
-  { key: "fitnesSpa", category: "Фитнес + СПА" },
-  { key: "corporateCard", category: "Корпоративная карта" },
-  { key: "flexible", category: "Гибкая" },
-  { key: "premium", category: "Премиум" },
-];
-
-const chooseYourCardKeys = tabList.map(({ key }) => key);
+const { TAB_LIST, TAB_LIST_KEYS } =
+  createTabListConfig<ClubCardsKeyType>(
+    [
+      { key: "fitnes", category: "Фитнес" },
+      { key: "fitnesSpa", category: "Фитнес + СПА" },
+      { key: "corporateCard", category: "Корпоративная карта" },
+      { key: "flexible", category: "Гибкая" },
+      { key: "premium", category: "Премиум" },
+    ] as const,
+    "ChooseYourCard",
+  ) ?? defaultConfigTabList;
 
 export const ChooseYourCard = observer(
   ({ tabsStore }: { tabsStore: ClubCardsTabsType }) => {
@@ -43,16 +49,16 @@ export const ChooseYourCard = observer(
           </Title>
 
           <Tabs
-            currentStore={{ ...clubCardsStore, data: tabList }}
+            currentStore={{ ...clubCardsStore, data: TAB_LIST_KEYS }}
             isActiveTab={isActiveTab}
             changeTabs={changeTabs}
-            tabList={tabList}
+            tabList={TAB_LIST}
           />
 
           <ContentLoader
             currentStore={clubCardsStore}
             skeletonComponent={SkeletonFitnessSection}
-            isEmpty={!currentData || isEmptyObj(data?.[0], chooseYourCardKeys)}
+            isEmpty={!currentData || isEmptyObj(data?.[0], TAB_LIST_KEYS)}
             initialVisibleCount={1}
           >
             <div className="py-5 lg:flex lg:items-center lg:justify-evenly lg:gap-x-10">

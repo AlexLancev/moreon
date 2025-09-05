@@ -1,9 +1,8 @@
 import { ReactNode, ComponentType } from "react";
 
 interface CurrentStoreType<T> {
-  data: T[] | null;
+  data: readonly T[] | null;
   isLoading: boolean;
-  isError: null | boolean;
 }
 
 interface ContentLoaderType<T> {
@@ -25,13 +24,8 @@ export const ContentLoader = <T,>({
 }: ContentLoaderType<T>) => {
   if (!currentStore) return null;
 
-  const { data, isLoading, isError } = currentStore;
+  const { data, isLoading } = currentStore;
   const objKeyListLength = data?.length;
-
-  if (isError) {
-    console.error("Не удалось получить данные. Ошибка:", isError);
-    return null;
-  }
 
   if (isLoading) {
     return Array.from({ length: objKeyListLength || initialVisibleCount }).map(
@@ -42,11 +36,6 @@ export const ContentLoader = <T,>({
   }
 
   if (isEmpty !== undefined && isEmpty) {
-    return null;
-  }
-
-  if (!data?.length) {
-    console.error("Нет данных:", data);
     return null;
   }
 

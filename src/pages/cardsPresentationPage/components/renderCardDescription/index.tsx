@@ -2,16 +2,19 @@ import { observer } from "mobx-react-lite";
 import xss from "xss";
 
 import { ContentLoader, Tabs } from "@/components";
-import { SkeletonFitnessCard } from "@/constans";
+import { defaultConfigTabList, SkeletonFitnessCard } from "@/constans";
 import { clubCardsStore } from "@/stores/dataStore";
+import { createTabListConfig } from "@/utils";
 
-const tabList: Omit<TabListType<PageDescriptionTypeKey>, "all">[] = [
-  { key: "daytime", category: "Тариф 'Дневной'" },
-  { key: "business", category: "Тариф 'Бизнес'" },
-  { key: "weekend", category: "Тариф 'Выходного дня'" },
-];
-
-const cardsPresentationKeys = tabList.map(({ key }) => key);
+const { TAB_LIST, TAB_LIST_KEYS } =
+  createTabListConfig<Exclude<PageDescriptionTypeKey, "all">>(
+    [
+      { key: "daytime", category: "Тариф 'Дневной'" },
+      { key: "business", category: "Тариф 'Бизнес'" },
+      { key: "weekend", category: "Тариф 'Выходного дня'" },
+    ] as const,
+    "RenderCardDescription",
+  ) ?? defaultConfigTabList;
 
 export const RenderCardDescription = observer(
   ({
@@ -28,11 +31,11 @@ export const RenderCardDescription = observer(
             <Tabs
               currentStore={{
                 ...clubCardsStore,
-                data: cardsPresentationKeys,
+                data: TAB_LIST_KEYS,
               }}
               isActiveTab={isActiveTab}
               changeTabs={changeTabs}
-              tabList={tabList}
+              tabList={TAB_LIST}
             />
           </div>
         )}

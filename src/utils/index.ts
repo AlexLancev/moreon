@@ -2,7 +2,7 @@ import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
 
 export const hasRequiredKeys = <T extends object, K extends keyof T>(
   obj: T,
-  requiredKeys: K[],
+  requiredKeys: readonly K[],
 ): boolean => {
   if (!obj || typeof obj !== "object") return false;
 
@@ -16,7 +16,7 @@ export const hasRequiredKeys = <T extends object, K extends keyof T>(
 
 export const isEmptyObj = <T extends object, K extends keyof T = keyof T>(
   object: T,
-  requiredKeys?: K[],
+  requiredKeys?: readonly K[],
 ): boolean => {
   if (!object || typeof object !== "object") return true;
 
@@ -105,4 +105,25 @@ export const validateImagePath = (
     "i",
   );
   return regex.test(path);
+};
+
+export const createTabListConfig = <K extends string>(
+  items: readonly TabListType<K>[],
+  localError = "",
+): {
+  TAB_LIST: readonly TabListType<K>[];
+  TAB_LIST_KEYS: readonly K[];
+  localError?: string;
+} | null => {
+  if (!items?.length) {
+    console.error(
+      `"Ошибка конфигурации табов: В компоненте ${localError} передан пустой массив или undefined/null:"`,
+      items,
+    );
+    return null;
+  }
+  return {
+    TAB_LIST: items,
+    TAB_LIST_KEYS: items.map(({ key }) => key),
+  };
 };

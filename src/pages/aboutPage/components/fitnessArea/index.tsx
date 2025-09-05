@@ -6,19 +6,25 @@ import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
-import { fitnessAreaDefaultData, SkeletonGymSection } from "@/constans";
+import {
+  defaultConfigTabList,
+  fitnessAreaDefaultData,
+  SkeletonGymSection,
+} from "@/constans";
 import { fitnessAreaStore } from "@/stores/dataStore";
-import { isEmptyObj } from "@/utils";
+import { createTabListConfig, isEmptyObj } from "@/utils";
 
-const tabList: TabListType<TabFitnessType>[] = [
-  { key: "gym", category: "Тренажёрный зал" },
-  { key: "trainingRoom", category: "Зал групповых тренировок" },
-  { key: "pool", category: "Спортивный бассейн" },
-  { key: "cardioRoom", category: "Зал кардио тренажёров" },
-  { key: "martialArts", category: "Зал единоборств" },
-];
-
-const fitnessAreaKeys = tabList.map(({ key }) => key);
+const { TAB_LIST, TAB_LIST_KEYS } =
+  createTabListConfig<TabFitnessType>(
+    [
+      { key: "gym", category: "Тренажёрный зал" },
+      { key: "trainingRoom", category: "Зал групповых тренировок" },
+      { key: "pool", category: "Спортивный бассейн" },
+      { key: "cardioRoom", category: "Зал кардио тренажёров" },
+      { key: "martialArts", category: "Зал единоборств" },
+    ] as const,
+    "FitnessArea",
+  ) ?? defaultConfigTabList;
 
 export const FitnessArea = observer(
   ({ tabsStore }: { tabsStore: FitnessAreaTabsType }) => {
@@ -43,15 +49,15 @@ export const FitnessArea = observer(
             <span className="text-customHeadDecor">Зоны</span> фитнес клуба
           </Title>
           <Tabs
-            currentStore={{ ...fitnessAreaStore, data: fitnessAreaKeys }}
+            currentStore={{ ...fitnessAreaStore, data: TAB_LIST_KEYS }}
             isActiveTab={isActiveTab}
             changeTabs={changeTabs}
-            tabList={tabList}
+            tabList={TAB_LIST}
           />
           <ContentLoader
             currentStore={fitnessAreaStore}
             skeletonComponent={SkeletonGymSection}
-            isEmpty={!currentData || isEmptyObj(data?.[0], fitnessAreaKeys)}
+            isEmpty={!currentData || isEmptyObj(data?.[0], TAB_LIST_KEYS)}
             initialVisibleCount={1}
           >
             <div className="gap-x-6 pt-4 md:flex md:items-center md:*:w-[50%]">

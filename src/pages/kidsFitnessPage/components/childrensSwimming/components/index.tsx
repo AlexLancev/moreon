@@ -9,18 +9,21 @@ import xss from "xss";
 import { Button } from "@/components/ui/button";
 import {
   childrensSwimmingDefaultData,
+  defaultConfigTabList,
   SkeletonBabySwimmingSection,
 } from "@/constans";
 import { childrensSwimmingStore } from "@/stores/dataStore";
-import { isEmptyObj } from "@/utils";
+import { createTabListConfig, isEmptyObj } from "@/utils";
 
-const childrensSwimmingList: TabListType<ChildrensSwimmingKeyType>[] = [
-  { key: "infantSwimming", category: "Грудничковое плавание" },
-  { key: "childrensSwimming", category: "Детское плавание" },
-  { key: "schoolCompetitiveSwimming", category: "Спортивное плавание" },
-];
-
-const childrensSwimmingKeys = childrensSwimmingList.map(({ key }) => key);
+const { TAB_LIST, TAB_LIST_KEYS } =
+  createTabListConfig<ChildrensSwimmingKeyType>(
+    [
+      { key: "infantSwimming", category: "Грудничковое плавание" },
+      { key: "childrensSwimming", category: "Детское плавание" },
+      { key: "schoolCompetitiveSwimming", category: "Спортивное плавание" },
+    ] as const,
+    "ChildrensSwimmingTabs",
+  ) ?? defaultConfigTabList;
 
 export const ChildrensSwimmingTabs = observer(
   ({ tabsStore }: { tabsStore: ChildrensSwimmingTabsType }) => {
@@ -39,16 +42,16 @@ export const ChildrensSwimmingTabs = observer(
         <Tabs
           currentStore={{
             ...childrensSwimmingStore,
-            data: childrensSwimmingKeys,
+            data: TAB_LIST_KEYS,
           }}
           isActiveTab={isActiveTab}
           changeTabs={changeTabs}
-          tabList={childrensSwimmingList}
+          tabList={TAB_LIST}
         />
         <ContentLoader
           currentStore={childrensSwimmingStore}
           skeletonComponent={SkeletonBabySwimmingSection}
-          isEmpty={!currentData || isEmptyObj(data?.[0], childrensSwimmingKeys)}
+          isEmpty={!currentData || isEmptyObj(data?.[0], TAB_LIST_KEYS)}
           initialVisibleCount={1}
         >
           <div className="py-3 lg:flex lg:items-center lg:justify-evenly lg:gap-x-12">

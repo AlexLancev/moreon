@@ -1,4 +1,4 @@
-export const childrensSwimmingData: ChildrensSwimmingDataType[] = [
+export const childrensSwimmingData: DescriptionItemType[] = [
   {
     description: "грудничковое плавание от 2 месяцев до 1 года",
   },

@@ -38,7 +38,7 @@ type PerformanceKeyType =
   | "salesDepartment";
 
 interface PerformanceType {
-  dataKey: PerformanceKeyType[];
+  dataKey: readonly PerformanceKeyType[];
   isVisibleBtn: boolean;
 }
 
@@ -90,15 +90,15 @@ interface TabsStoreType<K> {
 }
 
 interface PersonalFormatTabsType<K> {
-  dataKey: PersonalFormatKeyType[];
+  dataKey: readonly PersonalFormatKeyType[];
   tabsStore: TabsStoreType<K>;
   className?: string;
 }
 
-interface TabListType<K> {
+type TabListType<K extends string> = Readonly<{
   key: K;
   category: string;
-}
+}>;
 
 type KeyListType = {
   [key: string]: { description: string };
@@ -416,7 +416,7 @@ interface DirectionsContentType extends DirectionsContentPageType {
 type DirectionsType = Record<DirectKeysType, DirectionsContentType>;
 
 interface DirectionsKeysType {
-  keysList: DirectKeysType[];
+  keysList: readonly DirectKeysType[];
   visibleElements?: number;
 }
 
@@ -432,7 +432,7 @@ interface DataActionType {
 }
 
 interface CurrentStoreType<T> {
-  data: T[] | null;
+  data: readonly T[] | null;
   isLoading: boolean;
   isError: null | boolean;
 }
@@ -440,7 +440,7 @@ interface CurrentStoreType<T> {
 interface TabsType<T, K> {
   isActiveTab: K;
   changeTabs: (value: K) => void;
-  tabList: TabListType<K>[];
+  tabList: readonly TabListType<K>[];
   currentChangeTab?: string;
   className?: string;
   currentStore: CurrentStoreType<T>;

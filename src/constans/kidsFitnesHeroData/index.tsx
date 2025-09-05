@@ -1,4 +1,4 @@
-export const kidsFitnesHeroData: KidsFitnesHeroDataType[] = [
+export const kidsFitnesHeroData: DescriptionItemType[] = [
   {
     description: "Грудничковое плавание",
   },

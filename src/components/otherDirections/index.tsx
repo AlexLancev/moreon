@@ -1,6 +1,6 @@
 import { Container, DirectionsList, Title } from "components";
 
-const keyList: DirectKeysType[] = ["childrensSwimming", "infantSwimming"];
+const keyList = ["childrensSwimming", "infantSwimming"] as const;
 
 export const OtherDirections = () => {
   return (

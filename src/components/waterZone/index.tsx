@@ -3,23 +3,29 @@ import { NotebookText as IconNotebookText } from "lucide-react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 
-import { SkeletonBathAndPoolsSection, waterZoneDefaultData } from "@/constans";
+import {
+  defaultConfigTabList,
+  SkeletonBathAndPoolsSection,
+  waterZoneDefaultData,
+} from "@/constans";
 import { modalStore } from "@/stores";
 import { waterZoneStore } from "@/stores/dataStore";
 
-import { isEmptyObj } from "@/utils";
+import { createTabListConfig, isEmptyObj } from "@/utils";
 
 import { Button } from "../ui/button";
 
-const tabList: TabListType<WaterZoneKeyType>[] = [
-  { key: "bathsSwimming", category: "Бани и бассейны" },
-  { key: "sportsPool", category: "Спортивный бассейн" },
-  { key: "spa", category: "СПА" },
-  { key: "thermalBaths", category: "Термы" },
-  { key: "goldfish", category: "Золотые рыбки" },
-];
-
-const waterZoneKeys = tabList.map(({ key }) => key);
+const { TAB_LIST, TAB_LIST_KEYS } =
+  createTabListConfig<WaterZoneKeyType>(
+    [
+      { key: "bathsSwimming", category: "Бани и бассейны" },
+      { key: "sportsPool", category: "Спортивный бассейн" },
+      { key: "spa", category: "СПА" },
+      { key: "thermalBaths", category: "Термы" },
+      { key: "goldfish", category: "Золотые рыбки" },
+    ] as const,
+    "WaterZone",
+  ) ?? defaultConfigTabList;
 
 export const WaterZone = observer(
   ({ tabsStore }: { tabsStore: WaterZoneTabsType }) => {
@@ -61,12 +67,12 @@ export const WaterZone = observer(
             </h2>
             <Tabs
               isActiveTab={isActiveTab}
-              currentStore={{ ...waterZoneStore, data: waterZoneKeys }}
+              currentStore={{ ...waterZoneStore, data: TAB_LIST_KEYS }}
               changeTabs={changeTabs}
-              tabList={tabList}
+              tabList={TAB_LIST}
             />
             <ContentLoader
-              isEmpty={!currentData || isEmptyObj(data?.[0], waterZoneKeys)}
+              isEmpty={!currentData || isEmptyObj(data?.[0], TAB_LIST_KEYS)}
               currentStore={waterZoneStore}
               skeletonComponent={SkeletonBathAndPoolsSection}
               initialVisibleCount={1}

@@ -1,11 +1,11 @@
 import { Container, Performance, Title } from "@/components";
 
-export const effectiveTrainingDataKey: PerformanceKeyType[] = [
+export const effectiveTrainingDataKey = [
   "spa",
   "cafeRestaurant",
   "reception",
   "salesDepartment",
-];
+] as const;
 
 export const EffectiveTraining = () => {
   return (

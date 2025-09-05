@@ -2,13 +2,13 @@ import { Container, Title } from "@/components";
 
 import { PersonalFormatTabs } from "./components/personalFormatTabs";
 
-const personalFormatDataKey: PersonalFormatKeyType[] = [
+const personalFormatDataKey = [
   "gym",
   "groupTraining",
   "childrensPrograms",
   "beautyHealth",
   "authorsPrograms",
-];
+] as const;
 
 export interface tabsStoreType<K> {
   isActiveTab: K;

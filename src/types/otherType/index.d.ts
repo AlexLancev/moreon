@@ -1,7 +1,8 @@
-type FitnessClubListType = Record<string, string>;
-type ChildrensSwimmingDataType = Record<string, string>;
-type KidsFitnesHeroDataType = Record<string, string>;
 type TitleSize = "xs" | "sm" | "md" | "lg" | "xl";
+
+interface DescriptionItemType {
+  description: string;
+}
 
 interface sizeRangesType {
   min?: number;

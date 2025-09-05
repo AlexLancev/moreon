@@ -1,6 +1,6 @@
 import { Container, Performance, Title } from "components";
 
-const phytoBarDataKey: PerformanceKeyType[] = ["cafeRestaurant"];
+const phytoBarDataKey = ["cafeRestaurant"] as const;
 
 export const PhytoBar = () => {
   return (

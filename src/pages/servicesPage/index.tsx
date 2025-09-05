@@ -11,7 +11,7 @@ import { getTabsStore } from "@/stores";
 
 import { ServicesHero } from "./components";
 
-const keysList: DirectKeysType[] = [
+const keysList = [
   "mindBody",
   "strengthFunctionalTraining",
   "aerobics",
@@ -23,7 +23,7 @@ const keysList: DirectKeysType[] = [
   "yoga",
   "test",
   "groupTraining",
-];
+] as const;
 
 const ServicesPage = () => {
   return (
