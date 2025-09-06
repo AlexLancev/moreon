@@ -1,6 +1,6 @@
 import { contactsData } from "constans";
 
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { useGettingWindowWidth } from "@/hooks";
 import { cn } from "@/lib/utils";
 import { isEmptyObj } from "@/utils";
 

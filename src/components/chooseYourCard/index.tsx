@@ -29,7 +29,7 @@ const { TAB_LIST, TAB_LIST_KEYS } =
   ) ?? defaultConfigTabList;
 
 export const ChooseYourCard = observer(
-  ({ tabsStore }: { tabsStore: ClubCardsTabsType }) => {
+  ({ tabsStore }: { tabsStore: TabType<ClubCardsKeyType> }) => {
     const { isActiveTab, changeTabs } = tabsStore;
     const { data } = clubCardsStore;
 

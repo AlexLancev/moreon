@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { ContentLoader } from "../contentLoader";
 
 export const Tabs = observer(
-  <T, K>({
+  <T, K extends string>({
     isActiveTab,
     changeTabs,
     tabList,
@@ -15,8 +15,11 @@ export const Tabs = observer(
     currentStore,
   }: TabsType<T, K>) => {
     useEffect(() => {
-      if (tabList && tabList.length > 0 && !isActiveTab) {
-        changeTabs(tabList[0]?.key);
+      if (!tabList || tabList?.length === 0) return;
+
+      const hasActive = tabList.some(({ key }) => key === isActiveTab);
+      if (!hasActive) {
+        changeTabs(tabList[0]!.key);
       }
     }, [changeTabs, tabList, isActiveTab]);
 

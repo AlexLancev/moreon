@@ -114,6 +114,6 @@ export const directionsPageDefault = {
 };
 
 export const defaultConfigTabList = {
-  TAB_LIST: [{ key: "", category: "" }],
+  TAB_LIST: [],
   TAB_LIST_KEYS: [],
 };

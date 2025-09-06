@@ -59,7 +59,9 @@ const CardsPresentationPage = observer(() => {
         imagesUrl={imagesUrl}
         pageDescription={pageDescription}
         tabsStore={
-          getTabsStore("componentPageChooseYourCard") as RenderCardTabsType
+          getTabsStore(
+            "componentPageChooseYourCard",
+          ) as TabType<PageDescriptionTypeKey>
         }
       />
       <EveryCard />

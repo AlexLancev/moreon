@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import supabase from "@/data/supabase";
 import sessionStore from "@/stores/sessionStore";
 
-function useSession() {
+export const useSession = () => {
   useEffect(() => {
     const checkSession = async () => {
       const {
@@ -32,6 +32,4 @@ function useSession() {
       authListener?.subscription.unsubscribe();
     };
   }, []);
-}
-
-export default useSession;
+};

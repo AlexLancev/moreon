@@ -6,7 +6,7 @@ import {
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { useGettingWindowWidth } from "@/hooks";
 import sessionStore from "@/stores/sessionStore";
 
 export const Header = observer(() => {

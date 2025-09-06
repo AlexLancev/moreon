@@ -8,7 +8,7 @@ import {
   Team,
 } from "@/components";
 
-import { getTabsStore } from "@/stores";
+import { useTabsStore } from "@/hooks";
 
 import {
   ClubNews,
@@ -21,6 +21,8 @@ import {
 } from "./components";
 
 const HomePage = () => {
+  const teamStore = useTabsStore<TeamTabKeyType>("gym");
+
   return (
     <>
       <HomeHero />
@@ -30,7 +32,7 @@ const HomePage = () => {
       <ClubNews />
       <AboutUs />
       <VideoReviews />
-      <Team tabsStore={getTabsStore("componentTeam") as TeamKeyType} />
+      <Team tabsStore={teamStore} />
       <OurApplication />
       <FreezeCard />
       <PhytoBar />

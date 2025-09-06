@@ -12,7 +12,7 @@ import { MessageCircleQuestion as IconMessageCircleQuestion } from "lucide-react
 import { ReactNode } from "react";
 
 import { AccessibleButton } from "@/components/ui/accessibleButton";
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { useGettingWindowWidth } from "@/hooks";
 
 interface RenderQuestionType {
   children: ReactNode;

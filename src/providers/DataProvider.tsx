@@ -23,7 +23,7 @@ import {
   videoReviewsData,
   waterZoneData,
 } from "@/data";
-import useSession from "@/hooks/useSession";
+import { useSession } from "@/hooks";
 import {
   aboutQuestionsStore,
   aboutUsStore,

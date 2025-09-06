@@ -27,7 +27,9 @@ const PersonTeamPage = observer(() => {
       </section>
       <Stock />
       <FitnessArea
-        tabsStore={getTabsStore("componentFitnessArea") as FitnessAreaTabsType}
+        tabsStore={
+          getTabsStore("componentFitnessArea") as TabType<TabFitnessType>
+        }
       />
       <ProfitableVisits />
     </>

@@ -16,24 +16,26 @@ const { TAB_LIST, TAB_LIST_KEYS } =
     "Team",
   ) ?? defaultConfigTabList;
 
-export const Team = observer(({ tabsStore }: { tabsStore: TeamKeyType }) => {
-  if (!tabsStore) return null;
-  const { isActiveTab, changeTabs } = tabsStore;
+export const Team = observer(
+  ({ tabsStore }: { tabsStore: TabType<TeamTabKeyType> }) => {
+    if (!tabsStore) return null;
+    const { isActiveTab, changeTabs } = tabsStore;
 
-  if (!changeTabs) return null;
+    if (!changeTabs) return null;
 
-  return (
-    <section className="py-12">
-      <Container>
-        <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">Команда</Title>
-        <Tabs
-          currentStore={{ ...teamStore, data: TAB_LIST_KEYS }}
-          isActiveTab={isActiveTab}
-          changeTabs={changeTabs}
-          tabList={TAB_LIST}
-        />
-        <TeamList isActiveTab={isActiveTab} />
-      </Container>
-    </section>
-  );
-});
+    return (
+      <section className="py-12">
+        <Container>
+          <Title className="mb-4 md:mb-6 lg:mb-8 2xl:mb-12">Команда</Title>
+          <Tabs
+            currentStore={{ ...teamStore, data: TAB_LIST_KEYS }}
+            isActiveTab={isActiveTab}
+            changeTabs={changeTabs}
+            tabList={TAB_LIST}
+          />
+          <TeamList isActiveTab={isActiveTab} />
+        </Container>
+      </section>
+    );
+  },
+);

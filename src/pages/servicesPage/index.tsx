@@ -30,16 +30,22 @@ const ServicesPage = () => {
     <>
       <ServicesHero />
       <AreasStudy keysList={keysList} />
-      <Team tabsStore={getTabsStore("componentTeam") as TeamKeyType} />
+      <Team
+        tabsStore={getTabsStore("componentTeam") as TabType<TeamTabKeyType>}
+      />
       <ChooseYourCard
         tabsStore={
-          getTabsStore("componentServicesChooseYourCard") as ClubCardsTabsType
+          getTabsStore(
+            "componentServicesChooseYourCard",
+          ) as TabType<ClubCardsKeyType>
         }
       />
       <FreezeCard />
       <ChildrensCenter />
       <WaterZone
-        tabsStore={getTabsStore("componentWaterZone") as WaterZoneTabsType}
+        tabsStore={
+          getTabsStore("componentWaterZone") as TabType<WaterZoneKeyType>
+        }
       />
       <PhytoBar />
     </>

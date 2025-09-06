@@ -1,4 +1,4 @@
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { useGettingWindowWidth } from "@/hooks";
 
 interface RenderImageType {
   urlXxxlImgWebp: string;

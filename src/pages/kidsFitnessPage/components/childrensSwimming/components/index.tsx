@@ -26,7 +26,7 @@ const { TAB_LIST, TAB_LIST_KEYS } =
   ) ?? defaultConfigTabList;
 
 export const ChildrensSwimmingTabs = observer(
-  ({ tabsStore }: { tabsStore: ChildrensSwimmingTabsType }) => {
+  ({ tabsStore }: { tabsStore: TabType<ChildrensSwimmingKeyType> }) => {
     const { isActiveTab, changeTabs } = tabsStore;
     const { data } = childrensSwimmingStore;
 

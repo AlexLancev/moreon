@@ -1,4 +1,4 @@
-import { useGettingWindowWidth } from "@/hooks/useGettingWindowWidth";
+import { useGettingWindowWidth } from "@/hooks";
 
 export const hasRequiredKeys = <T extends object, K extends keyof T>(
   obj: T,

@@ -22,9 +22,6 @@ export const PersonalFormatTabs = observer(
 
     const currentData = toJS(data?.[0]);
 
-    console.log(currentData?.[currentChangeTab]?.keyList);
-    console.log(isActiveTab);
-
     const description =
       currentData?.[currentChangeTab]?.keyList?.[isActiveTab]?.description;
 

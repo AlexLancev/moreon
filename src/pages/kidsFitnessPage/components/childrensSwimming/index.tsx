@@ -35,7 +35,9 @@ export const ChildrensSwimming = () => {
           Приглашаем на занятия юных пловцов!
         </p>
         <ChildrensSwimmingTabs
-          tabsStore={childrensSwimmingStore as ChildrensSwimmingTabsType}
+          tabsStore={
+            childrensSwimmingStore as TabType<ChildrensSwimmingKeyType>
+          }
         />
       </section>
     </Container>

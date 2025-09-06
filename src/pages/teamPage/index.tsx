@@ -10,7 +10,9 @@ const TeamPage = () => {
         isOpaque
         className="before:absolute before:left-28 before:top-28 before:h-[138px] before:w-[138px] before:rounded-full before:bg-[#0b8c86] before:blur-[100px] after:absolute after:inset-0"
       />
-      <Team tabsStore={getTabsStore("componentTeam") as TeamKeyType} />
+      <Team
+        tabsStore={getTabsStore("componentTeam") as TabType<TeamTabKeyType>}
+      />
     </>
   );
 };

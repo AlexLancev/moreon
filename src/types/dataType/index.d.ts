@@ -84,14 +84,9 @@ type PersonalFormatKeyType =
   | "beautyHealth"
   | "authorsPrograms";
 
-interface TabsStoreType<K> {
-  isActiveTab: K;
-  changeTabs: (value: K) => void;
-}
-
 interface PersonalFormatTabsType<K> {
   dataKey: readonly PersonalFormatKeyType[];
-  tabsStore: TabsStoreType<K>;
+  tabsStore: TabType<K>;
   className?: string;
 }
 
@@ -113,11 +108,6 @@ type PersonalFormatDataType = Record<
     keyList: KeyListType;
   }
 >;
-
-interface FitnessAreaTabsType {
-  isActiveTab: TabFitnessType;
-  changeTabs: (value: string) => void;
-}
 
 type TabFitnessType =
   | "trainingRoom"
@@ -147,11 +137,6 @@ type WaterZoneKeyType =
   | "thermalBaths"
   | "goldfish";
 
-interface WaterZoneTabsType {
-  isActiveTab: WaterZoneKeyType;
-  changeTabs: (value: string) => void;
-}
-
 interface WaterZoneContentType {
   head: string;
   description: string;
@@ -164,11 +149,6 @@ interface WaterZoneContentType {
 
 type WaterZoneType = Record<WaterZoneKeyType, WaterZoneContentType>;
 
-interface ClubCardsTabsType {
-  isActiveTab: ClubCardsKeyType;
-  changeTabs: (value: string) => void;
-}
-
 type ClubCardsKeyType =
   | "fitnes"
   | "fitnesSpa"
@@ -178,18 +158,13 @@ type ClubCardsKeyType =
 
 type PageDescriptionTypeKey = "all" | "daytime" | "business" | "weekend";
 
-interface RenderCardTabsType {
-  isActiveTab: PageDescriptionTypeKey;
-  changeTabs: (value: string) => void;
-}
-
 interface RenderCardDescriptionProps {
   pageDescription: Record<PageDescriptionTypeKey, string>;
   imagesUrl: {
     jpg: string;
     webp: string;
   };
-  tabsStore: RenderCardTabsType;
+  tabsStore: TabType<PageDescriptionTypeKey>;
 }
 
 interface ClubCardsContentType {
@@ -205,11 +180,6 @@ interface ClubCardsContentType {
 }
 
 type ClubCardsType = Record<ClubCardsKeyType, ClubCardsContentType>;
-
-interface ChildrensSwimmingTabsType {
-  isActiveTab: ChildrensSwimmingKeyType;
-  changeTabs: (value: string) => void;
-}
 
 type ChildrensSwimmingKeyType =
   | "infantSwimming"
@@ -271,11 +241,6 @@ interface HeroType {
 }
 
 type TeamTabKeyType = "martialArts" | "gym" | "groupTraining" | "pool";
-
-interface TeamKeyType {
-  isActiveTab: TeamTabKeyType;
-  changeTabs?: (value: string) => void;
-}
 
 interface TeamType {
   name: string;
@@ -437,9 +402,12 @@ interface CurrentStoreType<T> {
   isError: null | boolean;
 }
 
-interface TabsType<T, K> {
+interface TabType<K> {
   isActiveTab: K;
   changeTabs: (value: K) => void;
+}
+
+interface TabsType<T, K extends string> extends TabType<K> {
   tabList: readonly TabListType<K>[];
   currentChangeTab?: string;
   className?: string;

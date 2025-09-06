@@ -1,13 +1,14 @@
 import { makeAutoObservable } from "mobx";
 
-export class TabsStore {
-  isActiveTab = "";
+export class TabsStore<K> {
+  isActiveTab: K;
 
-  constructor() {
+  constructor(initialActiveTab: K) {
     makeAutoObservable(this);
+    this.isActiveTab = initialActiveTab;
   }
 
-  changeTabs = (value: string) => {
+  changeTabs = (value: K) => {
     this.isActiveTab = value;
   };
 }

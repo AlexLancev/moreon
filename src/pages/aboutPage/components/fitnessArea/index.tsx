@@ -27,7 +27,7 @@ const { TAB_LIST, TAB_LIST_KEYS } =
   ) ?? defaultConfigTabList;
 
 export const FitnessArea = observer(
-  ({ tabsStore }: { tabsStore: FitnessAreaTabsType }) => {
+  ({ tabsStore }: { tabsStore: TabType<TabFitnessType> }) => {
     const { isActiveTab, changeTabs } = tabsStore;
 
     const { data } = fitnessAreaStore;

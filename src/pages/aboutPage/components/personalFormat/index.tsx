@@ -10,15 +10,10 @@ const personalFormatDataKey = [
   "authorsPrograms",
 ] as const;
 
-export interface tabsStoreType<K> {
-  isActiveTab: K;
-  changeTabs: (value: K) => void;
-}
-
 export const PersonalFormat = ({
   tabsStore,
 }: {
-  tabsStore: tabsStoreType<PersonalFormatKeyType>;
+  tabsStore: TabType<PersonalFormatKeyType>;
 }) => {
   return (
     <section className="py-12">

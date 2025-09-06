@@ -15,7 +15,9 @@ const ClubCards = () => {
     <>
       <ClubCardsHero />
       <ChooseYourCard
-        tabsStore={getTabsStore("componentChooseYourCard") as ClubCardsTabsType}
+        tabsStore={
+          getTabsStore("componentChooseYourCard") as TabType<ClubCardsKeyType>
+        }
       />
       <EffectiveTraining />
       <EveryCard />

@@ -28,7 +28,7 @@ const { TAB_LIST, TAB_LIST_KEYS } =
   ) ?? defaultConfigTabList;
 
 export const WaterZone = observer(
-  ({ tabsStore }: { tabsStore: WaterZoneTabsType }) => {
+  ({ tabsStore }: { tabsStore: TabType<WaterZoneKeyType> }) => {
     const { isActiveTab, changeTabs } = tabsStore;
     const { isVisibleModal, changeModal } = modalStore;
 
