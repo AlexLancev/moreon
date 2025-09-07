@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 
 import { Container, ContentLoader, Stock } from "@/components";
 import { SkeletonFitnessCard } from "@/constans";
-import { getTabsStore } from "@/stores";
+import { useTabsStore } from "@/hooks";
 import { teamStore } from "@/stores/dataStore";
 
 import { FitnessArea, ProfitableVisits } from "../aboutPage/components";
@@ -11,6 +11,7 @@ import { HeroTeam } from "./components/heroTeam";
 
 const PersonTeamPage = observer(() => {
   const { data } = teamStore;
+  const fitnessAreaStore = useTabsStore<TabFitnessType>("gym");
 
   return (
     <>
@@ -26,11 +27,7 @@ const PersonTeamPage = observer(() => {
         </Container>
       </section>
       <Stock />
-      <FitnessArea
-        tabsStore={
-          getTabsStore("componentFitnessArea") as TabType<TabFitnessType>
-        }
-      />
+      <FitnessArea tabsStore={fitnessAreaStore} />
       <ProfitableVisits />
     </>
   );

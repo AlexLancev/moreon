@@ -8,7 +8,7 @@ import {
   cardsPresentationDefaultData,
   SkeletonFitnessClubCard,
 } from "@/constans";
-import { getTabsStore } from "@/stores";
+import { useTabsStore } from "@/hooks";
 import { clubCardsStore } from "@/stores/dataStore";
 
 import { RenderCardDescription } from "./components/renderCardDescription";
@@ -16,6 +16,7 @@ import { RenderCardDescription } from "./components/renderCardDescription";
 const CardsPresentationPage = observer(() => {
   const { data, isLoading } = clubCardsStore;
   const { path } = useParams<{ path: ClubCardsKeyType }>();
+  const cardDescriptionStore = useTabsStore<PageDescriptionTypeKey>("all");
 
   if (!path) return null;
 
@@ -58,11 +59,7 @@ const CardsPresentationPage = observer(() => {
       <RenderCardDescription
         imagesUrl={imagesUrl}
         pageDescription={pageDescription}
-        tabsStore={
-          getTabsStore(
-            "componentPageChooseYourCard",
-          ) as TabType<PageDescriptionTypeKey>
-        }
+        tabsStore={cardDescriptionStore}
       />
       <EveryCard />
     </Container>

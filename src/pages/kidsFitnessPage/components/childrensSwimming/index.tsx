@@ -1,13 +1,14 @@
-import { TabsStore } from "stores/tabsStore";
-
 import { Container, Title } from "@/components";
 import { childrensSwimmingData } from "@/constans";
 
+import { useTabsStore } from "@/hooks";
+
 import { ChildrensSwimmingTabs } from "./components";
 
-const childrensSwimmingStore = new TabsStore();
-
 export const ChildrensSwimming = () => {
+  const childrensSwimminStore =
+    useTabsStore<ChildrensSwimmingKeyType>("infantSwimming");
+
   return (
     <Container>
       <section className="p-2.5 text-lg md:p-5 lg:p-8 lg:text-xl xl:text-2xl 2xl:text-3xl">
@@ -34,11 +35,7 @@ export const ChildrensSwimming = () => {
         <p className="mb-10 xl:mb-12 2xl:mb-14">
           Приглашаем на занятия юных пловцов!
         </p>
-        <ChildrensSwimmingTabs
-          tabsStore={
-            childrensSwimmingStore as TabType<ChildrensSwimmingKeyType>
-          }
-        />
+        <ChildrensSwimmingTabs tabsStore={childrensSwimminStore} />
       </section>
     </Container>
   );

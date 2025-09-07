@@ -30,7 +30,7 @@ export const GalleryList = observer(() => {
           initialVisibleCount={initialVisibleCount}
         >
           {data
-            .slice(0, visibleShow)
+            ?.slice(0, visibleShow)
             .map(({ description, imagesUrl: { jpg } }, idx: number) => (
               <li key={idx} className="h-full overflow-hidden rounded-3xl">
                 <AccessibleButton className="block h-full">

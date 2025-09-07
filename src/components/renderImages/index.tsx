@@ -56,7 +56,6 @@ export const RenderImage = ({
         style={{ height: innerWidth > 1024 ? "calc(100vh - 115.34px)" : "" }}
         src={urlXxlImgJpg}
         alt={label}
-        loading="lazy"
       />
     </picture>
   );

@@ -6,19 +6,17 @@ import {
   Stock,
 } from "components";
 
-import { getTabsStore } from "@/stores";
+import { useTabsStore } from "@/hooks";
 
 import { ClubCardsHero } from "./components";
 
 const ClubCards = () => {
+  const cardStore = useTabsStore<ClubCardsKeyType>("fitnes");
+
   return (
     <>
       <ClubCardsHero />
-      <ChooseYourCard
-        tabsStore={
-          getTabsStore("componentChooseYourCard") as TabType<ClubCardsKeyType>
-        }
-      />
+      <ChooseYourCard tabsStore={cardStore} />
       <EffectiveTraining />
       <EveryCard />
       <AboutUs />

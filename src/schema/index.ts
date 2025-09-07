@@ -50,7 +50,7 @@ export const EditProfileUserFormSchema = z.object({
     ),
   birthDate: z
     .string({
-      requiredError: "Введите полную дату своего дня рождения",
+      required_error: "Введите полную дату своего дня рождения",
     })
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Дата должна быть в формате ГГГГ-ММ-ДД")
     .refine(

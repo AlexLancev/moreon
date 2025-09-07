@@ -7,7 +7,8 @@ import {
   Team,
   WaterZone,
 } from "@/components";
-import { getTabsStore } from "@/stores";
+
+import { useTabsStore } from "@/hooks";
 
 import { ServicesHero } from "./components";
 
@@ -26,27 +27,19 @@ const keysList = [
 ] as const;
 
 const ServicesPage = () => {
+  const teamStore = useTabsStore<TeamTabKeyType>("gym");
+  const cardStore = useTabsStore<ClubCardsKeyType>("fitnes");
+  const waterZoneStore = useTabsStore<WaterZoneKeyType>("bathsSwimming");
+
   return (
     <>
       <ServicesHero />
       <AreasStudy keysList={keysList} />
-      <Team
-        tabsStore={getTabsStore("componentTeam") as TabType<TeamTabKeyType>}
-      />
-      <ChooseYourCard
-        tabsStore={
-          getTabsStore(
-            "componentServicesChooseYourCard",
-          ) as TabType<ClubCardsKeyType>
-        }
-      />
+      <Team tabsStore={teamStore} />
+      <ChooseYourCard tabsStore={cardStore} />
       <FreezeCard />
       <ChildrensCenter />
-      <WaterZone
-        tabsStore={
-          getTabsStore("componentWaterZone") as TabType<WaterZoneKeyType>
-        }
-      />
+      <WaterZone tabsStore={waterZoneStore} />
       <PhytoBar />
     </>
   );

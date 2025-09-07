@@ -31,7 +31,7 @@ export const HomeHero = observer(() => {
           currentStore={heroStore}
           initialVisibleCount={1}
         >
-          {data.map(
+          {data?.map(
             (
               {
                 urlXxxlImgWebp,
