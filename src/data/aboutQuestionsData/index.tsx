@@ -1,6 +1,8 @@
 import supabase from "../supabase";
 
-export const aboutQuestionsData = async (): Promise<AboutQuestionType[]> => {
+export const aboutQuestionsData = async (): Promise<
+  AboutQuestionType[] | null
+> => {
   const { data, error } = await supabase.from("aboutQuestions").select("*");
 
   if (error) {
